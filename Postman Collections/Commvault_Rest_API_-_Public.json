@@ -9027,7 +9027,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/User/8",
+            "url": "{{ServerUrl}}/User/{{UserId}}",
             "method": "GET",
             "header": [
               {
