@@ -5081,9 +5081,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -5107,7 +5105,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of schedule policies.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm"
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm"
           },
           "response": []
         },
@@ -5438,9 +5436,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains policies\"] = responseBody.has(\"policies\");"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -5464,7 +5460,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of storage policies.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm"
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm"
           },
           "response": []
         },
@@ -5483,7 +5479,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/StoragePolicy/CSSP-4",
+            "url": "{{ServerUrl}}/StoragePolicy/policy001",
             "method": "DELETE",
             "header": [
               {
@@ -5501,7 +5497,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation deletes a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm"
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm"
           },
           "response": []
         },
@@ -5514,13 +5510,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains archiveGroupCopy\"] = responseBody.has(\"archiveGroupCopy\");",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -5547,9 +5537,9 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"storagePolicyName\": \"CSSP-4\",\r\n  \"storagePolicyCopyInfo\": {\r\n    \"retentionRules\": {\r\n      \"retainBackupDataForDays\": 120\r\n    },\r\n    \"library\": {\r\n      \"libraryId\": 1\r\n    },\r\n    \"mediaAgent\": {\r\n      \"mediaAgentId\": 2\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"storagePolicyName\": \"CSSP\",\r\n  \"storagePolicyCopyInfo\": {\r\n    \"retentionRules\": {\r\n      \"retainBackupDataForDays\": 120\r\n    },\r\n    \"library\": {\r\n      \"libraryId\": 51\r\n    },\r\n    \"mediaAgent\": {\r\n      \"mediaAgentId\": 4521\r\n    }\r\n  }\r\n}"
             },
-            "description": "This operation creates a storage policy using JSON.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm"
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm"
           },
           "response": []
         },
@@ -9027,7 +9017,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/User/{{UserId}}",
+            "url": "{{ServerUrl}}/User/8",
             "method": "GET",
             "header": [
               {
