@@ -5081,7 +5081,9 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
                 ]
               }
             }
@@ -5105,7 +5107,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm"
+            "description": "This operation returns a list of schedule policies.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm"
           },
           "response": []
         },
@@ -5355,13 +5357,39 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
+            "url": {
+              "raw": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Schedules"
+              ],
+              "query": [
+                {
+                  "key": "storagepolicyId",
+                  "value": "3",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "admin",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -9025,7 +9053,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/User/8",
+            "url": "{{ServerUrl}}/User/{{UserId}}",
             "method": "GET",
             "header": [
               {
