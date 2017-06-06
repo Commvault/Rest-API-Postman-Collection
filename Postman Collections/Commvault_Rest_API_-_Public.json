@@ -4996,7 +4996,90 @@
             },
             "description": "This request returns all of the schedules for a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "0c820ec5-947c-3844-8892-dc55faaee06e",
+              "name": "Schedules",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Schedules?clientId=2",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Schedules"
+                  ],
+                  "query": [
+                    {
+                      "key": "clientId",
+                      "value": "2",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This request returns all of the schedules for a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1629",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 08:37:57 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2232",
+              "body": "{\r\"taskDetail\":[\r{\r\"taskOperation\":1,\"task\":{\r\"GUID\":\"E85B33D0-1732-4ED3-A629-671254019459\",\"description\":\"System Created Install Software\",\"ownerId\":1,\"runUserId\":1,\"taskType\":2,\"ownerName\":\"admin\",\"policyType\":0,\"alertId\":0,\"taskId\":8,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"uninstalled\":false,\"disabled\":true\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskId\":8\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"relativeTime\":30124,\"subTaskOperation\":1,\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"System Created Install Software\",\"subTaskType\":1,\"flags\":128,\"operationType\":4020,\"subTaskId\":9\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":8,\"flags\":0,\"active_end_time\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":36000,\"freq_restart_interval\":0,\"active_start_date\":1436832000,\"freq_interval\":4,\"freq_relative_interval\":0,\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"adminOpts\":{\r\"updateOption\":{\r\"commcellId\":2,\"invokeLevel\":1,\"removeIntersectingDiag\":true,\"rebootClient\":false,\"ignoreRunningJobs\":true,\"clientAndClientGroups\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":2,\"consumeLicense\":true\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":27,\"consumeLicense\":true\r},{\r\"srmReportSet\":0,\"type\":0,\"clientGroupId\":4,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":28,\"consumeLicense\":true,\"flags\":{\r\"exclude\":true\r}\r}\r],\"installUpdatesJobType\":{\r\"upgradeClients\":false,\"undoUpdates\":false,\"installUpdates\":true\r}\r}\r}\r}\r}\r]\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "0be4d463-2217-144b-ed8a-70d4d1c23cb1",
@@ -5081,7 +5164,9 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  ""
                 ]
               }
             }
@@ -5105,9 +5190,74 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm"
+            "description": "This operation returns a list of schedule policies.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "48693d37-5aa5-d399-273d-eea9eefd0a14",
+              "name": "Schedule Policy",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/SchedulePolicy",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This operation returns a list of schedule policies.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "3173",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 08:47:57 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "1175",
+              "body": "{\r\"taskDetail\":[\r{\r\"task\":{\r\"GUID\":\"69173BC2-9642-4565-A875-B8D77DC11858\",\"description\":\"System created schedule policy for All Agent Types\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created (All  Agent Types)\",\"alertId\":0,\"taskId\":2,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created (All  Agent Types)\",\"taskId\":2\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"1D75891D-695D-4DAA-AD8F-235477F8BD9E\",\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":1,\"associatedObjects\":0,\"taskName\":\"System Created Autocopy schedule\",\"alertId\":0,\"taskId\":9,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created Autocopy schedule\",\"taskId\":9\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"EFDD89C1-08F5-4F20-AD73-C0CC16E3B14F\",\"description\":\"System created schedule policy for DDB subclients\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created for DDB subclients\",\"alertId\":0,\"taskId\":10,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":true,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for DDB subclients\",\"taskId\":10\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"9BE7A700-FE5D-4392-B78B-481B4AFC4F89\",\"description\":\"System created schedule policy for DDB Verification\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":11,\"associatedObjects\":0,\"taskName\":\"System Created DDB Verification schedule policy\",\"alertId\":0,\"taskId\":13,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created DDB Verification schedule policy\",\"taskId\":13\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"5fa012f2-a6fc-4990-a847-e0d6de2617a0\",\"description\":\"System created schedule policy for Edge Drive\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":2,\"taskName\":\"System Created for Edge Drive\",\"alertId\":0,\"taskId\":30,\"taskFlags\":{\r\"isEdgeDrive\":true,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for Edge Drive\",\"taskId\":30\r}\r},\"appGroup\":{\r\"appGroups\":[\r{\r\"appGroupId\":1\r}\r]\r}\r},{\r\"task\":{\r\"GUID\":\"A5DE97A0-8B9F-4AF1-967A-8142A8DE441E\",\"description\":\"System created schedule policy for IndexBackup subclients\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created for IndexBackup subclients\",\"alertId\":0,\"taskId\":64,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for IndexBackup subclients\",\"taskId\":64\r}\r},\"appGroup\":{\r\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "309428c5-7096-825c-43c2-2aa33c0be7d8",
@@ -5355,13 +5505,39 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
+            "url": {
+              "raw": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Schedules"
+              ],
+              "query": [
+                {
+                  "key": "storagepolicyId",
+                  "value": "3",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "admin",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -5381,7 +5557,96 @@
             },
             "description": "This request returns all of the administrator schedules for a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "5d299a62-9cd6-8692-24a7-b07a886a6ebb",
+              "name": "Schedules 2",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Schedules"
+                  ],
+                  "query": [
+                    {
+                      "key": "storagepolicyId",
+                      "value": "3",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "admin",
+                      "value": "1",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This request returns all of the administrator schedules for a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1757",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 08:53:33 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "221",
+              "body": "{\r\"taskDetail\":[\r{\r\"taskOperation\":1,\"associations\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmTemplateId\":0,\"subclientId\":0,\"clientGroupId\":0,\"storagePolicyId\":0,\"copyId\":0,\"applicationId\":0,\"backupsetId\":0,\"instanceId\":0,\"srmReportType\":0,\"sidbStoreId\":0,\"clientSidePackage\":true,\"clientId\":0,\"sidbStoreName\":\"N\\u002fA\",\"copyName\":\"DUMMY\",\"agentlessPolicyId\":0,\"mediaAgentId\":0,\"_type_\":155,\"appName\":\"Default Application Type Name\",\"consumeLicense\":true,\"flags\":{\r\"exclude\":false\r}\r}\r],\"task\":{\r\"GUID\":\"9BE7A700-FE5D-4392-B78B-481B4AFC4F89\",\"description\":\"System created schedule policy for DDB Verification\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":11,\"taskName\":\"System Created DDB Verification schedule policy\",\"alertId\":0,\"taskId\":13,\"taskFlags\":{\r\"isEZOperation\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"relativeTime\":32787,\"subTaskOperation\":1,\"subTask\":{\r\"subTaskOrder\":0,\"subTaskType\":1,\"flags\":4096,\"operationType\":4007,\"subTaskId\":14\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":86400,\"freq_type\":4,\"patternId\":13,\"flags\":0,\"description\":\"Every day at 11:00 AM and repeats every 24 hr(s) 0 min(s) until 12:00 AM\",\"active_end_time\":86340,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":39600,\"freq_restart_interval\":0,\"active_start_date\":1473897600,\"freq_interval\":1,\"freq_relative_interval\":0,\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"mediaOpt\":{\r\"auxcopyJobOption\":{\r\"maxNumberOfStreams\":0,\"useMaximumStreams\":true\r}\r}\r},\"adminOpts\":{\r\"archiveCheckOption\":{\r\"ddbVerificationLevel\":3,\"jobsToVerify\":0,\"allCopies\":true,\"backupLevel\":2\r}\r}\r}\r}\r]\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "f8ace655-5f8b-cd25-7e4a-37a5896adf1f",
@@ -5464,7 +5729,72 @@
             },
             "description": "This operation returns a list of storage policies.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "52e377f8-bdae-d345-c759-a34b1cf4089d",
+              "name": "Storage Policy",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/StoragePolicy",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This operation returns a list of storage policies.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "236",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 07:43:00 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "374",
+              "body": "{\r\"policies\":[\r{\r\"storagePolicyName\":\"CSSP\",\"storagePolicyId\":3\r},{\r\"storagePolicyName\":\"FirewallMASP\",\"storagePolicyId\":4\r},{\r\"storagePolicyName\":\"fwma_3\",\"storagePolicyId\":6\r},{\r\"storagePolicyName\":\"IDCMA2SP\",\"storagePolicyId\":5\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "0a6509cb-c24c-868a-8249-e0e0ccf19159",
@@ -5501,7 +5831,72 @@
             },
             "description": "This operation deletes a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "29aaf1d6-a8bd-2b4f-9276-2ff789ff5c12",
+              "name": "Storage Policy",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/StoragePolicy/CSSP-4",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This operation deletes a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "37",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 08:15:27 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "3535",
+              "body": "Deleted storage policy successfully.\n"
+            }
+          ]
         },
         {
           "_postman_id": "1698f19c-c0a9-3127-e5b8-8ce66360ed2d",
@@ -5512,7 +5907,13 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains archiveGroupCopy\"] = responseBody.has(\"archiveGroupCopy\");",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
                 ]
               }
             }
@@ -5539,11 +5940,81 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"storagePolicyName\": \"CSSP\",\r\n  \"storagePolicyCopyInfo\": {\r\n    \"retentionRules\": {\r\n      \"retainBackupDataForDays\": 120\r\n    },\r\n    \"library\": {\r\n      \"libraryId\": 51\r\n    },\r\n    \"mediaAgent\": {\r\n      \"mediaAgentId\": 4521\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"storagePolicyName\": \"CSSP-4\",\r\n  \"storagePolicyCopyInfo\": {\r\n    \"retentionRules\": {\r\n      \"retainBackupDataForDays\": 120\r\n    },\r\n    \"library\": {\r\n      \"libraryId\": 1\r\n    },\r\n    \"mediaAgent\": {\r\n      \"mediaAgentId\": 2\r\n    }\r\n  }\r\n}"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm"
+            "description": "This operation creates a storage policy using JSON.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "5207a2b0-c89b-f53a-e470-af76e08323e3",
+              "name": "Storage Policy",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/StoragePolicy",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"storagePolicyName\": \"CSSP-4\",\r\n  \"storagePolicyCopyInfo\": {\r\n    \"retentionRules\": {\r\n      \"retainBackupDataForDays\": 120\r\n    },\r\n    \"library\": {\r\n      \"libraryId\": 1\r\n    },\r\n    \"mediaAgent\": {\r\n      \"mediaAgentId\": 2\r\n    }\r\n  }\r\n}"
+                },
+                "description": "This operation creates a storage policy using JSON.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "162",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 08:13:39 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "3160",
+              "body": "{\r\"responseType\":0,\"archiveGroupCopy\":{\r\"copyId\":8,\"_type_\":18,\"copyName\":\"Primary\",\"storagePolicyName\":\"CSSP-4\",\"storagePolicyId\":9\r},\"error\":{\r\"errorCode\":0\r}\r}"
+            }
+          ]
         },
         {
           "_postman_id": "791bfa5b-f2bd-aa75-f944-ab7efdb22ccd",
@@ -5597,7 +6068,37 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/StoragePolicy?storagepolicy=CSSP&mediaagent=firewalltestcs&library=CSLib",
+            "url": {
+              "raw": "{{ServerUrl}}/StoragePolicy?storagepolicy=CSSP2&mediaagent=firewalltestcs&library=CSLib",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "StoragePolicy"
+              ],
+              "query": [
+                {
+                  "key": "storagepolicy",
+                  "value": "CSSP2",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "mediaagent",
+                  "value": "firewalltestcs",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "library",
+                  "value": "CSLib",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "PUT",
             "header": [
               {
@@ -5615,9 +6116,236 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_storage_policy.htm"
+            "description": "This operation creates a storage policy using request parameters.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_storage_policy.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "d9bac59d-1e14-6157-72d9-84ccfca00095",
+              "name": "Storage Policy",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/StoragePolicy?storagepolicy=CSSP2&mediaagent=firewalltestcs&library=CSLib",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "StoragePolicy"
+                  ],
+                  "query": [
+                    {
+                      "key": "storagepolicy",
+                      "value": "CSSP2",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "mediaagent",
+                      "value": "firewalltestcs",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "library",
+                      "value": "CSLib",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This operation creates a storage policy using request parameters.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_storage_policy.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "37",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 08:07:38 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2239",
+              "body": "Created storage policy successfully.\n"
+            }
+          ]
+        },
+        {
+          "_postman_id": "1f9bea8a-1fc9-2d3a-f36e-da199ed3a0b4",
+          "name": "Storage Policy List for a MediaAgent",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/StoragePolicyListAssociatedToMediaAgent?MediaAgent=2",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "StoragePolicyListAssociatedToMediaAgent"
+              ],
+              "query": [
+                {
+                  "key": "MediaAgent",
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "This opeartion returns a list of storage policies associated with a MediaAgent.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy_mediaagent.htm\n\n"
+          },
+          "response": [
+            {
+              "id": "216c6ae9-105b-3f3a-5b3d-755b7f298303",
+              "name": "Storage Policy List for a MediaAgent",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/StoragePolicyListAssociatedToMediaAgent?MediaAgent=2",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "StoragePolicyListAssociatedToMediaAgent"
+                  ],
+                  "query": [
+                    {
+                      "key": "MediaAgent",
+                      "value": "2",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {},
+                "description": "This opeartion returns a list of storage policies associated with a MediaAgent.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy_mediaagent.htm\n\n"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "777",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 07:56:39 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "69",
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><App_GetStoragePoliciesForMediaAgentResp><error errorCode=\"0\"/><storagePolicyInformationAssociatedToMA isMADDBHost=\"0\" isMADefaultDataPathInCopy=\"1\" isPrimaryCopy=\"1\" isProxyMAInCopy=\"0\"><mediaAgent mediaAgentId=\"2\"/><storagePolicyAndCopy _type_=\"18\" copyId=\"1\" copyName=\"Primary\" storagePolicyId=\"2\" storagePolicyName=\"CommServeDR\"/></storagePolicyInformationAssociatedToMA><storagePolicyInformationAssociatedToMA isMADDBHost=\"0\" isMADefaultDataPathInCopy=\"1\" isPrimaryCopy=\"1\" isProxyMAInCopy=\"0\"><mediaAgent mediaAgentId=\"2\"/><storagePolicyAndCopy _type_=\"18\" copyId=\"2\" copyName=\"Primary\" storagePolicyId=\"3\" storagePolicyName=\"CSSP\"/></storagePolicyInformationAssociatedToMA></App_GetStoragePoliciesForMediaAgentResp>"
+            }
+          ]
         }
       ]
     },
@@ -9019,7 +9747,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/User/8",
+            "url": "{{ServerUrl}}/User/{{UserId}}",
             "method": "GET",
             "header": [
               {
