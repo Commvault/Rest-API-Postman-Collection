@@ -1,7 +1,9 @@
 Commvault Developer Rest API Documentation
 Welcome
 --------------
-Here are some pre-made requests for you to explore the API using [Postman](https://getpostman.com).
+Explore our predefined API requests using [Postman](https://getpostman.com).
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/3e46a243620533a7c27b)
 
 Setup
 --------------
