@@ -10,7 +10,7 @@
     {
       "_postman_id": "54a705d8-cc3b-7284-73cb-73465116dd02",
       "name": "0 - Setup",
-      "description": "Note: You need to run this before _any_ other request if you are using Postman.\n--------------------\n\nAdd your Web Server URL, user name, base64 encoded password to the pre-request script and execute the `Environment Setup` request to setup the environment.\n\n```\n//set your CS user name and password here\npostman.setEnvironmentVariable(\"userName\", \"admin\");\npostman.setEnvironmentVariable(\"password\", \"YWRtaW4=\");\n\n// Set your Web Server URL\npostman.setEnvironmentVariable(\"ServerUrl\", \"http://GreenValley.testlab.commvault.com:81/SearchSvc/CVWebService.svc\");\n```",
+      "description": "Note: You need to run this before _any_ other request if you are using Postman.\n--------------------\n\nAdd your Web Server URL, user name, base64 encoded password to the pre-request script and execute the `Environment Setup` request to setup the environment.\n\n```\n//set your CS username and password here\npostman.setEnvironmentVariable(\"userName\", \"<userName>\");\npostman.setEnvironmentVariable(\"password\", \"<Base64 Encoded Password>\");\n\n// Set your WebService URL\npostman.setEnvironmentVariable(\"ServerUrl\", \"http://MyCompany:81/SearchSvc/CVWebService.svc\");\n```",
       "item": [
         {
           "_postman_id": "8594d5ec-7828-522a-2c10-30f3266bc7c3",
