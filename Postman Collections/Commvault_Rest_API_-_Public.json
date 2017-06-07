@@ -38,11 +38,11 @@
                 "type": "text/javascript",
                 "exec": [
                   "//set your CS username and password here\r",
-                  "postman.setEnvironmentVariable(\"userName\", \"admin\");\r",
-                  "postman.setEnvironmentVariable(\"password\", \"YWRtaW4=\");\r",
+                  "postman.setEnvironmentVariable(\"userName\", \"<userName>\");\r",
+                  "postman.setEnvironmentVariable(\"password\", \"<Base64 Encoded Password>\");\r",
                   "\r",
                   "// Set your WebService URL\r",
-                  "postman.setEnvironmentVariable(\"ServerUrl\", \"http://GreenValley.testlab.commvault.com:81/SearchSvc/CVWebService.svc\");\r",
+                  "postman.setEnvironmentVariable(\"ServerUrl\", \"http://MyCompany:81/SearchSvc/CVWebService.svc\");\r",
                   "\r",
                   "// This is a default variable. Please do not change this because all our tests are written based on JSON responses.\r",
                   "postman.setEnvironmentVariable(\"Accept\", \"application/json\");"
