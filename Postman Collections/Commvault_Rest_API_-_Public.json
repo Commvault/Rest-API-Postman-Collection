@@ -67,7 +67,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"mode\": 4,\n  \"password\": \"{{password}}\",\n  \"username\": \"{{userName}}\"\n}"
+              "raw": "{\n  \"password\": \"{{password}}\",\n  \"username\": \"{{userName}}\"\n}"
             },
             "description": "Add your QSDK Authenticated token to your Postman Environment by providing the details in the pre-request script.\n\nYou only need to run this one time because these values are stored in your Postman Environment."
           },
