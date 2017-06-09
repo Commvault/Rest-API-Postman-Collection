@@ -5170,7 +5170,7 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
+                  "tests[\"Response Body contains taskInfo\"] = responseBody.has(\"taskInfo\");"
                 ]
               }
             }
