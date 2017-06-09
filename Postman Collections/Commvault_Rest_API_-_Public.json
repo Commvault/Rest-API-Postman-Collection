@@ -3130,7 +3130,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm"
+            "description": "This operation returns a list of clients.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm"
           },
           "response": []
         },
