@@ -5174,7 +5174,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Schedules/121",
+            "url": "{{ServerUrl}}/Schedules/8",
             "method": "GET",
             "header": [
               {
@@ -5560,48 +5560,6 @@
           "response": []
         },
         {
-          "_postman_id": "309428c5-7096-825c-43c2-2aa33c0be7d8",
-          "name": "Update Schedule Policy Agent Associations 2",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Task",
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"taskInfo\": {\r\n    \"task\": {\r\n      \"task\": {\r\n        \"taskName\": \"SP002\"\r\n      }\r\n    },\r\n    \"appGroup\": {\r\n      \"appGroups\": [\r\n        {\r\n          \"appGroupName\": \"APPGRP_DB2\"\r\n        },\r\n        {}\r\n      ]\r\n    }\r\n  }\r\n}"
-            },
-            "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "774b3a12-cca2-00c9-923f-bdb88eaf609b",
           "name": "Update Schedule Policy Entity Associations",
           "event": [
@@ -5640,6 +5598,48 @@
               "raw": "{\r\n  \"taskInfo\":{\r\n    \"associations\":[\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\"\r\n      },\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"subclientName\":\"DDBBackup\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\",\r\n        \"flags\":{\r\n          \"exclude\":true\r\n        }\r\n      }\r\n    ],\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"TestPolicy\"\r\n      }\r\n    }\r\n  }\r\n}"
             },
             "description": "This request associates all default backup set subclients except for the DDBBackup subclient with the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_entity_assoc.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "309428c5-7096-825c-43c2-2aa33c0be7d8",
+          "name": "Update Schedule Policy Agent Associations 2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Task",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"taskInfo\": {\r\n    \"task\": {\r\n      \"task\": {\r\n        \"taskName\": \"SP002\"\r\n      }\r\n    },\r\n    \"appGroup\": {\r\n      \"appGroups\": [\r\n        {\r\n          \"appGroupName\": \"APPGRP_DB2\"\r\n        },\r\n        {}\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
           },
           "response": []
         },
