@@ -4719,7 +4719,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role_properties.htm"
+            "description": "This opeartion returns the properties associated with a role.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role_properties.htm"
           },
           "response": []
         },
