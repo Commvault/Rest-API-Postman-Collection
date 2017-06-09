@@ -5168,13 +5168,15 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Schedules/121",
+            "url": "{{ServerUrl}}/Schedules/8",
             "method": "GET",
             "header": [
               {
@@ -5194,7 +5196,71 @@
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_properties.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "2d8c1465-9a38-32f8-27a2-b9013fd160da",
+              "name": "Schedules Properties",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Schedules/8",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1850",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Jun 2017 07:10:00 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "5725",
+              "body": "{\r\"taskInfo\":{\r\"task\":{\r\"GUID\":\"E85B33D0-1732-4ED3-A629-671254019459\",\"description\":\"System Created Install Software\",\"ownerId\":1,\"runUserId\":1,\"taskType\":2,\"ownerName\":\"Administrator\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"\",\"alertId\":0,\"taskId\":8,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"isSystem\":true,\"disabled\":true\r},\"originalCC\":{\r\"commCellId\":2\r},\"taskSecurity\":{\r\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"task\":{\r\"taskName\":\"\",\"taskId\":8\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"System Created Install Software\",\"subTaskType\":1,\"flags\":128,\"operationType\":4020,\"subTaskId\":9,\"subTask\":{\r\"subtaskId\":9,\"subtaskName\":\"System Created Install Software\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":8,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":36000,\"freq_restart_interval\":0,\"active_start_date\":1436832000,\"freq_interval\":4,\"freq_relative_interval\":0,\"name\":\"\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":0,\"Tuesday\":true,\"day\":0\r},\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"adminOpts\":{\r\"updateOption\":{\r\"commcellId\":2,\"invokeLevel\":1,\"removeIntersectingDiag\":true,\"rebootClient\":false,\"ignoreRunningJobs\":true,\"clientAndClientGroups\":[\r{\r\"_type_\":2\r},{\r\"_type_\":27\r},{\r\"clientGroupId\":4,\"clientGroupName\":\"Laptop Clients\",\"_type_\":28,\"flags\":{\r\"exclude\":true\r}\r}\r],\"installUpdatesJobType\":{\r\"upgradeClients\":false,\"undoUpdates\":false,\"installUpdates\":true\r}\r}\r}\r}\r}\r]\r}\r}"
+            }
+          ]
         },
         {
           "_postman_id": "2b710ef8-7ba7-8736-9c0b-3b8c4affa861",
