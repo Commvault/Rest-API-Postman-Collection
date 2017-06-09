@@ -2378,7 +2378,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_backup_set.htm"
+            "description": "This operation deletes a backup set.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_backup_set.htm"
           },
           "response": [
             {
