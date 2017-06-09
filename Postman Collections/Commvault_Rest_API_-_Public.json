@@ -7215,7 +7215,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"autoDetect\": true,\r\n  \"hdr\": {\r\n    \"tag\": 0\r\n  },\r\n  \"mediaAgentIdList\": []\r\n}"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_detect_tape_library.htm"
+            "description": "This operation detects tape libraries.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_detect_tape_library.htm"
           },
           "response": []
         },
