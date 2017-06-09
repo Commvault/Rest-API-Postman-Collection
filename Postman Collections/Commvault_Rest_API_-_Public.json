@@ -7512,7 +7512,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"LibraryId\": 184,\r\n  \"libraryOperationType\": 22\r\n}"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_reset_tape_library.htm"
+            "description": "This operation resets tape libraries.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_reset_tape_library.htm"
           },
           "response": []
         },
