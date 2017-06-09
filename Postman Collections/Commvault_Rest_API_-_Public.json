@@ -237,7 +237,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_agent.htm"
+            "description": "This operation returns a list of agents for a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_agent.htm"
           },
           "response": [
             {
