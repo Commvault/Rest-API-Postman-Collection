@@ -5997,7 +5997,71 @@
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_schedule_policy_entity.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "c9073f77-aef8-ee29-ad69-588a37cfa292",
+              "name": "Schedule Policy Entity",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Task/151/Entity",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "ClientId=2"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "35",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Jun 2017 07:39:35 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "46",
+              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+            }
+          ]
         },
         {
           "_postman_id": "338336e3-06b5-3c5f-b5bd-f43ee5ed3473",
