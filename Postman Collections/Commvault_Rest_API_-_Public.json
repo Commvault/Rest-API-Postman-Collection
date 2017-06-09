@@ -6757,7 +6757,25 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/StoragePolicyListAssociatedToMediaAgent?MediaAgent=2",
+            "url": {
+              "raw": "{{ServerUrl}}/StoragePolicyListAssociatedToMediaAgent?MediaAgent=2",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "StoragePolicyListAssociatedToMediaAgent"
+              ],
+              "query": [
+                {
+                  "key": "MediaAgent",
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
