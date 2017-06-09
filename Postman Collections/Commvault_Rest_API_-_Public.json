@@ -11291,7 +11291,7 @@
               "mode": "raw",
               "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_email_server.htm"
+            "description": "This operation returns the configuration for the email server.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_email_server.htm"
           },
           "response": [
             {
