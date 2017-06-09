@@ -7675,7 +7675,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_mediaagent_for_library.htm"
+            "description": "This operation returns the list of MediaAgents accessing a library.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_mediaagent_for_library.htm"
           },
           "response": []
         },
