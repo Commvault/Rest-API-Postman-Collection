@@ -5575,7 +5575,7 @@
               "mode": "raw",
               "raw": "freq_type = \"1\"\r\nactive_start_date = \"1467158400\"\r\nactive_start_time = \"28880\"\r\nactive_end_date = \"1467158400\"\r\nactive_end_time = \"43200\""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_pattern_modify.htm"
+            "description": "This opeartion modifies the schedule pattern for a schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_pattern_modify.htm"
           },
           "response": [
             {
@@ -5680,7 +5680,7 @@
               "mode": "raw",
               "raw": "ClientId=2"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_entity_add.htm"
+            "description": "This operation associates an entity with the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_entity_add.htm"
           },
           "response": [
             {
