@@ -5438,7 +5438,9 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
                 ]
               }
             }
@@ -5464,7 +5466,71 @@
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy_properties.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "f4214d61-cff6-756e-bda8-634d25e968fb",
+              "name": "Schedule Policy Properties",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/SchedulePolicy/151",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "3565",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Jun 2017 07:15:13 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "139",
+              "body": "{\r\"taskInfo\":{\r\"associations\":[\r{\r\"srmReportSet\":0,\"srmTemplateId\":0,\"subclientId\":0,\"clientGroupId\":0,\"storagePolicyId\":0,\"copyId\":0,\"applicationId\":0,\"clientName\":\"firewalltestma\",\"displayName\":\"firewalltestma\",\"backupsetId\":0,\"instanceId\":0,\"sidbStoreId\":0,\"clientId\":9,\"srmTemplateName\":\"\",\"agentlessPolicyId\":0,\"mediaAgentId\":0,\"workflowId\":0,\"_type_\":3,\"trackingPolicyId\":0,\"flags\":{\r\"exclude\":false\r}\r},{\r\"srmReportSet\":0,\"srmTemplateId\":0,\"subclientId\":0,\"clientGroupId\":0,\"storagePolicyId\":0,\"copyId\":0,\"applicationId\":33,\"clientName\":\"firewalltestcs\",\"displayName\":\"firewalltestcs\",\"backupsetId\":3,\"instanceId\":1,\"sidbStoreId\":0,\"clientId\":2,\"srmTemplateName\":\"\",\"agentlessPolicyId\":0,\"mediaAgentId\":0,\"backupsetName\":\"defaultBackupSet\",\"workflowId\":0,\"instanceName\":\"DefaultInstanceName\",\"_type_\":6,\"trackingPolicyId\":0,\"appName\":\"File System\",\"flags\":{\r\"exclude\":false\r}\r},{\r\"srmReportSet\":0,\"srmTemplateId\":0,\"subclientId\":-32000,\"clientGroupId\":0,\"storagePolicyId\":0,\"copyId\":0,\"applicationId\":33,\"clientName\":\"firewalltestcs\",\"displayName\":\"firewalltestcs\",\"backupsetId\":3,\"instanceId\":1,\"sidbStoreId\":0,\"clientId\":2,\"srmTemplateName\":\"\",\"agentlessPolicyId\":0,\"mediaAgentId\":0,\"backupsetName\":\"defaultBackupSet\",\"workflowId\":0,\"instanceName\":\"DefaultInstanceName\",\"_type_\":7,\"trackingPolicyId\":0,\"appName\":\"File System\",\"flags\":{\r\"exclude\":true\r}\r}\r],\"task\":{\r\"GUID\":\"f231bfdb-9b68-464a-9a52-f6701ca216c2\",\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"Administrator\",\"policyType\":0,\"associatedObjects\":8,\"taskName\":\"TestPolicy\",\"alertId\":0,\"taskId\":151,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"isSystem\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"taskSecurity\":{\r\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"task\":{\r\"taskName\":\"TestPolicy\",\"taskId\":151\r}\r},\"appGroup\":{\r\"appGroups\":[\r{\r\"appGroupId\":101\r},{\r\"appGroupId\":1\r},{\r\"appGroupId\":5\r}\r]\r},\"subTasks\":[\r{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Test Schedule\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":152,\"subTask\":{\r\"subtaskId\":152,\"subtaskName\":\"Test Schedule\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":20,\"flags\":0,\"description\":\"Every week on Monday,Thursday at 12:00 AM  \",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1496880000,\"freq_interval\":18,\"freq_relative_interval\":0,\"name\":\"\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":0,\"Monday\":true,\"Thursday\":true,\"day\":0\r},\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":64\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"notSynthesizeFullFromPrevBackup\":false,\"backupLevel\":2,\"incLevel\":1,\"adHocBackup\":false,\"runIncrementalBackup\":true,\"runSILOBackup\":false,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":false,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"adminOpts\":{\r\"contentIndexingOption\":{\r\"subClientBasedAnalytics\":false\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r}\r]\r}\r}"
+            }
+          ]
         },
         {
           "_postman_id": "f8ace655-5f8b-cd25-7e4a-37a5896adf1f",
