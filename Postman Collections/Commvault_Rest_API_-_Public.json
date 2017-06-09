@@ -4167,7 +4167,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job_summary.htm"
+            "description": "This operation returns the summary for a specific job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job_summary.htm"
           },
           "response": []
         },
