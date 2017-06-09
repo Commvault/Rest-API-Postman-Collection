@@ -5449,6 +5449,43 @@
           "response": []
         },
         {
+          "_postman_id": "8f602083-3915-a7c3-4f7a-9477cd3b0ab1",
+          "name": "Schedule Policy Add Agent",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Task/69/Agent/add",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "AgentGroupId=115"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_agent_add.htm"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1e40bdc2-3164-17d4-ab73-60a1d539bd8f",
           "name": "Schedule Policy Entity",
           "event": [
@@ -5645,43 +5682,6 @@
               "raw": "{\r\n  \"taskInfo\":{\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"SP002\"\r\n      }\r\n    },\r\n    \"appGroup\":{\r\n      \"appGroups\":[\r\n        {\r\n          \"appGroupName\":\"APPGRP_DB2\"\r\n        }\r\n      ],\r\n      \"appTypes\":[\r\n        {\r\n          \"appTypeName\":\"SQL Server\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
             },
             "description": "This request associates the DB2 agent group and the SQL Server agent with the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "8f602083-3915-a7c3-4f7a-9477cd3b0ab1",
-          "name": "Schedule Policy Add Agent",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Task/69/Agent/add",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "AgentGroupId=115"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_agent_add.htm"
           },
           "response": []
         }
