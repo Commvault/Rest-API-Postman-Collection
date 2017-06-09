@@ -5523,6 +5523,43 @@
           "response": []
         },
         {
+          "_postman_id": "338336e3-06b5-3c5f-b5bd-f43ee5ed3473",
+          "name": "Schedule Policy Agent",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Task/6441/Agent",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "AgentGroupId=115"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_schedule_policy_agent.htm"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "309428c5-7096-825c-43c2-2aa33c0be7d8",
           "name": "Update Schedule Policy Agent Associations 2",
           "event": [
@@ -5561,43 +5598,6 @@
               "raw": "{\r\n  \"taskInfo\": {\r\n    \"task\": {\r\n      \"task\": {\r\n        \"taskName\": \"SP002\"\r\n      }\r\n    },\r\n    \"appGroup\": {\r\n      \"appGroups\": [\r\n        {\r\n          \"appGroupName\": \"APPGRP_DB2\"\r\n        },\r\n        {}\r\n      ]\r\n    }\r\n  }\r\n}"
             },
             "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "338336e3-06b5-3c5f-b5bd-f43ee5ed3473",
-          "name": "Schedule Policy Agent",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Task/6441/Agent",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "AgentGroupId=115"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_schedule_policy_agent.htm"
           },
           "response": []
         },
