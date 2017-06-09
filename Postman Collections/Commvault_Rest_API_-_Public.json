@@ -460,7 +460,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_alert_details.htm"
+            "description": "This operation returns the details associated with an alert.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_alert_details.htm"
           },
           "response": [
             {
