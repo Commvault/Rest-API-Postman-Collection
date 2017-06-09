@@ -4854,7 +4854,25 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Role?propertyLevel=30",
+            "url": {
+              "raw": "{{ServerUrl}}/Role?propertyLevel=30",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Role"
+              ],
+              "query": [
+                {
+                  "key": "propertyLevel",
+                  "value": "30",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
