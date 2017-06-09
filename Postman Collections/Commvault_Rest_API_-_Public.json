@@ -4756,7 +4756,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_role.htm"
+            "description": "This operation deletes a role.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_role.htm"
           },
           "response": []
         },
