@@ -4204,7 +4204,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_resume.htm"
+            "description": "This operation resumes a suspended job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_resume.htm"
           },
           "response": []
         },
