@@ -5008,6 +5008,158 @@
           ]
         },
         {
+          "_postman_id": "a6480439-75d4-a61c-a978-4c8334acd350",
+          "name": "Schedules 2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Schedules"
+              ],
+              "query": [
+                {
+                  "key": "storagepolicyId",
+                  "value": "3",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "admin",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This request returns all of the administrator schedules for a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm"
+          },
+          "response": [
+            {
+              "id": "5d299a62-9cd6-8692-24a7-b07a886a6ebb",
+              "name": "Schedules 2",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Schedules"
+                  ],
+                  "query": [
+                    {
+                      "key": "storagepolicyId",
+                      "value": "3",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "admin",
+                      "value": "1",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This request returns all of the administrator schedules for a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1757",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 08:53:33 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "221",
+              "body": "{\r\"taskDetail\":[\r{\r\"taskOperation\":1,\"associations\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmTemplateId\":0,\"subclientId\":0,\"clientGroupId\":0,\"storagePolicyId\":0,\"copyId\":0,\"applicationId\":0,\"backupsetId\":0,\"instanceId\":0,\"srmReportType\":0,\"sidbStoreId\":0,\"clientSidePackage\":true,\"clientId\":0,\"sidbStoreName\":\"N\\u002fA\",\"copyName\":\"DUMMY\",\"agentlessPolicyId\":0,\"mediaAgentId\":0,\"_type_\":155,\"appName\":\"Default Application Type Name\",\"consumeLicense\":true,\"flags\":{\r\"exclude\":false\r}\r}\r],\"task\":{\r\"GUID\":\"9BE7A700-FE5D-4392-B78B-481B4AFC4F89\",\"description\":\"System created schedule policy for DDB Verification\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":11,\"taskName\":\"System Created DDB Verification schedule policy\",\"alertId\":0,\"taskId\":13,\"taskFlags\":{\r\"isEZOperation\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"relativeTime\":32787,\"subTaskOperation\":1,\"subTask\":{\r\"subTaskOrder\":0,\"subTaskType\":1,\"flags\":4096,\"operationType\":4007,\"subTaskId\":14\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":86400,\"freq_type\":4,\"patternId\":13,\"flags\":0,\"description\":\"Every day at 11:00 AM and repeats every 24 hr(s) 0 min(s) until 12:00 AM\",\"active_end_time\":86340,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":39600,\"freq_restart_interval\":0,\"active_start_date\":1473897600,\"freq_interval\":1,\"freq_relative_interval\":0,\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"mediaOpt\":{\r\"auxcopyJobOption\":{\r\"maxNumberOfStreams\":0,\"useMaximumStreams\":true\r}\r}\r},\"adminOpts\":{\r\"archiveCheckOption\":{\r\"ddbVerificationLevel\":3,\"jobsToVerify\":0,\"allCopies\":true,\"backupLevel\":2\r}\r}\r}\r}\r]\r}\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "0172040b-ad01-306c-3a98-0d6eeff9c96b",
           "name": "Schedules Properties",
           "event": [
@@ -5495,158 +5647,6 @@
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy_properties.htm"
           },
           "response": []
-        },
-        {
-          "_postman_id": "a6480439-75d4-a61c-a978-4c8334acd350",
-          "name": "Schedules 2",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Schedules"
-              ],
-              "query": [
-                {
-                  "key": "storagepolicyId",
-                  "value": "3",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "admin",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This request returns all of the administrator schedules for a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm"
-          },
-          "response": [
-            {
-              "id": "5d299a62-9cd6-8692-24a7-b07a886a6ebb",
-              "name": "Schedules 2",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Schedules"
-                  ],
-                  "query": [
-                    {
-                      "key": "storagepolicyId",
-                      "value": "3",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "admin",
-                      "value": "1",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": "This request returns all of the administrator schedules for a storage policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1757",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 06 Jun 2017 08:53:33 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "221",
-              "body": "{\r\"taskDetail\":[\r{\r\"taskOperation\":1,\"associations\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmTemplateId\":0,\"subclientId\":0,\"clientGroupId\":0,\"storagePolicyId\":0,\"copyId\":0,\"applicationId\":0,\"backupsetId\":0,\"instanceId\":0,\"srmReportType\":0,\"sidbStoreId\":0,\"clientSidePackage\":true,\"clientId\":0,\"sidbStoreName\":\"N\\u002fA\",\"copyName\":\"DUMMY\",\"agentlessPolicyId\":0,\"mediaAgentId\":0,\"_type_\":155,\"appName\":\"Default Application Type Name\",\"consumeLicense\":true,\"flags\":{\r\"exclude\":false\r}\r}\r],\"task\":{\r\"GUID\":\"9BE7A700-FE5D-4392-B78B-481B4AFC4F89\",\"description\":\"System created schedule policy for DDB Verification\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":11,\"taskName\":\"System Created DDB Verification schedule policy\",\"alertId\":0,\"taskId\":13,\"taskFlags\":{\r\"isEZOperation\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"relativeTime\":32787,\"subTaskOperation\":1,\"subTask\":{\r\"subTaskOrder\":0,\"subTaskType\":1,\"flags\":4096,\"operationType\":4007,\"subTaskId\":14\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":86400,\"freq_type\":4,\"patternId\":13,\"flags\":0,\"description\":\"Every day at 11:00 AM and repeats every 24 hr(s) 0 min(s) until 12:00 AM\",\"active_end_time\":86340,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":39600,\"freq_restart_interval\":0,\"active_start_date\":1473897600,\"freq_interval\":1,\"freq_relative_interval\":0,\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"mediaOpt\":{\r\"auxcopyJobOption\":{\r\"maxNumberOfStreams\":0,\"useMaximumStreams\":true\r}\r}\r},\"adminOpts\":{\r\"archiveCheckOption\":{\r\"ddbVerificationLevel\":3,\"jobsToVerify\":0,\"allCopies\":true,\"backupLevel\":2\r}\r}\r}\r}\r]\r}\r]\r}"
-            }
-          ]
         },
         {
           "_postman_id": "f8ace655-5f8b-cd25-7e4a-37a5896adf1f",
