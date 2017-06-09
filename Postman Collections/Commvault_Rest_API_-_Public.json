@@ -4682,7 +4682,7 @@
               "mode": "raw",
               "raw": "<Security_CreateRoleRequest>\r\n   <roles>\r\n      <role>\r\n         <roleName>TestRole</roleName>\r\n         <flags>\r\n            <disabled>false</disabled>\r\n         </flags>\r\n      </role>\r\n      <description></description>\r\n      <categoryPermission>\r\n         <categoriesPermissionList>\r\n           <categoryName>Alert</categoryName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionList>\r\n            <permissionName>Agent Management</permissionName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionList>\r\n            <permissionName>Agent Scheduling</permissionName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionOperationType>ADD</categoriesPermissionOperationType>\r\n      </categoryPermission>\r\n   </roles>\r\n</Security_CreateRoleRequest>"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_role.htm"
+            "description": "This operation creates a role.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_role.htm"
           },
           "response": []
         },
