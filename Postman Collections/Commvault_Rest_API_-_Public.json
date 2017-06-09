@@ -7252,7 +7252,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_library_details.htm"
+            "description": "This operation returns details associated with a library.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_library_details.htm"
           },
           "response": []
         },
