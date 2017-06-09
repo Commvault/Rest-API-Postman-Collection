@@ -5273,7 +5273,7 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  ""
+                  "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
                 ]
               }
             }
@@ -5363,6 +5363,69 @@
               "cookie": [],
               "responseTime": "1175",
               "body": "{\r\"taskDetail\":[\r{\r\"task\":{\r\"GUID\":\"69173BC2-9642-4565-A875-B8D77DC11858\",\"description\":\"System created schedule policy for All Agent Types\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created (All  Agent Types)\",\"alertId\":0,\"taskId\":2,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created (All  Agent Types)\",\"taskId\":2\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"1D75891D-695D-4DAA-AD8F-235477F8BD9E\",\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":1,\"associatedObjects\":0,\"taskName\":\"System Created Autocopy schedule\",\"alertId\":0,\"taskId\":9,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created Autocopy schedule\",\"taskId\":9\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"EFDD89C1-08F5-4F20-AD73-C0CC16E3B14F\",\"description\":\"System created schedule policy for DDB subclients\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created for DDB subclients\",\"alertId\":0,\"taskId\":10,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":true,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for DDB subclients\",\"taskId\":10\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"9BE7A700-FE5D-4392-B78B-481B4AFC4F89\",\"description\":\"System created schedule policy for DDB Verification\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":11,\"associatedObjects\":0,\"taskName\":\"System Created DDB Verification schedule policy\",\"alertId\":0,\"taskId\":13,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created DDB Verification schedule policy\",\"taskId\":13\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"5fa012f2-a6fc-4990-a847-e0d6de2617a0\",\"description\":\"System created schedule policy for Edge Drive\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":2,\"taskName\":\"System Created for Edge Drive\",\"alertId\":0,\"taskId\":30,\"taskFlags\":{\r\"isEdgeDrive\":true,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for Edge Drive\",\"taskId\":30\r}\r},\"appGroup\":{\r\"appGroups\":[\r{\r\"appGroupId\":1\r}\r]\r}\r},{\r\"task\":{\r\"GUID\":\"A5DE97A0-8B9F-4AF1-967A-8142A8DE441E\",\"description\":\"System created schedule policy for IndexBackup subclients\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created for IndexBackup subclients\",\"alertId\":0,\"taskId\":64,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for IndexBackup subclients\",\"taskId\":64\r}\r},\"appGroup\":{\r\r}\r}\r]\r}"
+            },
+            {
+              "id": "9429c9a2-e517-4968-e2f5-3a445f48d729",
+              "name": "Schedule Policy",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/SchedulePolicy",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "3676",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Jun 2017 07:12:24 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "1028",
+              "body": "{\r\"taskDetail\":[\r{\r\"task\":{\r\"GUID\":\"69173BC2-9642-4565-A875-B8D77DC11858\",\"description\":\"System created schedule policy for All Agent Types\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created (All  Agent Types)\",\"alertId\":0,\"taskId\":2,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created (All  Agent Types)\",\"taskId\":2\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"1D75891D-695D-4DAA-AD8F-235477F8BD9E\",\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":1,\"associatedObjects\":0,\"taskName\":\"System Created Autocopy schedule\",\"alertId\":0,\"taskId\":9,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created Autocopy schedule\",\"taskId\":9\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"EFDD89C1-08F5-4F20-AD73-C0CC16E3B14F\",\"description\":\"System created schedule policy for DDB subclients\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created for DDB subclients\",\"alertId\":0,\"taskId\":10,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":true,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for DDB subclients\",\"taskId\":10\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"9BE7A700-FE5D-4392-B78B-481B4AFC4F89\",\"description\":\"System created schedule policy for DDB Verification\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":11,\"associatedObjects\":0,\"taskName\":\"System Created DDB Verification schedule policy\",\"alertId\":0,\"taskId\":13,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created DDB Verification schedule policy\",\"taskId\":13\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"5fa012f2-a6fc-4990-a847-e0d6de2617a0\",\"description\":\"System created schedule policy for Edge Drive\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":2,\"taskName\":\"System Created for Edge Drive\",\"alertId\":0,\"taskId\":30,\"taskFlags\":{\r\"isEdgeDrive\":true,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for Edge Drive\",\"taskId\":30\r}\r},\"appGroup\":{\r\"appGroups\":[\r{\r\"appGroupId\":1\r}\r]\r}\r},{\r\"task\":{\r\"GUID\":\"A5DE97A0-8B9F-4AF1-967A-8142A8DE441E\",\"description\":\"System created schedule policy for IndexBackup subclients\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"System Created for IndexBackup subclients\",\"alertId\":0,\"taskId\":64,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"System Created for IndexBackup subclients\",\"taskId\":64\r}\r},\"appGroup\":{\r\r}\r},{\r\"task\":{\r\"GUID\":\"f231bfdb-9b68-464a-9a52-f6701ca216c2\",\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"admin\",\"policyType\":0,\"associatedObjects\":8,\"taskName\":\"TestPolicy\",\"alertId\":0,\"taskId\":151,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"disabled\":false\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskName\":\"TestPolicy\",\"taskId\":151\r}\r},\"appGroup\":{\r\"appGroups\":[\r{\r\"appGroupId\":101\r},{\r\"appGroupId\":1\r},{\r\"appGroupId\":5\r}\r]\r}\r}\r]\r}"
             }
           ]
         },
