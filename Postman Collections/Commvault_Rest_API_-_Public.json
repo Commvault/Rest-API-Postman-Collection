@@ -1561,7 +1561,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_logout.htm"
+            "description": "This operation ends the current session.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_logout.htm"
           },
           "response": [
             {
