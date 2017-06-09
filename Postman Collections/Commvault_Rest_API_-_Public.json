@@ -7173,7 +7173,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"tapeProperties\": {\r\n    \"attribute\": -1,\r\n    \"status\": 1,\r\n    \"libraryEntity\": {\r\n      \"libraryId\": 334\r\n    }\r\n  }\r\n}"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_enable_tape_library.htm"
+            "description": "This operation enables a tape library.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_enable_tape_library.htm"
           },
           "response": []
         },
