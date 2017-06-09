@@ -1340,7 +1340,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_alert.htm"
+            "description": "This operation deletes an alert.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_alert.htm"
           },
           "response": [
             {
