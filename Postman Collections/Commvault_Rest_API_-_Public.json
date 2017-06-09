@@ -7294,7 +7294,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"tapeProperties\": {\r\n    \"attribute\": 522,\r\n    \"status\": -1,\r\n    \"libraryEntity\": {\r\n      \"libraryId\": 184\r\n    }\r\n  }\r\n}"
             },
-            "description": "This operation marks or unmarks a tape library offline for maintenance.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_mark_offline_tape_library.htm"
+            "description": "This operation marks a tape library offline for maintenance.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_mark_offline_tape_library.htm"
           },
           "response": []
         },
