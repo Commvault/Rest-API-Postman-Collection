@@ -3093,7 +3093,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_properties.htm"
+            "description": "This operation returns properties associated with a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_properties.htm"
           },
           "response": []
         },
