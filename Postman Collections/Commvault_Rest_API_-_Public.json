@@ -2490,7 +2490,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_group.htm"
+            "description": "This operation returns a list of client computer groups.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_group.htm"
           },
           "response": [
             {
