@@ -7313,7 +7313,25 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Library?Action=configureTape",
+            "url": {
+              "raw": "{{ServerUrl}}/Library?Action=configureTape",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Library"
+              ],
+              "query": [
+                {
+                  "key": "Action",
+                  "value": "configureTape",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "POST",
             "header": [
               {
