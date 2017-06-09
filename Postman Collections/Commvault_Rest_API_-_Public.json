@@ -4438,7 +4438,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_recall.htm"
+            "description": "This operation initiates a download of data obtained through a backup.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_recall.htm"
           },
           "response": []
         },
