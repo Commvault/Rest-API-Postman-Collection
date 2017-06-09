@@ -7596,7 +7596,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"isConfigRequired\": 1,\r\n  \"library\": {\r\n    \"libraryName\": \"library001\",\r\n    \"opType\": 1,\r\n    \"mediaAgentId\": 1234,\r\n    \"password\": \"\",\r\n    \"loginName\": \"\",\r\n    \"mountPath\": \"c:\\\\library001\"\r\n  }\r\n}"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_disk_library.htm"
+            "description": "This operation creates a disk library.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_disk_library.htm"
           },
           "response": []
         },
