@@ -4866,80 +4866,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "0172040b-ad01-306c-3a98-0d6eeff9c96b",
-          "name": "Schedules Properties",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Schedules/121",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_properties.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "04313cac-0d42-59f0-fbd0-48628401fc76",
-          "name": "Schedule Policy Exclude Entity",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Task/69/Entity/exclude",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "ClientId=2,3"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_entity_exclude.htm"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "04fdba8f-c0a3-de59-e660-e403ac8f216d",
           "name": "Schedules",
           "event": [
@@ -5080,6 +5006,80 @@
               "body": "{\r\"taskDetail\":[\r{\r\"taskOperation\":1,\"task\":{\r\"GUID\":\"E85B33D0-1732-4ED3-A629-671254019459\",\"description\":\"System Created Install Software\",\"ownerId\":1,\"runUserId\":1,\"taskType\":2,\"ownerName\":\"admin\",\"policyType\":0,\"alertId\":0,\"taskId\":8,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"uninstalled\":false,\"disabled\":true\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskId\":8\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"relativeTime\":30124,\"subTaskOperation\":1,\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"System Created Install Software\",\"subTaskType\":1,\"flags\":128,\"operationType\":4020,\"subTaskId\":9\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":8,\"flags\":0,\"active_end_time\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":36000,\"freq_restart_interval\":0,\"active_start_date\":1436832000,\"freq_interval\":4,\"freq_relative_interval\":0,\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"adminOpts\":{\r\"updateOption\":{\r\"commcellId\":2,\"invokeLevel\":1,\"removeIntersectingDiag\":true,\"rebootClient\":false,\"ignoreRunningJobs\":true,\"clientAndClientGroups\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":2,\"consumeLicense\":true\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":27,\"consumeLicense\":true\r},{\r\"srmReportSet\":0,\"type\":0,\"clientGroupId\":4,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":28,\"consumeLicense\":true,\"flags\":{\r\"exclude\":true\r}\r}\r],\"installUpdatesJobType\":{\r\"upgradeClients\":false,\"undoUpdates\":false,\"installUpdates\":true\r}\r}\r}\r}\r}\r]\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "0172040b-ad01-306c-3a98-0d6eeff9c96b",
+          "name": "Schedules Properties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Schedules/121",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_properties.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "04313cac-0d42-59f0-fbd0-48628401fc76",
+          "name": "Schedule Policy Exclude Entity",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Task/69/Entity/exclude",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ClientId=2,3"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_entity_exclude.htm"
+          },
+          "response": []
         },
         {
           "_postman_id": "0be4d463-2217-144b-ed8a-70d4d1c23cb1",
