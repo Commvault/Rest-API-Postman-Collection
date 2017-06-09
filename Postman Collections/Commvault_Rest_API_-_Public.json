@@ -1805,7 +1805,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_backup_set_properties.htm"
+            "description": "This operation returns the properties associated with a backup set.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_backup_set_properties.htm"
           },
           "response": [
             {
