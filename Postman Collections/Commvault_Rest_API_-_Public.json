@@ -5128,7 +5128,11 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Validating if role was created successfully\"] = jsonData.response[0].errorString === \"Successful\";",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                 ]
               }
             }
@@ -5159,7 +5163,76 @@
             },
             "description": "This opeartion updates a role.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_role_modify.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "9685897a-4e00-e9ae-1d8c-a509299b7e81",
+              "name": "Update a Role",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Role/{{roleId}}",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"roles\": [\r\n    {\r\n      \"description\": \"testing\",\r\n      \"role\": {\r\n        \"roleName\": \"TestRole\",\r\n        \"flags\": {\r\n          \"disabled\": false\r\n        }\r\n      },\r\n      \"categoryPermission\": {\r\n        \"categoriesPermissionOperationType\": 2,\r\n        \"categoriesPermissionList\": [\r\n          {\r\n            \"categoryName\": \"Alert\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Management\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Scheduling\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "110",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 12 Jun 2017 09:49:16 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "508",
+              "body": "{\r\"response\":[\r{\r\"errorString\":\"Successful\",\"errorCode\":0,\"entity\":{\r\"roleName\":\"TestRole\",\"roleId\":34\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "a1ac483e-ac8a-90d0-4a85-28f260f1e0f8",
