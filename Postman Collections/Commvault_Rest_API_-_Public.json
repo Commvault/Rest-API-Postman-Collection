@@ -4497,7 +4497,91 @@
             },
             "description": "This request returns subclients that do not have backup jobs available to restore.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_hierarchy_available_backup.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "53feb8b6-5581-45a4-460a-5e9cb5fc098a",
+              "name": "Client Hierarchy 2",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Client/2/Hierarchy?backedUp=false",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Client",
+                    "2",
+                    "Hierarchy"
+                  ],
+                  "query": [
+                    {
+                      "key": "backedUp",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "749",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 12 Jun 2017 10:04:16 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "9",
+              "body": "{\r\"entity\":[\r{\r\"subclientId\":2,\"applicationId\":33,\"clientName\":\"firewalltestcs\",\"backupsetId\":3,\"instanceId\":1,\"clientId\":2,\"subclientName\":\"default\",\"backupsetName\":\"defaultBackupSet\",\"instanceName\":\"DefaultInstanceName\",\"appName\":\"Windows File System\"\r},{\r\"subclientId\":31,\"applicationId\":33,\"clientName\":\"firewalltestcs\",\"backupsetId\":3,\"instanceId\":1,\"clientId\":2,\"subclientName\":\"Back_44\",\"backupsetName\":\"defaultBackupSet\",\"instanceName\":\"DefaultInstanceName\",\"appName\":\"Windows File System\"\r},{\r\"subclientId\":49,\"applicationId\":33,\"clientName\":\"firewalltestcs\",\"backupsetId\":3,\"instanceId\":1,\"clientId\":2,\"subclientName\":\"TestFSAPI\",\"backupsetName\":\"defaultBackupSet\",\"instanceName\":\"DefaultInstanceName\",\"appName\":\"Windows File System\"\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "c560a942-1618-d5a0-c12d-4d198b3885c9",
@@ -4747,7 +4831,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"8DDB1E31-53B0-46B0-AE2D-A5TEST5916DE\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"devsrv\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\Sample Backup\\\\testdata\\\\data2\\\\rc\",\r\n      \"\\\\C:\\\\Sample Backup\\\\testdata\\\\data2\\\\bottom_left.png\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 41,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 31,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"8DDB1E31-53B0-46B0-AE2D-A5TEST5916DE\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\Sample Backup\\\\testdata\\\\data2\\\\rc\",\r\n      \"\\\\C:\\\\Sample Backup\\\\testdata\\\\data2\\\\bottom_left.png\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 41,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 31,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
             },
             "description": "This operation restores data obtained through a backup.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_retrievetoclient.htm"
           },
