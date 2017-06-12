@@ -5176,7 +5176,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Role/14",
+            "url": "{{ServerUrl}}/Role/{{roleId}}",
             "method": "GET",
             "header": [
               {
