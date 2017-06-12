@@ -4616,7 +4616,9 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains roleProperties\"] = responseBody.has(\"roleProperties\");"
                 ]
               }
             }
@@ -4642,7 +4644,71 @@
             },
             "description": "This request does not define the propertyLevel parameter, so the default propertyLevel of 10 is used in the request.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "eb5077d0-a344-961b-85de-e4841736919a",
+              "name": "View Roles",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Role",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1855",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 12 Jun 2017 09:30:12 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "10567",
+              "body": "{\r\"roleProperties\":[\r{\r\"visibility\":0,\"description\":\"System Created Role with all permissions\",\"role\":{\r\"roleId\":1,\"roleName\":\"Master\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System Created Role for View permission\",\"role\":{\r\"roleId\":3,\"roleName\":\"View\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for end users\",\"role\":{\r\"roleId\":4,\"roleName\":\"End Users\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for compliance\",\"role\":{\r\"roleId\":5,\"roleName\":\"Compliance\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for client admins\",\"role\":{\r\"roleId\":6,\"roleName\":\"Client Admins\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created for Laptop owners\",\"role\":{\r\"roleId\":7,\"roleName\":\"All Users Laptops\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created for plan add remove role\",\"role\":{\r\"roleId\":8,\"roleName\":\"Plan Subscription Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created for Plan creators\",\"role\":{\r\"roleId\":10,\"roleName\":\"Plan Creator Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"Role for company user group client group associations\",\"role\":{\r\"roleId\":11,\"roleName\":\"MSP Subscription\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for alert owners\",\"role\":{\r\"roleId\":12,\"roleName\":\"Alert Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for subclient policy owners\",\"role\":{\r\"roleId\":13,\"roleName\":\"Subclient Policy Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"visibility\":0,\"description\":\"Client Group Creator role\",\"role\":{\r\"roleId\":14,\"roleName\":\"Client Group Creator\",\"flags\":{\r\"disabled\":false\r}\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "0aebec0d-6981-8232-2ab1-72e9fc5068aa",
