@@ -4999,7 +4999,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "postman.setEnvironmentVariable(\"UserId\", jsonData.response[0].entity.userId);",
+                  "postman.setEnvironmentVariable(\"roleId\", jsonData.response[0].entity.roleId);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -5011,11 +5011,11 @@
                   "",
                   "tests[\"Response Body contains entity\"] = responseBody.has(\"entity\");",
                   "",
-                  "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");",
+                  "tests[\"Response Body contains roleId\"] = responseBody.has(\"roleId\");",
                   "",
-                  "tests[\"Response Body contains userName\"] = responseBody.has(\"userName\");",
+                  "tests[\"Response Body contains roleName\"] = responseBody.has(\"roleName\");",
                   "",
-                  "tests[\"Validating if user was created successfully\"] = jsonData.response[0].errorString === \"Successful\";",
+                  "tests[\"Validating if role was created successfully\"] = jsonData.response[0].errorString === \"Successful\";",
                   "",
                   "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                 ]
