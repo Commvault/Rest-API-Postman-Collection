@@ -4719,13 +4719,33 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains roleProperties\"] = responseBody.has(\"roleProperties\");"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Role?propertyLevel=1",
+            "url": {
+              "raw": "{{ServerUrl}}/Role?propertyLevel=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Role"
+              ],
+              "query": [
+                {
+                  "key": "propertyLevel",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
