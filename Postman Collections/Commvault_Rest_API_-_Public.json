@@ -4515,7 +4515,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"opType\": 0,\r\n  \"queries\": [\r\n    {\r\n      \"type\": 1,\r\n      \"queryId\": \"countQuery\",\r\n      \"aggrParam\": {\r\n        \"field\": 0,\r\n        \"aggrType\": 4\r\n      }\r\n    },\r\n    {\r\n      \"type\": 0,\r\n      \"queryId\": \"dataQuery\",\r\n      \"dataParam\": {\r\n        \"sortParam\": {\r\n          \"ascending\": true,\r\n          \"sortBy\": [\r\n            38,\r\n            0\r\n          ]\r\n        },\r\n        \"paging\": {\r\n          \"firstNode\": 0,\r\n          \"pageSize\": 15,\r\n          \"skipNode\": 0\r\n        }\r\n      }\r\n    }\r\n  ],\r\n  \"mode\": {\r\n    \"mode\": 2\r\n  },\r\n  \"paths\": [\r\n    {\r\n      \"path\": \"C:\\\\users\"\r\n    }\r\n  ],\r\n  \"options\": {\r\n    \"showDeletedFiles\": true,\r\n    \"restoreIndex\": true\r\n  },\r\n  \"entity\": {\r\n    \"subclientId\": 2,\r\n    \"applicationId\": 33,\r\n    \"clientName\": \"firewalltestcs\",\r\n    \"backupsetId\": 3,\r\n    \"instanceId\": 1,\r\n    \"clientId\": 2\r\n  }\r\n}"
+              "raw": "{\r\n  \"opType\": 0,\r\n  \"queries\": [\r\n    {\r\n      \"type\": 1,\r\n      \"queryId\": \"countQuery\",\r\n      \"aggrParam\": {\r\n        \"field\": 0,\r\n        \"aggrType\": 4\r\n      }\r\n    },\r\n    {\r\n      \"type\": 0,\r\n      \"queryId\": \"dataQuery\",\r\n      \"dataParam\": {\r\n        \"sortParam\": {\r\n          \"ascending\": true,\r\n          \"sortBy\": [\r\n            38,\r\n            0\r\n          ]\r\n        },\r\n        \"paging\": {\r\n          \"firstNode\": 0,\r\n          \"pageSize\": 15,\r\n          \"skipNode\": 0\r\n        }\r\n      }\r\n    }\r\n  ],\r\n  \"mode\": {\r\n    \"mode\": 2\r\n  },\r\n  \"paths\": [\r\n    {\r\n      \"path\": \"C:\\\\\"\r\n    }\r\n  ],\r\n  \"options\": {\r\n    \"showDeletedFiles\": true,\r\n    \"restoreIndex\": true\r\n  },\r\n  \"entity\": {\r\n    \"subclientId\": 49,\r\n    \"applicationId\": 33,\r\n    \"clientName\": \"firewalltestcs\",\r\n    \"backupsetId\": 3,\r\n    \"instanceId\": 1,\r\n    \"clientId\": 2\r\n  }\r\n}"
             },
             "description": "This operation browses data obtained through a backup.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_browse.htm"
           },
@@ -4556,7 +4556,71 @@
             },
             "description": "This request returns subclients that have backup jobs available to restore.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_hierarchy_available_backup.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "5a9bbd1b-ac3f-a944-24a0-52f0ba4c8c97",
+              "name": "Client Hierarchy",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Client/2/Hierarchy",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "506",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 12 Jun 2017 09:56:54 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "183",
+              "body": "{\r\"entity\":[\r{\r\"subclientId\":31,\"applicationId\":33,\"clientName\":\"firewalltestcs\",\"backupsetId\":3,\"instanceId\":1,\"clientId\":2,\"subclientName\":\"Back_44\",\"backupsetName\":\"defaultBackupSet\",\"instanceName\":\"DefaultInstanceName\",\"appName\":\"Windows File System\"\r},{\r\"subclientId\":49,\"applicationId\":33,\"clientName\":\"firewalltestcs\",\"backupsetId\":3,\"instanceId\":1,\"clientId\":2,\"subclientName\":\"TestFSAPI\",\"backupsetName\":\"defaultBackupSet\",\"instanceName\":\"DefaultInstanceName\",\"appName\":\"Windows File System\"\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "f8693dd1-32aa-3920-7383-6b9143ab8e54",
