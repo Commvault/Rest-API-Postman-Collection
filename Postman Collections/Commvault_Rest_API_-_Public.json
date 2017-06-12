@@ -4172,6 +4172,85 @@
           "response": []
         },
         {
+          "_postman_id": "c5cd804c-4951-4b42-8180-57f2f91227a5",
+          "name": "Job Details",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/JobDetails ",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"jobId\": 105\r\n}"
+            },
+            "description": "This opearation returns the details for a job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_details.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "eea294a6-573c-aa2b-596b-09aed949701e",
+          "name": "Job Kill",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Job/105/action/kill",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation kills a job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_kill.htm"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "2a1d5533-7ff8-57fd-c5a6-16238fa9cb3a",
           "name": "Job Suspend",
           "event": [
@@ -4246,48 +4325,6 @@
           "response": []
         },
         {
-          "_postman_id": "c5cd804c-4951-4b42-8180-57f2f91227a5",
-          "name": "Job Details",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/JobDetails ",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"jobId\": 105\r\n}"
-            },
-            "description": "This opearation returns the details for a job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_details.htm"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "dd8ec5a7-d65e-e130-faef-02e5d7cef69a",
           "name": "Events",
           "event": [
@@ -4358,43 +4395,6 @@
               "raw": ""
             },
             "description": "This request returns all events that happened after Wed, 10 Feb 2016 19:37:15 GMT.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_events.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "eea294a6-573c-aa2b-596b-09aed949701e",
-          "name": "Job Kill",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Job/105/action/kill",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation kills a job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_kill.htm"
           },
           "response": []
         }
