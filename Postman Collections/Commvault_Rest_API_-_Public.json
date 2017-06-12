@@ -4251,43 +4251,6 @@
           "response": []
         },
         {
-          "_postman_id": "2a1d5533-7ff8-57fd-c5a6-16238fa9cb3a",
-          "name": "Job Suspend",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Job/781/action/pause",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation suspends a job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_suspend.htm"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "b5b51960-b447-c0b1-b3c2-51937ee04572",
           "name": "Job Resume",
           "event": [
@@ -4321,6 +4284,43 @@
               "raw": ""
             },
             "description": "This operation resumes a suspended job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_resume.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2a1d5533-7ff8-57fd-c5a6-16238fa9cb3a",
+          "name": "Job Suspend",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Job/781/action/pause",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation suspends a job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_suspend.htm"
           },
           "response": []
         },
