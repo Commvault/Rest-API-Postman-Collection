@@ -5028,6 +5028,117 @@
             },
             "description": "This operation creates a role.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_role.htm"
           },
+          "response": [
+            {
+              "id": "15f992d4-b7c3-626a-98e0-fc288aef4c42",
+              "name": "Create a Role",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Role",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<Security_CreateRoleRequest>\r\n   <roles>\r\n      <role>\r\n         <roleName>TestRole</roleName>\r\n         <flags>\r\n            <disabled>false</disabled>\r\n         </flags>\r\n      </role>\r\n      <description></description>\r\n      <categoryPermission>\r\n         <categoriesPermissionList>\r\n           <categoryName>Alert</categoryName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionList>\r\n            <permissionName>Agent Management</permissionName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionList>\r\n            <permissionName>Agent Scheduling</permissionName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionOperationType>ADD</categoriesPermissionOperationType>\r\n      </categoryPermission>\r\n   </roles>\r\n</Security_CreateRoleRequest>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "139",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 12 Jun 2017 09:41:08 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "1028",
+              "body": "{\r\"response\":[\r{\r\"errorString\":\"Successful\",\"errorCode\":0,\"entity\":{\r\"roleName\":\"TestRole\",\"roleId\":33,\"flags\":{\r\"disabled\":false\r}\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "b48e5147-8d9f-4b02-2acc-f0f45697c72d",
+          "name": "Update a Role",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Role/18",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"roles\": [\r\n    {\r\n      \"description\": \"testing\",\r\n      \"role\": {\r\n        \"roleName\": \"TestRole\",\r\n        \"flags\": {\r\n          \"disabled\": false\r\n        }\r\n      },\r\n      \"categoryPermission\": {\r\n        \"categoriesPermissionOperationType\": 2,\r\n        \"categoriesPermissionList\": [\r\n          {\r\n            \"categoryName\": \"Alert\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Management\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Scheduling\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+            },
+            "description": "This opeartion updates a role.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_role_modify.htm"
+          },
           "response": []
         },
         {
@@ -5101,48 +5212,6 @@
               "raw": ""
             },
             "description": "This operation deletes a role.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_role.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "b48e5147-8d9f-4b02-2acc-f0f45697c72d",
-          "name": "Update a Role",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Role/18",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"roles\": [\r\n    {\r\n      \"description\": \"testing\",\r\n      \"role\": {\r\n        \"roleName\": \"TestRole\",\r\n        \"flags\": {\r\n          \"disabled\": false\r\n        }\r\n      },\r\n      \"categoryPermission\": {\r\n        \"categoriesPermissionOperationType\": 2,\r\n        \"categoriesPermissionList\": [\r\n          {\r\n            \"categoryName\": \"Alert\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Management\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Scheduling\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
-            },
-            "description": "This opeartion updates a role.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_role_modify.htm"
           },
           "response": []
         }
