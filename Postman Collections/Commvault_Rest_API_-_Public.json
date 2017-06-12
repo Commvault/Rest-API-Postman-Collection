@@ -4831,7 +4831,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"8DDB1E31-53B0-46B0-AE2D-A5TEST5916DE\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\Sample Backup\\\\testdata\\\\data2\\\\rc\",\r\n      \"\\\\C:\\\\Sample Backup\\\\testdata\\\\data2\\\\bottom_left.png\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"8DDB1E31-53B0-46B0-AE2D-A5TEST5916DE\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\\",\r\n      \"\\\\C:\\\\\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
             },
             "description": "This operation restores data obtained through a backup.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_retrievetoclient.htm"
           },
