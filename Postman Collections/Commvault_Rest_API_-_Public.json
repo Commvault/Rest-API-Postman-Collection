@@ -9632,7 +9632,71 @@
             },
             "description": "This operation returns a list of libraries.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_library.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "2c50a150-4ea0-1984-fba1-f8ad89a98ab8",
+              "name": "Library",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Library",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "206",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 07:41:51 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "688",
+              "body": "{\r\"response\":[\r{\r\"entityInfo\":{\r\"name\":\"fwMA_3lib\",\"id\":4\r}\r},{\r\"entityInfo\":{\r\"name\":\"IDCMA2Lib\",\"id\":3\r}\r},{\r\"entityInfo\":{\r\"name\":\"FirewallMALib\",\"id\":2\r}\r},{\r\"entityInfo\":{\r\"name\":\"CSLib\",\"id\":1\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "821101c0-09d0-6905-1cc2-a82ca073afb1",
