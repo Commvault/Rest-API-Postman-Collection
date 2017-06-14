@@ -3027,6 +3027,10 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "//postman.setEnvironmentVariable(\"UserId\", jsonData.response[0].entity.userId);",
+                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains clientProperties\"] = responseBody.has(\"clientProperties\");"
