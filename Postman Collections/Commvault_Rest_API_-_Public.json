@@ -3179,7 +3179,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Client/2",
+            "url": "{{ServerUrl}}/Client/{{clientId}}",
             "method": "GET",
             "header": [
               {
