@@ -3268,6 +3268,17 @@
         {
           "_postman_id": "1c90f2e7-0c92-a248-ab25-a0cf6dc25535",
           "name": "Client Additional Settings",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{ServerUrl}}/Client/{{clientId}}/AdditionalSettings",
             "method": "GET",
@@ -3286,7 +3297,68 @@
             "body": {},
             "description": "This operation returns a list of additional settings at the client level."
           },
-          "response": []
+          "response": [
+            {
+              "id": "d7742138-17ce-faf6-34f5-fb967f2258fd",
+              "name": "Client Additional Settings",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Client/{{clientId}}/AdditionalSettings",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "368",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 06:00:34 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "721",
+              "body": "{\r\"returnValue\":0,\"regKeys\":[\r{\r\"deleted\":0,\"hidden\":false,\"relativepath\":\"CommServDB.GxGlobalParam\",\"keyName\":\"PatchSPDownloadDelayDays\",\"comment\":\"\",\"type\":\"INTEGER\",\"value\":\"0\",\"passwordVal\":\"\",\"enabled\":1,\"sourceEntity\":{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":0,\"consumeLicense\":true\r}\r}\r],\"client\":{\r\"type\":0,\"_type_\":3\r}\r}"
+            }
+          ]
         },
         {
           "_postman_id": "5c76f09b-016a-a4b4-ef7e-a94836ee57d3",
