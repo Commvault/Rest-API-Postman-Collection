@@ -3120,6 +3120,43 @@
           ]
         },
         {
+          "_postman_id": "ed6bd438-1eb8-f8da-d14d-956ab6d15f6f",
+          "name": "Client - Virtualization Clients",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This Request returns virtualization clients.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "5c76f09b-016a-a4b4-ef7e-a94836ee57d3",
           "name": "Client Properties",
           "event": [
@@ -3274,43 +3311,6 @@
               "raw": ""
             },
             "description": "This operation deletes a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_client.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "ed6bd438-1eb8-f8da-d14d-956ab6d15f6f",
-          "name": "Client - Virtualization Clients",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This Request returns virtualization clients.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm"
           },
           "response": []
         },
