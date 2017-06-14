@@ -8918,61 +8918,6 @@
           ]
         },
         {
-          "_postman_id": "791bfa5b-f2bd-aa75-f944-ab7efdb22ccd",
-          "name": "Storage Policy List for a MediaAgent",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/StoragePolicyListAssociatedToMediaAgent?MediaAgent=2",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "StoragePolicyListAssociatedToMediaAgent"
-              ],
-              "query": [
-                {
-                  "key": "MediaAgent",
-                  "value": "2",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation returns a list of storage policies associated with a MediaAgent.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy_mediaagent.htm"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "f9cc1948-95e9-8020-4204-7951269abff2",
           "name": "Storage Policy",
           "event": [
