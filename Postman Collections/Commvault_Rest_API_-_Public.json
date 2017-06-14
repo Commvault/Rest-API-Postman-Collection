@@ -3262,6 +3262,29 @@
           ]
         },
         {
+          "_postman_id": "1c90f2e7-0c92-a248-ab25-a0cf6dc25535",
+          "name": "Client Additional Settings",
+          "request": {
+            "url": "{{ServerUrl}}/Client/{clientId}/AdditionalSettings",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "5c76f09b-016a-a4b4-ef7e-a94836ee57d3",
           "name": "Client Properties",
           "event": [
@@ -3421,29 +3444,6 @@
               "raw": ""
             },
             "description": "This operation deletes a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_client.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1c90f2e7-0c92-a248-ab25-a0cf6dc25535",
-          "name": "Client Additional Settings",
-          "request": {
-            "url": "{{ServerUrl}}/Client/{clientId}/AdditionalSettings",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {},
-            "description": ""
           },
           "response": []
         }
