@@ -3029,7 +3029,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "//postman.setEnvironmentVariable(\"UserId\", jsonData.response[0].entity.userId);",
+                  "postman.setEnvironmentVariable(\"UserId\", jsonData.clientProperties[0].entity.userId);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
