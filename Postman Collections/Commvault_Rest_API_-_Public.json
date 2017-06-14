@@ -3507,7 +3507,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 1,\r\n        \"associations\": [\r\n          {\r\n            \"userOrGroup\": [\r\n              {\r\n                \"userName\": \"jsmith\"\r\n              },\r\n              {\r\n                \"userGroupName\": \"support\"\r\n              }\r\n            ],\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"role003\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"client001\"\r\n      }\r\n    ]\r\n  }\r\n}"
+              "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 1,\r\n        \"associations\": [\r\n          {\r\n            \"userOrGroup\": [\r\n              {\r\n                \"userName\": \"edgeuser\"\r\n              },\r\n              {\r\n                \"userGroupName\": \"\"\r\n              }\r\n            ],\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"client001\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request updates the security association for the client. The security association is the combination of the client in the clientName element plus the role, user, and user group in the securityAssociations block.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm"
           },
@@ -3590,7 +3590,71 @@
             },
             "description": "This operation deletes a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_client.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "d2cf149e-06d4-b1d2-fbed-b075130f5b73",
+              "name": "Client",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Client/12",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "266",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 06:09:55 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "4849",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"V11\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":12,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r}"
+            }
+          ]
         }
       ]
     },
