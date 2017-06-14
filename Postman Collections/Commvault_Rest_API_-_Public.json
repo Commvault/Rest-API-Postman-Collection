@@ -3195,7 +3195,71 @@
             },
             "description": "This operation returns properties associated with a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_properties.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "2a1a1d54-2ebc-1b1f-bbf8-19d6301c4220",
+              "name": "Client Properties",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Client/2",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "12395",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 05:50:29 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "5768",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"clientProperties\":[\r{\r\"clusterClientProperties\":{\r\"configureClusterClient\":false,\"showAllAgents\":false\r},\"pseudoClientInfo\":{\r\"edgeDrivePseudoClientProperties\":{\r\"systemDriveType\":0,\"impersonateUser\":{\r\r},\"outlookAddinStoreInfo\":{\r\r}\r},\"openVMSProperties\":{\r\"cvdPort\":8400,\"userAccount\":{\r\"password\":\"\",\"userName\":\"\"\r}\r},\"virtualServerClientProperties\":{\r\"virtualServerInstanceInfo\":{\r\"vsInstanceType\":0\r},\"vmBackupInfo\":{\r\r}\r},\"ibmiInstallOptions\":{\r\"jobProirity\":0,\"jobQueue\":\"\",\"createJobQueue\":false,\"subsysDescription\":\"\",\"dataFolder\":\"\",\"runPriority\":0,\"userProfile\":{\r\"userName\":\"\"\r}\r}\r},\"clientProps\":{\r\"isMA\":true,\"webSearchServiceUrl\":\"http:\\u002f\\u002fFirewallTestCS.testlab.commvault.com:81\\u002fSearchSvc\",\"AutoUpdateLocation\":\"C:\\\\Program Files\\\\Commvault\\\\ContentStore\",\"JobResultsDiskCapThreshold\":90,\"CipherType\":2,\"RetryFrequencyInSecOnNetworkError\":30,\"isWebServerInstalled\":true,\"RestoreAccessFlag\":0,\"isRemoteCacheEnabled\":true,\"SnapBackupMAInstalled\":true,\"PathToExchangeMiningTool\":\"\",\"is1TouchClient\":false,\"RestoreAccessSynFull\":false,\"AltCachePartitionForQSnap\":\"\",\"cacheSource\":0,\"ClientInterface\":\"FirewallTestCS.testlab.commvault.com\",\"EncryptKeyLength\":128,\"isIndexingV2\":true,\"IsQsnapUNIX\":false,\"dm2CacheDiskCapThreshold\":90,\"EnableContentIndexing\":false,\"OptimizeDataForSearch\":false,\"recallService\":\"\",\"CenteraResourceFilename\":\"\",\"isQsnapInstalled\":0,\"ContentIndexEngineInstalled\":false,\"dm2CacheRetentionDays\":7,\"IsDCInstalled\":false,\"encryptionSettings\":2,\"IsExchangeOnePassClient\":false,\"isExchangePseudoClient\":false,\"RetryCountOnNetworkError\":40,\"DirectMediaAccessFlag\":0,\"isIndexingV2NAS\":false,\"JobResultsThresholdMB\":500,\"JobResultsRetentionDays\":7,\"EnableSnapBackups\":false,\"BlockLevelCacheDir\":\"\",\"StorePatchLocally\":true,\"isFastSearchSupported\":false,\"isDescriptionInHTMLFormat\":true,\"BinarySetID\":3,\"IsCommServer\":true,\"IsDeletedClient\":false,\"iswebSearchServerInstalled\":true,\"EnableCollectDelegateInfo\":true,\"fileLevelAnalyticsLicense\":false,\"EnableRetryOnNetworkError\":true,\"dm2CacheThresholdMB\":500,\"queueJobsIfOtherConflictingJobsAreActive\":false,\"IsVirtualClient\":false,\"JobPriority\":6,\"overrideGlobalDesktopGuiProperties\":false,\"enableAccessControl\":true,\"CDRLogFileLocation\":\"\",\"EndUserUrl\":\"http:\\u002f\\u002fFirewallTestCS.testlab.commvault.com:80\\u002fwebconsole\",\"ClientNoPhysicalMachine\":false,\"byteOrder\":\"Little-endian\",\"RestoreAccessPubKey\":false,\"networkThrottle\":{\r\"enableThrottle\":true,\"throttle\":{\r\"shareBandwidth\":true,\"throttle\":[\r{\r\"sendRate\":1024,\"sendEnabled\":true,\"receiveEnabled\":true,\"recvRate\":1024,\"days\":75,\"isAbsolute\":true,\"startTime\":0,\"endTime\":0,\"sendRatePercent\":40,\"recvRatePercent\":40\r}\r]\r},\"clientList\":[\r{\r\"clientId\":9,\"clientName\":\"firewalltestma\"\r},{\r\"clientId\":31,\"clientName\":\"dummy1\"\r}\r]\r},\"securityAssociations\":{\r\"associations\":[\r{\r\"userOrGroup\":[\r{\r\"userGroupName\":\"Testgroup\",\"userGroupId\":10,\"_type_\":15\r}\r],\"properties\":{\r\"isCreatorAssociation\":false,\"role\":{\r\"_type_\":120,\"roleId\":3,\"roleName\":\"View\"\r}\r}\r}\r],\"ownerAssociations\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r}\r],\"entityOwners\":[\r{\r\"flags\":1,\"ownerUser\":{\r\"_type_\":13,\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r}\r},\"clientSecurity\":{\r\"enableDataSecurity\":false,\"clientOwners\":[\r\"admin\"\r],\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"registryKeys\":[\r{\r\"relativepath\":\"CommServDB.GxGlobalParam\",\"keyName\":\"PatchSPDownloadDelayDays\",\"isInheritedFromClientGroup\":false,\"comment\":\"\",\"type\":\"INTEGER\",\"value\":\"0\",\"enabled\":1,\"sourceEntity\":{\r\r}\r}\r],\"dlpPropertise\":{\r\"dlpScanIntervalMins\":15,\"dlpStolen\":false,\"dlpEnableAutomaticDecryption\":false,\"dlpUnlockMethod\":0,\"enableDLP\":false,\"dlpEnableClientKeys\":false,\"dlpMinFileAgeMins\":5,\"dlpRMProperties\":{\r\"enableRmDLP\":false,\"dlpRmNow\":false,\"dlpRmOfflineDays\":30\r}\r},\"firewallConfiguration\":{\r\"configureFirewallSettings\":true,\"isTrivialConfig\":false,\"proxyEntities\":[\r{\r\"clientGroupId\":10,\"clientGroupName\":\"G1\"\r},{\r\"clientGroupId\":23,\"clientGroupName\":\"group3\"\r},{\r\"clientGroupId\":34,\"clientGroupName\":\"AP1\"\r}\r],\"firewallOutGoingRoutes\":[\r{\r\"fireWallOutGoingRouteOptions\":{\r\"connectionProtocol\":2,\"forceAllBackupRestoreDataTraffic\":true,\"routeType\":2,\"remoteProxy\":{\r\"clientGroupId\":34,\"clientGroupName\":\"AP1\",\"_type_\":28\r}\r},\"remoteEntity\":{\r\"clientGroupId\":35,\"clientGroupName\":\"A2\"\r}\r}\r],\"fwTrivialConfig\":{\r\"firewallTrivialDetailsCS\":{\r\"networkType\":1,\"connectionType\":1,\"proxyEntity\":{\r\"clientName\":\"NO CLIENT\",\"clientId\":1\r}\r},\"firewallTrivialDetailsMA\":{\r\"networkType\":1,\"connectionType\":1,\"proxyEntity\":{\r\"clientName\":\"NO CLIENT\",\"clientId\":1\r}\r}\r},\"restrictionTo\":[\r{\r\"state\":1,\"entity\":{\r\"clientGroupId\":34,\"clientGroupName\":\"AP1\"\r}\r}\r],\"firewallOptions\":{\r\"isRoamingClient\":false,\"extendedProperties\":\"<App_FirewallExtendedProperties defaultOutgoingProtocol=\\\"0\\\"\\u002f>\",\"tunnelconnectionPort\":8403,\"foreceSSL\":false,\"tunnelInitSeconds\":30,\"lockdown\":false,\"bindOpenPortsOnly\":false,\"isDMZ\":false,\"keepAliveSeconds\":300\r}\r},\"deDuplicationProperties\":{\r\"performClientSideDeduplication\":true,\"enableHighLatencyOptimization\":false,\"cacheBufferSize\":1024,\"maxCacheDb\":4096,\"clientSideDeduplication\":0,\"enableVariableContentAlignment\":false,\"enableClientSideDiskCache\":false\r},\"spWebServerProperties\":{\r\"enableOnlineSearch\":false,\"spWebServerUserPassword\":{\r\r}\r},\"activityControl\":{\r\"EnableDataRecovery\":true,\"EnableDataManagement\":true,\"EnableOnlineContentIndex\":true\r},\"advancedClientProperties\":{\r\"slaCopyFallenBehindDays\":0,\"rpoMinutes\":0,\"mailServerRole\":1,\"rtoMinutes\":0,\"slaCopyRedundancy\":0,\"excludeFromSLA\":false\r},\"dataInterfacePair\":[\r{\r\"active\":true,\"SourceInterface\":{\r\"ClientId\":2,\"Interface\":\"172.24.19.2\"\r},\"DestInterface\":{\r\"ClientId\":25,\"Interface\":\"172.16.60.114\"\r}\r}\r],\"dm2CacheDir\":{\r\"path\":\"C:\\\\Program Files\\\\Commvault\\\\ContentStore\\\\iDataAgent\\\\JobResults\\\\DM2CacheDir\",\"userAccount\":{\r\"userName\":\"\"\r}\r},\"rightManagementServiceProperties\":{\r\"SMTPAddressOfTheRMSSuperUser\":\"\",\"decryptRMSDocumentDuringContentIndexing\":false,\"smtpAddressOfRMSSuperUser\":\"\",\"rmsCredentials\":{\r\"password\":\"\",\"userName\":\"\"\r}\r},\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":512,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":16,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"jobThrottleSettings\":{\r\"isJobThrottleEnabledAtCS\":0,\"isJobThrottleEnabled\":0,\"dataThreshold\":1,\"excludeImmidiateJobs\":0,\"logThreshold\":1\r},\"webSearchServer\":{\r\"hostName\":\"FirewallTestCS.testlab.commvault.com\",\"clientId\":2\r},\"emailWebAppProperties\":{\r\"enableEmailWebApp\":false,\"exchangeAdminSmtpAddress\":\"\",\"exchangeAdministratorAccount\":{\r\"userName\":\"\"\r}\r}\r},\"client\":{\r\"displayName\":\"firewalltestcs\",\"installDirectory\":\"C:\\\\Program Files\\\\Commvault\\\\ContentStore\",\"ClockSkewInSeconds\":0,\"timezoneSetByUser\":false,\"clientDescription\":\"\",\"evmgrcPort\":8402,\"cvdPort\":8400,\"jobResulsDir\":{\r\"path\":\"C:\\\\Program Files\\\\Commvault\\\\ContentStore\\\\iDataAgent\\\\JobResults\",\"userAccount\":{\r\"userName\":\"\"\r}\r},\"origCommCell\":{\r\"commCellId\":0\r},\"clientEntity\":{\r\"hostName\":\"FirewallTestCS.testlab.commvault.com\",\"clientId\":2,\"clientName\":\"firewalltestcs\",\"commCellName\":\"FirewallTestCS.testlab.commvault.com\"\r},\"versionInfo\":{\r\"UpdateStatus\":2,\"version\":\"ServicePack:8,Additional Updates:,SP8-HotFix-1500,SP8-HotFix-1501,SP8-HotFix-1502,SP8-HotFix-1503,SP8-HotFix-1504,SP8-HotFix-1506,SP8-HotFix-1507,SP8-HotFix-1508,SP8-HotFix-1509,SP8-HotFix-1511,SP8-HotFix-1513,SP8-HotFix-1514,SP8-HotFix-1515,SP8-HotFix-1516,SP8-HotFix-1519,SP8-HotFix-1520,SP8-HotFix-1521,SP8-HotFix-1522,SP8-HotFix-1523,SP8-HotFix-1524,SP8-HotFix-1526,SP8-HotFix-1527,SP8-HotFix-1530,SP8-HotFix-1531,SP8-HotFix-1532,SP8-HotFix-1533,SP8-HotFix-1534,SP8-HotFix-1537,SP8-HotFix-1539,SP8-HotFix-1540,SP8-HotFix-1541,SP8-HotFix-1542,SP8-HotFix-1543,SP8-HotFix-1544,SP8-HotFix-1545,SP8-HotFix-1548,SP8-HotFix-1553,SP8-HotFix-1554,SP8-HotFix-1555,SP8-HotFix-1556,SP8-HotFix-1557,SP8-HotFix-1558,SP8-HotFix-1560,SP8-HotFix-1561,SP8-HotFix-1562,SP8-HotFix-1564,SP8-HotFix-1565,SP8-HotFix-1567,SP8-HotFix-1568,SP8-HotFix-1570,SP8-HotFix-1575,SP8-HotFix-1577,SP8-HotFix-1578,SP8-HotFix-1579,SP8-HotFix-1580,SP8-HotFix-1581,SP8-HotFix-1582,SP8-HotFix-1583,SP8-HotFix-1584,SP8-HotFix-1587,...\",\"GalaxyRelease\":{\r\"ReleaseString\":\"11\"\r},\"PatchStatus\":[\r{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"File System Core\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"CommServe\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Work Flow\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"MediaAgent\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"MediaAgent Core\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Analytics\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Web Server\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Search Advanced Document Type Support\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"VSS Provider\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Commcell Console\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"File System\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Web Console\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Commserve DB\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"DM2 Web services DB\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Workflow Engine DB\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Commserve History DB\"\r}\r},{\r\"BaselineUpdates\":\"SP8 (Build 687656)\",\"BaselineStatus\":2,\"packageInfo\":{\r\"packageName\":\"Mongo DB\"\r}\r}\r]\r},\"TimeZone\":{\r\"TimeZoneID\":64,\"TimeZoneName\":\"(UTC-08:00) Pacific Time (US & Canada)\"\r},\"osInfo\":{\r\"Type\":\"Windows\",\"SubType\":\"Server\",\"osId\":210,\"OsDisplayInfo\":{\r\"ProcessorType\":\"WinX64\",\"OSName\":\"Windows Server 2012 R2 Datacenter\"\r}\r}\r},\"clientGroups\":[\r{\r\"clientGroupId\":1,\"clientGroupName\":\"Infrastructure\"\r},{\r\"clientGroupId\":3,\"clientGroupName\":\"Media Agents\"\r},{\r\"clientGroupId\":9,\"clientGroupName\":\"test\"\r},{\r\"clientGroupId\":16,\"clientGroupName\":\"cs1\"\r},{\r\"clientGroupId\":17,\"clientGroupName\":\"cs2\"\r},{\r\"clientGroupId\":18,\"clientGroupName\":\"cs3\"\r},{\r\"clientGroupId\":19,\"clientGroupName\":\"CSG\"\r}\r],\"AdvancedFeatures\":[\r{\r\"LicenseName\":\"Server File System\",\"LicenseId\":1\r},{\r\"LicenseName\":\"MediaAgent\",\"LicenseId\":11\r},{\r\"LicenseName\":\"VaultTracker Enterprise\",\"LicenseId\":82\r},{\r\"LicenseName\":\"Disk Library Connector (DDO)\",\"LicenseId\":84\r},{\r\"LicenseName\":\"Data Encryption\",\"LicenseId\":85\r},{\r\"LicenseName\":\"WORM Media Support\",\"LicenseId\":90\r},{\r\"LicenseName\":\"GridStore\",\"LicenseId\":91\r},{\r\"LicenseName\":\"Boot Server on Unix\",\"LicenseId\":102\r},{\r\"LicenseName\":\"Content Addressed Storage\",\"LicenseId\":105\r},{\r\"LicenseName\":\"System Recovery Server on Windows\",\"LicenseId\":110\r},{\r\"LicenseName\":\"Compliance Search\",\"LicenseId\":141\r},{\r\"LicenseName\":\"Developer License\",\"LicenseId\":174\r},{\r\"LicenseName\":\"Protected Mailboxes\",\"LicenseId\":203\r},{\r\"LicenseName\":\"Data Protection Enterprise infrastructure\",\"LicenseId\":100002\r},{\r\"LicenseName\":\"Data Archive Enterprise infrastructure\",\"LicenseId\":100004\r},{\r\"LicenseName\":\"Data Protection Snapshot\",\"LicenseId\":100005\r},{\r\"LicenseName\":\"Data Protection Replication\",\"LicenseId\":100006\r},{\r\"LicenseName\":\"CommClient Base\",\"LicenseId\":16777216\r},{\r\"LicenseName\":\"CommServe StorageManager\",\"LicenseId\":50331648\r}\r],\"ActivePhysicalNode\":{\r\"hostName\":\"FirewallTestCS.testlab.commvault.com\",\"clientId\":2,\"clientName\":\"firewalltestcs\"\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "5c76f09b-016a-a4b4-ef7e-a94836ee57d3",
@@ -3357,6 +3421,29 @@
               "raw": ""
             },
             "description": "This operation deletes a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_client.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1c90f2e7-0c92-a248-ab25-a0cf6dc25535",
+          "name": "Client Additional Settings",
+          "request": {
+            "url": "{{ServerUrl}}/Client/{clientId}/AdditionalSettings",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
           },
           "response": []
         }
