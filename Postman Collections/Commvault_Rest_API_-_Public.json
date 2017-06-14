@@ -9963,7 +9963,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"isConfigRequired\": 1,\r\n  \"library\": {\r\n    \"libraryName\": \"library001\",\r\n    \"opType\": 1,\r\n    \"mediaAgentId\": 1234,\r\n    \"password\": \"\",\r\n    \"loginName\": \"\",\r\n    \"mountPath\": \"c:\\\\library001\"\r\n  }\r\n}"
+              "raw": "{\r\n  \"isConfigRequired\": 1,\r\n  \"library\": {\r\n    \"libraryName\": \"library001\",\r\n    \"opType\": 1,\r\n    \"mediaAgentId\": 2,\r\n    \"password\": \"\",\r\n    \"loginName\": \"\",\r\n    \"mountPath\": \"c:\\\\library001\"\r\n  }\r\n}"
             },
             "description": "This operation creates a disk library.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_disk_library.htm"
           },
@@ -10064,7 +10064,89 @@
             },
             "description": "This operation returns the list of MediaAgents accessing a library.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_mediaagent_for_library.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "2705dd49-7a9c-6474-3088-6de745f17149",
+              "name": "MediaAgent for Library",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/MediaAgentForLibrary?LibraryId=2",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "MediaAgentForLibrary"
+                  ],
+                  "query": [
+                    {
+                      "key": "LibraryId",
+                      "value": "2",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "294",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 07:47:31 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "89",
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetMediaAgentListWCResp><mediaAgentList description=\"\" libraryType=\"0\" mediaAgentId=\"9\" mediaAgentName=\"firewalltestma\" osVersion=\"Windows Server 2012 R2 Datacenter\" platform=\"WinX64\" status=\"Ready\"/></EVGui_GetMediaAgentListWCResp>"
+            }
+          ]
         },
         {
           "_postman_id": "fcddacb3-31f1-bb8b-60c9-279bf880235b",
