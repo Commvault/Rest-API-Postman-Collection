@@ -9841,7 +9841,73 @@
             },
             "description": "This operation returns a list of storage pools.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storagepool.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "42f8de07-b34e-2bd5-5d02-c4afd9fa217e",
+              "name": "Storage Pool",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/StoragePool",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml",
+                    "description": "",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": "",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "439",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 07:59:57 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "283",
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"112571092828\"><storagePool _type_=\"28\" clientGroupId=\"13\" clientGroupName=\"TestStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"13\" storagePoolName=\"TestStoragePool\"/></storagePoolList></Api_GetStoragePoolListResp>"
+            }
+          ]
         },
         {
           "_postman_id": "9f3872e4-ee50-13f4-c1fe-ffa7d9139713",
@@ -10313,7 +10379,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/StoragePool/2",
+            "url": "{{ServerUrl}}/StoragePool/13",
             "method": "GET",
             "header": [
               {
