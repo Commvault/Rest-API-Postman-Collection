@@ -3157,6 +3157,43 @@
           "response": []
         },
         {
+          "_postman_id": "6e7bd5bf-2792-07e3-70cb-70ea4657144f",
+          "name": "Client Properties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Client/2",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation returns properties associated with a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_properties.htm"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "5c76f09b-016a-a4b4-ef7e-a94836ee57d3",
           "name": "Client Properties",
           "event": [
@@ -3195,43 +3232,6 @@
               "raw": "{\r\n  \"clientProperties\": {\r\n    \"client\": {\r\n      \"clientDescription\": \"client-level description modified with rest api POST client\"\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"client001\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request updates the client description. The client description is in the clientDescription element.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "6e7bd5bf-2792-07e3-70cb-70ea4657144f",
-          "name": "Client Properties",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Client/2",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation returns properties associated with a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_properties.htm"
           },
           "response": []
         },
