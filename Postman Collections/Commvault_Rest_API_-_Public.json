@@ -3280,7 +3280,7 @@
               }
             ],
             "body": {},
-            "description": ""
+            "description": "This operation returns a list of additional settings at the client level."
           },
           "response": []
         },
