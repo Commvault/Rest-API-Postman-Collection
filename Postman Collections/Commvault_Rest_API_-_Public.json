@@ -3278,43 +3278,6 @@
           "response": []
         },
         {
-          "_postman_id": "e36aec9f-4fd2-40ca-668b-04636b7dcf2e",
-          "name": "Client",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Client/6",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation deletes a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_client.htm"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "f358251c-244f-b455-8454-27cdbdfd17bb",
           "name": "Client Properties",
           "event": [
@@ -3353,6 +3316,43 @@
               "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"ownerAssociations\": {\r\n          \"ownersOperationType\": 1,\r\n          \"categoryPermission\": {\r\n            \"categoriesPermissionOperationType\": 1,\r\n            \"categoriesPermissionList\": [\r\n              {\r\n                \"permissionName\": \"Data Protection Operations\"\r\n              },\r\n              {\r\n                \"permissionName\": \"Job Management\"\r\n              }\r\n            ]\r\n          },\r\n          \"owners\": [\r\n            {\r\n              \"userGroupName\": \"support\"\r\n            },\r\n            {\r\n              \"userGroupName\": \"sales\"\r\n            },\r\n            {\r\n              \"userName\": \"jsmith\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"client001\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request updates the client owners and their permissions.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e36aec9f-4fd2-40ca-668b-04636b7dcf2e",
+          "name": "Client",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Client/6",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation deletes a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_client.htm"
           },
           "response": []
         }
