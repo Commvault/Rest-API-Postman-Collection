@@ -9308,7 +9308,71 @@
             },
             "description": "This operation returns a list of MediaAgents.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_mediaagent.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "2dc6582b-4230-d228-8c9f-d0810765dce4",
+              "name": "MediaAgent",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/MediaAgent",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "361",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 07:40:37 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "661",
+              "body": "{\r\"response\":[\r{\r\"entityInfo\":{\r\"name\":\"firewalltestcs\",\"id\":2\r}\r},{\r\"entityInfo\":{\r\"name\":\"IDCMA\",\"id\":3\r}\r},{\r\"entityInfo\":{\r\"name\":\"IDCMA2\",\"id\":4\r}\r},{\r\"entityInfo\":{\r\"name\":\"firewalltestma\",\"id\":9\r}\r},{\r\"entityInfo\":{\r\"name\":\"IDCunixclient\",\"id\":10\r}\r},{\r\"entityInfo\":{\r\"name\":\"firewalltestma_3\",\"id\":17\r}\r},{\r\"entityInfo\":{\r\"name\":\"neo-ws\",\"id\":26\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "06157533-eb4f-c78f-737b-cc23b86e382b",
