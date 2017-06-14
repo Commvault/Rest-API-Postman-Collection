@@ -3269,7 +3269,7 @@
           "_postman_id": "1c90f2e7-0c92-a248-ab25-a0cf6dc25535",
           "name": "Client Additional Settings",
           "request": {
-            "url": "{{ServerUrl}}/Client/{clientId}/AdditionalSettings",
+            "url": "{{ServerUrl}}/Client/{{clientId}}/AdditionalSettings",
             "method": "GET",
             "header": [
               {
