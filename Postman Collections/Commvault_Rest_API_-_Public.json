@@ -9493,7 +9493,73 @@
             },
             "description": "This operation returns details associated with a library.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_library_details.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "29607f1c-7779-a793-a349-bc3b497e67f6",
+              "name": "Library Details",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Library/2",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml",
+                    "description": "",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": "",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "2270",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 07:42:44 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "24",
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetLibraryInfoWCResp><libraryInfo description=\"\" libraryType=\"3\" libraryVendorId=\"0\" manufacturer=\"Disk\" model=\"Disk\" status=\"\"><magLibSummary associatedMediaAgents=\" firewalltestma\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" isOnline=\"Ready\" lastBackupTime=\"Jun  1 2017  1:14AM\" lastDayThroughput=\"0\" lastHourThroughput=\"0\" lastRestoreTime=\"N/A\" mountPathUsage=\"Fill and Spill\" numOfMountPath=\"1\" onlineMountPaths=\"1 out of 1\" totalAvailableSpace=\"                                171.39 GB\" totalCapacity=\"                                199.66 GB\" totalFreeSpace=\"                                173.39 GB\" totalNumberOfWriteReservations=\"0\"/><tapeLibSummary associatedMediaAgents=\"\" attribute=\"0\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" barcodeReader=\"\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" controller=\"\" firmwareRevision=\"\" isEnabled=\"0\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" model=\"\" numOfActiveMedia=\"0\" numOfAgedMedia=\"0\" numOfAppendableMedia=\"0\" numOfCleaningMedia=\"0\" numOfDrives=\"0\" numOfDrivesOffline=\"0\" numOfFullMedia=\"0\" numOfIESlotOccupied=\"0\" numOfIESlots=\"0\" numOfMedia=\"0\" numOfMediaExporting=\"0\" numOfRegSlotOccupied=\"0\" numOfRegSlots=\"0\" numOfSlots=\"0\" numOfSpareMedia=\"0\" offlineReason=\"\" serialNumber=\"\" status=\"0\" totalNumberOfWriteReservations=\"0\" vendor=\"\"/><MountPathList dataServerType=\"0\" jobIds=\"\" libraryVendorId=\"0\" mediaAgents=\"\" mountPathId=\"2\" mountPathName=\"[firewalltestma] C:\\BackupData\" status=\"Ready\"><deviceInfo id=\"2\" name=\"Device_2\"/><mountPathSummary attribute=\"0\" avgCapacityFreedMB=\"0\" avgDataWrittenPerDayMB=\"0\" avgMediaConsumedPerDay=\"0\" avgMediaFreedPerDay=\"0\" estimatedSpaceRunoutDays=\"0\" lastNumDays=\"0\" libraryId=\"2\" libraryName=\"FirewallMALib\" lowWaterMark=\"0\" numberOfWriters=\"0\" totalAppSize=\"0\" totalDataWritten=\"0\" totalDeduplicationAppSize=\"0\" totalDeduplicationDataWritten=\"0\" totalFreeSpace=\"0\" totalReserveSpaceMB=\"0\" totalSpace=\"0\" totalValidData=\"0\" warningWaterMark=\"0\"/></MountPathList><library _type_=\"9\" libraryId=\"2\" libraryName=\"FirewallMALib\"/></libraryInfo></EVGui_GetLibraryInfoWCResp>"
+            }
+          ]
         },
         {
           "_postman_id": "454f3016-dfa9-72be-704f-9241ecad7ac2",
@@ -9960,7 +10026,25 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/MediaAgentForLibrary?LibraryId=2",
+            "url": {
+              "raw": "{{ServerUrl}}/MediaAgentForLibrary?LibraryId=2",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "MediaAgentForLibrary"
+              ],
+              "query": [
+                {
+                  "key": "LibraryId",
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
