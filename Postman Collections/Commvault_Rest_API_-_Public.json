@@ -3400,7 +3400,76 @@
             },
             "description": "This request updates the client description. The client description is in the clientDescription element.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "f7cc2903-25e9-ca06-ff62-07943b116e0f",
+              "name": "Client Properties",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Client/{{clientId}}",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"clientProperties\": {\r\n    \"client\": {\r\n      \"clientDescription\": \"client-level description modified with rest api POST client\"\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"firewalltestcs\"\r\n      }\r\n    ]\r\n  }\r\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "276",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jun 2017 06:02:15 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "6017",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"firewalltestcs\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":2,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "d50be34c-6cf7-2e0b-b4af-aac5101d87ec",
@@ -3501,7 +3570,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Client/6",
+            "url": "{{ServerUrl}}/Client/12",
             "method": "DELETE",
             "header": [
               {
