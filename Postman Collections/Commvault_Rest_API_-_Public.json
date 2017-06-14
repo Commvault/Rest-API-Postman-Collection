@@ -3599,6 +3599,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
