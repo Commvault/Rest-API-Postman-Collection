@@ -8507,7 +8507,7 @@
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  "tests[\"Validating error code\"] = jsonData.errorCode === 0;"
                 ]
               }
             }
