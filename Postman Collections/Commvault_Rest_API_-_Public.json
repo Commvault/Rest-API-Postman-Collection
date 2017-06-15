@@ -8553,7 +8553,7 @@
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  "tests[\"Validating error code\"] = jsonData.errorCode === 0;"
                 ]
               }
             }
@@ -8584,7 +8584,76 @@
             },
             "description": "This request associates the DB2 agent group and the SQL Server agent with the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "c1d9e4e4-3f04-90cc-2617-72eca6a22949",
+              "name": "Update Schedule Policy Agent Associations",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Task",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"taskInfo\":{\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"TestPolicy\"\r\n      }\r\n    },\r\n    \"appGroup\":{\r\n      \"appGroups\":[\r\n        {\r\n          \"appGroupName\":\"APPGRP_BACKEDUP_FILES\"\r\n        }\r\n      ],\r\n      \"appTypes\":[\r\n        {\r\n          \"appTypeName\":\"Window File System\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "35",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Jun 2017 05:24:12 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "83",
+              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+            }
+          ]
         }
       ]
     },
