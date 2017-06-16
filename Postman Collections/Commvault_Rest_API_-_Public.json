@@ -8528,7 +8528,7 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json",
+                "value": "application/xml",
                 "description": ""
               }
             ],
