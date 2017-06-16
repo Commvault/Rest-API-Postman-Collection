@@ -8534,7 +8534,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\"taskInfo\":{\r\"task\":{\r\"task\":{\r\"taskName\":\"TestPolicy\"\r}\r},\"appGroup\":{\r\"appGroups\":[\r{\r\"appGroupName\":\"APPGRP_BACKEDUP_FILES\"\r}\r]\r}\r}\r}"
+              "raw": "<TMMsg_ModifyTaskReq>\r\n  <taskInfo >\r\n    <appGroup>\r\n      <appGroups appGroupName=\"APPGRP_BACKEDUP_FILES\"/>\r\n        <flags deleted=\"1\" /> \r\n      \r\n    </appGroup>\r\n    <task >\r\n      <task taskName=\"TestPolicy\"/>\r\n    </task>\r\n  </taskInfo>\r\n</TMMsg_ModifyTaskReq>"
             },
             "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
           },
