@@ -11427,7 +11427,7 @@
         },
         {
           "_postman_id": "a0315933-dcb9-74fc-5177-520de055c69b",
-          "name": "Subclient - Under Virtual Server Agent",
+          "name": "Subclient - For Virtual Server Agent",
           "event": [
             {
               "listen": "test",
