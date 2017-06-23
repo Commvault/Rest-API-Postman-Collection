@@ -12279,115 +12279,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "02ff59ab-a170-e39a-4d92-6b857f5402d6",
-          "name": "User Group",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");",
-                  "",
-                  "tests[\"Response Body contains errorString\"] = responseBody.has(\"errorString\");",
-                  "",
-                  "tests[\"Response Body contains errorCode\"] = responseBody.has(\"errorCode\");",
-                  "",
-                  "tests[\"Response Body contains entity\"] = responseBody.has(\"entity\");",
-                  "",
-                  "tests[\"Response Body contains userGroupId\"] = responseBody.has(\"userGroupId\");",
-                  "",
-                  "tests[\"Response Body contains userGroupName\"] = responseBody.has(\"userGroupName\");",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/UserGroup/{{UserGroupId}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation deletes a user group.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_user_group.htm"
-          },
-          "response": [
-            {
-              "id": "df5326b8-dba8-8aac-f2c1-9622aaec3b6a",
-              "name": "User Group",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "192",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 30 May 2017 04:36:03 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "3888",
-              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"userGroupName\":\"Testgroup\",\"userGroupId\":9\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "32296dd6-1d2f-a469-032d-fd351b37aad8",
           "name": "Users and User Groups",
           "event": [
@@ -13004,6 +12895,115 @@
               ],
               "cookie": [],
               "responseTime": "4473",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"userGroupName\":\"Testgroup\",\"userGroupId\":9\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "02ff59ab-a170-e39a-4d92-6b857f5402d6",
+          "name": "User Group",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");",
+                  "",
+                  "tests[\"Response Body contains errorString\"] = responseBody.has(\"errorString\");",
+                  "",
+                  "tests[\"Response Body contains errorCode\"] = responseBody.has(\"errorCode\");",
+                  "",
+                  "tests[\"Response Body contains entity\"] = responseBody.has(\"entity\");",
+                  "",
+                  "tests[\"Response Body contains userGroupId\"] = responseBody.has(\"userGroupId\");",
+                  "",
+                  "tests[\"Response Body contains userGroupName\"] = responseBody.has(\"userGroupName\");",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/UserGroup/{{UserGroupId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation deletes a user group.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_user_group.htm"
+          },
+          "response": [
+            {
+              "id": "df5326b8-dba8-8aac-f2c1-9622aaec3b6a",
+              "name": "User Group",
+              "originalRequest": {
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "192",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 30 May 2017 04:36:03 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "3888",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"userGroupName\":\"Testgroup\",\"userGroupId\":9\r}\r}\r]\r}"
             }
           ]
