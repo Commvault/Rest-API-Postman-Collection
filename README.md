@@ -7,7 +7,7 @@ Explore our predefined API requests using [Postman](https://getpostman.com).
 
 Setup
 --------------
-NOTE: You'll need to [create an environment in Postman](https://www.getpostman.com/docs/environments), select that environment, and enter your Web Service URL, userName and Base64 Encoded Password in the `0 - Setup/Environment Setup` pre-request script ([documentation on pre-request scripts](http://www.getpostman.com/docs/pre_request_scripts)) to set the environment variables.  Also, the calls have dependencies. `GET`/`UPDATE`/`DELETE` calls will only work after an item is created with a `POST`.
+NOTE: You'll need to [create an environment in Postman](https://www.getpostman.com/docs/environments), select that environment, and enter your Web Service URL, userName and Base64 Encoded Password in the `0 - Setup/Environment Setup` pre-request script ([documentation on pre-request scripts](http://www.getpostman.com/docs/pre_request_scripts)) to set the environment variables.  Also, some calls may have dependencies. `GET`/`PUT`/`DELETE` calls might only work after an item is created with a `POST`.
 
 Notes:
 - Data created or modified in each environment will not affect the other.
