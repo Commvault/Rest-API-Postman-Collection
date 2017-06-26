@@ -3798,7 +3798,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation deletes a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_client.htm"
+            "description": "This operation deletes the dummy client created using POST Create Dummy Client\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_client.htm"
           },
           "response": [
             {
