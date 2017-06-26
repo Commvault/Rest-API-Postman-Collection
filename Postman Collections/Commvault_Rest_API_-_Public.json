@@ -3173,7 +3173,9 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body contains clientProperties\"] = responseBody.has(\"clientProperties\");"
+                  "tests[\"Response Body contains clientProperties\"] = responseBody.has(\"clientProperties\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"clientName\", jsonData.clientProperties[0].client.clientEntity.clientName);"
                 ]
               }
             }
