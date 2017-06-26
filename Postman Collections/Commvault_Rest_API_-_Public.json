@@ -3717,7 +3717,10 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"clientId\", jsonData.response.entity.clientId);"
                 ]
               }
             }
@@ -3753,7 +3756,7 @@
                 {
                   "key": "inputRequestXML",
                   "type": "text",
-                  "value": "<App_SetControlPanelParametersRequest>   <preventAdminAccessToUserData>true</preventAdminAccessToUserData> </App_SetControlPanelParametersRequest>"
+                  "value": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<App_CreatePseudoClientRequest>\n\n  <clientInfo>\n    <clientType>WINDOWS</clientType>\n    <openVMSProperties>\n      <cvdPort>0</cvdPort>\n    </openVMSProperties>\n    <ibmiInstallOptions/>\n  </clientInfo>\n\n  <entity>\n    <clientName>dummyclient</clientName>\n    <hostName>dummyclient</hostName>\n  </entity>\n\n  <registerClient>false</registerClient>\n\n</App_CreatePseudoClientRequest>\n"
                 }
               ]
             },
