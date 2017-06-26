@@ -3783,7 +3783,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Client/1234567890",
+            "url": "{{ServerUrl}}/Client/{{clientId}}",
             "method": "DELETE",
             "header": [
               {
