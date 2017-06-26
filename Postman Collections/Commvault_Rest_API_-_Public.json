@@ -3594,59 +3594,6 @@
           ]
         },
         {
-          "_postman_id": "ae304dfb-dae6-7f89-034e-2de428135b3b",
-          "name": "Execute QCommand 2 copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/ExecuteQCommand",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "command",
-                  "type": "text",
-                  "value": "qoperation execute"
-                },
-                {
-                  "key": "inputRequestXML",
-                  "type": "text",
-                  "value": "<App_SetControlPanelParametersRequest>   <preventAdminAccessToUserData>true</preventAdminAccessToUserData> </App_SetControlPanelParametersRequest>"
-                }
-              ]
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_execute_qcommand.htm"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "f358251c-244f-b455-8454-27cdbdfd17bb",
           "name": "Client Properties",
           "event": [
@@ -3865,6 +3812,59 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"V11\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":12,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "ae304dfb-dae6-7f89-034e-2de428135b3b",
+          "name": "Execute QCommand 2 copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/ExecuteQCommand",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "command",
+                  "type": "text",
+                  "value": "qoperation execute"
+                },
+                {
+                  "key": "inputRequestXML",
+                  "type": "text",
+                  "value": "<App_SetControlPanelParametersRequest>   <preventAdminAccessToUserData>true</preventAdminAccessToUserData> </App_SetControlPanelParametersRequest>"
+                }
+              ]
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_execute_qcommand.htm"
+          },
+          "response": []
         }
       ]
     },
