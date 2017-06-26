@@ -3403,7 +3403,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"clientProperties\": {\r\n    \"client\": {\r\n      \"clientDescription\": \"client-level description modified with rest api POST client\"\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"firewalltestcs\"\r\n      }\r\n    ]\r\n  }\r\n}"
+              "raw": "{\r\n  \"clientProperties\": {\r\n    \"client\": {\r\n      \"clientDescription\": \"client-level description modified with rest api POST client\"\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request updates the client description. The client description is in the clientDescription element.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm"
           },
