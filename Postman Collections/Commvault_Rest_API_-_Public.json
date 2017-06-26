@@ -3720,7 +3720,9 @@
                   "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "",
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"clientId\", jsonData.response.entity.clientId);"
+                  "postman.setEnvironmentVariable(\"clientId\", jsonData.response.entity.clientId);",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.response.errorCode === 0;"
                 ]
               }
             }
