@@ -232,7 +232,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"association\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"greenvalley\",\n\t\t\t\t\"appName\": \"File System\"\n\t\t\t}\n\t\t]\n\t},\n\t\"agentProperties\": {\n\t\t\"idaActivityControl\": {\n\t\t\t\"activityControlOptions\": [\n\t\t\t\t{\n\t\t\t\t\t\"activityType\": 1,\n\t\t\t\t\t\"enableAfterADelay\": false,\n\t\t\t\t\t\"enableActivityType\": true\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+              "raw": "{\n  \"association\": {\n    \"entity\": [\n      {\n        \"clientName\": \"{{clientName}}\",\n        \"appName\": \"{{appName}}\"\n      }\n    ]\n  },\n  \"agentProperties\": {\n    \"idaActivityControl\": {\n      \"activityControlOptions\": [\n        {\n          \"activityType\": 1,\n          \"enableAfterADelay\": false,\n          \"enableActivityType\": true\n        }\n      ]\n    }\n  }\n}"
             },
             "description": "Enables Backup Activity\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_agent_properties.htm"
           },
