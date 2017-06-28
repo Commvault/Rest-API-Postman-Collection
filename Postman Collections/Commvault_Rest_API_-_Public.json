@@ -91,6 +91,10 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"clientName\", jsonData.agentProperties[0].idaEntity.clientName);",
+                  "postman.setEnvironmentVariable(\"appName\", jsonData.agentProperties[0].idaEntity.appName);",
+                  "",
                   "tests[\"Response Body contains AgentProperties\"] = responseBody.has(\"AgentProperties\");",
                   "tests[\"Response Body contains activityControlOptions\"] = responseBody.has(\"activityControlOptions\");",
                   "tests[\"Response Body contains idaEntity\"] = responseBody.has(\"idaEntity\");"
