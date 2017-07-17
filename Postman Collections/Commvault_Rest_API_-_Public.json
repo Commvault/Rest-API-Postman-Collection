@@ -33288,7 +33288,7 @@
     },
     {
       "_postman_id": "8857eb28-d47c-a49e-a448-f16ba414ac4d",
-      "name": "File and Folder Operations for Public Shares",
+      "name": "ObjectStore - File and Folder Operations for Public Shares",
       "description": "",
       "item": [
         {
