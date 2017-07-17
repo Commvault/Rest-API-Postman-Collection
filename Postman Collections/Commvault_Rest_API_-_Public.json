@@ -28362,8 +28362,8 @@
     },
     {
       "_postman_id": "34d7ccec-f256-4023-8bff-eca65dc170ad",
-      "name": "File and Folder Operations",
-      "description": "Normal Edge contentstore Operations",
+      "name": "ObjectStore - File and Folder Operations",
+      "description": "",
       "item": [
         {
           "_postman_id": "37ef64b1-8f84-fe46-8e82-b75207d5cef1",
