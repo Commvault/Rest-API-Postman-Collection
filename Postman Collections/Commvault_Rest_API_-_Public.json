@@ -4886,7 +4886,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request returns backup jobs because the jobFilter parameter is used.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job.htm"
+            "description": "This request returns all Jobs for all Clients.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job.htm"
           },
           "response": [
             {
