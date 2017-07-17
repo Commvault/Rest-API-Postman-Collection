@@ -36114,8 +36114,8 @@
     },
     {
       "_postman_id": "5a46e2fe-3b41-3aa3-7305-b72463ddde87",
-      "name": "File and Folder Operations for Shares",
-      "description": "Share Operations",
+      "name": "ObjectStore - File and Folder Operations for Shares",
+      "description": "",
       "item": [
         {
           "_postman_id": "c6d3a067-6e20-ef19-9cef-0835ccc6e1f5",
