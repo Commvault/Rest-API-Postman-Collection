@@ -41797,7 +41797,7 @@
       "item": [
         {
           "_postman_id": "1ec56ffc-1c46-1dc0-2120-7ca776d2e080",
-          "name": "Create Dummy Client copy",
+          "name": "Create Dummy Virtualization Client",
           "event": [
             {
               "listen": "test",
