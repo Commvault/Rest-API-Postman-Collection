@@ -3874,6 +3874,49 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"V11\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":12,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "1aefeaae-a2ea-7a91-b7f7-5c8065a60070",
+          "name": "Client copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"clientId\", jsonData.clientProperties[0].client.clientEntity.clientId);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains clientProperties\"] = responseBody.has(\"clientProperties\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Client",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation returns a list of clients.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm"
+          },
+          "response": []
         }
       ]
     },
