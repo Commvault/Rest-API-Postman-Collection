@@ -41797,7 +41797,7 @@
       "item": [
         {
           "_postman_id": "3ee9badb-3009-af6f-4595-b271285cdef1",
-          "name": "Client copy",
+          "name": "Disaster Recovery Backup",
           "event": [
             {
               "listen": "test",
@@ -41834,7 +41834,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of clients.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm"
+            "description": "This operation runs a disaster recovery backup job.\r\n\r\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_disaster_recovery_backup.htm"
           },
           "response": [
             {
