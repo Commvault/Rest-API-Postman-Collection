@@ -41791,6 +41791,12 @@
       ]
     },
     {
+      "_postman_id": "900e119c-35f7-79b3-cedd-a8ba1145a79a",
+      "name": "Cloud Apps Operations",
+      "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/c_cloud_apps_rest_apis.htm",
+      "item": []
+    },
+    {
       "_postman_id": "0d6c57ae-3860-7d04-ff16-fa40500b7c97",
       "name": "Global Parameter",
       "event": [
