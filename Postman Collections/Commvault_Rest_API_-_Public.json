@@ -41914,7 +41914,7 @@
       "item": [
         {
           "_postman_id": "9ed46f06-77b6-878c-be5c-5e89c82c74bf",
-          "name": "Recall copy",
+          "name": "View Plans",
           "event": [
             {
               "listen": "test",
@@ -41987,7 +41987,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation initiates a download of data obtained through a backup.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_recall.htm"
+            "description": "This operation returns a list of plans.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_plan.htm"
           },
           "response": [
             {
