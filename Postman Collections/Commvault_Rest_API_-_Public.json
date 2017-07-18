@@ -41927,49 +41927,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Recall?at=33&si=MjoxMjI1MTY3Nzg6MDoxMzQ6NDE2ODM2NA==&op=QzpcXHYxMVNQNGEueG1s&appId=49&ec=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Recall"
-              ],
-              "query": [
-                {
-                  "key": "at",
-                  "value": "33",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "si",
-                  "value": "MjoxMjI1MTY3Nzg6MDoxMzQ6NDE2ODM2NA==",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "op",
-                  "value": "QzpcXHYxMVNQNGEueG1s",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "appId",
-                  "value": "49",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "ec",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/Plan",
             "method": "GET",
             "header": [
               {
