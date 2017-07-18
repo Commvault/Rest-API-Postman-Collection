@@ -41810,8 +41810,26 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
-            "method": "GET",
+            "url": {
+              "raw": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Client"
+              ],
+              "query": [
+                {
+                  "key": "PseudoClientType",
+                  "value": "VSPseudo",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
             "header": [
               {
                 "key": "Accept",
