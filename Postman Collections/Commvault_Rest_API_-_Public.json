@@ -41804,20 +41804,18 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "postman.setEnvironmentVariable(\"clientId\", jsonData.clientProperties[0].client.clientEntity.clientId);",
-                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body contains clientProperties\"] = responseBody.has(\"clientProperties\");"
+                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobIds\");",
+                  "",
+                  "tests[\"Response Body contains taskId\"] = responseBody.has(\"taskId\");"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Client",
-            "method": "GET",
+            "url": "{{ServerUrl}}/CommServ/DRBackup",
+            "method": "POST",
             "header": [
               {
                 "key": "Accept",
@@ -41828,11 +41826,16 @@
                 "key": "Authtoken",
                 "value": "{{TOKEN}}",
                 "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
+              "raw": "{\r\n\"isCompressionEnabled\":false,\"jobType\":1,\"backupType\":1\r\n}"
             },
             "description": "This operation runs a disaster recovery backup job.\r\n\r\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_disaster_recovery_backup.htm"
           },
