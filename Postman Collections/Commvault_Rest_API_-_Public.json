@@ -41797,7 +41797,7 @@
       "item": [
         {
           "_postman_id": "3b75206c-4d2c-af6e-4fb5-03284def62eb",
-          "name": "Client - Virtualization Clients copy",
+          "name": "Client - Virtualization Client",
           "event": [
             {
               "listen": "test",
