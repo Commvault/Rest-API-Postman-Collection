@@ -3874,64 +3874,6 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"V11\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":12,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "1ec56ffc-1c46-1dc0-2120-7ca776d2e080",
-          "name": "Create Dummy Client copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"clientId\", jsonData.response.entity.clientId);",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.response.errorCode === 0;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/ExecuteQCommand",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "command",
-                  "type": "text",
-                  "value": "qoperation execute"
-                },
-                {
-                  "key": "inputRequestXML",
-                  "type": "text",
-                  "value": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<App_CreatePseudoClientRequest>\n\n  <clientInfo>\n    <clientType>WINDOWS</clientType>\n    <openVMSProperties>\n      <cvdPort>0</cvdPort>\n    </openVMSProperties>\n    <ibmiInstallOptions/>\n  </clientInfo>\n\n  <entity>\n    <clientName>dummyclient</clientName>\n    <hostName>dummyclient</hostName>\n  </entity>\n\n  <registerClient>false</registerClient>\n\n</App_CreatePseudoClientRequest>\n"
-                }
-              ]
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_execute_qcommand.htm"
-          },
-          "response": []
         }
       ]
     },
@@ -41977,6 +41919,64 @@
               "body": "{\r\"clientProperties\":[\r{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":2,\"clientName\":\"firewalltestcs\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8415,\"clientEntity\":{\r\"clientId\":3,\"clientName\":\"IDCMA\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8415,\"clientEntity\":{\r\"clientId\":4,\"clientName\":\"IDCMA2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8420,\"clientEntity\":{\r\"clientId\":5,\"clientName\":\"IDCClient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":6,\"clientName\":\"ObjectStoreClient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":8,\"clientName\":\"edgeclient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":9,\"clientName\":\"firewalltestma\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8410,\"clientEntity\":{\r\"clientId\":10,\"clientName\":\"IDCunixclient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":11,\"clientName\":\"shezavm5\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":12,\"clientName\":\"V11\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":false\r},\"client\":{\r\"evmgrcPort\":8407,\"cvdPort\":8405,\"clientEntity\":{\r\"clientId\":13,\"clientName\":\"firewalltestma_2v10\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8410,\"clientEntity\":{\r\"clientId\":14,\"clientName\":\"LaptopClient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8425,\"clientEntity\":{\r\"clientId\":15,\"clientName\":\"Laptopclient-2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8440,\"clientEntity\":{\r\"clientId\":16,\"clientName\":\"shezavm9_8\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":false\r},\"client\":{\r\"evmgrcPort\":8412,\"cvdPort\":8410,\"clientEntity\":{\r\"clientId\":17,\"clientName\":\"firewalltestma_3\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8417,\"cvdPort\":8415,\"clientEntity\":{\r\"clientId\":18,\"clientName\":\"firewalltestma_4\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":19,\"clientName\":\"proxy1\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":20,\"clientName\":\"proxy2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":21,\"clientName\":\"proxy3\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":22,\"clientName\":\"proxy4\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":23,\"clientName\":\"proxy5\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":24,\"clientName\":\"proxy6\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":25,\"clientName\":\"trinity\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":26,\"clientName\":\"neo-ws\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":27,\"clientName\":\"test1\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":28,\"clientName\":\"test2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":29,\"clientName\":\"test3\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":30,\"clientName\":\"test4\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":31,\"clientName\":\"dummy1\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":32,\"clientName\":\"dummy2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8407,\"cvdPort\":8405,\"clientEntity\":{\r\"clientId\":33,\"clientName\":\"trinity_2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8407,\"cvdPort\":8405,\"clientEntity\":{\r\"clientId\":34,\"clientName\":\"neo-ws_3\",\"type\":0,\"_type_\":3\r}\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "1ec56ffc-1c46-1dc0-2120-7ca776d2e080",
+          "name": "Create Dummy Client copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"clientId\", jsonData.response.entity.clientId);",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.response.errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/ExecuteQCommand",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "command",
+                  "type": "text",
+                  "value": "qoperation execute"
+                },
+                {
+                  "key": "inputRequestXML",
+                  "type": "text",
+                  "value": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<App_CreatePseudoClientRequest>\n\n  <clientInfo>\n    <clientType>WINDOWS</clientType>\n    <openVMSProperties>\n      <cvdPort>0</cvdPort>\n    </openVMSProperties>\n    <ibmiInstallOptions/>\n  </clientInfo>\n\n  <entity>\n    <clientName>dummyclient</clientName>\n    <hostName>dummyclient</hostName>\n  </entity>\n\n  <registerClient>false</registerClient>\n\n</App_CreatePseudoClientRequest>\n"
+                }
+              ]
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_execute_qcommand.htm"
+          },
+          "response": []
         }
       ]
     },
