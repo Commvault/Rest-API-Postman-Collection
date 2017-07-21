@@ -42130,6 +42130,71 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "4ba9c8b7-f8ee-a14e-62ac-581778cc6ecb",
+          "name": "Create an ObjectStore",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
+                  "",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "",
+                  "tests[\"Response Body Contains RootGuid\"] = responseBody.has(\"rootGUID\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/contentstore?type=testcontentstore",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "contentstore"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "testcontentstore",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Use this operation to create an ObjectStore.\r\n\r\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore.htm"
+          },
+          "response": []
         }
       ]
     },
@@ -43373,6 +43438,66 @@
           "body": "<html xmlns=\"http://www.w3.org/1999/xhtml\"><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n\r\n<head>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.txt.TXTParser\"/>\r\n\r\n<meta name=\"Content-Encoding\" content=\"ISO-8859-1\"/>\r\n\r\n<meta name=\"ext_name\" content=\"tmp\"/>\r\n\r\n<meta name=\"Content-Type\" content=\"text/plain; charset=ISO-8859-1\"/>\r\n\r\n\r\n</head>\r\n\r\n<body style=\"background:#fff;\" background=\"\" >\r\n<pre>Demo File Content</pre>\r\n</body>\r\n</html>\r\n\r"
         }
       ]
+    },
+    {
+      "_postman_id": "638d7e9d-f6ec-f6f1-9949-95e5c8dea832",
+      "name": "Download a File in a Public Share by Path",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+              "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": {
+          "raw": "{{ServerUrl}}/drive/publicshare/{{shareId}}/action/download?path=\\DemoFile1.doc",
+          "auth": {},
+          "host": [
+            "{{ServerUrl}}"
+          ],
+          "path": [
+            "drive",
+            "publicshare",
+            "{{shareId}}",
+            "action",
+            "download"
+          ],
+          "query": [
+            {
+              "key": "path",
+              "value": "\\DemoFile1.doc",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm"
+      },
+      "response": []
     }
   ]
 }
