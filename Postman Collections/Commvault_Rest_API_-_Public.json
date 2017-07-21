@@ -42875,6 +42875,167 @@
           "body": "<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n<head>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.txt.TXTParser\"/>\r\n\r\n<meta name=\"Content-Encoding\" content=\"ISO-8859-1\"/>\r\n\r\n<meta name=\"ext_name\" content=\"none\"/>\r\n\r\n<meta name=\"Content-Type\" content=\"text/plain; charset=ISO-8859-1\"/>\r\n\r\n\r\n</head>\r\n\r\n<body style=\"background:#fff;\" background=\"\" >\r\n<pre>Demo File Content</pre>\r\n</body>\r\n</html>\r\n\r\n"
         }
       ]
+    },
+    {
+      "_postman_id": "f3724ccd-159b-afde-5cb2-32be14b34b80",
+      "name": "Public Share File Versions by ID",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+              "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/versions",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_version_by_id.htm"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "f61eb987-4b9f-80fc-4bd7-57b915ab78fc",
+      "name": "Public Share File Versions by Path",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"File Name is Correct\"] = jsonData.fileResources[0].name === postman.getEnvironmentVariable(\"ShareFileName\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": {
+          "raw": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/versions?path=\\DemoPublicShare\\DemoFile1.doc",
+          "auth": {},
+          "host": [
+            "{{ServerUrl}}"
+          ],
+          "path": [
+            "drive",
+            "publicshare",
+            "{{shareId}}",
+            "file",
+            "versions"
+          ],
+          "query": [
+            {
+              "key": "path",
+              "value": "\\DemoPublicShare\\DemoFile1.doc",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_version_by_path.htm"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "0572808b-f463-1603-dfee-c06ce95300c7",
+      "name": "Shared File Versions By Path",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+              "",
+              "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": {
+          "raw": "{{ServerUrl}}/drive/share/{{shareId}}/file/versions?path=\\DemoShareFolder\\DemoFile1.doc",
+          "auth": {},
+          "host": [
+            "{{ServerUrl}}"
+          ],
+          "path": [
+            "drive",
+            "share",
+            "{{shareId}}",
+            "file",
+            "versions"
+          ],
+          "query": [
+            {
+              "key": "path",
+              "value": "\\DemoShareFolder\\DemoFile1.doc",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": ""
+      },
+      "response": []
     }
   ]
 }
