@@ -44064,10 +44064,10 @@
           ],
           "query": [
             {
-              "description": "",
-              "equals": true,
               "key": "path",
-              "value": "\\DemoFile1.doc"
+              "value": "\\DemoFile1.doc",
+              "equals": true,
+              "description": ""
             }
           ],
           "variable": []
@@ -44075,14 +44075,14 @@
         "method": "GET",
         "header": [
           {
-            "description": "",
             "key": "Accept",
-            "value": "text/html"
+            "value": "text/html",
+            "description": ""
           },
           {
-            "description": "",
             "key": "Authtoken",
-            "value": "{{TOKEN}}"
+            "value": "{{TOKEN}}",
+            "description": ""
           }
         ],
         "body": {
