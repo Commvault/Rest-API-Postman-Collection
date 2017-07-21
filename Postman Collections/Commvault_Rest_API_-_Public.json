@@ -42129,7 +42129,77 @@
             },
             "description": ""
           },
-          "response": []
+          "response": [
+            {
+              "id": "3c0712d3-2aaa-990d-26e6-ee0e35255495",
+              "name": "GET Shared File Versions by ID",
+              "originalRequest": {
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "597",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 21 Jul 2017 15:19:23 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Mon Sep 21 2037 17:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Mon Sep 21 2037 17:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "108",
+              "body": "{\r\"fileResources\":[\r{\r\"owner\":\"(nkatz@commvault.com)\",\"modifiedTime\":1481595468,\"previewUrl\":\"\\u002fdrive\\u002ffile\\u002fversion\\u002f3faf5321327e618746c7f77edca065a8\\u002faction\\u002fpreview\",\"parentPath\":\"\\\\DemoShareFolder\",\"GUID\":\"0ed25978846f4ce2856a1f574d51b7a7\",\"sizeinBytes\":17,\"downloadUrl\":\"\\u002fdrive\\u002ffile\\u002fversion\\u002f3faf5321327e618746c7f77edca065a8\\u002faction\\u002fdownload\",\"directory\":false,\"versionGUID\":\"3faf5321327e618746c7f77edca065a8\",\"path\":\"\\\\DemoShareFolder\\\\DemoFile1.doc\",\"file\":true,\"parentGuid\":\"9d71fb270e1c40a18394d9373b02b647\",\"name\":\"DemoFile1.doc\"\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "4ba9c8b7-f8ee-a14e-62ac-581778cc6ecb",
@@ -42194,7 +42264,77 @@
             },
             "description": "Use this operation to create an ObjectStore.\r\n\r\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "31dfae6b-d10d-5e98-ed0c-fe986cc483b7",
+              "name": "PUT Create an ObjectStore",
+              "originalRequest": {
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "523",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 21 Jul 2017 14:16:59 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Fri Oct 09 2037 09:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Fri Oct 09 2037 09:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "50",
+              "body": "{\r\"response\":{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"subclientPolicyId\":9,\"subclientId\":9,\"applicationId\":33,\"clientName\":\"newedge\",\"clientId\":4,\"userId\":4,\"subclientName\":\"nick\",\"backupsetName\":\"nick\"\r}\r},\"edgeDriveInfo\":{\r\"contentIndexingEnabled\":false,\"hasSyncBlackListedLaptop\":false,\"capabilities\":0,\"driveType\":0,\"cloudId\":0,\"dirDelim\":\"\",\"rootGUID\":\"be1856e0e26f48a59386efb20d6b3a2f\",\"hasEdgeDriveEnabledLaptop\":false\r},\"syncWebFolder\":{\r\"_type_\":111,\"syncWebFolderId\":667050,\"syncWebFolderName\":\"EdgeDrive\"\r}\r}"
+            }
+          ]
         }
       ]
     },
@@ -43497,7 +43637,83 @@
         },
         "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm"
       },
-      "response": []
+      "response": [
+        {
+          "id": "a328d5f0-a761-beb6-8c99-fe917ad2b212",
+          "name": "GET Download a File in a Public Share by Path",
+          "originalRequest": {
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "raw",
+          "_postman_previewtype": "application",
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "17",
+              "name": "Content-Length",
+              "description": ""
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/octet-stream",
+              "name": "Content-Type",
+              "description": ""
+            },
+            {
+              "key": "Content-disposition",
+              "value": "attachment; filename=DemoFile1.doc",
+              "name": "Content-disposition",
+              "description": ""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 21 Jul 2017 13:58:07 GMT",
+              "name": "Date",
+              "description": ""
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/8.5",
+              "name": "Server",
+              "description": ""
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET",
+              "name": "X-Powered-By",
+              "description": ""
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Tue Oct 20 2037 01:14:07 GMT+0000 (UTC)",
+              "httpOnly": true,
+              "domain": "nkatzvm2.testlab.commvault.com",
+              "path": "/webconsole",
+              "secure": false,
+              "value": "4FE369232CA3619ADE65DB55EF647A0F",
+              "key": "JSESSIONID"
+            },
+            {
+              "expires": "Tue Oct 20 2037 01:14:07 GMT+0000 (UTC)",
+              "httpOnly": true,
+              "domain": "nkatzvm2.testlab.commvault.com",
+              "path": "/",
+              "secure": false,
+              "value": "6EDBA28BC1616A91E344BED0ED45695C",
+              "key": "JSESSIONID"
+            }
+          ],
+          "responseTime": "183",
+          "body": "Demo File Content"
+        }
+      ]
     }
   ]
 }
