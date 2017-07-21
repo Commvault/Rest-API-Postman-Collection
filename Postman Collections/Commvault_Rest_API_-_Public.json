@@ -14970,7 +14970,9 @@
                   "",
                   "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
                   "",
-                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");"
+                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
                 ]
               }
             }
@@ -19873,7 +19875,7 @@
       "item": [
         {
           "_postman_id": "d7f6c2c3-3c01-896d-7a3d-1d8632ffab06",
-          "name": "Environment Setup",
+          "name": "Login",
           "event": [
             {
               "listen": "test",
@@ -19888,29 +19890,6 @@
                   "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
                   "",
                   "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "postman.setEnvironmentVariable(\"FolderName\", \"DemoFolder\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileData\", \"Demo File Content\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileSize\", \"17\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"SecondFileSize\", \"34\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileModifiedtime\", \"1481595468\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");"
                 ]
               }
             }
@@ -42950,18 +42929,6 @@
           ]
         }
       ]
-    },
-    {
-      "_postman_id": "2ab22e26-f0d0-00a0-c332-633fad61117d",
-      "name": "Edge Drive Operations",
-      "description": "",
-      "item": []
-    },
-    {
-      "_postman_id": "cdf04dbf-0ed4-e2e5-3b1b-9d7dcbf6b466",
-      "name": "ObjectStore Operations",
-      "description": "",
-      "item": []
     },
     {
       "_postman_id": "0d6c57ae-3860-7d04-ff16-fa40500b7c97",
