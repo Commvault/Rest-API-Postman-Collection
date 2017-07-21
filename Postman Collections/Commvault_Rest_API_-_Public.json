@@ -31859,10 +31859,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "path",
-                  "value": "\\{{FolderName}}\\DemoFile1Renamed.doc"
+                  "value": "\\{{FolderName}}\\DemoFile1Renamed.doc",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -31870,14 +31870,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
