@@ -36583,14 +36583,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
