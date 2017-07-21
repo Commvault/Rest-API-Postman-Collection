@@ -42508,6 +42508,67 @@
           "body": "{\r\"globalParamsResultList\":[\r{\r\"name\":\"AppMgrThreadIdleTimeout\",\"value\":\"7200\"\r},{\r\"name\":\"CI_STATE_FAILED\",\"value\":\"2,16,1016,2016\"\r},{\r\"name\":\"CI_STATE_SKIPPED\",\"value\":\"17\"\r}\r]\r}"
         }
       ]
+    },
+    {
+      "_postman_id": "828fe0eb-b8b0-85f0-9b3b-77e3d9d9d0f3",
+      "name": "Shared File Versions By Path",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+              "",
+              "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": {
+          "raw": "{{ServerUrl}}/drive/share/{{shareId}}/file/versions?path=\\DemoShareFolder\\DemoFile1.doc",
+          "auth": {},
+          "host": [
+            "{{ServerUrl}}"
+          ],
+          "path": [
+            "drive",
+            "share",
+            "{{shareId}}",
+            "file",
+            "versions"
+          ],
+          "query": [
+            {
+              "key": "path",
+              "value": "\\DemoShareFolder\\DemoFile1.doc",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": ""
+      },
+      "response": []
     }
   ]
 }
