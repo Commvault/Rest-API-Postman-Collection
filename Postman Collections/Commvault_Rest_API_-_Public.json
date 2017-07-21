@@ -14970,9 +14970,7 @@
                   "",
                   "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
                   "",
-                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");"
                 ]
               }
             }
@@ -15386,24 +15384,24 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\":\"DemoFolder2\",\n  \"parentPath\":\"\\\\\"\n}\n"
+              "raw": "{\n  \"name\":\"{{FolderName}}\",\n  \"parentPath\":\"\\\\\"\n}\n"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_by_folderpath.htm"
           },
@@ -18518,8 +18516,8 @@
           ]
         },
         {
-          "_postman_id": "fc296c55-5cce-b991-ae14-758356276a08",
-          "name": "Move a File by Path",
+          "_postman_id": "2e6ae408-262d-f4b8-db7d-d128d0d5e3b3",
+          "name": "Delete a File by Path",
           "event": [
             {
               "listen": "test",
@@ -18532,7 +18530,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/drive/action/move",
+            "url": "{{ServerUrl}}/drive/action/delete",
             "method": "POST",
             "header": [
               {
@@ -18542,27 +18540,27 @@
               },
               {
                 "description": "",
-                "key": "Content-Type",
-                "value": "application/json"
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
               },
               {
                 "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "key": "Content-Type",
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile2.doc\",\n  \"parentPath\":\"\\\\\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile1Renamed.doc\"\n}"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_move.htm"
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_drive_folder.htm"
           },
           "response": [
             {
-              "id": "c3dc4e98-9295-052f-5407-6820bf944ca3",
-              "name": "POST Move a File by Path",
+              "id": "a3b15fce-9a7d-0835-8eb3-58198dd7e88e",
+              "name": "POST Delete a File By Path",
               "originalRequest": {
-                "url": "{{ServerUrl}}/drive/action/move",
+                "url": "{{ServerUrl}}/drive/action/delete",
                 "method": "POST",
                 "header": [
                   {
@@ -18571,19 +18569,19 @@
                     "description": ""
                   },
                   {
-                    "key": "Content-Type",
-                    "value": "application/xml",
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
                     "description": ""
                   },
                   {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
+                    "key": "Content-Type",
+                    "value": "application/xml",
                     "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile2.doc\" parentPath=\"\\\"/>"
+                  "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1Renamed.doc\"/>"
                 },
                 "description": ""
               },
@@ -18606,7 +18604,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:18:10 GMT",
+                  "value": "Fri, 07 Jul 2017 15:06:20 GMT",
                   "name": "Date",
                   "description": ""
                 },
@@ -18643,7 +18641,7 @@
                   "key": "JSESSIONID"
                 }
               ],
-              "responseTime": "1075",
+              "responseTime": "468",
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
@@ -18775,6 +18773,137 @@
                 }
               ],
               "responseTime": "450",
+              "body": "{\r\"errorCode\":0\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "fc296c55-5cce-b991-ae14-758356276a08",
+          "name": "Move a File by Path",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/drive/action/move",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile2.doc\",\n  \"parentPath\":\"\\\\\"\n}"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_move.htm"
+          },
+          "response": [
+            {
+              "id": "c3dc4e98-9295-052f-5407-6820bf944ca3",
+              "name": "POST Move a File by Path",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/drive/action/move",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile2.doc\" parentPath=\"\\\"/>"
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "17",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 07 Jul 2017 15:18:10 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "1075",
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
@@ -19368,137 +19497,6 @@
           ]
         },
         {
-          "_postman_id": "2e6ae408-262d-f4b8-db7d-d128d0d5e3b3",
-          "name": "Delete a Folder by Path",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive/action/delete",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoFolder2\"\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_drive_folder.htm"
-          },
-          "response": [
-            {
-              "id": "a3b15fce-9a7d-0835-8eb3-58198dd7e88e",
-              "name": "POST Delete a File By Path",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/drive/action/delete",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1Renamed.doc\"/>"
-                },
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "17",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:06:20 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "468",
-              "body": "{\r\"errorCode\":0\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "75e58ab6-4f85-96c8-3abf-39aee8fef557",
           "name": "Delete Folder",
           "event": [
@@ -19875,7 +19873,7 @@
       "item": [
         {
           "_postman_id": "d7f6c2c3-3c01-896d-7a3d-1d8632ffab06",
-          "name": "Login",
+          "name": "Environment Setup",
           "event": [
             {
               "listen": "test",
@@ -19899,14 +19897,14 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -42929,6 +42927,18 @@
           ]
         }
       ]
+    },
+    {
+      "_postman_id": "2ab22e26-f0d0-00a0-c332-633fad61117d",
+      "name": "Edge Drive Operations",
+      "description": "",
+      "item": []
+    },
+    {
+      "_postman_id": "cdf04dbf-0ed4-e2e5-3b1b-9d7dcbf6b466",
+      "name": "ObjectStore Operations",
+      "description": "",
+      "item": []
     },
     {
       "_postman_id": "0d6c57ae-3860-7d04-ff16-fa40500b7c97",
