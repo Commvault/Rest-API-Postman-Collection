@@ -15851,7 +15851,7 @@
               "mode": "raw",
               "raw": "{{FileData}}"
             },
-            "description": "<h2>Description</h2> \n<p>This operation uploads a single file to Edge Drive. The API is used for uploading files that are relatively small in size.</p> \n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_full_upload.htm"
+            "description": "<h2>Description</h2> \n<p>This operation uploads a single file to Edge Drive. The API is used for uploading files that are relatively small in size.</p> \n\n<p>For larger files (greater than 4 MB), upload the files in multiple data chunks. For more information, see <a href=\"article?p=features/rest_api/operations/post_drive_upload_header_request.htm\" data-internal=\"true\">Initiate an Upload Session</a>.</p>\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_full_upload.htm"
           },
           "response": [
             {
