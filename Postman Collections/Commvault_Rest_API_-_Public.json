@@ -4984,10 +4984,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "completedJobLookupTime",
-                  "value": "300"
+                  "value": "300",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -4995,14 +4995,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -40392,14 +40392,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
