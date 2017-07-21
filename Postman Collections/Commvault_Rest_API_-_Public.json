@@ -28504,6 +28504,45 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"Successful\",\"errorCode\":0,\"entity\":{\r\"userGroupName\":\"Testgroup\",\"userGroupId\":9\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "5d448ae9-73c3-6217-78e0-0cf7715bd3f7",
+          "name": "Shared File Versions By ID copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "",
+                  "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/versions",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
