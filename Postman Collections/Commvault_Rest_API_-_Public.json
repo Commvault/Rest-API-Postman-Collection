@@ -9908,7 +9908,25 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Library?Action=detect",
+            "url": {
+              "raw": "{{ServerUrl}}/Library?Action=detect",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Library"
+              ],
+              "query": [
+                {
+                  "key": "Action",
+                  "value": "detect",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "POST",
             "header": [
               {
@@ -41854,7 +41872,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"globalParamsRequestList\": [\n\t\t\"CI_STATE_FAILED\",\n\t\t\"CI_STATE_SKIPPED\",\n\t\t\"AppMgrThreadIdleTimeout\"\n\t]\n}"
+          "raw": "{\n  \"globalParamsRequestList\": [\n    \"CI_STATE_FAILED\",\n    \"CI_STATE_SKIPPED\",\n    \"AppMgrThreadIdleTimeout\"\n  ]\n}"
         },
         "description": "This operation returns values for global parameters.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_global_parameters.htm\n\n"
       },
