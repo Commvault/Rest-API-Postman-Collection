@@ -551,7 +551,31 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Alert?pageNo=1&pageCount=200",
+            "url": {
+              "raw": "{{ServerUrl}}/Alert?pageNo=1&pageCount=200",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Alert"
+              ],
+              "query": [
+                {
+                  "key": "pageNo",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "pageCount",
+                  "value": "200",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
