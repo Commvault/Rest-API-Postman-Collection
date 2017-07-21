@@ -14970,9 +14970,7 @@
                   "",
                   "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
                   "",
-                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");"
                 ]
               }
             }
@@ -19890,6 +19888,29 @@
                   "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
                   "",
                   "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setEnvironmentVariable(\"FolderName\", \"DemoFolder\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileData\", \"Demo File Content\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileSize\", \"17\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"SecondFileSize\", \"34\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileModifiedtime\", \"1481595468\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");"
                 ]
               }
             }
