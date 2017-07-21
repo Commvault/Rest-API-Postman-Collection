@@ -24182,16 +24182,16 @@
               ],
               "query": [
                 {
-                  "key": "uploadType",
-                  "value": "chunkedFile",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "uploadType",
+                  "value": "chunkedFile"
                 },
                 {
-                  "key": "forceRestart",
-                  "value": "true",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "forceRestart",
+                  "value": "true"
                 }
               ],
               "variable": []
@@ -24199,39 +24199,39 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "FileName",
-                "value": "{{FileName2}}",
-                "description": ""
+                "value": "{{FileName2}}"
               },
               {
+                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ShareParentFolderPath}}",
-                "description": ""
+                "value": "{{ShareParentFolderPath}}"
               },
               {
+                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}",
-                "description": ""
+                "value": "{{FileModifiedtime}}"
               },
               {
+                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}",
-                "description": ""
+                "value": "{{FileSize}}"
               },
               {
+                "description": "",
                 "key": "FileEOF",
-                "value": "0",
-                "description": ""
+                "value": "0"
               }
             ],
             "body": {
@@ -31453,19 +31453,19 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -39676,10 +39676,10 @@
               ],
               "query": [
                 {
-                  "key": "path",
-                  "value": "\\DemoFile1.doc",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "path",
+                  "value": "\\DemoFile1.doc"
                 }
               ],
               "variable": []
@@ -39687,14 +39687,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
