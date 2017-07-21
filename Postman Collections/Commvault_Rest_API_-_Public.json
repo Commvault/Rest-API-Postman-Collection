@@ -37155,10 +37155,10 @@
               ],
               "query": [
                 {
-                  "key": "shareId",
-                  "value": "{{shareId}}",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "shareId",
+                  "value": "{{shareId}}"
                 }
               ],
               "variable": []
@@ -37166,14 +37166,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
