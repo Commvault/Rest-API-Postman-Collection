@@ -25476,7 +25476,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/preview",
+            "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/versions",
             "method": "GET",
             "header": [
               {
