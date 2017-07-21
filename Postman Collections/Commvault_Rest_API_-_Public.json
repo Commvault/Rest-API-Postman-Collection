@@ -15370,7 +15370,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"FOLDER_GUID\", jsonData.fileResource.GUID);",
+                  "postman.setEnvironmentVariable(\"SECONDFOLDER_GUID\", jsonData.fileResource.GUID);",
                   "",
                   "tests[\"Status code is 201\"] = responseCode.code === 201;",
                   "",
@@ -23692,7 +23692,11 @@
                   "",
                   "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");",
                   "",
-                  "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");"
+                  "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"SHAREFOLDER_GUID\", jsonData.fileResource.GUID);"
                 ]
               }
             }
@@ -23702,24 +23706,24 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\":\"DemoShareFolder2\",\n  \"parentPath\":\"\\\\\"\n}"
+              "raw": "{\n  \"name\":\"DemoShareFolder\",\n  \"parentPath\":\"\\\\\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_share_folder_by_path.htm"
           },
