@@ -468,14 +468,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -1372,14 +1372,14 @@
             "method": "DELETE",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -9155,19 +9155,19 @@
             "method": "PUT",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -10306,14 +10306,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -10407,19 +10407,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -20508,10 +20508,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "path",
-                  "value": "\\DemoFile1.doc"
+                  "value": "\\DemoFile1.doc",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -20519,14 +20519,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -32390,24 +32390,24 @@
             "method": "PUT",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"parentGuid\":\"{{RootGuid}}\"\n}"
+              "raw": "{\n\t\"parentGuid\":\"{{RootGuid}}\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore_folder_move.htm"
           },
@@ -33240,14 +33240,14 @@
             "method": "DELETE",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -33890,19 +33890,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -34818,14 +34818,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "text/html"
+                "value": "text/html",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -35133,14 +35133,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "text/html"
+                "value": "text/html",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -36182,14 +36182,14 @@
             "method": "DELETE",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -36990,14 +36990,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
