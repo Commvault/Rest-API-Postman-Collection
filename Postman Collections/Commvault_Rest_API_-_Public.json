@@ -28125,6 +28125,65 @@
               "body": "User logged out"
             }
           ]
+        },
+        {
+          "_postman_id": "ca0cbc42-3d34-28bf-bb8f-26fe3aeb28cf",
+          "name": "User Group",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"UserGroupId\", jsonData.response[0].entity.userGroupId);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");",
+                  "",
+                  "tests[\"Response Body contains errorString\"] = responseBody.has(\"errorString\");",
+                  "",
+                  "tests[\"Response Body contains errorCode\"] = responseBody.has(\"errorCode\");",
+                  "",
+                  "tests[\"Response Body contains entity\"] = responseBody.has(\"entity\");",
+                  "",
+                  "tests[\"Response Body contains userGroupId\"] = responseBody.has(\"userGroupId\");",
+                  "",
+                  "tests[\"Response Body contains userGroupName\"] = responseBody.has(\"userGroupName\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/UserGroup",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"groups\": [\r\n    {\r\n      \"description\": \"access to alerts only\",\r\n      \"enabled\": true,\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 2,\r\n        \"associations\": [\r\n          {\r\n            \"entities\": {\r\n              \"entity\": [\r\n                {\r\n                  \"clientName\": \"firewalltestcs\"\r\n                },\r\n                {\r\n                  \"clientName\": \"IDCClient\"\r\n                }\r\n              ]\r\n            },\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"userGroupEntity\": {\r\n        \"userGroupName\": \"Testgroup\"\r\n      },\r\n      \"users\": [\r\n        {\r\n          \"userName\": \"admin\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+            },
+            "description": "This operation creates a user group.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user_group.htm"
+          },
+          "response": []
         }
       ]
     },
