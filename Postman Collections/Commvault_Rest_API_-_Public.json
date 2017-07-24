@@ -44582,7 +44582,83 @@
         },
         "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm"
       },
-      "response": []
+      "response": [
+        {
+          "id": "93a060f4-0a66-6f55-24fd-bffbc4933cfa",
+          "name": "GET Download a File in Public Share by ID",
+          "originalRequest": {
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "raw",
+          "_postman_previewtype": "application",
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "17",
+              "name": "Content-Length",
+              "description": ""
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/octet-stream",
+              "name": "Content-Type",
+              "description": ""
+            },
+            {
+              "key": "Content-disposition",
+              "value": "attachment; filename=DemoFile1.doc",
+              "name": "Content-disposition",
+              "description": ""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 21 Jul 2017 13:58:26 GMT",
+              "name": "Date",
+              "description": ""
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/8.5",
+              "name": "Server",
+              "description": ""
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET",
+              "name": "X-Powered-By",
+              "description": ""
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Mon Oct 19 2037 21:14:07 GMT+0000 (UTC)",
+              "httpOnly": true,
+              "domain": "nkatzvm2.testlab.commvault.com",
+              "path": "/webconsole",
+              "secure": false,
+              "value": "4FE369232CA3619ADE65DB55EF647A0F",
+              "key": "JSESSIONID"
+            },
+            {
+              "expires": "Mon Oct 19 2037 21:14:07 GMT+0000 (UTC)",
+              "httpOnly": true,
+              "domain": "nkatzvm2.testlab.commvault.com",
+              "path": "/",
+              "secure": false,
+              "value": "6EDBA28BC1616A91E344BED0ED45695C",
+              "key": "JSESSIONID"
+            }
+          ],
+          "responseTime": "561",
+          "body": "Demo File Content"
+        }
+      ]
     }
   ]
 }
