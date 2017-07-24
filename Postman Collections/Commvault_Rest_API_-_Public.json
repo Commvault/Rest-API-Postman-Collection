@@ -11038,7 +11038,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/2",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
             "method": "POST",
             "header": [
               {
@@ -11068,7 +11068,7 @@
               "id": "05107552-1fa6-f5d9-ef0e-b2cd6226f8c3",
               "name": "Subclient Properties",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/2",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "method": "POST",
                 "header": [
                   {
@@ -11257,14 +11257,14 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Subclient/2/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
+              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
                 "Subclient",
-                "2",
+                "{{subclientId}}",
                 "action",
                 "backup"
               ],
@@ -11425,7 +11425,39 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "{{subclientId}}",
+                "Browse"
+              ],
+              "query": [
+                {
+                  "key": "path",
+                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "showDeletedFiles",
+                  "value": "false",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "vsFileBrowse",
+                  "value": "true",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -11450,7 +11482,39 @@
               "id": "5e4e1e28-c01b-8521-2f62-180c8997a2ac",
               "name": "Subclient Browse 3",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "{{subclientId}}",
+                    "Browse"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "showDeletedFiles",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "vsFileBrowse",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
                 "method": "GET",
                 "header": [
                   {
