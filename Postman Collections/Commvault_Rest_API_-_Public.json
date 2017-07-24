@@ -7755,23 +7755,28 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/151/SubTask/152",
+            "url": "{{ServerUrl}}/Task/{{taskId}}/SubTask/{{subtaskId}}",
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "text/plain",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "freq_type = \"1\"\r\nactive_start_date = \"1467158400\"\r\nactive_start_time = \"28880\"\r\nactive_end_date = \"1467158400\"\r\nactive_end_time = \"43200\""
+              "raw": "freq_type = \"one time\"\r\nfreq_interval = \"0\"\r\nactive_start_date = \"1467158400\"\r\nactive_start_time = \"28880\"\r\nfreq_recurrence_factor = \"0\"\r\nfreq_relative_interval = \"0\"\r\nfreq_subday_interval = \"5000\"\r\nactive_end_date = \"1467158400\"\r\nactive_end_time = \"43200\"\r\nactive_end_occurence = \"0\"\r\ntimezoneId = \"31\"\r\ncalendarId = \"1\""
             },
             "description": "This opeartion modifies the schedule pattern for a schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_pattern_modify.htm"
           },
