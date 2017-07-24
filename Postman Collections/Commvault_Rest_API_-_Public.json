@@ -3547,24 +3547,24 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 1,\r\n        \"associations\": [\r\n          {\r\n            \"userOrGroup\": [\r\n              {\r\n                \"userName\": \"{{userName}}\"\r\n              },\r\n              {\r\n                \"userGroupName\": \"View All\"\r\n              }\r\n            ],\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\"\r\n      }\r\n    ]\r\n  }\r\n}"
+              "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 1,\r\n        \"associations\": [\r\n          {\r\n            \"userOrGroup\": [\r\n              {\r\n                \"userName\": \"edgeuser\"\r\n              },\r\n              {\r\n                \"userGroupName\": \"View All\"\r\n              }\r\n            ],\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request updates the security association for the client. The security association is the combination of the client in the clientName element plus the role, user, and user group in the securityAssociations block.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm"
           },
@@ -3662,24 +3662,24 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"ownerAssociations\": {\r\n          \"ownersOperationType\": 1,\r\n          \"categoryPermission\": {\r\n            \"categoriesPermissionOperationType\": 1,\r\n            \"categoriesPermissionList\": [\r\n              {\r\n                \"permissionName\": \"Data Protection Operations\"\r\n              },\r\n              {\r\n                \"permissionName\": \"Job Management\"\r\n              }\r\n            ]\r\n          },\r\n          \"owners\": [\r\n            {\r\n              \"userGroupName\": \"View All\"\r\n            },\r\n            \r\n            {\r\n              \"userName\": \"{{userName}}\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\"\r\n      }\r\n    ]\r\n  }\r\n}"
+              "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"ownerAssociations\": {\r\n          \"ownersOperationType\": 1,\r\n          \"categoryPermission\": {\r\n            \"categoriesPermissionOperationType\": 1,\r\n            \"categoriesPermissionList\": [\r\n              {\r\n                \"permissionName\": \"Data Protection Operations\"\r\n              },\r\n              {\r\n                \"permissionName\": \"Job Management\"\r\n              }\r\n            ]\r\n          },\r\n          \"owners\": [\r\n            {\r\n              \"userGroupName\": \"View All\"\r\n            },\r\n            \r\n            {\r\n              \"userName\": \"edgeuser\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request updates the client owners and their permissions.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm"
           },
@@ -4289,6 +4289,189 @@
               "cookie": [],
               "responseTime": "59",
               "body": "{\r\"shares\":[\r{\r\"userPermission\":1,\"description\":\"\",\"isVisible\":true,\"shareType\":2,\"canReshare\":false,\"hasReshares\":0,\"canUserEdit\":false,\"isExpired\":false,\"status\":0,\"owner\":{\r\"userGUID\":\"3792D8E7-BE0B-4F0E-8604-86D9860D4F32\",\"userName\":\"edgeuser\",\"userId\":4\r},\"shareFolder\":{\r\"syncWebFolderId\":703241,\"syncWebFolderName\":\"netstat\"\r},\"browseInfo\":{\r\"edgeClient\":false,\"paths\":[\r{\r\"path\":\"C:\\\\netstat.txt\",\"directory\":false\r}\r],\"expirationTime\":{\r\"time\":0\r},\"emailInfo\":{\r\"emailMessage\":\"\",\"browseUrl\":\"\\u002fwebconsole\\u002fgtl.do?gid=acV5rp8\",\"dontSendEmail\":false\r}\r},\"client\":{\r\"clientName\":\"firewalltestma\",\"backupsetId\":20,\"instanceId\":1,\"subclientId\":70,\"clientId\":9,\"applicationId\":33\r},\"lastModified\":{\r\"timeValue\":\"1496310616\"\r}\r},{\r\"userPermission\":1,\"description\":\"\",\"isVisible\":true,\"shareType\":2,\"canReshare\":false,\"hasReshares\":0,\"canUserEdit\":false,\"isExpired\":false,\"status\":0,\"owner\":{\r\"userGUID\":\"3792D8E7-BE0B-4F0E-8604-86D9860D4F32\",\"userName\":\"edgeuser\",\"userId\":4\r},\"shareFolder\":{\r\"syncWebFolderId\":423085,\"syncWebFolderName\":\"C:\"\r},\"browseInfo\":{\r\"edgeClient\":false,\"paths\":[\r{\r\"path\":\"C:\\\\\",\"directory\":true\r}\r],\"expirationTime\":{\r\"time\":0\r},\"emailInfo\":{\r\"emailMessage\":\"\",\"browseUrl\":\"\\u002fwebconsole\\u002fgtl.do?gid=Tk55mPuXyQ4eO3s\",\"dontSendEmail\":false\r}\r},\"client\":{\r\"clientName\":\"firewalltestma\",\"backupsetId\":20,\"instanceId\":1,\"subclientId\":70,\"clientId\":9,\"applicationId\":33\r},\"lastModified\":{\r\"timeValue\":\"1496310568\"\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "5f32729e-513f-bcc5-cc89-90b0ff1930c3",
+          "name": "View Shared Files and Folders",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/GetSharedFolders",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
+            },
+            "description": "To view the share details of a specific shared file\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm"
+          },
+          "response": [
+            {
+              "id": "157af9c4-c5ca-0226-f761-d8abf6ceea6c",
+              "name": "View Shared Files and Folders",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/GetSharedFolders",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
+                },
+                "description": "To view the share details of a specific shared file\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "834",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 01 Jun 2017 09:56:19 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "26",
+              "body": "{\r\"shares\":[\r{\r\"userPermission\":1,\"description\":\"\",\"shareType\":2,\"canReshare\":false,\"hasReshares\":0,\"canUserEdit\":false,\"status\":0,\"owner\":{\r\"userName\":\"edgeuser\",\"userId\":4\r},\"sharedTo\":[\r{\r\"userHasReshares\":0,\"userStatus\":0,\"permission\":1,\"userType\":2,\"email\":\"snasim@commvault.com\",\"externalGroup\":{\r\r},\"sharedBy\":{\r\"userId\":4\r},\"user\":{\r\r},\"group\":{\r\r}\r}\r],\"shareFolder\":{\r\"syncWebFolderId\":423085,\"syncWebFolderName\":\"C:\"\r},\"browseInfo\":{\r\"edgeClient\":false,\"paths\":[\r{\r\"path\":\"C:\\\\\",\"directory\":true\r}\r],\"expirationTime\":{\r\"time\":0\r},\"emailInfo\":{\r\"emailMessage\":\"\",\"browseUrl\":\"\\u002fwebconsole\\u002fgtl.do?gid=Tk55mPuXyQ4eO3s\",\"dontSendEmail\":false\r}\r},\"client\":{\r\"clientName\":\"firewalltestma\",\"backupsetId\":20,\"instanceId\":1,\"subclientId\":70,\"clientId\":9,\"applicationId\":33\r},\"lastModified\":{\r\"timeValue\":\"1496310568\"\r}\r}\r]\r}"
+            },
+            {
+              "id": "beca6ca4-e32e-c3c9-b478-0d4dc3fde1da",
+              "name": "View Shared Files and Folders",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/GetSharedFolders",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
+                },
+                "description": "To view the share details of a specific shared file\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "843",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 01 Jun 2017 09:59:10 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "449",
+              "body": "{\r\"shares\":[\r{\r\"userPermission\":1,\"description\":\"\",\"shareType\":2,\"canReshare\":false,\"hasReshares\":0,\"canUserEdit\":false,\"status\":0,\"owner\":{\r\"userName\":\"edgeuser\",\"userId\":4\r},\"sharedTo\":[\r{\r\"userHasReshares\":0,\"userStatus\":0,\"permission\":1,\"userType\":2,\"email\":\"snasim@commvault.com\",\"externalGroup\":{\r\r},\"sharedBy\":{\r\"userId\":4\r},\"user\":{\r\r},\"group\":{\r\r}\r}\r],\"shareFolder\":{\r\"syncWebFolderId\":703241,\"syncWebFolderName\":\"netstat\"\r},\"browseInfo\":{\r\"edgeClient\":false,\"paths\":[\r{\r\"path\":\"C:\\\\netstat.txt\",\"directory\":false\r}\r],\"expirationTime\":{\r\"time\":0\r},\"emailInfo\":{\r\"emailMessage\":\"\",\"browseUrl\":\"\\u002fwebconsole\\u002fgtl.do?gid=acV5rp8\",\"dontSendEmail\":false\r}\r},\"client\":{\r\"clientName\":\"firewalltestma\",\"backupsetId\":20,\"instanceId\":1,\"subclientId\":70,\"clientId\":9,\"applicationId\":33\r},\"lastModified\":{\r\"timeValue\":\"1496310616\"\r}\r}\r]\r}"
             }
           ]
         },
@@ -36292,10 +36475,10 @@
               ],
               "query": [
                 {
-                  "key": "type",
-                  "value": "testcontentstore",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "type",
+                  "value": "testcontentstore"
                 }
               ],
               "variable": []
@@ -36303,19 +36486,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -44399,83 +44582,7 @@
         },
         "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm"
       },
-      "response": [
-        {
-          "id": "93a060f4-0a66-6f55-24fd-bffbc4933cfa",
-          "name": "GET Download a File in Public Share by ID",
-          "originalRequest": {
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            }
-          },
-          "status": "OK",
-          "code": 200,
-          "_postman_previewlanguage": "raw",
-          "_postman_previewtype": "application",
-          "header": [
-            {
-              "key": "Content-Length",
-              "value": "17",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/octet-stream",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Content-disposition",
-              "value": "attachment; filename=DemoFile1.doc",
-              "name": "Content-disposition",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Fri, 21 Jul 2017 13:58:26 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "Server",
-              "value": "Microsoft-IIS/8.5",
-              "name": "Server",
-              "description": ""
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "ASP.NET",
-              "name": "X-Powered-By",
-              "description": ""
-            }
-          ],
-          "cookie": [
-            {
-              "expires": "Mon Oct 19 2037 21:14:07 GMT+0000 (UTC)",
-              "httpOnly": true,
-              "domain": "nkatzvm2.testlab.commvault.com",
-              "path": "/webconsole",
-              "secure": false,
-              "value": "4FE369232CA3619ADE65DB55EF647A0F",
-              "key": "JSESSIONID"
-            },
-            {
-              "expires": "Mon Oct 19 2037 21:14:07 GMT+0000 (UTC)",
-              "httpOnly": true,
-              "domain": "nkatzvm2.testlab.commvault.com",
-              "path": "/",
-              "secure": false,
-              "value": "6EDBA28BC1616A91E344BED0ED45695C",
-              "key": "JSESSIONID"
-            }
-          ],
-          "responseTime": "561",
-          "body": "Demo File Content"
-        }
-      ]
+      "response": []
     }
   ]
 }
