@@ -7646,18 +7646,18 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/SchedulePolicy/151",
+            "url": "{{ServerUrl}}/SchedulePolicy/{{taskId}}",
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
