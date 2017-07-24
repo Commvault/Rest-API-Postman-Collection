@@ -8495,9 +8495,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.errorCode === 0;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -8507,24 +8505,24 @@
             "method": "PUT",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "<TMMsg_ModifyTaskReq>\r\n  <taskInfo >\r\n    <appGroup>\r\n      <appGroups appGroupName=\"APPGRP_BACKEDUP_FILES\"/>\r\n        <flags deleted=\"1\" /> \r\n      \r\n    </appGroup>\r\n    <task >\r\n      <task taskName=\"TestPolicy\"/>\r\n    </task>\r\n  </taskInfo>\r\n</TMMsg_ModifyTaskReq>"
+              "raw": "{\r\n   \"taskInfo\":{\r\n      \"task\":{\r\n         \"task\":{\r\n            \"taskName\":\"{{taskName}}\"\r\n         }\r\n      },\r\n      \"appGroup\":{\r\n         \"appGroups\":[\r\n            {\r\n               \"appGroupName\":\"APPGRP_BACKEDUP_FILES\"\r\n            }\r\n         ]\r\n      }\r\n   }\r\n}"
             },
             "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
           },
