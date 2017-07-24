@@ -8179,18 +8179,18 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/151/Entity",
+            "url": "{{ServerUrl}}/Task/{{taskId}}/Entity",
             "method": "DELETE",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
