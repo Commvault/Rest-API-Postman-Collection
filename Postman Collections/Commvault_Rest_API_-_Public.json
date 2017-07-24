@@ -7636,7 +7636,7 @@
                   "",
                   "tests[\"Response Body contains taskInfo\"] = responseBody.has(\"taskInfo\");",
                   "",
-                  "tests[\"Response Body contains associations\"] = responseBody.has(\"associations\");",
+                  "tests[\"Response Body contains associations\"] = responseBody.has(\"Associations\");",
                   "",
                   "tests[\"Response Body contains task\"] = responseBody.has(\"task\");",
                   "",
