@@ -7644,7 +7644,9 @@
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "postman.setEnvironmentVariable(\"subtaskId\", jsonData.taskInfo.subTasks[0].subTask.subTaskId);"
+                  "postman.setEnvironmentVariable(\"subtaskId\", jsonData.taskInfo.subTasks[0].subTask.subTaskId);",
+                  "",
+                  "postman.setEnvironmentVariable(\"taskName\", jsonData.taskInfo.task.taskName);"
                 ]
               }
             }
