@@ -7461,6 +7461,10 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"taskId\", jsonData.taskDetail[0].task.taskId);",
+                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
@@ -7473,14 +7477,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -7498,14 +7502,14 @@
                 "method": "GET",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {
