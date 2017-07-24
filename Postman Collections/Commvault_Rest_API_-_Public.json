@@ -7462,7 +7462,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "",
+                  "//adjust the value of \"taskDetail[0]\" for the task you want",
                   "postman.setEnvironmentVariable(\"taskId\", jsonData.taskDetail[0].task.taskId);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
