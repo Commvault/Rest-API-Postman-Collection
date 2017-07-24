@@ -11026,6 +11026,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"exitval is 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
@@ -11035,7 +11037,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/69",
+            "url": "{{ServerUrl}}/Subclient/2",
             "method": "POST",
             "header": [
               {
@@ -11065,7 +11067,7 @@
               "id": "05107552-1fa6-f5d9-ef0e-b2cd6226f8c3",
               "name": "Subclient Properties",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/69",
+                "url": "{{ServerUrl}}/Subclient/2",
                 "method": "POST",
                 "header": [
                   {
