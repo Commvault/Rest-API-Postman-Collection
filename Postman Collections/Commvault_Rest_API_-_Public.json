@@ -18821,19 +18821,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "text/xml",
-                "description": ""
+                "value": "text/xml"
               }
             ],
             "body": {
@@ -24322,16 +24322,16 @@
               ],
               "query": [
                 {
-                  "key": "uploadType",
-                  "value": "chunkedFile",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "uploadType",
+                  "value": "chunkedFile"
                 },
                 {
-                  "key": "requestId",
-                  "value": "{{requestId}}",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "requestId",
+                  "value": "{{requestId}}"
                 }
               ],
               "variable": []
@@ -24339,24 +24339,24 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Name",
-                "value": "{{FileName2}}",
-                "description": ""
+                "value": "{{FileName2}}"
               },
               {
+                "description": "",
                 "key": "FileEOF",
-                "value": "1",
-                "description": ""
+                "value": "1"
               }
             ],
             "body": {
@@ -30088,14 +30088,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -31889,14 +31889,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -33628,19 +33628,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
