@@ -11136,108 +11136,6 @@
           ]
         },
         {
-          "_postman_id": "543e3082-a5cd-9530-b5ca-172f47ed303a",
-          "name": "Subclient",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation deletes a subclient.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_subclient.htm"
-          },
-          "response": [
-            {
-              "id": "18ec84fb-ca39-be0b-1a11-dfffbfcdd105",
-              "name": "Subclient",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": "This operation deletes a subclient.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_subclient.htm"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "118",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 01 Jun 2017 09:03:12 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "932",
-              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0\r}\r]\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "6500dd52-ec11-87fc-e424-04d70eae02f4",
           "name": "Subclient Backup - Incremental after Synthetic full",
           "event": [
@@ -12605,7 +12503,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/49",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
             "method": "GET",
             "header": [
               {
@@ -12630,7 +12528,7 @@
               "id": "89df24e0-54ea-d7dd-4ede-98ddb86458ba",
               "name": "Subclient Properties",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/49",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "method": "GET",
                 "header": [
                   {
@@ -13426,6 +13324,108 @@
               "cookie": [],
               "responseTime": "3888",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"userGroupName\":\"Testgroup\",\"userGroupId\":9\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "543e3082-a5cd-9530-b5ca-172f47ed303a",
+          "name": "Subclient",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation deletes a subclient.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_subclient.htm"
+          },
+          "response": [
+            {
+              "id": "18ec84fb-ca39-be0b-1a11-dfffbfcdd105",
+              "name": "Subclient",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This operation deletes a subclient.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_subclient.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "118",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 01 Jun 2017 09:03:12 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "932",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0\r}\r]\r}"
             }
           ]
         }
