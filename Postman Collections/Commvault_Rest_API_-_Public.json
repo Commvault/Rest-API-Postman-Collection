@@ -2133,14 +2133,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -7128,124 +7133,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "f57b5a96-9ebd-ee32-2f66-e00b1abcfaa8",
-          "name": "Create Task (Backup) copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains taskId\"] = responseBody.has(\"taskId\");",
-                  "tests[\"Response Body contains jobIds\"] = responseBody.has(\"jobIds\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/CreateTask",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"taskInfo\": {\r\n    \"associations\": [\r\n      {\r\n        \"applicationId\": 33,\r\n        \"clientName\": \"{{clientName}}\",\r\n        \"commCellId\": 0,\r\n        \"backupsetName\": \"{{backupsetName}}\",\r\n        \"_type_\": 7,\r\n        \"appName\": \"File System\"\r\n      }\r\n    ],\r\n    \"task\": {\r\n      \"sequenceNumber\": 10,\r\n      \"initiatedFrom\": 2,\r\n      \"taskType\": 1,\r\n      \"policyType\": 0,\r\n      \"taskId\": 0,\r\n      \"taskFlags\": {\r\n        \"disabled\": false\r\n      }\r\n    },\r\n    \"subTasks\": [\r\n      {\r\n        \"subTask\": {\r\n          \"subTaskType\": 2,\r\n          \"operationType\": 2\r\n        },\r\n        \"options\": {\r\n          \"backupOpts\": {\r\n            \"truncateLogsOnSource\": false,\r\n            \"sybaseSkipFullafterLogBkp\": false,\r\n            \"backupLevel\": 1,\r\n            \"runIncrementalBackup\": true,\r\n            \"isSpHasInLineCopy\": false,\r\n            \"runSILOBackup\": false,\r\n            \"doNotTruncateLog\": false,\r\n            \"dataOpt\": {\r\n              \"skipCatalogPhaseForSnapBackup\": false,\r\n              \"followMountPoints\": true,\r\n              \"enableIndexCheckPointing\": false,\r\n              \"enforceTransactionLogUsage\": false,\r\n              \"spaceReclamation\": false,\r\n              \"skipConsistencyCheck\": false,\r\n              \"createNewIndex\": false,\r\n              \"verifySynthFull\": false\r\n            },\r\n            \"dataPathOpt\": {\r\n              \"mediaAgent\": {\r\n                \"mediaAgentId\": 0\r\n              },\r\n              \"library\": {\r\n                \"libraryId\": 0\r\n              },\r\n              \"drivePool\": {\r\n                \"drivePoolId\": 0\r\n              },\r\n              \"spareGroup\": {\r\n                \"spareMediaGroupId\": 0\r\n              },\r\n              \"drive\": {\r\n                \"driveId\": 0\r\n              }\r\n            },\r\n            \"mediaOpt\": {\r\n              \"markMediaFullOnSuccess\": false,\r\n              \"numberofDays\": 30,\r\n              \"startNewMedia\": true,\r\n              \"retentionJobType\": 2,\r\n              \"allowOtherSchedulesToUseMediaSet\": true,\r\n              \"reserveResourcesBeforeScan\": false\r\n            }\r\n          },\r\n          \"commonOpts\": {\r\n            \"jobDescription\": \"\",\r\n            \"jobRetryOpts\": {\r\n              \"killRunningJobWhenTotalRunningTimeExpires\": false,\r\n              \"numberOfRetries\": 0,\r\n              \"enableNumberOfRetries\": false,\r\n              \"runningTime\": {\r\n                \"enableTotalRunningTime\": false,\r\n                \"totalRunningTime\": 3600\r\n              }\r\n            },\r\n            \"startUpOpts\": {\r\n              \"startInSuspendedState\": false,\r\n              \"useDefaultPriority\": true,\r\n              \"priority\": 166\r\n            }\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}"
-            },
-            "description": "This request starts an immediate backup job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_create_task_backup.htm"
-          },
-          "response": [
-            {
-              "id": "8e8ea485-c8b2-7247-4939-6658685505e3",
-              "name": "POST Create Task (Backup) - Immediate",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/CreateTask",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "enabled": true,
-                    "disabled": false
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "enabled": true,
-                    "description": "The mime type of this content",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "enabled": true,
-                    "disabled": false
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"taskInfo\": {\r\n    \"associations\": [\r\n      {\r\n        \"applicationId\": 33,\r\n        \"clientName\": \"greenvalley\",\r\n        \"commCellId\": 0,\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"_type_\": 7,\r\n        \"appName\": \"File System\"\r\n      }\r\n    ],\r\n    \"task\": {\r\n      \"sequenceNumber\": 10,\r\n      \"initiatedFrom\": 2,\r\n      \"taskType\": 1,\r\n      \"policyType\": 0,\r\n      \"taskId\": 0,\r\n      \"taskFlags\": {\r\n        \"disabled\": false\r\n      }\r\n    },\r\n    \"subTasks\": [\r\n      {\r\n        \"subTask\": {\r\n          \"subTaskType\": 2,\r\n          \"operationType\": 2\r\n        },\r\n        \"options\": {\r\n          \"backupOpts\": {\r\n            \"truncateLogsOnSource\": false,\r\n            \"sybaseSkipFullafterLogBkp\": false,\r\n            \"backupLevel\": 1,\r\n            \"runIncrementalBackup\": true,\r\n            \"isSpHasInLineCopy\": false,\r\n            \"runSILOBackup\": false,\r\n            \"doNotTruncateLog\": false,\r\n            \"dataOpt\": {\r\n              \"skipCatalogPhaseForSnapBackup\": false,\r\n              \"followMountPoints\": true,\r\n              \"enableIndexCheckPointing\": false,\r\n              \"enforceTransactionLogUsage\": false,\r\n              \"spaceReclamation\": false,\r\n              \"skipConsistencyCheck\": false,\r\n              \"createNewIndex\": false,\r\n              \"verifySynthFull\": false\r\n            },\r\n            \"dataPathOpt\": {\r\n              \"mediaAgent\": {\r\n                \"mediaAgentId\": 0\r\n              },\r\n              \"library\": {\r\n                \"libraryId\": 0\r\n              },\r\n              \"drivePool\": {\r\n                \"drivePoolId\": 0\r\n              },\r\n              \"spareGroup\": {\r\n                \"spareMediaGroupId\": 0\r\n              },\r\n              \"drive\": {\r\n                \"driveId\": 0\r\n              }\r\n            },\r\n            \"mediaOpt\": {\r\n              \"markMediaFullOnSuccess\": false,\r\n              \"numberofDays\": 30,\r\n              \"startNewMedia\": true,\r\n              \"retentionJobType\": 2,\r\n              \"allowOtherSchedulesToUseMediaSet\": true,\r\n              \"reserveResourcesBeforeScan\": false\r\n            }\r\n          },\r\n          \"commonOpts\": {\r\n            \"jobDescription\": \"\",\r\n            \"jobRetryOpts\": {\r\n              \"killRunningJobWhenTotalRunningTimeExpires\": false,\r\n              \"numberOfRetries\": 0,\r\n              \"enableNumberOfRetries\": false,\r\n              \"runningTime\": {\r\n                \"enableTotalRunningTime\": false,\r\n                \"totalRunningTime\": 3600\r\n              }\r\n            },\r\n            \"startUpOpts\": {\r\n              \"startInSuspendedState\": false,\r\n              \"useDefaultPriority\": true,\r\n              \"priority\": 166\r\n            }\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "71"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 30 May 2017 19:47:41 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "3739",
-              "body": "{\r\"taskId\":435,\"jobIds\":[\r\"2294\",\"2295\",\"2296\",\"2297\",\"2298\",\"2299\"\r]\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "04fdba8f-c0a3-de59-e660-e403ac8f216d",
           "name": "Schedules",
           "event": [
@@ -8363,8 +8250,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  ""
                 ]
               }
             }
@@ -8930,14 +8816,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -8955,14 +8841,14 @@
                 "method": "GET",
                 "header": [
                   {
+                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
+                    "value": "{{Accept}}"
                   },
                   {
+                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
+                    "value": "{{TOKEN}}"
                   }
                 ],
                 "body": {
@@ -14637,14 +14523,14 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -14684,34 +14570,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "1021",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "1021"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Thu, 06 Jul 2017 20:10:13 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Thu, 06 Jul 2017 20:10:13 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -15041,19 +14927,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -15098,34 +14984,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "197",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "197"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:45:34 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:45:34 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -15224,34 +15110,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "589",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "589"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:46:18 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:46:18 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -16449,58 +16335,58 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "492",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "492"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "text/html; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "text/html; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Content-disposition",
-                  "value": "inline; filename=",
                   "name": "Content-disposition",
-                  "description": ""
+                  "value": "inline; filename="
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:53:56 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:53:56 GMT"
                 },
                 {
+                  "description": "",
                   "key": "FileModifiedtime",
-                  "value": "1481595468",
                   "name": "FileModifiedtime",
-                  "description": ""
+                  "value": "1481595468"
                 },
                 {
+                  "description": "",
                   "key": "FileName",
-                  "value": "RGVtb0ZpbGUxLmRvYw==",
                   "name": "FileName",
-                  "description": ""
+                  "value": "RGVtb0ZpbGUxLmRvYw=="
                 },
                 {
+                  "description": "",
                   "key": "FileSize",
-                  "value": "17",
                   "name": "FileSize",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -16736,34 +16622,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:55:29 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:55:29 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -17308,34 +17194,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "20",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "20"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/xml; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 14:58:46 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 14:58:46 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -17869,34 +17755,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "529",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "529"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:02:43 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:02:43 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -17990,40 +17876,40 @@
               "_postman_previewtype": "application",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/octet-stream",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/octet-stream"
                 },
                 {
+                  "description": "",
                   "key": "Content-disposition",
-                  "value": "attachment; filename=DemoFile1Renamed.doc",
                   "name": "Content-disposition",
-                  "description": ""
+                  "value": "attachment; filename=DemoFile1Renamed.doc"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:03:51 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:03:51 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -18117,34 +18003,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:04:22 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:04:22 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -18379,34 +18265,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:07:15 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:07:15 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -18967,34 +18853,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "1359",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "1359"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:24:36 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:24:36 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -19041,19 +18927,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -19098,34 +18984,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:06:20 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:06:20 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -19554,14 +19440,14 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -20688,58 +20574,58 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "492",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "492"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "text/html; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "text/html; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Content-disposition",
-                  "value": "inline; filename=",
                   "name": "Content-disposition",
-                  "description": ""
+                  "value": "inline; filename="
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 17:11:01 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 17:11:01 GMT"
                 },
                 {
+                  "description": "",
                   "key": "FileModifiedtime",
-                  "value": "1481595468",
                   "name": "FileModifiedtime",
-                  "description": ""
+                  "value": "1481595468"
                 },
                 {
+                  "description": "",
                   "key": "FileName",
-                  "value": "RGVtb0ZpbGUxLmRvYw==",
                   "name": "FileName",
-                  "description": ""
+                  "value": "RGVtb0ZpbGUxLmRvYw=="
                 },
                 {
+                  "description": "",
                   "key": "FileSize",
-                  "value": "17",
                   "name": "FileSize",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -21509,34 +21395,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "19",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "19"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 14:53:56 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 14:53:56 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -21583,19 +21469,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -22395,19 +22281,19 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -22706,34 +22592,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "558",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "558"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Thu, 06 Jul 2017 20:18:02 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Thu, 06 Jul 2017 20:18:02 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -23113,34 +22999,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "2233",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "2233"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:14:03 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:14:03 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -23361,19 +23247,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -23418,34 +23304,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "209",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "209"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 14:07:46 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 14:07:46 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -23773,34 +23659,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "154",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "154"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:14:49 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:14:49 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -24486,34 +24372,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "1462",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "1462"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 15:17:47 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 15:17:47 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -24574,34 +24460,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "1462",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "1462"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 15:16:25 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 15:16:25 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -25283,14 +25169,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -25318,18 +25204,40 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/versions",
+            "url": {
+              "raw": "{{ServerUrl}}/drive/share/{{shareId}}/file/versions?path=\\DemoShareFolder\\DemoFile1.doc",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "drive",
+                "share",
+                "{{shareId}}",
+                "file",
+                "versions"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "path",
+                  "value": "\\DemoShareFolder\\DemoFile1.doc"
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -25412,34 +25320,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "874",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "874"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:19:56 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:19:56 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -25704,40 +25612,40 @@
               "_postman_previewtype": "application",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/octet-stream",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/octet-stream"
                 },
                 {
+                  "description": "",
                   "key": "Content-disposition",
-                  "value": "attachment; filename=DemoFile1.doc",
                   "name": "Content-disposition",
-                  "description": ""
+                  "value": "attachment; filename=DemoFile1.doc"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:22 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:22 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -25875,40 +25783,40 @@
               "_postman_previewtype": "application",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/octet-stream",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/octet-stream"
                 },
                 {
+                  "description": "",
                   "key": "Content-disposition",
-                  "value": "attachment; filename=DemoFile1.doc",
                   "name": "Content-disposition",
-                  "description": ""
+                  "value": "attachment; filename=DemoFile1.doc"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:26 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:26 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -26002,40 +25910,40 @@
               "_postman_previewtype": "application",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/octet-stream",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/octet-stream"
                 },
                 {
+                  "description": "",
                   "key": "Content-disposition",
-                  "value": "attachment; filename=DemoFile1.doc",
                   "name": "Content-disposition",
-                  "description": ""
+                  "value": "attachment; filename=DemoFile1.doc"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:37 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:37 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -26690,34 +26598,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "19",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "19"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 14:59:05 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 14:59:05 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -26895,24 +26803,24 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoShareFile1.doc\",\n  \"name\":\"DemoShareFile1Renamed.doc\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoFile1.doc\",\n  \"name\":\"DemoShareFile1Renamed.doc\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_share_folder_rename.htm"
           },
@@ -26994,34 +26902,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:51 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:51 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -27125,34 +27033,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:49 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:49 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -27382,34 +27290,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "110",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "110"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/xml; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:56 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:56 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -27788,34 +27696,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Thu, 06 Jul 2017 17:07:46 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Thu, 06 Jul 2017 17:07:46 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -28161,34 +28069,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "15",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "15"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "text/plain; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "text/plain; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 20:50:16 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 20:50:16 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -28408,34 +28316,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "1021",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "1021"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Thu, 06 Jul 2017 20:10:13 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Thu, 06 Jul 2017 20:10:13 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -28831,34 +28739,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "197",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "197"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:45:34 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:45:34 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -28957,34 +28865,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "589",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "589"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:46:18 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:46:18 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -29123,34 +29031,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "589",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "589"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:47:22 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:47:22 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -30304,34 +30212,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:55:29 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:55:29 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -30566,34 +30474,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "19",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "19"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/xml; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 14:56:08 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 14:56:08 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -31400,34 +31308,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "529",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "529"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:01:29 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:01:29 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -32209,34 +32117,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:18:10 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:18:10 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -32346,34 +32254,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "1359",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "1359"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:20:46 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:20:46 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -32503,34 +32411,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "1359",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "1359"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:21:28 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:21:28 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -33039,34 +32947,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 15:26:07 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 15:26:07 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -34665,58 +34573,58 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "492",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "492"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "text/html; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "text/html; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Content-disposition",
-                  "value": "inline; filename=",
                   "name": "Content-disposition",
-                  "description": ""
+                  "value": "inline; filename="
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 17:11:01 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 17:11:01 GMT"
                 },
                 {
+                  "description": "",
                   "key": "FileModifiedtime",
-                  "value": "1481595468",
                   "name": "FileModifiedtime",
-                  "description": ""
+                  "value": "1481595468"
                 },
                 {
+                  "description": "",
                   "key": "FileName",
-                  "value": "RGVtb0ZpbGUxLmRvYw==",
                   "name": "FileName",
-                  "description": ""
+                  "value": "RGVtb0ZpbGUxLmRvYw=="
                 },
                 {
+                  "description": "",
                   "key": "FileSize",
-                  "value": "17",
                   "name": "FileSize",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -34966,34 +34874,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:51 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:51 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -35096,34 +35004,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "268",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "268"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/xml; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 17:07:05 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 17:07:05 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -35486,34 +35394,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "19",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "19"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 14:53:56 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 14:53:56 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -36077,10 +35985,10 @@
               ],
               "query": [
                 {
-                  "key": "type",
-                  "value": "testcontentstore",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "type",
+                  "value": "testcontentstore"
                 }
               ],
               "variable": []
@@ -36088,19 +35996,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -36344,19 +36252,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -36370,30 +36278,11 @@
               "id": "0a31e223-3acb-fc5b-44cd-a241cc278f8f",
               "name": "POST Create Folder by ID",
               "originalRequest": {
-                "url": "{{ServerUrl}}/contentstore/file/{{RootGuid}}",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
-                },
-                "description": ""
+                  "raw": ""
+                }
               },
               "status": "Created",
               "code": 201,
@@ -36401,34 +36290,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "197",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "197"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:43:40 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:43:40 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -36540,34 +36429,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "375",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "375"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:13:34 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:13:34 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -36757,10 +36646,10 @@
               ],
               "query": [
                 {
-                  "key": "shareId",
-                  "value": "{{shareId}}",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "shareId",
+                  "value": "{{shareId}}"
                 }
               ],
               "variable": []
@@ -36768,14 +36657,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -36834,34 +36723,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "755",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "755"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:14:07 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:14:07 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -36969,34 +36858,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "209",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "209"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 14:07:46 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 14:07:46 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -37560,34 +37449,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "110",
                   "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
+                  "value": "110"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": "The mime type of this content"
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 17 Jul 2017 16:11:37 GMT",
                   "name": "Date",
-                  "description": "The date and time that the message was sent"
+                  "value": "Mon, 17 Jul 2017 16:11:37 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": "A name for the server"
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -38924,34 +38813,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "874",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "874"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:19:56 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:19:56 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -39095,34 +38984,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "874",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "874"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:05 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:05 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -40202,34 +40091,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "19",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "19"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 14:59:05 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 14:59:05 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -40506,34 +40395,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:51 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:51 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -40894,34 +40783,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "110",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "110"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/xml; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:20:56 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:20:56 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -41025,34 +40914,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "32",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "32"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/xml; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 14:58:11 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 14:58:11 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -41300,34 +41189,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 20:46:14 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 20:46:14 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -41552,34 +41441,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "49",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "49"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/xml; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 17:19:18 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 17:19:18 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -41884,14 +41773,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -42003,10 +41892,10 @@
               ],
               "query": [
                 {
-                  "key": "type",
-                  "value": "testcontentstore",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "type",
+                  "value": "testcontentstore"
                 }
               ],
               "variable": []
@@ -42014,19 +41903,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -42556,19 +42445,19 @@
         "method": "POST",
         "header": [
           {
+            "description": "",
             "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
+            "value": "{{Accept}}"
           },
           {
+            "description": "",
             "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
+            "value": "{{TOKEN}}"
           },
           {
+            "description": "",
             "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           }
         ],
         "body": {
@@ -43855,10 +43744,10 @@
           ],
           "query": [
             {
-              "key": "path",
-              "value": "\\DemoFile1.doc",
+              "description": "",
               "equals": true,
-              "description": ""
+              "key": "path",
+              "value": "\\DemoFile1.doc"
             }
           ],
           "variable": []
@@ -43866,14 +43755,14 @@
         "method": "GET",
         "header": [
           {
+            "description": "",
             "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
+            "value": "{{Accept}}"
           },
           {
+            "description": "",
             "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
+            "value": "{{TOKEN}}"
           }
         ],
         "body": {
