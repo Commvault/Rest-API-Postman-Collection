@@ -21928,19 +21928,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -36475,10 +36475,10 @@
               ],
               "query": [
                 {
-                  "key": "type",
-                  "value": "testcontentstore",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "type",
+                  "value": "testcontentstore"
                 }
               ],
               "variable": []
@@ -36486,19 +36486,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -43060,10 +43060,10 @@
           ],
           "query": [
             {
-              "key": "path",
-              "value": "\\DemoShareFolder\\DemoFile1.doc",
+              "description": "",
               "equals": true,
-              "description": ""
+              "key": "path",
+              "value": "\\DemoShareFolder\\DemoFile1.doc"
             }
           ],
           "variable": []
@@ -43071,14 +43071,14 @@
         "method": "GET",
         "header": [
           {
+            "description": "",
             "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
+            "value": "{{Accept}}"
           },
           {
+            "description": "",
             "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
+            "value": "{{TOKEN}}"
           }
         ],
         "body": {
@@ -44253,10 +44253,10 @@
           ],
           "query": [
             {
-              "key": "path",
-              "value": "\\DemoFile1.doc",
+              "description": "",
               "equals": true,
-              "description": ""
+              "key": "path",
+              "value": "\\DemoFile1.doc"
             }
           ],
           "variable": []
@@ -44264,14 +44264,14 @@
         "method": "GET",
         "header": [
           {
+            "description": "",
             "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
+            "value": "{{Accept}}"
           },
           {
+            "description": "",
             "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
+            "value": "{{TOKEN}}"
           }
         ],
         "body": {
@@ -44523,6 +44523,66 @@
           "body": "{\r\"fileResources\":[\r{\r\"owner\":\"(nkatz@commvault.com)\",\"modifiedTime\":1481595468,\"previewUrl\":\"\\u002fdrive\\u002ffile\\u002fversion\\u002fc07f19bfb5663f4f1f91f041230b6956\\u002faction\\u002fpreview\",\"parentPath\":\"\\\\DemoShareFolder\",\"GUID\":\"f87f6ab362c1419fa7047aa369277906\",\"sizeinBytes\":17,\"downloadUrl\":\"\\u002fdrive\\u002ffile\\u002fversion\\u002fc07f19bfb5663f4f1f91f041230b6956\\u002faction\\u002fdownload\",\"directory\":false,\"versionGUID\":\"c07f19bfb5663f4f1f91f041230b6956\",\"path\":\"\\\\DemoShareFolder\\\\DemoFile1.doc\",\"file\":true,\"parentGuid\":\"23a8fe3dda394e49ae65f73da746e432\",\"name\":\"DemoFile1.doc\"\r}\r]\r}"
         }
       ]
+    },
+    {
+      "_postman_id": "9896f5c4-6ab6-16b4-f715-3a28d785c858",
+      "name": "Download a File in a Public Share by Path",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+              "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": {
+          "raw": "{{ServerUrl}}/drive/publicshare/{{shareId}}/action/download?path=\\DemoFile1.doc",
+          "auth": {},
+          "host": [
+            "{{ServerUrl}}"
+          ],
+          "path": [
+            "drive",
+            "publicshare",
+            "{{shareId}}",
+            "action",
+            "download"
+          ],
+          "query": [
+            {
+              "key": "path",
+              "value": "\\DemoFile1.doc",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm"
+      },
+      "response": []
     }
   ]
 }
