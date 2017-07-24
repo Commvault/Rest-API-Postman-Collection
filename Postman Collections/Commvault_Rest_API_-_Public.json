@@ -7865,18 +7865,18 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/151/Entity/add",
+            "url": "{{ServerUrl}}/Task/{{taskId}}/Entity/add",
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
