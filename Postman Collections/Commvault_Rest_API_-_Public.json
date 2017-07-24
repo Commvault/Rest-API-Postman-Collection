@@ -7970,7 +7970,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/151/Entity/exclude",
+            "url": "{{ServerUrl}}/Task/{{taskToExclude}}/Entity/exclude",
             "method": "POST",
             "header": [
               {
