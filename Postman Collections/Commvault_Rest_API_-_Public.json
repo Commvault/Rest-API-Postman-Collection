@@ -8382,8 +8382,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  ""
                 ]
               }
             }
@@ -8393,24 +8392,24 @@
             "method": "PUT",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"taskInfo\":{\r\n    \"associations\":[\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\"\r\n      },\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"subclientName\":\"DDBBackup\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\",\r\n        \"flags\":{\r\n          \"exclude\":true\r\n        }\r\n      }\r\n    ],\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"TestPolicy\"\r\n      }\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"taskInfo\":{\r\n    \"associations\":[\r\n      {\r\n        \"clientName\":\"{{clientName}}\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\"\r\n      },\r\n      {\r\n        \"clientName\":\"{{clientName}}\",\r\n        \"subclientName\":\"DDBBackup\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\",\r\n        \"flags\":{\r\n          \"exclude\":true\r\n        }\r\n      }\r\n    ],\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"{{taskName}}\"\r\n      }\r\n    }\r\n  }\r\n}"
             },
             "description": "This request associates all default backup set subclients except for the DDBBackup subclient with the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_entity_assoc.htm"
           },
