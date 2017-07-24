@@ -43060,10 +43060,10 @@
           ],
           "query": [
             {
-              "key": "path",
-              "value": "\\DemoShareFolder\\DemoFile1.doc",
+              "description": "",
               "equals": true,
-              "description": ""
+              "key": "path",
+              "value": "\\DemoShareFolder\\DemoFile1.doc"
             }
           ],
           "variable": []
@@ -43071,14 +43071,14 @@
         "method": "GET",
         "header": [
           {
+            "description": "",
             "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
+            "value": "{{Accept}}"
           },
           {
+            "description": "",
             "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
+            "value": "{{TOKEN}}"
           }
         ],
         "body": {
