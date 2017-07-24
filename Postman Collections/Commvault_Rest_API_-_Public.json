@@ -10914,7 +10914,8 @@
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"exitval is 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
-                  ""
+                  "",
+                  "postman.setEnvironmentVariable(\"subclientId\", jsonData.response.entity.subclientId);"
                 ]
               }
             }
