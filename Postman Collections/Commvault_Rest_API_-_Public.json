@@ -11256,35 +11256,35 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
+              "raw": "{{ServerUrl}}/Subclient/2/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
                 "Subclient",
-                "49",
+                "2",
                 "action",
                 "backup"
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "backupLevel",
-                  "value": "Synthetic_Full"
+                  "value": "Synthetic_Full",
+                  "equals": true,
+                  "description": ""
                 },
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "runIncrementalBackup",
-                  "value": "True"
+                  "value": "True",
+                  "equals": true,
+                  "description": ""
                 },
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "incrementalLevel",
-                  "value": "AFTER_SYNTH"
+                  "value": "AFTER_SYNTH",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -11292,14 +11292,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
