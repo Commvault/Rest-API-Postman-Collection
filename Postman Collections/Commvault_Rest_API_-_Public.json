@@ -11150,7 +11150,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/2",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
             "method": "DELETE",
             "header": [
               {
@@ -11175,7 +11175,7 @@
               "id": "18ec84fb-ca39-be0b-1a11-dfffbfcdd105",
               "name": "Subclient",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/2",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "method": "DELETE",
                 "header": [
                   {
