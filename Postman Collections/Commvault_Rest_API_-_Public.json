@@ -7523,14 +7523,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -27703,19 +27703,19 @@
             "method": "DELETE",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -30224,10 +30224,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "path",
-                  "value": "\\DemoFolder\\DemoFile1.doc"
+                  "value": "\\DemoFolder\\DemoFile1.doc",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -30235,14 +30235,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -38986,34 +38986,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "603",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "603"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Mon, 10 Jul 2017 13:19:49 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Mon, 10 Jul 2017 13:19:49 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
