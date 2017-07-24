@@ -7640,7 +7640,11 @@
                   "",
                   "tests[\"Response Body contains task\"] = responseBody.has(\"task\");",
                   "",
-                  "tests[\"Response Body contains subTasks\"] = responseBody.has(\"subTasks\");"
+                  "tests[\"Response Body contains subTasks\"] = responseBody.has(\"subTasks\");",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"subtaskId\", jsonData.taskInfo.subTasks[0].subTask.subTaskId);"
                 ]
               }
             }
