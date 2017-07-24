@@ -7859,7 +7859,7 @@
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  "postman.setEnvironmentVariable(\"taskToExclude\", jsonData.taskId);"
                 ]
               }
             }
