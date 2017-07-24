@@ -2133,14 +2133,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -7275,10 +7280,10 @@
               ],
               "query": [
                 {
-                  "key": "clientId",
-                  "value": "2",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "clientId",
+                  "value": "2"
                 }
               ],
               "variable": []
@@ -7286,14 +7291,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -7318,10 +7323,10 @@
                   ],
                   "query": [
                     {
-                      "key": "clientId",
-                      "value": "2",
+                      "description": "",
                       "equals": true,
-                      "description": ""
+                      "key": "clientId",
+                      "value": "2"
                     }
                   ],
                   "variable": []
@@ -7329,14 +7334,14 @@
                 "method": "GET",
                 "header": [
                   {
+                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
+                    "value": "{{Accept}}"
                   },
                   {
+                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
+                    "value": "{{TOKEN}}"
                   }
                 ],
                 "body": {
@@ -7560,14 +7565,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -8363,8 +8368,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  ""
                 ]
               }
             }
@@ -8930,14 +8934,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -8955,14 +8959,14 @@
                 "method": "GET",
                 "header": [
                   {
+                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
+                    "value": "{{Accept}}"
                   },
                   {
+                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
+                    "value": "{{TOKEN}}"
                   }
                 ],
                 "body": {
@@ -9553,14 +9557,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -14637,14 +14641,14 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -15041,19 +15045,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -19041,19 +19045,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -21583,19 +21587,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -23361,19 +23365,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -25283,14 +25287,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -25318,18 +25322,40 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/versions",
+            "url": {
+              "raw": "{{ServerUrl}}/drive/share/{{shareId}}/file/versions?path=\\DemoShareFolder\\DemoFile1.doc",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "drive",
+                "share",
+                "{{shareId}}",
+                "file",
+                "versions"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "path",
+                  "value": "\\DemoShareFolder\\DemoFile1.doc"
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -26895,24 +26921,24 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoShareFile1.doc\",\n  \"name\":\"DemoShareFile1Renamed.doc\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoFile1.doc\",\n  \"name\":\"DemoShareFile1Renamed.doc\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_share_folder_rename.htm"
           },
@@ -27482,30 +27508,11 @@
               "id": "c1cc9a9c-5134-ae81-eeff-98e17ccec21c",
               "name": "DELETE Delete Custom Properties",
               "originalRequest": {
-                "url": "{{ServerUrl}}/drive/properties",
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "<Api_CustomPropertiesReq>\r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/>\r\n<customProps> \r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps> \r\n</Api_CustomPropertiesReq>"
-                },
-                "description": ""
+                  "raw": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -27513,34 +27520,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "32",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "32"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/xml; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 14:58:11 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 14:58:11 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -29996,10 +30003,10 @@
               ],
               "query": [
                 {
-                  "key": "path",
-                  "value": "\\DemoFolder\\DemoFile1.doc",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "path",
+                  "value": "\\DemoFolder\\DemoFile1.doc"
                 }
               ],
               "variable": []
@@ -30007,14 +30014,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -30028,45 +30035,11 @@
               "id": "1a022fce-7728-6af8-7ca5-b4925f905c11",
               "name": "GET Download a File by Path",
               "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/contentstore/action/download?path=\\DemoFolder\\DemoFile1.doc",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "contentstore",
-                    "action",
-                    "download"
-                  ],
-                  "query": [
-                    {
-                      "key": "path",
-                      "value": "\\DemoFolder\\DemoFile1.doc",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -30074,40 +30047,40 @@
               "_postman_previewtype": "application",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "17",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "17"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/octet-stream",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/octet-stream"
                 },
                 {
+                  "description": "",
                   "key": "Content-disposition",
-                  "value": "attachment; filename=DemoFile1.doc",
                   "name": "Content-disposition",
-                  "description": ""
+                  "value": "attachment; filename=DemoFile1.doc"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:53:22 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:53:22 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -36130,10 +36103,10 @@
               ],
               "query": [
                 {
-                  "key": "type",
-                  "value": "testcontentstore",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "type",
+                  "value": "testcontentstore"
                 }
               ],
               "variable": []
@@ -36141,19 +36114,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -36397,19 +36370,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -36423,30 +36396,11 @@
               "id": "0a31e223-3acb-fc5b-44cd-a241cc278f8f",
               "name": "POST Create Folder by ID",
               "originalRequest": {
-                "url": "{{ServerUrl}}/contentstore/file/{{RootGuid}}",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
-                },
-                "description": ""
+                  "raw": ""
+                }
               },
               "status": "Created",
               "code": 201,
@@ -36454,34 +36408,34 @@
               "_postman_previewtype": "text",
               "header": [
                 {
+                  "description": "",
                   "key": "Content-Length",
-                  "value": "197",
                   "name": "Content-Length",
-                  "description": ""
+                  "value": "197"
                 },
                 {
+                  "description": "",
                   "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "value": "application/json; charset=utf-8"
                 },
                 {
+                  "description": "",
                   "key": "Date",
-                  "value": "Fri, 07 Jul 2017 13:43:40 GMT",
                   "name": "Date",
-                  "description": ""
+                  "value": "Fri, 07 Jul 2017 13:43:40 GMT"
                 },
                 {
+                  "description": "",
                   "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "value": "Microsoft-IIS/8.5"
                 },
                 {
+                  "description": "",
                   "key": "X-Powered-By",
-                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "value": "ASP.NET"
                 }
               ],
               "cookie": [
@@ -36810,10 +36764,10 @@
               ],
               "query": [
                 {
-                  "key": "shareId",
-                  "value": "{{shareId}}",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "shareId",
+                  "value": "{{shareId}}"
                 }
               ],
               "variable": []
@@ -36821,14 +36775,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -41937,14 +41891,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -42056,10 +42010,10 @@
               ],
               "query": [
                 {
-                  "key": "type",
-                  "value": "testcontentstore",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "type",
+                  "value": "testcontentstore"
                 }
               ],
               "variable": []
@@ -42067,19 +42021,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -42452,19 +42406,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -42609,19 +42563,19 @@
         "method": "POST",
         "header": [
           {
+            "description": "",
             "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
+            "value": "{{Accept}}"
           },
           {
+            "description": "",
             "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
+            "value": "{{TOKEN}}"
           },
           {
+            "description": "",
             "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           }
         ],
         "body": {
@@ -43908,10 +43862,10 @@
           ],
           "query": [
             {
-              "key": "path",
-              "value": "\\DemoFile1.doc",
+              "description": "",
               "equals": true,
-              "description": ""
+              "key": "path",
+              "value": "\\DemoFile1.doc"
             }
           ],
           "variable": []
@@ -43919,14 +43873,14 @@
         "method": "GET",
         "header": [
           {
+            "description": "",
             "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
+            "value": "{{Accept}}"
           },
           {
+            "description": "",
             "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
+            "value": "{{TOKEN}}"
           }
         ],
         "body": {
