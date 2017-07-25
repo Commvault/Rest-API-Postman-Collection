@@ -13725,7 +13725,7 @@
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "postman.setEnvironmentVariable(\"userGUID\", jsonData.users[2].userGUID);"
+                  "postman.setEnvironmentVariable(\"userGUID\", jsonData.users[2].userEntity.userGUID);"
                 ]
               }
             }
