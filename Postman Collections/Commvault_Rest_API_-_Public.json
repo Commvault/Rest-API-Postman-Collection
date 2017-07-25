@@ -21344,6 +21344,152 @@
           ]
         },
         {
+          "_postman_id": "c159cff3-1615-4332-3898-f48fba022a3c",
+          "name": "Public Share File Versions",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "text/html"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_version_by_id.htm"
+          },
+          "response": [
+            {
+              "id": "4ffa2857-fdfa-c581-9692-307f47f6a408",
+              "name": "GET Public Share File Versions",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "html",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "492"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Content-disposition",
+                  "name": "Content-disposition",
+                  "value": "inline; filename="
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Mon, 10 Jul 2017 17:17:53 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "FileModifiedtime",
+                  "name": "FileModifiedtime",
+                  "value": "1481595468"
+                },
+                {
+                  "description": "",
+                  "key": "FileName",
+                  "name": "FileName",
+                  "value": "RGVtb0ZpbGUxLmRvYw=="
+                },
+                {
+                  "description": "",
+                  "key": "FileSize",
+                  "name": "FileSize",
+                  "value": "17"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "54",
+              "body": "<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n<head>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.txt.TXTParser\"/>\r\n\r\n<meta name=\"Content-Encoding\" content=\"ISO-8859-1\"/>\r\n\r\n<meta name=\"ext_name\" content=\"none\"/>\r\n\r\n<meta name=\"Content-Type\" content=\"text/plain; charset=ISO-8859-1\"/>\r\n\r\n\r\n</head>\r\n\r\n<body style=\"background:#fff;\" background=\"\" >\r\n<pre>Demo File Content</pre>\r\n</body>\r\n</html>\r\n\r\n"
+            }
+          ]
+        },
+        {
           "_postman_id": "bcb9953b-f558-6e38-c063-bcf29656e6ac",
           "name": "Download a File Version from a Public Share",
           "event": [
@@ -22624,271 +22770,6 @@
               ],
               "responseTime": "47",
               "body": "User logged out"
-            }
-          ]
-        },
-        {
-          "_postman_id": "c159cff3-1615-4332-3898-f48fba022a3c",
-          "name": "Public Share File Versions",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
-                  "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "text/html"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_version_by_id.htm"
-          },
-          "response": [
-            {
-              "id": "4ffa2857-fdfa-c581-9692-307f47f6a408",
-              "name": "GET Public Share File Versions",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "text/html",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "html",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "492"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "text/html; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Content-disposition",
-                  "name": "Content-disposition",
-                  "value": "inline; filename="
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Mon, 10 Jul 2017 17:17:53 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "FileModifiedtime",
-                  "name": "FileModifiedtime",
-                  "value": "1481595468"
-                },
-                {
-                  "description": "",
-                  "key": "FileName",
-                  "name": "FileName",
-                  "value": "RGVtb0ZpbGUxLmRvYw=="
-                },
-                {
-                  "description": "",
-                  "key": "FileSize",
-                  "name": "FileSize",
-                  "value": "17"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "54",
-              "body": "<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n<head>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.txt.TXTParser\"/>\r\n\r\n<meta name=\"Content-Encoding\" content=\"ISO-8859-1\"/>\r\n\r\n<meta name=\"ext_name\" content=\"none\"/>\r\n\r\n<meta name=\"Content-Type\" content=\"text/plain; charset=ISO-8859-1\"/>\r\n\r\n\r\n</head>\r\n\r\n<body style=\"background:#fff;\" background=\"\" >\r\n<pre>Demo File Content</pre>\r\n</body>\r\n</html>\r\n\r\n"
-            }
-          ]
-        },
-        {
-          "_postman_id": "d2858f4c-283c-3fd8-efe3-a473b54a2a10",
-          "name": "Drive",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
-                  "",
-                  "tests[\"Response Body contains rootGUID\"] = responseBody.has(\"rootGUID\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive.htm"
-          },
-          "response": [
-            {
-              "id": "7a97b27e-ce31-d0ac-4f1e-c7ce6b0df33a",
-              "name": "GET Drive",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "558"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 06 Jul 2017 20:18:02 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "418",
-              "body": "{\r\"response\":{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"subclientPolicyId\":12,\"subclientId\":14,\"applicationId\":33,\"clientName\":\"nkatzedge\",\"backupsetId\":13,\"clientId\":6,\"userId\":1,\"subclientName\":\"admin\",\"backupsetName\":\"admin\"\r}\r},\"edgeDriveInfo\":{\r\"contentIndexingEnabled\":true,\"hasSyncBlackListedLaptop\":false,\"capabilities\":549775216688,\"driveType\":0,\"cloudId\":0,\"dirDelim\":\"\\\\\",\"rootGUID\":\"d9fa1b7bc1c44a9ebc9237713997fcb7\",\"hasEdgeDriveEnabledLaptop\":false\r},\"syncWebFolder\":{\r\"_type_\":111,\"syncWebFolderId\":872129,\"syncWebFolderName\":\"EdgeDrive\"\r}\r}"
             }
           ]
         }
