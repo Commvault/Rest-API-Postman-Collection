@@ -18183,13 +18183,13 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/contentstore/file/versions?path=\\{{FolderName}}\\DemoFile1Renamed.doc",
+              "raw": "{{ServerUrl}}/drive/file/versions?path=\\{{FolderName}}\\DemoFile1Renamed.doc",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
-                "contentstore",
+                "drive",
                 "file",
                 "versions"
               ],
