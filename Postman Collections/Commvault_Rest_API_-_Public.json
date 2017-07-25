@@ -1676,6 +1676,117 @@
               "body": "User logged out"
             }
           ]
+        },
+        {
+          "_postman_id": "f1c027b4-777e-5061-9b20-59b287a79ac2",
+          "name": "Log Back In",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
+                  "",
+                  "console.log(\"QSDK Token obtained is: \"+jsonData.token);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"userName Validation\"] = jsonData.userName === postman.getEnvironmentVariable(\"userName\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Login",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"password\": \"{{password}}\",\n  \"username\": \"{{userName}}\"\n}"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
+          },
+          "response": [
+            {
+              "id": "03747a52-8bea-c807-f5c0-b9455c07bfcc",
+              "name": "Login",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Login",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "enabled": true,
+                    "disabled": false
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "enabled": true,
+                    "description": "The mime type of this content",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"mode\": 4,\n  \"password\": \"{{password}}\",\n  \"username\": \"{{userName}}\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1027",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 17 May 2017 18:40:46 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "117",
+              "body": "{\r\"aliasName\":\"1\",\"userGUID\":\"9DEB87C3-6FED-4B7F-9CC9-241F337081CD\",\"loginAttempts\":0,\"remainingLockTime\":0,\"smtpAddress\":\"ypolishetty@commvault.com\",\"userName\":\"admin\",\"providerType\":1,\"ccn\":0,\"token\":\"QSDK 3d190ea0efbd33dcc2435ad3c3240eea9ae3d6a9916146b30cdaaa90cc6a39cf8cdb9a5d23f684e35030d1f9098d294de0f128bf33b91f077eda60d295d664a5cad1aa2f4b6e1aaaa8d176caa6935abc3f2aff11938d9dcb0fe8f446ca7b66f4ae2c2b300a0d98fd76657f0a01d2e6dfdbe57c30f5cef0f55344b95cf1218b58cdb6e1119f05efcbf7517c95358b2b4c624d912e79e1b8dded1e76d13f76c5fb7ff6740aa1f17d399fd874b0583ddb0738ddc7853476e9ca26ded8416bf7340c62aed537c81963c9312bec834a258d39a5eab09fa1ec8e6dd7a2261a5a70177c46283263f700392ec2ce64457525d0aed0816d76dd5eaab4bafed62e2ff5e6b272720013149ba8eefc711bfd84d0e6df981558f82f39dbacc\",\"capability\":4328650366975,\"forcePasswordChange\":false,\"isAccountLocked\":false,\"ownerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"providerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"errList\":[\r\r]\r}"
+            }
+          ]
         }
       ]
     },
