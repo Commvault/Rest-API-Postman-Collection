@@ -722,7 +722,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"alertDetail\": {\n    \"alertType\": 10,\n    \"notifTypeListOperationType\": 0,\n    \"alertSeverity\": 0,\n    \"notifType\": [\n      1,\n      8192\n    ],\n    \"criteria\": {\n      \"criteria\": 16\n    },\n    \"EntityList\": {\n      \"associationsOperationType\": 0,\n      \"associations\": [\n        {\n          \"clientId\": 2,\n          \"_type_\": 3\n        }\n      ]\n    },\n    \"userList\": {\n      \"userListOperationType\": 0,\n      \"userList\": [\n        {\n          \"_type_\": 13,\n          \"userId\": 1\n        }\n      ]\n    },\n    \"alertrule\": {\n      \"alertName\": \"{{$guid}}\"\n    }\n  }\n}"
+              "raw": "{\n\t\"alertDetail\": {\n\t\t\"alertType\": 10,\n\t\t\"notifTypeListOperationType\": 0,\n\t\t\"alertSeverity\": 0,\n\t\t\"notifType\": [\n\t\t\t1,\n\t\t\t8192\n\t\t],\n\t\t\"criteria\": {\n\t\t\t\"criteria\": 16\n\t\t},\n\t\t\"EntityList\": {\n\t\t\t\"associationsOperationType\": 0,\n\t\t\t\"associations\": [\n\t\t\t\t{\n\t\t\t\t\t\"clientId\": 2,\n\t\t\t\t\t\"_type_\": 3\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"userList\": {\n\t\t\t\"userListOperationType\": 0,\n\t\t\t\"userList\": [\n\t\t\t\t{\n\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\"userId\": 1\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"alertrule\": {\n\t\t\t\"alertName\": \"{{$guid}}\"\n\t\t}\n\t}\n}"
             },
             "description": "Alert to Admin if CS client properties modified.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert.htm"
           },
@@ -841,7 +841,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"alertDetail\": {\n    \"alertDetail\": {\n      \"regNonGalaxyUserList\": {\n        \"nonGalaxyUserOperationType\": 2,\n        \"nonGalaxyUserList\": [\n          \"AddedUser@testing.com\"\n        ]\n      }\n    }\n  }\n}"
+              "raw": "{\n\t\"alertDetail\": {\n\t\t\"alertDetail\": {\n\t\t\t\"regNonGalaxyUserList\": {\n\t\t\t\t\"nonGalaxyUserOperationType\": 2,\n\t\t\t\t\"nonGalaxyUserList\": [\n\t\t\t\t\t\"AddedUser@testing.com\"\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t}\n}"
             },
             "description": "Modified by adding another email address to the mailing list.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert_modify.htm"
           },
