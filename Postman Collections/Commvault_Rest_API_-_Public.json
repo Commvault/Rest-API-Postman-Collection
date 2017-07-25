@@ -20728,134 +20728,6 @@
           ]
         },
         {
-          "_postman_id": "bcb9953b-f558-6e38-c063-bcf29656e6ac",
-          "name": "Download a File Version from a Public Share",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/download",
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_version_by_id.htm"
-          },
-          "response": [
-            {
-              "id": "b123a72d-2960-1175-e77d-ba3e1c9bdb51",
-              "name": "GET Download a File Version from a Public Share",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
-                },
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "raw",
-              "_postman_previewtype": "application",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "17"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/octet-stream"
-                },
-                {
-                  "description": "",
-                  "key": "Content-disposition",
-                  "name": "Content-disposition",
-                  "value": "attachment; filename=DemoFile1.doc"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Mon, 10 Jul 2017 16:20:15 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "198",
-              "body": "Demo File Content"
-            }
-          ]
-        },
-        {
           "_postman_id": "6f92404e-62df-84f3-77fe-8242b0eaaecb",
           "name": "Preview File in Public Share By ID",
           "event": [
@@ -21172,8 +21044,8 @@
           ]
         },
         {
-          "_postman_id": "c159cff3-1615-4332-3898-f48fba022a3c",
-          "name": "Public Share File Versions",
+          "_postman_id": "5629ddd3-1105-0864-8910-3340c7951e0d",
+          "name": "Download a File in a Public Share by Path",
           "event": [
             {
               "listen": "test",
@@ -21181,19 +21053,41 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
-                  "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+                  ""
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
+            "url": {
+              "raw": "{{ServerUrl}}/drive/publicshare/{{shareId}}/action/metadata?path=\\DemoFile1.doc",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "drive",
+                "publicshare",
+                "{{shareId}}",
+                "action",
+                "metadata"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "path",
+                  "value": "\\DemoFile1.doc"
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
                 "description": "",
                 "key": "Accept",
-                "value": "text/html"
+                "value": "application/json"
               },
               {
                 "description": "",
@@ -21203,21 +21097,21 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
+              "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_version_by_id.htm"
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm"
           },
           "response": [
             {
-              "id": "4ffa2857-fdfa-c581-9692-307f47f6a408",
-              "name": "GET Public Share File Versions",
+              "id": "fb0f9d97-780e-e612-e522-7a7bb555577a",
+              "name": "GET Download a File in a Public Share by Path",
               "originalRequest": {
-                "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
+                "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
                 "method": "GET",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "text/html",
+                    "value": "application/xml",
                     "description": ""
                   },
                   {
@@ -21228,56 +21122,38 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
+                  "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                 },
                 "description": ""
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": "html",
-              "_postman_previewtype": "text",
+              "_postman_previewlanguage": "raw",
+              "_postman_previewtype": "application",
               "header": [
                 {
                   "description": "",
                   "key": "Content-Length",
                   "name": "Content-Length",
-                  "value": "492"
+                  "value": "17"
                 },
                 {
                   "description": "",
                   "key": "Content-Type",
                   "name": "Content-Type",
-                  "value": "text/html; charset=utf-8"
+                  "value": "application/octet-stream"
                 },
                 {
                   "description": "",
                   "key": "Content-disposition",
                   "name": "Content-disposition",
-                  "value": "inline; filename="
+                  "value": "attachment; filename=DemoFile1.doc"
                 },
                 {
                   "description": "",
                   "key": "Date",
                   "name": "Date",
-                  "value": "Mon, 10 Jul 2017 17:17:53 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "FileModifiedtime",
-                  "name": "FileModifiedtime",
-                  "value": "1481595468"
-                },
-                {
-                  "description": "",
-                  "key": "FileName",
-                  "name": "FileName",
-                  "value": "RGVtb0ZpbGUxLmRvYw=="
-                },
-                {
-                  "description": "",
-                  "key": "FileSize",
-                  "name": "FileSize",
-                  "value": "17"
+                  "value": "Mon, 10 Jul 2017 16:20:15 GMT"
                 },
                 {
                   "description": "",
@@ -21312,8 +21188,8 @@
                   "key": "JSESSIONID"
                 }
               ],
-              "responseTime": "54",
-              "body": "<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n<head>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.txt.TXTParser\"/>\r\n\r\n<meta name=\"Content-Encoding\" content=\"ISO-8859-1\"/>\r\n\r\n<meta name=\"ext_name\" content=\"none\"/>\r\n\r\n<meta name=\"Content-Type\" content=\"text/plain; charset=ISO-8859-1\"/>\r\n\r\n\r\n</head>\r\n\r\n<body style=\"background:#fff;\" background=\"\" >\r\n<pre>Demo File Content</pre>\r\n</body>\r\n</html>\r\n\r\n"
+              "responseTime": "198",
+              "body": "Demo File Content"
             }
           ]
         },
@@ -22624,8 +22500,8 @@
           ]
         },
         {
-          "_postman_id": "5629ddd3-1105-0864-8910-3340c7951e0d",
-          "name": "Download a File in a Public Share by Path",
+          "_postman_id": "bcb9953b-f558-6e38-c063-bcf29656e6ac",
+          "name": "Download a File Version from a Public Share",
           "event": [
             {
               "listen": "test",
@@ -22639,29 +22515,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/drive/publicshare/{{shareId}}/action/metadata?path=\\DemoFile1.doc",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "drive",
-                "publicshare",
-                "{{shareId}}",
-                "action",
-                "metadata"
-              ],
-              "query": [
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "path",
-                  "value": "\\DemoFile1.doc"
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/download",
             "method": "GET",
             "header": [
               {
@@ -22679,12 +22533,12 @@
               "mode": "raw",
               "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
             },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm"
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_version_by_id.htm"
           },
           "response": [
             {
-              "id": "fb0f9d97-780e-e612-e522-7a7bb555577a",
-              "name": "GET Download a File in a Public Share by Path",
+              "id": "b123a72d-2960-1175-e77d-ba3e1c9bdb51",
+              "name": "GET Download a File Version from a Public Share",
               "originalRequest": {
                 "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
                 "method": "GET",
@@ -22770,6 +22624,152 @@
               ],
               "responseTime": "198",
               "body": "Demo File Content"
+            }
+          ]
+        },
+        {
+          "_postman_id": "c159cff3-1615-4332-3898-f48fba022a3c",
+          "name": "Public Share File Versions",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "text/html"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_version_by_id.htm"
+          },
+          "response": [
+            {
+              "id": "4ffa2857-fdfa-c581-9692-307f47f6a408",
+              "name": "GET Public Share File Versions",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "html",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "492"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Content-disposition",
+                  "name": "Content-disposition",
+                  "value": "inline; filename="
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Mon, 10 Jul 2017 17:17:53 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "FileModifiedtime",
+                  "name": "FileModifiedtime",
+                  "value": "1481595468"
+                },
+                {
+                  "description": "",
+                  "key": "FileName",
+                  "name": "FileName",
+                  "value": "RGVtb0ZpbGUxLmRvYw=="
+                },
+                {
+                  "description": "",
+                  "key": "FileSize",
+                  "name": "FileSize",
+                  "value": "17"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "54",
+              "body": "<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n<head>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.txt.TXTParser\"/>\r\n\r\n<meta name=\"Content-Encoding\" content=\"ISO-8859-1\"/>\r\n\r\n<meta name=\"ext_name\" content=\"none\"/>\r\n\r\n<meta name=\"Content-Type\" content=\"text/plain; charset=ISO-8859-1\"/>\r\n\r\n\r\n</head>\r\n\r\n<body style=\"background:#fff;\" background=\"\" >\r\n<pre>Demo File Content</pre>\r\n</body>\r\n</html>\r\n\r\n"
             }
           ]
         },
