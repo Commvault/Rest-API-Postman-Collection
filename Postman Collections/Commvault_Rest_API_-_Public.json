@@ -11903,7 +11903,28 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/31/action/backup?backupLevel=Incremental",
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Incremental",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "{{subclientId}}",
+                "action",
+                "backup"
+              ],
+              "query": [
+                {
+                  "key": "backupLevel",
+                  "value": "Incremental",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "POST",
             "header": [
               {
@@ -11928,7 +11949,28 @@
               "id": "a1c8c190-34e7-ad15-3ff5-113d072d41e5",
               "name": "Subclient Backup - incremental",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/31/action/backup?backupLevel=Incremental",
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Incremental",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "{{subclientId}}",
+                    "action",
+                    "backup"
+                  ],
+                  "query": [
+                    {
+                      "key": "backupLevel",
+                      "value": "Incremental",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
                 "method": "POST",
                 "header": [
                   {
@@ -12009,7 +12051,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/49/action/backup",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup",
             "method": "POST",
             "header": [
               {
@@ -12034,7 +12076,7 @@
               "id": "f0322c74-e3e8-7d43-d503-a05b73873198",
               "name": "Subclient Backup - Full",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/49/action/backup",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup",
                 "method": "POST",
                 "header": [
                   {
