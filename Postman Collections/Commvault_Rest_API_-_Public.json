@@ -13817,7 +13817,25 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Session?userId=1",
+            "url": {
+              "raw": "{{ServerUrl}}/Session?userId={{UserId}}",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Session"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{UserId}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
