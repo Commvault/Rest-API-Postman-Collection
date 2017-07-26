@@ -5619,34 +5619,34 @@
               ],
               "query": [
                 {
+                  "description": "",
+                  "equals": true,
                   "key": "at",
-                  "value": "33",
-                  "equals": true,
-                  "description": ""
+                  "value": "33"
                 },
                 {
+                  "description": "",
+                  "equals": true,
                   "key": "si",
-                  "value": "MjoxMjI1MTY3Nzg6MDoxMzQ6NDE2ODM2NA==",
-                  "equals": true,
-                  "description": ""
+                  "value": "MjoxMjI1MTY3Nzg6MDoxMzQ6NDE2ODM2NA=="
                 },
                 {
+                  "description": "",
+                  "equals": true,
                   "key": "op",
-                  "value": "QzpcXHYxMVNQNGEueG1s",
-                  "equals": true,
-                  "description": ""
+                  "value": "QzpcXHYxMVNQNGEueG1s"
                 },
                 {
+                  "description": "",
+                  "equals": true,
                   "key": "appId",
-                  "value": "49",
-                  "equals": true,
-                  "description": ""
+                  "value": "49"
                 },
                 {
-                  "key": "ec",
-                  "value": "1",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "ec",
+                  "value": "1"
                 }
               ],
               "variable": []
@@ -5654,14 +5654,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -5812,10 +5812,10 @@
               ],
               "query": [
                 {
-                  "key": "backedUp",
-                  "value": "false",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "backedUp",
+                  "value": "false"
                 }
               ],
               "variable": []
@@ -5823,14 +5823,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -7018,14 +7018,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -7384,16 +7384,16 @@
               ],
               "query": [
                 {
-                  "key": "storagepolicyId",
-                  "value": "3",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "storagepolicyId",
+                  "value": "3"
                 },
                 {
-                  "key": "admin",
-                  "value": "1",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "admin",
+                  "value": "1"
                 }
               ],
               "variable": []
@@ -7401,14 +7401,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -7433,16 +7433,16 @@
                   ],
                   "query": [
                     {
-                      "key": "storagepolicyId",
-                      "value": "3",
+                      "description": "",
                       "equals": true,
-                      "description": ""
+                      "key": "storagepolicyId",
+                      "value": "3"
                     },
                     {
-                      "key": "admin",
-                      "value": "1",
+                      "description": "",
                       "equals": true,
-                      "description": ""
+                      "key": "admin",
+                      "value": "1"
                     }
                   ],
                   "variable": []
@@ -7450,14 +7450,14 @@
                 "method": "GET",
                 "header": [
                   {
+                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
+                    "value": "{{Accept}}"
                   },
                   {
+                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
+                    "value": "{{TOKEN}}"
                   }
                 ],
                 "body": {
@@ -7791,17 +7791,23 @@
                   "",
                   "tests[\"Response Body contains taskInfo\"] = responseBody.has(\"taskInfo\");",
                   "",
-                  "tests[\"Response Body contains associations\"] = responseBody.has(\"associations\");",
+                  "tests[\"Response Body contains associations\"] = responseBody.has(\"Associations\");",
                   "",
                   "tests[\"Response Body contains task\"] = responseBody.has(\"task\");",
                   "",
-                  "tests[\"Response Body contains subTasks\"] = responseBody.has(\"subTasks\");"
+                  "tests[\"Response Body contains subTasks\"] = responseBody.has(\"subTasks\");",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"subtaskId\", jsonData.taskInfo.subTasks[0].subTask.subTaskId);",
+                  "",
+                  "postman.setEnvironmentVariable(\"taskName\", jsonData.taskInfo.task.taskName);"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/SchedulePolicy/151",
+            "url": "{{ServerUrl}}/SchedulePolicy/{{taskId}}",
             "method": "GET",
             "header": [
               {
@@ -10051,14 +10057,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -10154,19 +10160,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -41947,43 +41953,6 @@
               "raw": ""
             },
             "description": "This operation allows you to preview a backed up file that was shared with you by another user.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_file_share_preview.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "a0b5d65f-1801-bb32-a8df-ab23162aac47",
-          "name": "Download a Shared File",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/stream/action/download?path=C:\\netstat.txt&shareId=703241",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation downloads a backed up file that was shared with you by another user.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_file_share_download.htm"
           },
           "response": []
         }
