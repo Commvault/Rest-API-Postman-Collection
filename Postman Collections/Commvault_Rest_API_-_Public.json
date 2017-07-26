@@ -5022,14 +5022,14 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -6055,14 +6055,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -11951,14 +11951,14 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=BEFORE_SYNTH",
+              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=BEFORE_SYNTH",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
                 "Subclient",
-                "49",
+                "{{subclientId}}",
                 "action",
                 "backup"
               ],
@@ -12121,7 +12121,39 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "{{subclientId}}",
+                "Browse"
+              ],
+              "query": [
+                {
+                  "key": "path",
+                  "value": "%5C",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "showDeletedFiles",
+                  "value": "false",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "vsFileBrowse",
+                  "value": "true",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -12146,7 +12178,39 @@
               "id": "86cbaacd-16ac-d603-bf83-0d3145ddd672",
               "name": "Subclient Browse 2",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "{{subclientId}}",
+                    "Browse"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "%5C",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "showDeletedFiles",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "vsFileBrowse",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
                 "method": "GET",
                 "header": [
                   {
@@ -14323,19 +14387,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
