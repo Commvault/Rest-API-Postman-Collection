@@ -6604,10 +6604,10 @@
               ],
               "query": [
                 {
-                  "key": "propertyLevel",
-                  "value": "1",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "propertyLevel",
+                  "value": "1"
                 }
               ],
               "variable": []
@@ -6615,14 +6615,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -8125,13 +8125,13 @@
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  "postman.setEnvironmentVariable(\"taskToExclude\", jsonData.taskId);"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/151/Entity/add",
+            "url": "{{ServerUrl}}/Task/{{taskId}}/Entity/add",
             "method": "POST",
             "header": [
               {
@@ -9106,14 +9106,14 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -9131,14 +9131,14 @@
                 "method": "DELETE",
                 "header": [
                   {
+                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
+                    "value": "{{Accept}}"
                   },
                   {
+                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
+                    "value": "{{TOKEN}}"
                   }
                 ],
                 "body": {
