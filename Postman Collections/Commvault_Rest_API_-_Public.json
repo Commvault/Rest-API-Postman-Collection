@@ -1489,14 +1489,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -5329,14 +5329,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -7725,10 +7725,6 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "//adjust the value of \"taskDetail[0]\" for the task you want",
-                  "postman.setEnvironmentVariable(\"taskId\", jsonData.taskDetail[0].task.taskId);",
-                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
@@ -8760,7 +8756,9 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.errorCode === 0;"
                 ]
               }
             }
@@ -8781,13 +8779,13 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json",
+                "value": "application/xml",
                 "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n   \"taskInfo\":{\r\n      \"task\":{\r\n         \"task\":{\r\n            \"taskName\":\"{{taskName}}\"\r\n         }\r\n      },\r\n      \"appGroup\":{\r\n         \"appGroups\":[\r\n            {\r\n               \"appGroupName\":\"APPGRP_BACKEDUP_FILES\"\r\n            }\r\n         ]\r\n      }\r\n   }\r\n}"
+              "raw": "<TMMsg_ModifyTaskReq>\r\n  <taskInfo >\r\n    <appGroup>\r\n      <appGroups appGroupName=\"APPGRP_BACKEDUP_FILES\"/>\r\n        <flags deleted=\"1\" /> \r\n      \r\n    </appGroup>\r\n    <task >\r\n      <task taskName=\"TestPolicy\"/>\r\n    </task>\r\n  </taskInfo>\r\n</TMMsg_ModifyTaskReq>"
             },
             "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
           },
@@ -9813,14 +9811,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
