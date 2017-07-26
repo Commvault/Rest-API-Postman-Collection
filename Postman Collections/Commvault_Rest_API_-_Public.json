@@ -13609,11 +13609,7 @@
                   "",
                   "tests[\"Response Body contains userName\"] = responseBody.has(\"userName\");",
                   "",
-                  "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "postman.setEnvironmentVariable(\"userGUID\", jsonData.users[2].userEntity.userGUID);"
+                  "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");"
                 ]
               }
             }
