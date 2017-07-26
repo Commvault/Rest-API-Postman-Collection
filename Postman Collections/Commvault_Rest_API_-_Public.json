@@ -55,14 +55,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -360,14 +360,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -2227,11 +2227,6 @@
               {
                 "key": "Authtoken",
                 "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
                 "description": ""
               }
             ],
@@ -8230,13 +8225,14 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  ""
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/{{taskId}}/Agent/add",
+            "url": "{{ServerUrl}}/Task/151/Agent/add",
             "method": "POST",
             "header": [
               {
@@ -8785,19 +8781,19 @@
             "method": "PUT",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -10019,19 +10015,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -13957,8 +13953,6 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
@@ -41922,6 +41916,43 @@
               "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
             },
             "description": "To view the share details of a specific shared file\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "9886d423-791a-f61a-8625-5a70722af8ec",
+          "name": "Preview a Shared File",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/action/preview?path=C:\\netstat.txt&shareId=703241",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation allows you to preview a backed up file that was shared with you by another user.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_file_share_preview.htm"
           },
           "response": []
         }
