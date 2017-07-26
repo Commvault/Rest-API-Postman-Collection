@@ -1828,10 +1828,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "clientId",
-                  "value": "2"
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -1839,14 +1839,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -2710,14 +2710,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -6604,10 +6604,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "propertyLevel",
-                  "value": "1"
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -6615,14 +6615,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -8125,13 +8125,13 @@
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "postman.setEnvironmentVariable(\"taskToExclude\", jsonData.taskId);"
+                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/{{taskId}}/Entity/add",
+            "url": "{{ServerUrl}}/Task/151/Entity/add",
             "method": "POST",
             "header": [
               {
@@ -9106,14 +9106,14 @@
             "method": "DELETE",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -9131,14 +9131,14 @@
                 "method": "DELETE",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {
@@ -9728,19 +9728,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
