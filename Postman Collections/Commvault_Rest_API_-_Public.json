@@ -233,19 +233,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -569,42 +569,18 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Alert?pageNo=1&pageCount=200",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Alert"
-              ],
-              "query": [
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "pageNo",
-                  "value": "1"
-                },
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "pageCount",
-                  "value": "200"
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/Alert?pageNo=1&pageCount=200",
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -943,14 +919,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -1051,14 +1027,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -1489,14 +1465,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -3420,14 +3396,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -3521,14 +3497,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {},
@@ -3620,19 +3596,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -4127,32 +4103,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/action/preview?appid=2&path=C:\\Users\\Administrator\\Desktop\\blah.txt",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "action",
-                "preview"
-              ],
-              "query": [
-                {
-                  "key": "appid",
-                  "value": "2",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "path",
-                  "value": "C:\\Users\\Administrator\\Desktop\\blah.txt",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/action/preview?appid=49&path=C:\\Siesta-Lake-Sunset.jpg",
             "method": "GET",
             "header": [
               {
@@ -4177,32 +4128,7 @@
               "id": "c9fc522a-7911-74fe-b43a-70ae9df78ed6",
               "name": "Preview a File",
               "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/action/preview?appid=2&path=C:\\Users\\Administrator\\Desktop\\blah.txt",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "action",
-                    "preview"
-                  ],
-                  "query": [
-                    {
-                      "key": "appid",
-                      "value": "2",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "path",
-                      "value": "C:\\Users\\Administrator\\Desktop\\blah.txt",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
+                "url": "{{ServerUrl}}/action/preview?appid=49&path=C:\\Siesta-Lake-Sunset.jpg",
                 "method": "GET",
                 "header": [
                   {
@@ -4303,33 +4229,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/stream/action/download?appid=2&path=C:\\Users\\Administrator\\Desktop\\blah.txt",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "stream",
-                "action",
-                "download"
-              ],
-              "query": [
-                {
-                  "key": "appid",
-                  "value": "2",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "path",
-                  "value": "C:\\Users\\Administrator\\Desktop\\blah.txt",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/stream/action/download?appid=49&path=C:\\v11SP4a.xml",
             "method": "GET",
             "header": [
               {
@@ -4915,14 +4815,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -5329,14 +5229,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -6374,24 +6274,24 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"opType\": 0,\r\n  \"queries\": [\r\n    {\r\n      \"type\": 1,\r\n      \"queryId\": \"countQuery\",\r\n      \"aggrParam\": {\r\n        \"field\": 0,\r\n        \"aggrType\": 4\r\n      }\r\n    },\r\n    {\r\n      \"type\": 0,\r\n      \"queryId\": \"dataQuery\",\r\n      \"dataParam\": {\r\n        \"sortParam\": {\r\n          \"ascending\": true,\r\n          \"sortBy\": [\r\n            38,\r\n            0\r\n          ]\r\n        },\r\n        \"paging\": {\r\n          \"firstNode\": 0,\r\n          \"pageSize\": 15,\r\n          \"skipNode\": 0\r\n        }\r\n      }\r\n    }\r\n  ],\r\n  \"mode\": {\r\n    \"mode\": 2\r\n  },\r\n  \"paths\": [\r\n    {\r\n      \"path\": \"C:\\\\\"\r\n    }\r\n  ],\r\n  \"options\": {\r\n    \"showDeletedFiles\": true,\r\n    \"restoreIndex\": true\r\n  },\r\n  \"entity\": {\r\n    \"subclientId\": 49,\r\n    \"applicationId\": 33,\r\n    \"clientName\": \"{{clientName}}\",\r\n    \"backupsetId\": 3,\r\n    \"instanceId\": 1,\r\n    \"clientId\": 2\r\n  }\r\n}"
+              "raw": "{\r\n  \"opType\": 0,\r\n  \"queries\": [\r\n    {\r\n      \"type\": 1,\r\n      \"queryId\": \"countQuery\",\r\n      \"aggrParam\": {\r\n        \"field\": 0,\r\n        \"aggrType\": 4\r\n      }\r\n    },\r\n    {\r\n      \"type\": 0,\r\n      \"queryId\": \"dataQuery\",\r\n      \"dataParam\": {\r\n        \"sortParam\": {\r\n          \"ascending\": true,\r\n          \"sortBy\": [\r\n            38,\r\n            0\r\n          ]\r\n        },\r\n        \"paging\": {\r\n          \"firstNode\": 0,\r\n          \"pageSize\": 15,\r\n          \"skipNode\": 0\r\n        }\r\n      }\r\n    }\r\n  ],\r\n  \"mode\": {\r\n    \"mode\": 2\r\n  },\r\n  \"paths\": [\r\n    {\r\n      \"path\": \"C:\\\\\"\r\n    }\r\n  ],\r\n  \"options\": {\r\n    \"showDeletedFiles\": true,\r\n    \"restoreIndex\": true\r\n  },\r\n  \"entity\": {\r\n    \"subclientId\": 49,\r\n    \"applicationId\": 33,\r\n    \"clientName\": \"firewalltestcs\",\r\n    \"backupsetId\": 3,\r\n    \"instanceId\": 1,\r\n    \"clientId\": 2\r\n  }\r\n}"
             },
             "description": "This operation browses data obtained through a backup.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_browse.htm"
           },
@@ -6893,19 +6793,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               }
             ],
             "body": {
@@ -7725,10 +7625,6 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "//adjust the value of \"taskDetail[0]\" for the task you want",
-                  "postman.setEnvironmentVariable(\"taskId\", jsonData.taskDetail[0].task.taskId);",
-                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains taskDetail\"] = responseBody.has(\"taskDetail\");"
@@ -8438,13 +8334,14 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  ""
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/{{taskId}}/Entity",
+            "url": "{{ServerUrl}}/Task/151/Entity",
             "method": "DELETE",
             "header": [
               {
@@ -8542,13 +8439,14 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  ""
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/{{taskId}}/Agent",
+            "url": "{{ServerUrl}}/Task/151/Agent",
             "method": "DELETE",
             "header": [
               {
@@ -8759,7 +8657,9 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.errorCode === 0;"
                 ]
               }
             }
@@ -8780,13 +8680,13 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json",
+                "value": "application/xml",
                 "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n   \"taskInfo\":{\r\n      \"task\":{\r\n         \"task\":{\r\n            \"taskName\":\"{{taskName}}\"\r\n         }\r\n      },\r\n      \"appGroup\":{\r\n         \"appGroups\":[\r\n            {\r\n               \"appGroupName\":\"APPGRP_BACKEDUP_FILES\"\r\n            }\r\n         ]\r\n      }\r\n   }\r\n}"
+              "raw": "<TMMsg_ModifyTaskReq>\r\n  <taskInfo >\r\n    <appGroup>\r\n      <appGroups appGroupName=\"APPGRP_BACKEDUP_FILES\"/>\r\n        <flags deleted=\"1\" /> \r\n      \r\n    </appGroup>\r\n    <task >\r\n      <task taskName=\"TestPolicy\"/>\r\n    </task>\r\n  </taskInfo>\r\n</TMMsg_ModifyTaskReq>"
             },
             "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
           },
@@ -9214,19 +9114,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -9244,19 +9144,19 @@
                 "method": "POST",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Content-Type",
-                    "value": "application/json"
+                    "value": "application/json",
+                    "description": ""
                   }
                 ],
                 "body": {
@@ -9495,10 +9395,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "MediaAgent",
-                  "value": "2"
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -9506,14 +9406,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {},
@@ -9535,10 +9435,10 @@
                   ],
                   "query": [
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "MediaAgent",
-                      "value": "2"
+                      "value": "2",
+                      "equals": true,
+                      "description": ""
                     }
                   ],
                   "variable": []
@@ -9546,14 +9446,14 @@
                 "method": "GET",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "application/xml"
+                    "value": "application/xml",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {},
@@ -9812,14 +9712,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -9915,19 +9815,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -10927,7 +10827,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/2",
+            "url": "{{ServerUrl}}/Subclient/15",
             "method": "POST",
             "header": [
               {
@@ -10948,7 +10848,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM002\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM003\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\",\r\n        \"subclientName\": \"default\",\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"instanceName\": \"DefaultInstanceName\",\r\n        \"appName\": \"Virtual Server\"\r\n      }\r\n    ]\r\n  }\r\n}"
+              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM002\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM003\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"client001\",\r\n        \"subclientName\": \"subclient001\",\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"instanceName\": \"DefaultInstanceName\",\r\n        \"appName\": \"Virtual Server\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request adds virtual machines to a subclient.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm"
           },
@@ -10963,13 +10863,10 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"exitval is 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
-                  "",
-                  "postman.setEnvironmentVariable(\"subclientId\", jsonData.response.entity.subclientId);"
+                  "tests[\"errorCode is 0\"] = jsonData.response[0].errorCode === 0;"
                 ]
               }
             }
@@ -10996,7 +10893,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"{{clientName}}\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"File System\",\r\n      \"backupsetName\": \"DefaultBackupset\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"content\": [\r\n      {\r\n        \"path\": \"C:\\\\\"\r\n      }\r\n    ],\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"File System\",\r\n      \"backupsetName\": \"DefaultBackupset\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"content\": [\r\n      {\r\n        \"path\": \"C:\\\\\"\r\n      }\r\n    ],\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true\r\n    }\r\n  }\r\n}"
             },
             "description": "This request creates a subclient under a file system agent.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient.htm"
           },
@@ -11026,7 +10923,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"{{clientName}}\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"File System\",\r\n      \"backupsetName\": \"DefaultBackupset\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"content\": [\r\n      {\r\n        \"path\": \"C:\\\\\"\r\n      }\r\n    ],\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true\r\n    }\r\n  }\r\n}"
+                  "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"File System\",\r\n      \"backupsetName\": \"DefaultBackupset\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"content\": [\r\n      {\r\n        \"path\": \"C:\\\\\"\r\n      }\r\n    ],\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true\r\n    }\r\n  }\r\n}"
                 },
                 "description": "This request creates a subclient under a file system agent.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient.htm"
               },
@@ -11081,8 +10978,6 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"exitval is 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
@@ -11092,7 +10987,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+            "url": "{{ServerUrl}}/Subclient/69",
             "method": "POST",
             "header": [
               {
@@ -11122,7 +11017,7 @@
               "id": "05107552-1fa6-f5d9-ef0e-b2cd6226f8c3",
               "name": "Subclient Properties",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+                "url": "{{ServerUrl}}/Subclient/69",
                 "method": "POST",
                 "header": [
                   {
@@ -11209,14 +11104,14 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
+              "raw": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
                 "Subclient",
-                "{{subclientId}}",
+                "49",
                 "action",
                 "backup"
               ],
@@ -11377,39 +11272,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Subclient",
-                "{{subclientId}}",
-                "Browse"
-              ],
-              "query": [
-                {
-                  "key": "path",
-                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "showDeletedFiles",
-                  "value": "false",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "vsFileBrowse",
-                  "value": "true",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
             "method": "GET",
             "header": [
               {
@@ -11434,39 +11297,7 @@
               "id": "5e4e1e28-c01b-8521-2f62-180c8997a2ac",
               "name": "Subclient Browse 3",
               "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Subclient",
-                    "{{subclientId}}",
-                    "Browse"
-                  ],
-                  "query": [
-                    {
-                      "key": "path",
-                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "showDeletedFiles",
-                      "value": "false",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "vsFileBrowse",
-                      "value": "true",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
+                "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
                 "method": "GET",
                 "header": [
                   {
@@ -12701,7 +12532,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+            "url": "{{ServerUrl}}/Subclient/69",
             "method": "DELETE",
             "header": [
               {
@@ -12726,7 +12557,7 @@
               "id": "18ec84fb-ca39-be0b-1a11-dfffbfcdd105",
               "name": "Subclient",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+                "url": "{{ServerUrl}}/Subclient/69",
                 "method": "DELETE",
                 "header": [
                   {
@@ -13664,11 +13495,7 @@
                   "",
                   "tests[\"Response Body contains userName\"] = responseBody.has(\"userName\");",
                   "",
-                  "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "postman.setEnvironmentVariable(\"userGUID\", jsonData.users[2].userEntity.userGUID);"
+                  "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");"
                 ]
               }
             }
@@ -13764,25 +13591,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Session?userId={{UserId}}",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Session"
-              ],
-              "query": [
-                {
-                  "key": "userId",
-                  "value": "{{UserId}}",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/Session?userId=1",
             "method": "GET",
             "header": [
               {
@@ -13884,14 +13693,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -14842,14 +14651,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -42026,7 +41835,96 @@
       "_postman_id": "70834229-1c3f-8b82-9aea-fa3c878f8bf7",
       "name": "File Operations For Shares",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "47cf7cbb-42e8-57ce-e1c8-5e90ccacbec0",
+          "name": "View Shared Files and Folders",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/GetSharedFolders",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"propertyLevel\": 10\n}"
+            },
+            "description": "To view all the shares\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "5f32729e-513f-bcc5-cc89-90b0ff1930c3",
+          "name": "View Shared Files and Folders",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/GetSharedFolders",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
+            },
+            "description": "To view the share details of a specific shared file\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm"
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "0d6c57ae-3860-7d04-ff16-fa40500b7c97",
