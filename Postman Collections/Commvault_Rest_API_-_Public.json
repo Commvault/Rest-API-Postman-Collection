@@ -3620,19 +3620,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -4127,7 +4127,32 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/action/preview?appid=49&path=C:\\Siesta-Lake-Sunset.jpg",
+            "url": {
+              "raw": "{{ServerUrl}}/action/preview?appid=2&path=C:\\Users\\Administrator\\Desktop\\blah.txt",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "action",
+                "preview"
+              ],
+              "query": [
+                {
+                  "key": "appid",
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "path",
+                  "value": "C:\\Users\\Administrator\\Desktop\\blah.txt",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -4152,7 +4177,32 @@
               "id": "c9fc522a-7911-74fe-b43a-70ae9df78ed6",
               "name": "Preview a File",
               "originalRequest": {
-                "url": "{{ServerUrl}}/action/preview?appid=49&path=C:\\Siesta-Lake-Sunset.jpg",
+                "url": {
+                  "raw": "{{ServerUrl}}/action/preview?appid=2&path=C:\\Users\\Administrator\\Desktop\\blah.txt",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "action",
+                    "preview"
+                  ],
+                  "query": [
+                    {
+                      "key": "appid",
+                      "value": "2",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "path",
+                      "value": "C:\\Users\\Administrator\\Desktop\\blah.txt",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
                 "method": "GET",
                 "header": [
                   {
@@ -4865,14 +4915,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -6843,19 +6893,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               }
             ],
             "body": {
@@ -9865,19 +9915,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -11028,6 +11078,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"exitval is 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
@@ -11037,7 +11089,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/69",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
             "method": "POST",
             "header": [
               {
@@ -11067,7 +11119,7 @@
               "id": "05107552-1fa6-f5d9-ef0e-b2cd6226f8c3",
               "name": "Subclient Properties",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/69",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "method": "POST",
                 "header": [
                   {
@@ -12646,7 +12698,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/69",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
             "method": "DELETE",
             "header": [
               {
@@ -12671,7 +12723,7 @@
               "id": "18ec84fb-ca39-be0b-1a11-dfffbfcdd105",
               "name": "Subclient",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/69",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "method": "DELETE",
                 "header": [
                   {
@@ -13609,7 +13661,11 @@
                   "",
                   "tests[\"Response Body contains userName\"] = responseBody.has(\"userName\");",
                   "",
-                  "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");"
+                  "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"userGUID\", jsonData.users[2].userEntity.userGUID);"
                 ]
               }
             }
@@ -41967,96 +42023,7 @@
       "_postman_id": "70834229-1c3f-8b82-9aea-fa3c878f8bf7",
       "name": "File Operations For Shares",
       "description": "",
-      "item": [
-        {
-          "_postman_id": "47cf7cbb-42e8-57ce-e1c8-5e90ccacbec0",
-          "name": "View Shared Files and Folders",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/GetSharedFolders",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"propertyLevel\": 10\n}"
-            },
-            "description": "To view all the shares\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "5f32729e-513f-bcc5-cc89-90b0ff1930c3",
-          "name": "View Shared Files and Folders",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/GetSharedFolders",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
-            },
-            "description": "To view the share details of a specific shared file\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm"
-          },
-          "response": []
-        }
-      ]
+      "item": []
     },
     {
       "_postman_id": "0d6c57ae-3860-7d04-ff16-fa40500b7c97",
