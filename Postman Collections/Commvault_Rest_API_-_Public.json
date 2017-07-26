@@ -8229,13 +8229,14 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  ""
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/{{taskToExclude}}/Entity/exclude",
+            "url": "{{ServerUrl}}/Task/151/Entity/exclude",
             "method": "POST",
             "header": [
               {
@@ -9727,19 +9728,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
