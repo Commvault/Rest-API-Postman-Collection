@@ -41955,43 +41955,6 @@
             "description": "This operation allows you to preview a backed up file that was shared with you by another user.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_file_share_preview.htm"
           },
           "response": []
-        },
-        {
-          "_postman_id": "a0b5d65f-1801-bb32-a8df-ab23162aac47",
-          "name": "Download a Shared File",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/stream/action/download?path=C:\\netstat.txt&shareId=703241",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation downloads a backed up file that was shared with you by another user.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_file_share_download.htm"
-          },
-          "response": []
         }
       ]
     },
