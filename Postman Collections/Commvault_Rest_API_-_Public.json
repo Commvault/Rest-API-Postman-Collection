@@ -12220,7 +12220,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/49",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
             "method": "GET",
             "header": [
               {
@@ -12245,7 +12245,7 @@
               "id": "89df24e0-54ea-d7dd-4ede-98ddb86458ba",
               "name": "Subclient Properties",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/49",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "method": "GET",
                 "header": [
                   {
