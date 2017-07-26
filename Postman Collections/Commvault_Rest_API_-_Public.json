@@ -7018,14 +7018,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -7791,17 +7791,23 @@
                   "",
                   "tests[\"Response Body contains taskInfo\"] = responseBody.has(\"taskInfo\");",
                   "",
-                  "tests[\"Response Body contains associations\"] = responseBody.has(\"associations\");",
+                  "tests[\"Response Body contains associations\"] = responseBody.has(\"Associations\");",
                   "",
                   "tests[\"Response Body contains task\"] = responseBody.has(\"task\");",
                   "",
-                  "tests[\"Response Body contains subTasks\"] = responseBody.has(\"subTasks\");"
+                  "tests[\"Response Body contains subTasks\"] = responseBody.has(\"subTasks\");",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"subtaskId\", jsonData.taskInfo.subTasks[0].subTask.subTaskId);",
+                  "",
+                  "postman.setEnvironmentVariable(\"taskName\", jsonData.taskInfo.task.taskName);"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/SchedulePolicy/151",
+            "url": "{{ServerUrl}}/SchedulePolicy/{{taskId}}",
             "method": "GET",
             "header": [
               {
