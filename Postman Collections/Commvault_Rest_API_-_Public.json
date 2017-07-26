@@ -11104,14 +11104,14 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
+              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
                 "Subclient",
-                "49",
+                "{{subclientId}}",
                 "action",
                 "backup"
               ],
@@ -11272,7 +11272,39 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "{{subclientId}}",
+                "Browse"
+              ],
+              "query": [
+                {
+                  "key": "path",
+                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "showDeletedFiles",
+                  "value": "false",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "vsFileBrowse",
+                  "value": "true",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -11297,7 +11329,39 @@
               "id": "5e4e1e28-c01b-8521-2f62-180c8997a2ac",
               "name": "Subclient Browse 3",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "{{subclientId}}",
+                    "Browse"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "showDeletedFiles",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "vsFileBrowse",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
                 "method": "GET",
                 "header": [
                   {
@@ -14669,14 +14733,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
