@@ -114,10 +114,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "clientId",
-                  "value": "2"
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -125,14 +125,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -3723,7 +3723,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 1,\r\n        \"associations\": [\r\n          {\r\n            \"userOrGroup\": [\r\n              {\r\n                \"userName\": \"{{userName}}\"\r\n              },\r\n              {\r\n                \"userGroupName\": \"View All\"\r\n              }\r\n            ],\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\"\r\n      }\r\n    ]\r\n  }\r\n}"
+              "raw": "{\r\n  \"clientProperties\": {\r\n    \"clientProps\": {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 1,\r\n        \"associations\": [\r\n          {\r\n            \"userOrGroup\": [\r\n              {\r\n                \"userName\": \"edgeuser\"\r\n              },\r\n              {\r\n                \"userGroupName\": \"View All\"\r\n              }\r\n            ],\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request updates the security association for the client. The security association is the combination of the client in the clientName element plus the role, user, and user group in the securityAssociations block.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm"
           },
@@ -4363,16 +4363,16 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "clientId",
-                  "value": "2"
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
                 },
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "jobFilter",
-                  "value": "Backup"
+                  "value": "Backup",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -4380,21 +4380,21 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request returns backup jobs because the jobFilter parameter is used.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job.htm"
+            "description": "This request returns backup jobs because the jobFilter parameter is not used.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job.htm"
           },
           "response": [
             {
@@ -5332,22 +5332,22 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "showInfo",
-                  "value": "false"
+                  "value": "false",
+                  "equals": true,
+                  "description": ""
                 },
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "showMinor",
-                  "value": "false"
+                  "value": "false",
+                  "equals": true,
+                  "description": ""
                 },
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "showMajor",
-                  "value": "false"
+                  "value": "false",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -5355,14 +5355,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -11738,7 +11738,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup",
+            "url": "{{ServerUrl}}/Subclient/49/action/backup",
             "method": "POST",
             "header": [
               {
@@ -11763,7 +11763,7 @@
               "id": "f0322c74-e3e8-7d43-d503-a05b73873198",
               "name": "Subclient Backup - Full",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup",
+                "url": "{{ServerUrl}}/Subclient/49/action/backup",
                 "method": "POST",
                 "header": [
                   {
@@ -11844,34 +11844,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=False",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Subclient",
-                "{{subclientId}}",
-                "action",
-                "backup"
-              ],
-              "query": [
-                {
-                  "key": "backupLevel",
-                  "value": "Synthetic_Full",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "runIncrementalBackup",
-                  "value": "False",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=False",
             "method": "POST",
             "header": [
               {
@@ -11896,34 +11869,7 @@
               "id": "18294095-7fe8-a5a5-c736-ecb8df68dc3c",
               "name": "Subclient Backup - Synthetic full without incr",
               "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=False",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Subclient",
-                    "{{subclientId}}",
-                    "action",
-                    "backup"
-                  ],
-                  "query": [
-                    {
-                      "key": "backupLevel",
-                      "value": "Synthetic_Full",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "runIncrementalBackup",
-                      "value": "False",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
+                "url": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=False",
                 "method": "POST",
                 "header": [
                   {
