@@ -2228,6 +2228,11 @@
                 "key": "Authtoken",
                 "value": "{{TOKEN}}",
                 "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
