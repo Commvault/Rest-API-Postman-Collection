@@ -55,14 +55,14 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -468,14 +468,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -1348,14 +1348,14 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -3396,14 +3396,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -8230,14 +8230,13 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  ""
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Task/151/Agent/add",
+            "url": "{{ServerUrl}}/Task/{{taskId}}/Agent/add",
             "method": "POST",
             "header": [
               {
@@ -8545,8 +8544,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                  ""
                 ]
               }
             }
@@ -8573,7 +8571,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"taskInfo\":{\r\n    \"associations\":[\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\"\r\n      },\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"subclientName\":\"DDBBackup\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\",\r\n        \"flags\":{\r\n          \"exclude\":true\r\n        }\r\n      }\r\n    ],\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"TestPolicy\"\r\n      }\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"taskInfo\":{\r\n    \"associations\":[\r\n      {\r\n        \"clientName\":\"{{clientName}}\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\"\r\n      },\r\n      {\r\n        \"clientName\":\"{{clientName}}\",\r\n        \"subclientName\":\"DDBBackup\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\",\r\n        \"flags\":{\r\n          \"exclude\":true\r\n        }\r\n      }\r\n    ],\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"{{taskName}}\"\r\n      }\r\n    }\r\n  }\r\n}"
             },
             "description": "This request associates all default backup set subclients except for the DDBBackup subclient with the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_entity_assoc.htm"
           },
@@ -8786,19 +8784,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -9866,10 +9864,10 @@
               ],
               "query": [
                 {
-                  "key": "Action",
-                  "value": "configureTape",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "Action",
+                  "value": "configureTape"
                 }
               ],
               "variable": []
@@ -9877,19 +9875,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -9919,14 +9917,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -10020,19 +10018,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -11401,7 +11399,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"taskInfo\": {\r\n    \"associations\": [\r\n      {\r\n        \"applicationId\": 33,\r\n        \"clientName\": \"firewalltestma\",\r\n        \"commCellId\": 0,\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"_type_\": 7,\r\n        \"appName\": \"File System\"\r\n      }\r\n    ],\r\n    \"task\": {\r\n      \"sequenceNumber\": 10,\r\n      \"initiatedFrom\": 2,\r\n      \"taskType\": 1,\r\n      \"policyType\": 0,\r\n      \"taskId\": 0,\r\n      \"taskFlags\": {\r\n        \"disabled\": false\r\n      }\r\n    },\r\n    \"subTasks\": [\r\n      {\r\n        \"subTask\": {\r\n          \"subTaskType\": 2,\r\n          \"operationType\": 2\r\n        },\r\n        \"options\": {\r\n          \"backupOpts\": {\r\n            \"truncateLogsOnSource\": false,\r\n            \"sybaseSkipFullafterLogBkp\": false,\r\n            \"backupLevel\": 1,\r\n            \"runIncrementalBackup\": true,\r\n            \"isSpHasInLineCopy\": false,\r\n            \"runSILOBackup\": false,\r\n            \"doNotTruncateLog\": false,\r\n            \"dataOpt\": {\r\n              \"skipCatalogPhaseForSnapBackup\": false,\r\n              \"followMountPoints\": true,\r\n              \"enableIndexCheckPointing\": false,\r\n              \"enforceTransactionLogUsage\": false,\r\n              \"spaceReclamation\": false,\r\n              \"skipConsistencyCheck\": false,\r\n              \"createNewIndex\": false,\r\n              \"verifySynthFull\": false\r\n            },\r\n            \"dataPathOpt\": {\r\n              \"mediaAgent\": {\r\n                \"mediaAgentId\": 0\r\n              },\r\n              \"library\": {\r\n                \"libraryId\": 0\r\n              },\r\n              \"drivePool\": {\r\n                \"drivePoolId\": 0\r\n              },\r\n              \"spareGroup\": {\r\n                \"spareMediaGroupId\": 0\r\n              },\r\n              \"drive\": {\r\n                \"driveId\": 0\r\n              }\r\n            },\r\n            \"mediaOpt\": {\r\n              \"markMediaFullOnSuccess\": false,\r\n              \"numberofDays\": 30,\r\n              \"startNewMedia\": true,\r\n              \"retentionJobType\": 2,\r\n              \"allowOtherSchedulesToUseMediaSet\": true,\r\n              \"reserveResourcesBeforeScan\": false\r\n            }\r\n          },\r\n          \"commonOpts\": {\r\n            \"jobDescription\": \"\",\r\n            \"jobRetryOpts\": {\r\n              \"killRunningJobWhenTotalRunningTimeExpires\": false,\r\n              \"numberOfRetries\": 0,\r\n              \"enableNumberOfRetries\": false,\r\n              \"runningTime\": {\r\n                \"enableTotalRunningTime\": false,\r\n                \"totalRunningTime\": 3600\r\n              }\r\n            },\r\n            \"startUpOpts\": {\r\n              \"startInSuspendedState\": false,\r\n              \"useDefaultPriority\": true,\r\n              \"priority\": 166\r\n            }\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}"
+              "raw": "{\r\n  \"taskInfo\": {\r\n    \"associations\": [\r\n      {\r\n        \"applicationId\": 33,\r\n        \"clientName\": \"{{clientName}}\",\r\n        \"commCellId\": 0,\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"_type_\": 7,\r\n        \"appName\": \"File System\"\r\n      }\r\n    ],\r\n    \"task\": {\r\n      \"sequenceNumber\": 10,\r\n      \"initiatedFrom\": 2,\r\n      \"taskType\": 1,\r\n      \"policyType\": 0,\r\n      \"taskId\": 0,\r\n      \"taskFlags\": {\r\n        \"disabled\": false\r\n      }\r\n    },\r\n    \"subTasks\": [\r\n      {\r\n        \"subTask\": {\r\n          \"subTaskType\": 2,\r\n          \"operationType\": 2\r\n        },\r\n        \"options\": {\r\n          \"backupOpts\": {\r\n            \"truncateLogsOnSource\": false,\r\n            \"sybaseSkipFullafterLogBkp\": false,\r\n            \"backupLevel\": 1,\r\n            \"runIncrementalBackup\": true,\r\n            \"isSpHasInLineCopy\": false,\r\n            \"runSILOBackup\": false,\r\n            \"doNotTruncateLog\": false,\r\n            \"dataOpt\": {\r\n              \"skipCatalogPhaseForSnapBackup\": false,\r\n              \"followMountPoints\": true,\r\n              \"enableIndexCheckPointing\": false,\r\n              \"enforceTransactionLogUsage\": false,\r\n              \"spaceReclamation\": false,\r\n              \"skipConsistencyCheck\": false,\r\n              \"createNewIndex\": false,\r\n              \"verifySynthFull\": false\r\n            },\r\n            \"dataPathOpt\": {\r\n              \"mediaAgent\": {\r\n                \"mediaAgentId\": 0\r\n              },\r\n              \"library\": {\r\n                \"libraryId\": 0\r\n              },\r\n              \"drivePool\": {\r\n                \"drivePoolId\": 0\r\n              },\r\n              \"spareGroup\": {\r\n                \"spareMediaGroupId\": 0\r\n              },\r\n              \"drive\": {\r\n                \"driveId\": 0\r\n              }\r\n            },\r\n            \"mediaOpt\": {\r\n              \"markMediaFullOnSuccess\": false,\r\n              \"numberofDays\": 30,\r\n              \"startNewMedia\": true,\r\n              \"retentionJobType\": 2,\r\n              \"allowOtherSchedulesToUseMediaSet\": true,\r\n              \"reserveResourcesBeforeScan\": false\r\n            }\r\n          },\r\n          \"commonOpts\": {\r\n            \"jobDescription\": \"\",\r\n            \"jobRetryOpts\": {\r\n              \"killRunningJobWhenTotalRunningTimeExpires\": false,\r\n              \"numberOfRetries\": 0,\r\n              \"enableNumberOfRetries\": false,\r\n              \"runningTime\": {\r\n                \"enableTotalRunningTime\": false,\r\n                \"totalRunningTime\": 3600\r\n              }\r\n            },\r\n            \"startUpOpts\": {\r\n              \"startInSuspendedState\": false,\r\n              \"useDefaultPriority\": true,\r\n              \"priority\": 166\r\n            }\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}"
             },
             "description": "This request starts an immediate backup job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_create_task_backup.htm"
           },
@@ -11431,7 +11429,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"taskInfo\": {\r\n    \"associations\": [\r\n      {\r\n        \"applicationId\": 33,\r\n        \"clientName\": \"firewalltestma\",\r\n        \"commCellId\": 0,\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"_type_\": 7,\r\n        \"appName\": \"File System\"\r\n      }\r\n    ],\r\n    \"task\": {\r\n      \"sequenceNumber\": 10,\r\n      \"initiatedFrom\": 2,\r\n      \"taskType\": 1,\r\n      \"policyType\": 0,\r\n      \"taskId\": 0,\r\n      \"taskFlags\": {\r\n        \"disabled\": false\r\n      }\r\n    },\r\n    \"subTasks\": [\r\n      {\r\n        \"subTask\": {\r\n          \"subTaskType\": 2,\r\n          \"operationType\": 2\r\n        },\r\n        \"options\": {\r\n          \"backupOpts\": {\r\n            \"truncateLogsOnSource\": false,\r\n            \"sybaseSkipFullafterLogBkp\": false,\r\n            \"backupLevel\": 1,\r\n            \"runIncrementalBackup\": true,\r\n            \"isSpHasInLineCopy\": false,\r\n            \"runSILOBackup\": false,\r\n            \"doNotTruncateLog\": false,\r\n            \"dataOpt\": {\r\n              \"skipCatalogPhaseForSnapBackup\": false,\r\n              \"followMountPoints\": true,\r\n              \"enableIndexCheckPointing\": false,\r\n              \"enforceTransactionLogUsage\": false,\r\n              \"spaceReclamation\": false,\r\n              \"skipConsistencyCheck\": false,\r\n              \"createNewIndex\": false,\r\n              \"verifySynthFull\": false\r\n            },\r\n            \"dataPathOpt\": {\r\n              \"mediaAgent\": {\r\n                \"mediaAgentId\": 0\r\n              },\r\n              \"library\": {\r\n                \"libraryId\": 0\r\n              },\r\n              \"drivePool\": {\r\n                \"drivePoolId\": 0\r\n              },\r\n              \"spareGroup\": {\r\n                \"spareMediaGroupId\": 0\r\n              },\r\n              \"drive\": {\r\n                \"driveId\": 0\r\n              }\r\n            },\r\n            \"mediaOpt\": {\r\n              \"markMediaFullOnSuccess\": false,\r\n              \"numberofDays\": 30,\r\n              \"startNewMedia\": true,\r\n              \"retentionJobType\": 2,\r\n              \"allowOtherSchedulesToUseMediaSet\": true,\r\n              \"reserveResourcesBeforeScan\": false\r\n            }\r\n          },\r\n          \"commonOpts\": {\r\n            \"jobDescription\": \"\",\r\n            \"jobRetryOpts\": {\r\n              \"killRunningJobWhenTotalRunningTimeExpires\": false,\r\n              \"numberOfRetries\": 0,\r\n              \"enableNumberOfRetries\": false,\r\n              \"runningTime\": {\r\n                \"enableTotalRunningTime\": false,\r\n                \"totalRunningTime\": 3600\r\n              }\r\n            },\r\n            \"startUpOpts\": {\r\n              \"startInSuspendedState\": false,\r\n              \"useDefaultPriority\": true,\r\n              \"priority\": 166\r\n            }\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}"
+                  "raw": "{\r\n  \"taskInfo\": {\r\n    \"associations\": [\r\n      {\r\n        \"applicationId\": 33,\r\n        \"clientName\": \"{{clientName}}\",\r\n        \"commCellId\": 0,\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"_type_\": 7,\r\n        \"appName\": \"File System\"\r\n      }\r\n    ],\r\n    \"task\": {\r\n      \"sequenceNumber\": 10,\r\n      \"initiatedFrom\": 2,\r\n      \"taskType\": 1,\r\n      \"policyType\": 0,\r\n      \"taskId\": 0,\r\n      \"taskFlags\": {\r\n        \"disabled\": false\r\n      }\r\n    },\r\n    \"subTasks\": [\r\n      {\r\n        \"subTask\": {\r\n          \"subTaskType\": 2,\r\n          \"operationType\": 2\r\n        },\r\n        \"options\": {\r\n          \"backupOpts\": {\r\n            \"truncateLogsOnSource\": false,\r\n            \"sybaseSkipFullafterLogBkp\": false,\r\n            \"backupLevel\": 1,\r\n            \"runIncrementalBackup\": true,\r\n            \"isSpHasInLineCopy\": false,\r\n            \"runSILOBackup\": false,\r\n            \"doNotTruncateLog\": false,\r\n            \"dataOpt\": {\r\n              \"skipCatalogPhaseForSnapBackup\": false,\r\n              \"followMountPoints\": true,\r\n              \"enableIndexCheckPointing\": false,\r\n              \"enforceTransactionLogUsage\": false,\r\n              \"spaceReclamation\": false,\r\n              \"skipConsistencyCheck\": false,\r\n              \"createNewIndex\": false,\r\n              \"verifySynthFull\": false\r\n            },\r\n            \"dataPathOpt\": {\r\n              \"mediaAgent\": {\r\n                \"mediaAgentId\": 0\r\n              },\r\n              \"library\": {\r\n                \"libraryId\": 0\r\n              },\r\n              \"drivePool\": {\r\n                \"drivePoolId\": 0\r\n              },\r\n              \"spareGroup\": {\r\n                \"spareMediaGroupId\": 0\r\n              },\r\n              \"drive\": {\r\n                \"driveId\": 0\r\n              }\r\n            },\r\n            \"mediaOpt\": {\r\n              \"markMediaFullOnSuccess\": false,\r\n              \"numberofDays\": 30,\r\n              \"startNewMedia\": true,\r\n              \"retentionJobType\": 2,\r\n              \"allowOtherSchedulesToUseMediaSet\": true,\r\n              \"reserveResourcesBeforeScan\": false\r\n            }\r\n          },\r\n          \"commonOpts\": {\r\n            \"jobDescription\": \"\",\r\n            \"jobRetryOpts\": {\r\n              \"killRunningJobWhenTotalRunningTimeExpires\": false,\r\n              \"numberOfRetries\": 0,\r\n              \"enableNumberOfRetries\": false,\r\n              \"runningTime\": {\r\n                \"enableTotalRunningTime\": false,\r\n                \"totalRunningTime\": 3600\r\n              }\r\n            },\r\n            \"startUpOpts\": {\r\n              \"startInSuspendedState\": false,\r\n              \"useDefaultPriority\": true,\r\n              \"priority\": 166\r\n            }\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}"
                 },
                 "description": "This request starts an immediate backup job.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_create_task_backup.htm"
               },
@@ -13593,7 +13591,25 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Session?userId=1",
+            "url": {
+              "raw": "{{ServerUrl}}/Session?userId={{UserId}}",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Session"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{UserId}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -13695,14 +13711,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -13800,7 +13816,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\"sessions\":[\r\"2E1C7303-360B-4787-A09E-93C8189EBC59\",\"EMCBC189BC3-E861-4D59-86CA-BB552F8F8A02\"\r]\r}"
+              "raw": "{\r\"sessions\":[\r\"{{userGUID}}\"\r]\r}"
             },
             "description": "This operation logs off users from Web Server and the command line interface.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_user_session.htm"
           },
@@ -13958,6 +13974,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
