@@ -10844,7 +10844,9 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);"
+                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
