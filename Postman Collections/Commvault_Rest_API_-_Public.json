@@ -10707,10 +10707,10 @@
         },
         {
           "_postman_id": "5747fc53-c5e7-a339-1e29-911361904df7",
-          "name": "Delete Discussion",
+          "name": "Get Discussions copy",
           "request": {
             "url": "{{ServerUrl}}/Discussion",
-            "method": "DELETE",
+            "method": "GET",
             "header": [],
             "body": {},
             "description": ""
