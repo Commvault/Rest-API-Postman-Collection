@@ -10817,7 +10817,7 @@
           "name": "Discussion",
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Discussion?entityType={entityType}&entityGUID={entityGUID}&depth={depth}",
+              "raw": "{{ServerUrl}}/Discussion?entityType={entityType}&entityGUID={entityGUID}&depth=1",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
@@ -10840,7 +10840,7 @@
                 },
                 {
                   "key": "depth",
-                  "value": "{depth}",
+                  "value": "1",
                   "equals": true,
                   "description": ""
                 }
