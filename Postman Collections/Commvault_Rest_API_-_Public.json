@@ -13300,7 +13300,28 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/31/action/backup?backupLevel=Incremental",
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/31/action/backup?backupLevel=Incremental",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "31",
+                "action",
+                "backup"
+              ],
+              "query": [
+                {
+                  "key": "backupLevel",
+                  "value": "Incremental",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "POST",
             "header": [
               {
@@ -13325,7 +13346,28 @@
               "id": "a1c8c190-34e7-ad15-3ff5-113d072d41e5",
               "name": "Subclient Backup - incremental",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/31/action/backup?backupLevel=Incremental",
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/31/action/backup?backupLevel=Incremental",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "31",
+                    "action",
+                    "backup"
+                  ],
+                  "query": [
+                    {
+                      "key": "backupLevel",
+                      "value": "Incremental",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
                 "method": "POST",
                 "header": [
                   {
