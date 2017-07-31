@@ -10689,6 +10689,12 @@
       ]
     },
     {
+      "_postman_id": "a8c64187-8432-644e-db35-c11497a1496c",
+      "name": "Discussion Operations",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "a60fbba0-b58c-95e7-55f4-81ab87998b8a",
       "name": "Subclient Operations",
       "description": "",
@@ -42040,12 +42046,6 @@
           ]
         }
       ]
-    },
-    {
-      "_postman_id": "a8c64187-8432-644e-db35-c11497a1496c",
-      "name": "Discussion Operations",
-      "description": "",
-      "item": []
     },
     {
       "_postman_id": "0d6c57ae-3860-7d04-ff16-fa40500b7c97",
