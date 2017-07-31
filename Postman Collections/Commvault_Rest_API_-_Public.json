@@ -10830,7 +10830,7 @@
           "name": "Discussion",
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Discussion?entityType={entityType}&entityGUID={entityGUID}&depth=1",
+              "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
@@ -10841,13 +10841,13 @@
               "query": [
                 {
                   "key": "entityType",
-                  "value": "{entityType}",
+                  "value": "{{entityType}}",
                   "equals": true,
                   "description": ""
                 },
                 {
                   "key": "entityGUID",
-                  "value": "{entityGUID}",
+                  "value": "{{entityGUID}}",
                   "equals": true,
                   "description": ""
                 },
