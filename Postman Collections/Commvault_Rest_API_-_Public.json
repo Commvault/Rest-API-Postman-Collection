@@ -10818,7 +10818,7 @@
           "name": "Delete a Comment",
           "request": {
             "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-            "method": "DELETE",
+            "method": "GET",
             "header": [
               {
                 "key": "Accept",
