@@ -11331,6 +11331,8 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
                   "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
                   "",
                   "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
