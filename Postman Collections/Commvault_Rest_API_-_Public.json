@@ -10695,31 +10695,12 @@
       "item": [
         {
           "_postman_id": "767b5535-fb91-a52c-b27d-f1c543971080",
-          "name": "Create a Discussion",
+          "name": "Get Discussions",
           "request": {
             "url": "{{ServerUrl}}/Discussion",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion entityType=\"1\" created=\"1\" entityGUID=\"{{$guid}} \"><comments content=\"testcontent\"/></Api_Discussion>"
-            },
+            "method": "GET",
+            "header": [],
+            "body": {},
             "description": ""
           },
           "response": []
@@ -10729,7 +10710,7 @@
           "name": "Delete Discussion",
           "request": {
             "url": "{{ServerUrl}}/Discussion",
-            "method": "DELETE",
+            "method": "GET",
             "header": [],
             "body": {},
             "description": ""
