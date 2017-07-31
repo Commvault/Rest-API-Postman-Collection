@@ -11435,94 +11435,6 @@
               ],
               "responseTime": "40",
               "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
-            },
-            {
-              "id": "c9ca03b6-aeae-6daa-e5b0-3058246d16e9",
-              "name": "GET Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                },
-                "description": "Gets a comment with given commentId"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "184",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "40",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
             }
           ]
         },
@@ -11632,31 +11544,31 @@
                   "key": "Content-Length",
                   "value": "184",
                   "name": "Content-Length",
-                  "description": ""
+                  "description": "The length of the response body in octets (8-bit bytes)"
                 },
                 {
                   "key": "Content-Type",
                   "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "description": "The mime type of this content"
                 },
                 {
                   "key": "Date",
                   "value": "Mon, 31 Jul 2017 17:24:49 GMT",
                   "name": "Date",
-                  "description": ""
+                  "description": "The date and time that the message was sent"
                 },
                 {
                   "key": "Server",
                   "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "description": "A name for the server"
                 },
                 {
                   "key": "X-Powered-By",
                   "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
                 }
               ],
               "cookie": [
@@ -11747,89 +11659,6 @@
                   "mode": "raw",
                   "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
                 }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "16",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:52 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "45",
-              "body": "{\r\"error\":{\r\r}\r}"
-            },
-            {
-              "id": "c21c32eb-3419-f302-0151-24a549fe0781",
-              "name": "DELETE Delete a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": "Deletes a comment with given commentId"
               },
               "status": "OK",
               "code": 200,
@@ -12262,6 +12091,131 @@
               ],
               "responseTime": "151",
               "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r\r]\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "52ab2ef5-02b0-96e5-03ea-37cdcaa84dab",
+          "name": "Delete a Comment copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Deletes a comment with given commentId"
+          },
+          "response": [
+            {
+              "id": "3250512e-70f4-d1d3-8ddb-6df9011b80c3",
+              "name": "DELETE Delete a Comment",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "16",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 31 Jul 2017 17:24:52 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "45",
+              "body": "{\r\"error\":{\r\r}\r}"
             }
           ]
         }
@@ -43982,56 +43936,6 @@
       "response": [
         {
           "id": "08627388-7a61-dcf0-ebcb-3397882a40a6",
-          "name": "Global Parameter",
-          "originalRequest": {
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            }
-          },
-          "status": "OK",
-          "code": 200,
-          "_postman_previewlanguage": "json",
-          "_postman_previewtype": "text",
-          "header": [
-            {
-              "key": "Content-Length",
-              "value": "181",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Tue, 30 May 2017 03:48:25 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "Server",
-              "value": "Microsoft-IIS/8.5",
-              "name": "Server",
-              "description": ""
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "ASP.NET",
-              "name": "X-Powered-By",
-              "description": ""
-            }
-          ],
-          "cookie": [],
-          "responseTime": "94",
-          "body": "{\r\"globalParamsResultList\":[\r{\r\"name\":\"AppMgrThreadIdleTimeout\",\"value\":\"7200\"\r},{\r\"name\":\"CI_STATE_FAILED\",\"value\":\"2,16,1016,2016\"\r},{\r\"name\":\"CI_STATE_SKIPPED\",\"value\":\"17\"\r}\r]\r}"
-        },
-        {
-          "id": "66fbade8-9f2d-4918-6839-8b0d50de704d",
           "name": "Global Parameter",
           "originalRequest": {
             "header": [],
