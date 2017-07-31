@@ -10796,7 +10796,7 @@
               "mode": "raw",
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
-            "description": ""
+            "description": "Gets a comment with given commentId"
           },
           "response": []
         },
