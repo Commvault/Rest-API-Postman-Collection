@@ -11315,16 +11315,11 @@
                 "key": "Authtoken",
                 "value": "{{TOKEN}}",
                 "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+              "raw": ""
             },
             "description": "Deletes a comment with given commentId"
           },
