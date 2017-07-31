@@ -11059,7 +11059,8 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Error Code = 0\"] = jsonData.error.errorCode === 0;"
                 ]
               }
             }
