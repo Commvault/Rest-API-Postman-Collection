@@ -10815,7 +10815,7 @@
         },
         {
           "_postman_id": "efa44129-3684-3dda-e397-f5a10131b22b",
-          "name": "Delete a Comment",
+          "name": "Comment copy",
           "request": {
             "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
             "method": "GET",
@@ -10840,7 +10840,7 @@
               "mode": "raw",
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
-            "description": "Deletes a comment with given commentId"
+            "description": "Gets a comment with given commentId"
           },
           "response": []
         },
