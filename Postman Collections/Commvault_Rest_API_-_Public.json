@@ -10695,7 +10695,7 @@
       "item": [
         {
           "_postman_id": "767b5535-fb91-a52c-b27d-f1c543971080",
-          "name": "Get Discussions",
+          "name": "Create a Discussion",
           "request": {
             "url": "{{ServerUrl}}/Discussion",
             "method": "POST",
@@ -10726,12 +10726,43 @@
         },
         {
           "_postman_id": "5747fc53-c5e7-a339-1e29-911361904df7",
-          "name": "Delete Discussion",
+          "name": "Delete a Discussion",
           "request": {
             "url": "{{ServerUrl}}/Discussion",
             "method": "DELETE",
             "header": [],
             "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "92e99bb7-dfee-1172-4940-d9e6a8f9c8fe",
+          "name": "Create a Discussion copy",
+          "request": {
+            "url": "{{ServerUrl}}/Discussion",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<Api_Discussion entityType=\"1\" created=\"1\" entityGUID=\"{{$guid}} \"><comments content=\"testcontent\"/></Api_Discussion>"
+            },
             "description": ""
           },
           "response": []
