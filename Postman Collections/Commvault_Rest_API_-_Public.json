@@ -10706,7 +10706,10 @@
                   "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
                   "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
                   "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "",
+                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
                 ]
               }
             }
