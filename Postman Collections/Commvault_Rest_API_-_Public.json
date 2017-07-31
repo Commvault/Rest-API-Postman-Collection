@@ -16016,7 +16016,26 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/wapi/Demo_CheckReadiness?ClientGroupName=Media Agents",
+            "url": {
+              "raw": "{{ServerUrl}}/wapi/Demo_CheckReadiness?ClientGroupName=Media Agents",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "wapi",
+                "Demo_CheckReadiness"
+              ],
+              "query": [
+                {
+                  "key": "ClientGroupName",
+                  "value": "Media Agents",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -35534,14 +35553,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -36926,14 +36945,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
