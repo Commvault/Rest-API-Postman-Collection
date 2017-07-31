@@ -20624,7 +20624,7 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "application/text",
+                "value": "text/plain",
                 "description": ""
               },
               {
