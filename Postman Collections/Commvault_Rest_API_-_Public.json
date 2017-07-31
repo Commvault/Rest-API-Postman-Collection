@@ -11612,7 +11612,7 @@
         },
         {
           "_postman_id": "eeea13f4-1daa-ac5b-0664-4a95d5f71cf7",
-          "name": "Discussion copy",
+          "name": "Discussion by ID",
           "event": [
             {
               "listen": "test",
@@ -11628,27 +11628,16 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
+              "raw": "{{ServerUrl}}/Discussion/{{discussionId}}?depth=1",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
-                "Discussion"
+                "Discussion",
+                "{{discussionId}}"
               ],
               "query": [
-                {
-                  "key": "entityType",
-                  "value": "{{entityType}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "entityGUID",
-                  "value": "{{entityGUID}}",
-                  "equals": true,
-                  "description": ""
-                },
                 {
                   "key": "depth",
                   "value": "1",
