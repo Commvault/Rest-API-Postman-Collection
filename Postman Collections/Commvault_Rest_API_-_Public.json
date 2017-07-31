@@ -13554,34 +13554,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=False",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Subclient",
-                "49",
-                "action",
-                "backup"
-              ],
-              "query": [
-                {
-                  "key": "backupLevel",
-                  "value": "Synthetic_Full",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "runIncrementalBackup",
-                  "value": "False",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=False",
             "method": "POST",
             "header": [
               {
@@ -13606,34 +13579,7 @@
               "id": "18294095-7fe8-a5a5-c736-ecb8df68dc3c",
               "name": "Subclient Backup - Synthetic full without incr",
               "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=False",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Subclient",
-                    "49",
-                    "action",
-                    "backup"
-                  ],
-                  "query": [
-                    {
-                      "key": "backupLevel",
-                      "value": "Synthetic_Full",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "runIncrementalBackup",
-                      "value": "False",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
+                "url": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=False",
                 "method": "POST",
                 "header": [
                   {
@@ -13885,39 +13831,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Subclient",
-                "49",
-                "Browse"
-              ],
-              "query": [
-                {
-                  "key": "path",
-                  "value": "%5C",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "showDeletedFiles",
-                  "value": "false",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "vsFileBrowse",
-                  "value": "true",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
             "method": "GET",
             "header": [
               {
@@ -13942,39 +13856,7 @@
               "id": "86cbaacd-16ac-d603-bf83-0d3145ddd672",
               "name": "Subclient Browse 2",
               "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Subclient",
-                    "49",
-                    "Browse"
-                  ],
-                  "query": [
-                    {
-                      "key": "path",
-                      "value": "%5C",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "showDeletedFiles",
-                      "value": "false",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "vsFileBrowse",
-                      "value": "true",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
+                "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
                 "method": "GET",
                 "header": [
                   {
