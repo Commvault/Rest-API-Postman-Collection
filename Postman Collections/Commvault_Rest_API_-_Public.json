@@ -10869,7 +10869,7 @@
               "mode": "raw",
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
-            "description": ""
+            "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
           },
           "response": []
         }
