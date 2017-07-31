@@ -10704,7 +10704,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
-                  "",
+                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
