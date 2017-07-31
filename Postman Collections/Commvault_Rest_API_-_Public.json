@@ -11420,7 +11420,7 @@
         },
         {
           "_postman_id": "214f671b-0c32-bf78-4342-42d8e010d31d",
-          "name": "Discussion",
+          "name": "Discussion by Type and GUID",
           "event": [
             {
               "listen": "test",
