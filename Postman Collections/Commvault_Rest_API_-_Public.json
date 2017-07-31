@@ -4746,6 +4746,87 @@
           },
           "response": [
             {
+              "id": "05ec4f93-a6f9-7be0-ced1-96028d2104d6",
+              "name": "All Jobs In Last 5 Mins",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Job?completedJobLookupTime=300",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Job"
+                  ],
+                  "query": [
+                    {
+                      "key": "completedJobLookupTime",
+                      "value": "300",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "727",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 17 Jul 2017 19:46:39 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "301",
+              "body": "{\r\"totalRecordsWithoutPaging\":1,\"jobs\":[\r{\r\"jobSummary\":{\r\"sizeOfApplication\":0,\"totalFailedFolders\":0,\"totalFailedFiles\":0,\"isVisible\":true,\"localizedStatus\":\"Running\",\"isAged\":false,\"totalNumOfFiles\":0,\"jobId\":5837,\"sizeOfMediaOnDisk\":0,\"status\":\"Running\",\"lastUpdateTime\":1500320749,\"percentSavings\":0,\"localizedOperationName\":\"Disaster Recovery Backup\",\"statusColor\":\"greenspan\",\"backupLevel\":0,\"jobElapsedTime\":445,\"jobStartTime\":1500320347,\"currentPhaseName\":\"Backup\",\"jobType\":\"CS DR Backup\",\"isPreemptable\":1,\"appTypeName\":\"Default Application Type Name\",\"percentComplete\":50,\"subclient\":{\r\"backupsetId\":0,\"instanceId\":0,\"subclientId\":0,\"clientId\":0,\"appName\":\"Default Application Type Name\",\"applicationId\":0\r}\r}\r}\r]\r}"
+            },
+            {
               "id": "42278c21-9dd2-2ab2-f967-eabe668ec5e2",
               "name": "All Jobs In Last 5 Mins",
               "originalRequest": {
@@ -4825,6 +4906,87 @@
               "cookie": [],
               "responseTime": "301",
               "body": "{\r\"totalRecordsWithoutPaging\":1,\"jobs\":[\r{\r\"jobSummary\":{\r\"sizeOfApplication\":0,\"totalFailedFolders\":0,\"totalFailedFiles\":0,\"isVisible\":true,\"localizedStatus\":\"Running\",\"isAged\":false,\"totalNumOfFiles\":0,\"jobId\":5837,\"sizeOfMediaOnDisk\":0,\"status\":\"Running\",\"lastUpdateTime\":1500320749,\"percentSavings\":0,\"localizedOperationName\":\"Disaster Recovery Backup\",\"statusColor\":\"greenspan\",\"backupLevel\":0,\"jobElapsedTime\":445,\"jobStartTime\":1500320347,\"currentPhaseName\":\"Backup\",\"jobType\":\"CS DR Backup\",\"isPreemptable\":1,\"appTypeName\":\"Default Application Type Name\",\"percentComplete\":50,\"subclient\":{\r\"backupsetId\":0,\"instanceId\":0,\"subclientId\":0,\"clientId\":0,\"appName\":\"Default Application Type Name\",\"applicationId\":0\r}\r}\r}\r]\r}"
+            },
+            {
+              "id": "644009d1-4aa6-eede-3166-197162768d99",
+              "name": "All Active Jobs For All Clients",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Job?jobCategory=Active",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Job"
+                  ],
+                  "query": [
+                    {
+                      "key": "jobCategory",
+                      "value": "Active",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "709",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 17 Jul 2017 19:42:22 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "441",
+              "body": "{\r\"totalRecordsWithoutPaging\":1,\"jobs\":[\r{\r\"jobSummary\":{\r\"sizeOfApplication\":0,\"totalFailedFolders\":0,\"totalFailedFiles\":0,\"isVisible\":true,\"localizedStatus\":\"Running\",\"isAged\":false,\"totalNumOfFiles\":0,\"jobId\":5837,\"sizeOfMediaOnDisk\":0,\"status\":\"Running\",\"lastUpdateTime\":1500320449,\"percentSavings\":0,\"localizedOperationName\":\"Disaster Recovery Backup\",\"statusColor\":\"greenspan\",\"backupLevel\":0,\"jobElapsedTime\":188,\"jobStartTime\":1500320347,\"currentPhaseName\":\"Backup\",\"jobType\":\"CS DR Backup\",\"appTypeName\":\"Default Application Type Name\",\"percentComplete\":50,\"subclient\":{\r\"backupsetId\":0,\"instanceId\":0,\"subclientId\":0,\"clientId\":0,\"appName\":\"Default Application Type Name\",\"applicationId\":0\r}\r}\r}\r]\r}"
             },
             {
               "id": "a4d298bf-2deb-a22e-5c8b-cc4e6b0c8750",
@@ -11144,6 +11306,94 @@
                   "mode": "raw",
                   "raw": "<Api_Discussion entityType=\"1\" created=\"1\" entityGUID=\"{{$guid}} \"><comments content=\"testcontent\"/></Api_Discussion>"
                 }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "465",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 31 Jul 2017 17:24:42 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "2173",
+              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521882,\"commentId\":10,\"modified\":1501521882,\"content\":\"testcontent\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r},\"error\":{\r\r}\r}"
+            },
+            {
+              "id": "a666490f-83be-ef56-ea0d-b0d5d7d5e2a5",
+              "name": "POST Create a Discussion",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Discussion",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
+                },
+                "description": "Creates a new discussion with the details supplied in message."
               },
               "status": "OK",
               "code": 200,
@@ -19745,6 +19995,125 @@
           ]
         },
         {
+          "_postman_id": "0c543411-6d05-7fee-882a-bbfac7e878e5",
+          "name": "Create a Discussion copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
+                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
+                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "",
+                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
+            },
+            "description": "Creates a new discussion with the details supplied in message."
+          },
+          "response": [
+            {
+              "id": "2cfb0537-8ca8-dbd0-983a-2f949a9f8ad6",
+              "name": "POST Create a Discussion",
+              "originalRequest": {
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "465",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 31 Jul 2017 17:24:42 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "2173",
+              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521882,\"commentId\":10,\"modified\":1501521882,\"content\":\"testcontent\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r},\"error\":{\r\r}\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "d1bba045-20e4-7b69-8065-89494baf451d",
           "name": "View File Versions by ID",
           "event": [
@@ -21638,8 +22007,8 @@
           ]
         },
         {
-          "_postman_id": "0c543411-6d05-7fee-882a-bbfac7e878e5",
-          "name": "Create a Discussion copy",
+          "_postman_id": "7137a298-3a12-eb85-9223-3192a3706a95",
+          "name": "Add a Comment copy",
           "event": [
             {
               "listen": "test",
@@ -21647,19 +22016,15 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
-                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
-                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
                   "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Discussion",
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
             "method": "POST",
             "header": [
               {
@@ -21680,9 +22045,9 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
+              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcomment\"\r\n      }\r\n   ]\r\n}"
             },
-            "description": "Creates a new discussion with the details supplied in message."
+            "description": "Adds an comment to in a discussion."
           },
           "response": []
         }
