@@ -10815,7 +10815,7 @@
         },
         {
           "_postman_id": "5747fc53-c5e7-a339-1e29-911361904df7",
-          "name": "Delete a Discussion",
+          "name": "Delete a Comment",
           "request": {
             "url": "{{ServerUrl}}/Discussion",
             "method": "DELETE",
