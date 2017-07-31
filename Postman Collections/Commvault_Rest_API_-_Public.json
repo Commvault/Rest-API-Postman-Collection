@@ -27709,14 +27709,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -40955,14 +40955,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
