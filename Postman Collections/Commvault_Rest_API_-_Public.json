@@ -10692,7 +10692,20 @@
       "_postman_id": "a8c64187-8432-644e-db35-c11497a1496c",
       "name": "Discussion Operations",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "767b5535-fb91-a52c-b27d-f1c543971080",
+          "name": "Get Discussions",
+          "request": {
+            "url": "{{ServerUrl}}/Discussion",
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "a60fbba0-b58c-95e7-55f4-81ab87998b8a",
