@@ -569,7 +569,31 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Alert?pageNo=1&pageCount=200",
+            "url": {
+              "raw": "{{ServerUrl}}/Alert?pageNo=1&pageCount=200",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Alert"
+              ],
+              "query": [
+                {
+                  "key": "pageNo",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "pageCount",
+                  "value": "200",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -4274,7 +4298,33 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/stream/action/download?appid=49&path=C:\\v11SP4a.xml",
+            "url": {
+              "raw": "{{ServerUrl}}/stream/action/download?appid=49&path=C:\\v11SP4a.xml",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "stream",
+                "action",
+                "download"
+              ],
+              "query": [
+                {
+                  "key": "appid",
+                  "value": "49",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "path",
+                  "value": "C:\\v11SP4a.xml",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -12781,7 +12831,39 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "49",
+                "Browse"
+              ],
+              "query": [
+                {
+                  "key": "path",
+                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "showDeletedFiles",
+                  "value": "false",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "vsFileBrowse",
+                  "value": "true",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -12806,7 +12888,39 @@
               "id": "5e4e1e28-c01b-8521-2f62-180c8997a2ac",
               "name": "Subclient Browse 3",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "49",
+                    "Browse"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "showDeletedFiles",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "vsFileBrowse",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
                 "method": "GET",
                 "header": [
                   {
@@ -14904,7 +15018,25 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Session?userId=1",
+            "url": {
+              "raw": "{{ServerUrl}}/Session?userId=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Session"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
