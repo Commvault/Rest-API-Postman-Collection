@@ -11612,7 +11612,7 @@
         },
         {
           "_postman_id": "eeea13f4-1daa-ac5b-0664-4a95d5f71cf7",
-          "name": "Discussion copy",
+          "name": "Discussion by ID",
           "event": [
             {
               "listen": "test",
