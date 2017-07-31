@@ -44140,6 +44140,32 @@
           "body": "{\r\"globalParamsResultList\":[\r{\r\"name\":\"AppMgrThreadIdleTimeout\",\"value\":\"7200\"\r},{\r\"name\":\"CI_STATE_FAILED\",\"value\":\"2,16,1016,2016\"\r},{\r\"name\":\"CI_STATE_SKIPPED\",\"value\":\"17\"\r}\r]\r}"
         }
       ]
+    },
+    {
+      "_postman_id": "f04cde1e-6134-e296-0642-e7e6bda382b3",
+      "name": "",
+      "request": {
+        "url": null,
+        "method": null,
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": null
+      },
+      "response": []
     }
   ]
 }
