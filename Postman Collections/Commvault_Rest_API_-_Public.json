@@ -10696,8 +10696,51 @@
         {
           "_postman_id": "767b5535-fb91-a52c-b27d-f1c543971080",
           "name": "Create a Discussion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{ServerUrl}}/Discussion",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<Api_Discussion entityType=\"1\" created=\"1\" entityGUID=\"{{$guid}} \"><comments content=\"testcontent\"/></Api_Discussion>"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "92e99bb7-dfee-1172-4940-d9e6a8f9c8fe",
+          "name": "List Discussions",
+          "request": {
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
             "method": "POST",
             "header": [
               {
@@ -10732,37 +10775,6 @@
             "method": "DELETE",
             "header": [],
             "body": {},
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "92e99bb7-dfee-1172-4940-d9e6a8f9c8fe",
-          "name": "Create a Discussion copy",
-          "request": {
-            "url": "{{ServerUrl}}/Discussion",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion entityType=\"1\" created=\"1\" entityGUID=\"{{$guid}} \"><comments content=\"testcontent\"/></Api_Discussion>"
-            },
             "description": ""
           },
           "response": []
