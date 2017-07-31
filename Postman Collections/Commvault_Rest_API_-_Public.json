@@ -10870,7 +10870,7 @@
               "mode": "raw",
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
-            "description": "Adds an comment to in a discussion."
+            "description": "Edits an comment to in a discussion."
           },
           "response": [
             {
@@ -10978,8 +10978,8 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-            "method": "PUT",
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
+            "method": "POST",
             "header": [
               {
                 "key": "Accept",
@@ -10999,17 +10999,17 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcommentedit\"/></Api_Discussion>"
+              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
             "description": "Edits an comment to in a discussion."
           },
           "response": [
             {
-              "id": "a5fcd2f6-6ffb-d443-3a77-0c0ed8acb313",
-              "name": "PUT Edit a Comment",
+              "id": "add4f749-3faa-4f6b-0ff1-8ec3ef56abe0",
+              "name": "POST Edit a Comment",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "PUT",
+                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
+                "method": "POST",
                 "header": [
                   {
                     "key": "Accept",
@@ -11029,7 +11029,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcommentedit\"/></Api_Discussion>"
+                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
                 }
               },
               "status": "OK",
@@ -11039,38 +11039,38 @@
               "header": [
                 {
                   "key": "Content-Length",
-                  "value": "47",
+                  "value": "228",
                   "name": "Content-Length",
-                  "description": ""
+                  "description": "The length of the response body in octets (8-bit bytes)"
                 },
                 {
                   "key": "Content-Type",
                   "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": ""
+                  "description": "The mime type of this content"
                 },
                 {
                   "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:27:14 GMT",
+                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
                   "name": "Date",
-                  "description": ""
+                  "description": "The date and time that the message was sent"
                 },
                 {
                   "key": "Server",
                   "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": ""
+                  "description": "A name for the server"
                 },
                 {
                   "key": "X-Powered-By",
                   "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": ""
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
                 }
               ],
               "cookie": [
                 {
-                  "expires": "Tue Mar 31 2037 09:14:07 GMT+0000 (UTC)",
+                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
                   "httpOnly": true,
                   "domain": "nkatzvm2.testlab.commvault.com",
                   "path": "/webconsole",
@@ -11079,7 +11079,7 @@
                   "key": "JSESSIONID"
                 },
                 {
-                  "expires": "Tue Mar 31 2037 09:14:07 GMT+0000 (UTC)",
+                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
                   "httpOnly": true,
                   "domain": "nkatzvm2.testlab.commvault.com",
                   "path": "/",
@@ -11088,8 +11088,8 @@
                   "key": "JSESSIONID"
                 }
               ],
-              "responseTime": "9",
-              "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
+              "responseTime": "27",
+              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
             }
           ]
         },
