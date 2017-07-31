@@ -10741,6 +10741,18 @@
         {
           "_postman_id": "92e99bb7-dfee-1172-4940-d9e6a8f9c8fe",
           "name": "Edit a Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
             "method": "POST",
