@@ -11317,7 +11317,7 @@
         },
         {
           "_postman_id": "cbc197fc-8633-4f0b-1908-023801e1e1dd",
-          "name": "Comment copy",
+          "name": "Hierarchical Comments",
           "event": [
             {
               "listen": "test",
@@ -11357,7 +11357,7 @@
               "mode": "raw",
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
-            "description": "Gets a comment with given commentId"
+            "description": "Gets a number of comments associated with a discussion in hierarchical order."
           },
           "response": [
             {
