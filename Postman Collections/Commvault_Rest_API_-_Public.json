@@ -10814,18 +10814,6 @@
           "response": []
         },
         {
-          "_postman_id": "5747fc53-c5e7-a339-1e29-911361904df7",
-          "name": "Delete a Comment",
-          "request": {
-            "url": "{{ServerUrl}}/Discussion",
-            "method": "DELETE",
-            "header": [],
-            "body": {},
-            "description": ""
-          },
-          "response": []
-        },
-        {
           "_postman_id": "214f671b-0c32-bf78-4342-42d8e010d31d",
           "name": "Discussion",
           "request": {
