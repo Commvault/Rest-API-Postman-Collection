@@ -10884,13 +10884,13 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json",
+                "value": "application/xml",
                 "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
+              "raw": "<Api_Discussion entityType=\"1\" created=\"1\" entityGUID=\"{{$guid}} \"><comments content=\"testcontent\"/></Api_Discussion>"
             },
             "description": "Creates a new discussion with the details supplied in message."
           },
@@ -11021,13 +11021,13 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json",
+                "value": "application/xml",
                 "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcomment\"\r\n      }\r\n   ]\r\n}"
+              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
             "description": "Adds an comment to in a discussion."
           },
@@ -11939,9 +11939,7 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");"
+                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");"
                 ]
               }
             }
@@ -19281,19 +19279,19 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -20087,19 +20085,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -20355,19 +20353,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "text/xml",
-                "description": ""
+                "value": "text/xml"
               }
             ],
             "body": {
@@ -23128,19 +23126,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -28172,14 +28170,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -31650,14 +31648,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -32764,19 +32762,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -36719,19 +36717,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -41671,19 +41669,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
