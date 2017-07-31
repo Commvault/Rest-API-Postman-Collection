@@ -10815,10 +10815,10 @@
         },
         {
           "_postman_id": "efa44129-3684-3dda-e397-f5a10131b22b",
-          "name": "Comment copy",
+          "name": "Delete a Comment",
           "request": {
             "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-            "method": "GET",
+            "method": "DELETE",
             "header": [
               {
                 "key": "Accept",
@@ -10840,13 +10840,26 @@
               "mode": "raw",
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
-            "description": "Gets a comment with given commentId"
+            "description": "Deletes a comment with given commentId"
           },
           "response": []
         },
         {
           "_postman_id": "214f671b-0c32-bf78-4342-42d8e010d31d",
           "name": "Discussion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": {
               "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
