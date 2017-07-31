@@ -11183,6 +11183,21 @@
         {
           "_postman_id": "043cd181-e1cb-8aae-ae93-dd2d409f624e",
           "name": "Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "",
+                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
             "method": "GET",
