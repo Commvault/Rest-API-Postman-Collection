@@ -15402,14 +15402,14 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
+              "raw": "{{ServerUrl}}/Subclient/{{subclientId}}/action/backup?backupLevel=Synthetic_Full&runIncrementalBackup=True&incrementalLevel=AFTER_SYNTH",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
                 "Subclient",
-                "49",
+                "{{subclientId}}",
                 "action",
                 "backup"
               ],
