@@ -17799,7 +17799,7 @@
         },
         {
           "_postman_id": "8e5274c7-3228-c3fc-0db4-45b02690569f",
-          "name": "Delete a Comment copy",
+          "name": "Delete a Comment",
           "event": [
             {
               "listen": "test",
