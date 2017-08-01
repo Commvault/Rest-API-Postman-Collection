@@ -21677,7 +21677,7 @@
         },
         {
           "_postman_id": "18efe32e-23c5-29b3-c128-77a20374a461",
-          "name": "Discussion by Type and GUID",
+          "name": "Discussion by Type and GUID copy",
           "event": [
             {
               "listen": "test",
@@ -21823,7 +21823,7 @@
         },
         {
           "_postman_id": "a46e4996-aa65-a9a8-5488-317428f252e5",
-          "name": "Discussion by ID",
+          "name": "Discussion by ID copy",
           "event": [
             {
               "listen": "test",
@@ -22006,7 +22006,7 @@
         },
         {
           "_postman_id": "4634bbc1-0e9e-f19e-c381-8e9ca9203627",
-          "name": "Discussion",
+          "name": "Discussion copy",
           "event": [
             {
               "listen": "test",
