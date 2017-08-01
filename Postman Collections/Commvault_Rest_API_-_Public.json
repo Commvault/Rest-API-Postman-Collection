@@ -17986,7 +17986,7 @@
         },
         {
           "_postman_id": "628a6555-b15d-a4c3-185f-e26551a4f266",
-          "name": "Discussion by Type and GUID copy",
+          "name": "Discussion by Type and GUID",
           "event": [
             {
               "listen": "test",
@@ -18180,7 +18180,7 @@
         },
         {
           "_postman_id": "a4aaaae1-5305-5b53-1321-d0c741169f81",
-          "name": "Discussion by ID copy",
+          "name": "Discussion by ID",
           "event": [
             {
               "listen": "test",
