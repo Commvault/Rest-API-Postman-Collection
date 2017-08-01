@@ -21519,7 +21519,7 @@
         },
         {
           "_postman_id": "e30f4ba7-3345-dc29-d5bd-5d01bf579a41",
-          "name": "Hierarchical Comments",
+          "name": "Hierarchical Comments copy",
           "event": [
             {
               "listen": "test",
@@ -21677,7 +21677,7 @@
         },
         {
           "_postman_id": "18efe32e-23c5-29b3-c128-77a20374a461",
-          "name": "Discussion by Type and GUID",
+          "name": "Discussion by Type and GUID copy",
           "event": [
             {
               "listen": "test",
