@@ -20880,7 +20880,7 @@
         },
         {
           "_postman_id": "0c543411-6d05-7fee-882a-bbfac7e878e5",
-          "name": "Create a Discussion copy",
+          "name": "Create a Discussion",
           "event": [
             {
               "listen": "test",
