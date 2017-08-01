@@ -21538,12 +21538,15 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
+              "raw": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
+                "drive",
+                "file",
+                "{{FILE1_GUID}}",
                 "Discussion",
                 "{{discussionId}}",
                 "Comment",
