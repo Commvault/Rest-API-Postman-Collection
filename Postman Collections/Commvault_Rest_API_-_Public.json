@@ -11276,160 +11276,7 @@
           },
           "response": [
             {
-              "id": "28806658-c0bf-c0ec-7f57-6e7a0d476aae",
-              "name": "POST Create a Discussion",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "465",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:42 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "2173",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521882,\"commentId\":10,\"modified\":1501521882,\"content\":\"testcontent\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r},\"error\":{\r\r}\r}"
-            },
-            {
               "id": "6490daa7-d06b-ff8a-578c-faba2d182b78",
-              "name": "POST Create a Discussion",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": "",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": "",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "name": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion entityType=\"1\" created=\"1\" entityGUID=\"{{$guid}} \"><comments content=\"testcontent\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "465",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:42 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "2173",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521882,\"commentId\":10,\"modified\":1501521882,\"content\":\"testcontent\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r},\"error\":{\r\r}\r}"
-            },
-            {
-              "id": "769031f6-bb26-8853-bbe8-bad717e9653b",
               "name": "POST Create a Discussion",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Discussion",
@@ -11742,93 +11589,6 @@
               "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
             },
             {
-              "id": "0d92b172-8a46-8348-1085-71a469a63d0c",
-              "name": "POST Edit a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "228",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "27",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            },
-            {
               "id": "2fe9dba4-a525-9586-d257-86f1b459da9c",
               "name": "POST Add a Comment",
               "originalRequest": {
@@ -11917,155 +11677,6 @@
               "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
             },
             {
-              "id": "56a72536-12bb-90f4-3b37-246ef08088d4",
-              "name": "POST Edit a Comment",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "228",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "27",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            },
-            {
-              "id": "751db4bb-fd3c-46d1-d668-8c054d25835d",
-              "name": "POST Add a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "228",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "27",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            },
-            {
               "id": "79d7429a-dffd-1dec-97f5-be6e9a7cc74e",
               "name": "POST Edit a Comment",
               "originalRequest": {
@@ -12093,68 +11704,6 @@
                   "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
                 }
               },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "228",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "27",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            },
-            {
-              "id": "9ffefcc9-bca1-f013-5766-e1f2fa644360",
-              "name": "POST Add a Comment",
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
@@ -12520,93 +12069,6 @@
               ],
               "responseTime": "9",
               "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            },
-            {
-              "id": "f4cb6205-60b1-e638-8a07-17435d61940a",
-              "name": "PUT Edit a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcommentedit\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "47",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:27:14 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "9",
-              "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
             }
           ]
         },
@@ -12655,93 +12117,6 @@
             "description": "Gets a comment with given commentId"
           },
           "response": [
-            {
-              "id": "88ea0355-eb39-05a7-54b3-097b7d131e02",
-              "name": "GET Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "184",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "40",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
-            },
             {
               "id": "aba1b492-6c24-8244-735b-06302da12be8",
               "name": "GET Comment",
@@ -13065,68 +12440,6 @@
               ],
               "responseTime": "40",
               "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
-            },
-            {
-              "id": "fc9a5f10-5ca1-6cd0-c71d-f01f27dc8dd9",
-              "name": "GET Comment",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "184",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "40",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
             }
           ]
         },
@@ -13199,93 +12512,6 @@
             "description": "Gets a number of comments associated with a discussion in hierarchical order."
           },
           "response": [
-            {
-              "id": "42fed631-0845-ce5e-66f9-0b75c840b8aa",
-              "name": "GET Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "184",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "40",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
-            },
             {
               "id": "44e1d0fc-5945-3e75-2505-63e02142e5bc",
               "name": "GET Comment",
@@ -13499,68 +12725,6 @@
           },
           "response": [
             {
-              "id": "05ac4769-85cd-ec2a-f6fe-ce1589f9d32a",
-              "name": "DELETE Delete a Comment",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "16",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:52 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "45",
-              "body": "{\r\"error\":{\r\r}\r}"
-            },
-            {
               "id": "2e14e36d-fa27-d02b-ba6b-55b73c745115",
               "name": "DELETE Delete a Comment",
               "status": "OK",
@@ -13711,93 +12875,6 @@
             },
             {
               "id": "6243281e-4063-8a93-6785-a806760e3661",
-              "name": "DELETE Delete a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "16",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:52 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "45",
-              "body": "{\r\"error\":{\r\r}\r}"
-            },
-            {
-              "id": "af3e89b5-c2cc-6749-267c-92d6eae26e19",
               "name": "DELETE Delete a Comment",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
@@ -14043,123 +13120,6 @@
             "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
           },
           "response": [
-            {
-              "id": "3f14600c-b895-300f-248a-0a4cc96099e9",
-              "name": "GET Discussion",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Discussion"
-                  ],
-                  "query": [
-                    {
-                      "key": "entityType",
-                      "value": "{{entityType}}",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "entityGUID",
-                      "value": "{{entityGUID}}",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "depth",
-                      "value": "1",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "258",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:58 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 17:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 17:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "151",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r\r]\r}\r}"
-            },
             {
               "id": "62f0e9a1-9394-02cc-c140-c8ce5f47848a",
               "name": "GET Discussion",
@@ -14579,123 +13539,6 @@
               "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r\r]\r}\r}"
             },
             {
-              "id": "957d54f6-26ec-e58d-7983-7b42f6a94645",
-              "name": "GET Discussion",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Discussion"
-                  ],
-                  "query": [
-                    {
-                      "key": "entityType",
-                      "value": "{{entityType}}",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "entityGUID",
-                      "value": "{{entityGUID}}",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "depth",
-                      "value": "1",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "258",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:58 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 17:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 17:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "151",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r\r]\r}\r}"
-            },
-            {
               "id": "ba57b909-885a-0c84-f7e0-42ee273cb596",
               "name": "GET Discussion",
               "originalRequest": {
@@ -14822,147 +13665,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "a7306bda-1363-b10d-9f2f-89e82fdfab59",
-          "name": "Subclient",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains subClientProperties\"] = responseBody.has(\"subClientProperties\");",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Subclient?clientId=2",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Subclient"
-              ],
-              "query": [
-                {
-                  "key": "clientId",
-                  "value": "2",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation returns a list of subclients for a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient.htm"
-          },
-          "response": [
-            {
-              "id": "2d4c2520-46c8-1bc0-6680-e496a6adc604",
-              "name": "Subclient",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Subclient?clientId=2",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Subclient"
-                  ],
-                  "query": [
-                    {
-                      "key": "clientId",
-                      "value": "2",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": "This operation returns a list of subclients for a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient.htm"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1506",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 01 Jun 2017 07:44:47 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "898",
-              "body": "{\r\"subClientProperties\":[\r{\r\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":2,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"default\"\r},\"dfsSubclientProp\":{\r\r},\"planEntity\":{\r\r},\"analyticsSubclientProp\":{\r\r}\r},{\r\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":30,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"IndexBackup\"\r},\"dfsSubclientProp\":{\r\r},\"planEntity\":{\r\r},\"analyticsSubclientProp\":{\r\r}\r},{\r\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":31,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"Back_44\"\r},\"dfsSubclientProp\":{\r\r},\"planEntity\":{\r\r},\"analyticsSubclientProp\":{\r\r}\r},{\r\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":49,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"TestFSAPI\"\r},\"dfsSubclientProp\":{\r\r},\"planEntity\":{\r\r},\"analyticsSubclientProp\":{\r\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "04008839-effe-dd18-d5f2-771d099ff227",
           "name": "Subclient Browse",
           "event": [
@@ -14981,14 +13683,14 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Subclient/2/Browse?path=%5C",
+              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
                 "Subclient",
-                "2",
+                "49",
                 "Browse"
               ],
               "query": [
@@ -15026,14 +13728,14 @@
               "name": "Subclient Browse",
               "originalRequest": {
                 "url": {
-                  "raw": "{{ServerUrl}}/Subclient/2/Browse?path=%5C",
+                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C",
                   "auth": {},
                   "host": [
                     "{{ServerUrl}}"
                   ],
                   "path": [
                     "Subclient",
-                    "2",
+                    "49",
                     "Browse"
                   ],
                   "query": [
@@ -15106,6 +13808,48 @@
               "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"31\",\"session\":{\r\"sessionId\":\"1496303745-31\"\r},\"browseResult\":{\r\"queryId\":\"0\",\"dataResultSet\":[\r{\r\"path\":\"C:\",\"size\":28457425,\"modificationTime\":1496122177,\"displayName\":\"C:\",\"name\":\"2\\u0012C:\",\"flags\":{\r\"directory\":true,\"mountPoint\":true,\"isFake\":false,\"snap\":false\r},\"advancedData\":{\r\"backupJobId\":288,\"referenceTime\":1496122310,\"offset\":0,\"archiveGroupId\":3,\"objectGuid\":\"15832c0c2980f319a3be40952e7e69b0\",\"backupTime\":1496122310,\"archiveFileId\":107,\"subclient\":{\r\"type\":0,\"_type_\":7,\"applicationId\":49\r},\"sourceCommServer\":{\r\"_type_\":1,\"commCellId\":2,\"type\":0\r},\"advConfig\":{\r\"browseAdvancedConfigResp\":{\r\"commcellNumber\":122516778\r}\r},\"browseMetaData\":{\r\"fsData\":{\r\"DriveFreePercentage\":59,\"geoLocation\":\"<App_GeoLocation ip_address='199.255.244.65' latitude='40.300720' longitude='-74.081910' status_code='SUCCESS' status_description=''\\u002f>\",\"VolumeSize\":214379261952\r},\"indexing\":{\r\"folderSize\":28457425,\"backupTime\":1496122299,\"fileChangeTime\":1496122177\r},\"dmStubData\":{\r\"guid\":\"4adf0103078dbb0de054c95cd763ff21\"\r},\"virtualServerMetaData\":{\r\"extentBlobBitMap\":\"\"\r}\r}\r}\r}\r]\r}\r},{\r\"respType\":0,\"workerId\":\"31\",\"session\":{\r\"sessionId\":\"1496303745-31\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":1,\"groupbyValue\":\"\",\"count\":1\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"31\",\"session\":{\r\"sessionId\":\"1496303745-31\"\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "1287ad54-b5ab-66de-0ff6-b1406dc3fe8b",
+          "name": "Subclient Properties - Adds VM to a Subclient",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Subclient/15",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM002\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM003\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"client001\",\r\n        \"subclientName\": \"subclient001\",\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"instanceName\": \"DefaultInstanceName\",\r\n        \"appName\": \"Virtual Server\"\r\n      }\r\n    ]\r\n  }\r\n}"
+            },
+            "description": "This request adds virtual machines to a subclient.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm"
+          },
+          "response": []
         },
         {
           "_postman_id": "2160ff21-9c00-2df8-44b8-593b385644eb",
@@ -15221,48 +13965,6 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\",\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"subclientId\":69,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":0,\"consumeLicense\":true\r}\r}\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "1287ad54-b5ab-66de-0ff6-b1406dc3fe8b",
-          "name": "Subclient Properties - Adds VM to a Subclient",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Subclient/15",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM002\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM003\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"client001\",\r\n        \"subclientName\": \"subclient001\",\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"instanceName\": \"DefaultInstanceName\",\r\n        \"appName\": \"Virtual Server\"\r\n      }\r\n    ]\r\n  }\r\n}"
-            },
-            "description": "This request adds virtual machines to a subclient.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm"
-          },
-          "response": []
         },
         {
           "_postman_id": "33d9ab23-a815-87a4-e563-2fdbab78bd9e",
@@ -15551,6 +14253,174 @@
           ]
         },
         {
+          "_postman_id": "6b2c6e88-0b3a-3957-2bd0-ce14f1fbc3f5",
+          "name": "Subclient Browse 3",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains browseResponses\"] = responseBody.has(\"browseResponses\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "49",
+                "Browse"
+              ],
+              "query": [
+                {
+                  "key": "path",
+                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "showDeletedFiles",
+                  "value": "false",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "vsFileBrowse",
+                  "value": "true",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This request is to browse a specific guest virtual machine.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm"
+          },
+          "response": [
+            {
+              "id": "5e4e1e28-c01b-8521-2f62-180c8997a2ac",
+              "name": "Subclient Browse 3",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "49",
+                    "Browse"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "showDeletedFiles",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "vsFileBrowse",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This request is to browse a specific guest virtual machine.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "271",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 01 Jun 2017 07:58:05 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "3202",
+              "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":0,\"groupbyValue\":\"\",\"count\":0\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "76ebaa76-6fb3-ef59-3ef2-d8dd97ecdb8b",
           "name": "Create Task (Backup)",
           "event": [
@@ -15707,6 +14577,147 @@
             "description": "This request creates a subclient under a virtual server agent.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient.htm"
           },
           "response": []
+        },
+        {
+          "_postman_id": "a7306bda-1363-b10d-9f2f-89e82fdfab59",
+          "name": "Subclient",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains subClientProperties\"] = responseBody.has(\"subClientProperties\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient?clientId=2",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient"
+              ],
+              "query": [
+                {
+                  "key": "clientId",
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "This operation returns a list of subclients for a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient.htm"
+          },
+          "response": [
+            {
+              "id": "2d4c2520-46c8-1bc0-6680-e496a6adc604",
+              "name": "Subclient",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient?clientId=2",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient"
+                  ],
+                  "query": [
+                    {
+                      "key": "clientId",
+                      "value": "2",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This operation returns a list of subclients for a client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient.htm"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1506",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 01 Jun 2017 07:44:47 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "898",
+              "body": "{\r\"subClientProperties\":[\r{\r\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":2,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"default\"\r},\"dfsSubclientProp\":{\r\r},\"planEntity\":{\r\r},\"analyticsSubclientProp\":{\r\r}\r},{\r\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":30,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"IndexBackup\"\r},\"dfsSubclientProp\":{\r\r},\"planEntity\":{\r\r},\"analyticsSubclientProp\":{\r\r}\r},{\r\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":31,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"Back_44\"\r},\"dfsSubclientProp\":{\r\r},\"planEntity\":{\r\r},\"analyticsSubclientProp\":{\r\r}\r},{\r\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":49,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"TestFSAPI\"\r},\"dfsSubclientProp\":{\r\r},\"planEntity\":{\r\r},\"analyticsSubclientProp\":{\r\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "b2c2196f-9b8e-0395-ea49-e54135e321cc",
@@ -16568,1897 +15579,6 @@
           ]
         },
         {
-          "_postman_id": "6b2c6e88-0b3a-3957-2bd0-ce14f1fbc3f5",
-          "name": "Subclient Browse 3",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains browseResponses\"] = responseBody.has(\"browseResponses\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Subclient",
-                "49",
-                "Browse"
-              ],
-              "query": [
-                {
-                  "key": "path",
-                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "showDeletedFiles",
-                  "value": "false",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "vsFileBrowse",
-                  "value": "true",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This request is to browse a specific guest virtual machine.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm"
-          },
-          "response": [
-            {
-              "id": "5e4e1e28-c01b-8521-2f62-180c8997a2ac",
-              "name": "Subclient Browse 3",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Subclient",
-                    "49",
-                    "Browse"
-                  ],
-                  "query": [
-                    {
-                      "key": "path",
-                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "showDeletedFiles",
-                      "value": "false",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "vsFileBrowse",
-                      "value": "true",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": "This request is to browse a specific guest virtual machine.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "271",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 01 Jun 2017 07:58:05 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "3202",
-              "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":0,\"groupbyValue\":\"\",\"count\":0\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "c7978cee-8b61-faa6-98f0-032c9f3ff0bf",
-          "name": "Create a Discussion copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
-                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
-                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Creates a new discussion with the details supplied in message."
-          },
-          "response": [
-            {
-              "id": "1f078af9-5322-e889-8c40-0bc038cacfe7",
-              "name": "POST Create a Discussion",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
-                },
-                "description": "Creates a new discussion with the details supplied in message."
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "465",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:42 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "2173",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521882,\"commentId\":10,\"modified\":1501521882,\"content\":\"testcontent\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r},\"error\":{\r\r}\r}"
-            },
-            {
-              "id": "75704e47-8191-827a-6f92-2d194989afb0",
-              "name": "POST Create a Discussion",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": "",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": "",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "name": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion entityType=\"1\" created=\"1\" entityGUID=\"{{$guid}} \"><comments content=\"testcontent\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "465",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:42 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "2173",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521882,\"commentId\":10,\"modified\":1501521882,\"content\":\"testcontent\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r},\"error\":{\r\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "57876a77-731e-6876-9fe2-af574a05c034",
-          "name": "Add a Comment copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcomment\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Adds an comment to in a discussion."
-          },
-          "response": [
-            {
-              "id": "3fb6000f-652c-a107-2504-f8b61e333d9d",
-              "name": "POST Add a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "228",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "27",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            },
-            {
-              "id": "c28187b1-ea8e-9d8f-c2ef-5a73089dde2d",
-              "name": "POST Edit a Comment",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "228",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "27",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            },
-            {
-              "id": "cc4a37ba-c9df-8a4c-35b9-05e31f29642b",
-              "name": "POST Edit a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "228",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "27",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            },
-            {
-              "id": "f7bac0c0-6894-40b9-65c4-8f6ac22c3d35",
-              "name": "POST Add a Comment",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "228",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:46 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "27",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "f6236471-5d6a-12b1-5a6c-ef286904d27e",
-          "name": "Edit a Comment copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Error Code = 0\"] = jsonData.error.errorCode === 0;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcommentedit\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Edits an comment to in a discussion."
-          },
-          "response": [
-            {
-              "id": "a5f8d9e4-e682-0d96-26fe-de79a00b9151",
-              "name": "PUT Edit a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcommentedit\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "47",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:27:14 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "9",
-              "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "f5087aff-8251-38e4-e507-d50a06bc2ee5",
-          "name": "Comment copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets a comment with given commentId"
-          },
-          "response": [
-            {
-              "id": "885d90ce-2614-c18a-1ea8-e1b85fd25d54",
-              "name": "GET Comment",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "184",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "40",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
-            },
-            {
-              "id": "b756273a-f8cb-0f3f-92ce-a463317735bd",
-              "name": "GET Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "184",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "40",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "39ea84c3-fe9e-5f43-d344-27abddcd414d",
-          "name": "Hierarchical Comments copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Discussion",
-                "{{discussionId}}",
-                "Comment",
-                "{{commentId}}",
-                "Replies"
-              ],
-              "query": [
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets a number of comments associated with a discussion in hierarchical order."
-          },
-          "response": [
-            {
-              "id": "c5759ba7-c1f7-70b4-1bf5-9f7d18dbb95f",
-              "name": "GET Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "184",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 01:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "40",
-              "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521886,\"commentId\":11,\"modified\":1501521886,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "8e5274c7-3228-c3fc-0db4-45b02690569f",
-          "name": "Delete a Comment copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "Deletes a comment with given commentId"
-          },
-          "response": [
-            {
-              "id": "b4eb6076-04cb-ca24-7b67-cb996aff75c6",
-              "name": "DELETE Delete a Comment",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "16",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:52 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "45",
-              "body": "{\r\"error\":{\r\r}\r}"
-            },
-            {
-              "id": "e9e7bfcf-df7e-587f-5f57-eb29763fc95f",
-              "name": "DELETE Delete a Comment",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "16",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:52 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 21:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "45",
-              "body": "{\r\"error\":{\r\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "628a6555-b15d-a4c3-185f-e26551a4f266",
-          "name": "Discussion by Type and GUID copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Discussion"
-              ],
-              "query": [
-                {
-                  "key": "entityType",
-                  "value": "{{entityType}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "entityGUID",
-                  "value": "{{entityGUID}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
-          },
-          "response": [
-            {
-              "id": "0f6a11bf-e68e-92c7-8697-a36c249f6238",
-              "name": "GET Discussion",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Discussion"
-                  ],
-                  "query": [
-                    {
-                      "key": "entityType",
-                      "value": "{{entityType}}",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "entityGUID",
-                      "value": "{{entityGUID}}",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "depth",
-                      "value": "1",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "258",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:58 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 17:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 17:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "151",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r\r]\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "a4aaaae1-5305-5b53-1321-d0c741169f81",
-          "name": "Discussion by ID copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Discussion/{{discussionId}}?depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Discussion",
-                "{{discussionId}}"
-              ],
-              "query": [
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
-          },
-          "response": [
-            {
-              "id": "b2e3d8b0-0778-5860-89de-c9fb5b1c286f",
-              "name": "GET Discussion",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Discussion"
-                  ],
-                  "query": [
-                    {
-                      "key": "entityType",
-                      "value": "{{entityType}}",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "entityGUID",
-                      "value": "{{entityGUID}}",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "depth",
-                      "value": "1",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "258",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:58 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 31 2037 17:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 31 2037 17:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "151",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r\r]\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "e08af6a5-7873-eb5e-ac3f-e947a0ba71de",
-          "name": "Discussion copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "Deletes a discussion"
-          },
-          "response": [
-            {
-              "id": "d148d22a-17f4-46ec-0f44-9c866f8f86d7",
-              "name": "DELETE Discussion",
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "4",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 18:42:19 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Mar 24 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Tue Mar 24 2037 05:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "26",
-              "body": "{\r\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "543e3082-a5cd-9530-b5ca-172f47ed303a",
           "name": "Subclient",
           "event": [
@@ -18559,6 +15679,144 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "c7978cee-8b61-faa6-98f0-032c9f3ff0bf",
+          "name": "Create a Discussion copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
+                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
+                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "",
+                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
+            },
+            "description": "Creates a new discussion with the details supplied in message."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "57876a77-731e-6876-9fe2-af574a05c034",
+          "name": "Add a Comment copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcomment\"\r\n      }\r\n   ]\r\n}"
+            },
+            "description": "Adds an comment to in a discussion."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f6236471-5d6a-12b1-5a6c-ef286904d27e",
+          "name": "Edit a Comment copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Error Code = 0\"] = jsonData.error.errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcommentedit\"\r\n      }\r\n   ]\r\n}"
+            },
+            "description": "Edits an comment to in a discussion."
+          },
+          "response": []
         }
       ]
     },
@@ -49882,68 +47140,6 @@
             },
             "description": "Deletes a discussion"
           },
-          "status": "OK",
-          "code": 200,
-          "_postman_previewlanguage": "json",
-          "_postman_previewtype": "text",
-          "header": [
-            {
-              "key": "Content-Length",
-              "value": "4",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Mon, 31 Jul 2017 18:42:19 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "Server",
-              "value": "Microsoft-IIS/8.5",
-              "name": "Server",
-              "description": ""
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "ASP.NET",
-              "name": "X-Powered-By",
-              "description": ""
-            }
-          ],
-          "cookie": [
-            {
-              "expires": "Tue Mar 24 2037 05:14:07 GMT+0000 (UTC)",
-              "httpOnly": true,
-              "domain": "nkatzvm2.testlab.commvault.com",
-              "path": "/webconsole",
-              "secure": false,
-              "value": "4FE369232CA3619ADE65DB55EF647A0F",
-              "key": "JSESSIONID"
-            },
-            {
-              "expires": "Tue Mar 24 2037 05:14:07 GMT+0000 (UTC)",
-              "httpOnly": true,
-              "domain": "nkatzvm2.testlab.commvault.com",
-              "path": "/",
-              "secure": false,
-              "value": "6EDBA28BC1616A91E344BED0ED45695C",
-              "key": "JSESSIONID"
-            }
-          ],
-          "responseTime": "26",
-          "body": "{\r\r}"
-        },
-        {
-          "id": "c812e3f6-d8e1-8959-e39f-9f0f402a73f1",
-          "name": "DELETE Discussion",
           "status": "OK",
           "code": 200,
           "_postman_previewlanguage": "json",
