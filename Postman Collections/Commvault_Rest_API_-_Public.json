@@ -20900,7 +20900,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion",
+            "url": "{{ServerUrl}}/Discussion",
             "method": "POST",
             "header": [
               {
