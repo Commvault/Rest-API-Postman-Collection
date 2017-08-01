@@ -15679,6 +15679,55 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "c7978cee-8b61-faa6-98f0-032c9f3ff0bf",
+          "name": "Create a Discussion copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
+                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
+                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "",
+                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
+            },
+            "description": "Creates a new discussion with the details supplied in message."
+          },
+          "response": []
         }
       ]
     },
