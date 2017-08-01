@@ -16760,7 +16760,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Discussion",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}/Discussion",
             "method": "POST",
             "header": [
               {
@@ -16790,7 +16790,7 @@
               "id": "1f078af9-5322-e889-8c40-0bc038cacfe7",
               "name": "POST Create a Discussion",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}/Discussion",
                 "method": "POST",
                 "header": [
                   {
