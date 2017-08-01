@@ -16111,43 +16111,6 @@
             "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
           },
           "response": []
-        },
-        {
-          "_postman_id": "e08af6a5-7873-eb5e-ac3f-e947a0ba71de",
-          "name": "Discussion copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "Deletes a discussion"
-          },
-          "response": []
         }
       ]
     },
