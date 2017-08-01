@@ -21692,7 +21692,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
             "method": "DELETE",
             "header": [
               {
@@ -21804,7 +21804,7 @@
               "id": "b1752bf4-0726-7360-7fce-3c04b374cb8e",
               "name": "DELETE Delete a Comment",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+                "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
                 "method": "DELETE",
                 "header": [
                   {
