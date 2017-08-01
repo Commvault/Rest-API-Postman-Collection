@@ -21297,7 +21297,7 @@
         },
         {
           "_postman_id": "be1c8f22-2088-1cb0-8d85-eb42d31b8af4",
-          "name": "Comment copy",
+          "name": "Comment",
           "event": [
             {
               "listen": "test",
@@ -21519,7 +21519,7 @@
         },
         {
           "_postman_id": "e30f4ba7-3345-dc29-d5bd-5d01bf579a41",
-          "name": "Hierarchical Comments copy",
+          "name": "Hierarchical Comments",
           "event": [
             {
               "listen": "test",
@@ -21677,7 +21677,7 @@
         },
         {
           "_postman_id": "18efe32e-23c5-29b3-c128-77a20374a461",
-          "name": "Discussion by Type and GUID copy",
+          "name": "Discussion by Type and GUID",
           "event": [
             {
               "listen": "test",
@@ -21823,7 +21823,7 @@
         },
         {
           "_postman_id": "a46e4996-aa65-a9a8-5488-317428f252e5",
-          "name": "Discussion by ID copy",
+          "name": "Discussion by ID",
           "event": [
             {
               "listen": "test",
@@ -22006,7 +22006,7 @@
         },
         {
           "_postman_id": "4634bbc1-0e9e-f19e-c381-8e9ca9203627",
-          "name": "Discussion copy",
+          "name": "Discussion",
           "event": [
             {
               "listen": "test",
