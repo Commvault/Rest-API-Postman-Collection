@@ -20900,7 +20900,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Discussion",
+            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion",
             "method": "POST",
             "header": [
               {
@@ -21198,7 +21198,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
             "method": "PUT",
             "header": [
               {
