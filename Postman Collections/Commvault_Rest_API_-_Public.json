@@ -21905,12 +21905,15 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
+              "raw": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
+                "drive",
+                "file",
+                "{{FILE1_GUID}}",
                 "Discussion"
               ],
               "query": [
