@@ -21313,7 +21313,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
             "method": "GET",
             "header": [
               {
@@ -21343,7 +21343,7 @@
               "id": "9c668a2d-1442-51ca-ce74-03ac97286d88",
               "name": "GET Comment",
               "originalRequest": {
-                "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+                "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
                 "method": "GET",
                 "header": [
                   {
