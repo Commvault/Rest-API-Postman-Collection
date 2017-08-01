@@ -17313,7 +17313,7 @@
         },
         {
           "_postman_id": "f6236471-5d6a-12b1-5a6c-ef286904d27e",
-          "name": "Edit a Comment copy",
+          "name": "Edit a Comment",
           "event": [
             {
               "listen": "test",
@@ -17641,7 +17641,7 @@
         },
         {
           "_postman_id": "39ea84c3-fe9e-5f43-d344-27abddcd414d",
-          "name": "Hierarchical Comments copy",
+          "name": "Hierarchical Comments",
           "event": [
             {
               "listen": "test",
