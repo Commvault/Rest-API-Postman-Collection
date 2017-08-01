@@ -16969,7 +16969,7 @@
         },
         {
           "_postman_id": "57876a77-731e-6876-9fe2-af574a05c034",
-          "name": "Add a Comment copy",
+          "name": "Add a Comment",
           "event": [
             {
               "listen": "test",
