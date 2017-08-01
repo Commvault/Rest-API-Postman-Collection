@@ -18180,7 +18180,7 @@
         },
         {
           "_postman_id": "a4aaaae1-5305-5b53-1321-d0c741169f81",
-          "name": "Discussion by ID copy",
+          "name": "Discussion by ID",
           "event": [
             {
               "listen": "test",
@@ -18363,7 +18363,7 @@
         },
         {
           "_postman_id": "e08af6a5-7873-eb5e-ac3f-e947a0ba71de",
-          "name": "Discussion copy",
+          "name": "Discussion",
           "event": [
             {
               "listen": "test",
