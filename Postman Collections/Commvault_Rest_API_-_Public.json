@@ -48215,7 +48215,61 @@
       "_postman_id": "2aeaf0e3-3bae-fa8a-0376-1690bba74bf4",
       "name": "QCommands",
       "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/c_qcommand_rest_apis.htm",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "c9673463-1971-6dbc-ed5c-e8a2e133a504",
+          "name": "Execute QCommand 2 copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/ExecuteQCommand",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "command",
+                  "type": "text",
+                  "value": "qoperation execute"
+                },
+                {
+                  "key": "inputRequestXML",
+                  "type": "text",
+                  "value": "<App_SetControlPanelParametersRequest>   <preventAdminAccessToUserData>true</preventAdminAccessToUserData> </App_SetControlPanelParametersRequest>"
+                }
+              ]
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_execute_qcommand.htm"
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "0d6c57ae-3860-7d04-ff16-fa40500b7c97",
