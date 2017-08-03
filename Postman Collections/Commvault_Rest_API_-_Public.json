@@ -48218,7 +48218,7 @@
       "item": [
         {
           "_postman_id": "c9673463-1971-6dbc-ed5c-e8a2e133a504",
-          "name": "Execute QCommand 2 copy",
+          "name": "Execute QCommand",
           "event": [
             {
               "listen": "test",
