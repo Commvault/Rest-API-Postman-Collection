@@ -44981,7 +44981,14 @@
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_execute_qcommand.htm"
           },
           "response": []
-        },
+        }
+      ]
+    },
+    {
+      "_postman_id": "429ce148-73a4-b2cd-6a62-1fc3c03a6532",
+      "name": "Global Parameters",
+      "description": "",
+      "item": [
         {
           "_postman_id": "0d6c57ae-3860-7d04-ff16-fa40500b7c97",
           "name": "Global Parameter",
@@ -45127,12 +45134,6 @@
           ]
         }
       ]
-    },
-    {
-      "_postman_id": "429ce148-73a4-b2cd-6a62-1fc3c03a6532",
-      "name": "Global Parameters",
-      "description": "",
-      "item": []
     }
   ]
 }
