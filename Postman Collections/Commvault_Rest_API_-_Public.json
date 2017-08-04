@@ -45127,6 +45127,12 @@
           ]
         }
       ]
+    },
+    {
+      "_postman_id": "429ce148-73a4-b2cd-6a62-1fc3c03a6532",
+      "name": "Global Parameters",
+      "description": "",
+      "item": []
     }
   ]
 }
