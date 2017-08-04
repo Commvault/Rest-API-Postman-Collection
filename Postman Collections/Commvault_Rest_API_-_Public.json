@@ -11249,7 +11249,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Discussion",
+            "url": "{{ServerUrl}}/Discussion/",
             "method": "POST",
             "header": [
               {
