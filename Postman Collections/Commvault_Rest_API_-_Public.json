@@ -17129,7 +17129,127 @@
           "_postman_id": "99618c55-6c9a-8e12-ecca-3aafa73dfb2a",
           "name": "Edge Drive Discussions",
           "description": "",
-          "item": [],
+          "item": [
+            {
+              "_postman_id": "0c543411-6d05-7fee-882a-bbfac7e878e5",
+              "name": "Create a Discussion",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
+                      "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
+                      "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                      "",
+                      "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"{{$guid}}\",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
+                },
+                "description": "Creates a new discussion with the details supplied in message."
+              },
+              "response": [
+                {
+                  "id": "2cfb0537-8ca8-dbd0-983a-2f949a9f8ad6",
+                  "name": "POST Create a Discussion",
+                  "originalRequest": {
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "_postman_previewtype": "text",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "465",
+                      "name": "Content-Length",
+                      "description": ""
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Mon, 31 Jul 2017 17:24:42 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": ""
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "nkatzvm2.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                      "key": "JSESSIONID"
+                    },
+                    {
+                      "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "nkatzvm2.testlab.commvault.com",
+                      "path": "/",
+                      "secure": false,
+                      "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "2173",
+                  "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521882,\"commentId\":10,\"modified\":1501521882,\"content\":\"testcontent\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r},\"error\":{\r\r}\r}"
+                }
+              ]
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
@@ -20171,125 +20291,6 @@
               ],
               "responseTime": "112",
               "body": "<Api_TagsRespList />"
-            }
-          ]
-        },
-        {
-          "_postman_id": "0c543411-6d05-7fee-882a-bbfac7e878e5",
-          "name": "Create a Discussion",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
-                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
-                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"{{$guid}}\",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Creates a new discussion with the details supplied in message."
-          },
-          "response": [
-            {
-              "id": "2cfb0537-8ca8-dbd0-983a-2f949a9f8ad6",
-              "name": "POST Create a Discussion",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "465",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 31 Jul 2017 17:24:42 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Wed Apr 01 2037 09:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "2173",
-              "body": "{\r\"discussion\":{\r\"entityType\":1,\"discussionId\":7,\"created\":1501521882,\"entityGUID\":\"30bd5644-41b9-4dab-b961-7224809b885f \",\"modified\":1501521882,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":7,\"created\":1501521882,\"commentId\":10,\"modified\":1501521882,\"content\":\"testcontent\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r},\"error\":{\r\r}\r}"
             }
           ]
         },
