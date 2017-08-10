@@ -20296,6 +20296,31 @@
                   "tests[\"Successful POST request\"] = responseCode.code === 200"
                 ]
               }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setEnvironmentVariable(\"FolderName\", \"DemoFolder\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileData\", \"Demo File Content\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileSize\", \"17\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"SecondFileSize\", \"34\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileModifiedtime\", \"1481595468\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ParentFolderPath\", \"XERlbW9Gb2xkZXI=\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                ]
+              }
             }
           ],
           "request": {
