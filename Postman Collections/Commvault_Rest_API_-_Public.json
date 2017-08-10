@@ -27256,6 +27256,21 @@
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "274295c8-8f77-37b2-ab24-4c0190ebf9c5",
+          "name": "Create an ObjectStore",
+          "request": {
+            "url": null,
+            "method": null,
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
