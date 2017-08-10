@@ -12047,6 +12047,21 @@
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "e8236fd7-a2fd-c7f4-1a1a-5ad6cf49f517",
+          "name": "Environment Setup",
+          "request": {
+            "url": null,
+            "method": null,
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
