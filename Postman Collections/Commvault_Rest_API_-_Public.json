@@ -32882,6 +32882,21 @@
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "e4022193-ea79-a3f9-edf8-04a562eeb760",
+          "name": "Create an ObjectStore",
+          "request": {
+            "url": null,
+            "method": null,
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
