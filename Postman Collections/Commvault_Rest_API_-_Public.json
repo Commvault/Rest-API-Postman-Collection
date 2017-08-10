@@ -11840,15 +11840,62 @@
         {
           "_postman_id": "e8236fd7-a2fd-c7f4-1a1a-5ad6cf49f517",
           "name": "Environment Setup",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setEnvironmentVariable(\"FolderName\", \"DemoFolder\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileData\", \"Demo File Content\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileSize\", \"17\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"SecondFileSize\", \"34\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileModifiedtime\", \"1481595468\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ParentFolderPath\", \"XERlbW9Gb2xkZXI=\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                ]
+              }
+            }
+          ],
           "request": {
-            "url": null,
-            "method": null,
-            "header": [],
+            "url": "{{ServerUrl}}/Login",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "description": null
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
           },
           "response": [
             {
