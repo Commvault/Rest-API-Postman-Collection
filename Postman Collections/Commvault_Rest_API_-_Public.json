@@ -16534,7 +16534,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
