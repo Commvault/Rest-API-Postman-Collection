@@ -32969,15 +32969,88 @@
         {
           "_postman_id": "e4022193-ea79-a3f9-edf8-04a562eeb760",
           "name": "Create an ObjectStore",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
+                  "",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setEnvironmentVariable(\"FolderName\", \"DemoFolder\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileData\", \"Demo File Content\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileSize\", \"17\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"SecondFileSize\", \"34\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileModifiedtime\", \"1481595468\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ParentFolderPath\", \"XERlbW9Gb2xkZXI=\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                ]
+              }
+            }
+          ],
           "request": {
-            "url": null,
-            "method": null,
-            "header": [],
+            "url": {
+              "raw": "{{ServerUrl}}/contentstore?type=testcontentstore",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "contentstore"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "testcontentstore",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "description": null
+            "description": "Use this operation to create an ObjectStore.\r\n\r\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore.htm"
           },
           "response": [
             {
