@@ -36143,7 +36143,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/SchedulePolicy/151",
+            "url": "{{ServerUrl}}/SchedulePolicy/2",
             "method": "GET",
             "header": [
               {
