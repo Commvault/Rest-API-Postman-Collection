@@ -32235,7 +32235,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoShareFile1.doc\",\n  \"name\":\"DemoShareFile1Renamed.doc\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoFile1.doc\",\n  \"name\":\"DemoShareFile1Renamed.doc\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_folder_rename.htm"
           },
