@@ -33221,7 +33221,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoShareFolder2\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoShareFolder3\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_preview_by_filepath.htm"
           },
