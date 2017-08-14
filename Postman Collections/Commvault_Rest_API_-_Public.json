@@ -22410,6 +22410,137 @@
           ]
         },
         {
+          "_postman_id": "e4b8dc22-acab-a601-cf4b-1e5b4358cd25",
+          "name": "Rename a File by Path",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/contentstore/action/rename",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile1.doc\",\n  \"name\":\"DemoFile1Renamed.doc\"\n}"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_rename.htm"
+          },
+          "response": [
+            {
+              "id": "557530e6-445a-0d57-1ec5-eac565e0592e",
+              "name": "POST Rename a File by Path",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/contentstore/action/rename",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1.doc\" name=\"DemoFile1Renamed.doc\" />"
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "17"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Fri, 07 Jul 2017 14:04:32 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "436",
+              "body": "{\r\"errorCode\":0\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "46b4e611-13cb-2fbb-4c26-47e28d0769fd",
           "name": "Rename a File by ID",
           "event": [
@@ -22537,137 +22668,6 @@
                 }
               ],
               "responseTime": "350",
-              "body": "{\r\"errorCode\":0\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "e4b8dc22-acab-a601-cf4b-1e5b4358cd25",
-          "name": "Rename a File by Path",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/contentstore/action/rename",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile1.doc\",\n  \"name\":\"DemoFile1Renamed.doc\"\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_rename.htm"
-          },
-          "response": [
-            {
-              "id": "557530e6-445a-0d57-1ec5-eac565e0592e",
-              "name": "POST Rename a File by Path",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/contentstore/action/rename",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1.doc\" name=\"DemoFile1Renamed.doc\" />"
-                },
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "17"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Fri, 07 Jul 2017 14:04:32 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "436",
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
