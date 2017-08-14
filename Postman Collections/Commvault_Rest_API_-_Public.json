@@ -20940,7 +20940,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"FOLDER_GUID\", jsonData.fileResource.GUID);",
+                  "postman.setEnvironmentVariable(\"SECONDFOLDER_GUID\", jsonData.fileResource.GUID);",
                   "",
                   "tests[\"Status code is 201\"] = responseCode.code === 201;",
                   "",
