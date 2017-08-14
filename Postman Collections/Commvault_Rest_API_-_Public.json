@@ -24089,7 +24089,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile1Renamed.doc\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile2Renamed.doc\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm"
           },
