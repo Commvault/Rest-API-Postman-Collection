@@ -25035,8 +25035,8 @@
           ]
         },
         {
-          "_postman_id": "223565d5-47ae-3be0-f55e-492dcd3ba6bb",
-          "name": "Delete Folder2",
+          "_postman_id": "7c1c82ef-985c-bf73-1755-24162a99b4b8",
+          "name": "Delete Folder",
           "event": [
             {
               "listen": "test",
@@ -25071,7 +25071,7 @@
           },
           "response": [
             {
-              "id": "f899f8bd-c7f0-9734-e6b3-21c49e3bea26",
+              "id": "577ee629-1dee-040e-b601-e885dafee719",
               "name": "DELETE Delete Folder",
               "originalRequest": {
                 "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}",
@@ -25156,8 +25156,8 @@
           ]
         },
         {
-          "_postman_id": "7c1c82ef-985c-bf73-1755-24162a99b4b8",
-          "name": "Delete Folder",
+          "_postman_id": "223565d5-47ae-3be0-f55e-492dcd3ba6bb",
+          "name": "Delete Folder copy",
           "event": [
             {
               "listen": "test",
@@ -25192,7 +25192,7 @@
           },
           "response": [
             {
-              "id": "577ee629-1dee-040e-b601-e885dafee719",
+              "id": "f899f8bd-c7f0-9734-e6b3-21c49e3bea26",
               "name": "DELETE Delete Folder",
               "originalRequest": {
                 "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}",
