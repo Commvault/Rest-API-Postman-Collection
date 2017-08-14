@@ -24054,137 +24054,6 @@
           ]
         },
         {
-          "_postman_id": "5b3b74c1-b1a8-9a56-c9cb-1b2a0cbda6f9",
-          "name": "Delete a File by Path",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/contentstore/action/delete",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoFile2Renamed.doc\"\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm"
-          },
-          "response": [
-            {
-              "id": "20327bd5-f5af-38b5-226d-81ea833dafdb",
-              "name": "POST Delete a File By Path",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/contentstore/action/delete",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1Renamed.doc\"/>"
-                },
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "17"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Fri, 07 Jul 2017 15:06:20 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "468",
-              "body": "{\r\"errorCode\":0\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "0b6dc637-c192-53e6-d44e-f4dcfb56c463",
           "name": "Move a File by Path",
           "event": [
@@ -24311,6 +24180,137 @@
                 }
               ],
               "responseTime": "1075",
+              "body": "{\r\"errorCode\":0\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "5b3b74c1-b1a8-9a56-c9cb-1b2a0cbda6f9",
+          "name": "Delete a File by Path",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/contentstore/action/delete",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"path\":\"\\\\DemoFile2Renamed.doc\"\n}"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm"
+          },
+          "response": [
+            {
+              "id": "20327bd5-f5af-38b5-226d-81ea833dafdb",
+              "name": "POST Delete a File By Path",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/contentstore/action/delete",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1Renamed.doc\"/>"
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "17"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Fri, 07 Jul 2017 15:06:20 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "468",
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
