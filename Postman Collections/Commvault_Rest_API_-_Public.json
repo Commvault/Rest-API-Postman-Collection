@@ -43491,7 +43491,7 @@
         },
         {
           "_postman_id": "c7000043-478e-e6b0-10c5-5c1682dce351",
-          "name": "Virtualiation Clients",
+          "name": "Virtualization Clients",
           "event": [
             {
               "listen": "test",
