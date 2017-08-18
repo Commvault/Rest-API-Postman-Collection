@@ -43176,7 +43176,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/VSAclientlist?userId={userId}",
+              "raw": "{{ServerUrl}}/VSAclientlist?userId={{userId}}",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
@@ -43187,7 +43187,7 @@
               "query": [
                 {
                   "key": "userId",
-                  "value": "{userId}",
+                  "value": "{{userId}}",
                   "equals": true,
                   "description": ""
                 }
