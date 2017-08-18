@@ -43726,20 +43726,30 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/VSBrowse/{pseudoClientId}/{entityName}?requestType={requestType}",
+              "raw": "{{ServerUrl}}/VMBrowse?PseudoClientId={PseudoClientId}&inventoryPath={\\type:name}&server={server}",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
-                "VSBrowse",
-                "{pseudoClientId}",
-                "{entityName}"
+                "VMBrowse"
               ],
               "query": [
                 {
-                  "key": "requestType",
-                  "value": "{requestType}",
+                  "key": "PseudoClientId",
+                  "value": "{PseudoClientId}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "inventoryPath",
+                  "value": "{\\type:name}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "server",
+                  "value": "{server}",
                   "equals": true,
                   "description": ""
                 }
