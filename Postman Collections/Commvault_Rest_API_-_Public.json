@@ -43823,13 +43823,16 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  ""
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"errorCode is 0\"] = jsonData.errorCode === 0;"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Subclient/{subclientId}/content",
+            "url": "{{ServerUrl}}/Subclient/{{vsubclientId}}/content",
             "method": "PUT",
             "header": [
               {
