@@ -3528,7 +3528,170 @@
             },
             "description": "This Request returns virtualization clients.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm"
           },
-          "response": []
+          "response": [
+            {
+              "id": "d470ba90-3f9b-45ce-c2a4-96838b15cbe1",
+              "name": "Get Virtualization Clients",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Client"
+                  ],
+                  "query": [
+                    {
+                      "key": "PseudoClientType",
+                      "value": "VSPseudo",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "4",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Aug 2017 14:12:28 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "34",
+              "body": "{\r\r}"
+            },
+            {
+              "id": "dfe170ba-d8b5-ac4e-c493-022991e8c7cb",
+              "name": "Get Virtual Discovered Clients",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Client?hiddenclients=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Client"
+                  ],
+                  "query": [
+                    {
+                      "key": "hiddenclients",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "3563",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Aug 2017 14:09:21 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "4737",
+              "body": "{\r\"clientProperties\":[\r{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":2,\"clientName\":\"greenvalley\",\"type\":0,\"_type_\":3,\"clientGUID\":\"41A187A4-60AA-4744-8324-E7F4980CADA9\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":5,\"clientName\":\"yashservernj1\",\"type\":0,\"_type_\":3,\"clientGUID\":\"80B74748-6F1B-44B2-B8F8-ED107283CBFE\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":6,\"clientName\":\"GeneralObjectStore\",\"type\":0,\"_type_\":3,\"clientGUID\":\"602DBB07-F748-476F-AEAE-86E144EC5991\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8405,\"clientEntity\":{\r\"clientId\":7,\"clientName\":\"yashservernj2_2\",\"type\":0,\"_type_\":3,\"clientGUID\":\"504764AD-2AD7-4233-801D-E6D6B3C7B299\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":8,\"clientName\":\"YashNJCentOS\",\"type\":0,\"_type_\":3,\"clientGUID\":\"C5BFB0C3-49B4-4583-BD6A-290C56A48EAD\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":10,\"clientName\":\"TestObjectStore1_Client\",\"type\":0,\"_type_\":3,\"clientGUID\":\"72097FC7-2F06-4669-A1F7-25C6AF7831AD\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":11,\"clientName\":\"cvdv112f9t\",\"type\":0,\"_type_\":3,\"clientGUID\":\"A57708C4-2169-49FE-B6A4-52991FE501AE\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":25,\"clientName\":\"Edge Client For Hackathon Users\",\"type\":0,\"_type_\":3,\"clientGUID\":\"87F8DD27-44AC-4033-97A2-2397A0F17E06\"\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":27,\"clientName\":\"nfsosctrl\",\"type\":0,\"_type_\":3,\"clientGUID\":\"AE5F6DD7-66F7-492E-AD70-7D5D1114B49F\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":37,\"clientName\":\"NFSObjectStoreManualTest_Client\",\"type\":0,\"_type_\":3,\"clientGUID\":\"808C7614-E682-4BA3-9453-BAC49D96B3B0\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":59,\"clientName\":\"snashikkartest_Client\",\"type\":0,\"_type_\":3,\"clientGUID\":\"6B80D35C-6DAB-4404-B93D-83E2F01AAA76\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":79,\"clientName\":\"NFSObjectStoreEnduranceAutomation50528_Client\",\"type\":0,\"_type_\":3,\"clientGUID\":\"3109A8BC-91D8-4B7D-A5B9-71D349C33797\"\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":80,\"clientName\":\"execter\",\"type\":0,\"_type_\":3,\"clientGUID\":\"D7E997E9-D8E1-4477-A1D0-71C6D9C33F57\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":85,\"clientName\":\"greenvalley_AnalyticsServer\",\"type\":0,\"_type_\":3,\"clientGUID\":\"2B3554B0-BA7E-480F-8FD7-44FD7ADD09A3\"\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":86,\"clientName\":\"yashservernj2_2_AnalyticsServer\",\"type\":0,\"_type_\":3,\"clientGUID\":\"300774F3-FE6C-4F88-ABBB-40F6D286F1CE\"\r}\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "6e7bd5bf-2792-07e3-70cb-70ea4657144f",
@@ -6333,7 +6496,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
