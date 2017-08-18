@@ -43567,7 +43567,7 @@
         },
         {
           "_postman_id": "22b9956f-0b6e-5afb-0940-9057ad0ea835",
-          "name": "HyperV Virtualization Client copy",
+          "name": "VMware Virtualization Client",
           "event": [
             {
               "listen": "test",
