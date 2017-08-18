@@ -43221,6 +43221,67 @@
           "response": []
         },
         {
+          "_postman_id": "354161f0-9e66-19eb-b8f8-437a18c94a1c",
+          "name": "Virtual Server Agent Clients copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/VSAclientlist?userId={{userId}}",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "VSAclientlist"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskInfo\": {\n    \"associations\": [\n      {\n        \"type\": 0,\n        \"clientName\": \"{VirtualizationclientName}\",\n        \"clientSidePackage\": true,\n        \"subclientName\": \"\",\n        \"backupsetName\": \"{BackupSetName}\",\n        \"instanceName\": \"VMware\",\n        \"appName\": \"Virtual Server\",\n        \"consumeLicense\": true\n      }\n    ],\n    \"task\": {\n      \"taskType\": 1,\n      \"initiatedFrom\": 2,\n      \"policyType\": 0,\n      \"taskFlags\": {\n        \"disabled\": false\n      }\n    },\n    \"subTasks\": [\n      {\n        \"subTask\": {\n          \"subTaskName\": \"\",\n          \"subTaskType\": 3,\n          \"operationType\": 1001\n        },\n        \"options\": {\n          \"adminOpts\": {\n            \"updateOption\": {\n              \"invokeLevel\": 0\n            }\n          },\n          \"restoreOptions\": {\n            \"restoreACLsType\": 3,\n            \"virtualServerRstOption\": {\n              \"isDiskBrowse\": true,\n              \"viewType\": 0,\n              \"userPassword\": {\n                \"userName\": \"root\"\n              },\n              \"diskLevelVMRestoreOption\": {\n                \"passUnconditionalOverride\": true,\n                \"powerOnVmAfterRestore\": true,\n                \"esxServerName\": \"\",\n                \"advancedRestoreOptions\": [\n                  {\n                    \"esxHost\": \"{esxHost}\",\n                    \"resourcePoolPath\": \"/\",\n                    \"newName\": \"newvmname\",\n                    \"Datastore\": \"LOCAL\",\n                    \"name\": \"vmname\",\n                    \"guid\": \"50121224-4c9e-3227-a161-2117e50972e8\",\n                    \"disks\": [\n                      {\n                        \"Datastore\": \"LOCAL\",\n                        \"name\": \"scsi0-0-diskname.vmdk\"\n                      },\n                      {\n                        \"Datastore\": \"LOCAL\",\n                        \"name\": \"scsi0-1-diskname_1.vmdk\"\n                      }\n                    ]\n                  }\n                ]\n              }\n            },\n            \"volumeRstOption\": {\n              \"volumeLeveRestore\": false,\n              \"volumeLevelRestoreType\": 1\n            },\n            \"browseOption\": {\n              \"listMedia\": false,\n              \"useExactIndex\": false,\n              \"noImage\": true,\n              \"fromTime\": 0,\n              \"commCellId\": 2,\n              \"toTime\": 0,\n              \"mediaOption\": {\n                \"copyPrecedence\": {\n                  \"copyPrecedence\": 0\n                }\n              },\n              \"backupset\": {\n                \"clientName\": \"{VirtualizationclientName}\",\n                \"instanceName\": \"VMware\",\n                \"appName\": \"Virtual Server\",\n                \"backupsetName\": \"{BackupSetName}\"\n              }\n            },\n            \"commonOptions\": {\n              \"clusterDBBackedup\": false,\n              \"isFromBrowseBackup\": true,\n              \"preserveLevel\": 1,\n              \"stripLevelType\": 0,\n              \"restoreACLs\": true,\n              \"stripLevel\": 0,\n              \"overwriteFiles\": true,\n              \"unconditionalOverwrite\": true,\n              \"detectRegularExpression\": true\n            },\n            \"destination\": {\n              \"isLegalHold\": false,\n              \"inPlace\": false,\n              \"destClient\": {\n                \"clientName\": \"{clientName}\",\n                \"commCellName\": \"{CSName}\"\n              }\n            },\n            \"fileOption\": {\n              \"sourceItem\": [\n                \"\\\\50121224-4c9e-3227-a161-2117e50972e8\"\n              ]\n            }\n          }\n        }\n      }\n    ]\n  }\n}"
+            },
+            "description": "This operation returns a list of clients where the Virtual Server agent is installed.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_virtual_server_agent_client.htm"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "5fcbbdcf-129b-d386-8b19-e4c9564f3747",
           "name": "Create Task (Restore)",
           "event": [
@@ -43264,67 +43325,6 @@
           "response": []
         }
       ]
-    },
-    {
-      "_postman_id": "354161f0-9e66-19eb-b8f8-437a18c94a1c",
-      "name": "Virtual Server Agent Clients copy",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Successful POST request\"] = responseCode.code === 200;",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "url": {
-          "raw": "{{ServerUrl}}/VSAclientlist?userId={{userId}}",
-          "auth": {},
-          "host": [
-            "{{ServerUrl}}"
-          ],
-          "path": [
-            "VSAclientlist"
-          ],
-          "query": [
-            {
-              "key": "userId",
-              "value": "{{userId}}",
-              "equals": true,
-              "description": ""
-            }
-          ],
-          "variable": []
-        },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          },
-          {
-            "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"taskInfo\": {\n    \"associations\": [\n      {\n        \"type\": 0,\n        \"clientName\": \"{VirtualizationclientName}\",\n        \"clientSidePackage\": true,\n        \"subclientName\": \"\",\n        \"backupsetName\": \"{BackupSetName}\",\n        \"instanceName\": \"VMware\",\n        \"appName\": \"Virtual Server\",\n        \"consumeLicense\": true\n      }\n    ],\n    \"task\": {\n      \"taskType\": 1,\n      \"initiatedFrom\": 2,\n      \"policyType\": 0,\n      \"taskFlags\": {\n        \"disabled\": false\n      }\n    },\n    \"subTasks\": [\n      {\n        \"subTask\": {\n          \"subTaskName\": \"\",\n          \"subTaskType\": 3,\n          \"operationType\": 1001\n        },\n        \"options\": {\n          \"adminOpts\": {\n            \"updateOption\": {\n              \"invokeLevel\": 0\n            }\n          },\n          \"restoreOptions\": {\n            \"restoreACLsType\": 3,\n            \"virtualServerRstOption\": {\n              \"isDiskBrowse\": true,\n              \"viewType\": 0,\n              \"userPassword\": {\n                \"userName\": \"root\"\n              },\n              \"diskLevelVMRestoreOption\": {\n                \"passUnconditionalOverride\": true,\n                \"powerOnVmAfterRestore\": true,\n                \"esxServerName\": \"\",\n                \"advancedRestoreOptions\": [\n                  {\n                    \"esxHost\": \"{esxHost}\",\n                    \"resourcePoolPath\": \"/\",\n                    \"newName\": \"newvmname\",\n                    \"Datastore\": \"LOCAL\",\n                    \"name\": \"vmname\",\n                    \"guid\": \"50121224-4c9e-3227-a161-2117e50972e8\",\n                    \"disks\": [\n                      {\n                        \"Datastore\": \"LOCAL\",\n                        \"name\": \"scsi0-0-diskname.vmdk\"\n                      },\n                      {\n                        \"Datastore\": \"LOCAL\",\n                        \"name\": \"scsi0-1-diskname_1.vmdk\"\n                      }\n                    ]\n                  }\n                ]\n              }\n            },\n            \"volumeRstOption\": {\n              \"volumeLeveRestore\": false,\n              \"volumeLevelRestoreType\": 1\n            },\n            \"browseOption\": {\n              \"listMedia\": false,\n              \"useExactIndex\": false,\n              \"noImage\": true,\n              \"fromTime\": 0,\n              \"commCellId\": 2,\n              \"toTime\": 0,\n              \"mediaOption\": {\n                \"copyPrecedence\": {\n                  \"copyPrecedence\": 0\n                }\n              },\n              \"backupset\": {\n                \"clientName\": \"{VirtualizationclientName}\",\n                \"instanceName\": \"VMware\",\n                \"appName\": \"Virtual Server\",\n                \"backupsetName\": \"{BackupSetName}\"\n              }\n            },\n            \"commonOptions\": {\n              \"clusterDBBackedup\": false,\n              \"isFromBrowseBackup\": true,\n              \"preserveLevel\": 1,\n              \"stripLevelType\": 0,\n              \"restoreACLs\": true,\n              \"stripLevel\": 0,\n              \"overwriteFiles\": true,\n              \"unconditionalOverwrite\": true,\n              \"detectRegularExpression\": true\n            },\n            \"destination\": {\n              \"isLegalHold\": false,\n              \"inPlace\": false,\n              \"destClient\": {\n                \"clientName\": \"{clientName}\",\n                \"commCellName\": \"{CSName}\"\n              }\n            },\n            \"fileOption\": {\n              \"sourceItem\": [\n                \"\\\\50121224-4c9e-3227-a161-2117e50972e8\"\n              ]\n            }\n          }\n        }\n      }\n    ]\n  }\n}"
-        },
-        "description": "This operation returns a list of clients where the Virtual Server agent is installed.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_virtual_server_agent_client.htm"
-      },
-      "response": []
     }
   ]
 }
