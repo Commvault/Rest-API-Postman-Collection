@@ -43667,7 +43667,27 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Client/VMPseudoClient",
+            "url": {
+              "raw": "{{ServerUrl}}/VSBrowse/{pseudoClientId}/{entityName}?requestType={requestType}",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "VSBrowse",
+                "{pseudoClientId}",
+                "{entityName}"
+              ],
+              "query": [
+                {
+                  "key": "requestType",
+                  "value": "{requestType}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
