@@ -43524,7 +43524,7 @@
         },
         {
           "_postman_id": "ff1bd0cf-4666-37af-4f00-11b720022f87",
-          "name": "HyperV Virtualization Client",
+          "name": "Hyper-V Virtualization Client",
           "event": [
             {
               "listen": "test",
