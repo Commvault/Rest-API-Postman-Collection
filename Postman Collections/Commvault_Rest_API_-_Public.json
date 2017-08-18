@@ -43625,7 +43625,7 @@
           ],
           "request": {
             "url": "{{ServerUrl}}/Client/VMPseudoClient",
-            "method": "POST",
+            "method": "PUT",
             "header": [
               {
                 "key": "Accept",
@@ -43645,7 +43645,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n   \"clientInfo\":{\r\n      \"clientType\":12,\r\n      \"virtualServerClientProperties\":{\r\n         \"virtualServerInstanceInfo\":{\r\n            \"vsInstanceType\":1,\r\n            \"associatedClients\":{\r\n               \"memberServers\":[\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  },\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  }\r\n               ]\r\n            },\r\n            \"vmwareVendor\":{\r\n               \"vcenterHostName\":\"\",\r\n               \"virtualCenter\":{\r\n                  \"password\":\"\",\r\n                  \"userName\":\"\"\r\n               }\r\n            }\r\n         }\r\n      }\r\n   },\r\n   \"entity\":{\r\n      \"clientName\":\"\"\r\n   }\r\n}"
+              "raw": "{\r\n   \"children\":[\r\n      {\r\n         \"equalsOrNotEquals\":true,\r\n         \"path\":\"\",\r\n         \"displayName\":\"\",\r\n         \"name\":\"\",\r\n         \"allOrAnyChildren\":true\r\n      },\r\n      {\r\n         \"equalsOrNotEquals\":true,\r\n         \"path\":\"\",\r\n         \"displayName\":\"\",\r\n         \"name\":\"\",\r\n         \"allOrAnyChildren\":true\r\n      }\r\n   ]\r\n}"
             },
             "description": "This operation adds or updates subclient virtual machine content.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_vm_subclient_content.htm"
           },
