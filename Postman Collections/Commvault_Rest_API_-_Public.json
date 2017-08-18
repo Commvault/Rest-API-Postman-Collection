@@ -43989,7 +43989,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/VMBrowse?PseudoClientId={PseudoClientId}&inventoryPath={\\type:name}&server={server}",
+              "raw": "{{ServerUrl}}/VMBrowse?PseudoClientId={{vclientId}}&inventoryPath=%5Cnone%3AVMs",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
@@ -44000,19 +44000,13 @@
               "query": [
                 {
                   "key": "PseudoClientId",
-                  "value": "{PseudoClientId}",
+                  "value": "{{vclientId}}",
                   "equals": true,
                   "description": ""
                 },
                 {
                   "key": "inventoryPath",
-                  "value": "{\\type:name}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "server",
-                  "value": "{server}",
+                  "value": "%5Cnone%3AVMs",
                   "equals": true,
                   "description": ""
                 }
