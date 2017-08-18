@@ -43624,7 +43624,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Client/VMPseudoClient",
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}/content",
             "method": "PUT",
             "header": [
               {
