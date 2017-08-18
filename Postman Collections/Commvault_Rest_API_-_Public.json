@@ -43429,108 +43429,6 @@
           ]
         },
         {
-          "_postman_id": "88243f3e-d660-b65e-f6d3-704e2b7bb770",
-          "name": "User copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains users\"] = responseBody.has(\"users\");",
-                  "",
-                  "tests[\"Response Body contains userEntity\"] = responseBody.has(\"userEntity\");",
-                  "",
-                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
-                  "",
-                  "tests[\"Response Body contains userName\"] = responseBody.has(\"userName\");",
-                  "",
-                  "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "postman.setEnvironmentVariable(\"userId\", jsonData.users[0].userEntity.userId);"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/User",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "This operation returns a list of users.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_user.htm"
-          },
-          "response": [
-            {
-              "id": "d3ece24d-ff84-88d5-ffe0-57b272af7329",
-              "name": "User",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1095",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 30 May 2017 04:17:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "2159",
-              "body": "{\r\"users\":[\r{\r\"removeOtherActiveSessions\":true,\"associatedUserGroupsOperationType\":2,\"idleTime\":60208,\"lastLogIntime\":0,\"associatedExternalUserGroupsOperationType\":2,\"loggedInMode\":3,\"userEntity\":{\r\"userGUID\":\"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"removeOtherActiveSessions\":true,\"associatedUserGroupsOperationType\":2,\"idleTime\":0,\"lastLogIntime\":0,\"associatedExternalUserGroupsOperationType\":2,\"loggedInMode\":0,\"userEntity\":{\r\"userGUID\":\"59CBCFF9-ADA1-4A72-B74C-306B3427BD73\",\"userName\":\"ObjectStoreUser\",\"userId\":3\r}\r},{\r\"removeOtherActiveSessions\":true,\"associatedUserGroupsOperationType\":2,\"idleTime\":0,\"lastLogIntime\":0,\"associatedExternalUserGroupsOperationType\":2,\"loggedInMode\":0,\"userEntity\":{\r\"userGUID\":\"3792D8E7-BE0B-4F0E-8604-86D9860D4F32\",\"userName\":\"edgeuser\",\"userId\":4\r}\r},{\r\"removeOtherActiveSessions\":true,\"associatedUserGroupsOperationType\":2,\"idleTime\":0,\"lastLogIntime\":0,\"associatedExternalUserGroupsOperationType\":2,\"loggedInMode\":0,\"userEntity\":{\r\"userGUID\":\"BDE141F7-CD4C-4869-8B88-1080E9EBAA0B\",\"userName\":\"jdoe\",\"userId\":8\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "4ae6a38c-0e62-8f84-2bd8-08b22c5c7b6f",
           "name": "Virtual Server Agent Clients",
           "event": [
@@ -43921,6 +43819,108 @@
             "description": "This request restores a full virtual machine.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_create_task_restore.htm"
           },
           "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "88243f3e-d660-b65e-f6d3-704e2b7bb770",
+      "name": "User copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "tests[\"Response Body contains users\"] = responseBody.has(\"users\");",
+              "",
+              "tests[\"Response Body contains userEntity\"] = responseBody.has(\"userEntity\");",
+              "",
+              "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
+              "",
+              "tests[\"Response Body contains userName\"] = responseBody.has(\"userName\");",
+              "",
+              "tests[\"Response Body contains userId\"] = responseBody.has(\"userId\");",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "postman.setEnvironmentVariable(\"userId\", jsonData.users[0].userEntity.userId);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "{{ServerUrl}}/User",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": "This operation returns a list of users.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_user.htm"
+      },
+      "response": [
+        {
+          "id": "d3ece24d-ff84-88d5-ffe0-57b272af7329",
+          "name": "User",
+          "originalRequest": {
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "_postman_previewtype": "text",
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "1095",
+              "name": "Content-Length",
+              "description": ""
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8",
+              "name": "Content-Type",
+              "description": ""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 30 May 2017 04:17:49 GMT",
+              "name": "Date",
+              "description": ""
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/8.5",
+              "name": "Server",
+              "description": ""
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET",
+              "name": "X-Powered-By",
+              "description": ""
+            }
+          ],
+          "cookie": [],
+          "responseTime": "2159",
+          "body": "{\r\"users\":[\r{\r\"removeOtherActiveSessions\":true,\"associatedUserGroupsOperationType\":2,\"idleTime\":60208,\"lastLogIntime\":0,\"associatedExternalUserGroupsOperationType\":2,\"loggedInMode\":3,\"userEntity\":{\r\"userGUID\":\"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"removeOtherActiveSessions\":true,\"associatedUserGroupsOperationType\":2,\"idleTime\":0,\"lastLogIntime\":0,\"associatedExternalUserGroupsOperationType\":2,\"loggedInMode\":0,\"userEntity\":{\r\"userGUID\":\"59CBCFF9-ADA1-4A72-B74C-306B3427BD73\",\"userName\":\"ObjectStoreUser\",\"userId\":3\r}\r},{\r\"removeOtherActiveSessions\":true,\"associatedUserGroupsOperationType\":2,\"idleTime\":0,\"lastLogIntime\":0,\"associatedExternalUserGroupsOperationType\":2,\"loggedInMode\":0,\"userEntity\":{\r\"userGUID\":\"3792D8E7-BE0B-4F0E-8604-86D9860D4F32\",\"userName\":\"edgeuser\",\"userId\":4\r}\r},{\r\"removeOtherActiveSessions\":true,\"associatedUserGroupsOperationType\":2,\"idleTime\":0,\"lastLogIntime\":0,\"associatedExternalUserGroupsOperationType\":2,\"loggedInMode\":0,\"userEntity\":{\r\"userGUID\":\"BDE141F7-CD4C-4869-8B88-1080E9EBAA0B\",\"userName\":\"jdoe\",\"userId\":8\r}\r}\r]\r}"
         }
       ]
     }
