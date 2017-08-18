@@ -43533,49 +43533,6 @@
           "response": []
         },
         {
-          "_postman_id": "5fcbbdcf-129b-d386-8b19-e4c9564f3747",
-          "name": "Create Task (Restore)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/CreateTask",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"taskInfo\": {\n\t\t\"associations\": [\n\t\t\t{\n\t\t\t\t\"type\": 0,\n\t\t\t\t\"clientName\": \"{VirtualizationclientName}\",\n\t\t\t\t\"clientSidePackage\": true,\n\t\t\t\t\"subclientName\": \"\",\n\t\t\t\t\"backupsetName\": \"{BackupSetName}\",\n\t\t\t\t\"instanceName\": \"VMware\",\n\t\t\t\t\"appName\": \"Virtual Server\",\n\t\t\t\t\"consumeLicense\": true\n\t\t\t}\n\t\t],\n\t\t\"task\": {\n\t\t\t\"taskType\": 1,\n\t\t\t\"initiatedFrom\": 2,\n\t\t\t\"policyType\": 0,\n\t\t\t\"taskFlags\": {\n\t\t\t\t\"disabled\": false\n\t\t\t}\n\t\t},\n\t\t\"subTasks\": [\n\t\t\t{\n\t\t\t\t\"subTask\": {\n\t\t\t\t\t\"subTaskName\": \"\",\n\t\t\t\t\t\"subTaskType\": 3,\n\t\t\t\t\t\"operationType\": 1001\n\t\t\t\t},\n\t\t\t\t\"options\": {\n\t\t\t\t\t\"adminOpts\": {\n\t\t\t\t\t\t\"updateOption\": {\n\t\t\t\t\t\t\t\"invokeLevel\": 0\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"restoreOptions\": {\n\t\t\t\t\t\t\"restoreACLsType\": 3,\n\t\t\t\t\t\t\"virtualServerRstOption\": {\n\t\t\t\t\t\t\t\"isDiskBrowse\": true,\n\t\t\t\t\t\t\t\"viewType\": 0,\n\t\t\t\t\t\t\t\"userPassword\": {\n\t\t\t\t\t\t\t\t\"userName\": \"root\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"diskLevelVMRestoreOption\": {\n\t\t\t\t\t\t\t\t\"passUnconditionalOverride\": true,\n\t\t\t\t\t\t\t\t\"powerOnVmAfterRestore\": true,\n\t\t\t\t\t\t\t\t\"esxServerName\": \"\",\n\t\t\t\t\t\t\t\t\"advancedRestoreOptions\": [\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"esxHost\": \"{esxHost}\",\n\t\t\t\t\t\t\t\t\t\t\"resourcePoolPath\": \"/\",\n\t\t\t\t\t\t\t\t\t\t\"newName\": \"newvmname\",\n\t\t\t\t\t\t\t\t\t\t\"Datastore\": \"LOCAL\",\n\t\t\t\t\t\t\t\t\t\t\"name\": \"vmname\",\n\t\t\t\t\t\t\t\t\t\t\"guid\": \"50121224-4c9e-3227-a161-2117e50972e8\",\n\t\t\t\t\t\t\t\t\t\t\"disks\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"Datastore\": \"LOCAL\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"scsi0-0-diskname.vmdk\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"Datastore\": \"LOCAL\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"scsi0-1-diskname_1.vmdk\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"volumeRstOption\": {\n\t\t\t\t\t\t\t\"volumeLeveRestore\": false,\n\t\t\t\t\t\t\t\"volumeLevelRestoreType\": 1\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"browseOption\": {\n\t\t\t\t\t\t\t\"listMedia\": false,\n\t\t\t\t\t\t\t\"useExactIndex\": false,\n\t\t\t\t\t\t\t\"noImage\": true,\n\t\t\t\t\t\t\t\"fromTime\": 0,\n\t\t\t\t\t\t\t\"commCellId\": 2,\n\t\t\t\t\t\t\t\"toTime\": 0,\n\t\t\t\t\t\t\t\"mediaOption\": {\n\t\t\t\t\t\t\t\t\"copyPrecedence\": {\n\t\t\t\t\t\t\t\t\t\"copyPrecedence\": 0\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"backupset\": {\n\t\t\t\t\t\t\t\t\"clientName\": \"{VirtualizationclientName}\",\n\t\t\t\t\t\t\t\t\"instanceName\": \"VMware\",\n\t\t\t\t\t\t\t\t\"appName\": \"Virtual Server\",\n\t\t\t\t\t\t\t\t\"backupsetName\": \"{BackupSetName}\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"commonOptions\": {\n\t\t\t\t\t\t\t\"clusterDBBackedup\": false,\n\t\t\t\t\t\t\t\"isFromBrowseBackup\": true,\n\t\t\t\t\t\t\t\"preserveLevel\": 1,\n\t\t\t\t\t\t\t\"stripLevelType\": 0,\n\t\t\t\t\t\t\t\"restoreACLs\": true,\n\t\t\t\t\t\t\t\"stripLevel\": 0,\n\t\t\t\t\t\t\t\"overwriteFiles\": true,\n\t\t\t\t\t\t\t\"unconditionalOverwrite\": true,\n\t\t\t\t\t\t\t\"detectRegularExpression\": true\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"destination\": {\n\t\t\t\t\t\t\t\"isLegalHold\": false,\n\t\t\t\t\t\t\t\"inPlace\": false,\n\t\t\t\t\t\t\t\"destClient\": {\n\t\t\t\t\t\t\t\t\"clientName\": \"{clientName}\",\n\t\t\t\t\t\t\t\t\"commCellName\": \"{CSName}\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"fileOption\": {\n\t\t\t\t\t\t\t\"sourceItem\": [\n\t\t\t\t\t\t\t\t\"\\\\50121224-4c9e-3227-a161-2117e50972e8\"\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t}\n}"
-            },
-            "description": "This request restores a full virtual machine.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_create_task_restore.htm"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "ff1bd0cf-4666-37af-4f00-11b720022f87",
           "name": "Virtualization Clients copy",
           "event": [
@@ -43615,6 +43572,49 @@
               "raw": "{\n  \"taskInfo\": {\n    \"associations\": [\n      {\n        \"type\": 0,\n        \"clientName\": \"{VirtualizationclientName}\",\n        \"clientSidePackage\": true,\n        \"subclientName\": \"\",\n        \"backupsetName\": \"{BackupSetName}\",\n        \"instanceName\": \"VMware\",\n        \"appName\": \"Virtual Server\",\n        \"consumeLicense\": true\n      }\n    ],\n    \"task\": {\n      \"taskType\": 1,\n      \"initiatedFrom\": 2,\n      \"policyType\": 0,\n      \"taskFlags\": {\n        \"disabled\": false\n      }\n    },\n    \"subTasks\": [\n      {\n        \"subTask\": {\n          \"subTaskName\": \"\",\n          \"subTaskType\": 3,\n          \"operationType\": 1001\n        },\n        \"options\": {\n          \"adminOpts\": {\n            \"updateOption\": {\n              \"invokeLevel\": 0\n            }\n          },\n          \"restoreOptions\": {\n            \"restoreACLsType\": 3,\n            \"virtualServerRstOption\": {\n              \"isDiskBrowse\": true,\n              \"viewType\": 0,\n              \"userPassword\": {\n                \"userName\": \"root\"\n              },\n              \"diskLevelVMRestoreOption\": {\n                \"passUnconditionalOverride\": true,\n                \"powerOnVmAfterRestore\": true,\n                \"esxServerName\": \"\",\n                \"advancedRestoreOptions\": [\n                  {\n                    \"esxHost\": \"{esxHost}\",\n                    \"resourcePoolPath\": \"/\",\n                    \"newName\": \"newvmname\",\n                    \"Datastore\": \"LOCAL\",\n                    \"name\": \"vmname\",\n                    \"guid\": \"50121224-4c9e-3227-a161-2117e50972e8\",\n                    \"disks\": [\n                      {\n                        \"Datastore\": \"LOCAL\",\n                        \"name\": \"scsi0-0-diskname.vmdk\"\n                      },\n                      {\n                        \"Datastore\": \"LOCAL\",\n                        \"name\": \"scsi0-1-diskname_1.vmdk\"\n                      }\n                    ]\n                  }\n                ]\n              }\n            },\n            \"volumeRstOption\": {\n              \"volumeLeveRestore\": false,\n              \"volumeLevelRestoreType\": 1\n            },\n            \"browseOption\": {\n              \"listMedia\": false,\n              \"useExactIndex\": false,\n              \"noImage\": true,\n              \"fromTime\": 0,\n              \"commCellId\": 2,\n              \"toTime\": 0,\n              \"mediaOption\": {\n                \"copyPrecedence\": {\n                  \"copyPrecedence\": 0\n                }\n              },\n              \"backupset\": {\n                \"clientName\": \"{VirtualizationclientName}\",\n                \"instanceName\": \"VMware\",\n                \"appName\": \"Virtual Server\",\n                \"backupsetName\": \"{BackupSetName}\"\n              }\n            },\n            \"commonOptions\": {\n              \"clusterDBBackedup\": false,\n              \"isFromBrowseBackup\": true,\n              \"preserveLevel\": 1,\n              \"stripLevelType\": 0,\n              \"restoreACLs\": true,\n              \"stripLevel\": 0,\n              \"overwriteFiles\": true,\n              \"unconditionalOverwrite\": true,\n              \"detectRegularExpression\": true\n            },\n            \"destination\": {\n              \"isLegalHold\": false,\n              \"inPlace\": false,\n              \"destClient\": {\n                \"clientName\": \"{clientName}\",\n                \"commCellName\": \"{CSName}\"\n              }\n            },\n            \"fileOption\": {\n              \"sourceItem\": [\n                \"\\\\50121224-4c9e-3227-a161-2117e50972e8\"\n              ]\n            }\n          }\n        }\n      }\n    ]\n  }\n}"
             },
             "description": "This operation returns a list of virtualization clients, including clients with VMware or Microsoft Hyper-V instances and clients with the V9 Virtual Server agent installed.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_virtualization_client.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "5fcbbdcf-129b-d386-8b19-e4c9564f3747",
+          "name": "Create Task (Restore)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/CreateTask",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"taskInfo\": {\n\t\t\"associations\": [\n\t\t\t{\n\t\t\t\t\"type\": 0,\n\t\t\t\t\"clientName\": \"{VirtualizationclientName}\",\n\t\t\t\t\"clientSidePackage\": true,\n\t\t\t\t\"subclientName\": \"\",\n\t\t\t\t\"backupsetName\": \"{BackupSetName}\",\n\t\t\t\t\"instanceName\": \"VMware\",\n\t\t\t\t\"appName\": \"Virtual Server\",\n\t\t\t\t\"consumeLicense\": true\n\t\t\t}\n\t\t],\n\t\t\"task\": {\n\t\t\t\"taskType\": 1,\n\t\t\t\"initiatedFrom\": 2,\n\t\t\t\"policyType\": 0,\n\t\t\t\"taskFlags\": {\n\t\t\t\t\"disabled\": false\n\t\t\t}\n\t\t},\n\t\t\"subTasks\": [\n\t\t\t{\n\t\t\t\t\"subTask\": {\n\t\t\t\t\t\"subTaskName\": \"\",\n\t\t\t\t\t\"subTaskType\": 3,\n\t\t\t\t\t\"operationType\": 1001\n\t\t\t\t},\n\t\t\t\t\"options\": {\n\t\t\t\t\t\"adminOpts\": {\n\t\t\t\t\t\t\"updateOption\": {\n\t\t\t\t\t\t\t\"invokeLevel\": 0\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"restoreOptions\": {\n\t\t\t\t\t\t\"restoreACLsType\": 3,\n\t\t\t\t\t\t\"virtualServerRstOption\": {\n\t\t\t\t\t\t\t\"isDiskBrowse\": true,\n\t\t\t\t\t\t\t\"viewType\": 0,\n\t\t\t\t\t\t\t\"userPassword\": {\n\t\t\t\t\t\t\t\t\"userName\": \"root\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"diskLevelVMRestoreOption\": {\n\t\t\t\t\t\t\t\t\"passUnconditionalOverride\": true,\n\t\t\t\t\t\t\t\t\"powerOnVmAfterRestore\": true,\n\t\t\t\t\t\t\t\t\"esxServerName\": \"\",\n\t\t\t\t\t\t\t\t\"advancedRestoreOptions\": [\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"esxHost\": \"{esxHost}\",\n\t\t\t\t\t\t\t\t\t\t\"resourcePoolPath\": \"/\",\n\t\t\t\t\t\t\t\t\t\t\"newName\": \"newvmname\",\n\t\t\t\t\t\t\t\t\t\t\"Datastore\": \"LOCAL\",\n\t\t\t\t\t\t\t\t\t\t\"name\": \"vmname\",\n\t\t\t\t\t\t\t\t\t\t\"guid\": \"50121224-4c9e-3227-a161-2117e50972e8\",\n\t\t\t\t\t\t\t\t\t\t\"disks\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"Datastore\": \"LOCAL\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"scsi0-0-diskname.vmdk\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"Datastore\": \"LOCAL\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"scsi0-1-diskname_1.vmdk\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"volumeRstOption\": {\n\t\t\t\t\t\t\t\"volumeLeveRestore\": false,\n\t\t\t\t\t\t\t\"volumeLevelRestoreType\": 1\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"browseOption\": {\n\t\t\t\t\t\t\t\"listMedia\": false,\n\t\t\t\t\t\t\t\"useExactIndex\": false,\n\t\t\t\t\t\t\t\"noImage\": true,\n\t\t\t\t\t\t\t\"fromTime\": 0,\n\t\t\t\t\t\t\t\"commCellId\": 2,\n\t\t\t\t\t\t\t\"toTime\": 0,\n\t\t\t\t\t\t\t\"mediaOption\": {\n\t\t\t\t\t\t\t\t\"copyPrecedence\": {\n\t\t\t\t\t\t\t\t\t\"copyPrecedence\": 0\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"backupset\": {\n\t\t\t\t\t\t\t\t\"clientName\": \"{VirtualizationclientName}\",\n\t\t\t\t\t\t\t\t\"instanceName\": \"VMware\",\n\t\t\t\t\t\t\t\t\"appName\": \"Virtual Server\",\n\t\t\t\t\t\t\t\t\"backupsetName\": \"{BackupSetName}\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"commonOptions\": {\n\t\t\t\t\t\t\t\"clusterDBBackedup\": false,\n\t\t\t\t\t\t\t\"isFromBrowseBackup\": true,\n\t\t\t\t\t\t\t\"preserveLevel\": 1,\n\t\t\t\t\t\t\t\"stripLevelType\": 0,\n\t\t\t\t\t\t\t\"restoreACLs\": true,\n\t\t\t\t\t\t\t\"stripLevel\": 0,\n\t\t\t\t\t\t\t\"overwriteFiles\": true,\n\t\t\t\t\t\t\t\"unconditionalOverwrite\": true,\n\t\t\t\t\t\t\t\"detectRegularExpression\": true\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"destination\": {\n\t\t\t\t\t\t\t\"isLegalHold\": false,\n\t\t\t\t\t\t\t\"inPlace\": false,\n\t\t\t\t\t\t\t\"destClient\": {\n\t\t\t\t\t\t\t\t\"clientName\": \"{clientName}\",\n\t\t\t\t\t\t\t\t\"commCellName\": \"{CSName}\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"fileOption\": {\n\t\t\t\t\t\t\t\"sourceItem\": [\n\t\t\t\t\t\t\t\t\"\\\\50121224-4c9e-3227-a161-2117e50972e8\"\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t}\n}"
+            },
+            "description": "This request restores a full virtual machine.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_create_task_restore.htm"
           },
           "response": []
         }
