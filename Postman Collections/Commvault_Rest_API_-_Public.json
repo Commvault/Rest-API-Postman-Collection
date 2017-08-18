@@ -43175,8 +43175,26 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/CreateTask",
-            "method": "POST",
+            "url": {
+              "raw": "{{ServerUrl}}/VSAclientlist?userId={userId}",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "VSAclientlist"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{userId}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
             "header": [
               {
                 "key": "Accept",
