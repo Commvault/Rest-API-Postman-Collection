@@ -43630,7 +43630,10 @@
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains subClientProperties\"] = responseBody.has(\"subClientProperties\");",
-                  ""
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"vsubclientId\", jsonData.subClientProperties[0].subClientEntity.subclientId);"
                 ]
               }
             }
