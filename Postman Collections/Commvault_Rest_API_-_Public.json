@@ -43858,7 +43858,7 @@
         },
         {
           "_postman_id": "3db08c91-fb05-a7fe-06b8-1694ef16b520",
-          "name": "Datastore Browse",
+          "name": "Datastore Browse Inventory",
           "event": [
             {
               "listen": "test",
