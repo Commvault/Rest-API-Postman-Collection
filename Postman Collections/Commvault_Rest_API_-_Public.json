@@ -43916,7 +43916,7 @@
         },
         {
           "_postman_id": "5560e73f-0c03-0083-3cc1-d5157aab42b3",
-          "name": "Datastore Browse Inventory copy",
+          "name": "Datastore Browse on Host",
           "event": [
             {
               "listen": "test",
