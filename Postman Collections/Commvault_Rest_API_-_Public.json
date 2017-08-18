@@ -43610,7 +43610,7 @@
         },
         {
           "_postman_id": "8adf96e1-e7cb-db9d-330b-7a6ff8b988d4",
-          "name": "VMware Virtualization Client copy",
+          "name": "Subclient Virtual Machine Content",
           "event": [
             {
               "listen": "test",
@@ -43647,7 +43647,7 @@
               "mode": "raw",
               "raw": "{\r\n   \"clientInfo\":{\r\n      \"clientType\":12,\r\n      \"virtualServerClientProperties\":{\r\n         \"virtualServerInstanceInfo\":{\r\n            \"vsInstanceType\":1,\r\n            \"associatedClients\":{\r\n               \"memberServers\":[\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  },\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  }\r\n               ]\r\n            },\r\n            \"vmwareVendor\":{\r\n               \"vcenterHostName\":\"\",\r\n               \"virtualCenter\":{\r\n                  \"password\":\"\",\r\n                  \"userName\":\"\"\r\n               }\r\n            }\r\n         }\r\n      }\r\n   },\r\n   \"entity\":{\r\n      \"clientName\":\"\"\r\n   }\r\n}"
             },
-            "description": "This operation creates a virtualization client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_virtualization_client.htm"
+            "description": "This operation adds or updates subclient virtual machine content.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_vm_subclient_content.htm"
           },
           "response": []
         },
