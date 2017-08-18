@@ -43505,25 +43505,7 @@
             }
           ],
           "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/VSAclientlist?userId={{userId}}",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "VSAclientlist"
-              ],
-              "query": [
-                {
-                  "key": "userId",
-                  "value": "{{userId}}",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
+            "url": "{{ServerUrl}}/Client/VMPseudoClient",
             "method": "GET",
             "header": [
               {
