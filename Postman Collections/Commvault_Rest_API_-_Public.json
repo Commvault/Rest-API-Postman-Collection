@@ -43931,7 +43931,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/VSBrowse/{{vclientId}}/INVENTORY?requestType=INVENTORY",
+              "raw": "{{ServerUrl}}/VSBrowse/{{vclientId}}/172.24.25.146?requestType=DATASTORES_ON_HOST",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
@@ -43939,12 +43939,12 @@
               "path": [
                 "VSBrowse",
                 "{{vclientId}}",
-                "INVENTORY"
+                "172.24.25.146"
               ],
               "query": [
                 {
                   "key": "requestType",
-                  "value": "INVENTORY",
+                  "value": "DATASTORES_ON_HOST",
                   "equals": true,
                   "description": ""
                 }
