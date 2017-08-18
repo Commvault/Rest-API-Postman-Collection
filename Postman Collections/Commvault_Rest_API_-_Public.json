@@ -43873,20 +43873,20 @@
           ],
           "request": {
             "url": {
-              "raw": "{{ServerUrl}}/VSBrowse/{pseudoClientId}/{entityName}?requestType={requestType}",
+              "raw": "{{ServerUrl}}/VSBrowse/{{vclientId}}/INVENTORY?requestType=INVENTORY",
               "auth": {},
               "host": [
                 "{{ServerUrl}}"
               ],
               "path": [
                 "VSBrowse",
-                "{pseudoClientId}",
-                "{entityName}"
+                "{{vclientId}}",
+                "INVENTORY"
               ],
               "query": [
                 {
                   "key": "requestType",
-                  "value": "{requestType}",
+                  "value": "INVENTORY",
                   "equals": true,
                   "description": ""
                 }
