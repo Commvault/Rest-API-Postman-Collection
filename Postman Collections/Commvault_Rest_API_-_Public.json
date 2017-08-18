@@ -43581,7 +43581,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/Client/VMPseudoClient",
+            "url": "{{ServerUrl}}/Client",
             "method": "POST",
             "header": [
               {
