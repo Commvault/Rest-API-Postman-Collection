@@ -43650,6 +43650,49 @@
             "description": "This request restores a full virtual machine.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_create_task_restore.htm"
           },
           "response": []
+        },
+        {
+          "_postman_id": "8adf96e1-e7cb-db9d-330b-7a6ff8b988d4",
+          "name": "VMware Virtualization Client copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Client/VMPseudoClient",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"clientInfo\":{\r\n      \"clientType\":12,\r\n      \"virtualServerClientProperties\":{\r\n         \"virtualServerInstanceInfo\":{\r\n            \"vsInstanceType\":1,\r\n            \"associatedClients\":{\r\n               \"memberServers\":[\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  },\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  }\r\n               ]\r\n            },\r\n            \"vmwareVendor\":{\r\n               \"vcenterHostName\":\"\",\r\n               \"virtualCenter\":{\r\n                  \"password\":\"\",\r\n                  \"userName\":\"\"\r\n               }\r\n            }\r\n         }\r\n      }\r\n   },\r\n   \"entity\":{\r\n      \"clientName\":\"\"\r\n   }\r\n}"
+            },
+            "description": "This operation creates a virtualization client.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_virtualization_client.htm"
+          },
+          "response": []
         }
       ]
     }
