@@ -2570,6 +2570,126 @@
           ]
         },
         {
+          "_postman_id": "e53f07e1-5929-5e01-3e49-b0985865beb8",
+          "name": "Backup Set copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"exitval is 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
+                  "tests[\"errorCode is 0\"] = jsonData.response[0].errorCode === 0;",
+                  "",
+                  "postman.setEnvironmentVariable(\"backupsetId2\", jsonData.response[0].entity.backupsetId);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Backupset",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"association\": {\n    \"entity\": [\n      {\n        \"clientName\": \"{{clientName}}\",\n        \"subclientName\": \"default\",\n        \"backupsetName\": \"{{$guid}}\",\n        \"instanceName\": \"DefaultInstanceName\",\n        \"appName\": \"File System\"\n      }\n    ]\n  }\n}"
+            },
+            "description": "This operation creates a backup set.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_backup_set.htm"
+          },
+          "response": [
+            {
+              "id": "c0cbd02e-ee2c-3fd2-921c-abb47d4df43e",
+              "name": "POST BackupSet",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Backupset",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "enabled": true,
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "enabled": true,
+                    "disabled": false
+                  },
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"association\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\t\"subclientName\": \"default\",\n\t\t\t\t\"backupsetName\": \"ff5bd3eb-923c-4341-a9b6-cf96291985e6\",\n\t\t\t\t\"instanceName\": \"DefaultInstanceName\",\n\t\t\t\t\"appName\": \"File System\"\n\t\t\t}\n\t\t]\n\t}\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "283",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 30 May 2017 20:22:35 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "337",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"applicationId\":33,\"backupsetId\":231,\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":2,\"_type_\":0,\"consumeLicense\":true\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "d224becf-5c0c-3e5c-cc34-ada54b173280",
           "name": "Backup Set Properties",
           "event": [
@@ -2795,126 +2915,6 @@
               "cookie": [],
               "responseTime": "394",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"applicationId\":0,\"backupsetId\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":0,\"_type_\":0,\"consumeLicense\":true\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "e53f07e1-5929-5e01-3e49-b0985865beb8",
-          "name": "Backup Set copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"exitval is 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
-                  "tests[\"errorCode is 0\"] = jsonData.response[0].errorCode === 0;",
-                  "",
-                  "postman.setEnvironmentVariable(\"backupsetId2\", jsonData.response[0].entity.backupsetId);"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Backupset",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"association\": {\n    \"entity\": [\n      {\n        \"clientName\": \"{{clientName}}\",\n        \"subclientName\": \"default\",\n        \"backupsetName\": \"{{$guid}}\",\n        \"instanceName\": \"DefaultInstanceName\",\n        \"appName\": \"File System\"\n      }\n    ]\n  }\n}"
-            },
-            "description": "This operation creates a backup set.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_backup_set.htm"
-          },
-          "response": [
-            {
-              "id": "c0cbd02e-ee2c-3fd2-921c-abb47d4df43e",
-              "name": "POST BackupSet",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Backupset",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "enabled": true,
-                    "disabled": false
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "enabled": true,
-                    "disabled": false
-                  },
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "name": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"association\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\t\"subclientName\": \"default\",\n\t\t\t\t\"backupsetName\": \"ff5bd3eb-923c-4341-a9b6-cf96291985e6\",\n\t\t\t\t\"instanceName\": \"DefaultInstanceName\",\n\t\t\t\t\"appName\": \"File System\"\n\t\t\t}\n\t\t]\n\t}\n}"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "283",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 30 May 2017 20:22:35 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "337",
-              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"applicationId\":33,\"backupsetId\":231,\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":2,\"_type_\":0,\"consumeLicense\":true\r}\r}\r]\r}"
             }
           ]
         }
