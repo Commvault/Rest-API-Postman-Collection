@@ -22098,10 +22098,10 @@
               ],
               "query": [
                 {
-                  "key": "uploadType",
-                  "value": "fullFile",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "uploadType",
+                  "value": "fullFile"
                 }
               ],
               "variable": []
@@ -22109,39 +22109,39 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "FileName",
-                "value": "{{FileName1}}",
-                "description": ""
+                "value": "{{FileName1}}"
               },
               {
+                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ParentFolderPath}}",
-                "description": ""
+                "value": "{{ParentFolderPath}}"
               },
               {
+                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}",
-                "description": ""
+                "value": "{{FileModifiedtime}}"
               },
               {
+                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}",
-                "description": ""
+                "value": "{{FileSize}}"
               },
               {
+                "description": "",
                 "key": "FileEOF",
-                "value": "1",
-                "description": ""
+                "value": "1"
               }
             ],
             "body": {
@@ -34540,6 +34540,50 @@
             "body": {
               "mode": "raw",
               "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c6d3a067-6e20-ef19-9cef-0835ccc6e1f5",
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
+                  "",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "",
+                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
+                  "",
+                  "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Login",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
           },
