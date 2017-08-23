@@ -9626,6 +9626,49 @@
             "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
           },
           "response": []
+        },
+        {
+          "_postman_id": "27ee4448-64b9-a8e5-c319-d33fc1d26a2b",
+          "name": "Edit a Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcommentedit\"\r\n      }\r\n   ]\r\n}"
+            },
+            "description": "Edits an comment to in a discussion."
+          },
+          "response": []
         }
       ]
     },
@@ -21265,7 +21308,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"SECONDFOLDER_GUID\", jsonData.fileResource.GUID);",
+                  "postman.setEnvironmentVariable(\"FOLDER_GUID\", jsonData.fileResource.GUID);",
                   "",
                   "tests[\"Status code is 201\"] = responseCode.code === 201;",
                   "",
@@ -21298,7 +21341,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\":\"{{SecondFolderName}}\",\n  \"parentPath\":\"\\\\\"\n}\n"
+              "raw": "{\n  \"name\":\"{{FolderName}}\",\n  \"parentPath\":\"\\\\\"\n}\n"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_by_folderpath.htm"
           },
