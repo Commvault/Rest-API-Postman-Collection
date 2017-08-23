@@ -25287,7 +25287,7 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2Renamed.doc\");"
+                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");"
                 ]
               }
             }
@@ -44841,6 +44841,99 @@
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
             "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "752fac44-922a-f5a9-5540-3d06ceaedf50",
+          "name": "Edit a Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Error Code = 0\"] = jsonData.error.errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcommentedit\"\r\n      }\r\n   ]\r\n}"
+            },
+            "description": "Edits an comment to in a discussion."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "767b5535-fb91-a52c-b27d-f1c543971080",
+          "name": "Create a Discussion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
+                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
+                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "",
+                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
+            },
+            "description": "Creates a new discussion with the details supplied in message."
           },
           "response": []
         }
