@@ -1908,6 +1908,50 @@
               "body": "User logged out"
             }
           ]
+        },
+        {
+          "_postman_id": "f1c027b4-777e-5061-9b20-59b287a79ac2",
+          "name": "Log Back In",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
+                  "",
+                  "console.log(\"QSDK Token obtained is: \"+jsonData.token);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"userName Validation\"] = jsonData.userName === postman.getEnvironmentVariable(\"userName\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Login",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"password\": \"{{password}}\",\n  \"username\": \"{{userName}}\"\n}"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
+          },
+          "response": []
         }
       ]
     },
@@ -42729,6 +42773,52 @@
             "description": "Deletes a discussion"
           },
           "response": []
+        },
+        {
+          "_postman_id": "f5087aff-8251-38e4-e507-d50a06bc2ee5",
+          "name": "Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "",
+                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+            },
+            "description": "Gets a comment with given commentId"
+          },
+          "response": []
         }
       ]
     },
@@ -45800,6 +45890,43 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "f04cde1e-6134-e296-0642-e7e6bda382b3",
+      "name": "Discussion",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "{{ServerUrl}}/Discussion/{{discussionId}}",
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}",
+            "description": ""
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "description": "Deletes a discussion"
+      },
+      "response": []
     }
   ]
 }
