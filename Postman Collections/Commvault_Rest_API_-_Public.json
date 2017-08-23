@@ -44031,7 +44031,54 @@
       "_postman_id": "a8c64187-8432-644e-db35-c11497a1496c",
       "name": "Discussion Operations",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "043cd181-e1cb-8aae-ae93-dd2d409f624e",
+          "name": "Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "",
+                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+            },
+            "description": "Gets a comment with given commentId"
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
