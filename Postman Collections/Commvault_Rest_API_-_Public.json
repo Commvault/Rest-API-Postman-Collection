@@ -29867,7 +29867,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\":\"DemoShareFolder3\"\n}"
+              "raw": "{\n  \"name\":\"DemoShareFolder2\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_folder_by_id.htm"
           },
