@@ -10226,10 +10226,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "uploadType",
-                  "value": "fullFile"
+                  "value": "fullFile",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -10237,34 +10237,34 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileName",
-                "value": "{{FileName1}}"
+                "value": "{{FileName1}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}"
+                "value": "{{FileSize}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ShareParentFolderPath}}"
+                "value": "{{ShareParentFolderPath}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}"
+                "value": "{{FileModifiedtime}}",
+                "description": ""
               }
             ],
             "body": {
@@ -26416,10 +26416,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "uploadType",
-                  "value": "fullFile"
+                  "value": "fullFile",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -26427,34 +26427,34 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileName",
-                "value": "{{FileName1}}"
+                "value": "{{FileName1}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}"
+                "value": "{{FileSize}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ShareParentFolderPath}}"
+                "value": "{{ShareParentFolderPath}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}"
+                "value": "{{FileModifiedtime}}",
+                "description": ""
               }
             ],
             "body": {
@@ -29867,7 +29867,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\":\"DemoShareFolder2\"\n}"
+              "raw": "{\n  \"name\":\"DemoShareFolder3\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_folder_by_id.htm"
           },
