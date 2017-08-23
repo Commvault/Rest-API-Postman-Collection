@@ -9713,88 +9713,6 @@
             "description": "Deletes a discussion"
           },
           "response": []
-        },
-        {
-          "_postman_id": "558cb35f-f683-3a16-311d-70bc4c3ae7a2",
-          "name": "Logout",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Logout",
-            "method": "POST",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "7137a298-3a12-eb85-9223-3192a3706a95",
-          "name": "Add a Comment",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcomment\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Adds an comment to in a discussion."
-          },
-          "response": []
         }
       ]
     },
@@ -15521,16 +15439,16 @@
         },
         {
           "_postman_id": "5d448ae9-73c3-6217-78e0-0cf7715bd3f7",
-          "name": "Shared File Versions By ID Path",
+          "name": "Shared File Versions By Path",
           "event": [
             {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
-                  "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+                  "//tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
                 ]
               }
             }
@@ -16994,7 +16912,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -25475,7 +25393,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile1Renamed.doc\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoFile2Renamed.doc\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm"
           },
@@ -25971,43 +25889,6 @@
             "body": {
               "mode": "raw",
               "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "707bc41e-6be6-3391-4d70-a4594d2dcf63",
-          "name": "Logout",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Logout",
-            "method": "POST",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
           },
@@ -41961,127 +41842,6 @@
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
             "description": "Gets a number of comments associated with a discussion in hierarchical order."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "57876a77-731e-6876-9fe2-af574a05c034",
-          "name": "Add a Comment",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcomment\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Adds an comment to in a discussion."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "628a6555-b15d-a4c3-185f-e26551a4f266",
-          "name": "Discussion by Type and GUID",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Discussion"
-              ],
-              "query": [
-                {
-                  "key": "entityType",
-                  "value": "{{entityType}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "entityGUID",
-                  "value": "{{entityGUID}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
           },
           "response": []
         }
