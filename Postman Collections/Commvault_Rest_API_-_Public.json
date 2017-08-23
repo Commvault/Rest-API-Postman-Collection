@@ -21118,36 +21118,9 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
+                  "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDrive.rootGUID);",
                   "",
                   "tests[\"Successful POST request\"] = responseCode.code === 200"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "postman.setEnvironmentVariable(\"FolderName\", \"DemoFolder\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"SecondFolderName\", \"DemoFolder2\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileData\", \"Demo File Content\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileSize\", \"17\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"SecondFileSize\", \"34\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileModifiedtime\", \"1481595468\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"ParentFolderPath\", \"XERlbW9Gb2xkZXI=\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
                 ]
               }
             }
@@ -21164,10 +21137,10 @@
               ],
               "query": [
                 {
-                  "key": "type",
-                  "value": "testcontentstore",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "type",
+                  "value": "testcontentstore"
                 }
               ],
               "variable": []
@@ -21175,19 +21148,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
