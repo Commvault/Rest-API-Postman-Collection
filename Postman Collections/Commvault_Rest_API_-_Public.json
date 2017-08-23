@@ -45696,6 +45696,108 @@
             "description": "Gets a number of comments associated with a discussion in hierarchical order."
           },
           "response": []
+        },
+        {
+          "_postman_id": "eeea13f4-1daa-ac5b-0664-4a95d5f71cf7",
+          "name": "Discussion by ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
+                  "",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/Discussion/{{discussionId}}?depth=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Discussion",
+                "{{discussionId}}"
+              ],
+              "query": [
+                {
+                  "key": "depth",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+            },
+            "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "efa44129-3684-3dda-e397-f5a10131b22b",
+          "name": "Delete a Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Deletes a comment with given commentId"
+          },
+          "response": []
         }
       ]
     }
