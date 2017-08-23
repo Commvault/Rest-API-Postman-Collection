@@ -13613,10 +13613,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "shareId",
-                  "value": "{{shareId}}"
+                  "value": "{{shareId}}",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -13624,14 +13624,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -15936,10 +15936,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "path",
-                  "value": "\\DemoFile1.doc"
+                  "value": "\\DemoFile1.doc",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -15947,14 +15947,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -29042,50 +29042,6 @@
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
           },
           "response": []
-        },
-        {
-          "_postman_id": "c9d0d920-4df0-165e-2539-70fd70ababf3",
-          "name": "Login",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
-                  "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
-                  "",
-                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
-                  "",
-                  "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Login",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
         }
       ]
     },
@@ -34584,50 +34540,6 @@
             "body": {
               "mode": "raw",
               "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "c6d3a067-6e20-ef19-9cef-0835ccc6e1f5",
-          "name": "Login",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
-                  "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
-                  "",
-                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
-                  "",
-                  "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Login",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
           },
@@ -42482,55 +42394,6 @@
             "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
           },
           "response": []
-        },
-        {
-          "_postman_id": "c7978cee-8b61-faa6-98f0-032c9f3ff0bf",
-          "name": "Create a Discussion",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
-                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
-                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Subclient/{{subclientId}}/Discussion",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Creates a new discussion with the details supplied in message."
-          },
-          "response": []
         }
       ]
     },
@@ -45426,76 +45289,6 @@
               "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcomment\"\r\n      }\r\n   ]\r\n}"
             },
             "description": "Adds an comment to in a discussion."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "cbc197fc-8633-4f0b-1908-023801e1e1dd",
-          "name": "Hierarchical Comments",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Discussion",
-                "{{discussionId}}",
-                "Comment",
-                "{{commentId}}",
-                "Replies"
-              ],
-              "query": [
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets a number of comments associated with a discussion in hierarchical order."
           },
           "response": []
         }
