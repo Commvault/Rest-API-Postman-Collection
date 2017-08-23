@@ -10226,10 +10226,10 @@
               ],
               "query": [
                 {
-                  "key": "uploadType",
-                  "value": "fullFile",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "uploadType",
+                  "value": "fullFile"
                 }
               ],
               "variable": []
@@ -10237,34 +10237,34 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "FileName",
-                "value": "{{FileName1}}",
-                "description": ""
+                "value": "{{FileName1}}"
               },
               {
+                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}",
-                "description": ""
+                "value": "{{FileSize}}"
               },
               {
+                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ShareParentFolderPath}}",
-                "description": ""
+                "value": "{{ShareParentFolderPath}}"
               },
               {
+                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}",
-                "description": ""
+                "value": "{{FileModifiedtime}}"
               }
             ],
             "body": {
@@ -12944,6 +12944,48 @@
               "body": "{\r\"response\":{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"subclientPolicyId\":12,\"subclientId\":14,\"applicationId\":33,\"clientName\":\"nkatzedge\",\"backupsetId\":13,\"clientId\":6,\"userId\":1,\"subclientName\":\"admin\",\"backupsetName\":\"admin\"\r}\r},\"edgeDriveInfo\":{\r\"contentIndexingEnabled\":true,\"hasSyncBlackListedLaptop\":false,\"capabilities\":549775216688,\"driveType\":0,\"cloudId\":0,\"dirDelim\":\"\\\\\",\"rootGUID\":\"d9fa1b7bc1c44a9ebc9237713997fcb7\",\"hasEdgeDriveEnabledLaptop\":false\r},\"syncWebFolder\":{\r\"_type_\":111,\"syncWebFolderId\":872129,\"syncWebFolderName\":\"EdgeDrive\"\r}\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "b3e158d7-ba85-819c-b016-a5b2c6fb8823",
+          "name": "Logout",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Logout",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
+          },
+          "response": []
         }
       ]
     },
@@ -15594,9 +15636,9 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
-                  "//tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
+                  "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
                 ]
               }
             }
@@ -26416,10 +26458,10 @@
               ],
               "query": [
                 {
-                  "key": "uploadType",
-                  "value": "fullFile",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "uploadType",
+                  "value": "fullFile"
                 }
               ],
               "variable": []
@@ -26427,34 +26469,34 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "FileName",
-                "value": "{{FileName1}}",
-                "description": ""
+                "value": "{{FileName1}}"
               },
               {
+                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}",
-                "description": ""
+                "value": "{{FileSize}}"
               },
               {
+                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ShareParentFolderPath}}",
-                "description": ""
+                "value": "{{ShareParentFolderPath}}"
               },
               {
+                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}",
-                "description": ""
+                "value": "{{FileModifiedtime}}"
               }
             ],
             "body": {
@@ -27052,7 +27094,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   ""
                 ]
               }
@@ -29867,7 +29909,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\":\"DemoShareFolder3\"\n}"
+              "raw": "{\n  \"name\":\"DemoShareFolder2\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_folder_by_id.htm"
           },
@@ -37042,7 +37084,7 @@
             }
           ],
           "request": {
-            "url": "{{ServerUrl}}/SchedulePolicy/2",
+            "url": "{{ServerUrl}}/SchedulePolicy/219",
             "method": "GET",
             "header": [
               {
