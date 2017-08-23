@@ -4535,14 +4535,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
-                  "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
-                  "",
-                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
-                  "",
-                  "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             },
@@ -4589,7 +4582,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
+              "raw": ""
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
           },
@@ -6503,7 +6496,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -7876,14 +7869,14 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"versionId\", jsonData.fileResources[0].versionGUID);",
+                  "//var jsonData = JSON.parse(responseBody);",
+                  "//postman.setEnvironmentVariable(\"versionId\", jsonData.fileResources[0].versionGUID);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
-                  "tests[\"Response Body contains parentPath\"] = responseBody.has(\"\\\\DemoFolder\");",
+                  "//tests[\"Response Body contains parentPath\"] = responseBody.has(\"\\\\DemoFolder\");",
                   "",
-                  "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");"
+                  "//tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");"
                 ]
               }
             }
@@ -9505,251 +9498,6 @@
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "0c543411-6d05-7fee-882a-bbfac7e878e5",
-          "name": "Create a Discussion",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"discussionId\", jsonData.discussion.discussionId);",
-                  "postman.setEnvironmentVariable(\"entityGUID\", jsonData.discussion.entityGUID);",
-                  "postman.setEnvironmentVariable(\"entityType\", jsonData.discussion.entityType);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"entityType\":1,\r\n   \"created\":1,\r\n   \"entityGUID\":\"d952fefe-9f01-43b6-b0ec-7c431987c28e \",\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcontent\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Creates a new discussion with the details supplied in message."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "18efe32e-23c5-29b3-c128-77a20374a461",
-          "name": "Discussion by Type and GUID",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "drive",
-                "file",
-                "{{FILE1_GUID}}",
-                "Discussion"
-              ],
-              "query": [
-                {
-                  "key": "entityType",
-                  "value": "{{entityType}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "entityGUID",
-                  "value": "{{entityGUID}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "27ee4448-64b9-a8e5-c319-d33fc1d26a2b",
-          "name": "Edit a Comment",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcommentedit\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Edits an comment to in a discussion."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "4634bbc1-0e9e-f19e-c381-8e9ca9203627",
-          "name": "Discussion",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "Deletes a discussion"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "558cb35f-f683-3a16-311d-70bc4c3ae7a2",
-          "name": "Logout",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Logout",
-            "method": "POST",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
         }
       ]
     },
@@ -16140,7 +15888,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -17943,7 +17691,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoShareFolder2\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoShareFolder3\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_preview_by_filepath.htm"
           },
@@ -18417,48 +18165,6 @@
               "body": "{\r\"response\":{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"subclientPolicyId\":12,\"subclientId\":14,\"applicationId\":33,\"clientName\":\"nkatzedge\",\"backupsetId\":13,\"clientId\":6,\"userId\":1,\"subclientName\":\"admin\",\"backupsetName\":\"admin\"\r}\r},\"edgeDriveInfo\":{\r\"contentIndexingEnabled\":true,\"hasSyncBlackListedLaptop\":false,\"capabilities\":549775216688,\"driveType\":0,\"cloudId\":0,\"dirDelim\":\"\\\\\",\"rootGUID\":\"d9fa1b7bc1c44a9ebc9237713997fcb7\",\"hasEdgeDriveEnabledLaptop\":false\r},\"syncWebFolder\":{\r\"_type_\":111,\"syncWebFolderId\":872129,\"syncWebFolderName\":\"EdgeDrive\"\r}\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "46d938c1-5a95-cba3-0479-2ad5baa0edfe",
-          "name": "Logout",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Logout",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
         }
       ]
     },
@@ -21431,7 +21137,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"FOLDER_GUID\", jsonData.fileResource.GUID);",
+                  "postman.setEnvironmentVariable(\"SECONDFOLDER_GUID\", jsonData.fileResource.GUID);",
                   "",
                   "tests[\"Status code is 201\"] = responseCode.code === 201;",
                   "",
@@ -21464,7 +21170,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\":\"{{FolderName}}\",\n  \"parentPath\":\"\\\\\"\n}\n"
+              "raw": "{\n  \"name\":\"{{SecondFolderName}}\",\n  \"parentPath\":\"\\\\\"\n}\n"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_by_folderpath.htm"
           },
@@ -24009,14 +23715,14 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"versionId\", jsonData.fileResources[0].versionGUID);",
+                  "//var jsonData = JSON.parse(responseBody);",
+                  "//postman.setEnvironmentVariable(\"versionId\", jsonData.fileResources[0].versionGUID);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
-                  "tests[\"Response Body contains parentPath\"] = responseBody.has(\"\\\\DemoFolder\");",
+                  "//tests[\"Response Body contains parentPath\"] = responseBody.has(\"\\\\DemoFolder\");",
                   "",
-                  "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");"
+                  "//tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");"
                 ]
               }
             }
@@ -24316,7 +24022,7 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "application/json",
+                "value": "text/plain",
                 "description": ""
               },
               {
@@ -24580,7 +24286,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile2.doc\",\n  \"parentPath\":\"\\\\\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile2Renamed.doc\",\n  \"parentPath\":\"\\\\\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_move.htm"
           },
@@ -24821,7 +24527,7 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");"
+                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2Renamed.doc\");"
                 ]
               }
             }
@@ -24958,7 +24664,7 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");"
+                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2Renamed.doc\");"
                 ]
               }
             }
@@ -25430,7 +25136,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoFolder\\\\DemoFile1Renamed.doc\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoFile2Renamed.doc\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm"
           },
@@ -25849,87 +25555,6 @@
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "36ea9521-f911-90df-cbb6-f1bb06bec608",
-          "name": "Delete File2",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/contentstore/file/{{FILE2_GUID}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "37ef64b1-8f84-fe46-8e82-b75207d5cef1",
-          "name": "Login",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
-                  "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
-                  "",
-                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
-                  "",
-                  "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Login",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
         }
       ]
     },
@@ -28752,48 +28377,6 @@
               "body": "{\r\"aliasName\":\"1\",\"userGUID\":\"DCA36E19-F907-42D2-BA40-BA0E7757180A\",\"loginAttempts\":0,\"remainingLockTime\":0,\"smtpAddress\":\"nkatz@commvault.com\",\"userName\":\"admin\",\"providerType\":1,\"ccn\":0,\"token\":\"QSDK 33336078812121f12ed95e742d6e012163aba72d0d105e7b33aeeb3fccff24d6485d9f3892bf47c505daba14b24b9aa55a58b04481cced157c03158caa32e2a4af5c06516f3415fabfb9d0669d43da1516b27d379977ace848daa5d78e197689b67d981ca1ad342ba28704b18357496bb53d265f71d544f68e684eb343c0db1293be0643b157859e8e9990bbfd8a583ab7270082b6e5ae617fbaf64259ac7fa0dcbd7d26b805dafe2e37b173160d113a3752229a08e9410c72d71c1e6686eebc2a69f00ebc5f4f45c4d728b8dcd99920cce834b4dd1b19343e476704a3995b61880664ac2771276204ea711404d74ad13189c1c7857efda494299cfcc03697268b64eb311695ab66ed2a94ced70192d108d2fc3fc722388db\",\"capability\":4328650366975,\"forcePasswordChange\":false,\"isAccountLocked\":false,\"ownerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"providerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"errList\":[\r\r]\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "4ac17792-a820-69bc-f74e-066c1d1e5358",
-          "name": "Logout",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Logout",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
         }
       ]
     },
@@ -35308,19 +34891,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -37711,7 +37294,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"taskInfo\":{\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"TestPolicy\"\r\n      }\r\n    },\r\n    \"appGroup\":{\r\n      \"appGroups\":[\r\n        {\r\n          \"appGroupName\":\"APPGRP_DB2\"\r\n        }\r\n      ],\r\n      \"appTypes\":[\r\n        {\r\n          \"appTypeName\":\"SQL Server\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}\r\n"
+              "raw": "<TMMsg_ModifyTaskReq>\r\n  <taskInfo >\r\n    <appGroup>\r\n      <appGroups appGroupName=\"APPGRP_BACKEDUP_FILES\"/>\r\n        <flags deleted=\"1\" /> \r\n      \r\n    </appGroup>\r\n    <task >\r\n      <task taskName=\"TestPolicy\"/>\r\n    </task>\r\n  </taskInfo>\r\n</TMMsg_ModifyTaskReq>"
             },
             "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
           },
@@ -41811,121 +41394,6 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0\r}\r]\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "39ea84c3-fe9e-5f43-d344-27abddcd414d",
-          "name": "Hierarchical Comments",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Discussion",
-                "{{discussionId}}",
-                "Comment",
-                "{{commentId}}",
-                "Replies"
-              ],
-              "query": [
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets a number of comments associated with a discussion in hierarchical order."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "57876a77-731e-6876-9fe2-af574a05c034",
-          "name": "Add a Comment",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"comments\":[\r\n      {\r\n         \"content\":\"testcomment\"\r\n      }\r\n   ]\r\n}"
-            },
-            "description": "Adds an comment to in a discussion."
-          },
-          "response": []
         }
       ]
     },
@@ -44607,82 +44075,6 @@
               "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
             },
             "description": "Gets a comment with given commentId"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "214f671b-0c32-bf78-4342-42d8e010d31d",
-          "name": "Discussion by Type and GUID",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Discussion"
-              ],
-              "query": [
-                {
-                  "key": "entityType",
-                  "value": "{{entityType}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "entityGUID",
-                  "value": "{{entityGUID}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
           },
           "response": []
         }
