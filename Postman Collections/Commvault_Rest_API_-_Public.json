@@ -9669,6 +9669,43 @@
             "description": "Edits an comment to in a discussion."
           },
           "response": []
+        },
+        {
+          "_postman_id": "4634bbc1-0e9e-f19e-c381-8e9ca9203627",
+          "name": "Discussion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "Deletes a discussion"
+          },
+          "response": []
         }
       ]
     },
@@ -18336,6 +18373,48 @@
               "body": "{\r\"response\":{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"subclientPolicyId\":12,\"subclientId\":14,\"applicationId\":33,\"clientName\":\"nkatzedge\",\"backupsetId\":13,\"clientId\":6,\"userId\":1,\"subclientName\":\"admin\",\"backupsetName\":\"admin\"\r}\r},\"edgeDriveInfo\":{\r\"contentIndexingEnabled\":true,\"hasSyncBlackListedLaptop\":false,\"capabilities\":549775216688,\"driveType\":0,\"cloudId\":0,\"dirDelim\":\"\\\\\",\"rootGUID\":\"d9fa1b7bc1c44a9ebc9237713997fcb7\",\"hasEdgeDriveEnabledLaptop\":false\r},\"syncWebFolder\":{\r\"_type_\":111,\"syncWebFolderId\":872129,\"syncWebFolderName\":\"EdgeDrive\"\r}\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "46d938c1-5a95-cba3-0479-2ad5baa0edfe",
+          "name": "Logout",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Logout",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
+          },
+          "response": []
         }
       ]
     },
