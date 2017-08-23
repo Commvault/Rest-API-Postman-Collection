@@ -24655,7 +24655,7 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2Renamed.doc\");"
+                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");"
                 ]
               }
             }
