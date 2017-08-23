@@ -9547,6 +9547,85 @@
             "description": "Creates a new discussion with the details supplied in message."
           },
           "response": []
+        },
+        {
+          "_postman_id": "18efe32e-23c5-29b3-c128-77a20374a461",
+          "name": "Discussion by Type and GUID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
+                  "",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion?entityType={{entityType}}&entityGUID={{entityGUID}}&depth=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "drive",
+                "file",
+                "{{FILE1_GUID}}",
+                "Discussion"
+              ],
+              "query": [
+                {
+                  "key": "entityType",
+                  "value": "{{entityType}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "entityGUID",
+                  "value": "{{entityGUID}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "depth",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+            },
+            "description": "Gets discussion for a given entity qualified by the given entityGuid. Depth is depth of replies tree. Curently web console uses depth = 1"
+          },
+          "response": []
         }
       ]
     },
@@ -15937,7 +16016,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -17740,7 +17819,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"path\":\"\\\\DemoShareFolder3\"\n}"
+              "raw": "{\n  \"path\":\"\\\\DemoShareFolder2\"\n}"
             },
             "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_preview_by_filepath.htm"
           },
