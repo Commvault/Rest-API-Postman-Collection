@@ -6496,7 +6496,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "//tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -24835,7 +24835,7 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");"
+                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2Renamed.doc\");"
                 ]
               }
             }
@@ -25726,87 +25726,6 @@
               "body": "{\r\"errorCode\":0\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "36ea9521-f911-90df-cbb6-f1bb06bec608",
-          "name": "Delete File2",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/contentstore/file/{{FILE2_GUID}}",
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "37ef64b1-8f84-fe46-8e82-b75207d5cef1",
-          "name": "Login",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
-                  "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
-                  "",
-                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
-                  "",
-                  "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Login",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": []
         }
       ]
     },
@@ -37546,7 +37465,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"taskInfo\":{\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"TestPolicy\"\r\n      }\r\n    },\r\n    \"appGroup\":{\r\n      \"appGroups\":[\r\n        {\r\n          \"appGroupName\":\"APPGRP_DB2\"\r\n        }\r\n      ],\r\n      \"appTypes\":[\r\n        {\r\n          \"appTypeName\":\"SQL Server\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}\r\n"
+              "raw": "<TMMsg_ModifyTaskReq>\r\n  <taskInfo >\r\n    <appGroup>\r\n      <appGroups appGroupName=\"APPGRP_BACKEDUP_FILES\"/>\r\n        <flags deleted=\"1\" /> \r\n      \r\n    </appGroup>\r\n    <task >\r\n      <task taskName=\"TestPolicy\"/>\r\n    </task>\r\n  </taskInfo>\r\n</TMMsg_ModifyTaskReq>"
             },
             "description": "This request removes the DB2 agent group association from the schedule policy.\n\nhttp://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm"
           },
@@ -41646,76 +41565,6 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0\r}\r]\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "39ea84c3-fe9e-5f43-d344-27abddcd414d",
-          "name": "Hierarchical Comments",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                  "",
-                  "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Discussion",
-                "{{discussionId}}",
-                "Comment",
-                "{{commentId}}",
-                "Replies"
-              ],
-              "query": [
-                {
-                  "key": "depth",
-                  "value": "1",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-            },
-            "description": "Gets a number of comments associated with a discussion in hierarchical order."
-          },
-          "response": []
         }
       ]
     },
