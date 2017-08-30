@@ -9751,6 +9751,134 @@
       "description": "",
       "item": [
         {
+          "_postman_id": "d7f6c2c3-3c01-896d-7a3d-1d8632ffab06",
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
+                  "",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "",
+                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
+                  "",
+                  "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Login",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
+          },
+          "response": [
+            {
+              "id": "be99af46-7089-f603-742f-efed200e36a2",
+              "name": "POST Login",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Login",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "1021"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Mon, 10 Jul 2017 13:12:06 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "344",
+              "body": "{\r\"aliasName\":\"1\",\"userGUID\":\"DCA36E19-F907-42D2-BA40-BA0E7757180A\",\"loginAttempts\":0,\"remainingLockTime\":0,\"smtpAddress\":\"nkatz@commvault.com\",\"userName\":\"admin\",\"providerType\":1,\"ccn\":0,\"token\":\"QSDK 3c16bbfd7b607e22009ff0f4ee637d8770dbd2cf8452fad545f2c5a4b9795fc306520582e6918e6ff550706909b2ab35c0a4d7bde6a052049ea91b9151e9bd18d7369c45073dd241aae0369842d95bcb7fca35e81456f087cf71b108357208e29dd93328a0ffd97cd786d02fef8c468d45f4465feec04799d79da40bc786d2dbae5ea9266fe213ac882604d34ec58efa27bc1fefe27438c66985e7234626728bc28e1caa2b85c4ef59afca4b5ca53ee7adf4d406298130a5ecba0a684d8e68f70d3d6cdd91f6ed596a32dbb5235b99d44fbdf8192dfc133649fec5249a79da498e0ce0f8e69f651ab2355d0bffa011360f7add5f0beab412eee12cf8546c6558dd92f71aedc4a0466e381ddd9e08c07191d6bff53158536d2\",\"capability\":4328650366975,\"forcePasswordChange\":false,\"isAccountLocked\":false,\"ownerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"providerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"errList\":[\r\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "a31fdc3b-64a1-5593-8c07-202c4a42e5a1",
           "name": "Create Folder by ID",
           "event": [
@@ -12915,134 +13043,6 @@
               ],
               "responseTime": "47",
               "body": "User logged out"
-            }
-          ]
-        },
-        {
-          "_postman_id": "d7f6c2c3-3c01-896d-7a3d-1d8632ffab06",
-          "name": "Login",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
-                  "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
-                  "",
-                  "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
-                  "",
-                  "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Login",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": [
-            {
-              "id": "be99af46-7089-f603-742f-efed200e36a2",
-              "name": "POST Login",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Login",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
-                },
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "1021"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Mon, 10 Jul 2017 13:12:06 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "344",
-              "body": "{\r\"aliasName\":\"1\",\"userGUID\":\"DCA36E19-F907-42D2-BA40-BA0E7757180A\",\"loginAttempts\":0,\"remainingLockTime\":0,\"smtpAddress\":\"nkatz@commvault.com\",\"userName\":\"admin\",\"providerType\":1,\"ccn\":0,\"token\":\"QSDK 3c16bbfd7b607e22009ff0f4ee637d8770dbd2cf8452fad545f2c5a4b9795fc306520582e6918e6ff550706909b2ab35c0a4d7bde6a052049ea91b9151e9bd18d7369c45073dd241aae0369842d95bcb7fca35e81456f087cf71b108357208e29dd93328a0ffd97cd786d02fef8c468d45f4465feec04799d79da40bc786d2dbae5ea9266fe213ac882604d34ec58efa27bc1fefe27438c66985e7234626728bc28e1caa2b85c4ef59afca4b5ca53ee7adf4d406298130a5ecba0a684d8e68f70d3d6cdd91f6ed596a32dbb5235b99d44fbdf8192dfc133649fec5249a79da498e0ce0f8e69f651ab2355d0bffa011360f7add5f0beab412eee12cf8546c6558dd92f71aedc4a0466e381ddd9e08c07191d6bff53158536d2\",\"capability\":4328650366975,\"forcePasswordChange\":false,\"isAccountLocked\":false,\"ownerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"providerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"errList\":[\r\r]\r}"
             }
           ]
         }
