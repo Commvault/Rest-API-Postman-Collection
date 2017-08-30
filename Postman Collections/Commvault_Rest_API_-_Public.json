@@ -13182,6 +13182,138 @@
           ]
         },
         {
+          "_postman_id": "f8894038-0869-5d16-dc69-c98bde0a98fd",
+          "name": "Environment Setup",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setEnvironmentVariable(\"FolderName\", \"DemoFolder\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileData\", \"Demo File Content\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileSize\", \"17\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"SecondFileSize\", \"34\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileModifiedtime\", \"1481595468\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ParentFolderPath\", \"XERlbW9Gb2xkZXI=\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Login",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
+          },
+          "response": [
+            {
+              "id": "da278824-1a98-8e4f-88e3-caba322bcdf1",
+              "name": "POST Login",
+              "originalRequest": {
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "1021"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Thu, 06 Jul 2017 20:10:13 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                  "key": "JSESSIONID"
+                },
+                {
+                  "expires": "Invalid Date",
+                  "httpOnly": true,
+                  "domain": "nkatzvm2.testlab.commvault.com",
+                  "path": "/",
+                  "secure": false,
+                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "730",
+              "body": "{\r\"aliasName\":\"1\",\"userGUID\":\"DCA36E19-F907-42D2-BA40-BA0E7757180A\",\"loginAttempts\":0,\"remainingLockTime\":0,\"smtpAddress\":\"nkatz@commvault.com\",\"userName\":\"admin\",\"providerType\":1,\"ccn\":0,\"token\":\"QSDK 33336078812121f12ed95e742d6e012163aba72d0d105e7b33aeeb3fccff24d6485d9f3892bf47c505daba14b24b9aa55a58b04481cced157c03158caa32e2a4af5c06516f3415fabfb9d0669d43da1516b27d379977ace848daa5d78e197689b67d981ca1ad342ba28704b18357496bb53d265f71d544f68e684eb343c0db1293be0643b157859e8e9990bbfd8a583ab7270082b6e5ae617fbaf64259ac7fa0dcbd7d26b805dafe2e37b173160d113a3752229a08e9410c72d71c1e6686eebc2a69f00ebc5f4f45c4d728b8dcd99920cce834b4dd1b19343e476704a3995b61880664ac2771276204ea711404d74ad13189c1c7857efda494299cfcc03697268b64eb311695ab66ed2a94ced70192d108d2fc3fc722388db\",\"capability\":4328650366975,\"forcePasswordChange\":false,\"isAccountLocked\":false,\"ownerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"providerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"errList\":[\r\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "9b559c9f-67cf-bdae-57bc-1884086d9f49",
           "name": "Drive",
           "event": [
@@ -13316,138 +13448,6 @@
               ],
               "responseTime": "418",
               "body": "{\r\"response\":{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"subclientPolicyId\":12,\"subclientId\":14,\"applicationId\":33,\"clientName\":\"nkatzedge\",\"backupsetId\":13,\"clientId\":6,\"userId\":1,\"subclientName\":\"admin\",\"backupsetName\":\"admin\"\r}\r},\"edgeDriveInfo\":{\r\"contentIndexingEnabled\":true,\"hasSyncBlackListedLaptop\":false,\"capabilities\":549775216688,\"driveType\":0,\"cloudId\":0,\"dirDelim\":\"\\\\\",\"rootGUID\":\"d9fa1b7bc1c44a9ebc9237713997fcb7\",\"hasEdgeDriveEnabledLaptop\":false\r},\"syncWebFolder\":{\r\"_type_\":111,\"syncWebFolderId\":872129,\"syncWebFolderName\":\"EdgeDrive\"\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "f8894038-0869-5d16-dc69-c98bde0a98fd",
-          "name": "Environment Setup",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "postman.setEnvironmentVariable(\"FolderName\", \"DemoFolder\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileData\", \"Demo File Content\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileSize\", \"17\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"SecondFileSize\", \"34\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileModifiedtime\", \"1481595468\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"ParentFolderPath\", \"XERlbW9Gb2xkZXI=\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileName1\", \"RGVtb0ZpbGUxLmRvYw==\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Login",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm"
-          },
-          "response": [
-            {
-              "id": "da278824-1a98-8e4f-88e3-caba322bcdf1",
-              "name": "POST Login",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "1021"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 06 Jul 2017 20:10:13 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                  "key": "JSESSIONID"
-                },
-                {
-                  "expires": "Invalid Date",
-                  "httpOnly": true,
-                  "domain": "nkatzvm2.testlab.commvault.com",
-                  "path": "/",
-                  "secure": false,
-                  "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "730",
-              "body": "{\r\"aliasName\":\"1\",\"userGUID\":\"DCA36E19-F907-42D2-BA40-BA0E7757180A\",\"loginAttempts\":0,\"remainingLockTime\":0,\"smtpAddress\":\"nkatz@commvault.com\",\"userName\":\"admin\",\"providerType\":1,\"ccn\":0,\"token\":\"QSDK 33336078812121f12ed95e742d6e012163aba72d0d105e7b33aeeb3fccff24d6485d9f3892bf47c505daba14b24b9aa55a58b04481cced157c03158caa32e2a4af5c06516f3415fabfb9d0669d43da1516b27d379977ace848daa5d78e197689b67d981ca1ad342ba28704b18357496bb53d265f71d544f68e684eb343c0db1293be0643b157859e8e9990bbfd8a583ab7270082b6e5ae617fbaf64259ac7fa0dcbd7d26b805dafe2e37b173160d113a3752229a08e9410c72d71c1e6686eebc2a69f00ebc5f4f45c4d728b8dcd99920cce834b4dd1b19343e476704a3995b61880664ac2771276204ea711404d74ad13189c1c7857efda494299cfcc03697268b64eb311695ab66ed2a94ced70192d108d2fc3fc722388db\",\"capability\":4328650366975,\"forcePasswordChange\":false,\"isAccountLocked\":false,\"ownerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"providerOrganization\":{\r\"providerId\":0,\"providerDomainName\":\"Qinetix Commcell\"\r},\"errList\":[\r\r]\r}"
             }
           ]
         },
