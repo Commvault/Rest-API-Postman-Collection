@@ -4137,7 +4137,7 @@
         },
         {
           "_postman_id": "d51806b4-7251-91b0-5dd6-09c1cb665c08",
-          "name": "Create Dummy Client",
+          "name": "Create Test Client",
           "event": [
             {
               "listen": "test",
