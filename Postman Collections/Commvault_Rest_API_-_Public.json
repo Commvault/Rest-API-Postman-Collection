@@ -40849,7 +40849,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request is for a root level browse.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+            "description": "This operation browses data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
           },
           "response": [
             {
