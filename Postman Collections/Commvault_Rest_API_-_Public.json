@@ -39688,7 +39688,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"driveList\": [\r\n    {\r\n      \"iconId\": 6,\r\n      \"driveId\": 0,\r\n      \"objectAddress\": 188815710176,\r\n      \"description\": \"\",\r\n      \"driveName\": \"\"\r\n    }\r\n  ],\r\n  \"hdr\": {\r\n    \"tag\": 0\r\n  }\r\n}"
             },
-            "description": "This operation configures tape libraries.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_configure_tape_library.htm)"
+            "description": "<h2> Description </h2>\nThis operation configures tape libraries.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_configure_tape_library.htm)"
           },
           "response": []
         },
