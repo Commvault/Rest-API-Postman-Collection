@@ -33006,7 +33006,7 @@
               "mode": "raw",
               "raw": "{\r\n   \"values\":\"test_tag\",\r\n   \"fileFolderInfo\":[\r\n      {\r\n         \"fileGUID\":\"{{SHAREFILE_GUID}}\"\r\n      }\r\n   ]\r\n}"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_tag_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to add your own tags to one or more files and folders within a shared folder in an ObjectStore based on the GUID of the file or folder.</p> \r\n<p>Tag names can be a combination of letters and numbers. Letters are case-insensitive.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_tag_by_id.htm)"
           },
           "response": [
             {
