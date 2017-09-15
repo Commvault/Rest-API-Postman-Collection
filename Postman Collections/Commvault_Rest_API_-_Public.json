@@ -21192,7 +21192,104 @@
             },
             "description": "<h2>Description</h2>\r\n\r\nUse this operation to create an ObjectStore.\r\n\r\nEach authorized user can create one ObjectStore.\r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore.htm)"
           },
-          "response": []
+          "response": [
+            {
+              "id": "4be09bf7-d455-3b90-c626-0ff413893ea5",
+              "name": "Create an ObjectStore",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/contentstore?type=testcontentstore",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "contentstore"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "testcontentstore",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "566",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 15 Sep 2017 15:49:06 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "53",
+              "body": "{\r\"response\":{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"subclientPolicyId\":9,\"subclientId\":11,\"applicationId\":33,\"clientName\":\"GeneralObjectStore\",\"backupsetId\":12,\"clientId\":6,\"userId\":1,\"subclientName\":\"admin\",\"backupsetName\":\"admin\"\r}\r},\"edgeDriveInfo\":{\r\"contentIndexingEnabled\":true,\"hasSyncBlackListedLaptop\":false,\"capabilities\":549775216688,\"driveType\":1,\"cloudId\":1,\"dirDelim\":\"\\\\\",\"rootGUID\":\"ed81f682abd54c799fd568ded62ddf64\",\"hasEdgeDriveEnabledLaptop\":false\r},\"syncWebFolder\":{\r\"_type_\":111,\"syncWebFolderId\":345894,\"syncWebFolderName\":\"EdgeDrive\"\r}\r}"
+            }
+          ]
         },
         {
           "_postman_id": "d0a26133-c745-67d1-be34-99c9a282389b",
@@ -21239,7 +21336,7 @@
               "mode": "raw",
               "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_by_folderid.htm)"
+            "description": "<h2>Description</h2>\nThis operation creates a new folder in the ObjectStore based on the GUID of the parent folder.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or the folder name has some unacceptable characters.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified parent folder does not exist.</td> \n  </tr> \n  <tr> \n   <td>409</td> \n   <td>Conflict</td> \n   <td>A folder with the specified name already exists in the same location. <p>The response body will include the information of the folder that already exists. For example:</p> \n    <div class=\"cv-ui-codesnippet\"> \n     <div class=\"cv-text-codesnippet\"> \n      <p>&lt;App_FileResourceResponse&gt; &lt;error errorCode=&quot;409&quot; /&gt; &lt;fileResource parentGuid=&quot;97409005317b4dbd9c138d2fd80a9e50&quot; GUID=&quot;be7d714583584307bf00f1de47212b94&quot; directory=&quot;1&quot; name=&quot;NewFolder&quot; path=&quot;\\Folder1\\NewFolder&quot; /&gt; &lt;/App_FileResourceResponse&gt;</p> \n     </div> \n    </div> </td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_by_folderid.htm)"
           },
           "response": [
             {
