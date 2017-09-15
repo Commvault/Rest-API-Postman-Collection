@@ -4174,7 +4174,7 @@
           "response": [
             {
               "id": "866ebc20-f93e-983a-8374-b13b0b459d3f",
-              "name": "Client",
+              "name": "Client - This operation deletes the dummy client created using POST Create Dummy Client",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Client/12",
                 "method": "DELETE",
@@ -4193,8 +4193,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -37804,7 +37803,7 @@
               "mode": "raw",
               "raw": "ClientId=2"
             },
-            "description": "This operation associates an entity with the schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_entity_add.htm)"
+            "description": "<h2> Description </h2>\nThis operation associates an entity with the schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_entity_add.htm)"
           },
           "response": [
             {
