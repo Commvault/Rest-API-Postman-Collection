@@ -40018,7 +40018,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"configLockUnlock\": {\r\n    \"lockType\": 1\r\n  }\r\n}"
             },
-            "description": "This operation locks or unlocks media management (MM) configuration.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_lock_mm_configuration.htm)"
+            "description": "<h2> Description </h2>\nThis operation locks or unlocks media management (MM) configuration.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_lock_mm_configuration.htm)"
           },
           "response": []
         },
