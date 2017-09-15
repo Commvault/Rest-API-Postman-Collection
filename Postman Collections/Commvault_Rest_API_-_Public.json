@@ -37039,12 +37039,12 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2> Description </h2>\nThis request returns all of the schedules for a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
+            "description": "<h2> Description </h2>\nThis operation returns a list of schedules.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
           },
           "response": [
             {
               "id": "1edfacee-01b7-9d75-c767-7080cddfe65d",
-              "name": "Schedules",
+              "name": "Schedules - This request returns all of the schedules for a client.",
               "originalRequest": {
                 "url": {
                   "raw": "{{ServerUrl}}/Schedules?clientId=2",
