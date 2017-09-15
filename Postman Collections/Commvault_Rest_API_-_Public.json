@@ -16408,7 +16408,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_share_download_version_by_id.htm)"
+            "description": "<h2>Description</h2>\r\nUse this operation to download a specific version of a shared file in the Edge Drive based on the GUID of the file version.\r\n\r\n<b>Note:</b> Downloading a shared folder is currently not supported using this operation.\r\n\r\n<h2>Supported Error Codes</h2> \r\n<table width=\"100%\"> \r\n <tbody> \r\n  <tr> \r\n   <th width=\"20%\">Code</th> \r\n   <th width=\"20%\">Status</th> \r\n   <th width=\"60%\">Description</th> \r\n  </tr> \r\n  <tr> \r\n   <td>400</td> \r\n   <td>Bad Request</td> \r\n   <td>The request is missing required parameters.</td> \r\n  </tr> \r\n  <tr> \r\n   <td>403</td> \r\n   <td>Forbidden</td> \r\n   <td>Error cased due to one of the following reasons: \r\n    <ul> \r\n     <li>The user does not have access to the share </li> \r\n     <li>The file requested is not accessible inside the share </li> \r\n     <li>Download operation is not allowed. This can happen if you attempt to download a folder.</li> \r\n    </ul> </td> \r\n  </tr> \r\n  <tr> \r\n   <td>404</td> \r\n   <td>Not Found</td> \r\n   <td>The specified file does not exist.</td> \r\n  </tr> \r\n </tbody> \r\n</table>\r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_share_download_version_by_id.htm)"
           },
           "response": [
             {
