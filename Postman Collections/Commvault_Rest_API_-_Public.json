@@ -4128,7 +4128,7 @@
                 }
               ]
             },
-            "description": "This operation creates a test client which could be deleted using Delete Client operation later.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_execute_qcommand.htm)"
+            "description": "<h2>Description</h2>\nThis operation creates a test client which could be deleted using Delete Client operation later.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_execute_qcommand.htm)"
           },
           "response": []
         },
@@ -37418,7 +37418,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of schedule policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm)"
+            "description": "<h2> Description </h2>\nThis operation returns a list of schedule policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedule_policy.htm)"
           },
           "response": [
             {
