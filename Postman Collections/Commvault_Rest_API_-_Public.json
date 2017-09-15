@@ -36172,7 +36172,7 @@
           "response": [
             {
               "id": "c2ae94fe-c743-66aa-56a7-12ae5ca79741",
-              "name": "View Roles",
+              "name": "View Roles - This request does not define the propertyLevel parameter, so the default propertyLevel of 10 is used in the request.",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Role",
                 "method": "GET",
@@ -36288,7 +36288,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request uses 1 for the propertyLevel parameter.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role.htm)"
+            "description": "This operation returns a list of roles.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role.htm)"
           },
           "response": [
             {
