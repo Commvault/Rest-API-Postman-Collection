@@ -10615,7 +10615,7 @@
               "mode": "raw",
               "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_public_share_properties.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns the properties associated with an Edge Drive file or folder in a public share based on the file or folder path.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_public_share_properties.htm)"
           },
           "response": [
             {
@@ -31506,7 +31506,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_search_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to search the contents of a shared folder or the contents of a folder within a shared folder based on the folder GUID. The API returns the contents that match a specific search criteria for the folder and its subfolders. </p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_search_by_id.htm)"
           },
           "response": [
             {
