@@ -26540,7 +26540,7 @@
               "mode": "raw",
               "raw": "{{FileData}}"
             },
-            "description": "<h2>Description</h2> \r\n<p>Use this operation to share a specific file or folder in an ObjectStore based on the file or folder path.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_folder_by_path.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to create a new folder within a shared folder in the ObjectStore based on the shared parent folder path name.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_folder_by_path.htm)"
           },
           "response": [
             {
