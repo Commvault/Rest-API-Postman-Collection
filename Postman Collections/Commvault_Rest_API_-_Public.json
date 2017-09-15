@@ -712,7 +712,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns the details associated with an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_alert_details.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns the details associated with an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_alert_details.htm)"
           },
           "response": [
             {
