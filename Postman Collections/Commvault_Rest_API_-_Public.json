@@ -38227,7 +38227,7 @@
               "mode": "raw",
               "raw": "AgentGroupId=115"
             },
-            "description": "This operation removes the agent type or agent group association from the schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_schedule_policy_agent.htm)"
+            "description": "<h2> Description </h2>\nThis operation removes the agent type or agent group association from the schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_schedule_policy_agent.htm)"
           },
           "response": [
             {
