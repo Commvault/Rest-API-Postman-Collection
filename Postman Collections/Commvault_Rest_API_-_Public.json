@@ -23007,7 +23007,7 @@
               "mode": "raw",
               "raw": "{\n  \"name\":\"DemoFile1Renamed.doc\"\n}"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore_folder_rename.htm)"
+            "description": "<h2>Description</h2>\nThis operation renames a file or a folder in the ObjectStore based on the file or folder GUID.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or the file/folder name has some unacceptable characters.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file or folder does not exist.</td> \n  </tr> \n  <tr> \n   <td>409</td> \n   <td>Conflict</td> \n   <td>A file or folder with the specified new name already exists in the specified location.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore_folder_rename.htm)"
           },
           "response": [
             {
