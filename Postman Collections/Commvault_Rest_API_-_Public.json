@@ -4624,19 +4624,19 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -35834,7 +35834,7 @@
           "response": [
             {
               "id": "fccf8424-6d26-e735-fc4d-1ed1a235fd42",
-              "name": "Client Hierarchy",
+              "name": "Client Hierarchy - This request returns subclients that have backup jobs available to restore.",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Client/2/Hierarchy",
                 "method": "GET",
@@ -35853,8 +35853,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
