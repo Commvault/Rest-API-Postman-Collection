@@ -13644,7 +13644,7 @@
               "mode": "raw",
               "raw": "<App_ShareInfo sharedToOperationType=\"2\" status=\"0\">\r\n    <browseInfo> \r\n        <emailInfo dontSendEmail=\"1\" emailMessage=\"\"/> \r\n    </browseInfo>\r\n    <shareFolder syncWebFolderName=\"fromlaptop\"/>\r\n    <sharedTo permission=\"1\" userType=\"1\"> \r\n        <user userName=\"admin\"/> \r\n    </sharedTo>  \r\n</App_ShareInfo>"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_shares.htm)"
+            "description": "<h2>Description</h2>\nUse this operation to view the list of shared files and folders in Edge Drive.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_shares.htm)"
           },
           "response": [
             {
