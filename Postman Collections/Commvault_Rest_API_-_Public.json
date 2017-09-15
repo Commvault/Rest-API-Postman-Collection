@@ -6069,7 +6069,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_download_by_id.htm)"
+            "description": "<h2>Description</h2>\nThis operation downloads a file in Edge Drive based on the GUID of the file.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>Download operation is not allowed. This can happen if you attempt to download a folder.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file does not exist.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_download_by_id.htm)"
           },
           "response": [
             {
@@ -42400,7 +42400,7 @@
           "response": [
             {
               "id": "a08b55bc-99b6-3286-d7cd-120acb28cc09",
-              "name": "Subclient Browse 3",
+              "name": "Subclient Browse 3 - This request is to browse a specific guest virtual machine.",
               "originalRequest": {
                 "url": {
                   "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
@@ -42415,22 +42415,22 @@
                   ],
                   "query": [
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "path",
-                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b"
+                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                      "equals": true,
+                      "description": ""
                     },
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "showDeletedFiles",
-                      "value": "false"
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
                     },
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "vsFileBrowse",
-                      "value": "true"
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
                     }
                   ],
                   "variable": []
@@ -42438,21 +42438,20 @@
                 "method": "GET",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": "This request is to browse a specific guest virtual machine.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+                }
               },
               "status": "OK",
               "code": 200,
