@@ -43184,20 +43184,19 @@
               "mode": "raw",
               "raw": "{\r\n  \"groups\": [\r\n    {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 3,\r\n        \"associations\": [\r\n          {\r\n            \"entities\": {\r\n              \"entity\": [\r\n                {\r\n                  \"storagePolicyName\": \"CSSP\"\r\n                }\r\n              ]\r\n            },\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"userGroupEntity\": {\r\n        \"userGroupName\": \"Testgroup\"\r\n      }\r\n    }\r\n  ]\r\n}"
             },
-            "description": "This request deletes a security association.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user_group_properties.htm)"
+            "description": "<h2>Description</h2>\nThis operation updates the properties associated with a user group.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user_group_properties.htm)"
           },
           "response": [
             {
               "id": "7f986640-d06a-ba1f-80b4-ffcb722d005a",
-              "name": "User Group Properties - Delete a role",
+              "name": "User Group Properties - This request deletes a security association.",
               "originalRequest": {
                 "url": "",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
-                },
-                "description": ""
+                  "raw": "{\r\n  \"groups\": [\r\n    {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 3,\r\n        \"associations\": [\r\n          {\r\n            \"entities\": {\r\n              \"entity\": [\r\n                {\r\n                  \"storagePolicyName\": \"CSSP\"\r\n                }\r\n              ]\r\n            },\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"userGroupEntity\": {\r\n        \"userGroupName\": \"Testgroup\"\r\n      }\r\n    }\r\n  ]\r\n}"
+                }
               },
               "status": "OK",
               "code": 200,
