@@ -3835,7 +3835,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"clientProperties\": {\r\n    \"client\": {\r\n      \"clientDescription\": \"client-level description modified with rest api POST client\"\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
-            "description": "This operation updates the properties associated with a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm)"
+            "description": "<h2>Description</h2>\nThis operation updates the properties associated with a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_properties.htm)"
           },
           "response": [
             {
