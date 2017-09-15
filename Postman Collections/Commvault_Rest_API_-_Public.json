@@ -27156,7 +27156,7 @@
               "mode": "raw",
               "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_publicshare_download_version_by_id.htm)"
+            "description": "<h2>Description</h2> \n<p>This operation downloads a specific version of a file in the ObjectStore public share based on the GUID of the file version.</p> \n<p><b>Note</b>: Downloading a shared folder is currently not supported using this operation.</p> \n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_publicshare_download_version_by_id.htm)"
           },
           "response": [
             {
