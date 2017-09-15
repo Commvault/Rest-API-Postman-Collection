@@ -3295,7 +3295,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of clients.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns a list of clients.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm)"
           },
           "response": [
             {
@@ -41217,7 +41217,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request runs a synthetic full backup and then runs an incremental backup after the synthetic backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_backup.htm)"
+            "description": "<h2> Description </h2>\nThis request runs a synthetic full backup and then runs an incremental backup after the synthetic backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_backup.htm)"
           },
           "response": [
             {
