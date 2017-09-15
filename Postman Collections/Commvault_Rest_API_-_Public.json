@@ -43071,7 +43071,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"groups\": [\r\n    {\r\n      \"description\": \"alert management group\",\r\n      \"enabled\": true,\r\n      \"usersOperationType\": 2,\r\n      \"userGroupEntity\": {\r\n        \"userGroupName\": \"Testgroup\"\r\n      },\r\n      \"users\": [\r\n        {\r\n          \"userName\": \"admin\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
             },
-            "description": "<h2>Description</h2>\nThis request adds a user to the user group.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user_group_properties.htm)"
+            "description": "<h2>Description</h2>\nThis operation updates the properties associated with a user group.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user_group_properties.htm)"
           },
           "response": [
             {
