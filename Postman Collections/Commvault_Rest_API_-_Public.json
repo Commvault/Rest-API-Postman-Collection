@@ -4869,7 +4869,7 @@
               "mode": "raw",
               "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
             },
-            "description": "[_More Details_]([_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_by_folderid.htm))"
+            "description": "<h2>Description</h2>\nThis operation creates a new folder in Edge Drive based on the GUID of the parent folder.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_by_folderid.htm)"
           },
           "response": [
             {
