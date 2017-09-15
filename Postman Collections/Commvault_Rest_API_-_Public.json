@@ -23713,7 +23713,7 @@
               "mode": "raw",
               "raw": "<App_CustomProperties>\r\n<customProps>\r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps>\r\n</App_CustomProperties>"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_tag_by_fileid.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns the list of tags assigned to a file or folder in an ObjectStore based on the GUID of the file or folder.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or GUID provided in request is not of the file or folder.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The GUID provided in the request is not found.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_tag_by_fileid.htm)"
           },
           "response": [
             {
