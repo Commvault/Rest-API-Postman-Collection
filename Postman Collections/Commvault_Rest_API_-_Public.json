@@ -1612,7 +1612,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation deletes an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_alert.htm)"
+            "description": "<h2>Description</h2>\nThis operation deletes an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_alert.htm)"
           },
           "response": [
             {
