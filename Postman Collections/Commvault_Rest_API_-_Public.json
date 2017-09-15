@@ -44406,7 +44406,7 @@
               "mode": "raw",
               "raw": "<Workflow_StartWorkflow>\r\n  <options>\r\n    <outputFormat>1</outputFormat>\r\n    <inputs>\r\n      <name>DemoTestMachine</name>\r\n      <Memory>8</Memory>\r\n      <Disk>500</Disk>\r\n      <software></software>\r\n    </inputs>\r\n  </options>\r\n  <client>\r\n    <clientName>firewalltestcs</clientName>\r\n  </client>\r\n</Workflow_StartWorkflow>"
             },
-            "description": "This request executes a workflow named \"Demo - New Machine Request\" The workflow uses four workflow level inputs.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute.htm)"
+            "description": "This operation executes a workflow as a job. To execute a workflow as an API, see <a href = \"article?p=features/rest_api/operations/get_workflow_execute_api.htm\"> Executing a Workflow as an API</a>. \nFor information on the Workflow Job mode, see <a href = \"article?p=features/workflow/configure_workflow_properties.htm#Setting_Workflow_General_Properties\" data-internal=\"true\"> Setting General Properties </a>.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute.htm)"
           },
           "response": [
             {
