@@ -5007,7 +5007,7 @@
               "mode": "raw",
               "raw": "{\n  \"name\":\"DemoFolder2\",\n  \"parentPath\":\"\\\\\"\n}\n"
             },
-            "description": "<h2>Description</h2>\nThis operation creates a new folder in Edge Drive based on the path to the parent folder.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_by_folderpath.htm)"
+            "description": "<h2>Description</h2>\nThis operation creates a new folder in Edge Drive based on the path to the parent folder.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or the folder name has some unacceptable characters.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified parent folder does not exist.</td> \n  </tr> \n  <tr> \n   <td>409</td> \n   <td>Conflict</td> \n   <td>A folder with the specified name already exists in the same location. <p>The response body will include the information of the folder that already exists. For example:</p> \n    <div class=\"cv-ui-codesnippet\"> \n     <div class=\"cv-text-codesnippet\"> \n      <p>&lt;App_FileResourceResponse&gt; &lt;error errorCode=&quot;409&quot; /&gt; &lt;fileResource parentGuid=&quot;97409005317b4dbd9c138d2fd80a9e50&quot; GUID=&quot;be7d714583584307bf00f1de47212b94&quot; directory=&quot;1&quot; name=&quot;NewFolder&quot; path=&quot;\\Folder1\\NewFolder&quot; /&gt; &lt;/App_FileResourceResponse&gt;</p> \n     </div> \n    </div> </td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_by_folderpath.htm)"
           },
           "response": [
             {
@@ -43076,15 +43076,14 @@
           "response": [
             {
               "id": "133bca09-bca8-cb0a-784f-a0f6407f384f",
-              "name": "User Group Properties",
+              "name": "User Group Properties - This operation adds a user to the group",
               "originalRequest": {
                 "url": "",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
-                },
-                "description": ""
+                  "raw": "{\r\n  \"groups\": [\r\n    {\r\n      \"description\": \"alert management group\",\r\n      \"enabled\": true,\r\n      \"usersOperationType\": 2,\r\n      \"userGroupEntity\": {\r\n        \"userGroupName\": \"Testgroup\"\r\n      },\r\n      \"users\": [\r\n        {\r\n          \"userName\": \"admin\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+                }
               },
               "status": "OK",
               "code": 200,
@@ -44188,15 +44187,14 @@
           "response": [
             {
               "id": "677153ad-98d1-8b9b-94af-a465e1de4fd3",
-              "name": "User",
+              "name": "User - This operation deletes a user.",
               "originalRequest": {
                 "url": "",
                 "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
