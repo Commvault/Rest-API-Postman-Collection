@@ -31988,7 +31988,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_properties_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>This operation returns the properties associated with a file or folder within a shared folder in the ObjectStore based on the file or folder GUID.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_properties_by_id.htm)"
           },
           "response": [
             {
