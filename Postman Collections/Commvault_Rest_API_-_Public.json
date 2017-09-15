@@ -1402,30 +1402,31 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "Email notification Type disabled\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert_notification_type_disable.htm)"
+            "description": "This operation removes a notification type from an alert. Alerts must have at least one notification type, so disabling the only remaining notification type is not allowed.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert_notification_type_disable.htm)"
           },
           "response": [
             {
               "id": "89a06d22-6867-1cfb-fee8-d0e221c2e765",
-              "name": "POST Alert Disable Email Notification",
+              "name": "POST Alert Disable Email Notification - Email notification Type disabled",
               "originalRequest": {
                 "url": "{{ServerUrl}}/AlertRule/{{alertId2}}/notificationType/1/Action/Disable",
                 "method": "POST",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
