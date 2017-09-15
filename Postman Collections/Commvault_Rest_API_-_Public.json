@@ -37184,7 +37184,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2> Description </h2>\nThis request returns all of the administrator schedules for a storage policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
+            "description": "<h2> Description </h2>\nThis operation returns a list of schedules.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
           },
           "response": [
             {
