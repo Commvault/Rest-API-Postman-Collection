@@ -43942,7 +43942,7 @@
               "mode": "raw",
               "raw": "{\r\"sessions\":[\r\"2E1C7303-360B-4787-A09E-93C8189EBC59\",\"EMCBC189BC3-E861-4D59-86CA-BB552F8F8A02\"\r]\r}"
             },
-            "description": "This operation logs off users from Web Server and the command line interface.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_user_session.htm)"
+            "description": "<h2> Description </h2>\nThis operation logs off users from Web Server and the command line interface.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_user_session.htm)"
           },
           "response": [
             {
