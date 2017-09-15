@@ -34084,7 +34084,7 @@
               "mode": "raw",
               "raw": "{\r\n   \"fileFolderInfo\":[\r\n      {\r\n         \"fileGUID\":\"{{SHAREFILE_GUID}}\"\r\n      }\r\n   ],\r\n   \"customProps\":{\r\n      \"nameValues\":[\r\n         {\r\n            \"name\":\"testproperty1\",\r\n            \"value\":\"testvalue1\"\r\n         },\r\n         {\r\n            \"name\":\"testproperty2\",\r\n            \"value\":\"testvalue2\"\r\n         }\r\n      ]\r\n   }\r\n}"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_share_custom_property.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to delete the custom properties of individual or multiple files and folders that are shared or resides within a shared folder in an ObjectStore based on the GUID of the file or folder.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_share_custom_property.htm)"
           },
           "response": [
             {
