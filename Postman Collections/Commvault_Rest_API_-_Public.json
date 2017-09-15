@@ -37698,7 +37698,7 @@
               "mode": "raw",
               "raw": "freq_type = \"1\"\r\nactive_start_date = \"1467158400\"\r\nactive_start_time = \"28880\"\r\nactive_end_date = \"1467158400\"\r\nactive_end_time = \"43200\""
             },
-            "description": "This opeartion modifies the schedule pattern for a schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_pattern_modify.htm)"
+            "description": "<h2> Description </h2>\nThis operation modifies the schedule pattern for a schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_pattern_modify.htm)"
           },
           "response": [
             {
