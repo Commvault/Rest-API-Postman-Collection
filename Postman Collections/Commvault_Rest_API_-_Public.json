@@ -7615,7 +7615,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": ""
+            "description": "<h2>Description</h2>\nUse this operation to view the first 50 versions of a file in an Edge Drive based on the GUID of the file. The versions are listed in descending order so that the latest version is the top result.\n\n[_More Info_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_file_versions_by_id.htm)"
           },
           "response": [
             {
