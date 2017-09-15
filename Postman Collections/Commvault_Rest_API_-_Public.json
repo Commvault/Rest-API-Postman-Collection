@@ -23296,7 +23296,7 @@
               "mode": "raw",
               "raw": "<App_CustomProperties>\r\n<customProps>\r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps>\r\n</App_CustomProperties>"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_custom_prop_filter_by_fileid.htm)"
+            "description": "<h2>Description</h2>\nUse this operation to list specific or all custom properties of a file or a folder in an ObjectStore based on the GUID of the file or folder.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or the file/folder name has some unacceptable characters.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file or folder does not exist.</td> \n  </tr>\n  </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_custom_prop_filter_by_fileid.htm)"
           },
           "response": [
             {
