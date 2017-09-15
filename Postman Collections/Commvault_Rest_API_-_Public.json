@@ -41069,37 +41069,36 @@
               "mode": "raw",
               "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"content\": [\r\n      {\r\n        \"excludePath\": \"C:\\\\Log\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
-            "description": "<h2> Description </h2>\nThis request adds an exclusion to what is backed up.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm)"
+            "description": "<h2> Description </h2>\nThis operation updates the properties associated with a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm)"
           },
           "response": [
             {
               "id": "92fe255b-f611-4127-2a4e-5c3a9218e0a4",
-              "name": "Subclient Properties",
+              "name": "Subclient Properties - This request adds an exclusion to what is backed up.",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "method": "POST",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Content-Type",
-                    "value": "application/json"
+                    "value": "application/json",
+                    "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"content\": [\r\n      {\r\n        \"excludePath\": \"C:\\\\Log\"\r\n      }\r\n    ]\r\n  }\r\n}"
-                },
-                "description": "This request adds an exclusion to what is backed up.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm)"
+                  "raw": ""
+                }
               },
               "status": "OK",
               "code": 200,
