@@ -43847,7 +43847,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns the properties associated with a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_user_properties.htm)"
+            "description": "<h2> Description </h2>\nThis operation returns the properties associated with a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_user_properties.htm)"
           },
           "response": [
             {
