@@ -20065,7 +20065,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request returns all Jobs for all Clients.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns a list of jobs for a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job.htm)"
           },
           "response": [
             {
@@ -20152,7 +20152,7 @@
             },
             {
               "id": "dac75fd1-7072-04ac-6068-dddca0264d5c",
-              "name": "All Active Jobs For All Clients",
+              "name": "All Active Jobs For All Clients - This request returns all Jobs for all Clients.",
               "originalRequest": {
                 "url": {
                   "raw": "{{ServerUrl}}/Job?jobCategory=Active",
@@ -20189,8 +20189,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
