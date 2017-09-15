@@ -20816,12 +20816,12 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request returns all critical events by filtering out informational, minor, and major events.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_events.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns a list of CommCell events.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_events.htm)"
           },
           "response": [
             {
               "id": "1ab515f7-eea4-06a1-db4b-750f7c0a1fb0",
-              "name": "Events",
+              "name": "Events - This request returns all critical events by filtering out informational, minor, and major events.",
               "originalRequest": {
                 "url": {
                   "raw": "{{ServerUrl}}/Events?showInfo=false&showMinor=false&showMajor=false",
@@ -20870,8 +20870,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
