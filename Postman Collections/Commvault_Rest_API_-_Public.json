@@ -1083,36 +1083,36 @@
               "mode": "raw",
               "raw": "{\n  \"alertDetail\": {\n    \"alertDetail\": {\n      \"regNonGalaxyUserList\": {\n        \"nonGalaxyUserOperationType\": 2,\n        \"nonGalaxyUserList\": [\n          \"AddedUser@testing.com\"\n        ]\n      }\n    }\n  }\n}"
             },
-            "description": "Modified by adding another email address to the mailing list.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert_modify.htm)"
+            "description": "This operation updates an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert_modify.htm)"
           },
           "response": [
             {
               "id": "0166130d-7faf-d747-80c7-699b08f7f92e",
-              "name": "POST Alert Modify",
+              "name": "POST Alert Modify - Modified by adding another email address to the mailing list.",
               "originalRequest": {
                 "url": "{{ServerUrl}}/AlertRule/{{alertId2}}/Action/Modify",
                 "method": "POST",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   },
                   {
                     "key": "Content-Type",
-                    "type": "text",
-                    "name": "Content-Type",
-                    "value": "application/json"
+                    "value": "application/json",
+                    "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"alertDetail\": {\n\t\t\"alertDetail\": {\n\t\t\t\"regNonGalaxyUserList\": {\n\t\t\t\t\"nonGalaxyUserOperationType\": 2,\n\t\t\t\t\"nonGalaxyUserList\": [\n\t\t\t\t\t\"AddedUser@testing.com\"\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t}\n}"
-                },
-                "description": ""
+                  "raw": ""
+                }
               },
               "status": "OK",
               "code": 200,
