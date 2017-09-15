@@ -489,19 +489,20 @@
               "mode": "raw",
               "raw": "{\n  \"association\": {\n    \"entity\": [\n      {\n        \"clientName\": \"{{clientName}}\",\n        \"appName\": \"{{appName}}\"\n      }\n    ]\n  },\n  \"agentProperties\": {\n    \"idaActivityControl\": {\n      \"activityControlOptions\": [\n        {\n          \"activityType\": 1,\n          \"enableAfterADelay\": false,\n          \"enableActivityType\": true\n        }\n      ]\n    }\n  }\n}"
             },
-            "description": "Enables Backup Activity\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_agent_properties.htm)"
+            "description": "This operation updates the properties associated with an agent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_agent_properties.htm)"
           },
           "response": [
             {
               "id": "ba4df1e6-96fe-345a-4ef6-737b705c9fd3",
-              "name": "POST Agent Properties",
+              "name": "POST Agent Properties - Enables Backup Activity",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Agent",
                 "method": "POST",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
                     "key": "Content-Type",
@@ -510,14 +511,14 @@
                   },
                   {
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"association\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"greenvalley\",\n\t\t\t\t\"appName\": \"File System\"\n\t\t\t}\n\t\t]\n\t},\n\t\"agentProperties\": {\n\t\t\"idaActivityControl\": {\n\t\t\t\"activityControlOptions\": [\n\t\t\t\t{\n\t\t\t\t\t\"activityType\": 1,\n\t\t\t\t\t\"enableAfterADelay\": false,\n\t\t\t\t\t\"enableActivityType\": true\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
-                },
-                "description": ""
+                  "raw": ""
+                }
               },
               "status": "OK",
               "code": 200,
