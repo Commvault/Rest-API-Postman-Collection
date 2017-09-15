@@ -38688,7 +38688,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
           },
           "response": [
             {
