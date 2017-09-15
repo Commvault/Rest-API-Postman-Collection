@@ -6363,7 +6363,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_preview_by_fileid.htm)"
+            "description": "<p>This operation returns the preview of a file in Edge Drive based on the file ID.</p>\r\n\r\n<p>Preview is currently supported for all images and Microsoft Office file types.</p>\r\n\r\n<p>By default, you can preview files that have a maximum file size limit of 10 MB. For instructions on changing the file size limit, see <a href=http://documentation.commvault.com/commvault/v11/article?p=products/web_console/t_wcnsl_admin_preview_size.htm>Changing the File Size Limit for Preview</a>.</p>\r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_preview_by_fileid.htm)"
           },
           "response": [
             {
