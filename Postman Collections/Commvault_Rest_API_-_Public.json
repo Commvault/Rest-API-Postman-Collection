@@ -34504,7 +34504,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm)"
+            "description": "<h2>Description</h2> \n<p>This operation deletes a file or a folder in an ObjectStore.</p> \n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_contentstore_folder.htm)"
           },
           "response": [
             {
