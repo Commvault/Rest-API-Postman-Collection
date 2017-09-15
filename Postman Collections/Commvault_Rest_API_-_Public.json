@@ -3724,7 +3724,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of additional settings at the client level."
+            "description": "This operation returns a list of additional settings at the client level.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_properties.htm)"
           },
           "response": [
             {
