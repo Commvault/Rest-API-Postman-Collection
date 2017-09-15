@@ -5916,7 +5916,7 @@
               "mode": "raw",
               "raw": "{{FileData}}"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_upload_chunk_request.htm)"
+            "description": "Use this operation to upload a chunk or portion of the file data to Edge Drive.\n\nBefore you run this operation, make sure to initiate the upload session to Edge Drive. For details, see <a href=http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_upload_header_request.htm>POST Upload Session to Edge Drive</a>.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_upload_chunk_request.htm)"
           },
           "response": [
             {
@@ -43076,7 +43076,7 @@
           "response": [
             {
               "id": "133bca09-bca8-cb0a-784f-a0f6407f384f",
-              "name": "User Group Properties - This operation adds a user to the group",
+              "name": "User Group Properties - This operation adds a user to the group.",
               "originalRequest": {
                 "url": "",
                 "header": [],
