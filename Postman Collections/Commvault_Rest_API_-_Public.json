@@ -34884,7 +34884,7 @@
               "mode": "raw",
               "raw": "{\r\n   \"mode\":4,\r\n   \"password\":\"{{password}}\",\r\n   \"username\":\"{{userName}}\"\r\n}"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm)"
+            "description": "<h2> Description </h2>\r\n<p>Commvault REST APIs support token-based authentication via the Authtoken request header. The POST Login API is used to retrieve the authentication token. Once obtained, the authentication token must be inserted into the Authtoken header for all requests.</p> \r\n<p><b>Note:</b> The authentication token expires after 30 minutes of inactivity.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm)"
           },
           "response": [
             {
