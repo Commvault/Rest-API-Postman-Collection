@@ -42124,7 +42124,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2> Description </h2>\nThis request is for a root level browse for guest virtual machines.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+            "description": "<h2> Description </h2>\nThis operation browses data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
           },
           "response": [
             {
