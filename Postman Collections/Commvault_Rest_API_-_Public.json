@@ -5007,7 +5007,7 @@
               "mode": "raw",
               "raw": "{\n  \"name\":\"DemoFolder2\",\n  \"parentPath\":\"\\\\\"\n}\n"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_by_folderpath.htm)"
+            "description": "<h2>Description</h2>\nThis operation creates a new folder in Edge Drive based on the path to the parent folder.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_drive_folder_by_folderpath.htm)"
           },
           "response": [
             {
