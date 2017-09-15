@@ -5284,7 +5284,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_file_properties_by_filepath.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns the properties associated with a file or folder in Edge Drive based on the file or folder path.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_file_properties_by_filepath.htm)"
           },
           "response": [
             {
