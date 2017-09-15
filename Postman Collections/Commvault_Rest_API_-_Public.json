@@ -44147,7 +44147,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"users\": [\r\n    {\r\n      \"description\": \"Modifying description\",\r\n      \"associatedUserGroupsOperationType\": 2,\r\n      \"agePasswordDays\": 120,\r\n      \"password\": \"QnVpbGRlciExMg==\",\r\n      \"email\": \"jdoe@company.com\",\r\n      \"fullName\": \"Jane Doe\",\r\n      \"enableUser\": true,\r\n      \"associatedUserGroups\": [\r\n        {\r\n          \"userGroupName\": \"View All\"\r\n        }\r\n      ],\r\n      \"userEntity\": {\r\n        \"userName\": \"jdoe\"\r\n      },\r\n      \"validationParameters\": {\r\n        \"password\": \"QnVpbGRlciExMg==\"\r\n      }\r\n    }\r\n  ]\r\n}"
             },
-            "description": "<h2> Description </h2>\nThis operation updates the properties associated with a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user_properties.htm)"
+            "description": "This operation updates the properties associated with a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user_properties.htm)"
           },
           "response": [
             {
@@ -44253,7 +44253,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2> Description </h2>\nThis operation deletes a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_user.htm)"
+            "description": "This operation deletes a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_user.htm)"
           },
           "response": [
             {
