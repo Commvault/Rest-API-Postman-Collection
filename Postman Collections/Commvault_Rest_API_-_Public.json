@@ -43486,7 +43486,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"users\": [\r\n    {\r\n      \"description\": \"backup admin user\",\r\n      \"agePasswordDays\": 10,\r\n      \"password\": \"QnVpbGRlciExMg==\",\r\n      \"email\": \"jdoe@company.com\",\r\n      \"fullName\": \"Jane Doe\",\r\n      \"enableUser\": true,\r\n      \"associatedUserGroups\": [\r\n        {\r\n          \"userGroupName\": \"View All\"\r\n        }\r\n      ],\r\n      \"userEntity\": {\r\n        \"userName\": \"jdoe\"\r\n      }\r\n    }\r\n  ]\r\n}"
             },
-            "description": "This operation creates a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user.htm)"
+            "description": "<h2> Description </h2>\nThis operation creates a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user.htm)"
           },
           "response": [
             {
@@ -43753,15 +43753,14 @@
           "response": [
             {
               "id": "ca91a1e6-a821-45be-7b18-edab8e60dcac",
-              "name": "Session Details",
+              "name": "Session Details - This operation returns a list of sessions for a user. ",
               "originalRequest": {
                 "url": "",
                 "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
