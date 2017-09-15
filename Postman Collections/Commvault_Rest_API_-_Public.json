@@ -31345,7 +31345,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_list_by_path.htm)"
+            "description": "<h2>Description</h2> \n<p>Use this operation to list the contents of a shared folder or the contents of a folder within a shared folder based on the folder path. The result does not include the contents of subfolders.</p> \n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_list_by_path.htm)"
           },
           "response": [
             {
