@@ -1193,7 +1193,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation disables an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert_disable.htm)"
+            "description": "<h2>Description</h2>\nThis operation disables an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert_disable.htm)"
           },
           "response": [
             {
