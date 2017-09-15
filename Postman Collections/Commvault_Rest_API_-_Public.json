@@ -29879,7 +29879,7 @@
               "mode": "raw",
               "raw": "<App_ShareInfo sharedToOperationType=\"2\" status=\"0\">\r\n    <browseInfo> \r\n        <emailInfo dontSendEmail=\"1\" emailMessage=\"\"/> \r\n    </browseInfo>\r\n    <shareFolder syncWebFolderName=\"fromlaptop\"/>\r\n    <sharedTo permission=\"1\" userType=\"1\"> \r\n        <user userName=\"admin\"/> \r\n    </sharedTo>  \r\n</App_ShareInfo>"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_shares.htm)"
+            "description": "<h2>Description</h2> \n<p>Use this operation to view the list of all or specific shared files and folders in one or more ObjectStores. </p> \n<p>To view all or specific shares for a user, see <a href=\"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm\" data-internal=\"true\">View Shared Files and Folders</a>.</p> \n<p>To remove the share on a folder, see <a href=\"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_share.htm\" data-internal=\"true\">Remove Sharing on a File or Folder</a>.</p> \n<p>To update the share settings, see <a href=\"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_share_update.htm\" data-internal=\"true\">Change Share Settings</a>.</p> \n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_shares.htm)"
           },
           "response": [
             {
