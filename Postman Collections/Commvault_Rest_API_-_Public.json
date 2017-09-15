@@ -24650,7 +24650,7 @@
               "mode": "raw",
               "raw": "{\n  \"parentGuid\":\"{{RootGuid}}\"\n}"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore_folder_move.htm)"
+            "description": "<h2>Description</h2>\nThis operation moves a file or folder, based on the file or folder GUID, to another folder within the ObjectStore.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or the specified new parent folder name is not valid.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>Move operation is not allowed. This can happen if you attempt to move a folder to one of its child folders.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file or folder or the specified new parent folder does not exist.</td> \n  </tr> \n  <tr> \n   <td>409</td> \n   <td>Conflict</td> \n   <td>A file or folder with the specified new name already exists in the specified location.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore_folder_move.htm)"
           },
           "response": [
             {
