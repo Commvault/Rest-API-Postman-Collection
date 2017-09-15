@@ -20480,7 +20480,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation kills a job.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_kill.htm)"
+            "description": "<h2>Description</h2>\nThis operation kills a job.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_job_kill.htm)"
           },
           "response": [
             {
