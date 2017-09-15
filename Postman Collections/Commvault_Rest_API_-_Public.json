@@ -22310,7 +22310,7 @@
               "mode": "raw",
               "raw": "{{FileData}}"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_upload_chunk_request.htm)"
+            "description": "<h2>Description</h2>\nUse this operation to upload a chunk or portion of the file data to the ObjectStore.\n\n<p>Before you run this operation, make sure to initiate the upload session to ObjectStore. For details, see <a href=http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_upload_header_request.htm>Initiate an Upload Session to ObjectStore</a>.</p>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_upload_chunk_request.htm)"
           },
           "response": [
             {
