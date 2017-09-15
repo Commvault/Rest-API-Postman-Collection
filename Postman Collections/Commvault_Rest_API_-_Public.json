@@ -29477,7 +29477,7 @@
               "mode": "raw",
               "raw": "<App_FileResourceInfo name=\"DemoShareFolder\"/>"
             },
-            "description": "<h2>Description</h2>\n<p>This operation creates a new folder in the ObjectStore based on the GUID of the parent folder.</p>\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_by_folderid.htm)"
+            "description": "<h2>Description</h2>\n<p>This operation creates a new folder in the ObjectStore based on the GUID of the parent folder.</p>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_folder_by_folderid.htm)"
           },
           "response": [
             {
