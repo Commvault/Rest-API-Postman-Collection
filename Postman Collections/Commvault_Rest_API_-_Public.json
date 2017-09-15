@@ -2593,23 +2593,25 @@
               "mode": "raw",
               "raw": "{\r\n  \"backupsetProperties\": {\r\n    \"commonBackupSet\": {\r\n      \"newBackupSetName\": \"{{backupsetName}}\"\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\",\r\n        \"backupsetName\": \"{{backupsetName}}\",\r\n        \"instanceName\": \"DefaultInstanceName\",\r\n        \"appName\": \"File System\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
-            "description": "Setting the backupset name to defaultBackupSet\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_backup_set_properties.htm)"
+            "description": "<h2>Description</h2>\nThis operation updates the properties associated with a backup set.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_backup_set_properties.htm)"
           },
           "response": [
             {
               "id": "632ddbb7-95f7-ffde-66d1-31726e99562a",
-              "name": "POST BackupSet Properties",
+              "name": "POST BackupSet Properties - Setting the backupset name to defaultBackupSet",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Backupset/{{backupsetId2}}",
                 "method": "POST",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   },
                   {
                     "key": "Content-Type",
@@ -2619,9 +2621,8 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"backupsetProperties\": {\r\n    \"commonBackupSet\": {\r\n      \"newBackupSetName\": \"{{backupsetName}}\"\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\",\r\n        \"backupsetName\": \"{{backupsetName}}\",\r\n        \"instanceName\": \"DefaultInstanceName\",\r\n        \"appName\": \"File System\"\r\n      }\r\n    ]\r\n  }\r\n}"
-                },
-                "description": ""
+                  "raw": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -40853,7 +40854,7 @@
           "response": [
             {
               "id": "ac1f8c9a-b98d-484d-dced-c2283b20b231",
-              "name": "Subclient Browse",
+              "name": "Subclient Browse - This request is for a root level browse.",
               "originalRequest": {
                 "url": {
                   "raw": "{{ServerUrl}}/Subclient/2/Browse?path=%5C",
@@ -40868,10 +40869,10 @@
                   ],
                   "query": [
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "path",
-                      "value": "%5C"
+                      "value": "%5C",
+                      "equals": true,
+                      "description": ""
                     }
                   ],
                   "variable": []
@@ -40879,21 +40880,20 @@
                 "method": "GET",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": "This request is for a root level browse.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+                }
               },
               "status": "OK",
               "code": 200,
