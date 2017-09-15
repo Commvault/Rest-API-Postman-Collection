@@ -41529,7 +41529,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2> Description </h2>\nThis request runs an incremental backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_backup.htm)"
+            "description": "<h2> Description </h2>\nThis operation runs a backup job for a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_backup.htm)"
           },
           "response": [
             {
