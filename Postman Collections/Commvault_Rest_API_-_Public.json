@@ -35167,7 +35167,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"summary\": {\r\n    \"slaInMinutes\": 2 ,\r\n    \"plan\": {\r\n      \"planId\": 1\r\n    }\r\n  }\r\n}"
             },
-            "description": "This operation updates the SLA (service level agreement) for a plan.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_plan_sla.htm)"
+            "description": "<h2> Description </h2>\nThis operation updates the SLA (service level agreement) for a plan.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_plan_sla.htm)"
           },
           "response": [
             {
