@@ -37041,7 +37041,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request returns all of the schedules for a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
+            "description": "<h2> Description </h2>\nThis request returns all of the schedules for a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
           },
           "response": [
             {
