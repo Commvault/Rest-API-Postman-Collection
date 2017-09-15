@@ -10760,7 +10760,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_by_fileid.htm)"
+            "description": "<h2>Description</h2>\r\nThis operation returns the preview for a public shared file or a file within a public shared folder in Edge Drive based on the file ID.\r\n\r\nPreview is currently supported for all images and Microsoft Office file types.\r\n\r\n<p>By default, you can preview files that have a maximum file size limit of 10 MB. For instructions on changing the file size limit, see <a href=http://documentation.commvault.com/commvault/v11/article?p=products/web_console/t_wcnsl_admin_preview_size.htm>Changing the File Size Limit for Preview</a>.</p>\r\n\r\n<h2>Supported Error Codes</h2> \r\n<table width=\"100%\"> \r\n <tbody> \r\n  <tr> \r\n   <th width=\"20%\">Code</th> \r\n   <th width=\"20%\">Status</th> \r\n   <th width=\"60%\">Description</th> \r\n  </tr> \r\n  <tr> \r\n   <td>400</td> \r\n   <td>Bad Request</td> \r\n   <td>The request is missing required parameters or the file name has some unacceptable characters.</td> \r\n  </tr> \r\n  <tr> \r\n   <td>204</td> \r\n   <td>No Content</td> \r\n   <td>Preview is not available for the file.</td> \r\n  </tr> \r\n  <tr> \r\n   <td>403</td> \r\n   <td>Forbidden</td> \r\n   <td>User does not have permissions to preview or the preview is requested for a folder or an unsupported file type.</td> \r\n  </tr> \r\n  <tr> \r\n   <td>404</td> \r\n   <td>Not Found</td> \r\n   <td>The specified file does not exist.</td> \r\n  </tr> \r\n </tbody> \r\n</table>\r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_by_fileid.htm)"
           },
           "response": [
             {
@@ -10929,7 +10929,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_by_filepath.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns the preview for a public shared file or a file within a public shared folder in Edge Drive based on the file path.\n\nPreview is currently supported for all images and Microsoft Office file types.\n\n<p>By default, you can preview files that have a maximum file size limit of 10 MB. For instructions on changing the file size limit, see <a href=http://documentation.commvault.com/commvault/v11/article?p=products/web_console/t_wcnsl_admin_preview_size.htm>Changing the File Size Limit for Preview</a>.</p>\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or the file name has some unacceptable characters.</td> \n  </tr> \n  <tr> \n   <td>204</td> \n   <td>No Content</td> \n   <td>Preview is not available for the file.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>User does not have permissions to preview or the preview is requested for a folder or an unsupported file type.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file does not exist.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_by_filepath.htm)"
           },
           "response": [
             {
@@ -11097,7 +11097,7 @@
               "mode": "raw",
               "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm)"
+            "description": "<h2>Description</h2>\nThis operation downloads a file from the Edge Drive public share based on the file path.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_path.htm)"
           },
           "response": [
             {
@@ -11247,7 +11247,7 @@
               "mode": "raw",
               "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_id.htm)"
+            "description": "<h2>Description</h2>\nThis operation downloads a file in the Edge Drive public share based on the GUID of the file.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_download_by_id.htm)"
           },
           "response": [
             {
@@ -11375,7 +11375,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_version_by_id.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns the preview of a specific version of a public shared file or a file within a public shared folder in Edge Drive based on the GUID of the file version.\n\nPreview is currently supported for all images and Microsoft Office file types.\n\n<p>By default, you can preview files that have a maximum file size limit of 10 MB. For instructions on changing the file size limit, see <a href=http://documentation.commvault.com/commvault/v11/article?p=products/web_console/t_wcnsl_admin_preview_size.htm>Changing the File Size Limit for Preview</a>.</p>\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or the file name has some unacceptable characters.</td> \n  </tr> \n  <tr> \n   <td>204</td> \n   <td>No Content</td> \n   <td>Preview is not available for the file.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>User does not have permissions to preview or the preview is requested for a folder or an unsupported file type.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file does not exist.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_publicshare_preview_version_by_id.htm)"
           },
           "response": [
             {
@@ -31506,7 +31506,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_search_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to search the contents of a shared folder or the contents of a folder within a shared folder based on the folder GUID. The API returns the contents that match a specific search criteria for the folder and its subfolders. </p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_search_by_id.htm)"
           },
           "response": [
             {
@@ -31667,7 +31667,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_search_by_path.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to search the contents of a shared folder or the contents of a folder within a shared folder based on the folder GUID. The API returns the contents that match a specific search criteria for the folder and its subfolders. </p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_share_search_by_path.htm)"
           },
           "response": [
             {
@@ -31988,7 +31988,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_properties_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>This operation returns the properties associated with a file or folder within a shared folder in the ObjectStore based on the file or folder GUID.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_properties_by_id.htm)"
           },
           "response": [
             {
@@ -32137,7 +32137,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_properties_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>This operation returns the properties associated with a file or folder within a shared folder in the ObjectStore based on the file or folder GUID.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_properties_by_id.htm)"
           },
           "response": [
             {
@@ -32280,7 +32280,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_download_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to download a shared file in the ObjectStore based on the GUID of the file.</p> \r\n<p><b>Note</b>: Downloading a shared folder is currently not supported using this operation.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_download_by_id.htm)"
           },
           "response": [
             {
@@ -32429,7 +32429,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_download_by_path.htm)"
+            "description": "<h2>Description</h2> \n<p>This operation downloads a shared file in an ObjectStore based on the file path.</p> \n<p><b>Note</b>: Downloading a folder is currently not supported using this operation.</p> \n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_download_by_path.htm)"
           },
           "response": [
             {
@@ -32578,7 +32578,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_download_version_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to download a shared file in the ObjectStore based on the GUID of the file.</p> \r\n<p><b>Note</b>: Downloading a shared folder is currently not supported using this operation.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_download_version_by_id.htm)"
           },
           "response": [
             {
@@ -32709,7 +32709,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_preview_by_fileid.htm)"
+            "description": "<h2>Description</h2> \r\n<p>This operation returns the preview for a shared file or a file within a shared folder in an ObjectStore based on the file ID.</p> \r\n<p>Preview is currently supported for images and Microsoft Office file types. </p> \r\n<p>By default, you can preview files that have a maximum file size limit of 10 MB. For instructions on changing the file size limit, see <a href=\"http://documentation.commvault.com/commvault/v11/article?p=products/web_console/t_wcnsl_admin_preview_size.htm\" data-internal=\"true\">Changing the File Size Limit for Preview</a>.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_preview_by_fileid.htm)"
           },
           "response": [
             {
@@ -32834,7 +32834,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_preview_by_filepath.htm)"
+            "description": "<h2>Description</h2> \n<p>This operation returns the preview for a shared file or a file within a shared folder in an ObjectStore based on the file path.</p> \n<p>Preview is currently supported for all images and Microsoft Office file types. </p> \n<p>By default, you can preview files that have a maximum file size limit of 10 MB. For instructions on changing the file size limit, see <a href=\"article?p=products/web_console/t_wcnsl_admin_preview_size.htm\" data-internal=\"true\">Changing the File Size Limit for Preview</a>.</p> \n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_preview_by_filepath.htm)"
           },
           "response": [
             {
