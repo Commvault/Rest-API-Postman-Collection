@@ -33953,7 +33953,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2>Description</h2> \r\n<p>Use this operation to list specific or all custom properties of a file or folder that is shared or resides within a shared folder in an ObjectStore based on the GUID of the file or folder.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_custom_prop_filter_by_fileid.htm)"
+            "description": "<h2>Description</h2> \r\n<p>Use this operation to list specific or all custom properties of a file or folder that is shared or resides within a shared folder in an ObjectStore based on the GUID of the file or folder.</p> \r\n\r\n<h2>Supported Error Codes</h2> \r\n<table width=\"100%\"> \r\n <tbody> \r\n  <tr> \r\n   <th width=\"20%\">Code</th> \r\n   <th width=\"20%\">Status</th> \r\n   <th width=\"60%\">Description</th> \r\n  </tr> \r\n  <tr> \r\n   <td>400</td> \r\n   <td>Bad Request</td> \r\n   <td>Required parameters were not specified correctly or invalid path inside share.</td> \r\n  </tr> \r\n  <tr> \r\n   <td>403</td> \r\n   <td>Forbidden</td> \r\n   <td>Input token does not match or share has expired or the user does not have access to this share.</td> \r\n  </tr> \r\n  <tr> \r\n   <td>404</td> \r\n   <td>Not Found</td> \r\n   <td>GUID provided in request is not found or failed to get share folder details. Share may no longer exist.</td> \r\n  </tr> \r\n </tbody> \r\n</table>\r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_custom_prop_filter_by_fileid.htm)"
           },
           "response": [
             {
