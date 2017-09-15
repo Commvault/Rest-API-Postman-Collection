@@ -19703,12 +19703,12 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request returns backup jobs because the jobFilter parameter is not used.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns a list of jobs for a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_job.htm)"
           },
           "response": [
             {
               "id": "27105df3-5f12-0a34-5d8c-a0a032fff80b",
-              "name": "Job",
+              "name": "Job - This request returns backup jobs because the jobFilter parameter is not used.",
               "originalRequest": {
                 "url": {
                   "raw": "{{ServerUrl}}/Job?clientId=2&jobFilter=Backup",
@@ -19751,8 +19751,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
