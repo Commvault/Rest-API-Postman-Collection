@@ -1726,7 +1726,7 @@
               "mode": "raw",
               "raw": "{\n  \"password\": \"{{password}}\",\n  \"username\": \"{{userName}}\"\n}"
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm)"
+            "description": "<h2>Description</h2>\nCommvault REST APIs support token-based authentication via the Authtoken request header. The POST Login API is used to retrieve the authentication token. Once obtained, the authentication token must be inserted into the Authtoken header for all requests.\n\n[_Note:_] The authentication token expires after 30 minutes of inactivity.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/rest_api_authentication.htm)"
           },
           "response": [
             {
@@ -44411,15 +44411,14 @@
           "response": [
             {
               "id": "c37b2462-16a0-cb4d-4fe8-6428d81ee47e",
-              "name": "Executing a Workflow as a Job",
+              "name": "Executing a Workflow as a Job - This request executes a workflow named \"Demo - New Machine Request\" The workflow uses four workflow level inputs.",
               "originalRequest": {
                 "url": "",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
-                },
-                "description": ""
+                  "raw": "<Workflow_StartWorkflow>\r\n  <options>\r\n    <outputFormat>1</outputFormat>\r\n    <inputs>\r\n      <name>DemoTestMachine</name>\r\n      <Memory>8</Memory>\r\n      <Disk>500</Disk>\r\n      <software></software>\r\n    </inputs>\r\n  </options>\r\n  <client>\r\n    <clientName>firewalltestcs</clientName>\r\n  </client>\r\n</Workflow_StartWorkflow>"
+                }
               },
               "status": "OK",
               "code": 200,
