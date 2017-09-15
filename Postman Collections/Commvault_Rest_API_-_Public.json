@@ -37041,7 +37041,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of schedules.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
+            "description": "This request returns all of the schedules for a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
           },
           "response": [
             {
@@ -37059,10 +37059,10 @@
                   ],
                   "query": [
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "clientId",
-                      "value": "2"
+                      "value": "2",
+                      "equals": true,
+                      "description": ""
                     }
                   ],
                   "variable": []
@@ -37070,21 +37070,20 @@
                 "method": "GET",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": "This request returns all of the schedules for a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_schedules.htm)"
+                }
               },
               "status": "OK",
               "code": 200,
