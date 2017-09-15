@@ -38899,7 +38899,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"storagePolicyName\": \"CSSP-4\",\r\n  \"storagePolicyCopyInfo\": {\r\n    \"retentionRules\": {\r\n      \"retainBackupDataForDays\": 120\r\n    },\r\n    \"library\": {\r\n      \"libraryId\": 1\r\n    },\r\n    \"mediaAgent\": {\r\n      \"mediaAgentId\": 2\r\n    }\r\n  }\r\n}"
             },
-            "description": "<h2>Description</h2>\n<p>This operation creates a storage policy. To create a storage policy using request parameters, see <a href = \"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm\"> REST API - PUT Storage Policy. </a> </p>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm)"
+            "description": "<h2>Description</h2>\n<p>This operation creates a storage policy. To create a storage policy using request parameters, see <a href = \"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_storage_policy.htm\"> REST API - PUT Storage Policy. </a> </p>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm)"
           },
           "response": [
             {
