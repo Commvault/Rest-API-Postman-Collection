@@ -968,7 +968,7 @@
               "mode": "raw",
               "raw": "{\n  \"alertDetail\": {\n    \"alertType\": 10,\n    \"notifTypeListOperationType\": 0,\n    \"alertSeverity\": 0,\n    \"notifType\": [\n      1,\n      8192\n    ],\n    \"criteria\": {\n      \"criteria\": 16\n    },\n    \"EntityList\": {\n      \"associationsOperationType\": 0,\n      \"associations\": [\n        {\n          \"clientId\": 2,\n          \"_type_\": 3\n        }\n      ]\n    },\n    \"userList\": {\n      \"userListOperationType\": 0,\n      \"userList\": [\n        {\n          \"_type_\": 13,\n          \"userId\": 1\n        }\n      ]\n    },\n    \"alertrule\": {\n      \"alertName\": \"{{$guid}}\"\n    }\n  }\n}"
             },
-            "description": "This operation creates an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert.htm)"
+            "description": "<h2>Description</h2>\nThis operation creates an alert.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_alert.htm)"
           },
           "response": [
             {
