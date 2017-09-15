@@ -43748,7 +43748,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This operation returns a list of sessions for a user. The API applies to all Commvault consoles, all mobile applications, and the command line interface.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_user_active_sessions_details.htm)"
+            "description": "<h2> Description </h2>\nThis operation returns a list of sessions for a user. The API applies to all Commvault consoles, all mobile applications, and the command line interface.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_user_active_sessions_details.htm)"
           },
           "response": [
             {
