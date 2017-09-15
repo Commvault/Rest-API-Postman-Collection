@@ -2856,7 +2856,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"clientGroupOperationType\": 1,\r\n  \"clientGroupDetail\": {\r\n    \"description\": \"client computer group description\",\r\n    \"clientGroup\": {\r\n      \"clientGroupName\": \"{{$guid}}\"\r\n    }\r\n  }\r\n}"
             },
-            "description": "This operation creates a client computer group.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_group.htm)"
+            "description": "<h2>Description</h2>\nThis operation creates a client computer group.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_group.htm)"
           },
           "response": [
             {
