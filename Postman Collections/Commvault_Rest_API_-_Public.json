@@ -31988,7 +31988,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2>Description</h2> \r\n<p>This operation returns the properties associated with a file or folder within a shared folder in the ObjectStore based on the file or folder GUID.</p> \r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_properties_by_id.htm)"
+            "description": "<h2>Description</h2> \r\n<p>This operation returns the properties associated with a file or folder within a shared folder in the ObjectStore based on the file or folder GUID.</p> \r\n\r\n<h2>Supported Error Codes</h2> \r\n<table width=\"100%\"> \r\n <tbody> \r\n  <tr> \r\n   <th width=\"20%\">Code</th> \r\n   <th width=\"20%\">Status</th> \r\n   <th width=\"60%\">Description</th> \r\n  </tr> \r\n  <tr> \r\n   <td>400</td> \r\n   <td>Bad Request</td> \r\n   <td>The request is missing required parameters or the file/folder name has some unacceptable characters.</td> \r\n  </tr> \r\n  <tr> \r\n   <td>403</td> \r\n   <td>Forbidden</td> \r\n   <td>The user does not have access to the share or the file/folder requested is not accessible inside the share.</td> \r\n  </tr> \r\n  <tr> \r\n   <td>404</td> \r\n   <td>Not Found</td> \r\n   <td>The specified file or folder does not exist.</td> \r\n  </tr> \r\n </tbody> \r\n</table>\r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_contentstore_share_properties_by_id.htm)"
           },
           "response": [
             {
