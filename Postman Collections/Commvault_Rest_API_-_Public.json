@@ -35829,7 +35829,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "This request returns subclients that have backup jobs available to restore.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_hierarchy_available_backup.htm)"
+            "description": "<h2>Description</h2>\nThis request returns subclients that have backup jobs available to restore.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_hierarchy_available_backup.htm)"
           },
           "response": [
             {
