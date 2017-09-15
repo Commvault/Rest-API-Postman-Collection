@@ -5138,7 +5138,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2>Description</h2>\nThis operation returns the properties associated with a file or folder in Edge Drive based on the file or folder GUID.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_file_properties_by_fileid.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns the properties associated with a file or folder in Edge Drive based on the file or folder GUID.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters or the file/folder name has some unacceptable characters.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file or folder does not exist.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_file_properties_by_fileid.htm)"
           },
           "response": [
             {
@@ -43876,15 +43876,14 @@
           "response": [
             {
               "id": "03362360-2e21-96fc-a6ad-dd194084bfd5",
-              "name": "Sessions",
+              "name": "Sessions - This operation logs off users from Web Server and the command line interface.",
               "originalRequest": {
                 "url": "",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
-                },
-                "description": ""
+                  "raw": "{\r\"sessions\":[\r\"2E1C7303-360B-4787-A09E-93C8189EBC59\",\"EMCBC189BC3-E861-4D59-86CA-BB552F8F8A02\"\r]\r}"
+                }
               },
               "status": "Internal Server Error",
               "code": 500,
@@ -43970,15 +43969,14 @@
           "response": [
             {
               "id": "466f6d84-3578-4614-827d-3c571369af4a",
-              "name": "Users and User Groups",
+              "name": "Users and User Groups - This operation returns a list of users and user groups.",
               "originalRequest": {
                 "url": "",
                 "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -44081,15 +44079,14 @@
           "response": [
             {
               "id": "f24d178e-3a0c-99e6-570a-37b249e2f0e7",
-              "name": "User Properties",
+              "name": "User Properties - This operation updates the properties associated with a user.",
               "originalRequest": {
                 "url": "",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
-                },
-                "description": ""
+                  "raw": "{\r\n  \"users\": [\r\n    {\r\n      \"description\": \"Modifying description\",\r\n      \"associatedUserGroupsOperationType\": 2,\r\n      \"agePasswordDays\": 120,\r\n      \"password\": \"QnVpbGRlciExMg==\",\r\n      \"email\": \"jdoe@company.com\",\r\n      \"fullName\": \"Jane Doe\",\r\n      \"enableUser\": true,\r\n      \"associatedUserGroups\": [\r\n        {\r\n          \"userGroupName\": \"View All\"\r\n        }\r\n      ],\r\n      \"userEntity\": {\r\n        \"userName\": \"jdoe\"\r\n      },\r\n      \"validationParameters\": {\r\n        \"password\": \"QnVpbGRlciExMg==\"\r\n      }\r\n    }\r\n  ]\r\n}"
+                }
               },
               "status": "OK",
               "code": 200,
