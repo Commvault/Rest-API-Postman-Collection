@@ -38338,12 +38338,12 @@
               "mode": "raw",
               "raw": "{\r\n  \"taskInfo\":{\r\n    \"associations\":[\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\"\r\n      },\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"subclientName\":\"DDBBackup\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\",\r\n        \"flags\":{\r\n          \"exclude\":true\r\n        }\r\n      }\r\n    ],\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"t2\"\r\n      }\r\n    }\r\n  }\r\n}"
             },
-            "description": "This request associates all default backup set subclients except for the DDBBackup subclient with the schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_entity_assoc.htm)"
+            "description": "<h2> Description </h2>\nThis operation adds, excludes, or removes entity associations on a schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_entity_assoc.htm)"
           },
           "response": [
             {
               "id": "695e6475-94d9-9954-3950-fbfd88c9a13e",
-              "name": "Update Schedule Policy Entity Associations",
+              "name": "Update Schedule Policy Entity Associations - This request associates all default backup set subclients except for the DDBBackup subclient with the schedule policy.",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Task",
                 "method": "PUT",
@@ -38366,9 +38366,8 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"taskInfo\":{\r\n    \"associations\":[\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\"\r\n      },\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"subclientName\":\"DDBBackup\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\",\r\n        \"flags\":{\r\n          \"exclude\":true\r\n        }\r\n      }\r\n    ],\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"TestPolicy\"\r\n      }\r\n    }\r\n  }\r\n}"
-                },
-                "description": ""
+                  "raw": ""
+                }
               },
               "status": "OK",
               "code": 200,
