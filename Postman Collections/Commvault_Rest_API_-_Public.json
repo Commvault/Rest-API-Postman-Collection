@@ -4643,7 +4643,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive.htm)"
+            "description": "<h2>Description</h2>\nUse this operation to view details for your Edge Drive account, for example, root GUID and user capabilities.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive.htm)"
           },
           "response": [
             {
