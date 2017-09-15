@@ -42129,7 +42129,7 @@
           "response": [
             {
               "id": "63f686c4-9bbc-255a-0836-9e056c215e88",
-              "name": "Subclient Browse 2",
+              "name": "Subclient Browse 2 - This request is for a root level browse for guest virtual machines.",
               "originalRequest": {
                 "url": {
                   "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
@@ -42144,22 +42144,22 @@
                   ],
                   "query": [
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "path",
-                      "value": "%5C"
+                      "value": "%5C",
+                      "equals": true,
+                      "description": ""
                     },
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "showDeletedFiles",
-                      "value": "false"
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
                     },
                     {
-                      "description": "",
-                      "equals": true,
                       "key": "vsFileBrowse",
-                      "value": "true"
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
                     }
                   ],
                   "variable": []
@@ -42167,21 +42167,20 @@
                 "method": "GET",
                 "header": [
                   {
-                    "description": "",
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "description": ""
                   },
                   {
-                    "description": "",
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
-                },
-                "description": "This request is for a root level browse for guest virtual machines.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+                }
               },
               "status": "OK",
               "code": 200,
@@ -42396,7 +42395,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "<h2> Description </h2>\nThis request is to browse a specific guest virtual machine.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+            "description": "<h2> Description </h2>\nThis operation browses data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
           },
           "response": [
             {
