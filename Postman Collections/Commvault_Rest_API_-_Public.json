@@ -41073,7 +41073,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"content\": [\r\n      {\r\n        \"excludePath\": \"C:\\\\Log\"\r\n      }\r\n    ]\r\n  }\r\n}"
             },
-            "description": "This request adds an exclusion to what is backed up.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm)"
+            "description": "<h2> Description </h2>\nThis request adds an exclusion to what is backed up.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm)"
           },
           "response": [
             {
