@@ -28813,7 +28813,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "Use this operation to create an ObjectStore.\r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore.htm)"
+            "description": "<h2>Description</h2>\r\nUse this operation to create an ObjectStore.\r\n\r\nEach authorized user can create one ObjectStore.\r\n\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_contentstore.htm)"
           },
           "response": [
             {
