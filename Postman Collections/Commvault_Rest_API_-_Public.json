@@ -36689,7 +36689,7 @@
               "mode": "raw",
               "raw": "{\r\n  \"roles\": [\r\n    {\r\n      \"description\": \"testing role modification.\",\r\n      \"role\": {\r\n        \"roleName\": \"TestRole\",\r\n        \"flags\": {\r\n          \"disabled\": false\r\n        }\r\n      },\r\n      \"categoryPermission\": {\r\n        \"categoriesPermissionOperationType\": 2,\r\n        \"categoriesPermissionList\": [\r\n          {\r\n            \"categoryName\": \"Alert\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Management\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Scheduling\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
             },
-            "description": "This operation updates a role.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_role_modify.htm)"
+            "description": "<h2>Description</h2>\nThis operation updates a role.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_role_modify.htm)"
           },
           "response": [
             {
