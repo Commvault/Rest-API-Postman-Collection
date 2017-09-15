@@ -25223,7 +25223,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "description": "[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_list_by_path.htm)"
+            "description": "<h2>Description</h2>\nUse this operation to list the contents of a folder based on the folder path. The result does not include the contents of subfolders.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>Error caused due to one of the following reasons: \n    <ul> \n     <li>Path is not provided in the request </li> \n     <li>Path provided in the request is invalid</li> \n     <li>Path provided in the request is for a file</li> \n    </ul> </td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>Path provided in the request is not found.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_contentstore_list_by_path.htm)"
           },
           "response": [
             {
