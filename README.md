@@ -3,7 +3,7 @@ Welcome
 --------------
 Explore our predefined API requests using [Postman](https://getpostman.com).
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/3e46a243620533a7c27b)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6c1ee8586817f6c7e3ad)
 
 Setup
 --------------
