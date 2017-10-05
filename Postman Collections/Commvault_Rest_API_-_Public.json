@@ -35979,6 +35979,110 @@
           ]
         },
         {
+          "_postman_id": "e23f60f9-62cf-744a-bb98-265e56d369b6",
+          "name": "View Role Properties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains roleProperties\"] = responseBody.has(\"roleProperties\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Role/{{roleId}}",
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "<h2>Description</h2>\nThis operation returns the properties associated with a role.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role_properties.htm)"
+          },
+          "response": [
+            {
+              "id": "6ddb29ad-1f6c-5f48-b2ce-39ec415fbe7b",
+              "name": "View Role Properties",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Role/{{roleId}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "1096"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Mon, 12 Jun 2017 09:51:27 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "164",
+              "body": "{\r\"roleProperties\":[\r{\r\"visibility\":0,\"description\":\"testing role modification.\",\"role\":{\r\"roleId\":34,\"roleName\":\"TestRole\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"categoryName\":\"Alert\",\"_type_\":121,\"consumeLicense\":true,\"categoryId\":117\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":2,\"permissionName\":\"Agent Management\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":3,\"permissionName\":\"Agent Scheduling\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r}\r]\r},\"securityAssociations\":{\r\"associations\":[\r{\r\"userOrGroup\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"userId\":1,\"_type_\":13,\"userName\":\"admin\",\"consumeLicense\":true\r}\r],\"properties\":{\r\"isCreatorAssociation\":true,\"role\":{\r\"_type_\":120,\"roleId\":3,\"roleName\":\"View\"\r}\r}\r}\r],\"ownerAssociations\":{\r\r}\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "79972030-3d29-f820-770c-772c7ec078cc",
           "name": "Create a Role",
           "event": [
@@ -36225,110 +36329,6 @@
               "cookie": [],
               "responseTime": "508",
               "body": "{\r\"response\":[\r{\r\"errorString\":\"Successful\",\"errorCode\":0,\"entity\":{\r\"roleName\":\"TestRole\",\"roleId\":34\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "e23f60f9-62cf-744a-bb98-265e56d369b6",
-          "name": "View Role Properties",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains roleProperties\"] = responseBody.has(\"roleProperties\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Role/{{roleId}}",
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "<h2>Description</h2>\nThis operation returns the properties associated with a role.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role_properties.htm)"
-          },
-          "response": [
-            {
-              "id": "6ddb29ad-1f6c-5f48-b2ce-39ec415fbe7b",
-              "name": "View Role Properties",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Role/{{roleId}}",
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "1096"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Mon, 12 Jun 2017 09:51:27 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "164",
-              "body": "{\r\"roleProperties\":[\r{\r\"visibility\":0,\"description\":\"testing role modification.\",\"role\":{\r\"roleId\":34,\"roleName\":\"TestRole\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"categoryName\":\"Alert\",\"_type_\":121,\"consumeLicense\":true,\"categoryId\":117\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":2,\"permissionName\":\"Agent Management\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":3,\"permissionName\":\"Agent Scheduling\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r}\r]\r},\"securityAssociations\":{\r\"associations\":[\r{\r\"userOrGroup\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"userId\":1,\"_type_\":13,\"userName\":\"admin\",\"consumeLicense\":true\r}\r],\"properties\":{\r\"isCreatorAssociation\":true,\"role\":{\r\"_type_\":120,\"roleId\":3,\"roleName\":\"View\"\r}\r}\r}\r],\"ownerAssociations\":{\r\r}\r}\r}\r]\r}"
             }
           ]
         },
