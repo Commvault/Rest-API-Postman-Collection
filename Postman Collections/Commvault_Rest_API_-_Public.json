@@ -40536,6 +40536,110 @@
           ]
         },
         {
+          "_postman_id": "0c5c6b7e-739f-cf4c-1eb7-2ee7aeacf18f",
+          "name": "Subclient Properties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains subClientProperties\"] = responseBody.has(\"subClientProperties\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Subclient/49",
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "<h2> Description </h2>\nThis operation returns the properties associated with a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_properties.htm)"
+          },
+          "response": [
+            {
+              "id": "f8666cee-d80d-8259-f866-e65e1c9ccb05",
+              "name": "Subclient Properties",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Subclient/49",
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "",
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "description": "",
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": "This operation returns the properties associated with a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_properties.htm)"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "5088"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Thu, 01 Jun 2017 07:51:56 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "7259",
+              "body": "{\r\"subClientProperties\":[\r{\r\"hcSubclientProp\":{\r\r},\"impersonateUser\":{\r\"userName\":\"\"\r},\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":49,\"clientId\":2,\"appName\":\"File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"TestFSAPI\"\r},\"dfsSubclientProp\":{\r\"distributedDataAccessNodes\":{\r\r}\r},\"fsSubClientProp\":{\r\"catalogACL\":false,\"syncQueue\":\"\",\"archiverRetention\":false,\"blockLevelSPOSBackup\":0,\"backupPrivateAuthority\":false,\"enableFolderLevelMultiThread\":false,\"bigFileSize\":1024,\"backupAsObjects\":false,\"useGlobalFilters\":2,\"backupFilesQualifiedForArchive\":false,\"syncAllLibForBackup\":false,\"backupFileTimeZoneName\":\"\",\"vssOptions\":2,\"useVSSForSystemState\":true,\"olderFileVersionsMode\":1,\"blockLevelBackup\":0,\"backupRetentionMode\":1,\"deletePSTFileOnly\":false,\"txtlibSyncCheckPoint\":\"\",\"customSubclientContentFlags\":0,\"saveAccessPath\":\"*SYSVAL\",\"unixCtime\":true,\"keepVersions\":0,\"backupRetention\":false,\"scanOption\":2,\"backupFilesAsExtents\":false,\"backupSystemState\":false,\"afterDeletionKeepItemsForNDays\":730,\"saveWhileActiveOpt\":\"\",\"useIncremental\":false,\"unixMtime\":true,\"useVssForAllFilesOptions\":3,\"runTrueUpJobAfterJobsForFS\":0,\"catalogAdditional\":false,\"oneTouchSubclient\":false,\"extendRetentionForNDays\":-1,\"customSubclientFlag\":false,\"isTrueUpOptionEnabledForFS\":true,\"enableOCSBackupOnSubclient\":false,\"folderLevelThreadCount\":0,\"targetReleaseForBackupData\":\"\",\"retentionPolicy\":0,\"backupSaveFileData\":false,\"activeWaitTime\":0,\"archiverRetentionMode\":2,\"backupFilesOnOrAfter\":false,\"extentSize\":4,\"enableOnePass\":false,\"runTrueUpJobAfterDaysForFS\":30,\"useVSS\":true,\"isSynthfullRunAfterOnePassEnabledOnSubclient\":false,\"useSCPFilters\":false,\"extendStoragePolicyRetention\":false,\"backupSpooledFileData\":false,\"backupQueueData\":false,\"oneTouchServerDirectory\":\"\",\"keepOlderVersionsForNDays\":30,\"ibmiSubclientprop\":{\r\"SRBootServerDir\":\"\"\r},\"backupConfiguration\":{\r\r},\"oneTouchServer\":{\r\"clientId\":0,\"_type_\":3\r},\"backupFilesOnOrAfterDate\":{\r\"_type_\":55\r},\"diskCleanupRules\":{\r\"stubPruningOptions\":0,\"afterArchivingRule\":1,\"stubRetentionDaysOld\":0,\"enableRedundancyForDataBackedup\":true,\"patternMatch\":\"\",\"rulesToSatisfy\":1,\"entityMatch\":\"\"\r},\"ocsUserName\":{\r\"userName\":\"\"\r}\r},\"planEntity\":{\r\r},\"content\":[\r{\r\"path\":\"C:\\\\csguid.PNG\"\r},{\r\"path\":\"C:\\\\DEMO_3.pptx\"\r},{\r\"path\":\"C:\\\\fw10_tppm.doc\"\r},{\r\"path\":\"C:\\\\removeGUIDKeyFromClientGroup.sqle\"\r},{\r\"path\":\"C:\\\\test.jpg\"\r},{\r\"path\":\"C:\\\\v11SP4a.xml\"\r},{\r\"path\":\"C:\\\\wf.txt\"\r},{\r\"path\":\"C:\\\\WORKQUEUE_TASK.docx\"\r},{\r\"path\":\"C:\\\\testimg.jpg\"\r},{\r\"path\":\"C:\\\\Siesta-Lake-Sunset.jpg\"\r}\r],\"commonProperties\":{\r\"encryptionFlag\":2,\"numberOfBackupStreams\":2,\"nextBackupTime\":0,\"isTurboSubclient\":false,\"isKeepItemPastExpiryTime\":true,\"onDemandSubClient\":false,\"totalBackupSize\":5933719,\"lastBackupTime\":1496122319,\"indexingBackupSubClient\":false,\"description\":\"\",\"subClientPropertiesFlag\":0,\"lastBackupSize\":981264,\"onlyBackupQualifiedArchivingFiles\":false,\"allowVssForSnapbackup\":false,\"enableBackupAfterDelay\":false,\"expandSymbolicLinks\":false,\"enableAppleDoubleSupport\":false,\"allowMultipleDataReaders\":false,\"indexCycleToEveryBackupJobs\":0,\"excludeFromSLA\":false,\"readBuffersize\":0,\"enableBackup\":true,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"enableBackupAtDateTime\":{\r\"TimeZoneID\":0,\"time\":0\r},\"turboNASClient\":{\r\"clientId\":0,\"_type_\":3\r},\"associatedSnapShotSCId\":{\r\"_type_\":7,\"subclientId\":0\r},\"snapCopyInfo\":{\r\"snapToTapeProxyToUseSource\":false,\"isSnapBackupEnabled\":false,\"backupCopyInterface\":0,\"IsOracleSposDriverEnabled\":false,\"isRMANEnableForTapeMovement\":false,\"useProxyForSQLIntegrity\":{\r\r},\"sybaseUser\":{\r\r},\"snapToTapeSelectedEngine\":{\r\"_type_\":110\r},\"sqlUser\":{\r\r},\"snapToTapeProxyToUse\":{\r\"clientId\":0,\"_type_\":3\r},\"quiesceImpersonateUser\":{\r\r},\"separateProxyForSnapToTape\":{\r\"_type_\":3\r},\"configuredSybaseInstance\":{\r\"_type_\":5\r}\r},\"prepostProcess\":{\r\"runPostScan\":0,\"runPostBackup\":0,\"runPostLog\":0,\"prepostUserName\":{\r\r}\r},\"security\":{\r\"clientOwners\":[\r\"admin\"\r],\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"storageDevice\":{\r\"networkAgents\":2,\"overrideIncrementalDataPath\":false,\"applicableReadSize\":0,\"softwareCompression\":2,\"overrideDataPath\":false,\"throttleNetworkBandwidth\":0,\"dataBackupStoragePolicy\":{\r\"_type_\":17,\"storagePolicyName\":\"CSSP\",\"storagePolicyId\":3\r},\"deDuplicationOptions\":{\r\"enableDeduplication\":true,\"generateSignature\":1\r},\"logBackupStoragePolicy\":{\r\"_type_\":17\r},\"performanceMode\":{\r\"perfSPName\":\"CSSP\",\"multiplexingValid\":true,\"enableMultiplexing\":false,\"perfCopyName\":\"Primary\",\"perfClientName\":\"firewalltestcs\",\"streamsOverMux\":false,\"pipelineBufferSize\":64,\"numOfPipelineBuffers\":30,\"muxFactor\":0,\"lookAheadReaderSlots\":4,\"perfCRCDetails\":[\r{\r\"crcOverMedia\":true,\"perfMaId\":2,\"crcOverNetwork\":true,\"perfMa\":\"firewalltestcs\"\r}\r]\r}\r},\"associatedPolicy\":{\r\"subclientPolicyId\":0\r}\r},\"analyticsSubclientProp\":{\r\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "6d2c9427-46b3-d1fb-425e-f091d7c5cf26",
           "name": "Subclient Browse",
           "event": [
@@ -42032,110 +42136,6 @@
               "cookie": [],
               "responseTime": "1071",
               "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r},\"browseResult\":{\r\"queryId\":\"0\",\"dataResultSet\":[\r{\r\"path\":\"C:\",\"size\":28457425,\"modificationTime\":1496122177,\"displayName\":\"C:\",\"name\":\"2\\u0012C:\",\"flags\":{\r\"directory\":true,\"mountPoint\":true,\"isFake\":false,\"snap\":false\r},\"advancedData\":{\r\"backupJobId\":288,\"referenceTime\":1496122310,\"offset\":0,\"archiveGroupId\":3,\"objectGuid\":\"15832c0c2980f319a3be40952e7e69b0\",\"backupTime\":1496122310,\"archiveFileId\":107,\"subclient\":{\r\"type\":0,\"_type_\":7,\"applicationId\":49\r},\"sourceCommServer\":{\r\"_type_\":1,\"commCellId\":2,\"type\":0\r},\"advConfig\":{\r\"browseAdvancedConfigResp\":{\r\"commcellNumber\":122516778\r}\r},\"browseMetaData\":{\r\"fsData\":{\r\"DriveFreePercentage\":59,\"geoLocation\":\"<App_GeoLocation ip_address='199.255.244.65' latitude='40.300720' longitude='-74.081910' status_code='SUCCESS' status_description=''\\u002f>\",\"VolumeSize\":214379261952\r},\"indexing\":{\r\"folderSize\":28457425,\"backupTime\":1496122299,\"fileChangeTime\":1496122177\r},\"dmStubData\":{\r\"guid\":\"4adf0103078dbb0de054c95cd763ff21\"\r},\"virtualServerMetaData\":{\r\"extentBlobBitMap\":\"\"\r}\r}\r}\r}\r]\r}\r},{\r\"respType\":0,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":1,\"groupbyValue\":\"\",\"count\":1\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "0c5c6b7e-739f-cf4c-1eb7-2ee7aeacf18f",
-          "name": "Subclient Properties",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains subClientProperties\"] = responseBody.has(\"subClientProperties\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Subclient/49",
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "<h2> Description </h2>\nThis operation returns the properties associated with a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_properties.htm)"
-          },
-          "response": [
-            {
-              "id": "f8666cee-d80d-8259-f866-e65e1c9ccb05",
-              "name": "Subclient Properties",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient/49",
-                "method": "GET",
-                "header": [
-                  {
-                    "description": "",
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "description": "",
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": "This operation returns the properties associated with a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_properties.htm)"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "5088"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 01 Jun 2017 07:51:56 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "7259",
-              "body": "{\r\"subClientProperties\":[\r{\r\"hcSubclientProp\":{\r\r},\"impersonateUser\":{\r\"userName\":\"\"\r},\"proxyClient\":{\r\r},\"subClientEntity\":{\r\"clientName\":\"firewalltestcs\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"_type_\":7,\"instanceId\":1,\"subclientId\":49,\"clientId\":2,\"appName\":\"File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"TestFSAPI\"\r},\"dfsSubclientProp\":{\r\"distributedDataAccessNodes\":{\r\r}\r},\"fsSubClientProp\":{\r\"catalogACL\":false,\"syncQueue\":\"\",\"archiverRetention\":false,\"blockLevelSPOSBackup\":0,\"backupPrivateAuthority\":false,\"enableFolderLevelMultiThread\":false,\"bigFileSize\":1024,\"backupAsObjects\":false,\"useGlobalFilters\":2,\"backupFilesQualifiedForArchive\":false,\"syncAllLibForBackup\":false,\"backupFileTimeZoneName\":\"\",\"vssOptions\":2,\"useVSSForSystemState\":true,\"olderFileVersionsMode\":1,\"blockLevelBackup\":0,\"backupRetentionMode\":1,\"deletePSTFileOnly\":false,\"txtlibSyncCheckPoint\":\"\",\"customSubclientContentFlags\":0,\"saveAccessPath\":\"*SYSVAL\",\"unixCtime\":true,\"keepVersions\":0,\"backupRetention\":false,\"scanOption\":2,\"backupFilesAsExtents\":false,\"backupSystemState\":false,\"afterDeletionKeepItemsForNDays\":730,\"saveWhileActiveOpt\":\"\",\"useIncremental\":false,\"unixMtime\":true,\"useVssForAllFilesOptions\":3,\"runTrueUpJobAfterJobsForFS\":0,\"catalogAdditional\":false,\"oneTouchSubclient\":false,\"extendRetentionForNDays\":-1,\"customSubclientFlag\":false,\"isTrueUpOptionEnabledForFS\":true,\"enableOCSBackupOnSubclient\":false,\"folderLevelThreadCount\":0,\"targetReleaseForBackupData\":\"\",\"retentionPolicy\":0,\"backupSaveFileData\":false,\"activeWaitTime\":0,\"archiverRetentionMode\":2,\"backupFilesOnOrAfter\":false,\"extentSize\":4,\"enableOnePass\":false,\"runTrueUpJobAfterDaysForFS\":30,\"useVSS\":true,\"isSynthfullRunAfterOnePassEnabledOnSubclient\":false,\"useSCPFilters\":false,\"extendStoragePolicyRetention\":false,\"backupSpooledFileData\":false,\"backupQueueData\":false,\"oneTouchServerDirectory\":\"\",\"keepOlderVersionsForNDays\":30,\"ibmiSubclientprop\":{\r\"SRBootServerDir\":\"\"\r},\"backupConfiguration\":{\r\r},\"oneTouchServer\":{\r\"clientId\":0,\"_type_\":3\r},\"backupFilesOnOrAfterDate\":{\r\"_type_\":55\r},\"diskCleanupRules\":{\r\"stubPruningOptions\":0,\"afterArchivingRule\":1,\"stubRetentionDaysOld\":0,\"enableRedundancyForDataBackedup\":true,\"patternMatch\":\"\",\"rulesToSatisfy\":1,\"entityMatch\":\"\"\r},\"ocsUserName\":{\r\"userName\":\"\"\r}\r},\"planEntity\":{\r\r},\"content\":[\r{\r\"path\":\"C:\\\\csguid.PNG\"\r},{\r\"path\":\"C:\\\\DEMO_3.pptx\"\r},{\r\"path\":\"C:\\\\fw10_tppm.doc\"\r},{\r\"path\":\"C:\\\\removeGUIDKeyFromClientGroup.sqle\"\r},{\r\"path\":\"C:\\\\test.jpg\"\r},{\r\"path\":\"C:\\\\v11SP4a.xml\"\r},{\r\"path\":\"C:\\\\wf.txt\"\r},{\r\"path\":\"C:\\\\WORKQUEUE_TASK.docx\"\r},{\r\"path\":\"C:\\\\testimg.jpg\"\r},{\r\"path\":\"C:\\\\Siesta-Lake-Sunset.jpg\"\r}\r],\"commonProperties\":{\r\"encryptionFlag\":2,\"numberOfBackupStreams\":2,\"nextBackupTime\":0,\"isTurboSubclient\":false,\"isKeepItemPastExpiryTime\":true,\"onDemandSubClient\":false,\"totalBackupSize\":5933719,\"lastBackupTime\":1496122319,\"indexingBackupSubClient\":false,\"description\":\"\",\"subClientPropertiesFlag\":0,\"lastBackupSize\":981264,\"onlyBackupQualifiedArchivingFiles\":false,\"allowVssForSnapbackup\":false,\"enableBackupAfterDelay\":false,\"expandSymbolicLinks\":false,\"enableAppleDoubleSupport\":false,\"allowMultipleDataReaders\":false,\"indexCycleToEveryBackupJobs\":0,\"excludeFromSLA\":false,\"readBuffersize\":0,\"enableBackup\":true,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"enableBackupAtDateTime\":{\r\"TimeZoneID\":0,\"time\":0\r},\"turboNASClient\":{\r\"clientId\":0,\"_type_\":3\r},\"associatedSnapShotSCId\":{\r\"_type_\":7,\"subclientId\":0\r},\"snapCopyInfo\":{\r\"snapToTapeProxyToUseSource\":false,\"isSnapBackupEnabled\":false,\"backupCopyInterface\":0,\"IsOracleSposDriverEnabled\":false,\"isRMANEnableForTapeMovement\":false,\"useProxyForSQLIntegrity\":{\r\r},\"sybaseUser\":{\r\r},\"snapToTapeSelectedEngine\":{\r\"_type_\":110\r},\"sqlUser\":{\r\r},\"snapToTapeProxyToUse\":{\r\"clientId\":0,\"_type_\":3\r},\"quiesceImpersonateUser\":{\r\r},\"separateProxyForSnapToTape\":{\r\"_type_\":3\r},\"configuredSybaseInstance\":{\r\"_type_\":5\r}\r},\"prepostProcess\":{\r\"runPostScan\":0,\"runPostBackup\":0,\"runPostLog\":0,\"prepostUserName\":{\r\r}\r},\"security\":{\r\"clientOwners\":[\r\"admin\"\r],\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"storageDevice\":{\r\"networkAgents\":2,\"overrideIncrementalDataPath\":false,\"applicableReadSize\":0,\"softwareCompression\":2,\"overrideDataPath\":false,\"throttleNetworkBandwidth\":0,\"dataBackupStoragePolicy\":{\r\"_type_\":17,\"storagePolicyName\":\"CSSP\",\"storagePolicyId\":3\r},\"deDuplicationOptions\":{\r\"enableDeduplication\":true,\"generateSignature\":1\r},\"logBackupStoragePolicy\":{\r\"_type_\":17\r},\"performanceMode\":{\r\"perfSPName\":\"CSSP\",\"multiplexingValid\":true,\"enableMultiplexing\":false,\"perfCopyName\":\"Primary\",\"perfClientName\":\"firewalltestcs\",\"streamsOverMux\":false,\"pipelineBufferSize\":64,\"numOfPipelineBuffers\":30,\"muxFactor\":0,\"lookAheadReaderSlots\":4,\"perfCRCDetails\":[\r{\r\"crcOverMedia\":true,\"perfMaId\":2,\"crcOverNetwork\":true,\"perfMa\":\"firewalltestcs\"\r}\r]\r}\r},\"associatedPolicy\":{\r\"subclientPolicyId\":0\r}\r},\"analyticsSubclientProp\":{\r\r}\r}\r]\r}"
             }
           ]
         },
