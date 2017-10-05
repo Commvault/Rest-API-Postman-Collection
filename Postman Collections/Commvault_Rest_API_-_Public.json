@@ -19642,7 +19642,156 @@
       "_postman_id": "ccd426a3-6bbd-c139-cd97-1356e160aa26",
       "name": "Global Parameters",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "2f062a77-fb80-ea09-a85c-af3ba9d2c75f",
+          "name": "Global Parameter",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body contains globalParamsResultList\"] = responseBody.has(\"globalParamsResultList\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/CommServ/GlobalParams",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"globalParamsRequestList\": [\n    \"CI_STATE_FAILED\",\n    \"CI_STATE_SKIPPED\",\n    \"AppMgrThreadIdleTimeout\"\n  ]\n}"
+            },
+            "description": "<h2>Description</h2>\nThis operation returns values for global parameters.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_global_parameters.htm)"
+          },
+          "response": [
+            {
+              "id": "d394860d-557a-aa17-7876-c15a294aaedb",
+              "name": "Global Parameter",
+              "originalRequest": {
+                "url": "",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "181",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 30 May 2017 03:48:25 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "94",
+              "body": "{\r\"globalParamsResultList\":[\r{\r\"name\":\"AppMgrThreadIdleTimeout\",\"value\":\"7200\"\r},{\r\"name\":\"CI_STATE_FAILED\",\"value\":\"2,16,1016,2016\"\r},{\r\"name\":\"CI_STATE_SKIPPED\",\"value\":\"17\"\r}\r]\r}"
+            },
+            {
+              "id": "d9afaff7-6192-9838-34ce-70187ede313e",
+              "name": "Global Parameter",
+              "originalRequest": {
+                "url": "",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "181",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 30 May 2017 03:48:25 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "94",
+              "body": "{\r\"globalParamsResultList\":[\r{\r\"name\":\"AppMgrThreadIdleTimeout\",\"value\":\"7200\"\r},{\r\"name\":\"CI_STATE_FAILED\",\"value\":\"2,16,1016,2016\"\r},{\r\"name\":\"CI_STATE_SKIPPED\",\"value\":\"17\"\r}\r]\r}"
+            }
+          ]
+        }
+      ]
     },
     {
       "_postman_id": "4b95ae15-02f6-82c0-29f3-6382ecba9aba",
@@ -45244,154 +45393,6 @@
             "description": "<h2>Description</h2>\nThis operation restores virtual server data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_create_task_restore.htm)"
           },
           "response": []
-        }
-      ]
-    },
-    {
-      "_postman_id": "2f062a77-fb80-ea09-a85c-af3ba9d2c75f",
-      "name": "Global Parameter",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "tests[\"Response Body contains globalParamsResultList\"] = responseBody.has(\"globalParamsResultList\");"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "url": "{{ServerUrl}}/CommServ/GlobalParams",
-        "method": "POST",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "{{Accept}}",
-            "description": ""
-          },
-          {
-            "key": "Authtoken",
-            "value": "{{TOKEN}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"globalParamsRequestList\": [\n    \"CI_STATE_FAILED\",\n    \"CI_STATE_SKIPPED\",\n    \"AppMgrThreadIdleTimeout\"\n  ]\n}"
-        },
-        "description": "<h2>Description</h2>\nThis operation returns values for global parameters.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_global_parameters.htm)"
-      },
-      "response": [
-        {
-          "id": "d394860d-557a-aa17-7876-c15a294aaedb",
-          "name": "Global Parameter",
-          "originalRequest": {
-            "url": "",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": ""
-          },
-          "status": "OK",
-          "code": 200,
-          "_postman_previewlanguage": "json",
-          "_postman_previewtype": "text",
-          "header": [
-            {
-              "key": "Content-Length",
-              "value": "181",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Tue, 30 May 2017 03:48:25 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "Server",
-              "value": "Microsoft-IIS/8.5",
-              "name": "Server",
-              "description": ""
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "ASP.NET",
-              "name": "X-Powered-By",
-              "description": ""
-            }
-          ],
-          "cookie": [],
-          "responseTime": "94",
-          "body": "{\r\"globalParamsResultList\":[\r{\r\"name\":\"AppMgrThreadIdleTimeout\",\"value\":\"7200\"\r},{\r\"name\":\"CI_STATE_FAILED\",\"value\":\"2,16,1016,2016\"\r},{\r\"name\":\"CI_STATE_SKIPPED\",\"value\":\"17\"\r}\r]\r}"
-        },
-        {
-          "id": "d9afaff7-6192-9838-34ce-70187ede313e",
-          "name": "Global Parameter",
-          "originalRequest": {
-            "url": "",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": ""
-          },
-          "status": "OK",
-          "code": 200,
-          "_postman_previewlanguage": "json",
-          "_postman_previewtype": "text",
-          "header": [
-            {
-              "key": "Content-Length",
-              "value": "181",
-              "name": "Content-Length",
-              "description": ""
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8",
-              "name": "Content-Type",
-              "description": ""
-            },
-            {
-              "key": "Date",
-              "value": "Tue, 30 May 2017 03:48:25 GMT",
-              "name": "Date",
-              "description": ""
-            },
-            {
-              "key": "Server",
-              "value": "Microsoft-IIS/8.5",
-              "name": "Server",
-              "description": ""
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "ASP.NET",
-              "name": "X-Powered-By",
-              "description": ""
-            }
-          ],
-          "cookie": [],
-          "responseTime": "94",
-          "body": "{\r\"globalParamsResultList\":[\r{\r\"name\":\"AppMgrThreadIdleTimeout\",\"value\":\"7200\"\r},{\r\"name\":\"CI_STATE_FAILED\",\"value\":\"2,16,1016,2016\"\r},{\r\"name\":\"CI_STATE_SKIPPED\",\"value\":\"17\"\r}\r]\r}"
         }
       ]
     }
