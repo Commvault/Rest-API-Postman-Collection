@@ -40511,6 +40511,173 @@
           ]
         },
         {
+          "_postman_id": "ffb92fdf-ca12-6ad0-f98f-aa385881a80d",
+          "name": "Subclient Browse 3",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains browseResponses\"] = responseBody.has(\"browseResponses\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "49",
+                "Browse"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "path",
+                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b"
+                },
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "showDeletedFiles",
+                  "value": "false"
+                },
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "vsFileBrowse",
+                  "value": "true"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "<h2> Description </h2>\nThis operation browses data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+          },
+          "response": [
+            {
+              "id": "a08b55bc-99b6-3286-d7cd-120acb28cc09",
+              "name": "Subclient Browse 3 - This request is to browse a specific guest virtual machine.",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "49",
+                    "Browse"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "showDeletedFiles",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "vsFileBrowse",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "271"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Thu, 01 Jun 2017 07:58:05 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "3202",
+              "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":0,\"groupbyValue\":\"\",\"count\":0\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "dc770f57-df80-be5c-d270-ba25e9b07a48",
           "name": "Subclient - For File System Agent",
           "event": [
@@ -40623,45 +40790,50 @@
               "cookie": [],
               "responseTime": "12442",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\",\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"subclientId\":69,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":0,\"consumeLicense\":true\r}\r}\r}"
-            },
-            {
-              "id": "8e356f5b-5a8a-bda0-2af8-691ed11d6a06",
-              "name": "Subclient - For Virtual Server Agent",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Subclient",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM011\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    },\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"client001\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"Virtual Server\",\r\n      \"backupsetName\": \"defaultBackupSet\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true,\r\n      \"storageDevice\": {\r\n        \"dataBackupStoragePolicy\": {\r\n          \"storagePolicyName\": \"SP004\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "",
-              "_postman_previewtype": "parsed",
-              "header": [],
-              "cookie": [],
-              "responseTime": "0",
-              "body": ""
             }
           ]
+        },
+        {
+          "_postman_id": "4ff5f884-7a0c-9d8d-86af-11f2345c16be",
+          "name": "Subclient - For Virtual Server Agent",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Subclient",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM011\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    },\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"client001\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"Virtual Server\",\r\n      \"backupsetName\": \"defaultBackupSet\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true,\r\n      \"storageDevice\": {\r\n        \"dataBackupStoragePolicy\": {\r\n          \"storagePolicyName\": \"SP004\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
+            },
+            "description": "<h2> Description </h2>\nThis request creates a subclient under a virtual server agent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient.htm)"
+          },
+          "response": []
         },
         {
           "_postman_id": "7ff25def-7b03-f374-3396-d4561646791d",
