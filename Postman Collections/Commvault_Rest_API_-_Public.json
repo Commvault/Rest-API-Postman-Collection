@@ -43798,45 +43798,50 @@
             },
             "description": "<h2>Description</h2>\nThis operation creates a virtualization client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_virtualization_client.htm)"
           },
-          "response": [
+          "response": []
+        },
+        {
+          "_postman_id": "b12df2aa-2580-7109-864a-0ee921cc4c19",
+          "name": "VMware Virtualization Client",
+          "event": [
             {
-              "id": "79393b34-2f25-b547-d45c-95528f8597d1",
-              "name": "VMware Virtualization Client",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/Client",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n   \"clientInfo\":{\r\n      \"clientType\":12,\r\n      \"virtualServerClientProperties\":{\r\n         \"virtualServerInstanceInfo\":{\r\n            \"vsInstanceType\":1,\r\n            \"associatedClients\":{\r\n               \"memberServers\":[\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  },\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  }\r\n               ]\r\n            },\r\n            \"vmwareVendor\":{\r\n               \"vcenterHostName\":\"\",\r\n               \"virtualCenter\":{\r\n                  \"password\":\"\",\r\n                  \"userName\":\"\"\r\n               }\r\n            }\r\n         }\r\n      }\r\n   },\r\n   \"entity\":{\r\n      \"clientName\":\"\"\r\n   }\r\n}"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "",
-              "_postman_previewtype": "parsed",
-              "header": [],
-              "cookie": [],
-              "responseTime": "0",
-              "body": ""
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
             }
-          ]
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Client",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"clientInfo\":{\r\n      \"clientType\":12,\r\n      \"virtualServerClientProperties\":{\r\n         \"virtualServerInstanceInfo\":{\r\n            \"vsInstanceType\":1,\r\n            \"associatedClients\":{\r\n               \"memberServers\":[\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  },\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  }\r\n               ]\r\n            },\r\n            \"vmwareVendor\":{\r\n               \"vcenterHostName\":\"\",\r\n               \"virtualCenter\":{\r\n                  \"password\":\"\",\r\n                  \"userName\":\"\"\r\n               }\r\n            }\r\n         }\r\n      }\r\n   },\r\n   \"entity\":{\r\n      \"clientName\":\"\"\r\n   }\r\n}"
+            },
+            "description": "<h2>Description</h2>\nThis operation creates a virtualization client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_virtualization_client.htm)"
+          },
+          "response": []
         },
         {
           "_postman_id": "6a728d61-6f48-ec3d-398b-bd6f3eb2b157",
