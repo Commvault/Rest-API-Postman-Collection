@@ -19060,6 +19060,84 @@
           },
           "response": [
             {
+              "id": "e9b922d8-07e6-bfe2-3506-103682fcab53",
+              "name": "View Shared Files and Folders - To view the share details of a specific shared file",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/GetSharedFolders",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "_postman_previewtype": "parsed",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "843",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 01 Jun 2017 09:59:10 GMT",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "0",
+              "body": "{\n    \"shares\": [\n        {\n            \"userPermission\": 1,\n            \"description\": \"\",\n            \"shareType\": 2,\n            \"canReshare\": false,\n            \"hasReshares\": 0,\n            \"canUserEdit\": false,\n            \"status\": 0,\n            \"owner\": {\n                \"userName\": \"edgeuser\",\n                \"userId\": 4\n            },\n            \"sharedTo\": [\n                {\n                    \"userHasReshares\": 0,\n                    \"userStatus\": 0,\n                    \"permission\": 1,\n                    \"userType\": 2,\n                    \"email\": \"snasim@commvault.com\",\n                    \"externalGroup\": {},\n                    \"sharedBy\": {\n                        \"userId\": 4\n                    },\n                    \"user\": {},\n                    \"group\": {}\n                }\n            ],\n            \"shareFolder\": {\n                \"syncWebFolderId\": 703241,\n                \"syncWebFolderName\": \"netstat\"\n            },\n            \"browseInfo\": {\n                \"edgeClient\": false,\n                \"paths\": [\n                    {\n                        \"path\": \"C:\\\\netstat.txt\",\n                        \"directory\": false\n                    }\n                ],\n                \"expirationTime\": {\n                    \"time\": 0\n                },\n                \"emailInfo\": {\n                    \"emailMessage\": \"\",\n                    \"browseUrl\": \"/webconsole/gtl.do?gid=acV5rp8\",\n                    \"dontSendEmail\": false\n                }\n            },\n            \"client\": {\n                \"clientName\": \"firewalltestma\",\n                \"backupsetId\": 20,\n                \"instanceId\": 1,\n                \"subclientId\": 70,\n                \"clientId\": 9,\n                \"applicationId\": 33\n            },\n            \"lastModified\": {\n                \"timeValue\": \"1496310616\"\n            }\n        }\n    ]\n}"
+            },
+            {
               "id": "ed73a6d7-d7f7-d2b1-0b25-7e649a095b37",
               "name": "View Shared Files and Folders - To view all the shares",
               "originalRequest": {
@@ -19126,187 +19204,6 @@
               "cookie": [],
               "responseTime": "59",
               "body": "{\r\"shares\":[\r{\r\"userPermission\":1,\"description\":\"\",\"isVisible\":true,\"shareType\":2,\"canReshare\":false,\"hasReshares\":0,\"canUserEdit\":false,\"isExpired\":false,\"status\":0,\"owner\":{\r\"userGUID\":\"3792D8E7-BE0B-4F0E-8604-86D9860D4F32\",\"userName\":\"edgeuser\",\"userId\":4\r},\"shareFolder\":{\r\"syncWebFolderId\":703241,\"syncWebFolderName\":\"netstat\"\r},\"browseInfo\":{\r\"edgeClient\":false,\"paths\":[\r{\r\"path\":\"C:\\\\netstat.txt\",\"directory\":false\r}\r],\"expirationTime\":{\r\"time\":0\r},\"emailInfo\":{\r\"emailMessage\":\"\",\"browseUrl\":\"\\u002fwebconsole\\u002fgtl.do?gid=acV5rp8\",\"dontSendEmail\":false\r}\r},\"client\":{\r\"clientName\":\"firewalltestma\",\"backupsetId\":20,\"instanceId\":1,\"subclientId\":70,\"clientId\":9,\"applicationId\":33\r},\"lastModified\":{\r\"timeValue\":\"1496310616\"\r}\r},{\r\"userPermission\":1,\"description\":\"\",\"isVisible\":true,\"shareType\":2,\"canReshare\":false,\"hasReshares\":0,\"canUserEdit\":false,\"isExpired\":false,\"status\":0,\"owner\":{\r\"userGUID\":\"3792D8E7-BE0B-4F0E-8604-86D9860D4F32\",\"userName\":\"edgeuser\",\"userId\":4\r},\"shareFolder\":{\r\"syncWebFolderId\":423085,\"syncWebFolderName\":\"C:\"\r},\"browseInfo\":{\r\"edgeClient\":false,\"paths\":[\r{\r\"path\":\"C:\\\\\",\"directory\":true\r}\r],\"expirationTime\":{\r\"time\":0\r},\"emailInfo\":{\r\"emailMessage\":\"\",\"browseUrl\":\"\\u002fwebconsole\\u002fgtl.do?gid=Tk55mPuXyQ4eO3s\",\"dontSendEmail\":false\r}\r},\"client\":{\r\"clientName\":\"firewalltestma\",\"backupsetId\":20,\"instanceId\":1,\"subclientId\":70,\"clientId\":9,\"applicationId\":33\r},\"lastModified\":{\r\"timeValue\":\"1496310568\"\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "62f4b7ff-4f5b-e902-4b1b-6c734fee5d86",
-          "name": "View Shared Files and Folders",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/GetSharedFolders",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
-            },
-            "description": "<h2>Description</h2>\nThis operation lists the share details of all the shares or a specific share for a user.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>Error cased due to one of the following reasons: \n    <ul> \n     <li>The user does not have access to the share </li> \n     <li>The file requested is not accessible inside the share </li> \n     <li>Download operation is not allowed. This can happen if you attempt to download a folder.</li> \n    </ul> </td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file does not exist.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_view_shared_files.htm)"
-          },
-          "response": [
-            {
-              "id": "4459f812-a96f-5ce6-5c4f-c7d605b3ea08",
-              "name": "View Shared Files and Folders - To view the share details of a specific shared file",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/GetSharedFolders",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "834"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 01 Jun 2017 09:56:19 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "26",
-              "body": "{\r\"shares\":[\r{\r\"userPermission\":1,\"description\":\"\",\"shareType\":2,\"canReshare\":false,\"hasReshares\":0,\"canUserEdit\":false,\"status\":0,\"owner\":{\r\"userName\":\"edgeuser\",\"userId\":4\r},\"sharedTo\":[\r{\r\"userHasReshares\":0,\"userStatus\":0,\"permission\":1,\"userType\":2,\"email\":\"snasim@commvault.com\",\"externalGroup\":{\r\r},\"sharedBy\":{\r\"userId\":4\r},\"user\":{\r\r},\"group\":{\r\r}\r}\r],\"shareFolder\":{\r\"syncWebFolderId\":423085,\"syncWebFolderName\":\"C:\"\r},\"browseInfo\":{\r\"edgeClient\":false,\"paths\":[\r{\r\"path\":\"C:\\\\\",\"directory\":true\r}\r],\"expirationTime\":{\r\"time\":0\r},\"emailInfo\":{\r\"emailMessage\":\"\",\"browseUrl\":\"\\u002fwebconsole\\u002fgtl.do?gid=Tk55mPuXyQ4eO3s\",\"dontSendEmail\":false\r}\r},\"client\":{\r\"clientName\":\"firewalltestma\",\"backupsetId\":20,\"instanceId\":1,\"subclientId\":70,\"clientId\":9,\"applicationId\":33\r},\"lastModified\":{\r\"timeValue\":\"1496310568\"\r}\r}\r]\r}"
-            },
-            {
-              "id": "caf623c8-4635-de84-4f0d-32bab34146a0",
-              "name": "View Shared Files and Folders - To view the share details of a specific shared file",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/GetSharedFolders",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"propertyLevel\": 30,\r\n  \"shareInfo\": {\r\n    \"shareFolder\": {\r\n      \"syncWebFolderId\": 703241\r\n    }\r\n  }\r\n}"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "843"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 01 Jun 2017 09:59:10 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "449",
-              "body": "{\r\"shares\":[\r{\r\"userPermission\":1,\"description\":\"\",\"shareType\":2,\"canReshare\":false,\"hasReshares\":0,\"canUserEdit\":false,\"status\":0,\"owner\":{\r\"userName\":\"edgeuser\",\"userId\":4\r},\"sharedTo\":[\r{\r\"userHasReshares\":0,\"userStatus\":0,\"permission\":1,\"userType\":2,\"email\":\"snasim@commvault.com\",\"externalGroup\":{\r\r},\"sharedBy\":{\r\"userId\":4\r},\"user\":{\r\r},\"group\":{\r\r}\r}\r],\"shareFolder\":{\r\"syncWebFolderId\":703241,\"syncWebFolderName\":\"netstat\"\r},\"browseInfo\":{\r\"edgeClient\":false,\"paths\":[\r{\r\"path\":\"C:\\\\netstat.txt\",\"directory\":false\r}\r],\"expirationTime\":{\r\"time\":0\r},\"emailInfo\":{\r\"emailMessage\":\"\",\"browseUrl\":\"\\u002fwebconsole\\u002fgtl.do?gid=acV5rp8\",\"dontSendEmail\":false\r}\r},\"client\":{\r\"clientName\":\"firewalltestma\",\"backupsetId\":20,\"instanceId\":1,\"subclientId\":70,\"clientId\":9,\"applicationId\":33\r},\"lastModified\":{\r\"timeValue\":\"1496310616\"\r}\r}\r]\r}"
             }
           ]
         },
