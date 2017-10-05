@@ -40784,6 +40784,173 @@
           ]
         },
         {
+          "_postman_id": "96c0d329-5b5d-4ab7-b32d-dabc73b1375b",
+          "name": "Subclient Browse 2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains browseResponses\"] = responseBody.has(\"browseResponses\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "49",
+                "Browse"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "path",
+                  "value": "%5C"
+                },
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "showDeletedFiles",
+                  "value": "false"
+                },
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "vsFileBrowse",
+                  "value": "true"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "<h2> Description </h2>\nThis operation browses data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+          },
+          "response": [
+            {
+              "id": "63f686c4-9bbc-255a-0836-9e056c215e88",
+              "name": "Subclient Browse 2 - This request is for a root level browse for guest virtual machines.",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "49",
+                    "Browse"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "%5C",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "showDeletedFiles",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "vsFileBrowse",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "1386"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Thu, 01 Jun 2017 07:57:03 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "1071",
+              "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r},\"browseResult\":{\r\"queryId\":\"0\",\"dataResultSet\":[\r{\r\"path\":\"C:\",\"size\":28457425,\"modificationTime\":1496122177,\"displayName\":\"C:\",\"name\":\"2\\u0012C:\",\"flags\":{\r\"directory\":true,\"mountPoint\":true,\"isFake\":false,\"snap\":false\r},\"advancedData\":{\r\"backupJobId\":288,\"referenceTime\":1496122310,\"offset\":0,\"archiveGroupId\":3,\"objectGuid\":\"15832c0c2980f319a3be40952e7e69b0\",\"backupTime\":1496122310,\"archiveFileId\":107,\"subclient\":{\r\"type\":0,\"_type_\":7,\"applicationId\":49\r},\"sourceCommServer\":{\r\"_type_\":1,\"commCellId\":2,\"type\":0\r},\"advConfig\":{\r\"browseAdvancedConfigResp\":{\r\"commcellNumber\":122516778\r}\r},\"browseMetaData\":{\r\"fsData\":{\r\"DriveFreePercentage\":59,\"geoLocation\":\"<App_GeoLocation ip_address='199.255.244.65' latitude='40.300720' longitude='-74.081910' status_code='SUCCESS' status_description=''\\u002f>\",\"VolumeSize\":214379261952\r},\"indexing\":{\r\"folderSize\":28457425,\"backupTime\":1496122299,\"fileChangeTime\":1496122177\r},\"dmStubData\":{\r\"guid\":\"4adf0103078dbb0de054c95cd763ff21\"\r},\"virtualServerMetaData\":{\r\"extentBlobBitMap\":\"\"\r}\r}\r}\r}\r]\r}\r},{\r\"respType\":0,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":1,\"groupbyValue\":\"\",\"count\":1\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "dc770f57-df80-be5c-d270-ba25e9b07a48",
           "name": "Subclient - For File System Agent",
           "event": [
@@ -41969,173 +42136,6 @@
               "cookie": [],
               "responseTime": "3525",
               "body": "{\r\"taskId\":138,\"jobIds\":[\r\"323\"\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "96c0d329-5b5d-4ab7-b32d-dabc73b1375b",
-          "name": "Subclient Browse 2",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains browseResponses\"] = responseBody.has(\"browseResponses\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Subclient",
-                "49",
-                "Browse"
-              ],
-              "query": [
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "path",
-                  "value": "%5C"
-                },
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "showDeletedFiles",
-                  "value": "false"
-                },
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "vsFileBrowse",
-                  "value": "true"
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "<h2> Description </h2>\nThis operation browses data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
-          },
-          "response": [
-            {
-              "id": "63f686c4-9bbc-255a-0836-9e056c215e88",
-              "name": "Subclient Browse 2 - This request is for a root level browse for guest virtual machines.",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C&showDeletedFiles=false&vsFileBrowse=true",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Subclient",
-                    "49",
-                    "Browse"
-                  ],
-                  "query": [
-                    {
-                      "key": "path",
-                      "value": "%5C",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "showDeletedFiles",
-                      "value": "false",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "vsFileBrowse",
-                      "value": "true",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "1386"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 01 Jun 2017 07:57:03 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "1071",
-              "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r},\"browseResult\":{\r\"queryId\":\"0\",\"dataResultSet\":[\r{\r\"path\":\"C:\",\"size\":28457425,\"modificationTime\":1496122177,\"displayName\":\"C:\",\"name\":\"2\\u0012C:\",\"flags\":{\r\"directory\":true,\"mountPoint\":true,\"isFake\":false,\"snap\":false\r},\"advancedData\":{\r\"backupJobId\":288,\"referenceTime\":1496122310,\"offset\":0,\"archiveGroupId\":3,\"objectGuid\":\"15832c0c2980f319a3be40952e7e69b0\",\"backupTime\":1496122310,\"archiveFileId\":107,\"subclient\":{\r\"type\":0,\"_type_\":7,\"applicationId\":49\r},\"sourceCommServer\":{\r\"_type_\":1,\"commCellId\":2,\"type\":0\r},\"advConfig\":{\r\"browseAdvancedConfigResp\":{\r\"commcellNumber\":122516778\r}\r},\"browseMetaData\":{\r\"fsData\":{\r\"DriveFreePercentage\":59,\"geoLocation\":\"<App_GeoLocation ip_address='199.255.244.65' latitude='40.300720' longitude='-74.081910' status_code='SUCCESS' status_description=''\\u002f>\",\"VolumeSize\":214379261952\r},\"indexing\":{\r\"folderSize\":28457425,\"backupTime\":1496122299,\"fileChangeTime\":1496122177\r},\"dmStubData\":{\r\"guid\":\"4adf0103078dbb0de054c95cd763ff21\"\r},\"virtualServerMetaData\":{\r\"extentBlobBitMap\":\"\"\r}\r}\r}\r}\r]\r}\r},{\r\"respType\":0,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":1,\"groupbyValue\":\"\",\"count\":1\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"32\",\"session\":{\r\"sessionId\":\"1496303822-32\"\r}\r}\r]\r}"
             }
           ]
         },
