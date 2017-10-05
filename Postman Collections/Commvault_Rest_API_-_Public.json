@@ -36114,71 +36114,13 @@
               "cookie": [],
               "responseTime": "140",
               "body": "{\r\"roleProperties\":[\r{\r\"role\":{\r\"roleId\":1,\"roleName\":\"Master\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":3,\"roleName\":\"View\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":4,\"roleName\":\"End Users\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":5,\"roleName\":\"Compliance\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":6,\"roleName\":\"Client Admins\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":7,\"roleName\":\"All Users Laptops\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":8,\"roleName\":\"Plan Subscription Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":10,\"roleName\":\"Plan Creator Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":11,\"roleName\":\"MSP Subscription\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":12,\"roleName\":\"Alert Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":13,\"roleName\":\"Subclient Policy Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":14,\"roleName\":\"Client Group Creator\",\"flags\":{\r\"disabled\":false\r}\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "486e8186-52f2-ea6e-530a-b79c02cab0f6",
-          "name": "View Roles 3",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains roleProperties\"] = responseBody.has(\"roleProperties\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Role?propertyLevel=30",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Role"
-              ],
-              "query": [
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "propertyLevel",
-                  "value": "30"
-                }
-              ],
-              "variable": []
             },
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "<h2>Description</h2>\nThis operation returns a list of roles.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role.htm)"
-          },
-          "response": [
             {
-              "id": "57c67017-8e76-c6b2-7c4c-9d4ff12767dc",
-              "name": "View Roles 3 - This request uses 30 for the propertyLevel parameter.",
+              "id": "cee084e9-95b2-7a4c-fa3b-1b9af8657ffa",
+              "name": "View Roles 2 - This request uses 1 for the propertyLevel parameter.",
               "originalRequest": {
                 "url": {
-                  "raw": "{{ServerUrl}}/Role?propertyLevel=30",
+                  "raw": "{{ServerUrl}}/Role?propertyLevel=1",
                   "auth": {},
                   "host": [
                     "{{ServerUrl}}"
@@ -36189,7 +36131,7 @@
                   "query": [
                     {
                       "key": "propertyLevel",
-                      "value": "30",
+                      "value": "1",
                       "equals": true,
                       "description": ""
                     }
@@ -36223,7 +36165,7 @@
                   "description": "",
                   "key": "Content-Length",
                   "name": "Content-Length",
-                  "value": "12017"
+                  "value": "1024"
                 },
                 {
                   "description": "",
@@ -36235,7 +36177,7 @@
                   "description": "",
                   "key": "Date",
                   "name": "Date",
-                  "value": "Mon, 12 Jun 2017 09:33:22 GMT"
+                  "value": "Mon, 12 Jun 2017 09:32:43 GMT"
                 },
                 {
                   "description": "",
@@ -36251,8 +36193,8 @@
                 }
               ],
               "cookie": [],
-              "responseTime": "1459",
-              "body": "{\r\"roleProperties\":[\r{\r\"visibility\":0,\"description\":\"System Created Role with all permissions\",\"role\":{\r\"roleId\":1,\"roleName\":\"Master\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":123,\"consumeLicense\":true\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System Created Role for View permission\",\"role\":{\r\"roleId\":3,\"roleName\":\"View\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":31,\"permissionName\":\"View\",\"categoryName\":\"Global\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":107\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for end users\",\"role\":{\r\"roleId\":4,\"roleName\":\"End Users\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":2,\"permissionName\":\"Agent Management\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":3,\"permissionName\":\"Agent Scheduling\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":5,\"permissionName\":\"Upload\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":6,\"permissionName\":\"Download\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":12,\"permissionName\":\"Data Protection Operations\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":20,\"permissionName\":\"In Place Recover\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":22,\"permissionName\":\"Out of Place Recover\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":24,\"permissionName\":\"EndUser Access\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":38,\"permissionName\":\"Live Browse\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":40,\"permissionName\":\"Sharing\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for compliance\",\"role\":{\r\"roleId\":5,\"roleName\":\"Compliance\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":6,\"permissionName\":\"Download\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":22,\"permissionName\":\"Out of Place Recover\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":25,\"permissionName\":\"Compliance Search\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":27,\"permissionName\":\"Tag Management\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":29,\"permissionName\":\"Legal Hold Management\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":32,\"permissionName\":\"Annotation Management\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for client admins\",\"role\":{\r\"roleId\":6,\"roleName\":\"Client Admins\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":2,\"permissionName\":\"Agent Management\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":3,\"permissionName\":\"Agent Scheduling\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":7,\"permissionName\":\"Install Package\\u002fUpdate \",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":12,\"permissionName\":\"Data Protection Operations\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":13,\"permissionName\":\"Browse\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":20,\"permissionName\":\"In Place Recover\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":22,\"permissionName\":\"Out of Place Recover\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":39,\"permissionName\":\"Full Machine Recovery\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":42,\"permissionName\":\"Out of Place Full Machine Recovery\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created for Laptop owners\",\"role\":{\r\"roleId\":7,\"roleName\":\"All Users Laptops\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":65,\"permissionName\":\"Install client\",\"categoryName\":\"Commcell\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":101\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created for plan add remove role\",\"role\":{\r\"roleId\":8,\"roleName\":\"Plan Subscription Role\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":159,\"permissionName\":\"Edit Plan Associations\",\"categoryName\":\"Plan\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":118\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created for Plan creators\",\"role\":{\r\"roleId\":10,\"roleName\":\"Plan Creator Role\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"categoryName\":\"Plan\",\"_type_\":121,\"consumeLicense\":true,\"categoryId\":118\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":31,\"permissionName\":\"View\",\"categoryName\":\"Global\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":107\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":156,\"permissionName\":\"Create Plan\",\"categoryName\":\"Plan\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":118,\"flags\":{\r\"exclude\":true\r}\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"Role for company user group client group associations\",\"role\":{\r\"roleId\":11,\"roleName\":\"MSP Subscription\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":123,\"consumeLicense\":true\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for alert owners\",\"role\":{\r\"roleId\":12,\"roleName\":\"Alert Owner\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"categoryName\":\"Alert\",\"_type_\":121,\"consumeLicense\":true,\"categoryId\":117\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":31,\"permissionName\":\"View\",\"categoryName\":\"Global\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":107\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":107,\"permissionName\":\"Change security settings\",\"categoryName\":\"Global\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":107\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":151,\"permissionName\":\"Create Alert\",\"categoryName\":\"Alert\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":117,\"flags\":{\r\"exclude\":true\r}\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"System created role for subclient policy owners\",\"role\":{\r\"roleId\":13,\"roleName\":\"Subclient Policy Owner\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"categoryName\":\"Subclient Policy\",\"_type_\":121,\"consumeLicense\":true,\"categoryId\":121\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":31,\"permissionName\":\"View\",\"categoryName\":\"Global\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":107\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":107,\"permissionName\":\"Change security settings\",\"categoryName\":\"Global\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":107\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":174,\"permissionName\":\"Create Subclient Policy\",\"categoryName\":\"Subclient Policy\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":121,\"flags\":{\r\"exclude\":true\r}\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r},{\r\"visibility\":0,\"description\":\"Client Group Creator role\",\"role\":{\r\"roleId\":14,\"roleName\":\"Client Group Creator\",\"flags\":{\r\"disabled\":false\r}\r},\"categoryPermission\":{\r\"categoriesPermissionList\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"categoryName\":\"Client Group\",\"_type_\":121,\"consumeLicense\":true,\"categoryId\":122\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":2,\"permissionName\":\"Agent Management\",\"categoryName\":\"Client\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":102\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":1,\"permissionName\":\"Administrative Management\",\"categoryName\":\"Global\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":107\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"permissionId\":179,\"permissionName\":\"Create Client Group\",\"categoryName\":\"Client Group\",\"_type_\":122,\"consumeLicense\":true,\"categoryId\":122,\"flags\":{\r\"exclude\":true\r}\r}\r]\r},\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r}\r}\r]\r}"
+              "responseTime": "140",
+              "body": "{\r\"roleProperties\":[\r{\r\"role\":{\r\"roleId\":1,\"roleName\":\"Master\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":3,\"roleName\":\"View\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":4,\"roleName\":\"End Users\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":5,\"roleName\":\"Compliance\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":6,\"roleName\":\"Client Admins\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":7,\"roleName\":\"All Users Laptops\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":8,\"roleName\":\"Plan Subscription Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":10,\"roleName\":\"Plan Creator Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":11,\"roleName\":\"MSP Subscription\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":12,\"roleName\":\"Alert Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":13,\"roleName\":\"Subclient Policy Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":14,\"roleName\":\"Client Group Creator\",\"flags\":{\r\"disabled\":false\r}\r}\r}\r]\r}"
             }
           ]
         },
@@ -36719,7 +36661,7 @@
           ]
         },
         {
-          "_postman_id": "0244fdc8-89e1-f9d4-6053-4bdb68bea9d4",
+          "_postman_id": "21485046-b794-5eaf-a62c-adef6550d8ac",
           "name": "View Roles 2 copy",
           "event": [
             {
@@ -36775,7 +36717,7 @@
           },
           "response": [
             {
-              "id": "c08cb128-d6ba-4028-dbf6-9fac0492cafd",
+              "id": "a3c41de3-9dec-2258-26c3-399f843e6eb3",
               "name": "View Roles 2 - This request uses 1 for the propertyLevel parameter.",
               "originalRequest": {
                 "url": {
@@ -36856,63 +36798,6 @@
               "body": "{\r\"roleProperties\":[\r{\r\"role\":{\r\"roleId\":1,\"roleName\":\"Master\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":3,\"roleName\":\"View\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":4,\"roleName\":\"End Users\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":5,\"roleName\":\"Compliance\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":6,\"roleName\":\"Client Admins\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":7,\"roleName\":\"All Users Laptops\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":8,\"roleName\":\"Plan Subscription Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":10,\"roleName\":\"Plan Creator Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":11,\"roleName\":\"MSP Subscription\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":12,\"roleName\":\"Alert Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":13,\"roleName\":\"Subclient Policy Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":14,\"roleName\":\"Client Group Creator\",\"flags\":{\r\"disabled\":false\r}\r}\r}\r]\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "21485046-b794-5eaf-a62c-adef6550d8ac",
-          "name": "View Roles 2 copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains roleProperties\"] = responseBody.has(\"roleProperties\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Role?propertyLevel=1",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Role"
-              ],
-              "query": [
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "propertyLevel",
-                  "value": "1"
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "<h2>Description</h2>\nThis operation returns a list of roles.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role.htm)"
-          },
-          "response": []
         }
       ]
     },
