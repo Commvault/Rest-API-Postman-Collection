@@ -36585,6 +36585,103 @@
               "cookie": [],
               "responseTime": "2232",
               "body": "{\r\"taskDetail\":[\r{\r\"taskOperation\":1,\"task\":{\r\"GUID\":\"E85B33D0-1732-4ED3-A629-671254019459\",\"description\":\"System Created Install Software\",\"ownerId\":1,\"runUserId\":1,\"taskType\":2,\"ownerName\":\"admin\",\"policyType\":0,\"alertId\":0,\"taskId\":8,\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"uninstalled\":false,\"disabled\":true\r},\"originalCC\":{\r\"commCellId\":2\r},\"task\":{\r\"taskId\":8\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"relativeTime\":30124,\"subTaskOperation\":1,\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"System Created Install Software\",\"subTaskType\":1,\"flags\":128,\"operationType\":4020,\"subTaskId\":9\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":8,\"flags\":0,\"active_end_time\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":36000,\"freq_restart_interval\":0,\"active_start_date\":1436832000,\"freq_interval\":4,\"freq_relative_interval\":0,\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"adminOpts\":{\r\"updateOption\":{\r\"commcellId\":2,\"invokeLevel\":1,\"removeIntersectingDiag\":true,\"rebootClient\":false,\"ignoreRunningJobs\":true,\"clientAndClientGroups\":[\r{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":2,\"consumeLicense\":true\r},{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":27,\"consumeLicense\":true\r},{\r\"srmReportSet\":0,\"type\":0,\"clientGroupId\":4,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":28,\"consumeLicense\":true,\"flags\":{\r\"exclude\":true\r}\r}\r],\"installUpdatesJobType\":{\r\"upgradeClients\":false,\"undoUpdates\":false,\"installUpdates\":true\r}\r}\r}\r}\r}\r]\r}\r]\r}"
+            },
+            {
+              "id": "58f12b46-cdc5-222f-d47c-c326d45fa361",
+              "name": "Schedules -  This request returns all of the administrator schedules for a storage policy.",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Schedules?storagepolicyId=3&admin=1",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Schedules"
+                  ],
+                  "query": [
+                    {
+                      "key": "storagepolicyId",
+                      "value": "3",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "admin",
+                      "value": "1",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "_postman_previewtype": "parsed",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1757",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Jun 2017 08:53:33 GMT",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "type": "text",
+                  "enabled": true,
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "0",
+              "body": "{\n    \"taskDetail\": [\n        {\n            \"taskOperation\": 1,\n            \"associations\": [\n                {\n                    \"srmReportSet\": 0,\n                    \"type\": 0,\n                    \"srmTemplateId\": 0,\n                    \"subclientId\": 0,\n                    \"clientGroupId\": 0,\n                    \"storagePolicyId\": 0,\n                    \"copyId\": 0,\n                    \"applicationId\": 0,\n                    \"backupsetId\": 0,\n                    \"instanceId\": 0,\n                    \"srmReportType\": 0,\n                    \"sidbStoreId\": 0,\n                    \"clientSidePackage\": true,\n                    \"clientId\": 0,\n                    \"sidbStoreName\": \"N/A\",\n                    \"copyName\": \"DUMMY\",\n                    \"agentlessPolicyId\": 0,\n                    \"mediaAgentId\": 0,\n                    \"_type_\": 155,\n                    \"appName\": \"Default Application Type Name\",\n                    \"consumeLicense\": true,\n                    \"flags\": {\n                        \"exclude\": false\n                    }\n                }\n            ],\n            \"task\": {\n                \"GUID\": \"9BE7A700-FE5D-4392-B78B-481B4AFC4F89\",\n                \"description\": \"System created schedule policy for DDB Verification\",\n                \"ownerId\": 1,\n                \"runUserId\": 1,\n                \"taskType\": 4,\n                \"ownerName\": \"admin\",\n                \"policyType\": 11,\n                \"taskName\": \"System Created DDB Verification schedule policy\",\n                \"alertId\": 0,\n                \"taskId\": 13,\n                \"taskFlags\": {\n                    \"isEZOperation\": false,\n                    \"uninstalled\": false,\n                    \"disabled\": false\n                },\n                \"originalCC\": {\n                    \"commCellId\": 2\n                }\n            },\n            \"appGroup\": {},\n            \"subTasks\": [\n                {\n                    \"relativeTime\": 32787,\n                    \"subTaskOperation\": 1,\n                    \"subTask\": {\n                        \"subTaskOrder\": 0,\n                        \"subTaskType\": 1,\n                        \"flags\": 4096,\n                        \"operationType\": 4007,\n                        \"subTaskId\": 14\n                    },\n                    \"pattern\": {\n                        \"active_end_occurence\": 0,\n                        \"freq_subday_interval\": 86400,\n                        \"freq_type\": 4,\n                        \"patternId\": 13,\n                        \"flags\": 0,\n                        \"description\": \"Every day at 11:00 AM and repeats every 24 hr(s) 0 min(s) until 12:00 AM\",\n                        \"active_end_time\": 86340,\n                        \"skipOccurence\": 0,\n                        \"skipDayNumber\": 0,\n                        \"active_start_time\": 39600,\n                        \"freq_restart_interval\": 0,\n                        \"active_start_date\": 1473897600,\n                        \"freq_interval\": 1,\n                        \"freq_relative_interval\": 0,\n                        \"freq_recurrence_factor\": 1,\n                        \"calendar\": {\n                            \"calendarId\": 1\n                        },\n                        \"timeZone\": {\n                            \"TimeZoneID\": 1000\n                        }\n                    },\n                    \"options\": {\n                        \"backupOpts\": {\n                            \"mediaOpt\": {\n                                \"auxcopyJobOption\": {\n                                    \"maxNumberOfStreams\": 0,\n                                    \"useMaximumStreams\": true\n                                }\n                            }\n                        },\n                        \"adminOpts\": {\n                            \"archiveCheckOption\": {\n                                \"ddbVerificationLevel\": 3,\n                                \"jobsToVerify\": 0,\n                                \"allCopies\": true,\n                                \"backupLevel\": 2\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}"
             }
           ]
         },
@@ -37716,57 +37813,10 @@
               "cookie": [],
               "responseTime": "799",
               "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "ff00ead8-47bc-1d64-051e-b91870f2116f",
-          "name": "Update Schedule Policy Agent Associations 2",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.errorCode === 0;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Task",
-            "method": "PUT",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "description": "",
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"taskInfo\":{\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"TestPolicy\"\r\n      }\r\n    },\r\n    \"appGroup\":{\r\n      \"appGroups\":[\r\n        {\r\n          \"appGroupName\":\"APPGRP_DB2\"\r\n        }\r\n      ],\r\n      \"appTypes\":[\r\n        {\r\n          \"appTypeName\":\"SQL Server\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}\r\n"
             },
-            "description": "<h2> Description </h2>\nThis operation adds or removes agent associations on a schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_schedule_policy_agent_assoc.htm)"
-          },
-          "response": [
             {
-              "id": "d02dd663-4c54-4a40-7419-934d65219c0c",
-              "name": "Update Schedule Policy Agent Associations 2 - This request removes the DB2 agent group association from the schedule policy.",
+              "id": "dc446103-b4c5-e705-7777-cf5f16eab6ad",
+              "name": "Update Schedule Policy Agent Associations - This request removes the DB2 agent group association from the schedule policy.",
               "originalRequest": {
                 "url": "{{ServerUrl}}/Task",
                 "method": "PUT",
@@ -37783,54 +37833,64 @@
                   },
                   {
                     "key": "Content-Type",
-                    "value": "application/xml",
+                    "value": "application/json",
                     "description": ""
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
+                  "raw": "{\r\n  \"taskInfo\":{\r\n    \"associations\":[\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\"\r\n      },\r\n      {\r\n        \"clientName\":\"firewalltestcs\",\r\n        \"subclientName\":\"DDBBackup\",\r\n        \"backupsetName\":\"defaultBackupSet\",\r\n        \"appName\":\"file system\",\r\n        \"flags\":{\r\n          \"exclude\":true\r\n        }\r\n      }\r\n    ],\r\n    \"task\":{\r\n      \"task\":{\r\n        \"taskName\":\"t2\"\r\n      }\r\n    }\r\n  }\r\n}"
                 }
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
+              "_postman_previewlanguage": "",
+              "_postman_previewtype": "parsed",
               "header": [
                 {
-                  "description": "",
                   "key": "Content-Length",
+                  "value": "35",
+                  "type": "text",
+                  "enabled": true,
                   "name": "Content-Length",
-                  "value": "35"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "type": "text",
+                  "enabled": true,
                   "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Date",
+                  "value": "Fri, 16 Jun 2017 03:52:40 GMT",
+                  "type": "text",
+                  "enabled": true,
                   "name": "Date",
-                  "value": "Fri, 16 Jun 2017 03:52:40 GMT"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "type": "text",
+                  "enabled": true,
                   "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "type": "text",
+                  "enabled": true,
                   "name": "X-Powered-By",
-                  "value": "ASP.NET"
+                  "description": ""
                 }
               ],
               "cookie": [],
-              "responseTime": "4980",
-              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+              "responseTime": "0",
+              "body": "{\n    \"errorMessage\": \"\",\n    \"errorCode\": 0\n}"
             }
           ]
         },
