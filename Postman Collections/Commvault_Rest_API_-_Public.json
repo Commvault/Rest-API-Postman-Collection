@@ -42101,118 +42101,84 @@
               "cookie": [],
               "responseTime": "4473",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"userGroupName\":\"Testgroup\",\"userGroupId\":9\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "cbb9c350-7408-eb50-c980-83e2cae427df",
-          "name": "User Group Properties - Deletes a Security Association",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");",
-                  "",
-                  "tests[\"Response Body contains errorString\"] = responseBody.has(\"errorString\");",
-                  "",
-                  "tests[\"Response Body contains errorCode\"] = responseBody.has(\"errorCode\");",
-                  "",
-                  "tests[\"Response Body contains entity\"] = responseBody.has(\"entity\");",
-                  "",
-                  "tests[\"Response Body contains userGroupId\"] = responseBody.has(\"userGroupId\");",
-                  "",
-                  "tests[\"Response Body contains userGroupName\"] = responseBody.has(\"userGroupName\");",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/UserGroup/{{UserGroupId}}",
-            "method": "POST",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "description": "",
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"groups\": [\r\n    {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 3,\r\n        \"associations\": [\r\n          {\r\n            \"entities\": {\r\n              \"entity\": [\r\n                {\r\n                  \"storagePolicyName\": \"CSSP\"\r\n                }\r\n              ]\r\n            },\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"userGroupEntity\": {\r\n        \"userGroupName\": \"Testgroup\"\r\n      }\r\n    }\r\n  ]\r\n}"
             },
-            "description": "<h2>Description</h2>\nThis operation updates the properties associated with a user group.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_user_group_properties.htm)"
-          },
-          "response": [
             {
-              "id": "7f986640-d06a-ba1f-80b4-ffcb722d005a",
+              "id": "1ff5bd6b-e9cc-2323-a47f-8e37737c81ba",
               "name": "User Group Properties - This request deletes a security association.",
               "originalRequest": {
-                "url": "",
-                "header": [],
+                "url": "{{ServerUrl}}/UserGroup/{{UserGroupId}}",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"groups\": [\r\n    {\r\n      \"securityAssociations\": {\r\n        \"associationsOperationType\": 3,\r\n        \"associations\": [\r\n          {\r\n            \"entities\": {\r\n              \"entity\": [\r\n                {\r\n                  \"storagePolicyName\": \"CSSP\"\r\n                }\r\n              ]\r\n            },\r\n            \"properties\": {\r\n              \"role\": {\r\n                \"roleName\": \"View\"\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"userGroupEntity\": {\r\n        \"userGroupName\": \"Testgroup\"\r\n      }\r\n    }\r\n  ]\r\n}"
+                  "raw": "{\r\n  \"groups\": [\r\n    {\r\n      \"description\": \"alert management group\",\r\n      \"enabled\": true,\r\n      \"usersOperationType\": 2,\r\n      \"userGroupEntity\": {\r\n        \"userGroupName\": \"Testgroup\"\r\n      },\r\n      \"users\": [\r\n        {\r\n          \"userName\": \"admin\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
                 }
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
+              "_postman_previewlanguage": "",
+              "_postman_previewtype": "parsed",
               "header": [
                 {
-                  "description": "",
                   "key": "Content-Length",
+                  "value": "202",
+                  "type": "text",
+                  "enabled": true,
                   "name": "Content-Length",
-                  "value": "202"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "type": "text",
+                  "enabled": true,
                   "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Date",
+                  "value": "Tue, 30 May 2017 04:34:31 GMT",
+                  "type": "text",
+                  "enabled": true,
                   "name": "Date",
-                  "value": "Tue, 30 May 2017 04:34:31 GMT"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "type": "text",
+                  "enabled": true,
                   "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "type": "text",
+                  "enabled": true,
                   "name": "X-Powered-By",
-                  "value": "ASP.NET"
+                  "description": ""
                 }
               ],
               "cookie": [],
-              "responseTime": "890",
-              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"Successful\",\"errorCode\":0,\"entity\":{\r\"userGroupName\":\"Testgroup\",\"userGroupId\":9\r}\r}\r]\r}"
+              "responseTime": "0",
+              "body": "{\n    \"processinginstructioninfo\": {\n        \"attributes\": [\n            {\n                \"name\": \"exitval\",\n                \"value\": \"0\"\n            }\n        ]\n    },\n    \"response\": [\n        {\n            \"errorString\": \"Successful\",\n            \"errorCode\": 0,\n            \"entity\": {\n                \"userGroupName\": \"Testgroup\",\n                \"userGroupId\": 9\n            }\n        }\n    ]\n}"
             }
           ]
         },
@@ -43832,50 +43798,45 @@
             },
             "description": "<h2>Description</h2>\nThis operation creates a virtualization client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_virtualization_client.htm)"
           },
-          "response": []
-        },
-        {
-          "_postman_id": "b12df2aa-2580-7109-864a-0ee921cc4c19",
-          "name": "VMware Virtualization Client",
-          "event": [
+          "response": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  ""
-                ]
-              }
+              "id": "79393b34-2f25-b547-d45c-95528f8597d1",
+              "name": "VMware Virtualization Client",
+              "originalRequest": {
+                "url": "{{ServerUrl}}/Client",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n   \"clientInfo\":{\r\n      \"clientType\":12,\r\n      \"virtualServerClientProperties\":{\r\n         \"virtualServerInstanceInfo\":{\r\n            \"vsInstanceType\":1,\r\n            \"associatedClients\":{\r\n               \"memberServers\":[\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  },\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  }\r\n               ]\r\n            },\r\n            \"vmwareVendor\":{\r\n               \"vcenterHostName\":\"\",\r\n               \"virtualCenter\":{\r\n                  \"password\":\"\",\r\n                  \"userName\":\"\"\r\n               }\r\n            }\r\n         }\r\n      }\r\n   },\r\n   \"entity\":{\r\n      \"clientName\":\"\"\r\n   }\r\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "_postman_previewtype": "parsed",
+              "header": [],
+              "cookie": [],
+              "responseTime": "0",
+              "body": ""
             }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Client",
-            "method": "POST",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"clientInfo\":{\r\n      \"clientType\":12,\r\n      \"virtualServerClientProperties\":{\r\n         \"virtualServerInstanceInfo\":{\r\n            \"vsInstanceType\":1,\r\n            \"associatedClients\":{\r\n               \"memberServers\":[\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  },\r\n                  {\r\n                     \"client\":{\r\n                        \"clientName\":\"\",\r\n                        \"_type_\":3\r\n                     }\r\n                  }\r\n               ]\r\n            },\r\n            \"vmwareVendor\":{\r\n               \"vcenterHostName\":\"\",\r\n               \"virtualCenter\":{\r\n                  \"password\":\"\",\r\n                  \"userName\":\"\"\r\n               }\r\n            }\r\n         }\r\n      }\r\n   },\r\n   \"entity\":{\r\n      \"clientName\":\"\"\r\n   }\r\n}"
-            },
-            "description": "<h2>Description</h2>\nThis operation creates a virtualization client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_virtualization_client.htm)"
-          },
-          "response": []
+          ]
         },
         {
           "_postman_id": "6a728d61-6f48-ec3d-398b-bd6f3eb2b157",
