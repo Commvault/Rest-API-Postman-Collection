@@ -41234,48 +41234,6 @@
           ]
         },
         {
-          "_postman_id": "00c1b311-eb2a-9538-3e51-211cb80fbb42",
-          "name": "Subclient Properties - Adds VM to a Subclient",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
-            "method": "POST",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "description": "",
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM002\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM003\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\",\r\n        \"subclientName\": \"subclient001\",\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"instanceName\": \"DefaultInstanceName\",\r\n        \"appName\": \"Virtual Server\"\r\n      }\r\n    ]\r\n  }\r\n}"
-            },
-            "description": "<h2> Description </h2>\nThis request adds virtual machines to a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm)"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "7ff25def-7b03-f374-3396-d4561646791d",
           "name": "Subclient Properties",
           "event": [
@@ -41390,6 +41348,48 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\"\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "00c1b311-eb2a-9538-3e51-211cb80fbb42",
+          "name": "Subclient Properties - Adds VM to a Subclient",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM002\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM003\",\r\n          \"name\": \"\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"association\": {\r\n    \"entity\": [\r\n      {\r\n        \"clientName\": \"{{clientName}}\",\r\n        \"subclientName\": \"subclient001\",\r\n        \"backupsetName\": \"defaultBackupSet\",\r\n        \"instanceName\": \"DefaultInstanceName\",\r\n        \"appName\": \"Virtual Server\"\r\n      }\r\n    ]\r\n  }\r\n}"
+            },
+            "description": "<h2> Description </h2>\nThis request adds virtual machines to a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient_properties.htm)"
+          },
+          "response": []
         },
         {
           "_postman_id": "f6fe4561-a0f1-1e07-1cf5-4420ef16f3a7",
