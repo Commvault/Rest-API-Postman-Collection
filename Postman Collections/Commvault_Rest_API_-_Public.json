@@ -41234,6 +41234,48 @@
           ]
         },
         {
+          "_postman_id": "4ff5f884-7a0c-9d8d-86af-11f2345c16be",
+          "name": "Subclient - For Virtual Server Agent",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{ServerUrl}}/Subclient",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM011\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    },\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"client001\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"Virtual Server\",\r\n      \"backupsetName\": \"defaultBackupSet\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true,\r\n      \"storageDevice\": {\r\n        \"dataBackupStoragePolicy\": {\r\n          \"storagePolicyName\": \"SP004\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
+            },
+            "description": "<h2> Description </h2>\nThis request creates a subclient under a virtual server agent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient.htm)"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "7ff25def-7b03-f374-3396-d4561646791d",
           "name": "Subclient Properties",
           "event": [
@@ -41677,48 +41719,6 @@
               "body": "{\r\"errorMessage\":\"Error 0x10c: Synthetic Full cannot run because no Incremental or Differential backup was run after last Full backup for the subclient.\",\"errorCode\":2\r}"
             }
           ]
-        },
-        {
-          "_postman_id": "4ff5f884-7a0c-9d8d-86af-11f2345c16be",
-          "name": "Subclient - For Virtual Server Agent",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{ServerUrl}}/Subclient",
-            "method": "POST",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "description": "",
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": 2,\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM011\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    },\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"client001\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"Virtual Server\",\r\n      \"backupsetName\": \"defaultBackupSet\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true,\r\n      \"storageDevice\": {\r\n        \"dataBackupStoragePolicy\": {\r\n          \"storagePolicyName\": \"SP004\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
-            },
-            "description": "<h2> Description </h2>\nThis request creates a subclient under a virtual server agent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient.htm)"
-          },
-          "response": []
         },
         {
           "_postman_id": "d88d1eaa-16de-691c-97b8-2d630c072967",
