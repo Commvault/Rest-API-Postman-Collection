@@ -40951,6 +40951,173 @@
           ]
         },
         {
+          "_postman_id": "ffb92fdf-ca12-6ad0-f98f-aa385881a80d",
+          "name": "Subclient Browse 3",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains browseResponses\"] = responseBody.has(\"browseResponses\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Subclient",
+                "49",
+                "Browse"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "path",
+                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b"
+                },
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "showDeletedFiles",
+                  "value": "false"
+                },
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "vsFileBrowse",
+                  "value": "true"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "<h2> Description </h2>\nThis operation browses data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
+          },
+          "response": [
+            {
+              "id": "a08b55bc-99b6-3286-d7cd-120acb28cc09",
+              "name": "Subclient Browse 3 - This request is to browse a specific guest virtual machine.",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Subclient",
+                    "49",
+                    "Browse"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "showDeletedFiles",
+                      "value": "false",
+                      "equals": true,
+                      "description": ""
+                    },
+                    {
+                      "key": "vsFileBrowse",
+                      "value": "true",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "271"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Thu, 01 Jun 2017 07:58:05 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "3202",
+              "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":0,\"groupbyValue\":\"\",\"count\":0\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
           "_postman_id": "dc770f57-df80-be5c-d270-ba25e9b07a48",
           "name": "Subclient - For File System Agent",
           "event": [
@@ -42136,173 +42303,6 @@
               "cookie": [],
               "responseTime": "3525",
               "body": "{\r\"taskId\":138,\"jobIds\":[\r\"323\"\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "ffb92fdf-ca12-6ad0-f98f-aa385881a80d",
-          "name": "Subclient Browse 3",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains browseResponses\"] = responseBody.has(\"browseResponses\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
-              "auth": {},
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Subclient",
-                "49",
-                "Browse"
-              ],
-              "query": [
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "path",
-                  "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b"
-                },
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "showDeletedFiles",
-                  "value": "false"
-                },
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "vsFileBrowse",
-                  "value": "true"
-                }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "description": "",
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": "<h2> Description </h2>\nThis operation browses data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_subclient_browse.htm)"
-          },
-          "response": [
-            {
-              "id": "a08b55bc-99b6-3286-d7cd-120acb28cc09",
-              "name": "Subclient Browse 3 - This request is to browse a specific guest virtual machine.",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/Subclient/49/Browse?path=%5C5039fb6c-9190-1642-f42b-bTEST121f01b&showDeletedFiles=false&vsFileBrowse=true",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Subclient",
-                    "49",
-                    "Browse"
-                  ],
-                  "query": [
-                    {
-                      "key": "path",
-                      "value": "%5C5039fb6c-9190-1642-f42b-bTEST121f01b",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "showDeletedFiles",
-                      "value": "false",
-                      "equals": true,
-                      "description": ""
-                    },
-                    {
-                      "key": "vsFileBrowse",
-                      "value": "true",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "271"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 01 Jun 2017 07:58:05 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "3202",
-              "body": "{\r\"browseResponses\":[\r{\r\"respType\":0,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r},\"browseResult\":{\r\"queryId\":\"1\",\"aggrResultSet\":[\r{\r\"result\":0,\"groupbyValue\":\"\",\"count\":0\r}\r]\r}\r},{\r\"respType\":5,\"workerId\":\"33\",\"session\":{\r\"sessionId\":\"1496303884-33\"\r}\r}\r]\r}"
             }
           ]
         },
