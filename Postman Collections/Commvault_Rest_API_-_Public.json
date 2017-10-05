@@ -36856,6 +36856,63 @@
               "body": "{\r\"roleProperties\":[\r{\r\"role\":{\r\"roleId\":1,\"roleName\":\"Master\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":3,\"roleName\":\"View\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":4,\"roleName\":\"End Users\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":5,\"roleName\":\"Compliance\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":6,\"roleName\":\"Client Admins\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":7,\"roleName\":\"All Users Laptops\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":8,\"roleName\":\"Plan Subscription Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":10,\"roleName\":\"Plan Creator Role\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":11,\"roleName\":\"MSP Subscription\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":12,\"roleName\":\"Alert Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":13,\"roleName\":\"Subclient Policy Owner\",\"flags\":{\r\"disabled\":false\r}\r}\r},{\r\"role\":{\r\"roleId\":14,\"roleName\":\"Client Group Creator\",\"flags\":{\r\"disabled\":false\r}\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "21485046-b794-5eaf-a62c-adef6550d8ac",
+          "name": "View Roles 2 copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains roleProperties\"] = responseBody.has(\"roleProperties\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/Role?propertyLevel=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Role"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "propertyLevel",
+                  "value": "1"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "description": "",
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": "<h2>Description</h2>\nThis operation returns a list of roles.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_role.htm)"
+          },
+          "response": []
         }
       ]
     },
