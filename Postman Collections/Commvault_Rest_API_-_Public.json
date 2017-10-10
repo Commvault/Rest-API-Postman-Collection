@@ -2398,7 +2398,11 @@
                   "tests[\"exitval is 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
                   "tests[\"errorCode is 0\"] = jsonData.response[0].errorCode === 0;",
                   "",
-                  "postman.setEnvironmentVariable(\"backupsetId2\", jsonData.response[0].entity.backupsetId);"
+                  "postman.setEnvironmentVariable(\"backupsetId2\", jsonData.response[0].entity.backupsetId);",
+                  "",
+                  "tests[\"Response Body contains processinginstructioninfo\"] = responseBody.has(\"processinginstructioninfo\");",
+                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");",
+                  "tests[\"Response Body contains attributes\"] = responseBody.has(\"attributes\");"
                 ]
               }
             }
@@ -2408,19 +2412,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
