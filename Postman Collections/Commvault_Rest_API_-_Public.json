@@ -206,6 +206,9 @@
                   "",
                   "tests[\"Response Body contains smtpServer\"] = responseBody.has(\"smtpServer\");",
                   "tests[\"Response Body contains smtpPort\"] = responseBody.has(\"smtpPort\");",
+                  "tests[\"Response Body contains userInfo\"] = responseBody.has(\"userInfo\");",
+                  "tests[\"Response Body contains senderInfo\"] = responseBody.has(\"senderInfo\");",
+                  "tests[\"Response Body contains senderAddress\"] = responseBody.has(\"senderAddress\");",
                   ""
                 ]
               }
@@ -216,14 +219,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
