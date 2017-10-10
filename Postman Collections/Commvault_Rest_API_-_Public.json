@@ -321,7 +321,10 @@
                   "",
                   "tests[\"Response Body contains AgentProperties\"] = responseBody.has(\"AgentProperties\");",
                   "tests[\"Response Body contains activityControlOptions\"] = responseBody.has(\"activityControlOptions\");",
-                  "tests[\"Response Body contains idaEntity\"] = responseBody.has(\"idaEntity\");"
+                  "tests[\"Response Body contains idaEntity\"] = responseBody.has(\"idaEntity\");",
+                  "tests[\"Response Body contains idaActivityControl\"] = responseBody.has(\"idaActivityControl\");",
+                  "",
+                  "tests[\"entityGUID Validation\"] = jsonData.agentProperties[0].clientId === postman.getEnvironmentVariable(\"clientId\");"
                 ]
               }
             }
@@ -338,10 +341,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "clientId",
-                  "value": "2"
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -349,14 +352,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
