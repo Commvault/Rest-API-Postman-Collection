@@ -953,7 +953,9 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"alertId2\", jsonData.alertEntity.alertId);",
                   "",
-                  "tests[\"errorCode is 0\"] = jsonData.errorResp.errorCode === 0;"
+                  "tests[\"errorCode is 0\"] = jsonData.errorResp.errorCode === 0;",
+                  "tests[\"Response Body contains alertEntity\"] = responseBody.has(\"alertEntity\");",
+                  "tests[\"Response Body contains errorResp\"] = responseBody.has(\"errorResp\");"
                 ]
               }
             }
@@ -963,19 +965,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
