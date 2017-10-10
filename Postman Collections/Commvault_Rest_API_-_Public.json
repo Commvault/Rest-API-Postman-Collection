@@ -953,7 +953,9 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"alertId2\", jsonData.alertEntity.alertId);",
                   "",
-                  "tests[\"errorCode is 0\"] = jsonData.errorResp.errorCode === 0;"
+                  "tests[\"errorCode is 0\"] = jsonData.errorResp.errorCode === 0;",
+                  "tests[\"Response Body contains alertEntity\"] = responseBody.has(\"alertEntity\");",
+                  "tests[\"Response Body contains errorResp\"] = responseBody.has(\"errorResp\");"
                 ]
               }
             }
@@ -963,19 +965,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
@@ -1298,14 +1300,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -1931,7 +1933,9 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"backupsetId\", jsonData.backupsetProperties[0].backupSetEntity.backupsetId);",
                   "postman.setEnvironmentVariable(\"clientName\", jsonData.backupsetProperties[0].backupSetEntity.clientName);",
-                  "postman.setEnvironmentVariable(\"backupsetName\", jsonData.backupsetProperties[0].backupSetEntity.backupsetName);"
+                  "postman.setEnvironmentVariable(\"backupsetName\", jsonData.backupsetProperties[0].backupSetEntity.backupsetName);",
+                  "",
+                  "tests[\"entityGUID Validation\"] = jsonData.backupsetProperties[0].clientId === postman.getEnvironmentVariable(\"clientId\");"
                 ]
               }
             }
@@ -1948,10 +1952,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "clientId",
-                  "value": "2"
+                  "value": "2",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -1959,14 +1963,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
