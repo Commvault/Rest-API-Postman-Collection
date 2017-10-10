@@ -590,6 +590,9 @@
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains alertList\"] = responseBody.has(\"alertList\");",
+                  "tests[\"Response Body contains notifType\"] = responseBody.has(\"notifType\");",
+                  "tests[\"Response Body contains alertType\"] = responseBody.has(\"alertType\");",
+                  "tests[\"Response Body contains alertCategory\"] = responseBody.has(\"alertCategory\");",
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"alertId\", jsonData.alertList[0].alert.id);"
@@ -602,14 +605,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
