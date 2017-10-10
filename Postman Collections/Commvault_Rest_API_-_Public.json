@@ -466,7 +466,10 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "tests[\"ExitVal = 0\"] = jsonData.processinginstructioninfo.attributes[0].value === \"0\";",
                   "",
-                  "tests[\"errorCode = 0\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"errorCode = 0\"] = jsonData.response[0].errorCode === 0;",
+                  "tests[\"Response Body contains processinginstructioninfo\"] = responseBody.has(\"processinginstructioninfo\");",
+                  "tests[\"Response Body contains attributes\"] = responseBody.has(\"attributes\");",
+                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");"
                 ]
               }
             }
@@ -476,19 +479,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
