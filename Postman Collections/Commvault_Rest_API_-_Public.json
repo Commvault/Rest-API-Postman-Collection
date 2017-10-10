@@ -2952,84 +2952,6 @@
               "cookie": [],
               "responseTime": "520",
               "body": "{\r\"clientGroupDetail\":{\r\"clientGroup\":{\r\"_type_\":28,\"clientGroupId\":15,\"clientGroupName\":\"ecabc593-f808-4ec2-92c2-0fe5df8b026e\"\r}\r}\r}"
-            },
-            {
-              "id": "c15c7511-fc12-b247-ebae-628a29f8c795",
-              "name": "Client Group with Quota Limit",
-              "originalRequest": {
-                "url": "{{ServerUrl}}/ClientGroup",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"clientGroupOperationType\": 1,\r\n  \"clientGroupDetail\": {\r\n    \"description\": \"client computer group description\",\r\n    \"claQuota\": 7,\r\n    \"clientGroup\": {\r\n      \"clientGroupName\": \"{{$guid}}\"\r\n    }\r\n  }\r\n}"
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "135",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 10 Oct 2017 21:47:48 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "53179",
-              "body": "{\r\"clientGroupDetail\":{\r\"clientGroup\":{\r\"_type_\":28,\"clientGroupId\":1030,\"clientGroupName\":\"0064f6f8-950c-4534-91fb-62c656ad9d86\"\r}\r}\r}"
             }
           ]
         },
@@ -3158,24 +3080,24 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"clientGroupOperationType\": 2,\r\n  \"clientGroupDetail\": {\r\n    \"description\": \"client computer group description modified\",\r\n    \"clientGroup\": {\r\n      \"clientGroupName\": \"{{clientGroupName}}\"\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"clientGroupOperationType\": 2,\r\n  \"clientGroupDetail\": {\r\n    \"description\": \"client computer group description modified\",\r\n    \"claQuota\": 8,\r\n    \"clientGroup\": {\r\n      \"clientGroupName\": \"{{clientGroupName}}\"\r\n    }\r\n  }\r\n}"
             },
             "description": "<h2>Description</h2>\nThis operation updates the properties associated with a client computer group.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_group_properties.htm)"
           },
