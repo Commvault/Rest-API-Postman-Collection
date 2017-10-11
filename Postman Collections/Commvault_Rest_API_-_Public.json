@@ -6403,7 +6403,7 @@
                   "postman.setEnvironmentVariable(\"SECONDFOLDER_GUID\", jsonData.fileResource.GUID);",
                   "",
                   "tests[\"Status code is 201\"] = responseCode.code === 201;",
-                  "",
+                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
                   "",
