@@ -9969,7 +9969,9 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");"
+                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");",
+                  "tests[\"Response Body contains fileResources\"] = responseBody.has(\"fileResources\");",
+                  "tests[\"entityGUID Validation\"] = jsonData.fileResources[0].GUID === postman.getEnvironmentVariable(\"RootGuid\");"
                 ]
               }
             }
@@ -9979,19 +9981,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "text/xml"
+                "value": "text/xml",
+                "description": ""
               }
             ],
             "body": {
