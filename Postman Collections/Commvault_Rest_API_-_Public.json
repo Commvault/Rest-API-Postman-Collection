@@ -9832,7 +9832,8 @@
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
                   "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");",
-                  "tests[\"Response Body contains fileResources\"] = responseBody.has(\"fileResources\");"
+                  "tests[\"Response Body contains fileResources\"] = responseBody.has(\"fileResources\");",
+                  "tests[\"entityGUID Validation\"] = jsonData.fileResources[0].GUID === postman.getEnvironmentVariable(\"RootGuid\");"
                 ]
               }
             }
@@ -45486,6 +45487,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "97b537ca-f3bd-c74d-ce22-42fe9a96344c",
+      "name": "Admin Console Operations*",
+      "description": "",
+      "item": []
     }
   ]
 }
