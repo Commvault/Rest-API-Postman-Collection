@@ -14507,7 +14507,10 @@
                   "",
                   "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
                   "",
-                  "tests[\"Response Body contains rootGUID\"] = responseBody.has(\"rootGUID\");"
+                  "tests[\"Response Body contains rootGUID\"] = responseBody.has(\"rootGUID\");",
+                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");",
+                  "tests[\"Response Body contains edgeDriveInfo\"] = responseBody.has(\"edgeDriveInfo\");",
+                  "tests[\"Response Body contains syncWebFolder\"] = responseBody.has(\"syncWebFolder\");"
                 ]
               }
             }
@@ -14517,19 +14520,19 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
