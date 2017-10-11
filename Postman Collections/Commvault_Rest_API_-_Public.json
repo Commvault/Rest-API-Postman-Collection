@@ -12016,7 +12016,7 @@
                   "tests[\"Successful POST request\"] = responseCode.code === 200",
                   "",
                   "tests[\"Response Body contains DemoFile1\"] = responseBody.has(\"DemoFile1.doc\");",
-                  "",
+                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
                   "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");",
                   "",
                   "var jsonData = JSON.parse(responseBody);",
