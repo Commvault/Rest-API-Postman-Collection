@@ -8312,7 +8312,6 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Successful POST request\"] = responseCode.code === 200",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;",
                   "tests[\"Response Body Contains Custom Property\"] = responseBody.has(\"testproperty1\");",
                   "tests[\"Response Body contains props\"] = responseBody.has(\"props\");",
                   "tests[\"Response Body contains Property Value\"] = responseBody.has(\"testvalue1\");"
