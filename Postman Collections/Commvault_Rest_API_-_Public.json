@@ -8752,7 +8752,6 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "tests[\"Successful POST request\"] = responseCode.code === 200",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;",
                   "tests[\"Response Body Contains Tags\"] = responseBody.has(\"tags\");"
                 ]
               }
