@@ -8311,10 +8311,10 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
-                  "",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;",
                   "tests[\"Response Body Contains Custom Property\"] = responseBody.has(\"testproperty1\");",
-                  "",
+                  "tests[\"Response Body contains props\"] = responseBody.has(\"props\");",
                   "tests[\"Response Body contains Property Value\"] = responseBody.has(\"testvalue1\");"
                 ]
               }
@@ -8335,10 +8335,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "propertyFilter",
-                  "value": "testproperty1"
+                  "value": "testproperty1",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -8346,19 +8346,19 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
