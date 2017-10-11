@@ -13205,7 +13205,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200",
                   "",
                   "tests[\"Response Body contains testproperty\"] = responseBody.has(\"testproperty1\");",
                   "",
@@ -13219,14 +13219,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
