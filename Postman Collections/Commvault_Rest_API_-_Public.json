@@ -9020,7 +9020,9 @@
                   "",
                   "tests[\"Response Body contains parentPath\"] = responseBody.has(\"\\\\DemoFolder\");",
                   "tests[\"Response Body contains fileResources\"] = responseBody.has(\"fileResources\");",
-                  "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");"
+                  "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");",
+                  "",
+                  "tests[\"entityGUID Validation\"] = jsonData.fileResources[0].GUID === postman.getEnvironmentVariable(\"FILE1_GUID\");"
                 ]
               }
             }
