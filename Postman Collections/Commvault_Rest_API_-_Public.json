@@ -49752,216 +49752,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "17d35228-564a-684e-7b7d-5878163bb3f5",
-          "name": "Security Operations*",
-          "description": "",
-          "item": [
-            {
-              "_postman_id": "c2384721-0bcb-21e3-c114-a1b285440788",
-              "name": "Security",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "",
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "url": "{{ServerUrl}}/Security",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"entityAssociated\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"entityType\": 158,\n\t\t\t\t\"_type_\": 150,\n\t\t\t\t\"entityId\": {{PlanId}}\n\t\t\t}\n\t\t]\n\t},\n\t\"securityAssociations\": {\n\t\t\"associationsOperationType\": 1,\n\t\t\"associations\": [\n\t\t\t{\n\t\t\t\t\"userOrGroup\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"userId\": 0,\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"hkuser\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"role\": {\n\t\t\t\t\t\t\"_type_\": 120,\n\t\t\t\t\t\t\"roleId\": 3,\n\t\t\t\t\t\t\"roleName\": \"View\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t}\n}"
-                },
-                "description": "<h2>Description</h2>\nThis operation Updates Security association to an entity."
-              },
-              "response": [
-                {
-                  "id": "0e42b5c9-9ee9-7e24-2543-a5ea459d5602",
-                  "name": "Security - Removes Association of a User From Plan",
-                  "originalRequest": {
-                    "url": "{{ServerUrl}}/Security",
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}",
-                        "description": ""
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}",
-                        "description": ""
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json",
-                        "description": ""
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"entityAssociated\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"entityType\": 158,\n\t\t\t\t\"_type_\": 150,\n\t\t\t\t\"entityId\": {{PlanId}}\n\t\t\t}\n\t\t]\n\t},\n\t\"securityAssociations\": {\n\t\t\"associationsOperationType\": 1\n\t}\n}"
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "_postman_previewtype": "text",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "154",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Wed, 11 Oct 2017 15:40:46 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                      "httpOnly": true,
-                      "domain": "greenvalley.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "930C162901E43496C2ED776C7233E414",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "139",
-                  "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\"\r}\r]\r}"
-                },
-                {
-                  "id": "94ed68f3-6b9f-7dc7-a1ef-e414c7b236c7",
-                  "name": "Security - Associates User To A Plan",
-                  "originalRequest": {
-                    "url": "{{ServerUrl}}/Security",
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}",
-                        "description": ""
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}",
-                        "description": ""
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json",
-                        "description": ""
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"entityAssociated\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"entityType\": 158,\n\t\t\t\t\"_type_\": 150,\n\t\t\t\t\"entityId\": {{PlanId}}\n\t\t\t}\n\t\t]\n\t},\n\t\"securityAssociations\": {\n\t\t\"associationsOperationType\": 1,\n\t\t\"associations\": [\n\t\t\t{\n\t\t\t\t\"userOrGroup\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"userId\": 0,\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"hkuser\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"role\": {\n\t\t\t\t\t\t\"_type_\": 120,\n\t\t\t\t\t\t\"roleId\": 3,\n\t\t\t\t\t\t\"roleName\": \"View\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t}\n}"
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "_postman_previewtype": "text",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "154",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Wed, 11 Oct 2017 15:37:46 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                      "httpOnly": true,
-                      "domain": "greenvalley.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "930C162901E43496C2ED776C7233E414",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "309",
-                  "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\"\r}\r]\r}"
-                }
-              ]
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
           "_postman_id": "b0487d53-452c-2374-47c5-882f7dc5be1e",
           "name": "Organization Operations*",
           "description": "",
@@ -50706,6 +50496,216 @@
                   ],
                   "responseTime": "70",
                   "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+                }
+              ]
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "17d35228-564a-684e-7b7d-5878163bb3f5",
+          "name": "Security Operations*",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "c2384721-0bcb-21e3-c114-a1b285440788",
+              "name": "Security",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "",
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "url": "{{ServerUrl}}/Security",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"entityAssociated\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"entityType\": 158,\n\t\t\t\t\"_type_\": 150,\n\t\t\t\t\"entityId\": {{PlanId}}\n\t\t\t}\n\t\t]\n\t},\n\t\"securityAssociations\": {\n\t\t\"associationsOperationType\": 1,\n\t\t\"associations\": [\n\t\t\t{\n\t\t\t\t\"userOrGroup\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"userId\": 0,\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"hkuser\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"role\": {\n\t\t\t\t\t\t\"_type_\": 120,\n\t\t\t\t\t\t\"roleId\": 3,\n\t\t\t\t\t\t\"roleName\": \"View\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t}\n}"
+                },
+                "description": "<h2>Description</h2>\nThis operation Updates Security association to an entity."
+              },
+              "response": [
+                {
+                  "id": "0e42b5c9-9ee9-7e24-2543-a5ea459d5602",
+                  "name": "Security - Removes Association of a User From Plan",
+                  "originalRequest": {
+                    "url": "{{ServerUrl}}/Security",
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}",
+                        "description": ""
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}",
+                        "description": ""
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "description": ""
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"entityAssociated\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"entityType\": 158,\n\t\t\t\t\"_type_\": 150,\n\t\t\t\t\"entityId\": {{PlanId}}\n\t\t\t}\n\t\t]\n\t},\n\t\"securityAssociations\": {\n\t\t\"associationsOperationType\": 1\n\t}\n}"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "_postman_previewtype": "text",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "154",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 11 Oct 2017 15:40:46 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "139",
+                  "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\"\r}\r]\r}"
+                },
+                {
+                  "id": "94ed68f3-6b9f-7dc7-a1ef-e414c7b236c7",
+                  "name": "Security - Associates User To A Plan",
+                  "originalRequest": {
+                    "url": "{{ServerUrl}}/Security",
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}",
+                        "description": ""
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}",
+                        "description": ""
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "description": ""
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"entityAssociated\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"entityType\": 158,\n\t\t\t\t\"_type_\": 150,\n\t\t\t\t\"entityId\": {{PlanId}}\n\t\t\t}\n\t\t]\n\t},\n\t\"securityAssociations\": {\n\t\t\"associationsOperationType\": 1,\n\t\t\"associations\": [\n\t\t\t{\n\t\t\t\t\"userOrGroup\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"userId\": 0,\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"hkuser\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"role\": {\n\t\t\t\t\t\t\"_type_\": 120,\n\t\t\t\t\t\t\"roleId\": 3,\n\t\t\t\t\t\t\"roleName\": \"View\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t}\n}"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "_postman_previewtype": "text",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "154",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 11 Oct 2017 15:37:46 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "309",
+                  "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\"\r}\r]\r}"
                 }
               ]
             }
