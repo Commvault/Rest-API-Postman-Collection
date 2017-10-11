@@ -14652,7 +14652,6 @@
                   "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
                   "tests[\"Response Body contains folder fileResource\"] = responseBody.has(\"fileResource\");",
                   "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;",
-                  "tests[\"entityGUID Validation\"] = jsonData.fileResources[0].GUID === postman.getEnvironmentVariable(\"RootGuid\");",
                   ""
                 ]
               }
@@ -14791,10 +14790,7 @@
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
                   "tests[\"Response Body contains syncWebFolderId\"] = responseBody.has(\"syncWebFolderId\");",
-                  "tests[\"Response Body contains shareInfo\"] = responseBody.has(\"shareInfo\");",
-                  "tests[\"Response Body contains resp\"] = responseBody.has(\"resp\");",
                   "",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;",
                   ""
                 ]
               }
