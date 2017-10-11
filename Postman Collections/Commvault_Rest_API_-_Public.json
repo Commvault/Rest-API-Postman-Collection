@@ -6667,6 +6667,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
+                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");"
                 ]
