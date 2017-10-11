@@ -13858,7 +13858,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200"
                 ]
               }
             }
@@ -13868,14 +13868,14 @@
             "method": "DELETE",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -14100,7 +14100,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 "
                 ]
               }
             }
@@ -14110,19 +14110,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -49760,7 +49760,7 @@
           "item": [
             {
               "_postman_id": "c2384721-0bcb-21e3-c114-a1b285440788",
-              "name": "Security",
+              "name": "Plan Security",
               "event": [
                 {
                   "listen": "test",
@@ -49799,7 +49799,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"entityAssociated\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"entityType\": 158,\n\t\t\t\t\"_type_\": 150,\n\t\t\t\t\"entityId\": {{PlanId}}\n\t\t\t}\n\t\t]\n\t},\n\t\"securityAssociations\": {\n\t\t\"associationsOperationType\": 1,\n\t\t\"associations\": [\n\t\t\t{\n\t\t\t\t\"userOrGroup\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"userId\": 0,\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"hkuser\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"role\": {\n\t\t\t\t\t\t\"_type_\": 120,\n\t\t\t\t\t\t\"roleId\": 3,\n\t\t\t\t\t\t\"roleName\": \"View\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t}\n}"
                 },
-                "description": "<h2>Description</h2>\nThis operation Updates Security association to an entity."
+                "description": "<h2>Description</h2>\nThis operation Updates Security association to a Plan."
               },
               "response": [
                 {
