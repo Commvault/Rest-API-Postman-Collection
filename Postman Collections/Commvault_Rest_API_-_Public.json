@@ -26250,7 +26250,9 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");"
+                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");",
+                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                  "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");"
                 ]
               }
             }
@@ -26377,7 +26379,8 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");"
+                  "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");",
+                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
                 ]
               }
             }
@@ -26396,10 +26399,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "path",
-                  "value": "\\"
+                  "value": "\\",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -26407,14 +26410,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
