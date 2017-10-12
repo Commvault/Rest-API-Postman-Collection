@@ -28523,7 +28523,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "",
                   "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
                 ]
               }
@@ -28545,10 +28546,10 @@
               ],
               "query": [
                 {
-                  "key": "path",
-                  "value": "\\DemoFile1.doc",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "path",
+                  "value": "\\DemoFile1.doc"
                 }
               ],
               "variable": []
@@ -28556,14 +28557,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "text/html",
-                "description": ""
+                "value": "text/html"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -28691,7 +28692,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
                 ]
               }
@@ -28702,14 +28703,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "text/html",
-                "description": ""
+                "value": "text/html"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -28837,8 +28838,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -28848,19 +28848,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -28969,7 +28969,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "",
                   "tests[\"Response Body contains testproperty\"] = responseBody.has(\"testproperty1\");",
                   "",
                   "tests[\"Response Body contains testvalue\"] = responseBody.has(\"testvalue1\");"
@@ -28982,14 +28983,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -29098,7 +29099,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -29108,19 +29109,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -29229,7 +29230,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -29239,19 +29240,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -29360,10 +29361,9 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
-                  "tests[\"Response Body contains test tag\"] = responseBody.has(\"test_tag\");",
-                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");"
+                  "tests[\"Response Body contains test tag\"] = responseBody.has(\"test_tag\");"
                 ]
               }
             }
@@ -29373,14 +29373,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -29489,9 +29489,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -29501,19 +29499,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -29623,7 +29621,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -29633,14 +29631,14 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -29744,8 +29742,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -29755,14 +29752,14 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -29869,7 +29866,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200"
                 ]
               }
             },
@@ -29911,10 +29908,10 @@
               ],
               "query": [
                 {
-                  "key": "type",
-                  "value": "testcontentstore",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "type",
+                  "value": "testcontentstore"
                 }
               ],
               "variable": []
@@ -29922,19 +29919,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -30568,9 +30565,6 @@
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
                   "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
-                  "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;",
                   ""
                 ]
               }
@@ -30581,19 +30575,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -30687,13 +30681,13 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"shareId\", jsonData.shareInfo.shareFolder.syncWebFolderId);",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
                   "tests[\"Response Body contains syncWebFolderId\"] = responseBody.has(\"syncWebFolderId\");",
                   "",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  ""
                 ]
               }
             }
@@ -30703,19 +30697,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -30826,10 +30820,10 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
-                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");",
+                  "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");",
                   ""
                 ]
@@ -30841,14 +30835,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -30954,13 +30948,12 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
-                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");",
-                  "tests[\"entityShareId Validation\"] = jsonData.shares.syncWebFolderName === postman.getEnvironmentVariable(\"shareId\");"
+                  ""
                 ]
               }
             }
@@ -30978,10 +30971,10 @@
               ],
               "query": [
                 {
-                  "key": "shareId",
-                  "value": "{{shareId}}",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "shareId",
+                  "value": "{{shareId}}"
                 }
               ],
               "variable": []
@@ -30989,14 +30982,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -31123,9 +31116,7 @@
                   "",
                   "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");",
                   "",
-                  "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");"
                 ]
               }
             }
@@ -31135,19 +31126,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -31264,10 +31255,7 @@
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "postman.setEnvironmentVariable(\"SHAREFOLDER2_GUID\", jsonData.fileResource.GUID);",
-                  "",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "postman.setEnvironmentVariable(\"SHAREFOLDER2_GUID\", jsonData.fileResource.GUID);"
                 ]
               }
             }
@@ -31277,19 +31265,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -31407,8 +31395,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "postman.setEnvironmentVariable(\"SHAREFILE_GUID\", jsonData.fileGUID);",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                  ""
                 ]
               }
             }
@@ -31430,10 +31417,10 @@
               ],
               "query": [
                 {
-                  "key": "uploadType",
-                  "value": "fullFile",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "uploadType",
+                  "value": "fullFile"
                 }
               ],
               "variable": []
@@ -31441,34 +31428,34 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "FileName",
-                "value": "{{FileName1}}",
-                "description": ""
+                "value": "{{FileName1}}"
               },
               {
+                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}",
-                "description": ""
+                "value": "{{FileSize}}"
               },
               {
+                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ShareParentFolderPath}}",
-                "description": ""
+                "value": "{{ShareParentFolderPath}}"
               },
               {
+                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}",
-                "description": ""
+                "value": "{{FileModifiedtime}}"
               }
             ],
             "body": {
@@ -31622,9 +31609,7 @@
                   "",
                   "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
                   "",
-                  "tests[\"Response Body Contains requestId\"] = responseBody.has(\"requestId\");",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Response Body Contains requestId\"] = responseBody.has(\"requestId\");"
                 ]
               }
             }
@@ -31646,16 +31631,16 @@
               ],
               "query": [
                 {
-                  "key": "uploadType",
-                  "value": "chunkedFile",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "uploadType",
+                  "value": "chunkedFile"
                 },
                 {
-                  "key": "forceRestart",
-                  "value": "true",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "forceRestart",
+                  "value": "true"
                 }
               ],
               "variable": []
@@ -31663,39 +31648,39 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "FileName",
-                "value": "{{FileName2}}",
-                "description": ""
+                "value": "{{FileName2}}"
               },
               {
+                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ShareParentFolderPath}}",
-                "description": ""
+                "value": "{{ShareParentFolderPath}}"
               },
               {
+                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}",
-                "description": ""
+                "value": "{{FileModifiedtime}}"
               },
               {
+                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}",
-                "description": ""
+                "value": "{{FileSize}}"
               },
               {
+                "description": "",
                 "key": "FileEOF",
-                "value": "0",
-                "description": ""
+                "value": "0"
               }
             ],
             "body": {
@@ -31855,9 +31840,7 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                  "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");"
                 ]
               }
             }
@@ -31879,16 +31862,16 @@
               ],
               "query": [
                 {
-                  "key": "uploadType",
-                  "value": "chunkedFile",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "uploadType",
+                  "value": "chunkedFile"
                 },
                 {
-                  "key": "requestId",
-                  "value": "{{requestId}}",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "requestId",
+                  "value": "{{requestId}}"
                 }
               ],
               "variable": []
@@ -31896,24 +31879,24 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Name",
-                "value": "{{FileName2}}",
-                "description": ""
+                "value": "{{FileName2}}"
               },
               {
+                "description": "",
                 "key": "FileEOF",
-                "value": "1",
-                "description": ""
+                "value": "1"
               }
             ],
             "body": {
@@ -32056,13 +32039,11 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
                   "tests[\"Response Body contains syncWebFolderId\"] = responseBody.has(\"syncWebFolderId\");",
-                  "tests[\"Response Body contains resp\"] = responseBody.has(\"resp\");",
-                  "tests[\"Response Body contains shareInfo\"] = responseBody.has(\"shareInfo\");",
                   "",
                   ""
                 ]
@@ -32074,19 +32055,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -32197,13 +32178,12 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
                   ""
                 ]
               }
@@ -32214,19 +32194,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -32425,13 +32405,13 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                  ""
                 ]
               }
             }
@@ -32452,10 +32432,10 @@
               ],
               "query": [
                 {
-                  "key": "path",
-                  "value": "\\",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "path",
+                  "value": "\\"
                 }
               ],
               "variable": []
@@ -32463,19 +32443,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -32608,12 +32588,11 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
                   "",
                   ""
                 ]
@@ -32935,7 +32914,7 @@
                   "",
                   "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");",
                   "",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                  "",
                   ""
                 ]
               }
@@ -32946,14 +32925,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
