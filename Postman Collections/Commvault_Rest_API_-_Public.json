@@ -4414,6 +4414,7 @@
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body Contains datasourceId\"] = responseBody.has(\"datasourceId\");",
+                  "tests[\"Response Body Contains collections\"] = responseBody.has(\"collections\");",
                   "",
                   "postman.setEnvironmentVariable(\"DatasourceId\", jsonData.collections[0].datasources[0].datasourceId);",
                   "postman.setEnvironmentVariable(\"DatasourceType\", jsonData.collections[0].datasources[0].datasourceType);"
@@ -4427,15 +4428,18 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
