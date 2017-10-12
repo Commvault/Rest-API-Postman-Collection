@@ -14366,7 +14366,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
                 ]
               }
             },
@@ -14786,7 +14786,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"shareId\", jsonData.shareInfo.shareFolder.syncWebFolderId);",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
