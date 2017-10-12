@@ -33831,8 +33831,7 @@
                   "",
                   "tests[\"Reponse Body contains DemoFile1\"] = responseBody.has(\"DemoFile1.doc\");",
                   "",
-                  "tests[\"Reponse Body contains timestamp\"] = responseBody.has(\"timestamp\");",
-                  ""
+                  "tests[\"Reponse Body contains timestamp\"] = responseBody.has(\"timestamp\");"
                 ]
               }
             }
@@ -33953,7 +33952,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Reponse Body contains DemoFile1\"] = responseBody.has(\"DemoFile1.doc\");",
                   "",
@@ -33967,14 +33966,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -34124,8 +34123,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -34135,19 +34133,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -34256,9 +34254,9 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Response Body contains tag\"] = responseBody.has(\"test_tag\");",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "",
+                  "tests[\"Response Body contains tag\"] = responseBody.has(\"test_tag\");"
                 ]
               }
             }
@@ -34268,14 +34266,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -34379,8 +34377,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Response Body contains response\"] = responseBody.has(\"response\");"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -34390,19 +34387,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -34512,7 +34509,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -34522,19 +34519,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -34554,8 +34551,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -34565,19 +34561,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -34686,8 +34682,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -34697,19 +34692,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -34818,8 +34813,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -34829,19 +34823,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -34950,8 +34944,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -34961,19 +34954,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -35082,7 +35075,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -35092,14 +35085,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -35208,7 +35201,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -35218,19 +35211,19 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -35339,7 +35332,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -35349,19 +35342,19 @@
             "method": "PUT",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -35381,8 +35374,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -35392,14 +35384,14 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -35503,8 +35495,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -35514,19 +35505,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
@@ -35635,7 +35626,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -35645,14 +35636,14 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -35756,8 +35747,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -35767,14 +35757,14 @@
             "method": "DELETE",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -35878,7 +35868,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
                 ]
               }
             }
@@ -35888,19 +35878,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
