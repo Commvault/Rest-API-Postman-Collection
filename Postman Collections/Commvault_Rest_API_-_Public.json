@@ -33059,7 +33059,7 @@
                 "exec": [
                   "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                  ""
                 ]
               }
             }
