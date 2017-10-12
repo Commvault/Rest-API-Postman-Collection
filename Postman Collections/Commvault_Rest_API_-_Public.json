@@ -25268,7 +25268,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"versionId\", jsonData.fileResources[0].versionGUID);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains parentPath\"] = responseBody.has(\"\\\\DemoFolder\");",
                   "",
@@ -25291,10 +25291,10 @@
               ],
               "query": [
                 {
-                  "key": "path",
-                  "value": "\\{{FolderName}}\\DemoFile1Renamed.doc",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "path",
+                  "value": "\\{{FolderName}}\\DemoFile1Renamed.doc"
                 }
               ],
               "variable": []
@@ -25302,14 +25302,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
