@@ -17397,7 +17397,8 @@
                   "",
                   "tests[\"Reponse Body Contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body Contains File Name\"] = responseBody.has(\"DemoFile1.doc\");"
+                  "tests[\"Response Body Contains File Name\"] = responseBody.has(\"DemoFile1.doc\");",
+                  "tests[\"Response Body Contains fileResource\"] = responseBody.has(\"fileResource\");"
                 ]
               }
             }
