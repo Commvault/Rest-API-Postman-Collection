@@ -4284,7 +4284,8 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"CloudId = 1\"] = jsonData.listOfCIServer[0].cloudID === parseInt(postman.getEnvironmentVariable(\"CloudId\"));",
-                  "postman.setEnvironmentVariable(\"cloudId\", jsonData.listOfCIServer[0].cloudID);"
+                  "postman.setEnvironmentVariable(\"cloudId\", jsonData.listOfCIServer[0].cloudID);",
+                  "tests[\"Response Body contains listOfCIServer\"] = responseBody.has(\"listOfCIServer\");"
                 ]
               }
             }
@@ -4295,11 +4296,13 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
