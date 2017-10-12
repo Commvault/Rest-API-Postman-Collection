@@ -30960,7 +30960,7 @@
                   "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");",
-                  "tests[\"entityShareId Validation\"] = jsonData.shares.syncWebFolderName === postman.getEnvironmentVariable(\"shareId\");"
+                  ""
                 ]
               }
             }
