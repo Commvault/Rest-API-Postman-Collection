@@ -4747,8 +4747,9 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body Contains responseHeader\"] = responseBody.has(\"responseHeader\");",
-                  "tests[\"Response Body Contains response\"] = responseBody.has(\"response\");"
+                  "",
+                  "tests[\"Response Body Contains datasourceId\"] = responseBody.has(\"response\");",
+                  "tests[\"Response Body Contains collections\"] = responseBody.has(\"response\");"
                 ]
               }
             }
