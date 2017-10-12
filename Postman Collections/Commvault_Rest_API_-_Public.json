@@ -4748,8 +4748,8 @@
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body Contains datasourceId\"] = responseBody.has(\"response\");",
-                  "tests[\"Response Body Contains collections\"] = responseBody.has(\"response\");"
+                  "tests[\"Response Body Contains collections\"] = responseBody.has(\"collections\");",
+                  "tests[\"Response Body Contains clientId\"] = responseBody.has(\"clientId\");"
                 ]
               }
             }
