@@ -21982,9 +21982,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body contains commservEvents\"] = responseBody.has(\"commservEvents\");",
-                  ""
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -22001,22 +21999,22 @@
               ],
               "query": [
                 {
+                  "description": "",
+                  "equals": true,
                   "key": "showInfo",
-                  "value": "false",
-                  "equals": true,
-                  "description": ""
+                  "value": "false"
                 },
                 {
+                  "description": "",
+                  "equals": true,
                   "key": "showMinor",
-                  "value": "false",
-                  "equals": true,
-                  "description": ""
+                  "value": "false"
                 },
                 {
-                  "key": "showMajor",
-                  "value": "false",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "showMajor",
+                  "value": "false"
                 }
               ],
               "variable": []
@@ -22024,14 +22022,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -22245,7 +22243,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200"
                 ]
               }
             }
@@ -22409,9 +22407,7 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
-                  "",
-                  "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");"
+                  "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");"
                 ]
               }
             }
@@ -22421,19 +22417,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
