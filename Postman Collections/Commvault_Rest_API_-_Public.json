@@ -22409,10 +22409,7 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
-                  "",
-                  "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");"
                 ]
               }
             }
@@ -22422,19 +22419,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -22550,9 +22547,7 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
-                  "tests[\"Response Body contains folder fileResource\"] = responseBody.has(\"fileResource\");",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");"
                 ]
               }
             }
@@ -22562,19 +22557,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -22683,14 +22678,12 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
                   "",
-                  "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
-                  "",
-                  "tests[\"entityGUID Validation\"] = jsonData.fileResource.GUID === postman.getEnvironmentVariable(\"FOLDER_GUID\");"
+                  "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");"
                 ]
               }
             }
@@ -22700,14 +22693,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -22811,7 +22804,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
@@ -22835,10 +22828,10 @@
               ],
               "query": [
                 {
-                  "key": "path",
-                  "value": "\\{{FolderName}}",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "path",
+                  "value": "\\{{FolderName}}"
                 }
               ],
               "variable": []
@@ -22846,14 +22839,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
