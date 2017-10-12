@@ -4933,22 +4933,6 @@
         {
           "_postman_id": "89bd756d-a2a1-014e-9ca3-9e79b87d931d",
           "name": "View Data Sources and Properties",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains collections\"] = responseBody.has(\"collections\");",
-                  "tests[\"Response Body Contains clientId\"] = responseBody.has(\"clientId\");"
-                ]
-              }
-            }
-          ],
           "request": {
             "url": {
               "raw": "{{ServerUrl}}/dcube/GetDataSources?datasourceId={{DatasourceId}}&type={{DatasourceType}}&summary=0",
@@ -4964,20 +4948,17 @@
                 {
                   "key": "datasourceId",
                   "value": "{{DatasourceId}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "{{DatasourceType}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "summary",
                   "value": "0",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
               ],
               "variable": []
@@ -4986,13 +4967,11 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -5124,35 +5103,17 @@
         {
           "_postman_id": "12ac1f9d-b230-d27d-b986-90ca77422d88",
           "name": "View Crawling Status",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains status\"] = responseBody.has(\"status\");",
-                  ""
-                ]
-              }
-            }
-          ],
           "request": {
             "url": "{{ServerUrl}}/dcube/GetStatus/{{DatasourceId}}",
             "method": "GET",
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -5256,35 +5217,17 @@
         {
           "_postman_id": "4943224b-e2eb-54ad-3080-062253599a8a",
           "name": "View Crawl History",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains status\"] = responseBody.has(\"status\");",
-                  ""
-                ]
-              }
-            }
-          ],
           "request": {
             "url": "{{ServerUrl}}/dcube/GetHistory/{{DatasourceId}}",
             "method": "GET",
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -5396,12 +5339,7 @@
                 "exec": [
                   "tests[\"Response Body Contains Drivers\"] = responseBody.has(\"com.mysql.cj.jdbc.Driver\",\"oracle.jdbc.OracleDriver\",\"com.microsoft.sqlserver.jdbc.SQLServerDriver\");",
                   "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains drivers\"] = responseBody.has(\"drivers\");",
-                  ""
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -5412,18 +5350,15 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               },
               {
                 "key": "",
-                "value": "",
-                "description": ""
+                "value": ""
               }
             ],
             "body": {
@@ -5531,35 +5466,17 @@
         {
           "_postman_id": "16da7498-5ec2-8ebd-427b-72f4d8a6982a",
           "name": "View Registered CommServe Databases",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains drivers\"] = responseBody.has(\"commcellList\");",
-                  ""
-                ]
-              }
-            }
-          ],
           "request": {
             "url": "{{ServerUrl}}/dcube/getcommcellinfo",
             "method": "GET",
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
