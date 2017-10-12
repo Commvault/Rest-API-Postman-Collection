@@ -45221,19 +45221,19 @@
             "method": "PUT",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -46158,6 +46158,7 @@
                       "tests[\"Response Body contains plan\"] = responseBody.has(\"plan\");",
                       "",
                       "tests[\"Response Body contains planOwner\"] = responseBody.has(\"planOwner\");",
+                      "tests[\"Response Body contains errors\"] = responseBody.has(\"errors\");",
                       "",
                       "tests[\"Validating error code\"] = jsonData.errors[0].status.errorCode === 0;",
                       "",
