@@ -16857,6 +16857,8 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
+                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                  "",
                   ""
                 ]
               }
