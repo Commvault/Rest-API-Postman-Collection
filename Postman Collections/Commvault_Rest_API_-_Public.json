@@ -4284,8 +4284,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"CloudId = 1\"] = jsonData.listOfCIServer[0].cloudID === parseInt(postman.getEnvironmentVariable(\"CloudId\"));",
-                  "postman.setEnvironmentVariable(\"cloudId\", jsonData.listOfCIServer[0].cloudID);",
-                  "tests[\"Response Body contains listOfCIServer\"] = responseBody.has(\"listOfCIServer\");"
+                  "postman.setEnvironmentVariable(\"cloudId\", jsonData.listOfCIServer[0].cloudID);"
                 ]
               }
             }
@@ -4296,13 +4295,11 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -4738,22 +4735,6 @@
         {
           "_postman_id": "9f6da68f-7cd6-ed06-f860-4aa5d29745b3",
           "name": "Retrieve Data",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains collections\"] = responseBody.has(\"collections\");",
-                  "tests[\"Response Body Contains clientId\"] = responseBody.has(\"clientId\");"
-                ]
-              }
-            }
-          ],
           "request": {
             "url": {
               "raw": "{{ServerUrl}}/dcube/search/{{DatasourceId}}/select?wt=json&q=*:*&rows=10",
@@ -4771,20 +4752,17 @@
                 {
                   "key": "wt",
                   "value": "json",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "q",
                   "value": "*:*",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "rows",
                   "value": "10",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
               ],
               "variable": []
@@ -4793,13 +4771,11 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
