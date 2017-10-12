@@ -40996,88 +40996,6 @@
           },
           "response": [
             {
-              "id": "0839554a-f3cc-09a4-4b1b-a6a1bbc7982b",
-              "name": "MediaAgent for Library",
-              "originalRequest": {
-                "url": {
-                  "raw": "{{ServerUrl}}/MediaAgentForLibrary?LibraryId=2",
-                  "auth": {},
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "MediaAgentForLibrary"
-                  ],
-                  "query": [
-                    {
-                      "key": "LibraryId",
-                      "value": "2",
-                      "equals": true,
-                      "description": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "_postman_previewtype": "text",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "294"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/xml; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Wed, 14 Jun 2017 07:52:59 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "82",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetMediaAgentListWCResp><mediaAgentList description=\"\" libraryType=\"0\" mediaAgentId=\"9\" mediaAgentName=\"firewalltestma\" osVersion=\"Windows Server 2012 R2 Datacenter\" platform=\"WinX64\" status=\"Ready\"/></EVGui_GetMediaAgentListWCResp>"
-            },
-            {
               "id": "b2201ad1-4937-b69d-da2c-f3f55ed13bce",
               "name": "MediaAgent for Library",
               "originalRequest": {
@@ -42926,7 +42844,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body contains processinginstructioninfo\"] = responseBody.has(\"processinginstructioninfo\");"
                 ]
               }
             }
@@ -42936,14 +42855,14 @@
             "method": "DELETE",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
