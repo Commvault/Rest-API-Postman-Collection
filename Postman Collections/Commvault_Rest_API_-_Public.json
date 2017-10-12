@@ -5531,36 +5531,17 @@
         {
           "_postman_id": "16da7498-5ec2-8ebd-427b-72f4d8a6982a",
           "name": "View Registered CommServe Databases",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body Contains commcellList\"] = responseBody.has(\"commcellList\");",
-                  "tests[\"Response Body Contains errors\"] = responseBody.has(\"errors\");",
-                  ""
-                ]
-              }
-            }
-          ],
           "request": {
             "url": "{{ServerUrl}}/dcube/getcommcellinfo",
             "method": "GET",
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}",
-                "description": ""
+                "value": "{{Accept}}"
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
