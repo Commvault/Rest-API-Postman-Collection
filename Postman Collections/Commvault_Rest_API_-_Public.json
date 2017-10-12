@@ -4933,6 +4933,22 @@
         {
           "_postman_id": "89bd756d-a2a1-014e-9ca3-9e79b87d931d",
           "name": "View Data Sources and Properties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body Contains collections\"] = responseBody.has(\"collections\");",
+                  "tests[\"Response Body Contains clientId\"] = responseBody.has(\"clientId\");"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": {
               "raw": "{{ServerUrl}}/dcube/GetDataSources?datasourceId={{DatasourceId}}&type={{DatasourceType}}&summary=0",
@@ -4948,17 +4964,20 @@
                 {
                   "key": "datasourceId",
                   "value": "{{DatasourceId}}",
-                  "equals": true
+                  "equals": true,
+                  "description": ""
                 },
                 {
                   "key": "type",
                   "value": "{{DatasourceType}}",
-                  "equals": true
+                  "equals": true,
+                  "description": ""
                 },
                 {
                   "key": "summary",
                   "value": "0",
-                  "equals": true
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -4967,11 +4986,13 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -5103,17 +5124,35 @@
         {
           "_postman_id": "12ac1f9d-b230-d27d-b986-90ca77422d88",
           "name": "View Crawling Status",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body Contains status\"] = responseBody.has(\"status\");",
+                  ""
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{ServerUrl}}/dcube/GetStatus/{{DatasourceId}}",
             "method": "GET",
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
