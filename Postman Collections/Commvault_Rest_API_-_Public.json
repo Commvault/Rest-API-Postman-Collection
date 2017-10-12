@@ -5664,17 +5664,30 @@
         {
           "_postman_id": "beea7082-a31b-db8d-6e48-fd8f8c8dd61c",
           "name": "Delete a Data Source",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "{{ServerUrl}}/dcube/deleteDataSource/{{DatasourceId}}",
             "method": "POST",
             "header": [
               {
                 "key": "Accept",
-                "value": "application/xml"
+                "value": "application/xml",
+                "description": ""
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
