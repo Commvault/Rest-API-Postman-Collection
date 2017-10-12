@@ -30568,9 +30568,6 @@
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
                   "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
-                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
-                  "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;",
                   ""
                 ]
               }
@@ -30581,19 +30578,19 @@
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Content-Type",
-                "value": "application/xml",
-                "description": ""
+                "value": "application/xml"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -30826,10 +30823,10 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
-                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");",
+                  "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");",
                   ""
                 ]
@@ -30841,14 +30838,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
@@ -30954,13 +30951,12 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
                   "",
                   "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
-                  "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");",
-                  "tests[\"entityGUID Validation\"] = jsonData.shares.syncWebFolderName === postman.getEnvironmentVariable(\"shareId\");"
+                  ""
                 ]
               }
             }
@@ -30978,10 +30974,10 @@
               ],
               "query": [
                 {
-                  "key": "shareId",
-                  "value": "{{shareId}}",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "shareId",
+                  "value": "{{shareId}}"
                 }
               ],
               "variable": []
@@ -30989,14 +30985,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
