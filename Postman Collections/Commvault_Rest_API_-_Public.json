@@ -27592,7 +27592,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "postman.setEnvironmentVariable(\"PUBLICSHAREFILE_GUID\", jsonData.fileGUID);",
-                  ""
+                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
                 ]
               }
             }
@@ -27614,10 +27614,10 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "uploadType",
-                  "value": "fullFile"
+                  "value": "fullFile",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -27625,34 +27625,34 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileName",
-                "value": "{{FileName1}}"
+                "value": "{{FileName1}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileSize",
-                "value": "{{FileSize}}"
+                "value": "{{FileSize}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "ParentFolderPath",
-                "value": "{{ShareParentFolderPath}}"
+                "value": "{{ShareParentFolderPath}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileModifiedtime",
-                "value": "{{FileModifiedtime}}"
+                "value": "{{FileModifiedtime}}",
+                "description": ""
               }
             ],
             "body": {
