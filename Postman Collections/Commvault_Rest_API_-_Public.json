@@ -19479,7 +19479,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -19521,7 +19521,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "tests[\"errorCode is 0\"] = jsonData.errorResp.errorCode === 0;"
                 ]
               }
@@ -19643,7 +19643,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "tests[\"errorCode is 0\"] = jsonData.errorResp.errorCode === 0;"
                 ]
               }
@@ -19775,7 +19775,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -19896,7 +19896,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "tests[\"errorCode is 0\"] = jsonData.errorResp.errorCode === 0;"
                 ]
               }
@@ -20018,7 +20018,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
                 ]
               }
             }
@@ -20881,11 +20881,15 @@
               "query": [
                 {
                   "key": "path",
-                  "value": "C:\\netstat.txt"
+                  "value": "C:\\netstat.txt",
+                  "equals": true,
+                  "description": ""
                 },
                 {
                   "key": "shareId",
-                  "value": "703241"
+                  "value": "703241",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -20928,11 +20932,15 @@
                   "query": [
                     {
                       "key": "path",
-                      "value": "C:\\netstat.txt"
+                      "value": "C:\\netstat.txt",
+                      "equals": true,
+                      "description": ""
                     },
                     {
                       "key": "shareId",
-                      "value": "703241"
+                      "value": "703241",
+                      "equals": true,
+                      "description": ""
                     }
                   ],
                   "variable": []
