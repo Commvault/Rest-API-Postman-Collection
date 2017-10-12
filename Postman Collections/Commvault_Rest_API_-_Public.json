@@ -14241,7 +14241,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
                   "",
@@ -14366,7 +14366,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;"
                 ]
               }
             },
