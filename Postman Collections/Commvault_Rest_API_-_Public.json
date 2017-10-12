@@ -4738,6 +4738,21 @@
         {
           "_postman_id": "9f6da68f-7cd6-ed06-f860-4aa5d29745b3",
           "name": "Retrieve Data",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body Contains responseHeader\"] = responseBody.has(\"responseHeader\");",
+                  "tests[\"Response Body Contains response\"] = responseBody.has(\"response\");"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": {
               "raw": "{{ServerUrl}}/dcube/search/{{DatasourceId}}/select?wt=json&q=*:*&rows=10",
@@ -4755,17 +4770,20 @@
                 {
                   "key": "wt",
                   "value": "json",
-                  "equals": true
+                  "equals": true,
+                  "description": ""
                 },
                 {
                   "key": "q",
                   "value": "*:*",
-                  "equals": true
+                  "equals": true,
+                  "description": ""
                 },
                 {
                   "key": "rows",
                   "value": "10",
-                  "equals": true
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -4774,11 +4792,13 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "{{Accept}}",
+                "description": ""
               },
               {
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
