@@ -28523,7 +28523,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "",
                   "tests[\"Response Body contains Demo File Content\"] = responseBody.has(\"Demo File Content\");"
                 ]
               }
@@ -28545,10 +28546,10 @@
               ],
               "query": [
                 {
-                  "key": "path",
-                  "value": "\\DemoFile1.doc",
+                  "description": "",
                   "equals": true,
-                  "description": ""
+                  "key": "path",
+                  "value": "\\DemoFile1.doc"
                 }
               ],
               "variable": []
@@ -28556,14 +28557,14 @@
             "method": "GET",
             "header": [
               {
+                "description": "",
                 "key": "Accept",
-                "value": "text/html",
-                "description": ""
+                "value": "text/html"
               },
               {
+                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}",
-                "description": ""
+                "value": "{{TOKEN}}"
               }
             ],
             "body": {
