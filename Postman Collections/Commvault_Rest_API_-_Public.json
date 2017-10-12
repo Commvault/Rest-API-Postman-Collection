@@ -15229,7 +15229,9 @@
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "postman.setEnvironmentVariable(\"SHAREFOLDER3_GUID\", jsonData.fileResource.GUID);"
+                  "postman.setEnvironmentVariable(\"SHAREFOLDER3_GUID\", jsonData.fileResource.GUID);",
+                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;",
+                  "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
                 ]
               }
             }
@@ -15239,19 +15241,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
