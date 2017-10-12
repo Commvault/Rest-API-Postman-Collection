@@ -18711,7 +18711,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200"
+                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"errorCode is 200\"] = jsonData.errorResp.errorCode === 200;"
                 ]
               }
             }
