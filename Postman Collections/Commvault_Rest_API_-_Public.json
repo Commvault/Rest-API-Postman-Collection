@@ -47706,7 +47706,7 @@
                       "var jsonData = JSON.parse(responseBody);",
                       "",
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "",
+                      "tests[\"Response Body contains errorMessage\"] = responseBody.has(\"errorMessage\");",
                       "tests[\"Validating error code\"] = jsonData.errorCode === 0;"
                     ]
                   }
