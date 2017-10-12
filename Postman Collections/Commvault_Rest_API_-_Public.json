@@ -14786,7 +14786,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"shareId\", jsonData.shareInfo.shareFolder.syncWebFolderId);",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
@@ -14928,7 +14928,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
                   "",
@@ -15057,7 +15057,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
                   "",
