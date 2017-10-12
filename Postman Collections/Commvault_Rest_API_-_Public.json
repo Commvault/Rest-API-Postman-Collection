@@ -16156,7 +16156,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
@@ -16298,7 +16298,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "",
-                  "tests[\"Successful POST request\"] = responseCode.code === 200",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "",
                   "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"DemoShareFolder\");",
                   "",
