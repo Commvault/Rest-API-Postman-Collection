@@ -31855,7 +31855,9 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");"
+                  "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
                 ]
               }
             }
@@ -31877,16 +31879,16 @@
               ],
               "query": [
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "uploadType",
-                  "value": "chunkedFile"
+                  "value": "chunkedFile",
+                  "equals": true,
+                  "description": ""
                 },
                 {
-                  "description": "",
-                  "equals": true,
                   "key": "requestId",
-                  "value": "{{requestId}}"
+                  "value": "{{requestId}}",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": []
@@ -31894,24 +31896,24 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Name",
-                "value": "{{FileName2}}"
+                "value": "{{FileName2}}",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "FileEOF",
-                "value": "1"
+                "value": "1",
+                "description": ""
               }
             ],
             "body": {
