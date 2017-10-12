@@ -22550,7 +22550,9 @@
                   "",
                   "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                   "",
-                  "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");"
+                  "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
+                  "tests[\"Response Body contains folder fileResource\"] = responseBody.has(\"fileResource\");",
+                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                 ]
               }
             }
@@ -22560,19 +22562,19 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
@@ -22681,12 +22683,14 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 202;",
+                  "tests[\"Successful POST request\"] = responseCode.code === 200;",
                   "var jsonData = JSON.parse(responseBody);",
                   "",
                   "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
                   "",
-                  "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");"
+                  "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
+                  "",
+                  "tests[\"entityGUID Validation\"] = jsonData.fileResource.GUID === postman.getEnvironmentVariable(\"FOLDER_GUID\");"
                 ]
               }
             }
@@ -22696,14 +22700,14 @@
             "method": "GET",
             "header": [
               {
-                "description": "",
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
-                "description": "",
                 "key": "Authtoken",
-                "value": "{{TOKEN}}"
+                "value": "{{TOKEN}}",
+                "description": ""
               }
             ],
             "body": {
