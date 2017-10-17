@@ -11172,7 +11172,230 @@
             },
             "description": "<h2>Description</h2> \nThis operation retrieves the details of a discussion for a file or folder in Edge Drive, based on the GUID of the file or folder.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_discussion.htm)"
           },
-          "response": []
+          "response": [
+            {
+              "id": "7089396d-de13-b2d7-a24c-969763959397",
+              "name": "View Details of a Discussion in Desc Order",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}?depth=0",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "drive",
+                    "file",
+                    "{{FILE1_GUID}}",
+                    "Discussion",
+                    "{{discussionId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "depth",
+                      "value": "0",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml",
+                    "description": ""
+                  },
+                  {
+                    "key": "SORT-DIRECTION",
+                    "value": "0",
+                    "description": ""
+                  },
+                  {
+                    "key": "PAGE_SIZE",
+                    "value": "20",
+                    "description": ""
+                  },
+                  {
+                    "key": "NBREPLIES",
+                    "value": "10",
+                    "description": ""
+                  },
+                  {
+                    "key": "LAST-COMMENT-ID",
+                    "value": "100",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1633",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 21 Sep 2017 18:05:27 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "31",
+              "body": "{\r\"discussion\":{\r\"entityType\":136,\"discussionId\":4,\"created\":1506016677,\"entityGUID\":\"aafc531bebe5414692367973b9f7a89f\",\"modified\":1506016677,\"nbComments\":7,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016927,\"commentId\":24,\"modified\":1506016927,\"content\":\"New discussion3\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016845,\"commentId\":23,\"modified\":1506016845,\"content\":\"New comment4\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016716,\"commentId\":22,\"modified\":1506016716,\"content\":\"New discussion2\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016711,\"commentId\":21,\"modified\":1506016711,\"content\":\"New comment3\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016706,\"commentId\":20,\"modified\":1506016706,\"content\":\"New comment2\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016694,\"commentId\":19,\"modified\":1506016694,\"content\":\"New comment\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016677,\"commentId\":18,\"modified\":1506016677,\"content\":\"New discussion\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r}\r}"
+            },
+            {
+              "id": "8a05083d-1bc2-88e3-e795-78b02bbe582b",
+              "name": "View Details of a Discussion in Asc Order",
+              "originalRequest": {
+                "url": {
+                  "raw": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}?depth=0",
+                  "auth": {},
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "drive",
+                    "file",
+                    "{{FILE1_GUID}}",
+                    "Discussion",
+                    "{{discussionId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "depth",
+                      "value": "0",
+                      "equals": true,
+                      "description": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml",
+                    "description": ""
+                  },
+                  {
+                    "key": "SORT-DIRECTION",
+                    "value": "0",
+                    "description": ""
+                  },
+                  {
+                    "key": "PAGE_SIZE",
+                    "value": "20",
+                    "description": ""
+                  },
+                  {
+                    "key": "NBREPLIES",
+                    "value": "10",
+                    "description": ""
+                  },
+                  {
+                    "key": "LAST-COMMENT-ID",
+                    "value": "0",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "_postman_previewtype": "text",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1633",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 21 Sep 2017 18:02:49 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "40",
+              "body": "{\r\"discussion\":{\r\"entityType\":136,\"discussionId\":4,\"created\":1506016677,\"entityGUID\":\"aafc531bebe5414692367973b9f7a89f\",\"modified\":1506016677,\"nbComments\":7,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016677,\"commentId\":18,\"modified\":1506016677,\"content\":\"New discussion\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016694,\"commentId\":19,\"modified\":1506016694,\"content\":\"New comment\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016706,\"commentId\":20,\"modified\":1506016706,\"content\":\"New comment2\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016711,\"commentId\":21,\"modified\":1506016711,\"content\":\"New comment3\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016716,\"commentId\":22,\"modified\":1506016716,\"content\":\"New discussion2\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016845,\"commentId\":23,\"modified\":1506016845,\"content\":\"New comment4\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":4,\"created\":1506016927,\"commentId\":24,\"modified\":1506016927,\"content\":\"New discussion3\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r]\r}\r}"
+            }
+          ]
         },
         {
           "_postman_id": "312c5269-a40a-3a2c-7fc5-14882a35edfd",
@@ -11299,6 +11522,100 @@
               "body": "User logged out"
             }
           ]
+        },
+        {
+          "_postman_id": "62936167-f067-895a-1318-35a784be675b",
+          "name": "View Details of a Discussion Id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains entityGUID\"] = responseBody.has(\"entityGUID\");",
+                  "",
+                  "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                  "tests[\"Response Body Contains comments\"] = responseBody.has(\"comments\");",
+                  "",
+                  "tests[\"entityGUID Validation\"] = jsonData.discussion.entityGUID === postman.getEnvironmentVariable(\"FILE1_GUID\");",
+                  "tests[\"discussionId Validation\"] = jsonData.discussion.discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}?depth=1",
+              "auth": {},
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "drive",
+                "file",
+                "{{FILE1_GUID}}",
+                "Discussion",
+                "{{discussionId}}"
+              ],
+              "query": [
+                {
+                  "key": "depth",
+                  "value": "1",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}",
+                "description": ""
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml",
+                "description": ""
+              },
+              {
+                "key": "SORT-DIRECTION",
+                "value": "0",
+                "description": ""
+              },
+              {
+                "key": "PAGE_SIZE",
+                "value": "20",
+                "description": ""
+              },
+              {
+                "key": "NBREPLIES",
+                "value": "10",
+                "description": ""
+              },
+              {
+                "key": "LAST-COMMENT-ID",
+                "value": "100",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+            },
+            "description": "<h2>Description</h2> \nThis operation retrieves the properties of a discussion for a file or folder in Edge Drive, based on the discussion ID.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drive_discussion_by_id.htm)"
+          },
+          "response": []
         }
       ]
     },
