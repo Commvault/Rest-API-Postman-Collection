@@ -54419,7 +54419,7 @@
                 }
               ],
               "request": {
-                "url": "{{ServerUrl}}/Backupset/{{backupsetId}}",
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "method": "POST",
                 "header": [
                   {
@@ -54440,7 +54440,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
                 },
                 "description": "<h2>Description</h2>\nThis operation Updates Plan to a Subclient."
               },
