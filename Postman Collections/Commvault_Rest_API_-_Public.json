@@ -54280,7 +54280,7 @@
             },
             {
               "_postman_id": "9ab78f99-eb48-f54a-649e-e9bdf1f9a698",
-              "name": "Plan Security copy",
+              "name": "Plan BackupSet",
               "event": [
                 {
                   "listen": "test",
@@ -54322,7 +54322,7 @@
                   "mode": "raw",
                   "raw": "{\n  \"entityAssociated\": {\n    \"entity\": [\n      {\n        \"entityType\": 158,\n        \"_type_\": 150,\n        \"entityId\": {{PlanId}}\n      }\n    ]\n  },\n  \"securityAssociations\": {\n    \"associationsOperationType\": 1,\n    \"associations\": [\n      {\n        \"userOrGroup\": [\n          {\n            \"userId\": 0,\n            \"_type_\": 13,\n            \"userName\": \"hkuser\"\n          }\n        ],\n        \"properties\": {\n          \"role\": {\n            \"_type_\": 120,\n            \"roleId\": 3,\n            \"roleName\": \"View\"\n          }\n        }\n      }\n    ]\n  }\n}"
                 },
-                "description": "<h2>Description</h2>\nThis operation Updates Security association to a Plan."
+                "description": "<h2>Description</h2>\nThis operation Updates Plan to a BackupSet."
               },
               "response": [
                 {
