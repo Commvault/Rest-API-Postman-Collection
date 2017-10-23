@@ -54322,7 +54322,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
                 },
-                "description": "<h2>Description</h2>\nThis operation Updates Plan to a BackupSet."
+                "description": "<h2>Description</h2>\nThis operation associates Plan to a BackupSet."
               },
               "response": [
                 {
