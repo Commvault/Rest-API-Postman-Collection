@@ -53501,7 +53501,7 @@
             },
             {
               "_postman_id": "95d20a4f-d4da-cd63-e8a5-c445ba65690a",
-              "name": "Plan Users copy",
+              "name": "Plan Clients",
               "event": [
                 {
                   "listen": "test",
@@ -53548,7 +53548,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"userOperationType\": 1,\n\t\"users\": [\n\t\t{\n\t\t\t\"sendInvite\": true,\n\t\t\t\"user\": {\n\t\t\t\t\"userName\": \"hkuser\",\n\t\t\t\t\"userId\": 21\n\t\t\t}\n\t\t}\n\t]\n}"
                 },
-                "description": "<h2>Description</h2>\nThis operation updates associations for users and user groups to a plan."
+                "description": "<h2>Description</h2>\nThis operation updates associations for client to a plan."
               },
               "response": [
                 {
