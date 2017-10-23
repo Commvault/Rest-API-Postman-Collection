@@ -54299,7 +54299,7 @@
                 }
               ],
               "request": {
-                "url": "{{ServerUrl}}/Security",
+                "url": "{{ServerUrl}}/Backupset/{{backupsetId}}",
                 "method": "POST",
                 "header": [
                   {
@@ -54320,7 +54320,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"entityAssociated\": {\n    \"entity\": [\n      {\n        \"entityType\": 158,\n        \"_type_\": 150,\n        \"entityId\": {{PlanId}}\n      }\n    ]\n  },\n  \"securityAssociations\": {\n    \"associationsOperationType\": 1,\n    \"associations\": [\n      {\n        \"userOrGroup\": [\n          {\n            \"userId\": 0,\n            \"_type_\": 13,\n            \"userName\": \"hkuser\"\n          }\n        ],\n        \"properties\": {\n          \"role\": {\n            \"_type_\": 120,\n            \"roleId\": 3,\n            \"roleName\": \"View\"\n          }\n        }\n      }\n    ]\n  }\n}"
+                  "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
                 },
                 "description": "<h2>Description</h2>\nThis operation Updates Plan to a BackupSet."
               },
