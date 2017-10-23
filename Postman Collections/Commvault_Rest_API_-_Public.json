@@ -54400,7 +54400,7 @@
             },
             {
               "_postman_id": "c1c33ce8-1d62-8444-7fa3-9db992eb7207",
-              "name": "Plan BackupSet copy",
+              "name": "Plan Subclient",
               "event": [
                 {
                   "listen": "test",
@@ -54442,7 +54442,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
                 },
-                "description": "<h2>Description</h2>\nThis operation Updates Plan to a BackupSet."
+                "description": "<h2>Description</h2>\nThis operation Updates Plan to a Subclient."
               },
               "response": [
                 {
