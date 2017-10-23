@@ -54399,6 +54399,126 @@
               ]
             },
             {
+              "_postman_id": "c1c33ce8-1d62-8444-7fa3-9db992eb7207",
+              "name": "Plan BackupSet copy",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "",
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;",
+                      "tests[\"Response Body contains processinginstructioninfo\"] = responseBody.has(\"processinginstructioninfo\");",
+                      "tests[\"Response Body contains response\"] = responseBody.has(\"response\");",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "url": "{{ServerUrl}}/Backupset/{{backupsetId}}",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
+                },
+                "description": "<h2>Description</h2>\nThis operation Updates Plan to a BackupSet."
+              },
+              "response": [
+                {
+                  "id": "48041eb8-abb7-f57c-633f-30bff47f67da",
+                  "name": "Associates Plan to a Backupset",
+                  "originalRequest": {
+                    "url": "{{ServerUrl}}/Backupset/{{backupsetId}}",
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}",
+                        "disabled": false,
+                        "description": ""
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}",
+                        "disabled": false,
+                        "description": ""
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "disabled": false,
+                        "description": ""
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "_postman_previewtype": "text",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "281",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Mon, 23 Oct 2017 19:13:28 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "515",
+                  "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"applicationId\":33,\"backupsetId\":7,\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":4,\"_type_\":0,\"consumeLicense\":true\r}\r}\r]\r}"
+                }
+              ]
+            },
+            {
               "_postman_id": "434af55f-daac-8e7b-b4dc-f126a87c1992",
               "name": "Plan Access Policies",
               "event": [
@@ -56208,126 +56328,6 @@
                   ],
                   "responseTime": "70",
                   "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "c1c33ce8-1d62-8444-7fa3-9db992eb7207",
-              "name": "Plan BackupSet copy",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "",
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;",
-                      "tests[\"Response Body contains processinginstructioninfo\"] = responseBody.has(\"processinginstructioninfo\");",
-                      "tests[\"Response Body contains response\"] = responseBody.has(\"response\");",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "url": "{{ServerUrl}}/Backupset/{{backupsetId}}",
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "description": ""
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "description": ""
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
-                },
-                "description": "<h2>Description</h2>\nThis operation Updates Plan to a BackupSet."
-              },
-              "response": [
-                {
-                  "id": "48041eb8-abb7-f57c-633f-30bff47f67da",
-                  "name": "Associates Plan to a Backupset",
-                  "originalRequest": {
-                    "url": "{{ServerUrl}}/Backupset/{{backupsetId}}",
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}",
-                        "disabled": false,
-                        "description": ""
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}",
-                        "disabled": false,
-                        "description": ""
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json",
-                        "disabled": false,
-                        "description": ""
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "_postman_previewtype": "text",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "281",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Mon, 23 Oct 2017 19:13:28 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": "515",
-                  "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"applicationId\":33,\"backupsetId\":7,\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":4,\"_type_\":0,\"consumeLicense\":true\r}\r}\r]\r}"
                 }
               ]
             }
