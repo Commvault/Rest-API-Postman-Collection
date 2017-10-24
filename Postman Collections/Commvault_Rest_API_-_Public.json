@@ -10223,13 +10223,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "7ee9c1a1-9ced-72fd-c908-fab4a57f10d1",
-          "name": "File and Folder Operations",
-          "description": "",
-          "item": [],
-          "_postman_isSubFolder": true
-        },
-        {
           "_postman_id": "e5506c48-b5cd-ff30-dd2c-37cb9f40c623",
           "name": "Environment Setup",
           "event": [
