@@ -28369,6 +28369,12 @@
       ]
     },
     {
+      "_postman_id": "af5b393d-8b1a-d86e-4ed0-5113f9d92a9f",
+      "name": "ObjectStore Operations",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "e0d7dd8d-4ca5-b68e-d68a-ef54204e1f12",
       "name": "ObjectStore - File and Folder Operations",
       "description": "",
