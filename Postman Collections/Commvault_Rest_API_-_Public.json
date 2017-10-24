@@ -53514,8 +53514,7 @@
                       "",
                       "tests[\"Response Body contains operationStatus\"] = responseBody.has(\"operationStatus\");",
                       "",
-                      "tests[\"Validating error code\"] = jsonData.operationStatus.errorCode === 0;",
-                      ""
+                      "tests[\"Validating error code\"] = jsonData.operationStatus.errorCode === 0;"
                     ]
                   }
                 }
