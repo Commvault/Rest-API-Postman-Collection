@@ -10218,6 +10218,12 @@
       ]
     },
     {
+      "_postman_id": "b43b2f5d-1336-d7d2-e91d-7bc0a7da8213",
+      "name": "Edge Drive",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "d85122cb-673d-1ad3-2453-7ab1d3962883",
       "name": "Edge Drive - File and Folder Operations",
       "description": "",
@@ -57268,12 +57274,6 @@
           "_postman_isSubFolder": true
         }
       ]
-    },
-    {
-      "_postman_id": "b43b2f5d-1336-d7d2-e91d-7bc0a7da8213",
-      "name": "Edge Drive",
-      "description": "",
-      "item": []
     }
   ]
 }
