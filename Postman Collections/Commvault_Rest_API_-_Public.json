@@ -17043,7 +17043,7 @@
         },
         {
           "_postman_id": "e036173a-ecc6-446b-b16b-32014eb48c66",
-          "name": "Edge Drive - File and Folder Operations for Shares",
+          "name": "File and Folder Operations for Shares",
           "description": "",
           "item": [
             {
@@ -57278,6 +57278,12 @@
           "_postman_isSubFolder": true
         }
       ]
+    },
+    {
+      "_postman_id": "2c75288f-7765-7dda-ff28-d5d5ef31b6ce",
+      "name": "Discussion Operations",
+      "description": "",
+      "item": []
     }
   ]
 }
