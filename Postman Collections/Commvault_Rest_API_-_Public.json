@@ -5919,7 +5919,7 @@
       "item": [
         {
           "_postman_id": "24b2f13f-ba2c-529d-7abc-c743f7487051",
-          "name": "On a Share",
+          "name": "Discussion Operations on a Share",
           "description": "",
           "item": [
             {
@@ -8836,7 +8836,7 @@
         },
         {
           "_postman_id": "274ecdd9-0fbe-48fb-26b9-6634b64a3089",
-          "name": "On a Client Computer",
+          "name": "Discussion Operations on a Client Computer",
           "description": "",
           "item": [
             {
@@ -28367,12 +28367,6 @@
           ]
         }
       ]
-    },
-    {
-      "_postman_id": "af5b393d-8b1a-d86e-4ed0-5113f9d92a9f",
-      "name": "ObjectStore Operations",
-      "description": "",
-      "item": []
     },
     {
       "_postman_id": "e0d7dd8d-4ca5-b68e-d68a-ef54204e1f12",
