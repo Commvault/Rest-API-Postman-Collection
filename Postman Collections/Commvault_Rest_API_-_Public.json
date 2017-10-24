@@ -53512,20 +53512,16 @@
                       "",
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
-                      "tests[\"Response Body contains securityAssociations\"] = responseBody.has(\"securityAssociations\");",
+                      "tests[\"Response Body contains operationStatus\"] = responseBody.has(\"operationStatus\");",
                       "",
-                      "tests[\"Response Body contains plan\"] = responseBody.has(\"plan\");",
-                      "",
-                      "tests[\"Response Body contains planOwner\"] = responseBody.has(\"planOwner\");",
-                      "",
-                      "tests[\"Validating error code\"] = jsonData.errors[0].status.errorCode === 0;",
+                      "tests[\"Validating error code\"] = jsonData.operationStatus.errorCode === 0;",
                       ""
                     ]
                   }
                 }
               ],
               "request": {
-                "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/Users",
+                "url": "{{ServerUrl}}/Plan/{{PlanId}}/Clients",
                 "method": "PUT",
                 "header": [
                   {
@@ -53546,7 +53542,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"userOperationType\": 1,\n\t\"users\": [\n\t\t{\n\t\t\t\"sendInvite\": true,\n\t\t\t\"user\": {\n\t\t\t\t\"userName\": \"hkuser\",\n\t\t\t\t\"userId\": 21\n\t\t\t}\n\t\t}\n\t]\n}"
+                  "raw": "{\n\t\"clients\": [\n\t\t{\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t],\n\t\"additonalTasks\": [\n\t\t{\n\t\t\t\"value\": \"2\",\n\t\t\t\"key\": \"ArrayId\"\n\t\t},\n\t\t{\n\t\t\t\"value\": \"0\",\n\t\t\t\"key\": \"ProcessSubClients\"\n\t\t},\n\t\t{\n\t\t\t\"value\": \"0\",\n\t\t\t\"key\": \"ProcessDefaultSubClientsOnly\"\n\t\t},\n\t\t{\n\t\t\t\"value\": \"0\",\n\t\t\t\"key\": \"IncludeAllAppTypes\"\n\t\t},\n\t\t{\n\t\t\t\"value\": \"0\",\n\t\t\t\"key\": \"AppIds\",\n\t\t\t\"parameters\": [\n\t\t\t\t{\n\t\t\t\t\t\"value\": \"106\",\n\t\t\t\t\t\"key\": \"AppIds\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"value\": \"0\",\n\t\t\t\"key\": \"IncludeSubClientIds\",\n\t\t\t\"parameters\": [\n\t\t\t\t{\n\t\t\t\t\t\"value\": \"25\",\n\t\t\t\t\t\"key\": \"SubClientId\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"value\": \"26\",\n\t\t\t\t\t\"key\": \"SubClientId\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"value\": \"27\",\n\t\t\t\t\t\"key\": \"SubClientId\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t],\n\t\"plan\": {\n\t\t\"planId\": {{PlanId}}\n\t}\n}"
                 },
                 "description": "<h2>Description</h2>\nThis operation updates associations for client to a plan."
               },
