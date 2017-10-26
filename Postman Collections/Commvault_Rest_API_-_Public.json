@@ -1704,7 +1704,7 @@
       "item": [
         {
           "_postman_id": "bc084373-62e6-c053-df0b-81ebf428ce50",
-          "name": "Logind",
+          "name": "Login",
           "event": [
             {
               "listen": "test",
