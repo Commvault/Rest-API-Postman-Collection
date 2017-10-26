@@ -1704,7 +1704,7 @@
       "item": [
         {
           "_postman_id": "bc084373-62e6-c053-df0b-81ebf428ce50",
-          "name": "Login",
+          "name": "Logind",
           "event": [
             {
               "listen": "test",
@@ -33434,7 +33434,7 @@
         },
         {
           "_postman_id": "cef27d3d-0b63-b741-bf83-4b55e202b1cb",
-          "name": "ObjectStore - File and Folder Operations for Shares",
+          "name": "File and Folder Operations for Shares",
           "description": "",
           "item": [
             {
@@ -39192,7 +39192,7 @@
         },
         {
           "_postman_id": "0eb0a620-2a54-4689-4f4f-d13fbe496aa3",
-          "name": "ObjectStore - File and Folder Operations for Public Shares",
+          "name": "File and Folder Operations for Public Shares",
           "description": "",
           "item": [
             {
