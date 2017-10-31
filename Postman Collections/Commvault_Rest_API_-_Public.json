@@ -37267,7 +37267,7 @@
                       "var jsonData = JSON.parse(responseBody);",
                       "",
                       "postman.setEnvironmentVariable(\"PUBLICSHAREFILE_GUID\", jsonData.fileGUID);",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                      "tests[\"Validating error code\"] = jsonData.errorCode === 200;"
                     ]
                   }
                 }
