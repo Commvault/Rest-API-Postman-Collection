@@ -37134,7 +37134,7 @@
                       "postman.setEnvironmentVariable(\"shareId\", jsonData.shareInfo.shareFolder.syncWebFolderId);",
                       "tests[\"Response Body contains resp\"] = responseBody.has(\"resp\");",
                       "tests[\"Response Body contains shareInfo\"] = responseBody.has(\"shareInfo\");",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Validating error code\"] = jsonData.resp.errorCode === 0;"
                     ]
                   }
                 }
