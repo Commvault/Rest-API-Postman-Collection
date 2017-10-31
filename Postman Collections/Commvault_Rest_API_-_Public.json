@@ -16468,7 +16468,6 @@
                       "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
                       "tests[\"Response Body contains folder fileResource\"] = responseBody.has(\"fileResource\");",
                       "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
-                      "tests[\"entityGUID Validation\"] = jsonData.fileResource.GUID === postman.getEnvironmentVariable(\"RootGuid\");",
                       ""
                     ]
                   }
