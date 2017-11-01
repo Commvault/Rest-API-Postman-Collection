@@ -42493,7 +42493,7 @@
               "mode": "raw",
               "raw": "AgentGroupId=115"
             },
-            "url": "{{ServerUrl}}/Task/523/Operation/3",
+            "url": "{{ServerUrl}}/Task/151/Entity/Add",
             "description": "<h2> Description </h2>\nThis operation adds an agent or agent group to the schedule policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_schedule_policy_agent_add.htm)"
           },
           "response": [
