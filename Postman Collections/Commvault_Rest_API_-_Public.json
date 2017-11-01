@@ -13604,8 +13604,7 @@
                       "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                       "",
                       "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");",
-                      "tests[\"Response Body contains fileResources\"] = responseBody.has(\"fileResources\");",
-                      "tests[\"entityGUID Validation\"] = jsonData.fileResources[0].GUID === postman.getEnvironmentVariable(\"RootGuid\");"
+                      "tests[\"Response Body contains fileResources\"] = responseBody.has(\"fileResources\");"
                     ]
                   }
                 }
@@ -14026,8 +14025,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200"
                     ]
                   }
                 }
