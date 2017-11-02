@@ -28783,8 +28783,7 @@
                       "tests[\"Response Body Contains Custom Property\"] = responseBody.has(\"testproperty1\");",
                       "",
                       "tests[\"Response Body contains Property Value\"] = responseBody.has(\"testvalue1\");",
-                      "",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                      ""
                     ]
                   }
                 }
