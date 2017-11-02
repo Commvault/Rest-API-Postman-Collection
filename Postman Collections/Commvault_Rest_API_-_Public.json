@@ -15426,12 +15426,12 @@
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
                       "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                      "tests[\"discussionId Validation\"] = jsonData.comments[0].discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));",
+                      "",
                       "tests[\"Response Body Contains depth\"] = responseBody.has(\"depth\");",
                       "tests[\"Response Body Contains nbReplies\"] = responseBody.has(\"nbReplies\");",
                       "tests[\"Response Body Contains comments\"] = responseBody.has(\"comments\");",
                       "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");",
-                      "tests[\"commentId Validation\"] = jsonData.comments[0].commentId === parseInt(postman.getEnvironmentVariable(\"commentId\"));",
+                      "",
                       ""
                     ]
                   }
@@ -15617,8 +15617,6 @@
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
                       "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                      "tests[\"discussionId Validation\"] = jsonData.comment.discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));",
-                      "tests[\"commentId Validation\"] = jsonData.comment.commentId === parseInt(postman.getEnvironmentVariable(\"commentId\"));",
                       "",
                       "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");",
                       "",
@@ -16448,7 +16446,6 @@
                       "",
                       "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
                       "tests[\"Response Body contains folder fileResource\"] = responseBody.has(\"fileResource\");",
-                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
                       ""
                     ]
                   }
