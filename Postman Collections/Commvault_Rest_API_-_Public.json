@@ -32861,7 +32861,8 @@
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
                       "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
-                      ""
+                      "",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
                     ]
                   }
                 }
