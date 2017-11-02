@@ -16991,7 +16991,6 @@
                       "var jsonData = JSON.parse(responseBody);",
                       "",
                       "postman.setEnvironmentVariable(\"SHAREFOLDER3_GUID\", jsonData.fileResource.GUID);",
-                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
                       "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
                     ]
                   }
@@ -17125,7 +17124,6 @@
                       "var jsonData = JSON.parse(responseBody);",
                       "",
                       "postman.setEnvironmentVariable(\"SHAREFOLDER2_GUID\", jsonData.fileResource.GUID);",
-                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
                       "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
                     ]
                   }
