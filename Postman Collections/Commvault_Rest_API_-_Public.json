@@ -30218,7 +30218,8 @@
                       "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                       "",
                       "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");"
                     ]
                   }
                 }
@@ -30497,7 +30498,8 @@
                       "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                       "",
                       "tests[\"Response Body contains a File\"] = responseBody.has(\"DemoFile2.doc\");",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");"
                     ]
                   }
                 }
@@ -30770,7 +30772,8 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -30894,7 +30897,8 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -31010,7 +31014,8 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -31126,7 +31131,8 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -31665,7 +31671,10 @@
                       "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                       "",
                       "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");",
+                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
+                      ""
                     ]
                   }
                 }
@@ -31782,7 +31791,8 @@
                       "",
                       "tests[\"Response Body contains syncWebFolderId\"] = responseBody.has(\"syncWebFolderId\");",
                       "",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "//tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"Validating error code\"] = jsonData.resp.errorCode === 0;"
                     ]
                   }
                 }
@@ -32036,7 +32046,8 @@
                       "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
                       "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");",
                       "",
-                      "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");"
+                      "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");",
+                      "tests[\"entityShareId Validation\"] = jsonData.shares.syncWebFolderName === postman.getEnvironmentVariable(\"shareId\");"
                     ]
                   }
                 }
@@ -32189,7 +32200,8 @@
                       "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");",
                       "",
                       "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -32323,7 +32335,8 @@
                       "",
                       "postman.setEnvironmentVariable(\"SHAREFOLDER2_GUID\", jsonData.fileResource.GUID);",
                       "",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -32652,7 +32665,9 @@
                       "",
                       "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
                       "",
-                      "tests[\"Response Body Contains requestId\"] = responseBody.has(\"requestId\");"
+                      "tests[\"Response Body Contains requestId\"] = responseBody.has(\"requestId\");",
+                      "",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -32861,7 +32876,8 @@
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
                       "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
-                      ""
+                      "",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
                     ]
                   }
                 }
@@ -35129,7 +35145,8 @@
                     "type": "text/javascript",
                     "exec": [
                       "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Response Body contains tag\"] = responseBody.has(\"test_tag\");"
+                      "tests[\"Response Body contains tag\"] = responseBody.has(\"test_tag\");",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
                     ]
                   }
                 }
@@ -35410,7 +35427,8 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
                     ]
                   }
                 }
@@ -35534,7 +35552,8 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -35658,7 +35677,8 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
