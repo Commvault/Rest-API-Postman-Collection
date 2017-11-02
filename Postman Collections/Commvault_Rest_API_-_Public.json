@@ -316,9 +316,7 @@
                   "tests[\"Response Body contains AgentProperties\"] = responseBody.has(\"AgentProperties\");",
                   "tests[\"Response Body contains activityControlOptions\"] = responseBody.has(\"activityControlOptions\");",
                   "tests[\"Response Body contains idaEntity\"] = responseBody.has(\"idaEntity\");",
-                  "tests[\"Response Body contains idaActivityControl\"] = responseBody.has(\"idaActivityControl\");",
-                  "",
-                  "tests[\"entityGUID Validation\"] = jsonData.agentProperties[0].clientId === postman.getEnvironmentVariable(\"clientId\");"
+                  "tests[\"Response Body contains idaActivityControl\"] = responseBody.has(\"idaActivityControl\");"
                 ]
               }
             }
@@ -32323,8 +32321,7 @@
                       "",
                       "postman.setEnvironmentVariable(\"SHAREFOLDER2_GUID\", jsonData.fileResource.GUID);",
                       "",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
                     ]
                   }
                 }
@@ -32653,9 +32650,7 @@
                       "",
                       "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
                       "",
-                      "tests[\"Response Body Contains requestId\"] = responseBody.has(\"requestId\");",
-                      "",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Response Body Contains requestId\"] = responseBody.has(\"requestId\");"
                     ]
                   }
                 }
@@ -32864,8 +32859,7 @@
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
                       "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
-                      "",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                      ""
                     ]
                   }
                 }
@@ -35133,8 +35127,7 @@
                     "type": "text/javascript",
                     "exec": [
                       "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Response Body contains tag\"] = responseBody.has(\"test_tag\");",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                      "tests[\"Response Body contains tag\"] = responseBody.has(\"test_tag\");"
                     ]
                   }
                 }
@@ -35415,8 +35408,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -35540,8 +35532,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -35665,8 +35656,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -35790,8 +35780,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -36198,8 +36187,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -36315,8 +36303,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -36556,8 +36543,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -36936,9 +36922,7 @@
                       "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
                       "",
                       "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
-                      "tests[\"entityGUID Validation\"] = jsonData.fileResource.parentGuid === postman.getEnvironmentVariable(\"RootGuid\");",
-                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
                     ]
                   }
                 }
@@ -37072,8 +37056,7 @@
                       "",
                       "postman.setEnvironmentVariable(\"shareId\", jsonData.shareInfo.shareFolder.syncWebFolderId);",
                       "tests[\"Response Body contains resp\"] = responseBody.has(\"resp\");",
-                      "tests[\"Response Body contains shareInfo\"] = responseBody.has(\"shareInfo\");",
-                      "tests[\"Validating error code\"] = jsonData.resp.errorCode === 0;"
+                      "tests[\"Response Body contains shareInfo\"] = responseBody.has(\"shareInfo\");"
                     ]
                   }
                 }
