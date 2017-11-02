@@ -1854,9 +1854,7 @@
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"backupsetId\", jsonData.backupsetProperties[0].backupSetEntity.backupsetId);",
                   "postman.setEnvironmentVariable(\"clientName\", jsonData.backupsetProperties[0].backupSetEntity.clientName);",
-                  "postman.setEnvironmentVariable(\"backupsetName\", jsonData.backupsetProperties[0].backupSetEntity.backupsetName);",
-                  "",
-                  "tests[\"entityGUID Validation\"] = jsonData.backupsetProperties[0].clientId === postman.getEnvironmentVariable(\"clientId\");"
+                  "postman.setEnvironmentVariable(\"backupsetName\", jsonData.backupsetProperties[0].backupSetEntity.backupsetName);"
                 ]
               }
             }
