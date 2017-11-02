@@ -15617,8 +15617,6 @@
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
                       "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                      "tests[\"discussionId Validation\"] = jsonData.comment.discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));",
-                      "tests[\"commentId Validation\"] = jsonData.comment.commentId === parseInt(postman.getEnvironmentVariable(\"commentId\"));",
                       "",
                       "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");",
                       "",
@@ -16448,7 +16446,6 @@
                       "",
                       "tests[\"Response Body contains folder name\"] = responseBody.has(\"name\");",
                       "tests[\"Response Body contains folder fileResource\"] = responseBody.has(\"fileResource\");",
-                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
                       ""
                     ]
                   }
@@ -16582,8 +16579,6 @@
                       "tests[\"Response Body contains syncWebFolderId\"] = responseBody.has(\"syncWebFolderId\");",
                       "tests[\"Response Body contains shareInfo\"] = responseBody.has(\"shareInfo\");",
                       "tests[\"Response Body contains resp\"] = responseBody.has(\"resp\");",
-                      "",
-                      "tests[\"Validating error code\"] = jsonData.resp.errorCode === 0;",
                       ""
                     ]
                   }
@@ -16996,7 +16991,6 @@
                       "var jsonData = JSON.parse(responseBody);",
                       "",
                       "postman.setEnvironmentVariable(\"SHAREFOLDER3_GUID\", jsonData.fileResource.GUID);",
-                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
                       "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
                     ]
                   }
