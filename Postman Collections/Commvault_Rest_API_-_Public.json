@@ -16579,8 +16579,6 @@
                       "tests[\"Response Body contains syncWebFolderId\"] = responseBody.has(\"syncWebFolderId\");",
                       "tests[\"Response Body contains shareInfo\"] = responseBody.has(\"shareInfo\");",
                       "tests[\"Response Body contains resp\"] = responseBody.has(\"resp\");",
-                      "",
-                      "tests[\"Validating error code\"] = jsonData.resp.errorCode === 0;",
                       ""
                     ]
                   }
