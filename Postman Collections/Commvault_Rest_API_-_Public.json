@@ -32861,8 +32861,7 @@
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
                       "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
-                      "",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                      ""
                     ]
                   }
                 }
@@ -35130,8 +35129,7 @@
                     "type": "text/javascript",
                     "exec": [
                       "tests[\"Successful POST request\"] = responseCode.code === 200;",
-                      "tests[\"Response Body contains tag\"] = responseBody.has(\"test_tag\");",
-                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 200;"
+                      "tests[\"Response Body contains tag\"] = responseBody.has(\"test_tag\");"
                     ]
                   }
                 }
