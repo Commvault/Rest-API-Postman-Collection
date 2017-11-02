@@ -32323,7 +32323,8 @@
                       "",
                       "postman.setEnvironmentVariable(\"SHAREFOLDER2_GUID\", jsonData.fileResource.GUID);",
                       "",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -32652,7 +32653,9 @@
                       "",
                       "tests[\"Response Body contains chunkOffset\"] = responseBody.has(\"chunkOffset\");",
                       "",
-                      "tests[\"Response Body Contains requestId\"] = responseBody.has(\"requestId\");"
+                      "tests[\"Response Body Contains requestId\"] = responseBody.has(\"requestId\");",
+                      "",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
