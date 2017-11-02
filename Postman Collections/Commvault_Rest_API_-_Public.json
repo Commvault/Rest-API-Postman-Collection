@@ -14610,9 +14610,7 @@
                       "",
                       "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
                       "tests[\"Response Body Contains comments\"] = responseBody.has(\"comments\");",
-                      "",
-                      "tests[\"entityGUID Validation\"] = jsonData.discussion.entityGUID === postman.getEnvironmentVariable(\"FILE1_GUID\");",
-                      "tests[\"discussionId Validation\"] = jsonData.discussion.discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));"
+                      ""
                     ]
                   }
                 }
