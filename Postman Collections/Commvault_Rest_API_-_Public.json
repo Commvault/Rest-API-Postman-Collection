@@ -32036,7 +32036,8 @@
                       "tests[\"Response Body contains clientName\"] = responseBody.has(\"clientName\");",
                       "tests[\"Response Body contains shares\"] = responseBody.has(\"shares\");",
                       "",
-                      "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");"
+                      "tests[\"Response Body contains syncWebFolderName\"] = responseBody.has(\"syncWebFolderName\");",
+                      "tests[\"entityShareId Validation\"] = jsonData.shares.syncWebFolderName === postman.getEnvironmentVariable(\"shareId\");"
                     ]
                   }
                 }
@@ -32189,7 +32190,8 @@
                       "tests[\"Response Body contains parentGuid\"] = responseBody.has(\"parentGuid\");",
                       "",
                       "tests[\"Response Body contains GUID\"] = responseBody.has(\"GUID\");",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
@@ -32323,7 +32325,8 @@
                       "",
                       "postman.setEnvironmentVariable(\"SHAREFOLDER2_GUID\", jsonData.fileResource.GUID);",
                       "",
-                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");"
+                      "tests[\"Response Body contains fileResource\"] = responseBody.has(\"fileResource\");",
+                      "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
                     ]
                   }
                 }
