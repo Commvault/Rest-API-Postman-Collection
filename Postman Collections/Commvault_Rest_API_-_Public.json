@@ -47008,9 +47008,7 @@
                   "",
                   "tests[\"Response Body contains userName\"] = responseBody.has(\"userName\");",
                   "",
-                  "tests[\"Validating if user was created successfully\"] = jsonData.response[0].errorString === \"Successful\";",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Validating if user was created successfully\"] = jsonData.response[0].errorString === \"Successful\";"
                 ]
               }
             }
@@ -47641,9 +47639,7 @@
                   "",
                   "tests[\"Response Body contains userName\"] = responseBody.has(\"userName\");",
                   "",
-                  "tests[\"Validating if user was created successfully\"] = jsonData.response[0].errorString === \"\";",
-                  "",
-                  "tests[\"Validating error code\"] = jsonData.response[0].errorCode === 0;"
+                  "tests[\"Validating if user was created successfully\"] = jsonData.response[0].errorString === \"\";"
                 ]
               }
             }
@@ -53920,6 +53916,12 @@
           "_postman_isSubFolder": true
         }
       ]
+    },
+    {
+      "_postman_id": "ed37e87f-48d7-723f-0d59-589f07d783f2",
+      "name": "Instance Operations",
+      "description": "",
+      "item": []
     }
   ]
 }
