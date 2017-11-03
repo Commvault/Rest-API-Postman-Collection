@@ -51336,6 +51336,42 @@
               "body": "{\r\"instanceProperties\":[\r{\r\"isDeleted\":false,\"instance\":{\r\"clientId\":9,\"clientName\":\"firewalltestma\",\"instanceName\":\"DefaultInstanceName\",\"appName\":\"File System\",\"instanceId\":1,\"applicationId\":33,\"instanceGUID\":\"D86B6E22-AF63-4DB3-973D-844A10020BBA\"\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":128,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":16,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":4,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":256,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":8192,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"enableActivityType\":true\r},{\r\"activityType\":1024,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":512,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r}\r},{\r\"isDeleted\":false,\"instance\":{\r\"clientId\":9,\"clientName\":\"firewalltestma\",\"instanceName\":\"Test\",\"appName\":\"SQL Server\",\"instanceId\":6,\"applicationId\":81,\"instanceGUID\":\"DC2E6686-BC58-4668-B247-CF0324736480\"\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"mssqlInstance\":{\r\"awsSqlInfo\":{\r\"sqlInstanceCredentials\":{\r\r}\r},\"agProperties\":{\r\"SQLAvailabilityReplicasList\":{\r\r},\"availabilityGroup\":{\r\r},\"proxyClient\":{\r\r}\r},\"azureInfo\":{\r\"azureCredentials\":{\r\r},\"azureSqlInstanceCredentials\":{\r\r}\r}\r}\r},{\r\"isDeleted\":false,\"instance\":{\r\"clientId\":9,\"clientName\":\"firewalltestma\",\"instanceName\":\"Test2\",\"appName\":\"SQL Server\",\"instanceId\":7,\"applicationId\":81,\"instanceGUID\":\"29F4712A-C530-4B5C-8869-AD49CC3115E2\"\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"mssqlInstance\":{\r\"awsSqlInfo\":{\r\"sqlInstanceCredentials\":{\r\r}\r},\"agProperties\":{\r\"SQLAvailabilityReplicasList\":{\r\r},\"availabilityGroup\":{\r\r},\"proxyClient\":{\r\r}\r},\"azureInfo\":{\r\"azureCredentials\":{\r\r},\"azureSqlInstanceCredentials\":{\r\r}\r}\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "a40b57a5-aa4e-d76d-4e72-172090a2db6d",
+          "name": "Instance",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "{{ServerUrl}}/instance?clientId=9",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "instance"
+              ],
+              "query": [
+                {
+                  "key": "clientId",
+                  "value": "9",
+                  "equals": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
