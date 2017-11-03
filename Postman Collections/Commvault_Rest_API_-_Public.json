@@ -53921,7 +53921,44 @@
       "_postman_id": "ed37e87f-48d7-723f-0d59-589f07d783f2",
       "name": "Instance Operations",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "c5cd8f84-3b4e-09df-31d7-4af9a2d6ec80",
+          "name": "Instance",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "{{ServerUrl}}/instance?clientId=9",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "instance"
+              ],
+              "query": [
+                {
+                  "key": "clientId",
+                  "value": "9",
+                  "equals": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
