@@ -6988,116 +6988,6 @@
                   ]
                 },
                 {
-                  "_postman_id": "0a2d256d-5338-d618-0770-c5b64ace66f6",
-                  "name": "Add a Comment",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "type": "text/javascript",
-                        "exec": [
-                          "var jsonData = JSON.parse(responseBody);",
-                          "",
-                          "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                          "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
-                          "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                          "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
-                        ]
-                      }
-                    }
-                  ],
-                  "request": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n  \"content\": \"New comment\"\n}"
-                    },
-                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-                    "description": "<h2>Description</h2>\nThis operation adds a comment to an existing discussion on a file in a shared folder or on a shared file.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_share_file_comment_add.htm)"
-                  },
-                  "response": [
-                    {
-                      "id": "56bbd85d-3345-2530-1017-2cb3cd5f2194",
-                      "name": "Add a Comment",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Accept",
-                            "value": "{{Accept}}"
-                          },
-                          {
-                            "key": "Authtoken",
-                            "value": "{{TOKEN}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n\t\"content\": \"New comment\"\n}"
-                        },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-                        "description": ""
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [
-                        {
-                          "key": "Content-Length",
-                          "value": "223",
-                          "name": "Content-Length",
-                          "description": "The length of the response body in octets (8-bit bytes)"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/json; charset=utf-8",
-                          "name": "Content-Type",
-                          "description": "The mime type of this content"
-                        },
-                        {
-                          "key": "Date",
-                          "value": "Thu, 28 Sep 2017 19:14:17 GMT",
-                          "name": "Date",
-                          "description": "The date and time that the message was sent"
-                        },
-                        {
-                          "key": "Server",
-                          "value": "Microsoft-IIS/8.5",
-                          "name": "Server",
-                          "description": "A name for the server"
-                        },
-                        {
-                          "key": "X-Powered-By",
-                          "value": "ASP.NET",
-                          "name": "X-Powered-By",
-                          "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": "27",
-                      "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":13,\"created\":1506626057,\"commentId\":118,\"modified\":1506626057,\"content\":\"New comment\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\r}\r}"
-                    }
-                  ]
-                },
-                {
                   "_postman_id": "4f05fc05-2121-160b-8d95-dd4b2e61c33b",
                   "name": "View Details of a Discussion",
                   "event": [
@@ -54007,6 +53897,116 @@
           "cookie": [],
           "responseTime": "23",
           "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":13,\"created\":1506626165,\"commentId\":121,\"modified\":1506626165,\"content\":\"New comment\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r}\r}"
+        }
+      ]
+    },
+    {
+      "_postman_id": "0a2d256d-5338-d618-0770-c5b64ace66f6",
+      "name": "Add a Comment",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "postman.setEnvironmentVariable(\"commentId\", jsonData.comment.commentId);",
+              "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+              "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}"
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"content\": \"New comment\"\n}"
+        },
+        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
+        "description": "<h2>Description</h2>\nThis operation adds a comment to an existing discussion on a file in a shared folder or on a shared file.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_share_file_comment_add.htm)"
+      },
+      "response": [
+        {
+          "id": "56bbd85d-3345-2530-1017-2cb3cd5f2194",
+          "name": "Add a Comment",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"content\": \"New comment\"\n}"
+            },
+            "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
+            "description": ""
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "223",
+              "name": "Content-Length",
+              "description": "The length of the response body in octets (8-bit bytes)"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8",
+              "name": "Content-Type",
+              "description": "The mime type of this content"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 28 Sep 2017 19:14:17 GMT",
+              "name": "Date",
+              "description": "The date and time that the message was sent"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/8.5",
+              "name": "Server",
+              "description": "A name for the server"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET",
+              "name": "X-Powered-By",
+              "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+            }
+          ],
+          "cookie": [],
+          "responseTime": "27",
+          "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":13,\"created\":1506626057,\"commentId\":118,\"modified\":1506626057,\"content\":\"New comment\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\r}\r}"
         }
       ]
     }
