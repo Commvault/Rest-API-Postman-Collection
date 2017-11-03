@@ -6439,229 +6439,6 @@
                   ]
                 },
                 {
-                  "_postman_id": "a1b5a394-799f-3159-eccb-a0a6b4acdce7",
-                  "name": "Edit a Comment",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "type": "text/javascript",
-                        "exec": [
-                          "var jsonData = JSON.parse(responseBody);",
-                          "",
-                          "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                          "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                          "tests[\"discussionId Validation\"] = jsonData.comment.discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));",
-                          "tests[\"commentId Validation\"] = jsonData.comment.commentId === parseInt(postman.getEnvironmentVariable(\"commentId\"));",
-                          "",
-                          "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");",
-                          "",
-                          "tests[\"Response Body Contains depth\"] = responseBody.has(\"depth\");",
-                          "tests[\"Response Body Contains nbReplies\"] = responseBody.has(\"nbReplies\");"
-                        ]
-                      }
-                    }
-                  ],
-                  "request": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n  \"content\": \"Edited Comment\"\n}"
-                    },
-                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                    "description": "<h2>Description</h2>\nThis operation edits a comment for an existing discussion on a file in a shared folder or on a shared file.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_share_file_comment_edit.htm)"
-                  },
-                  "response": [
-                    {
-                      "id": "5f4c4337-09e3-1828-0744-ca00835a1924",
-                      "name": "Edit a Comment",
-                      "originalRequest": {
-                        "method": "PUT",
-                        "header": [
-                          {
-                            "key": "Accept",
-                            "value": "{{Accept}}"
-                          },
-                          {
-                            "key": "Authtoken",
-                            "value": "{{TOKEN}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n\t\"comments\": [\n\t\t{\n\t\t\t\"content\": \"Edited comment\"\n\t\t}\n\t]\n}"
-                        },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                        "description": ""
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [
-                        {
-                          "key": "Content-Length",
-                          "value": "199",
-                          "name": "Content-Length",
-                          "description": "The length of the response body in octets (8-bit bytes)"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/json; charset=utf-8",
-                          "name": "Content-Type",
-                          "description": "The mime type of this content"
-                        },
-                        {
-                          "key": "Date",
-                          "value": "Thu, 28 Sep 2017 18:40:37 GMT",
-                          "name": "Date",
-                          "description": "The date and time that the message was sent"
-                        },
-                        {
-                          "key": "Server",
-                          "value": "Microsoft-IIS/8.5",
-                          "name": "Server",
-                          "description": "A name for the server"
-                        },
-                        {
-                          "key": "X-Powered-By",
-                          "value": "ASP.NET",
-                          "name": "X-Powered-By",
-                          "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": "51",
-                      "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":11,\"created\":1506441069,\"commentId\":104,\"modified\":1506624037,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\r}\r}"
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "a7d013df-d0f7-2f6d-57ed-b95de3da09fa",
-                  "name": "Delete a Comment",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "type": "text/javascript",
-                        "exec": [
-                          "var jsonData = JSON.parse(responseBody);",
-                          "",
-                          "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                          ""
-                        ]
-                      }
-                    }
-                  ],
-                  "request": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                    "description": "<h2>Description</h2>\nThis operation deletes a comment on a file in a shared folder or on a shared file, based on the discussion and comment IDs.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_share_file_comment.htm)"
-                  },
-                  "response": [
-                    {
-                      "id": "e075d45d-9ef5-7d67-4848-217cce3d4901",
-                      "name": "Delete a Comment",
-                      "originalRequest": {
-                        "method": "DELETE",
-                        "header": [
-                          {
-                            "key": "Accept",
-                            "value": "{{Accept}}"
-                          },
-                          {
-                            "key": "Authtoken",
-                            "value": "{{TOKEN}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                        "description": ""
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [
-                        {
-                          "key": "Content-Length",
-                          "value": "16",
-                          "name": "Content-Length",
-                          "description": "The length of the response body in octets (8-bit bytes)"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/json; charset=utf-8",
-                          "name": "Content-Type",
-                          "description": "The mime type of this content"
-                        },
-                        {
-                          "key": "Date",
-                          "value": "Thu, 28 Sep 2017 19:24:47 GMT",
-                          "name": "Date",
-                          "description": "The date and time that the message was sent"
-                        },
-                        {
-                          "key": "Server",
-                          "value": "Microsoft-IIS/8.5",
-                          "name": "Server",
-                          "description": "A name for the server"
-                        },
-                        {
-                          "key": "X-Powered-By",
-                          "value": "ASP.NET",
-                          "name": "X-Powered-By",
-                          "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": "25",
-                      "body": "{\r\"error\":{\r\r}\r}"
-                    }
-                  ]
-                },
-                {
                   "_postman_id": "b31ba529-6fa9-ec98-691f-b246f7c1ed47",
                   "name": "Delete a Discussion",
                   "event": [
@@ -54007,6 +53784,229 @@
           "cookie": [],
           "responseTime": "23",
           "body": "{\r\"discussion\":{\r\"entityType\":136,\"discussionId\":11,\"created\":1506441067,\"entityGUID\":\"df79d95b4c054db59eb375910cd30e97\",\"modified\":1506441067,\"nbComments\":7,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r\r]\r}\r}"
+        }
+      ]
+    },
+    {
+      "_postman_id": "a1b5a394-799f-3159-eccb-a0a6b4acdce7",
+      "name": "Edit a Comment",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+              "tests[\"discussionId Validation\"] = jsonData.comment.discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));",
+              "tests[\"commentId Validation\"] = jsonData.comment.commentId === parseInt(postman.getEnvironmentVariable(\"commentId\"));",
+              "",
+              "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");",
+              "",
+              "tests[\"Response Body Contains depth\"] = responseBody.has(\"depth\");",
+              "tests[\"Response Body Contains nbReplies\"] = responseBody.has(\"nbReplies\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}"
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"content\": \"Edited Comment\"\n}"
+        },
+        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+        "description": "<h2>Description</h2>\nThis operation edits a comment for an existing discussion on a file in a shared folder or on a shared file.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_share_file_comment_edit.htm)"
+      },
+      "response": [
+        {
+          "id": "5f4c4337-09e3-1828-0744-ca00835a1924",
+          "name": "Edit a Comment",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"comments\": [\n\t\t{\n\t\t\t\"content\": \"Edited comment\"\n\t\t}\n\t]\n}"
+            },
+            "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "description": ""
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "199",
+              "name": "Content-Length",
+              "description": "The length of the response body in octets (8-bit bytes)"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8",
+              "name": "Content-Type",
+              "description": "The mime type of this content"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 28 Sep 2017 18:40:37 GMT",
+              "name": "Date",
+              "description": "The date and time that the message was sent"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/8.5",
+              "name": "Server",
+              "description": "A name for the server"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET",
+              "name": "X-Powered-By",
+              "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+            }
+          ],
+          "cookie": [],
+          "responseTime": "51",
+          "body": "{\r\"comment\":{\r\"depth\":0,\"nbReplies\":0,\"discussionId\":11,\"created\":1506441069,\"commentId\":104,\"modified\":1506624037,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r}\r},\"error\":{\r\r}\r}"
+        }
+      ]
+    },
+    {
+      "_postman_id": "a7d013df-d0f7-2f6d-57ed-b95de3da09fa",
+      "name": "Delete a Comment",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "{{Accept}}"
+          },
+          {
+            "key": "Authtoken",
+            "value": "{{TOKEN}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+        "description": "<h2>Description</h2>\nThis operation deletes a comment on a file in a shared folder or on a shared file, based on the discussion and comment IDs.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_share_file_comment.htm)"
+      },
+      "response": [
+        {
+          "id": "e075d45d-9ef5-7d67-4848-217cce3d4901",
+          "name": "Delete a Comment",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
+            "description": ""
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "16",
+              "name": "Content-Length",
+              "description": "The length of the response body in octets (8-bit bytes)"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8",
+              "name": "Content-Type",
+              "description": "The mime type of this content"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 28 Sep 2017 19:24:47 GMT",
+              "name": "Date",
+              "description": "The date and time that the message was sent"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/8.5",
+              "name": "Server",
+              "description": "A name for the server"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET",
+              "name": "X-Powered-By",
+              "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+            }
+          ],
+          "cookie": [],
+          "responseTime": "25",
+          "body": "{\r\"error\":{\r\r}\r}"
         }
       ]
     }
