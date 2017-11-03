@@ -6230,6 +6230,162 @@
                   ]
                 },
                 {
+                  "_postman_id": "1baacd30-3484-4171-fdfc-f9120e243256",
+                  "name": "View Number of Replies for a Comment",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                          "var jsonData = JSON.parse(responseBody);",
+                          "",
+                          "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                          "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
+                          "tests[\"discussionId Validation\"] = jsonData.comments[0].discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));",
+                          "tests[\"Response Body Contains depth\"] = responseBody.has(\"depth\");",
+                          "tests[\"Response Body Contains nbReplies\"] = responseBody.has(\"nbReplies\");",
+                          "tests[\"Response Body Contains comments\"] = responseBody.has(\"comments\");",
+                          "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");",
+                          "tests[\"commentId Validation\"] = jsonData.comments[0].commentId === parseInt(postman.getEnvironmentVariable(\"commentId\"));"
+                        ]
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "ShareFolder",
+                        "{{shareId}}",
+                        "Discussion",
+                        "{{discussionId}}",
+                        "Comment",
+                        "{{commentId}}",
+                        "Replies"
+                      ],
+                      "query": [
+                        {
+                          "key": "depth",
+                          "value": "1",
+                          "equals": true
+                        }
+                      ]
+                    },
+                    "description": "<h2>Description</h2>\nThis operation retrieves the number of replies for a comment on a shared folder.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_share_folder_comment_replies.htm)"
+                  },
+                  "response": [
+                    {
+                      "id": "17f34309-baf4-2312-ba7b-c2625bbfa440",
+                      "name": "View Number of Replies for a Comment",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "{{Accept}}"
+                          },
+                          {
+                            "key": "Authtoken",
+                            "value": "{{TOKEN}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
+                        },
+                        "url": {
+                          "raw": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
+                          "host": [
+                            "{{ServerUrl}}"
+                          ],
+                          "path": [
+                            "ShareFolder",
+                            "{{shareId}}",
+                            "Discussion",
+                            "{{discussionId}}",
+                            "Comment",
+                            "{{commentId}}",
+                            "Replies"
+                          ],
+                          "query": [
+                            {
+                              "key": "depth",
+                              "value": "1",
+                              "equals": true
+                            }
+                          ]
+                        },
+                        "description": ""
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Length",
+                          "value": "482",
+                          "name": "Content-Length",
+                          "description": "The length of the response body in octets (8-bit bytes)"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json; charset=utf-8",
+                          "name": "Content-Type",
+                          "description": "The mime type of this content"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Thu, 28 Sep 2017 19:26:15 GMT",
+                          "name": "Date",
+                          "description": "The date and time that the message was sent"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "Microsoft-IIS/8.5",
+                          "name": "Server",
+                          "description": "A name for the server"
+                        },
+                        {
+                          "key": "X-Powered-By",
+                          "value": "ASP.NET",
+                          "name": "X-Powered-By",
+                          "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": "21",
+                      "body": "{\r\"comments\":[\r{\r\"depth\":0,\"nbReplies\":1,\"discussionId\":15,\"created\":1506626748,\"commentId\":144,\"modified\":1506626748,\"content\":\"New comment\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"replies\":[\r{\r\"depth\":1,\"nbReplies\":0,\"discussionId\":15,\"created\":1506626769,\"commentId\":145,\"modified\":1506626769,\"content\":\"This is a reply to comment: 144\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"parentComment\":{\r\"commentId\":144\r}\r}\r]\r}\r]\r}"
+                    }
+                  ]
+                },
+                {
                   "_postman_id": "ce14d042-7601-cc31-b61a-240855d0aaa2",
                   "name": "View Details of a Discussion Id",
                   "event": [
@@ -6408,162 +6564,6 @@
                       "cookie": [],
                       "responseTime": "22",
                       "body": "{\r\"discussion\":{\r\"entityType\":7987,\"discussionId\":12,\"created\":1506624188,\"entityGUID\":\"df79d95b4c054db59eb375910cd30e97\",\"modified\":1506624188,\"nbComments\":1,\"status\":1,\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"comments\":[\r\r]\r}\r}"
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "1baacd30-3484-4171-fdfc-f9120e243256",
-                  "name": "View Number of Replies for a Comment",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "type": "text/javascript",
-                        "exec": [
-                          "var jsonData = JSON.parse(responseBody);",
-                          "",
-                          "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                          "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
-                          "tests[\"discussionId Validation\"] = jsonData.comments[0].discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));",
-                          "tests[\"Response Body Contains depth\"] = responseBody.has(\"depth\");",
-                          "tests[\"Response Body Contains nbReplies\"] = responseBody.has(\"nbReplies\");",
-                          "tests[\"Response Body Contains comments\"] = responseBody.has(\"comments\");",
-                          "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");",
-                          "tests[\"commentId Validation\"] = jsonData.comments[0].commentId === parseInt(postman.getEnvironmentVariable(\"commentId\"));"
-                        ]
-                      }
-                    }
-                  ],
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                    },
-                    "url": {
-                      "raw": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
-                      "host": [
-                        "{{ServerUrl}}"
-                      ],
-                      "path": [
-                        "ShareFolder",
-                        "{{shareId}}",
-                        "Discussion",
-                        "{{discussionId}}",
-                        "Comment",
-                        "{{commentId}}",
-                        "Replies"
-                      ],
-                      "query": [
-                        {
-                          "key": "depth",
-                          "value": "1",
-                          "equals": true
-                        }
-                      ]
-                    },
-                    "description": "<h2>Description</h2>\nThis operation retrieves the number of replies for a comment on a shared folder.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>401</td> \n   <td>Unauthorized</td> \n   <td>The request did not include an authentication token or the authentication token was expired.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>The user did not&nbsp; have permission to access the requested resource.</td> \n  </tr> \n  <tr> \n   <td>412</td> \n   <td>Precondition Failed</td> \n   <td>Prerequisites are not met. For example, MongoDB database is not installed.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_share_folder_comment_replies.htm)"
-                  },
-                  "response": [
-                    {
-                      "id": "17f34309-baf4-2312-ba7b-c2625bbfa440",
-                      "name": "View Number of Replies for a Comment",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Accept",
-                            "value": "{{Accept}}"
-                          },
-                          {
-                            "key": "Authtoken",
-                            "value": "{{TOKEN}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
-                        },
-                        "url": {
-                          "raw": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}/Replies?depth=1",
-                          "host": [
-                            "{{ServerUrl}}"
-                          ],
-                          "path": [
-                            "ShareFolder",
-                            "{{shareId}}",
-                            "Discussion",
-                            "{{discussionId}}",
-                            "Comment",
-                            "{{commentId}}",
-                            "Replies"
-                          ],
-                          "query": [
-                            {
-                              "key": "depth",
-                              "value": "1",
-                              "equals": true
-                            }
-                          ]
-                        },
-                        "description": ""
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [
-                        {
-                          "key": "Content-Length",
-                          "value": "482",
-                          "name": "Content-Length",
-                          "description": "The length of the response body in octets (8-bit bytes)"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/json; charset=utf-8",
-                          "name": "Content-Type",
-                          "description": "The mime type of this content"
-                        },
-                        {
-                          "key": "Date",
-                          "value": "Thu, 28 Sep 2017 19:26:15 GMT",
-                          "name": "Date",
-                          "description": "The date and time that the message was sent"
-                        },
-                        {
-                          "key": "Server",
-                          "value": "Microsoft-IIS/8.5",
-                          "name": "Server",
-                          "description": "A name for the server"
-                        },
-                        {
-                          "key": "X-Powered-By",
-                          "value": "ASP.NET",
-                          "name": "X-Powered-By",
-                          "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": "21",
-                      "body": "{\r\"comments\":[\r{\r\"depth\":0,\"nbReplies\":1,\"discussionId\":15,\"created\":1506626748,\"commentId\":144,\"modified\":1506626748,\"content\":\"New comment\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"replies\":[\r{\r\"depth\":1,\"nbReplies\":0,\"discussionId\":15,\"created\":1506626769,\"commentId\":145,\"modified\":1506626769,\"content\":\"This is a reply to comment: 144\",\"owner\":{\r\"newName\":\"Administrator\",\"userName\":\"admin\",\"userId\":1\r},\"parentComment\":{\r\"commentId\":144\r}\r}\r]\r}\r]\r}"
                     }
                   ]
                 }
