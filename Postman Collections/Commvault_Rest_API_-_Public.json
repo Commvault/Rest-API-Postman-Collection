@@ -8097,10 +8097,9 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"comments\": [\n\t\t{\n\t\t\t\"content\": \"Edited comment\"\n\t\t}\n\t]\n}"
+                          "raw": "{\n  \"content\": \"Edited Comment\"\n}"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -8110,31 +8109,31 @@
                           "key": "Content-Length",
                           "value": "199",
                           "name": "Content-Length",
-                          "description": "The length of the response body in octets (8-bit bytes)"
+                          "description": ""
                         },
                         {
                           "key": "Content-Type",
                           "value": "application/json; charset=utf-8",
                           "name": "Content-Type",
-                          "description": "The mime type of this content"
+                          "description": ""
                         },
                         {
                           "key": "Date",
                           "value": "Thu, 28 Sep 2017 18:40:37 GMT",
                           "name": "Date",
-                          "description": "The date and time that the message was sent"
+                          "description": ""
                         },
                         {
                           "key": "Server",
                           "value": "Microsoft-IIS/8.5",
                           "name": "Server",
-                          "description": "A name for the server"
+                          "description": ""
                         },
                         {
                           "key": "X-Powered-By",
                           "value": "ASP.NET",
                           "name": "X-Powered-By",
-                          "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                          "description": ""
                         }
                       ],
                       "cookie": [],
