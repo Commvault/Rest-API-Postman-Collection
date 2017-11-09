@@ -49466,8 +49466,6 @@
                       "",
                       "tests[\"Response Body contains planOwner\"] = responseBody.has(\"planOwner\");",
                       "",
-                      "tests[\"Validating error code\"] = jsonData.errors[0].status.errorCode === 0;",
-                      "",
                       "postman.setEnvironmentVariable(\"PlanName\", jsonData.plan.summary.plan.planName);",
                       "tests[\"planId Validation\"] = jsonData.plan.summary.plan.planId === parseInt(postman.getEnvironmentVariable(\"PlanId\"));"
                     ]
