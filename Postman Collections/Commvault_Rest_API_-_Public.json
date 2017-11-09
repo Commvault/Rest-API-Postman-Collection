@@ -49976,11 +49976,7 @@
                     "type": "text/javascript",
                     "exec": [
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "var jsonData = JSON.parse(responseBody);",
-                      "",
-                      "tests[\"Response Body contains alerts\"] = responseBody.has(\"alerts\");",
-                      "tests[\"Response Body contains alertName\"] = responseBody.has(\"alertName\");",
-                      "tests[\"Response Body contains alertId\"] = responseBody.has(\"alertId\");"
+                      "var jsonData = JSON.parse(responseBody);"
                     ]
                   }
                 }
