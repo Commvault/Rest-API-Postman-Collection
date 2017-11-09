@@ -50042,11 +50042,6 @@
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "var jsonData = JSON.parse(responseBody);",
                       "",
-                      "tests[\"Response Body contains role\"] = responseBody.has(\"role\");",
-                      "tests[\"Response Body contains roleId\"] = responseBody.has(\"roleId\");",
-                      "tests[\"Response Body contains roleName\"] = responseBody.has(\"roleName\");",
-                      "tests[\"Response Body contains permissionName\"] = responseBody.has(\"permissionName\");",
-                      "tests[\"Response Body contains permissionId\"] = responseBody.has(\"permissionId\");",
                       "tests[\"Response Body contains categoryPermission\"] = responseBody.has(\"categoryPermission\");",
                       ""
                     ]
