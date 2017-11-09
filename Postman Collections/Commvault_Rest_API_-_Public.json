@@ -18806,7 +18806,7 @@
             },
             {
               "_postman_id": "6e40b44a-3705-8ef2-5683-0783b149c491",
-              "name": "Shared File Versions By ID Path",
+              "name": "Shared File Versions By Path",
               "event": [
                 {
                   "listen": "test",
