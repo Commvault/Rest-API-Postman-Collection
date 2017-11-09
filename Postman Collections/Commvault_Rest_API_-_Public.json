@@ -9111,7 +9111,6 @@
                       "",
                       "tests[\"Response Body Contains discussionId\"] = responseBody.has(\"discussionId\");",
                       "tests[\"discussionId Validation\"] = jsonData.comment.discussionId === parseInt(postman.getEnvironmentVariable(\"discussionId\"));",
-                      "tests[\"commentId Validation\"] = jsonData.comment.commentId === parseInt(postman.getEnvironmentVariable(\"commentId\"));",
                       "",
                       "tests[\"Response Body Contains commentId\"] = responseBody.has(\"commentId\");",
                       "",
