@@ -13076,123 +13076,6 @@
               ]
             },
             {
-              "_postman_id": "2147159d-e838-cee1-ae5a-f91e38bbc6c4",
-              "name": "Delete a File by ID",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}",
-                "description": "<h2>Description</h2>\nThis operation deletes a file or a folder in Edge Drive using the file or folder GUID.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file or folder does not exist.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_drive_folder.htm)"
-              },
-              "response": [
-                {
-                  "id": "370e1973-ef3c-95f1-bd39-ad5127938baf",
-                  "name": "DELETE Delete a File By ID",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "application/json"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}",
-                    "description": ""
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "description": "",
-                      "key": "Content-Length",
-                      "name": "Content-Length",
-                      "value": "17"
-                    },
-                    {
-                      "description": "",
-                      "key": "Content-Type",
-                      "name": "Content-Type",
-                      "value": "application/json; charset=utf-8"
-                    },
-                    {
-                      "description": "",
-                      "key": "Date",
-                      "name": "Date",
-                      "value": "Fri, 07 Jul 2017 15:04:22 GMT"
-                    },
-                    {
-                      "description": "",
-                      "key": "Server",
-                      "name": "Server",
-                      "value": "Microsoft-IIS/8.5"
-                    },
-                    {
-                      "description": "",
-                      "key": "X-Powered-By",
-                      "name": "X-Powered-By",
-                      "value": "ASP.NET"
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Invalid Date",
-                      "httpOnly": true,
-                      "domain": "nkatzvm2.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "4FE369232CA3619ADE65DB55EF647A0F",
-                      "key": "JSESSIONID"
-                    },
-                    {
-                      "expires": "Invalid Date",
-                      "httpOnly": true,
-                      "domain": "nkatzvm2.testlab.commvault.com",
-                      "path": "/",
-                      "secure": false,
-                      "value": "6EDBA28BC1616A91E344BED0ED45695C",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "565",
-                  "body": "{\r\"errorCode\":0\r}"
-                }
-              ]
-            },
-            {
               "_postman_id": "f03f2b31-383c-1f03-36d1-cc68fa58c504",
               "name": "Move a File by Path",
               "event": [
@@ -15535,6 +15418,123 @@
                   "cookie": [],
                   "responseTime": "19",
                   "body": "{\r\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "2147159d-e838-cee1-ae5a-f91e38bbc6c4",
+              "name": "Delete a File by ID",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Successful POST request\"] = responseCode.code === 200",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}",
+                "description": "<h2>Description</h2>\nThis operation deletes a file or a folder in Edge Drive using the file or folder GUID.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file or folder does not exist.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_drive_folder.htm)"
+              },
+              "response": [
+                {
+                  "id": "370e1973-ef3c-95f1-bd39-ad5127938baf",
+                  "name": "DELETE Delete a File By ID",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}",
+                    "description": ""
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "description": "",
+                      "key": "Content-Length",
+                      "name": "Content-Length",
+                      "value": "17"
+                    },
+                    {
+                      "description": "",
+                      "key": "Content-Type",
+                      "name": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "description": "",
+                      "key": "Date",
+                      "name": "Date",
+                      "value": "Fri, 07 Jul 2017 15:04:22 GMT"
+                    },
+                    {
+                      "description": "",
+                      "key": "Server",
+                      "name": "Server",
+                      "value": "Microsoft-IIS/8.5"
+                    },
+                    {
+                      "description": "",
+                      "key": "X-Powered-By",
+                      "name": "X-Powered-By",
+                      "value": "ASP.NET"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Invalid Date",
+                      "httpOnly": true,
+                      "domain": "nkatzvm2.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "4FE369232CA3619ADE65DB55EF647A0F",
+                      "key": "JSESSIONID"
+                    },
+                    {
+                      "expires": "Invalid Date",
+                      "httpOnly": true,
+                      "domain": "nkatzvm2.testlab.commvault.com",
+                      "path": "/",
+                      "secure": false,
+                      "value": "6EDBA28BC1616A91E344BED0ED45695C",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "565",
+                  "body": "{\r\"errorCode\":0\r}"
                 }
               ]
             },
