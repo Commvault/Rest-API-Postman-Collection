@@ -45245,7 +45245,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"{{clientName}}\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"File System\",\r\n      \"backupsetName\": \"DefaultBackupset\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"content\": [\r\n      {\r\n        \"path\": \"C:\\\\\"\r\n      }\r\n    ],\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true\r\n    }\r\n  }\r\n}"
+              "raw": "{\n\t\"subClientProperties\": {\n\t\t\"contentOperationType\": 2,\n\t\t\"subClientEntity\": {\n\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\"instanceName\": \"DefaultInstanceName\",\n\t\t\t\"appName\": \"File System\",\n\t\t\t\"backupsetName\": \"DefaultBackupset\",\n\t\t\t\"subclientName\": \"subclient001\"\n\t\t},\n\t\t\"content\": [\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder2\"\n\t\t\t}\n\t\t],\n\t\t\"commonProperties\": {\n\t\t\t\"enableBackup\": true\n\t\t}\n\t}\n}"
             },
             "url": "{{ServerUrl}}/Subclient",
             "description": "<h2> Description </h2>\nThis request creates a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient.htm)"
