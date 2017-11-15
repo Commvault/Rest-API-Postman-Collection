@@ -50812,7 +50812,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"alertOperationType\": 1,\n\t\"alert\": [\n\t\t{\n\t\t\t\"alertId\": 6\n\t\t},\n\t\t{\n\t\t\t\"alertId\": 7\n\t\t}\n\t]\n}"
+                  "raw": "{\n  \"alertOperationType\": 1,\n  \"alert\": [\n    {\n      \"alertId\": 6\n    },\n    {\n      \"alertId\": 7\n    }\n  ]\n}"
                 },
                 "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/Alerts",
                 "description": "<h2>Description</h2>\nThis operation updates Alerts for a Plan."
