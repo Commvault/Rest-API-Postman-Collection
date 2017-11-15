@@ -51385,7 +51385,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"subClientProperties\": {\n    \"planEntity\": {\n      \"_type_\": 158,\n      \"planName\": \"server plan\",\n      \"planId\": {{PlanId}}\n    }\n  }\n}"
+                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "description": "<h2>Description</h2>\nThis operation associates Plan to a Subclient."
