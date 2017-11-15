@@ -45211,7 +45211,7 @@
         },
         {
           "_postman_id": "dc770f57-df80-be5c-d270-ba25e9b07a48",
-          "name": "Subclient - For File System Agent",
+          "name": "Subclient",
           "event": [
             {
               "listen": "test",
@@ -45305,7 +45305,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"contentOperationType\": \"ADD\",\n\t\t\"subClientEntity\": {\n\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\"instanceName\": \"DefaultInstanceName\",\n\t\t\t\"appName\": \"File System\",\n\t\t\t\"backupsetName\": \"DefaultBackupset\",\n\t\t\t\"subclientName\": \"subclient001\"\n\t\t},\n\t\t\"content\": [\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder2\"\n\t\t\t}\n\t\t],\n\t\t\"commonProperties\": {\n\t\t\t\"enableBackup\": true\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"contentOperationType\": \"ADD\",\n\t\t\"content\": [\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder2\"\n\t\t\t}\n\t\t],\n\t\t\"subClientEntity\": {\n\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\"instanceName\": \"DefaultInstanceName\",\n\t\t\t\"appName\": \"File System\",\n\t\t\t\"backupsetName\": \"DefaultBackupset\",\n\t\t\t\"subclientName\": \"subclient001\"\n\t\t},\n\t\t\"commonProperties\": {\n\t\t\t\"storageDevice\": {\n\t\t\t\t\"dataBackupStoragePolicy\": {\n\t\t\t\t\t\"storagePolicyName\": \"NonDedupeSP\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"enableBackup\": true\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Subclient"
               },
