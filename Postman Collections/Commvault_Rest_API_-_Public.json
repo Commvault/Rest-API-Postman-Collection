@@ -45676,7 +45676,7 @@
         },
         {
           "_postman_id": "f6fe4561-a0f1-1e07-1cf5-4420ef16f3a7",
-          "name": "Subclient Backup - Incremental after Synthetic full",
+          "name": "Subclient Backup",
           "event": [
             {
               "listen": "test",
