@@ -45252,71 +45252,6 @@
           },
           "response": [
             {
-              "id": "60c7ef72-b48a-644f-518e-5b98740af8bf",
-              "name": "Subclient - Under File System Agent",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"subClientProperties\": {\r\n    \"contentOperationType\": 2,\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"{{clientName}}\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"File System\",\r\n      \"backupsetName\": \"DefaultBackupset\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"content\": [\r\n      {\r\n        \"path\": \"C:\\\\\"\r\n      }\r\n    ],\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true\r\n    }\r\n  }\r\n}"
-                },
-                "url": "{{ServerUrl}}/Subclient",
-                "description": "This request creates a subclient under a file system agent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_subclient.htm)"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "282"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 01 Jun 2017 08:57:59 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "12442",
-              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\",\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"subclientId\":69,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":0,\"consumeLicense\":true\r}\r}\r}"
-            },
-            {
               "id": "8e356f5b-5a8a-bda0-2af8-691ed11d6a06",
               "name": "Subclient - For Virtual Server Agent",
               "originalRequest": {
@@ -45348,6 +45283,80 @@
               "cookie": [],
               "responseTime": "0",
               "body": ""
+            },
+            {
+              "id": "c505e6b3-1ac6-fad8-945e-54433df570ef",
+              "name": "Subclient - For File System Agent",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"contentOperationType\": 2,\n\t\t\"subClientEntity\": {\n\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\"instanceName\": \"DefaultInstanceName\",\n\t\t\t\"appName\": \"File System\",\n\t\t\t\"backupsetName\": \"DefaultBackupset\",\n\t\t\t\"subclientName\": \"subclient001\"\n\t\t},\n\t\t\"content\": [\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder2\"\n\t\t\t}\n\t\t],\n\t\t\"commonProperties\": {\n\t\t\t\"enableBackup\": true\n\t\t}\n\t}\n}"
+                },
+                "url": "{{ServerUrl}}/Subclient"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "283",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 15 Nov 2017 21:01:46 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "339",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":{\r\"warningCode\":0,\"errorCode\":0,\"warningMessage\":\"\",\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"subclientId\":268,\"srmReportType\":0,\"clientSidePackage\":true,\"_type_\":0,\"consumeLicense\":true\r}\r}\r}"
             }
           ]
         },
@@ -50528,7 +50537,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"quota\": 3\n}"
+                  "raw": "{\n  \"quota\": 3\n}"
                 },
                 "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/Options",
                 "description": "<h2>Description</h2>\nThis operation updates options for a Plan."
