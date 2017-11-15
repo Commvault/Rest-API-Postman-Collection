@@ -50226,7 +50226,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"userOperationType\": 1,\n\t\"users\": [\n\t\t{\n\t\t\t\"sendInvite\": true,\n\t\t\t\"user\": {\n\t\t\t\t\"userName\": \"hkuser\",\n\t\t\t\t\"userId\": 21\n\t\t\t}\n\t\t}\n\t]\n}"
+                  "raw": "{\n  \"userOperationType\": 1,\n  \"users\": [\n    {\n      \"sendInvite\": true,\n      \"user\": {\n        \"userName\": \"hkuser\",\n        \"userId\": 21\n      }\n    }\n  ]\n}"
                 },
                 "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/Users",
                 "description": "<h2>Description</h2>\nThis operation updates associations for users and user groups to a plan."
@@ -51272,7 +51272,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"backupsetProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n  \"backupsetProperties\": {\n    \"planEntity\": {\n      \"_type_\": 158,\n      \"planName\": \"server plan\",\n      \"planId\": {{PlanId}}\n    }\n  }\n}"
                 },
                 "url": "{{ServerUrl}}/Backupset/{{backupsetId}}",
                 "description": "<h2>Description</h2>\nThis operation associates Plan to a BackupSet."
@@ -51385,7 +51385,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"planEntity\": {\n\t\t\t\"_type_\": 158,\n\t\t\t\"planName\": \"server plan\",\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n  \"subClientProperties\": {\n    \"planEntity\": {\n      \"_type_\": 158,\n      \"planName\": \"server plan\",\n      \"planId\": {{PlanId}}\n    }\n  }\n}"
                 },
                 "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
                 "description": "<h2>Description</h2>\nThis operation associates Plan to a Subclient."
