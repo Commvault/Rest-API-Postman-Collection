@@ -1,5 +1,4 @@
 {
-  "variables": [],
   "info": {
     "name": "Commvault Rest API - Public",
     "_postman_id": "43ab5b21-c72f-6b18-345a-08cb9e202b1f",
@@ -17,22 +16,6 @@
           "name": "Environment Setup",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
-                  "",
-                  "console.log(\"QSDK Token obtained is: \"+jsonData.token);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"userName Validation\"] = jsonData.userName === postman.getEnvironmentVariable(\"userName\");"
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -46,6 +29,22 @@
                   "\r",
                   "// This is a default variable. Please do not change this because all our tests are written based on JSON responses.\r",
                   "postman.setEnvironmentVariable(\"Accept\", \"application/json\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
+                  "",
+                  "console.log(\"QSDK Token obtained is: \"+jsonData.token);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"userName Validation\"] = jsonData.userName === postman.getEnvironmentVariable(\"userName\");"
                 ]
               }
             }
@@ -9655,22 +9654,6 @@
               "name": "Environment Setup",
               "event": [
                 {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
-                      "",
-                      "tests[\"Successful POST request\"] = responseCode.code === 200",
-                      "",
-                      "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
-                      "",
-                      "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
-                    ]
-                  }
-                },
-                {
                   "listen": "prerequest",
                   "script": {
                     "type": "text/javascript",
@@ -9692,6 +9675,22 @@
                       "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
                       "",
                       "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"TOKEN\", jsonData.token);",
+                      "",
+                      "tests[\"Successful POST request\"] = responseCode.code === 200",
+                      "",
+                      "tests[\"Response Body contains userGUID\"] = responseBody.has(\"userGUID\");",
+                      "",
+                      "tests[\"Response Body contains token\"] = responseBody.has(\"token\");"
                     ]
                   }
                 }
@@ -16149,15 +16148,6 @@
               "name": "Environment Setup",
               "event": [
                 {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
-                    ]
-                  }
-                },
-                {
                   "listen": "prerequest",
                   "script": {
                     "type": "text/javascript",
@@ -16179,6 +16169,15 @@
                       "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
                       "",
                       "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -21729,15 +21728,6 @@
               "name": "Environment Setup",
               "event": [
                 {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Successful POST request\"] = responseCode.code === 200"
-                    ]
-                  }
-                },
-                {
                   "listen": "prerequest",
                   "script": {
                     "type": "text/javascript",
@@ -21759,6 +21749,15 @@
                       "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
                       "",
                       "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Successful POST request\"] = responseCode.code === 200"
                     ]
                   }
                 }
@@ -31464,18 +31463,6 @@
               "name": "Create an ObjectStore",
               "event": [
                 {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
-                      "",
-                      "tests[\"Successful POST request\"] = responseCode.code === 200"
-                    ]
-                  }
-                },
-                {
                   "listen": "prerequest",
                   "script": {
                     "type": "text/javascript",
@@ -31497,6 +31484,18 @@
                       "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
                       "",
                       "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
+                      "",
+                      "tests[\"Successful POST request\"] = responseCode.code === 200"
                     ]
                   }
                 }
@@ -39320,18 +39319,6 @@
               "name": "Create an ObjectStore",
               "event": [
                 {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
-                      "",
-                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
-                    ]
-                  }
-                },
-                {
                   "listen": "prerequest",
                   "script": {
                     "type": "text/javascript",
@@ -39353,6 +39340,18 @@
                       "postman.setEnvironmentVariable(\"FileName2\", \"RGVtb0ZpbGUyLmRvYw==\");",
                       "",
                       "postman.setEnvironmentVariable(\"ShareParentFolderPath\", \"XA==\");"
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"RootGuid\", jsonData.edgeDriveInfo.rootGUID);",
+                      "",
+                      "tests[\"Successful POST request\"] = responseCode.code === 200;"
                     ]
                   }
                 }
@@ -45272,7 +45271,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"subClientProperties\": {\r\n    \"vmContentOperationType\": \"ADD\",\r\n    \"vmContent\": {\r\n      \"children\": [\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM001\",\r\n          \"type\": 10\r\n        },\r\n        {\r\n          \"equalsOrNotEquals\": true,\r\n          \"displayName\": \"VM011\",\r\n          \"type\": 10\r\n        }\r\n      ]\r\n    },\r\n    \"subClientEntity\": {\r\n      \"clientName\": \"client001\",\r\n      \"instanceName\": \"DefaultInstanceName\",\r\n      \"appName\": \"Virtual Server\",\r\n      \"backupsetName\": \"defaultBackupSet\",\r\n      \"subclientName\": \"subclient001\"\r\n    },\r\n    \"commonProperties\": {\r\n      \"enableBackup\": true,\r\n      \"storageDevice\": {\r\n        \"dataBackupStoragePolicy\": {\r\n          \"storagePolicyName\": \"SP004\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
+                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"subClientEntity\": {\n\t\t\t\"clientName\": \"client001\",\n\t\t\t\"appName\": \"Virtual Server\",\n\t\t\t\"backupsetName\": \"defaultBackupSet\",\n\t\t\t\"subclientName\": \"subclient001\"\n\t\t},\n\t\t\"vmContentOperationType\": \"ADD\",\n\t\t\"vmContent\": {\n\t\t\t\"children\": [\n\t\t\t\t{\n\t\t\t\t\t\"equalsOrNotEquals\": true,\n\t\t\t\t\t\"displayName\": \"VM001\",\n\t\t\t\t\t\"type\": \"VMName\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"equalsOrNotEquals\": true,\n\t\t\t\t\t\"displayName\": \"VM011\",\n\t\t\t\t\t\"type\": \"VMName\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"commonProperties\": {\n\t\t\t\"storageDevice\": {\n\t\t\t\t\"dataBackupStoragePolicy\": {\n\t\t\t\t\t\"storagePolicyName\": \"SP004\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Subclient"
               },
@@ -45305,7 +45304,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"subClientEntity\": {\n\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\"appName\": \"File System\",\n\t\t\t\"backupsetName\": \"DefaultBackupset\",\n\t\t\t\"subclientName\": \"subclient001\"\n\t\t},\n\t\t\"contentOperationType\": \"ADD\",\n\t\t\"content\": [\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder2\"\n\t\t\t}\n\t\t],\n\t\t\"commonProperties\": {\n\t\t\t\"storageDevice\": {\n\t\t\t\t\"dataBackupStoragePolicy\": {\n\t\t\t\t\t\"storagePolicyName\": \"NonDedupeSP\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"enableBackup\": true\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"subClientProperties\": {\n\t\t\"subClientEntity\": {\n\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\"appName\": \"File System\",\n\t\t\t\"backupsetName\": \"DefaultBackupset\",\n\t\t\t\"subclientName\": \"subclient001\"\n\t\t},\n\t\t\"contentOperationType\": \"ADD\",\n\t\t\"content\": [\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"path\": \"C:\\\\TestFolder2\"\n\t\t\t}\n\t\t],\n\t\t\"commonProperties\": {\n\t\t\t\"storageDevice\": {\n\t\t\t\t\"dataBackupStoragePolicy\": {\n\t\t\t\t\t\"storagePolicyName\": \"NonDedupeSP\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Subclient"
               },
