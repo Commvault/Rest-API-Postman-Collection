@@ -47340,11 +47340,7 @@
                   "",
                   "tests[\"Response Body contains users\"] = responseBody.has(\"users\");",
                   "",
-                  "tests[\"Response Body contains securityAssociations\"] = responseBody.has(\"securityAssociations\");",
-                  "",
                   "tests[\"Response Body contains userEntity\"] = responseBody.has(\"userEntity\");",
-                  "",
-                  "tests[\"Response Body contains userSecurity\"] = responseBody.has(\"userSecurity\");",
                   "",
                   "tests[\"Response Body contains LinkedCommvaultUser\"] = responseBody.has(\"LinkedCommvaultUser\");"
                 ]
