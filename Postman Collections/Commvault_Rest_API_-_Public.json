@@ -53906,7 +53906,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "{{ServerUrl}}/instance?clientId=9",
+              "raw": "{{ServerUrl}}/instance?clientId={{clientId}}",
               "host": [
                 "{{ServerUrl}}"
               ],
@@ -53916,7 +53916,7 @@
               "query": [
                 {
                   "key": "clientId",
-                  "value": "9",
+                  "value": "{{clientId}}",
                   "equals": true
                 }
               ]
