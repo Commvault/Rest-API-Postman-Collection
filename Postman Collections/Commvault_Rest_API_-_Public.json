@@ -53972,8 +53972,116 @@
               "cookie": [],
               "responseTime": "65110",
               "body": "{\r\"instanceProperties\":[\r{\r\"isDeleted\":false,\"instance\":{\r\"clientId\":9,\"clientName\":\"firewalltestma\",\"instanceName\":\"DefaultInstanceName\",\"appName\":\"File System\",\"instanceId\":1,\"applicationId\":33,\"instanceGUID\":\"D86B6E22-AF63-4DB3-973D-844A10020BBA\"\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":128,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":16,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":4,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":256,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":8192,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"enableActivityType\":true\r},{\r\"activityType\":1024,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":512,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r}\r},{\r\"isDeleted\":false,\"instance\":{\r\"clientId\":9,\"clientName\":\"firewalltestma\",\"instanceName\":\"Test\",\"appName\":\"SQL Server\",\"instanceId\":6,\"applicationId\":81,\"instanceGUID\":\"DC2E6686-BC58-4668-B247-CF0324736480\"\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"mssqlInstance\":{\r\"awsSqlInfo\":{\r\"sqlInstanceCredentials\":{\r\r}\r},\"agProperties\":{\r\"SQLAvailabilityReplicasList\":{\r\r},\"availabilityGroup\":{\r\r},\"proxyClient\":{\r\r}\r},\"azureInfo\":{\r\"azureCredentials\":{\r\r},\"azureSqlInstanceCredentials\":{\r\r}\r}\r}\r},{\r\"isDeleted\":false,\"instance\":{\r\"clientId\":9,\"clientName\":\"firewalltestma\",\"instanceName\":\"Test2\",\"appName\":\"SQL Server\",\"instanceId\":7,\"applicationId\":81,\"instanceGUID\":\"29F4712A-C530-4B5C-8869-AD49CC3115E2\"\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"mssqlInstance\":{\r\"awsSqlInfo\":{\r\"sqlInstanceCredentials\":{\r\r}\r},\"agProperties\":{\r\"SQLAvailabilityReplicasList\":{\r\r},\"availabilityGroup\":{\r\r},\"proxyClient\":{\r\r}\r},\"azureInfo\":{\r\"azureCredentials\":{\r\r},\"azureSqlInstanceCredentials\":{\r\r}\r}\r}\r}\r]\r}"
+            },
+            {
+              "id": "f0e8e85d-392d-f5e6-ec6a-439017735712",
+              "name": "Instance using client id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "{{ServerUrl}}/instance?clientId={{clientId}}",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "instance"
+                  ],
+                  "query": [
+                    {
+                      "key": "clientId",
+                      "value": "{{clientId}}",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "991",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Nov 2017 10:27:30 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "5513",
+              "body": "{\r\"instanceProperties\":[\r{\r\"instance\":{\r\"clientId\":1636,\"clientName\":\"VasiFBR\",\"instanceName\":\"DefaultInstanceName\",\"appName\":\"Linux File System\",\"instanceId\":1,\"applicationId\":29\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":128,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":16,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":4,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":256,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":8192,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":-32,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":1024,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":512,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "3ecf3fe0-8cb2-d295-f538-deffe349135e",
+          "name": "Instance using client name",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "{{ServerUrl}}/instance?clientName={{clientName}}",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "instance"
+              ],
+              "query": [
+                {
+                  "key": "clientName",
+                  "value": "{{clientName}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     }
