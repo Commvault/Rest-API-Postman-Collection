@@ -54081,6 +54081,102 @@
             },
             "description": null
           },
+          "response": [
+            {
+              "id": "c1ff728b-c87a-4847-7cad-6e868bde9647",
+              "name": "Instance using client name",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "{{ServerUrl}}/instance?clientName={{clientName}}",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "instance"
+                  ],
+                  "query": [
+                    {
+                      "key": "clientName",
+                      "value": "{{clientName}}",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "682",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Nov 2017 10:29:31 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2595",
+              "body": "{\r\"instanceProperties\":[\r{\r\"instance\":{\r\"clientId\":2467,\"clientName\":\"testsfp \",\"instanceName\":\"Azure Resource Manager\",\"appName\":\"Virtual Server\",\"instanceId\":49,\"applicationId\":106\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"virtualServerInstance\":{\r\"vsInstanceType\":402,\"associatedClients\":{\r\"memberServers\":[\r{\r\"client\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"sivasp8cs\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":2,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r},\"vmwareVendor\":{\r\r},\"xenServer\":{\r\r}\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "937347ae-5279-d8b2-17d2-3c666fdbac1b",
+          "name": "Instance using parameters",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {},
+            "url": "{{ServerUrl}}/instance/byName(clientName='{{clientName}}',appName='{{appName}}'),instanceName='{{instanceName}}')",
+            "description": null
+          },
           "response": []
         }
       ]
