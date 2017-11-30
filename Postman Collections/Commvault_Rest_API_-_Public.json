@@ -54258,7 +54258,67 @@
             "url": "{{ServerUrl}}/instance/{{instanceId}}",
             "description": null
           },
-          "response": []
+          "response": [
+            {
+              "id": "c8a724f0-3aa7-bc07-2f9e-df376f62bf91",
+              "name": "Instance using instance id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {},
+                "url": "{{ServerUrl}}/instance/{{instanceId}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "670",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Nov 2017 10:35:10 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "1752",
+              "body": "{\r\"instanceProperties\":[\r{\r\"instance\":{\r\"clientId\":1186,\"clientName\":\"IDC-autovc\",\"instanceName\":\"VMware\",\"appName\":\"Virtual Server\",\"instanceId\":50,\"applicationId\":106\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"virtualServerInstance\":{\r\"vsInstanceType\":101,\"associatedClients\":{\r\"memberServers\":[\r{\r\"client\":{\r\"clientName\":\"sivasp8cs\",\"clientId\":2,\"_type_\":3\r}\r}\r]\r},\"vmwareVendor\":{\r\"virtualCenter\":{\r\"domainName\":\"idc-autovc.idcprodcert.loc\",\"userName\":\"idcprodcert\\\\admin\"\r}\r},\"xenServer\":{\r\r}\r}\r}\r]\r}"
+            }
+          ]
         }
       ]
     }
