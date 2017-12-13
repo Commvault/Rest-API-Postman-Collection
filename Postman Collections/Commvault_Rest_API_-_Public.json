@@ -24936,7 +24936,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "{{ServerUrl}}/stream/action/download?appid=49&path=C:\\Sample.txt",
+              "raw": "{{ServerUrl}}/stream/action/download?appid=25&path=C:\\sample.txt",
               "host": [
                 "{{ServerUrl}}"
               ],
@@ -24948,12 +24948,12 @@
               "query": [
                 {
                   "key": "appid",
-                  "value": "49",
+                  "value": "25",
                   "equals": true
                 },
                 {
                   "key": "path",
-                  "value": "C:\\Sample.txt",
+                  "value": "C:\\sample.txt",
                   "equals": true
                 }
               ]
