@@ -24773,7 +24773,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "{{ServerUrl}}/action/preview?appid=49&path=C:\\Siesta-Lake-Sunset.jpg",
+              "raw": "{{ServerUrl}}/action/preview?appid=25&path=C:\\sample.txt",
               "host": [
                 "{{ServerUrl}}"
               ],
@@ -24783,14 +24783,14 @@
               ],
               "query": [
                 {
-                  "equals": true,
                   "key": "appid",
-                  "value": "49"
+                  "value": "25",
+                  "equals": true
                 },
                 {
-                  "equals": true,
                   "key": "path",
-                  "value": "C:\\Siesta-Lake-Sunset.jpg"
+                  "value": "C:\\sample.txt",
+                  "equals": true
                 }
               ]
             },
@@ -24960,7 +24960,118 @@
             },
             "description": "<h2>Description</h2>\nThis operation downloads a backed up file on your laptop computer.\n\n<b>Note:</b> Downloading a folder is currently not supported using this operation.\n\n<h2>Supported Error Codes</h2> \n<table width=\"100%\"> \n <tbody> \n  <tr> \n   <th width=\"20%\">Code</th> \n   <th width=\"20%\">Status</th> \n   <th width=\"60%\">Description</th> \n  </tr> \n  <tr> \n   <td>400</td> \n   <td>Bad Request</td> \n   <td>The request is missing required parameters.</td> \n  </tr> \n  <tr> \n   <td>403</td> \n   <td>Forbidden</td> \n   <td>Download operation is not allowed. This can happen if you attempt to download a folder.</td> \n  </tr> \n  <tr> \n   <td>404</td> \n   <td>Not Found</td> \n   <td>The specified file does not exist.</td> \n  </tr> \n </tbody> \n</table>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_file_download.htm)"
           },
-          "response": []
+          "response": [
+            {
+              "id": "df5bc310-ea23-abe6-223a-815795768ff7",
+              "name": "Download a File",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/stream/action/download?appid=25&path=C:\\sample.txt",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "stream",
+                    "action",
+                    "download"
+                  ],
+                  "query": [
+                    {
+                      "key": "appid",
+                      "value": "25",
+                      "equals": true
+                    },
+                    {
+                      "key": "path",
+                      "value": "C:\\sample.txt",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "raw",
+              "header": [
+                {
+                  "key": "Cache-Control",
+                  "value": "private",
+                  "name": "Cache-Control",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Content-disposition",
+                  "value": "attachment; filename=sample.txt",
+                  "name": "Content-disposition",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 13 Dec 2017 09:43:14 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "name": "Transfer-Encoding",
+                  "description": ""
+                },
+                {
+                  "key": "X-AspNet-Version",
+                  "value": "4.0.30319",
+                  "name": "X-AspNet-Version",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "testcs.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": true,
+                  "value": "D7F1E601525A371BECD45CE7EF8B5D77",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "98873",
+              "body": "Sample text file."
+            }
+          ]
         }
       ]
     },
