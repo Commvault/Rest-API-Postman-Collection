@@ -4077,7 +4077,7 @@
           "response": [
             {
               "id": "866ebc20-f93e-983a-8374-b13b0b459d3f",
-              "name": "Client - This operation deletes the dummy client created using POST Create Dummy Client",
+              "name": "Client - This operation deletes the Test Client created using POST Create Dummy Client",
               "originalRequest": {
                 "method": "DELETE",
                 "header": [
@@ -4134,6 +4134,92 @@
               "cookie": [],
               "responseTime": "4849",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"V11\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":12,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r}"
+            },
+            {
+              "id": "bc6acea1-f9b5-c05c-3b53-96ceb297373a",
+              "name": "Client - Force Delete",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Client/{{clientId}}?forceDelete=True",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Client",
+                    "{{clientId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "forceDelete",
+                      "value": "True",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "274",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 15 Dec 2017 16:53:20 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "522",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"dummyclient\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":93,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r}"
             }
           ]
         }
@@ -24798,7 +24884,7 @@
           },
           "response": [
             {
-              "id": "61eae3b4-e900-64fc-f31b-9b203cf3a257",
+              "id": "590aa7b1-7cda-66f5-18da-cfb4010fdf47",
               "name": "Preview a File",
               "originalRequest": {
                 "method": "GET",
@@ -24817,7 +24903,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "{{ServerUrl}}/action/preview?appid=49&path=C:\\Siesta-Lake-Sunset.jpg",
+                  "raw": "{{ServerUrl}}/action/preview?appid=25&path=C:\\sample.txt",
                   "host": [
                     "{{ServerUrl}}"
                   ],
@@ -24827,81 +24913,84 @@
                   ],
                   "query": [
                     {
-                      "equals": true,
                       "key": "appid",
-                      "value": "49"
+                      "value": "25",
+                      "equals": true
                     },
                     {
-                      "equals": true,
                       "key": "path",
-                      "value": "C:\\Siesta-Lake-Sunset.jpg"
+                      "value": "C:\\sample.txt",
+                      "equals": true
                     }
                   ]
-                },
-                "description": "This operation allows you to preview a backed up file on your laptop computer.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_file_preview.htm)"
+                }
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "html",
               "header": [
                 {
-                  "description": "",
                   "key": "Content-Length",
+                  "value": "466",
                   "name": "Content-Length",
-                  "value": "1257"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Content-Type",
+                  "value": "text/html; charset=utf-8",
                   "name": "Content-Type",
-                  "value": "text/html; charset=utf-8"
+                  "description": ""
                 },
                 {
-                  "description": "",
-                  "key": "Content-disposition",
-                  "name": "Content-disposition",
-                  "value": ""
-                },
-                {
-                  "description": "",
                   "key": "Date",
+                  "value": "Wed, 13 Dec 2017 09:45:23 GMT",
                   "name": "Date",
-                  "value": "Thu, 01 Jun 2017 09:10:06 GMT"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "FileModifiedtime",
+                  "value": "1513152562",
                   "name": "FileModifiedtime",
-                  "value": "1496307934"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "FileName",
+                  "value": "c2FtcGxlLnR4dA==",
                   "name": "FileName",
-                  "value": "d2YudHh0"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "FileSize",
+                  "value": "17",
                   "name": "FileSize",
-                  "value": "784"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "X-Powered-By",
+                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "value": "ASP.NET"
+                  "description": ""
                 }
               ],
-              "cookie": [],
-              "responseTime": "26740",
-              "body": "<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n<head>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.txt.TXTParser\"/>\r\n\r\n<meta name=\"Content-Encoding\" content=\"windows-1252\"/>\r\n\r\n<meta name=\"ext_name\" content=\"txt\"/>\r\n\r\n<meta name=\"Content-Type\" content=\"text/plain; charset=windows-1252\"/>\r\n\r\n\r\n</head>\r\n\r\n<body background=\"\" >\r\n<pre>Next up: You can try creating a workflow that retrieves the IP of all machines in a client group and writes that info to a file and also sends the admin an email.\r\r\n\r\r\n  In addition to IP. Also retrieve Client install location\r\r\n  6:16 PM\r\r\n  i.e. C:/ProgramFiles/Commvault/ContentStore \r\r\n  \r\r\n  Think of the best way to do it for each client uniformly\r\r\n  \r\r\nnetsh interface ip show address | findstr \"IP Address\"\r\r\n\r\r\n\r\r\nString value = WinRegistry.readString (\r\r\n    WinRegistry.HKEY_LOCAL_MACHINE,                             //HKEY\r\r\n   \"SOFTWARE\\\\Commvault Systems\\\\Galaxy\\\\Instance001\\\\Base\",           //Key\r\r\n   \"dBASEHOME\");          \r\r\n\r\r\n\r\r\n                                    //ValueName\r\r\n\r\r\n\r\r\nreg query \"HKEY_LOCAL_MACHINE\\SOFTWARE\\CommVault Systems\\Galaxy\\Instance001\\Base\" | findstr dBASEHOME</pre>\r\n</body>\r\n</html>\r\n\r\n"
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "testcs.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": true,
+                  "value": "D7F1E601525A371BECD45CE7EF8B5D77",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "70004",
+              "body": "<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n<head>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\r\n\r\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.txt.TXTParser\"/>\r\n\r\n<meta name=\"Content-Encoding\" content=\"ISO-8859-1\"/>\r\n\r\n<meta name=\"ext_name\" content=\"tmp\"/>\r\n\r\n<meta name=\"Content-Type\" content=\"text/plain; charset=ISO-8859-1\"/>\r\n\r\n\r\n</head>\r\n\r\n<body background=\"\" >\r\n<pre>Sample text file.</pre>\r\n</body>\r\n</html>\r\n\r\n"
             }
           ]
         },
@@ -48580,7 +48669,7 @@
     },
     {
       "_postman_id": "97b537ca-f3bd-c74d-ce22-42fe9a96344c",
-      "name": "Admin Console Operations(New)",
+      "name": "Admin Console Operations",
       "description": "",
       "item": [
         {
