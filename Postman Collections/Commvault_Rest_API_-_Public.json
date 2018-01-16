@@ -53207,715 +53207,7 @@
       "_postman_id": "97b537ca-f3bd-c74d-ce22-42fe9a96344c",
       "name": "Admin Console Operations",
       "description": "",
-      "item": [
-        {
-          "_postman_id": "b0487d53-452c-2374-47c5-882f7dc5be1e",
-          "name": "Organization Operations",
-          "description": "",
-          "item": [
-            {
-              "_postman_id": "3e61bfb2-6745-8e25-304f-82a67a5dc9b1",
-              "name": "Organization",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "",
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "",
-                      "tests[\"Validating error code\"] = jsonData.response.errorCode === 0;",
-                      "",
-                      "postman.setEnvironmentVariable(\"OrganizationId\", jsonData.response.entity.providerId);",
-                      "postman.setEnvironmentVariable(\"OrganizationDomainName\", jsonData.response.entity.providerDomainName);"
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"organizationInfo\": {\n    \"planDetails\": [\n      {\n        \"description\": \"Laptop plan\",\n        \"restrictions\": 0,\n        \"type\": 2,\n        \"planStatusFlag\": 0,\n        \"numDevices\": 0,\n        \"subtype\": 33554439,\n        \"numUsers\": 0,\n        \"permissions\": [\n          {\n            \"permissionId\": 31\n          },\n          {\n            \"permissionId\": 159\n          },\n          {\n            \"permissionId\": 158\n          },\n          {\n            \"permissionId\": 157\n          }\n        ],\n        \"planOwner\": {\n          \"userName\": \"Administrator\",\n          \"userId\": 1\n        },\n        \"plan\": {\n          \"planName\": \"Laptop plan\",\n          \"planId\": 1\n        }\n      }\n    ],\n    \"organization\": {\n      \"connectName\": \"test Company3\",\n      \"emailDomainNames\": [\n        \"mail.com\"\n      ],\n      \"shortName\": {\n        \"domainName\": \"testalias3\"\n      }\n    },\n    \"organizationProperties\": {\n      \"primaryDomain\": \"\",\n      \"primaryContacts\": [\n        {\n          \"fullName\": \"testadmin\",\n          \"email\": \"testmail3@mail.com\"\n        }\n      ]\n    }\n  }\n}"
-                },
-                "url": "{{ServerUrl}}/Organization",
-                "description": "<h2>Description</h2>\nThis operation creates an Organization."
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "f35cf426-69e2-d147-eea7-2a0b52fdd584",
-              "name": "Organization",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "",
-                      "tests[\"Response Body contains providers\"] = responseBody.has(\"providers\");"
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/Organization",
-                "description": "<h2>Description</h2>\nThis operation returns all Organizations"
-              },
-              "response": [
-                {
-                  "id": "c1f030ab-78dc-135e-baa5-0af6697dd3d5",
-                  "name": "Organization",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{ServerUrl}}/Organization"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "526",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Tue, 10 Oct 2017 17:49:09 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                      "httpOnly": true,
-                      "domain": "greenvalley.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "930C162901E43496C2ED776C7233E414",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "48",
-                  "body": "{\r\"providers\":[\r{\r\"serviceType\":5,\"flags\":0,\"description\":\"Test Company\",\"enabled\":1,\"bTrustedHostUser\":\"\",\"useSecureLdap\":0,\"connectName\":\"Test Company\",\"port\":0,\"bLogin\":\"\",\"tppm\":{\r\"enable\":false,\"tppmType\":4,\"proxyInformation\":{\r\"portNumber\":0,\"proxyEntity\":{\r\"clientName\":\"0\",\"clientId\":0,\"_type_\":3\r}\r}\r},\"primaryContacts\":[\r{\r\"fullName\":\"admin\",\"user\":{\r\"userName\":\"test\\\\testcompanyadmin\",\"userId\":130\r}\r}\r],\"resourceProvider\":{\r\"domainName\":\"Qinetix Commcell\",\"id\":0\r},\"shortName\":{\r\"domainName\":\"test\",\"id\":6\r}\r}\r]\r}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "7b06f244-626c-1fa6-4779-f9cfde4b086a",
-              "name": "Organization Details",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "",
-                      "tests[\"Response Body contains organizationInfo\"] = responseBody.has(\"organizationInfo\");"
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/Organization/{{organizationId}}",
-                "description": "<h2>Description</h2>\nThis operation returns details of an Organization."
-              },
-              "response": [
-                {
-                  "id": "417a4ed7-0617-867c-ea6d-bde18de033cf",
-                  "name": "Organization Details",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}",
-                        "disabled": false
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}",
-                        "disabled": false
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{ServerUrl}}/Organization/{{organizationId}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "827",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Tue, 10 Oct 2017 19:17:56 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                      "httpOnly": true,
-                      "domain": "greenvalley.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "930C162901E43496C2ED776C7233E414",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "1057",
-                  "body": "{\r\"organizationInfo\":{\r\"organization\":{\r\"serviceType\":5,\"flags\":0,\"description\":\"test Company\",\"login\":\"\",\"enabled\":1,\"useSecureLdap\":0,\"connectName\":\"test Company\",\"port\":0,\"tppm\":{\r\"enable\":false,\"tppmType\":4,\"proxyInformation\":{\r\"portNumber\":0,\"proxyEntity\":{\r\"clientName\":\"0\",\"clientId\":0,\"_type_\":3\r}\r}\r},\"emailDomainNames\":[\r\"mail.com\"\r],\"resourceProvider\":{\r\"domainName\":\"Qinetix Commcell\",\"id\":0\r},\"shortName\":{\r\"domainName\":\"testalias\",\"id\":16\r}\r},\"organizationProperties\":{\r\"physicalDeviceCount\":0,\"authCode\":\"\",\"deviceCount\":0,\"orgCreationDateTime\":1507659390,\"hypervisiorCount\":0,\"totalMachineCount\":0,\"enableAuthCodeGen\":false,\"miscMachineCount\":0,\"serverCount\":0,\"userCount\":1,\"vmCount\":0,\"primaryContacts\":[\r{\r\"fullName\":\"testadmin\",\"user\":{\r\"_type_\":13,\"userName\":\"testalias\\\\testmail2\",\"userId\":140\r}\r}\r]\r}\r}\r}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "2ff77e5b-b88c-c54b-4058-04939382b91e",
-              "name": "Organization",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "",
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"organizationInfo\": {\n    \"planDetails\": [\n      {\n        \"plan\": {\n          \"planId\": {{PlanId}}\n        }\n      }\n    ],\n    \"organization\": {\n      \"serviceType\": 5,\n      \"flags\": 0,\n      \"description\": \"test Company\",\n      \"login\": \"\",\n      \"enabled\": 1,\n      \"useSecureLdap\": 0,\n      \"connectName\": \"test Company\",\n      \"port\": 0,\n      \"tppm\": {\n        \"enable\": false,\n        \"tppmType\": 4,\n        \"proxyInformation\": {\n          \"portNumber\": 0,\n          \"proxyEntity\": {\n            \"clientName\": \"0\",\n            \"clientId\": 0,\n            \"_type_\": 3\n          }\n        }\n      },\n      \"emailDomainNames\": [\n        \"mail.com\"\n      ],\n      \"resourceProvider\": {\n        \"domainName\": \"Qinetix Commcell\",\n        \"id\": 0\n      },\n      \"shortName\": {\n        \"domainName\": \"testalias\",\n        \"id\": 16\n      }\n    },\n    \"organizationProperties\": {\n      \"physicalDeviceCount\": 0,\n      \"authCode\": \"\",\n      \"deviceCount\": 0,\n      \"orgCreationDateTime\": 1507659390,\n      \"hypervisiorCount\": 0,\n      \"totalMachineCount\": 0,\n      \"enableAuthCodeGen\": false,\n      \"miscMachineCount\": 0,\n      \"serverCount\": 0,\n      \"userCount\": 1,\n      \"vmCount\": 0,\n      \"primaryContacts\": [\n        {\n          \"fullName\": \"testadmin\",\n          \"user\": {\n            \"_type_\": 13,\n            \"userName\": \"testalias\\\\testmail2\",\n            \"userId\": 140\n          }\n        }\n      ]\n    }\n  }\n}"
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/Organization?organizationId={{organizationId}}",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Organization"
-                  ],
-                  "query": [
-                    {
-                      "key": "organizationId",
-                      "value": "{{organizationId}}",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "<h2>Description</h2>\nThis operation updates an Organization."
-              },
-              "response": [
-                {
-                  "id": "2d56a006-5781-7df1-5ab7-ffb803b61c0f",
-                  "name": "Update Organization - Deassociate Plan.",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"organizationInfo\": {\n\t\t\"organization\": {\n\t\t\t\"serviceType\": 5,\n\t\t\t\"flags\": 0,\n\t\t\t\"description\": \"test Company\",\n\t\t\t\"login\": \"\",\n\t\t\t\"enabled\": 1,\n\t\t\t\"useSecureLdap\": 0,\n\t\t\t\"connectName\": \"test Company\",\n\t\t\t\"port\": 0,\n\t\t\t\"tppm\": {\n\t\t\t\t\"enable\": false,\n\t\t\t\t\"tppmType\": 4,\n\t\t\t\t\"proxyInformation\": {\n\t\t\t\t\t\"portNumber\": 0,\n\t\t\t\t\t\"proxyEntity\": {\n\t\t\t\t\t\t\"clientName\": \"0\",\n\t\t\t\t\t\t\"clientId\": 0,\n\t\t\t\t\t\t\"_type_\": 3\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"emailDomainNames\": [\n\t\t\t\t\"mail.com\"\n\t\t\t],\n\t\t\t\"resourceProvider\": {\n\t\t\t\t\"domainName\": \"Qinetix Commcell\",\n\t\t\t\t\"id\": 0\n\t\t\t},\n\t\t\t\"shortName\": {\n\t\t\t\t\"domainName\": \"testalias\",\n\t\t\t\t\"id\": 16\n\t\t\t}\n\t\t},\n\t\t\"organizationProperties\": {\n\t\t\t\"physicalDeviceCount\": 0,\n\t\t\t\"authCode\": \"\",\n\t\t\t\"deviceCount\": 0,\n\t\t\t\"orgCreationDateTime\": 1507659390,\n\t\t\t\"hypervisiorCount\": 0,\n\t\t\t\"totalMachineCount\": 0,\n\t\t\t\"enableAuthCodeGen\": false,\n\t\t\t\"miscMachineCount\": 0,\n\t\t\t\"serverCount\": 0,\n\t\t\t\"userCount\": 1,\n\t\t\t\"vmCount\": 0,\n\t\t\t\"primaryContacts\": [\n\t\t\t\t{\n\t\t\t\t\t\"fullName\": \"testadmin\",\n\t\t\t\t\t\"user\": {\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"testalias\\\\testmail2\",\n\t\t\t\t\t\t\"userId\": 140\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
-                    },
-                    "url": {
-                      "raw": "{{ServerUrl}}/Organization?organizationId={{organizationId}}",
-                      "host": [
-                        "{{ServerUrl}}"
-                      ],
-                      "path": [
-                        "Organization"
-                      ],
-                      "query": [
-                        {
-                          "key": "organizationId",
-                          "value": "{{organizationId}}",
-                          "equals": true
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "47",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Tue, 10 Oct 2017 22:33:08 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                      "httpOnly": true,
-                      "domain": "greenvalley.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "930C162901E43496C2ED776C7233E414",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "67",
-                  "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-                },
-                {
-                  "id": "6c6f234f-7a8f-8ed5-28b6-93fffec92bc6",
-                  "name": "Update Organization - Associate Plan",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"organizationInfo\": {\n\t\t\"planDetails\": [\n\t\t\t{\n\t\t\t\t\"plan\": {\n\t\t\t\t\t\"planId\": {{PlanId}}\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"organization\": {\n\t\t\t\"serviceType\": 5,\n\t\t\t\"flags\": 0,\n\t\t\t\"description\": \"test Company\",\n\t\t\t\"login\": \"\",\n\t\t\t\"enabled\": 1,\n\t\t\t\"useSecureLdap\": 0,\n\t\t\t\"connectName\": \"test Company\",\n\t\t\t\"port\": 0,\n\t\t\t\"tppm\": {\n\t\t\t\t\"enable\": false,\n\t\t\t\t\"tppmType\": 4,\n\t\t\t\t\"proxyInformation\": {\n\t\t\t\t\t\"portNumber\": 0,\n\t\t\t\t\t\"proxyEntity\": {\n\t\t\t\t\t\t\"clientName\": \"0\",\n\t\t\t\t\t\t\"clientId\": 0,\n\t\t\t\t\t\t\"_type_\": 3\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"emailDomainNames\": [\n\t\t\t\t\"mail.com\"\n\t\t\t],\n\t\t\t\"resourceProvider\": {\n\t\t\t\t\"domainName\": \"Qinetix Commcell\",\n\t\t\t\t\"id\": 0\n\t\t\t},\n\t\t\t\"shortName\": {\n\t\t\t\t\"domainName\": \"testalias\",\n\t\t\t\t\"id\": 16\n\t\t\t}\n\t\t},\n\t\t\"organizationProperties\": {\n\t\t\t\"physicalDeviceCount\": 0,\n\t\t\t\"authCode\": \"\",\n\t\t\t\"deviceCount\": 0,\n\t\t\t\"orgCreationDateTime\": 1507659390,\n\t\t\t\"hypervisiorCount\": 0,\n\t\t\t\"totalMachineCount\": 0,\n\t\t\t\"enableAuthCodeGen\": false,\n\t\t\t\"miscMachineCount\": 0,\n\t\t\t\"serverCount\": 0,\n\t\t\t\"userCount\": 1,\n\t\t\t\"vmCount\": 0,\n\t\t\t\"primaryContacts\": [\n\t\t\t\t{\n\t\t\t\t\t\"fullName\": \"testadmin\",\n\t\t\t\t\t\"user\": {\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"testalias\\\\testmail2\",\n\t\t\t\t\t\t\"userId\": 140\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
-                    },
-                    "url": {
-                      "raw": "{{ServerUrl}}/Organization?organizationId={{organizationId}}",
-                      "host": [
-                        "{{ServerUrl}}"
-                      ],
-                      "path": [
-                        "Organization"
-                      ],
-                      "query": [
-                        {
-                          "key": "organizationId",
-                          "value": "{{organizationId}}",
-                          "equals": true
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "57",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Tue, 10 Oct 2017 19:25:05 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                      "httpOnly": true,
-                      "domain": "greenvalley.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "930C162901E43496C2ED776C7233E414",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "142",
-                  "body": "{\r\"error\":{\r\"errorMessage\":\"Successful\",\"errorCode\":0\r}\r}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "aa77ed47-36c6-756c-9a97-139b384450c2",
-              "name": "Organization",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "",
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/Organization/{{organizationId}}",
-                "description": "<h2>Description</h2>\nThis operation deletes an Organization."
-              },
-              "response": [
-                {
-                  "id": "41e850df-b04d-993c-cd45-699c608280f0",
-                  "name": "Organization",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{ServerUrl}}/Organization/{{organizationId}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "35",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Tue, 10 Oct 2017 22:40:23 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                      "httpOnly": true,
-                      "domain": "greenvalley.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "930C162901E43496C2ED776C7233E414",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "236",
-                  "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
-                },
-                {
-                  "id": "52d6131c-3a1a-419a-9ad3-22be682525f4",
-                  "name": "Delete Plan",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}",
-                        "disabled": false
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}",
-                        "disabled": false
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": {
-                      "raw": "{{ServerUrl}}/Plan/{{PlanId}}?confirmDelete=true",
-                      "host": [
-                        "{{ServerUrl}}"
-                      ],
-                      "path": [
-                        "Plan",
-                        "{{PlanId}}"
-                      ],
-                      "query": [
-                        {
-                          "key": "confirmDelete",
-                          "value": "true",
-                          "equals": true
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "35",
-                      "name": "Content-Length",
-                      "description": ""
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": ""
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Fri, 15 Sep 2017 17:51:53 GMT",
-                      "name": "Date",
-                      "description": ""
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": ""
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": ""
-                    }
-                  ],
-                  "cookie": [
-                    {
-                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                      "httpOnly": true,
-                      "domain": "greenvalley.testlab.commvault.com",
-                      "path": "/webconsole",
-                      "secure": false,
-                      "value": "930C162901E43496C2ED776C7233E414",
-                      "key": "JSESSIONID"
-                    }
-                  ],
-                  "responseTime": "70",
-                  "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
-                }
-              ]
-            }
-          ],
-          "_postman_isSubFolder": true
-        }
-      ]
+      "item": []
     },
     {
       "_postman_id": "ed37e87f-48d7-723f-0d59-589f07d783f2",
@@ -54350,6 +53642,712 @@
               "cookie": [],
               "responseTime": "1752",
               "body": "{\r\"instanceProperties\":[\r{\r\"instance\":{\r\"clientId\":1186,\"clientName\":\"IDC-autovc\",\"instanceName\":\"VMware\",\"appName\":\"Virtual Server\",\"instanceId\":50,\"applicationId\":106\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"virtualServerInstance\":{\r\"vsInstanceType\":101,\"associatedClients\":{\r\"memberServers\":[\r{\r\"client\":{\r\"clientName\":\"sivasp8cs\",\"clientId\":2,\"_type_\":3\r}\r}\r]\r},\"vmwareVendor\":{\r\"virtualCenter\":{\r\"domainName\":\"idc-autovc.idcprodcert.loc\",\"userName\":\"idcprodcert\\\\admin\"\r}\r},\"xenServer\":{\r\r}\r}\r}\r]\r}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_postman_id": "b0487d53-452c-2374-47c5-882f7dc5be1e",
+      "name": "Organization Operations",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "3e61bfb2-6745-8e25-304f-82a67a5dc9b1",
+          "name": "Organization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Validating error code\"] = jsonData.response.errorCode === 0;",
+                  "",
+                  "postman.setEnvironmentVariable(\"OrganizationId\", jsonData.response.entity.providerId);",
+                  "postman.setEnvironmentVariable(\"OrganizationDomainName\", jsonData.response.entity.providerDomainName);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"organizationInfo\": {\n    \"planDetails\": [\n      {\n        \"description\": \"Laptop plan\",\n        \"restrictions\": 0,\n        \"type\": 2,\n        \"planStatusFlag\": 0,\n        \"numDevices\": 0,\n        \"subtype\": 33554439,\n        \"numUsers\": 0,\n        \"permissions\": [\n          {\n            \"permissionId\": 31\n          },\n          {\n            \"permissionId\": 159\n          },\n          {\n            \"permissionId\": 158\n          },\n          {\n            \"permissionId\": 157\n          }\n        ],\n        \"planOwner\": {\n          \"userName\": \"Administrator\",\n          \"userId\": 1\n        },\n        \"plan\": {\n          \"planName\": \"Laptop plan\",\n          \"planId\": 1\n        }\n      }\n    ],\n    \"organization\": {\n      \"connectName\": \"test Company3\",\n      \"emailDomainNames\": [\n        \"mail.com\"\n      ],\n      \"shortName\": {\n        \"domainName\": \"testalias3\"\n      }\n    },\n    \"organizationProperties\": {\n      \"primaryDomain\": \"\",\n      \"primaryContacts\": [\n        {\n          \"fullName\": \"testadmin\",\n          \"email\": \"testmail3@mail.com\"\n        }\n      ]\n    }\n  }\n}"
+            },
+            "url": "{{ServerUrl}}/Organization",
+            "description": "<h2>Description</h2>\nThis operation creates an Organization."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f35cf426-69e2-d147-eea7-2a0b52fdd584",
+          "name": "Organization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains providers\"] = responseBody.has(\"providers\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/Organization",
+            "description": "<h2>Description</h2>\nThis operation returns all Organizations"
+          },
+          "response": [
+            {
+              "id": "c1f030ab-78dc-135e-baa5-0af6697dd3d5",
+              "name": "Organization",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/Organization"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "526",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Oct 2017 17:49:09 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "48",
+              "body": "{\r\"providers\":[\r{\r\"serviceType\":5,\"flags\":0,\"description\":\"Test Company\",\"enabled\":1,\"bTrustedHostUser\":\"\",\"useSecureLdap\":0,\"connectName\":\"Test Company\",\"port\":0,\"bLogin\":\"\",\"tppm\":{\r\"enable\":false,\"tppmType\":4,\"proxyInformation\":{\r\"portNumber\":0,\"proxyEntity\":{\r\"clientName\":\"0\",\"clientId\":0,\"_type_\":3\r}\r}\r},\"primaryContacts\":[\r{\r\"fullName\":\"admin\",\"user\":{\r\"userName\":\"test\\\\testcompanyadmin\",\"userId\":130\r}\r}\r],\"resourceProvider\":{\r\"domainName\":\"Qinetix Commcell\",\"id\":0\r},\"shortName\":{\r\"domainName\":\"test\",\"id\":6\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "7b06f244-626c-1fa6-4779-f9cfde4b086a",
+          "name": "Organization Details",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains organizationInfo\"] = responseBody.has(\"organizationInfo\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/Organization/{{organizationId}}",
+            "description": "<h2>Description</h2>\nThis operation returns details of an Organization."
+          },
+          "response": [
+            {
+              "id": "417a4ed7-0617-867c-ea6d-bde18de033cf",
+              "name": "Organization Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/Organization/{{organizationId}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "827",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Oct 2017 19:17:56 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "1057",
+              "body": "{\r\"organizationInfo\":{\r\"organization\":{\r\"serviceType\":5,\"flags\":0,\"description\":\"test Company\",\"login\":\"\",\"enabled\":1,\"useSecureLdap\":0,\"connectName\":\"test Company\",\"port\":0,\"tppm\":{\r\"enable\":false,\"tppmType\":4,\"proxyInformation\":{\r\"portNumber\":0,\"proxyEntity\":{\r\"clientName\":\"0\",\"clientId\":0,\"_type_\":3\r}\r}\r},\"emailDomainNames\":[\r\"mail.com\"\r],\"resourceProvider\":{\r\"domainName\":\"Qinetix Commcell\",\"id\":0\r},\"shortName\":{\r\"domainName\":\"testalias\",\"id\":16\r}\r},\"organizationProperties\":{\r\"physicalDeviceCount\":0,\"authCode\":\"\",\"deviceCount\":0,\"orgCreationDateTime\":1507659390,\"hypervisiorCount\":0,\"totalMachineCount\":0,\"enableAuthCodeGen\":false,\"miscMachineCount\":0,\"serverCount\":0,\"userCount\":1,\"vmCount\":0,\"primaryContacts\":[\r{\r\"fullName\":\"testadmin\",\"user\":{\r\"_type_\":13,\"userName\":\"testalias\\\\testmail2\",\"userId\":140\r}\r}\r]\r}\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "2ff77e5b-b88c-c54b-4058-04939382b91e",
+          "name": "Organization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"organizationInfo\": {\n    \"planDetails\": [\n      {\n        \"plan\": {\n          \"planId\": {{PlanId}}\n        }\n      }\n    ],\n    \"organization\": {\n      \"serviceType\": 5,\n      \"flags\": 0,\n      \"description\": \"test Company\",\n      \"login\": \"\",\n      \"enabled\": 1,\n      \"useSecureLdap\": 0,\n      \"connectName\": \"test Company\",\n      \"port\": 0,\n      \"tppm\": {\n        \"enable\": false,\n        \"tppmType\": 4,\n        \"proxyInformation\": {\n          \"portNumber\": 0,\n          \"proxyEntity\": {\n            \"clientName\": \"0\",\n            \"clientId\": 0,\n            \"_type_\": 3\n          }\n        }\n      },\n      \"emailDomainNames\": [\n        \"mail.com\"\n      ],\n      \"resourceProvider\": {\n        \"domainName\": \"Qinetix Commcell\",\n        \"id\": 0\n      },\n      \"shortName\": {\n        \"domainName\": \"testalias\",\n        \"id\": 16\n      }\n    },\n    \"organizationProperties\": {\n      \"physicalDeviceCount\": 0,\n      \"authCode\": \"\",\n      \"deviceCount\": 0,\n      \"orgCreationDateTime\": 1507659390,\n      \"hypervisiorCount\": 0,\n      \"totalMachineCount\": 0,\n      \"enableAuthCodeGen\": false,\n      \"miscMachineCount\": 0,\n      \"serverCount\": 0,\n      \"userCount\": 1,\n      \"vmCount\": 0,\n      \"primaryContacts\": [\n        {\n          \"fullName\": \"testadmin\",\n          \"user\": {\n            \"_type_\": 13,\n            \"userName\": \"testalias\\\\testmail2\",\n            \"userId\": 140\n          }\n        }\n      ]\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/Organization?organizationId={{organizationId}}",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Organization"
+              ],
+              "query": [
+                {
+                  "key": "organizationId",
+                  "value": "{{organizationId}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "<h2>Description</h2>\nThis operation updates an Organization."
+          },
+          "response": [
+            {
+              "id": "2d56a006-5781-7df1-5ab7-ffb803b61c0f",
+              "name": "Update Organization - Deassociate Plan.",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"organizationInfo\": {\n\t\t\"organization\": {\n\t\t\t\"serviceType\": 5,\n\t\t\t\"flags\": 0,\n\t\t\t\"description\": \"test Company\",\n\t\t\t\"login\": \"\",\n\t\t\t\"enabled\": 1,\n\t\t\t\"useSecureLdap\": 0,\n\t\t\t\"connectName\": \"test Company\",\n\t\t\t\"port\": 0,\n\t\t\t\"tppm\": {\n\t\t\t\t\"enable\": false,\n\t\t\t\t\"tppmType\": 4,\n\t\t\t\t\"proxyInformation\": {\n\t\t\t\t\t\"portNumber\": 0,\n\t\t\t\t\t\"proxyEntity\": {\n\t\t\t\t\t\t\"clientName\": \"0\",\n\t\t\t\t\t\t\"clientId\": 0,\n\t\t\t\t\t\t\"_type_\": 3\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"emailDomainNames\": [\n\t\t\t\t\"mail.com\"\n\t\t\t],\n\t\t\t\"resourceProvider\": {\n\t\t\t\t\"domainName\": \"Qinetix Commcell\",\n\t\t\t\t\"id\": 0\n\t\t\t},\n\t\t\t\"shortName\": {\n\t\t\t\t\"domainName\": \"testalias\",\n\t\t\t\t\"id\": 16\n\t\t\t}\n\t\t},\n\t\t\"organizationProperties\": {\n\t\t\t\"physicalDeviceCount\": 0,\n\t\t\t\"authCode\": \"\",\n\t\t\t\"deviceCount\": 0,\n\t\t\t\"orgCreationDateTime\": 1507659390,\n\t\t\t\"hypervisiorCount\": 0,\n\t\t\t\"totalMachineCount\": 0,\n\t\t\t\"enableAuthCodeGen\": false,\n\t\t\t\"miscMachineCount\": 0,\n\t\t\t\"serverCount\": 0,\n\t\t\t\"userCount\": 1,\n\t\t\t\"vmCount\": 0,\n\t\t\t\"primaryContacts\": [\n\t\t\t\t{\n\t\t\t\t\t\"fullName\": \"testadmin\",\n\t\t\t\t\t\"user\": {\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"testalias\\\\testmail2\",\n\t\t\t\t\t\t\"userId\": 140\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Organization?organizationId={{organizationId}}",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Organization"
+                  ],
+                  "query": [
+                    {
+                      "key": "organizationId",
+                      "value": "{{organizationId}}",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "47",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Oct 2017 22:33:08 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "67",
+              "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
+            },
+            {
+              "id": "6c6f234f-7a8f-8ed5-28b6-93fffec92bc6",
+              "name": "Update Organization - Associate Plan",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"organizationInfo\": {\n\t\t\"planDetails\": [\n\t\t\t{\n\t\t\t\t\"plan\": {\n\t\t\t\t\t\"planId\": {{PlanId}}\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"organization\": {\n\t\t\t\"serviceType\": 5,\n\t\t\t\"flags\": 0,\n\t\t\t\"description\": \"test Company\",\n\t\t\t\"login\": \"\",\n\t\t\t\"enabled\": 1,\n\t\t\t\"useSecureLdap\": 0,\n\t\t\t\"connectName\": \"test Company\",\n\t\t\t\"port\": 0,\n\t\t\t\"tppm\": {\n\t\t\t\t\"enable\": false,\n\t\t\t\t\"tppmType\": 4,\n\t\t\t\t\"proxyInformation\": {\n\t\t\t\t\t\"portNumber\": 0,\n\t\t\t\t\t\"proxyEntity\": {\n\t\t\t\t\t\t\"clientName\": \"0\",\n\t\t\t\t\t\t\"clientId\": 0,\n\t\t\t\t\t\t\"_type_\": 3\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"emailDomainNames\": [\n\t\t\t\t\"mail.com\"\n\t\t\t],\n\t\t\t\"resourceProvider\": {\n\t\t\t\t\"domainName\": \"Qinetix Commcell\",\n\t\t\t\t\"id\": 0\n\t\t\t},\n\t\t\t\"shortName\": {\n\t\t\t\t\"domainName\": \"testalias\",\n\t\t\t\t\"id\": 16\n\t\t\t}\n\t\t},\n\t\t\"organizationProperties\": {\n\t\t\t\"physicalDeviceCount\": 0,\n\t\t\t\"authCode\": \"\",\n\t\t\t\"deviceCount\": 0,\n\t\t\t\"orgCreationDateTime\": 1507659390,\n\t\t\t\"hypervisiorCount\": 0,\n\t\t\t\"totalMachineCount\": 0,\n\t\t\t\"enableAuthCodeGen\": false,\n\t\t\t\"miscMachineCount\": 0,\n\t\t\t\"serverCount\": 0,\n\t\t\t\"userCount\": 1,\n\t\t\t\"vmCount\": 0,\n\t\t\t\"primaryContacts\": [\n\t\t\t\t{\n\t\t\t\t\t\"fullName\": \"testadmin\",\n\t\t\t\t\t\"user\": {\n\t\t\t\t\t\t\"_type_\": 13,\n\t\t\t\t\t\t\"userName\": \"testalias\\\\testmail2\",\n\t\t\t\t\t\t\"userId\": 140\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Organization?organizationId={{organizationId}}",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Organization"
+                  ],
+                  "query": [
+                    {
+                      "key": "organizationId",
+                      "value": "{{organizationId}}",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "57",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Oct 2017 19:25:05 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "142",
+              "body": "{\r\"error\":{\r\"errorMessage\":\"Successful\",\"errorCode\":0\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "aa77ed47-36c6-756c-9a97-139b384450c2",
+          "name": "Organization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Validating error code\"] = jsonData.error.errorCode === 0;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/Organization/{{organizationId}}",
+            "description": "<h2>Description</h2>\nThis operation deletes an Organization."
+          },
+          "response": [
+            {
+              "id": "41e850df-b04d-993c-cd45-699c608280f0",
+              "name": "Organization",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/Organization/{{organizationId}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "35",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Oct 2017 22:40:23 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "236",
+              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+            },
+            {
+              "id": "52d6131c-3a1a-419a-9ad3-22be682525f4",
+              "name": "Delete Plan",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Plan/{{PlanId}}?confirmDelete=true",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Plan",
+                    "{{PlanId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "confirmDelete",
+                      "value": "true",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "35",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 15 Sep 2017 17:51:53 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "70",
+              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
             }
           ]
         }
