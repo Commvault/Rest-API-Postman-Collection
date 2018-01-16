@@ -39913,122 +39913,7 @@
       "_postman_id": "d434bb06-0304-66db-db93-2532ebd11205",
       "name": "Plan Operations",
       "description": "",
-      "item": [
-        {
-          "_postman_id": "6307e5b7-bfca-99b3-ecd8-14cdab82daf1",
-          "name": "Update Plan SLA",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"summary\": {\r\n    \"slaInMinutes\": 2 ,\r\n    \"plan\": {\r\n      \"planId\": 1\r\n    }\r\n  }\r\n}"
-            },
-            "url": "{{ServerUrl}}/Plan/1/sla",
-            "description": "<h2> Description </h2>\nThis operation updates the SLA (service level agreement) for a plan.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_plan_sla.htm)"
-          },
-          "response": [
-            {
-              "id": "616f48be-2431-31d8-542a-bc2816e513d7",
-              "name": "Update Plan SLA",
-              "originalRequest": {
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"summary\": {\r\n    \"slaInMinutes\": 2 ,\r\n    \"plan\": {\r\n      \"planId\": 1\r\n    }\r\n  }\r\n}"
-                },
-                "url": "{{ServerUrl}}/Plan/1/sla"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "3687",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Fri, 08 Dec 2017 21:02:43 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "2091",
-              "body": "<Api_UpdatePlanResp>\r\n\t<plan>\r\n\t\t<summary slaInMinutes=\"0\" restrictions=\"0\" type=\"2\" planStatusFlag=\"2\" numDevices=\"0\" subtype=\"33554439\" numUsers=\"1\">\r\n\t\t\t<permissions permissionId=\"1\" />\r\n\t\t\t<permissions permissionId=\"2\" />\r\n\t\t\t<permissions permissionId=\"3\" />\r\n\t\t\t<permissions permissionId=\"4\" />\r\n\t\t\t<permissions permissionId=\"5\" />\r\n\t\t\t<permissions permissionId=\"6\" />\r\n\t\t\t<permissions permissionId=\"7\" />\r\n\t\t\t<permissions permissionId=\"8\" />\r\n\t\t\t<permissions permissionId=\"9\" />\r\n\t\t\t<permissions permissionId=\"10\" />\r\n\t\t\t<permissions permissionId=\"11\" />\r\n\t\t\t<permissions permissionId=\"12\" />\r\n\t\t\t<permissions permissionId=\"13\" />\r\n\t\t\t<permissions permissionId=\"15\" />\r\n\t\t\t<permissions permissionId=\"16\" />\r\n\t\t\t<permissions permissionId=\"18\" />\r\n\t\t\t<permissions permissionId=\"20\" />\r\n\t\t\t<permissions permissionId=\"22\" />\r\n\t\t\t<permissions permissionId=\"24\" />\r\n\t\t\t<permissions permissionId=\"25\" />\r\n\t\t\t<permissions permissionId=\"26\" />\r\n\t\t\t<permissions permissionId=\"27\" />\r\n\t\t\t<permissions permissionId=\"29\" />\r\n\t\t\t<permissions permissionId=\"31\" />\r\n\t\t\t<permissions permissionId=\"32\" />\r\n\t\t\t<permissions permissionId=\"33\" />\r\n\t\t\t<permissions permissionId=\"34\" />\r\n\t\t\t<permissions permissionId=\"35\" />\r\n\t\t\t<permissions permissionId=\"36\" />\r\n\t\t\t<permissions permissionId=\"38\" />\r\n\t\t\t<permissions permissionId=\"39\" />\r\n\t\t\t<permissions permissionId=\"40\" />\r\n\t\t\t<permissions permissionId=\"41\" />\r\n\t\t\t<permissions permissionId=\"42\" />\r\n\t\t\t<permissions permissionId=\"101\" />\r\n\t\t\t<permissions permissionId=\"102\" />\r\n\t\t\t<permissions permissionId=\"103\" />\r\n\t\t\t<permissions permissionId=\"107\" />\r\n\t\t\t<permissions permissionId=\"116\" />\r\n\t\t\t<permissions permissionId=\"117\" />\r\n\t\t\t<permissions permissionId=\"118\" />\r\n\t\t\t<permissions permissionId=\"134\" />\r\n\t\t\t<permissions permissionId=\"135\" />\r\n\t\t\t<permissions permissionId=\"136\" />\r\n\t\t\t<permissions permissionId=\"137\" />\r\n\t\t\t<permissions permissionId=\"139\" />\r\n\t\t\t<permissions permissionId=\"140\" />\r\n\t\t\t<permissions permissionId=\"142\" />\r\n\t\t\t<permissions permissionId=\"143\" />\r\n\t\t\t<permissions permissionId=\"145\" />\r\n\t\t\t<permissions permissionId=\"146\" />\r\n\t\t\t<permissions permissionId=\"147\" />\r\n\t\t\t<permissions permissionId=\"148\" />\r\n\t\t\t<permissions permissionId=\"149\" />\r\n\t\t\t<permissions permissionId=\"150\" />\r\n\t\t\t<permissions permissionId=\"157\" />\r\n\t\t\t<permissions permissionId=\"158\" />\r\n\t\t\t<permissions permissionId=\"159\" />\r\n\t\t\t<permissions permissionId=\"178\" />\r\n\t\t\t<permissions permissionId=\"215\" />\r\n\t\t\t<permissions permissionId=\"217\" />\r\n\t\t\t<permissions permissionId=\"178\" />\r\n\t\t\t<planOwner _type_=\"13\" userName=\"Administrator\" userId=\"1\" />\r\n\t\t\t<plan _type_=\"158\" planName=\"Laptop plan\" planId=\"1\" />\r\n\t\t</summary>\r\n\t\t<securityAssociations>\r\n\t\t\t<associations>\r\n\t\t\t\t<userOrGroup userId=\"1\" _type_=\"13\" userName=\"admin\" />\r\n\t\t\t\t<properties isCreatorAssociation=\"1\">\r\n\t\t\t\t\t<role _type_=\"120\" roleId=\"10\" roleName=\"Plan Creator Role\" />\r\n\t\t\t\t</properties>\r\n\t\t\t</associations>\r\n\t\t\t<ownerAssociations />\r\n\t\t</securityAssociations>\r\n\t\t<featureInfo />\r\n\t\t<laptop>\r\n\t\t\t<features>\r\n\t\t\t\t<categoryPermission />\r\n\t\t\t</features>\r\n\t\t\t<accessPolicies>\r\n\t\t\t\t<categoryPermission />\r\n\t\t\t</accessPolicies>\r\n\t\t\t<content />\r\n\t\t\t<users>\r\n\t\t\t\t<users email=\"ypolishetty@commvault.com\">\r\n\t\t\t\t\t<user userName=\"hkuser\" userId=\"21\" />\r\n\t\t\t\t</users>\r\n\t\t\t</users>\r\n\t\t</laptop>\r\n\t\t<alerts />\r\n\t\t<database slaInMinutes=\"0\" />\r\n\t\t<autoCreatedEntities>\r\n\t\t\t<clientGroup clientGroupId=\"1039\" clientGroupName=\"Laptop plan clients(2)\" />\r\n\t\t</autoCreatedEntities>\r\n\t\t<options />\r\n\t</plan>\r\n\t<errors>\r\n\t\t<entity />\r\n\t\t<status errorMessage=\"\" errorCode=\"0\" />\r\n\t</errors>\r\n\t<errors>\r\n\t\t<entity />\r\n\t\t<status errorMessage=\"\" errorCode=\"0\" />\r\n\t</errors>\r\n</Api_UpdatePlanResp>"
-            }
-          ]
-        }
-      ]
+      "item": []
     },
     {
       "_postman_id": "3707251b-cc26-8c00-fb24-d007e6d8d236",
@@ -53211,6 +53096,120 @@
                   ],
                   "responseTime": "70",
                   "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "6307e5b7-bfca-99b3-ecd8-14cdab82daf1",
+              "name": "Update Plan SLA",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"summary\": {\r\n    \"slaInMinutes\": 2 ,\r\n    \"plan\": {\r\n      \"planId\": 1\r\n    }\r\n  }\r\n}"
+                },
+                "url": "{{ServerUrl}}/Plan/1/sla",
+                "description": "<h2> Description </h2>\nThis operation updates the SLA (service level agreement) for a plan.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_plan_sla.htm)"
+              },
+              "response": [
+                {
+                  "id": "616f48be-2431-31d8-542a-bc2816e513d7",
+                  "name": "Update Plan SLA",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"summary\": {\r\n    \"slaInMinutes\": 2 ,\r\n    \"plan\": {\r\n      \"planId\": 1\r\n    }\r\n  }\r\n}"
+                    },
+                    "url": "{{ServerUrl}}/Plan/1/sla"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "3687",
+                      "name": "Content-Length",
+                      "description": ""
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 08 Dec 2017 21:02:43 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": ""
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "2091",
+                  "body": "<Api_UpdatePlanResp>\r\n\t<plan>\r\n\t\t<summary slaInMinutes=\"0\" restrictions=\"0\" type=\"2\" planStatusFlag=\"2\" numDevices=\"0\" subtype=\"33554439\" numUsers=\"1\">\r\n\t\t\t<permissions permissionId=\"1\" />\r\n\t\t\t<permissions permissionId=\"2\" />\r\n\t\t\t<permissions permissionId=\"3\" />\r\n\t\t\t<permissions permissionId=\"4\" />\r\n\t\t\t<permissions permissionId=\"5\" />\r\n\t\t\t<permissions permissionId=\"6\" />\r\n\t\t\t<permissions permissionId=\"7\" />\r\n\t\t\t<permissions permissionId=\"8\" />\r\n\t\t\t<permissions permissionId=\"9\" />\r\n\t\t\t<permissions permissionId=\"10\" />\r\n\t\t\t<permissions permissionId=\"11\" />\r\n\t\t\t<permissions permissionId=\"12\" />\r\n\t\t\t<permissions permissionId=\"13\" />\r\n\t\t\t<permissions permissionId=\"15\" />\r\n\t\t\t<permissions permissionId=\"16\" />\r\n\t\t\t<permissions permissionId=\"18\" />\r\n\t\t\t<permissions permissionId=\"20\" />\r\n\t\t\t<permissions permissionId=\"22\" />\r\n\t\t\t<permissions permissionId=\"24\" />\r\n\t\t\t<permissions permissionId=\"25\" />\r\n\t\t\t<permissions permissionId=\"26\" />\r\n\t\t\t<permissions permissionId=\"27\" />\r\n\t\t\t<permissions permissionId=\"29\" />\r\n\t\t\t<permissions permissionId=\"31\" />\r\n\t\t\t<permissions permissionId=\"32\" />\r\n\t\t\t<permissions permissionId=\"33\" />\r\n\t\t\t<permissions permissionId=\"34\" />\r\n\t\t\t<permissions permissionId=\"35\" />\r\n\t\t\t<permissions permissionId=\"36\" />\r\n\t\t\t<permissions permissionId=\"38\" />\r\n\t\t\t<permissions permissionId=\"39\" />\r\n\t\t\t<permissions permissionId=\"40\" />\r\n\t\t\t<permissions permissionId=\"41\" />\r\n\t\t\t<permissions permissionId=\"42\" />\r\n\t\t\t<permissions permissionId=\"101\" />\r\n\t\t\t<permissions permissionId=\"102\" />\r\n\t\t\t<permissions permissionId=\"103\" />\r\n\t\t\t<permissions permissionId=\"107\" />\r\n\t\t\t<permissions permissionId=\"116\" />\r\n\t\t\t<permissions permissionId=\"117\" />\r\n\t\t\t<permissions permissionId=\"118\" />\r\n\t\t\t<permissions permissionId=\"134\" />\r\n\t\t\t<permissions permissionId=\"135\" />\r\n\t\t\t<permissions permissionId=\"136\" />\r\n\t\t\t<permissions permissionId=\"137\" />\r\n\t\t\t<permissions permissionId=\"139\" />\r\n\t\t\t<permissions permissionId=\"140\" />\r\n\t\t\t<permissions permissionId=\"142\" />\r\n\t\t\t<permissions permissionId=\"143\" />\r\n\t\t\t<permissions permissionId=\"145\" />\r\n\t\t\t<permissions permissionId=\"146\" />\r\n\t\t\t<permissions permissionId=\"147\" />\r\n\t\t\t<permissions permissionId=\"148\" />\r\n\t\t\t<permissions permissionId=\"149\" />\r\n\t\t\t<permissions permissionId=\"150\" />\r\n\t\t\t<permissions permissionId=\"157\" />\r\n\t\t\t<permissions permissionId=\"158\" />\r\n\t\t\t<permissions permissionId=\"159\" />\r\n\t\t\t<permissions permissionId=\"178\" />\r\n\t\t\t<permissions permissionId=\"215\" />\r\n\t\t\t<permissions permissionId=\"217\" />\r\n\t\t\t<permissions permissionId=\"178\" />\r\n\t\t\t<planOwner _type_=\"13\" userName=\"Administrator\" userId=\"1\" />\r\n\t\t\t<plan _type_=\"158\" planName=\"Laptop plan\" planId=\"1\" />\r\n\t\t</summary>\r\n\t\t<securityAssociations>\r\n\t\t\t<associations>\r\n\t\t\t\t<userOrGroup userId=\"1\" _type_=\"13\" userName=\"admin\" />\r\n\t\t\t\t<properties isCreatorAssociation=\"1\">\r\n\t\t\t\t\t<role _type_=\"120\" roleId=\"10\" roleName=\"Plan Creator Role\" />\r\n\t\t\t\t</properties>\r\n\t\t\t</associations>\r\n\t\t\t<ownerAssociations />\r\n\t\t</securityAssociations>\r\n\t\t<featureInfo />\r\n\t\t<laptop>\r\n\t\t\t<features>\r\n\t\t\t\t<categoryPermission />\r\n\t\t\t</features>\r\n\t\t\t<accessPolicies>\r\n\t\t\t\t<categoryPermission />\r\n\t\t\t</accessPolicies>\r\n\t\t\t<content />\r\n\t\t\t<users>\r\n\t\t\t\t<users email=\"ypolishetty@commvault.com\">\r\n\t\t\t\t\t<user userName=\"hkuser\" userId=\"21\" />\r\n\t\t\t\t</users>\r\n\t\t\t</users>\r\n\t\t</laptop>\r\n\t\t<alerts />\r\n\t\t<database slaInMinutes=\"0\" />\r\n\t\t<autoCreatedEntities>\r\n\t\t\t<clientGroup clientGroupId=\"1039\" clientGroupName=\"Laptop plan clients(2)\" />\r\n\t\t</autoCreatedEntities>\r\n\t\t<options />\r\n\t</plan>\r\n\t<errors>\r\n\t\t<entity />\r\n\t\t<status errorMessage=\"\" errorCode=\"0\" />\r\n\t</errors>\r\n\t<errors>\r\n\t\t<entity />\r\n\t\t<status errorMessage=\"\" errorCode=\"0\" />\r\n\t</errors>\r\n</Api_UpdatePlanResp>"
                 }
               ]
             }
