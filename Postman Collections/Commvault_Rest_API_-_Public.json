@@ -40819,208 +40819,6 @@
           ]
         },
         {
-          "_postman_id": "17b3d431-e8d3-391d-e9db-236462391a44",
-          "name": "Plan",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains securityAssociations\"] = responseBody.has(\"securityAssociations\");",
-                  "",
-                  "tests[\"Response Body contains plan\"] = responseBody.has(\"plan\");",
-                  "",
-                  "tests[\"Response Body contains planOwner\"] = responseBody.has(\"planOwner\");",
-                  "",
-                  "postman.setEnvironmentVariable(\"PlanName\", jsonData.plan.summary.plan.planName);",
-                  "tests[\"planId Validation\"] = jsonData.plan.summary.plan.planId === parseInt(postman.getEnvironmentVariable(\"PlanId\"));"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"summary\": {\r\n    \"plan\": {\r\n      \"planName\": \"Updated Plan Name\"\r\n    }\r\n  }\r\n}"
-            },
-            "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}",
-            "description": "<h2>Description</h2>\nThis operation Updates a Plan."
-          },
-          "response": [
-            {
-              "id": "15d2372a-882d-fe05-03e0-b0b802d5bf71",
-              "name": "Plan - Update SLA",
-              "originalRequest": {
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"summary\": {\n\t\t\"slaInMinutes\": 360,\n\t\t\"plan\": {\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
-                },
-                "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "11422",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Wed, 20 Sep 2017 20:10:25 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "277",
-              "body": "{\r\"plan\":{\r\"summary\":{\r\"slaInMinutes\":360,\"restrictions\":1,\"type\":2,\"planStatusFlag\":0,\"numDevices\":0,\"subtype\":33554437,\"numUsers\":0,\"permissions\":[\r{\r\"permissionId\":1\r},{\r\"permissionId\":2\r},{\r\"permissionId\":3\r},{\r\"permissionId\":4\r},{\r\"permissionId\":5\r},{\r\"permissionId\":6\r},{\r\"permissionId\":7\r},{\r\"permissionId\":8\r},{\r\"permissionId\":9\r},{\r\"permissionId\":10\r},{\r\"permissionId\":11\r},{\r\"permissionId\":12\r},{\r\"permissionId\":13\r},{\r\"permissionId\":15\r},{\r\"permissionId\":16\r},{\r\"permissionId\":18\r},{\r\"permissionId\":20\r},{\r\"permissionId\":22\r},{\r\"permissionId\":24\r},{\r\"permissionId\":25\r},{\r\"permissionId\":26\r},{\r\"permissionId\":27\r},{\r\"permissionId\":29\r},{\r\"permissionId\":31\r},{\r\"permissionId\":32\r},{\r\"permissionId\":33\r},{\r\"permissionId\":34\r},{\r\"permissionId\":35\r},{\r\"permissionId\":36\r},{\r\"permissionId\":38\r},{\r\"permissionId\":39\r},{\r\"permissionId\":40\r},{\r\"permissionId\":41\r},{\r\"permissionId\":42\r},{\r\"permissionId\":101\r},{\r\"permissionId\":102\r},{\r\"permissionId\":103\r},{\r\"permissionId\":107\r},{\r\"permissionId\":116\r},{\r\"permissionId\":117\r},{\r\"permissionId\":118\r},{\r\"permissionId\":134\r},{\r\"permissionId\":135\r},{\r\"permissionId\":136\r},{\r\"permissionId\":137\r},{\r\"permissionId\":139\r},{\r\"permissionId\":140\r},{\r\"permissionId\":142\r},{\r\"permissionId\":143\r},{\r\"permissionId\":145\r},{\r\"permissionId\":146\r},{\r\"permissionId\":147\r},{\r\"permissionId\":148\r},{\r\"permissionId\":149\r},{\r\"permissionId\":150\r},{\r\"permissionId\":157\r},{\r\"permissionId\":158\r},{\r\"permissionId\":159\r},{\r\"permissionId\":178\r},{\r\"permissionId\":215\r},{\r\"permissionId\":217\r},{\r\"permissionId\":178\r}\r],\"planOwner\":{\r\"_type_\":13,\"userName\":\"Administrator\",\"userId\":1\r},\"plan\":{\r\"_type_\":158,\"planName\":\"b3e42681-1f05-47d8-8a19-UpdatedName\",\"planId\":18\r}\r},\"definesStorage\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"securityAssociations\":{\r\"associations\":[\r{\r\"userOrGroup\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r}\r],\"properties\":{\r\"isCreatorAssociation\":true,\"role\":{\r\"_type_\":120,\"roleId\":10,\"roleName\":\"Plan Creator Role\"\r}\r}\r}\r],\"ownerAssociations\":{\r\r}\r},\"featureInfo\":{\r\"edgedriveInfo\":{\r\r},\"definesEdgeDriveInfo\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"inheritance\":{\r\"isSealed\":true\r},\"storage\":{\r\"storagePolicy\":{\r\"storagePolicyName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2\",\"storagePolicyId\":40\r},\"copy\":[\r{\r\"copyType\":0,\"active\":1,\"isDefault\":1,\"copyPrecedence\":1,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":46,\"copyName\":\"Primary\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)7\",\"drivePoolId\":7\r},\"library\":{\r\"libraryName\":\"NewStoragePoolLibrary\",\"libraryId\":9\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool\",\"storagePolicyId\":18\r}\r},{\r\"copyType\":1,\"active\":1,\"isDefault\":0,\"copyPrecedence\":2,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":47,\"copyName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2 synchronous copy\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)8\",\"drivePoolId\":8\r},\"library\":{\r\"libraryName\":\"NewStoragePool2Library\",\"libraryId\":10\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool2\",\"storagePolicyId\":20\r}\r}\r]\r},\"definesSchedule\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"laptop\":{\r\"features\":{\r\"categoryPermission\":{\r\r}\r},\"accessPolicies\":{\r\"categoryPermission\":{\r\r}\r},\"definesAccessPolicies\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"content\":{\r\"definesSubclientWin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientMac\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientLin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"users\":{\r\r},\"definesFeatures\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"alerts\":{\r\r},\"replicationTargets\":{\r\r},\"schedule\":{\r\"task\":{\r\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"Administrator\",\"alertId\":0,\"GUID\":\"45b87e5c-3da0-4869-b73a-41a42e5f7f31\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2\",\"taskId\":505,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"originalCC\":{\r\"commCellId\":2\r},\"taskSecurity\":{\r\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"createAs\":{\r\"user\":{\r\"user\":{\r\"userName\":\"admin\",\"userId\":1\r}\r}\r},\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"isSystem\":false,\"disabled\":false\r},\"task\":{\r\"taskName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2\",\"taskId\":505\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Daily Incremental\",\"subTaskType\":2,\"flags\":65536,\"operationType\":2,\"subTaskId\":522,\"subTask\":{\r\"subtaskId\":522,\"subtaskName\":\"Daily Incremental\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":21600,\"freq_type\":4,\"patternId\":99,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505779200,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily Incremental\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Last Saturday of the Month Regular Full\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":523,\"subTask\":{\r\"subtaskId\":523,\"subtaskName\":\"Last Saturday of the Month Regular Full\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":32,\"patternId\":100,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505779200,\"freq_interval\":7,\"freq_relative_interval\":5,\"name\":\"Last Saturday of the Month Regular Full\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":5,\"day\":7\r},\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":1,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":true\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Weekly Synthetic Fulls\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":524,\"subTask\":{\r\"subtaskId\":524,\"subtaskName\":\"Weekly Synthetic Fulls\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":101,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505779200,\"freq_interval\":32,\"freq_relative_interval\":0,\"name\":\"Weekly Synthetic Fulls\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":0,\"Friday\":true,\"day\":0\r},\"repeatPattern\":[\r{\r\"exception\":true,\"onDayNumber\":0,\"onDay\":64,\"description\":\"On Last - Saturday\",\"occurrence\":16,\"repeatOn\":0\r}\r],\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":4,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2 aux copy\",\"subTaskType\":1,\"flags\":0,\"operationType\":4003,\"subTaskId\":525,\"subTask\":{\r\"subtaskId\":525,\"subtaskName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2 aux copy\",\"taskId\":506\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":1800,\"freq_type\":4,\"patternId\":102,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505779200,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily aux copy\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r}\r]\r},\"database\":{\r\"slaInMinutes\":0,\"scheduleLog\":{\r\"task\":{\r\r}\r},\"storageLog\":{\r\"storagePolicy\":{\r\r}\r},\"definesScheduleLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesStorageLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definesAlerts\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"eDiscoveryInfo\":{\r\"definesContentAnalyzerCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesAnalyticsEngineCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"options\":{\r\"forcedArchiving\":false,\"quota\":0\r},\"exchange\":{\r\"definesMBRetention\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBCleanup\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBArchiving\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBJournal\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definition\":{\r\"possible\":[\r1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,65537,65538,65539,65540,65541\r],\"required\":[\r1,4\r]\r}\r},\"errors\":[\r{\r\"entity\":{\r\r},\"status\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}\r]\r}"
-            },
-            {
-              "id": "85c9ab9c-7c92-c0e4-c7e5-aef0c694ab34",
-              "name": "Updates Plan Name",
-              "originalRequest": {
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "disabled": false
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n\t\"summary\": {\r\n\t\t\"plan\": {\r\n\t\t\t\"planName\": \"Updated Plan Name\"\r\n\t\t}\r\n\t}\r\n}"
-                },
-                "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "11402",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Mon, 18 Sep 2017 19:13:19 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "284",
-              "body": "{\r\"plan\":{\r\"summary\":{\r\"slaInMinutes\":240,\"restrictions\":1,\"type\":2,\"planStatusFlag\":0,\"numDevices\":0,\"subtype\":33554437,\"numUsers\":0,\"permissions\":[\r{\r\"permissionId\":1\r},{\r\"permissionId\":2\r},{\r\"permissionId\":3\r},{\r\"permissionId\":4\r},{\r\"permissionId\":5\r},{\r\"permissionId\":6\r},{\r\"permissionId\":7\r},{\r\"permissionId\":8\r},{\r\"permissionId\":9\r},{\r\"permissionId\":10\r},{\r\"permissionId\":11\r},{\r\"permissionId\":12\r},{\r\"permissionId\":13\r},{\r\"permissionId\":15\r},{\r\"permissionId\":16\r},{\r\"permissionId\":18\r},{\r\"permissionId\":20\r},{\r\"permissionId\":22\r},{\r\"permissionId\":24\r},{\r\"permissionId\":25\r},{\r\"permissionId\":26\r},{\r\"permissionId\":27\r},{\r\"permissionId\":29\r},{\r\"permissionId\":31\r},{\r\"permissionId\":32\r},{\r\"permissionId\":33\r},{\r\"permissionId\":34\r},{\r\"permissionId\":35\r},{\r\"permissionId\":36\r},{\r\"permissionId\":38\r},{\r\"permissionId\":39\r},{\r\"permissionId\":40\r},{\r\"permissionId\":41\r},{\r\"permissionId\":42\r},{\r\"permissionId\":101\r},{\r\"permissionId\":102\r},{\r\"permissionId\":103\r},{\r\"permissionId\":107\r},{\r\"permissionId\":116\r},{\r\"permissionId\":117\r},{\r\"permissionId\":118\r},{\r\"permissionId\":134\r},{\r\"permissionId\":135\r},{\r\"permissionId\":136\r},{\r\"permissionId\":137\r},{\r\"permissionId\":139\r},{\r\"permissionId\":140\r},{\r\"permissionId\":142\r},{\r\"permissionId\":143\r},{\r\"permissionId\":145\r},{\r\"permissionId\":146\r},{\r\"permissionId\":147\r},{\r\"permissionId\":148\r},{\r\"permissionId\":149\r},{\r\"permissionId\":150\r},{\r\"permissionId\":157\r},{\r\"permissionId\":158\r},{\r\"permissionId\":159\r},{\r\"permissionId\":178\r},{\r\"permissionId\":215\r},{\r\"permissionId\":217\r},{\r\"permissionId\":178\r}\r],\"planOwner\":{\r\"_type_\":13,\"userName\":\"Administrator\",\"userId\":1\r},\"plan\":{\r\"_type_\":158,\"planName\":\"Updated Plan Name5\",\"planId\":17\r}\r},\"definesStorage\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"securityAssociations\":{\r\"associations\":[\r{\r\"userOrGroup\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r}\r],\"properties\":{\r\"isCreatorAssociation\":true,\"role\":{\r\"_type_\":120,\"roleId\":10,\"roleName\":\"Plan Creator Role\"\r}\r}\r}\r],\"ownerAssociations\":{\r\r}\r},\"featureInfo\":{\r\"edgedriveInfo\":{\r\r},\"definesEdgeDriveInfo\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"inheritance\":{\r\"isSealed\":true\r},\"storage\":{\r\"storagePolicy\":{\r\"storagePolicyName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59\",\"storagePolicyId\":39\r},\"copy\":[\r{\r\"copyType\":0,\"active\":1,\"isDefault\":1,\"copyPrecedence\":1,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":44,\"copyName\":\"Primary\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)7\",\"drivePoolId\":7\r},\"library\":{\r\"libraryName\":\"NewStoragePoolLibrary\",\"libraryId\":9\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool\",\"storagePolicyId\":18\r}\r},{\r\"copyType\":1,\"active\":1,\"isDefault\":0,\"copyPrecedence\":2,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":45,\"copyName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59 synchronous copy\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)8\",\"drivePoolId\":8\r},\"library\":{\r\"libraryName\":\"NewStoragePool2Library\",\"libraryId\":10\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool2\",\"storagePolicyId\":20\r}\r}\r]\r},\"definesSchedule\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"laptop\":{\r\"features\":{\r\"categoryPermission\":{\r\r}\r},\"accessPolicies\":{\r\"categoryPermission\":{\r\r}\r},\"definesAccessPolicies\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"content\":{\r\"definesSubclientWin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientMac\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientLin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"users\":{\r\r},\"definesFeatures\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"alerts\":{\r\r},\"replicationTargets\":{\r\r},\"schedule\":{\r\"task\":{\r\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"Administrator\",\"alertId\":0,\"GUID\":\"0a805de7-4312-4da1-b5b7-2da7cf6d0f83\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59\",\"taskId\":503,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"originalCC\":{\r\"commCellId\":2\r},\"taskSecurity\":{\r\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"createAs\":{\r\"user\":{\r\"user\":{\r\"userName\":\"admin\",\"userId\":1\r}\r}\r},\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"isSystem\":false,\"disabled\":false\r},\"task\":{\r\"taskName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59\",\"taskId\":503\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Daily Incremental\",\"subTaskType\":2,\"flags\":65536,\"operationType\":2,\"subTaskId\":518,\"subTask\":{\r\"subtaskId\":518,\"subtaskName\":\"Daily Incremental\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":14400,\"freq_type\":4,\"patternId\":95,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505692800,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily Incremental\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Last Saturday of the Month Regular Full\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":519,\"subTask\":{\r\"subtaskId\":519,\"subtaskName\":\"Last Saturday of the Month Regular Full\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":32,\"patternId\":96,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505692800,\"freq_interval\":7,\"freq_relative_interval\":5,\"name\":\"Last Saturday of the Month Regular Full\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":5,\"day\":7\r},\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":1,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":true\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Weekly Synthetic Fulls\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":520,\"subTask\":{\r\"subtaskId\":520,\"subtaskName\":\"Weekly Synthetic Fulls\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":97,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505692800,\"freq_interval\":32,\"freq_relative_interval\":0,\"name\":\"Weekly Synthetic Fulls\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":0,\"Friday\":true,\"day\":0\r},\"repeatPattern\":[\r{\r\"exception\":true,\"onDayNumber\":0,\"onDay\":64,\"description\":\"On Last - Saturday\",\"occurrence\":16,\"repeatOn\":0\r}\r],\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":4,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59 aux copy\",\"subTaskType\":1,\"flags\":0,\"operationType\":4003,\"subTaskId\":521,\"subTask\":{\r\"subtaskId\":521,\"subtaskName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59 aux copy\",\"taskId\":504\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":1800,\"freq_type\":4,\"patternId\":98,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505692800,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily aux copy\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r}\r]\r},\"database\":{\r\"slaInMinutes\":0,\"scheduleLog\":{\r\"task\":{\r\r}\r},\"storageLog\":{\r\"storagePolicy\":{\r\r}\r},\"definesScheduleLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesStorageLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definesAlerts\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"eDiscoveryInfo\":{\r\"definesContentAnalyzerCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesAnalyticsEngineCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"options\":{\r\"forcedArchiving\":false,\"quota\":0\r},\"exchange\":{\r\"definesMBRetention\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBCleanup\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBArchiving\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBJournal\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definition\":{\r\"possible\":[\r1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,65537,65538,65539,65540,65541\r],\"required\":[\r1,4\r]\r}\r},\"errors\":[\r{\r\"entity\":{\r\r},\"status\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "6b4485c6-973f-e424-836c-33576bf88c72",
           "name": "Plan",
           "event": [
@@ -41674,6 +41472,208 @@
               ],
               "responseTime": "1568",
               "body": "{\r\"plan\":{\r\"summary\":{\r\"slaInMinutes\":240,\"restrictions\":1,\"type\":2,\"planStatusFlag\":0,\"numDevices\":0,\"subtype\":33554437,\"numUsers\":0,\"permissions\":[\r{\r\"permissionId\":1\r},{\r\"permissionId\":2\r},{\r\"permissionId\":3\r},{\r\"permissionId\":4\r},{\r\"permissionId\":5\r},{\r\"permissionId\":6\r},{\r\"permissionId\":7\r},{\r\"permissionId\":8\r},{\r\"permissionId\":9\r},{\r\"permissionId\":10\r},{\r\"permissionId\":11\r},{\r\"permissionId\":12\r},{\r\"permissionId\":13\r},{\r\"permissionId\":15\r},{\r\"permissionId\":16\r},{\r\"permissionId\":18\r},{\r\"permissionId\":20\r},{\r\"permissionId\":22\r},{\r\"permissionId\":24\r},{\r\"permissionId\":25\r},{\r\"permissionId\":26\r},{\r\"permissionId\":27\r},{\r\"permissionId\":29\r},{\r\"permissionId\":31\r},{\r\"permissionId\":32\r},{\r\"permissionId\":33\r},{\r\"permissionId\":34\r},{\r\"permissionId\":35\r},{\r\"permissionId\":36\r},{\r\"permissionId\":38\r},{\r\"permissionId\":39\r},{\r\"permissionId\":40\r},{\r\"permissionId\":41\r},{\r\"permissionId\":42\r},{\r\"permissionId\":101\r},{\r\"permissionId\":102\r},{\r\"permissionId\":103\r},{\r\"permissionId\":107\r},{\r\"permissionId\":116\r},{\r\"permissionId\":117\r},{\r\"permissionId\":118\r},{\r\"permissionId\":134\r},{\r\"permissionId\":135\r},{\r\"permissionId\":136\r},{\r\"permissionId\":137\r},{\r\"permissionId\":139\r},{\r\"permissionId\":140\r},{\r\"permissionId\":142\r},{\r\"permissionId\":143\r},{\r\"permissionId\":145\r},{\r\"permissionId\":146\r},{\r\"permissionId\":147\r},{\r\"permissionId\":148\r},{\r\"permissionId\":149\r},{\r\"permissionId\":150\r},{\r\"permissionId\":157\r},{\r\"permissionId\":158\r},{\r\"permissionId\":159\r},{\r\"permissionId\":178\r},{\r\"permissionId\":215\r},{\r\"permissionId\":217\r},{\r\"permissionId\":178\r}\r],\"planOwner\":{\r\"_type_\":13,\"userName\":\"Administrator\",\"userId\":1\r},\"plan\":{\r\"_type_\":158,\"planName\":\"4304759e-ac1f-4d82-8879-abe6cadfb732\",\"planId\":14\r}\r},\"definesStorage\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"securityAssociations\":{\r\"associations\":[\r{\r\"userOrGroup\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r}\r],\"properties\":{\r\"isCreatorAssociation\":true,\"role\":{\r\"_type_\":120,\"roleId\":10,\"roleName\":\"Plan Creator Role\"\r}\r}\r}\r],\"ownerAssociations\":{\r\r}\r},\"featureInfo\":{\r\"edgedriveInfo\":{\r\r},\"definesEdgeDriveInfo\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"inheritance\":{\r\"isSealed\":true\r},\"storage\":{\r\"storagePolicy\":{\r\"storagePolicyName\":\"4304759e-ac1f-4d82-8879-abe6cadfb732\",\"storagePolicyId\":27\r},\"copy\":[\r{\r\"copyType\":0,\"active\":1,\"isDefault\":1,\"copyPrecedence\":1,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":29,\"copyName\":\"Primary\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)7\",\"drivePoolId\":7\r},\"library\":{\r\"libraryName\":\"NewStoragePoolLibrary\",\"libraryId\":9\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool\",\"storagePolicyId\":18\r}\r},{\r\"copyType\":1,\"active\":1,\"isDefault\":0,\"copyPrecedence\":2,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":30,\"copyName\":\"4304759e-ac1f-4d82-8879-abe6cadfb732 synchronous copy\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)8\",\"drivePoolId\":8\r},\"library\":{\r\"libraryName\":\"NewStoragePool2Library\",\"libraryId\":10\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool2\",\"storagePolicyId\":20\r}\r}\r]\r},\"definesSchedule\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"laptop\":{\r\"features\":{\r\"categoryPermission\":{\r\r}\r},\"accessPolicies\":{\r\"categoryPermission\":{\r\r}\r},\"definesAccessPolicies\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"content\":{\r\"definesSubclientWin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientMac\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientLin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"users\":{\r\r},\"definesFeatures\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"alerts\":{\r\r},\"replicationTargets\":{\r\r},\"schedule\":{\r\"task\":{\r\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"Administrator\",\"alertId\":0,\"GUID\":\"7966dbae-c5e9-4198-8a12-eb7486a72e4a\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"4304759e-ac1f-4d82-8879-abe6cadfb732\",\"taskId\":497,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"originalCC\":{\r\"commCellId\":2\r},\"taskSecurity\":{\r\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"createAs\":{\r\"user\":{\r\"user\":{\r\"userName\":\"admin\",\"userId\":1\r}\r}\r},\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"isSystem\":false,\"disabled\":false\r},\"task\":{\r\"taskName\":\"4304759e-ac1f-4d82-8879-abe6cadfb732\",\"taskId\":497\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Daily Incremental\",\"subTaskType\":2,\"flags\":65536,\"operationType\":2,\"subTaskId\":506,\"subTask\":{\r\"subtaskId\":506,\"subtaskName\":\"Daily Incremental\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":14400,\"freq_type\":4,\"patternId\":83,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505433600,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily Incremental\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Last Saturday of the Month Regular Full\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":507,\"subTask\":{\r\"subtaskId\":507,\"subtaskName\":\"Last Saturday of the Month Regular Full\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":32,\"patternId\":84,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505433600,\"freq_interval\":7,\"freq_relative_interval\":5,\"name\":\"Last Saturday of the Month Regular Full\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":5,\"day\":7\r},\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":1,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":true\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Weekly Synthetic Fulls\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":508,\"subTask\":{\r\"subtaskId\":508,\"subtaskName\":\"Weekly Synthetic Fulls\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":85,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505433600,\"freq_interval\":32,\"freq_relative_interval\":0,\"name\":\"Weekly Synthetic Fulls\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":0,\"Friday\":true,\"day\":0\r},\"repeatPattern\":[\r{\r\"exception\":true,\"onDayNumber\":0,\"onDay\":64,\"description\":\"On Last - Saturday\",\"occurrence\":16,\"repeatOn\":0\r}\r],\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":4,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"4304759e-ac1f-4d82-8879-abe6cadfb732 aux copy\",\"subTaskType\":1,\"flags\":0,\"operationType\":4003,\"subTaskId\":509,\"subTask\":{\r\"subtaskId\":509,\"subtaskName\":\"4304759e-ac1f-4d82-8879-abe6cadfb732 aux copy\",\"taskId\":498\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":1800,\"freq_type\":4,\"patternId\":86,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505433600,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily aux copy\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r}\r]\r},\"database\":{\r\"slaInMinutes\":0,\"scheduleLog\":{\r\"task\":{\r\r}\r},\"storageLog\":{\r\"storagePolicy\":{\r\r}\r},\"definesScheduleLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesStorageLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definesAlerts\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"eDiscoveryInfo\":{\r\"definesContentAnalyzerCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesAnalyticsEngineCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"options\":{\r\"forcedArchiving\":false,\"quota\":0\r},\"exchange\":{\r\"definesMBRetention\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBCleanup\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBArchiving\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBJournal\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definition\":{\r\"possible\":[\r1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,65537,65538,65539,65540,65541\r],\"required\":[\r1,4\r]\r}\r},\"errors\":[\r{\r\"entity\":{\r\r},\"status\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "17b3d431-e8d3-391d-e9db-236462391a44",
+          "name": "Plan",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains securityAssociations\"] = responseBody.has(\"securityAssociations\");",
+                  "",
+                  "tests[\"Response Body contains plan\"] = responseBody.has(\"plan\");",
+                  "",
+                  "tests[\"Response Body contains planOwner\"] = responseBody.has(\"planOwner\");",
+                  "",
+                  "postman.setEnvironmentVariable(\"PlanName\", jsonData.plan.summary.plan.planName);",
+                  "tests[\"planId Validation\"] = jsonData.plan.summary.plan.planId === parseInt(postman.getEnvironmentVariable(\"PlanId\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"summary\": {\r\n    \"plan\": {\r\n      \"planName\": \"Updated Plan Name\"\r\n    }\r\n  }\r\n}"
+            },
+            "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}",
+            "description": "<h2>Description</h2>\nThis operation Updates a Plan."
+          },
+          "response": [
+            {
+              "id": "15d2372a-882d-fe05-03e0-b0b802d5bf71",
+              "name": "Plan - Update SLA",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"summary\": {\n\t\t\"slaInMinutes\": 360,\n\t\t\"plan\": {\n\t\t\t\"planId\": {{PlanId}}\n\t\t}\n\t}\n}"
+                },
+                "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "11422",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 20 Sep 2017 20:10:25 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "277",
+              "body": "{\r\"plan\":{\r\"summary\":{\r\"slaInMinutes\":360,\"restrictions\":1,\"type\":2,\"planStatusFlag\":0,\"numDevices\":0,\"subtype\":33554437,\"numUsers\":0,\"permissions\":[\r{\r\"permissionId\":1\r},{\r\"permissionId\":2\r},{\r\"permissionId\":3\r},{\r\"permissionId\":4\r},{\r\"permissionId\":5\r},{\r\"permissionId\":6\r},{\r\"permissionId\":7\r},{\r\"permissionId\":8\r},{\r\"permissionId\":9\r},{\r\"permissionId\":10\r},{\r\"permissionId\":11\r},{\r\"permissionId\":12\r},{\r\"permissionId\":13\r},{\r\"permissionId\":15\r},{\r\"permissionId\":16\r},{\r\"permissionId\":18\r},{\r\"permissionId\":20\r},{\r\"permissionId\":22\r},{\r\"permissionId\":24\r},{\r\"permissionId\":25\r},{\r\"permissionId\":26\r},{\r\"permissionId\":27\r},{\r\"permissionId\":29\r},{\r\"permissionId\":31\r},{\r\"permissionId\":32\r},{\r\"permissionId\":33\r},{\r\"permissionId\":34\r},{\r\"permissionId\":35\r},{\r\"permissionId\":36\r},{\r\"permissionId\":38\r},{\r\"permissionId\":39\r},{\r\"permissionId\":40\r},{\r\"permissionId\":41\r},{\r\"permissionId\":42\r},{\r\"permissionId\":101\r},{\r\"permissionId\":102\r},{\r\"permissionId\":103\r},{\r\"permissionId\":107\r},{\r\"permissionId\":116\r},{\r\"permissionId\":117\r},{\r\"permissionId\":118\r},{\r\"permissionId\":134\r},{\r\"permissionId\":135\r},{\r\"permissionId\":136\r},{\r\"permissionId\":137\r},{\r\"permissionId\":139\r},{\r\"permissionId\":140\r},{\r\"permissionId\":142\r},{\r\"permissionId\":143\r},{\r\"permissionId\":145\r},{\r\"permissionId\":146\r},{\r\"permissionId\":147\r},{\r\"permissionId\":148\r},{\r\"permissionId\":149\r},{\r\"permissionId\":150\r},{\r\"permissionId\":157\r},{\r\"permissionId\":158\r},{\r\"permissionId\":159\r},{\r\"permissionId\":178\r},{\r\"permissionId\":215\r},{\r\"permissionId\":217\r},{\r\"permissionId\":178\r}\r],\"planOwner\":{\r\"_type_\":13,\"userName\":\"Administrator\",\"userId\":1\r},\"plan\":{\r\"_type_\":158,\"planName\":\"b3e42681-1f05-47d8-8a19-UpdatedName\",\"planId\":18\r}\r},\"definesStorage\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"securityAssociations\":{\r\"associations\":[\r{\r\"userOrGroup\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r}\r],\"properties\":{\r\"isCreatorAssociation\":true,\"role\":{\r\"_type_\":120,\"roleId\":10,\"roleName\":\"Plan Creator Role\"\r}\r}\r}\r],\"ownerAssociations\":{\r\r}\r},\"featureInfo\":{\r\"edgedriveInfo\":{\r\r},\"definesEdgeDriveInfo\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"inheritance\":{\r\"isSealed\":true\r},\"storage\":{\r\"storagePolicy\":{\r\"storagePolicyName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2\",\"storagePolicyId\":40\r},\"copy\":[\r{\r\"copyType\":0,\"active\":1,\"isDefault\":1,\"copyPrecedence\":1,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":46,\"copyName\":\"Primary\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)7\",\"drivePoolId\":7\r},\"library\":{\r\"libraryName\":\"NewStoragePoolLibrary\",\"libraryId\":9\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool\",\"storagePolicyId\":18\r}\r},{\r\"copyType\":1,\"active\":1,\"isDefault\":0,\"copyPrecedence\":2,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":47,\"copyName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2 synchronous copy\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)8\",\"drivePoolId\":8\r},\"library\":{\r\"libraryName\":\"NewStoragePool2Library\",\"libraryId\":10\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool2\",\"storagePolicyId\":20\r}\r}\r]\r},\"definesSchedule\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"laptop\":{\r\"features\":{\r\"categoryPermission\":{\r\r}\r},\"accessPolicies\":{\r\"categoryPermission\":{\r\r}\r},\"definesAccessPolicies\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"content\":{\r\"definesSubclientWin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientMac\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientLin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"users\":{\r\r},\"definesFeatures\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"alerts\":{\r\r},\"replicationTargets\":{\r\r},\"schedule\":{\r\"task\":{\r\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"Administrator\",\"alertId\":0,\"GUID\":\"45b87e5c-3da0-4869-b73a-41a42e5f7f31\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2\",\"taskId\":505,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"originalCC\":{\r\"commCellId\":2\r},\"taskSecurity\":{\r\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"createAs\":{\r\"user\":{\r\"user\":{\r\"userName\":\"admin\",\"userId\":1\r}\r}\r},\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"isSystem\":false,\"disabled\":false\r},\"task\":{\r\"taskName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2\",\"taskId\":505\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Daily Incremental\",\"subTaskType\":2,\"flags\":65536,\"operationType\":2,\"subTaskId\":522,\"subTask\":{\r\"subtaskId\":522,\"subtaskName\":\"Daily Incremental\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":21600,\"freq_type\":4,\"patternId\":99,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505779200,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily Incremental\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Last Saturday of the Month Regular Full\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":523,\"subTask\":{\r\"subtaskId\":523,\"subtaskName\":\"Last Saturday of the Month Regular Full\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":32,\"patternId\":100,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505779200,\"freq_interval\":7,\"freq_relative_interval\":5,\"name\":\"Last Saturday of the Month Regular Full\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":5,\"day\":7\r},\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":1,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":true\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Weekly Synthetic Fulls\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":524,\"subTask\":{\r\"subtaskId\":524,\"subtaskName\":\"Weekly Synthetic Fulls\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":101,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505779200,\"freq_interval\":32,\"freq_relative_interval\":0,\"name\":\"Weekly Synthetic Fulls\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":0,\"Friday\":true,\"day\":0\r},\"repeatPattern\":[\r{\r\"exception\":true,\"onDayNumber\":0,\"onDay\":64,\"description\":\"On Last - Saturday\",\"occurrence\":16,\"repeatOn\":0\r}\r],\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":4,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2 aux copy\",\"subTaskType\":1,\"flags\":0,\"operationType\":4003,\"subTaskId\":525,\"subTask\":{\r\"subtaskId\":525,\"subtaskName\":\"b3e42681-1f05-47d8-8a19-ac5ab9380dc2 aux copy\",\"taskId\":506\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":1800,\"freq_type\":4,\"patternId\":102,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505779200,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily aux copy\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r}\r]\r},\"database\":{\r\"slaInMinutes\":0,\"scheduleLog\":{\r\"task\":{\r\r}\r},\"storageLog\":{\r\"storagePolicy\":{\r\r}\r},\"definesScheduleLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesStorageLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definesAlerts\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"eDiscoveryInfo\":{\r\"definesContentAnalyzerCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesAnalyticsEngineCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"options\":{\r\"forcedArchiving\":false,\"quota\":0\r},\"exchange\":{\r\"definesMBRetention\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBCleanup\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBArchiving\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBJournal\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definition\":{\r\"possible\":[\r1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,65537,65538,65539,65540,65541\r],\"required\":[\r1,4\r]\r}\r},\"errors\":[\r{\r\"entity\":{\r\r},\"status\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}\r]\r}"
+            },
+            {
+              "id": "85c9ab9c-7c92-c0e4-c7e5-aef0c694ab34",
+              "name": "Updates Plan Name",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\t\"summary\": {\r\n\t\t\"plan\": {\r\n\t\t\t\"planName\": \"Updated Plan Name\"\r\n\t\t}\r\n\t}\r\n}"
+                },
+                "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "11402",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 18 Sep 2017 19:13:19 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "284",
+              "body": "{\r\"plan\":{\r\"summary\":{\r\"slaInMinutes\":240,\"restrictions\":1,\"type\":2,\"planStatusFlag\":0,\"numDevices\":0,\"subtype\":33554437,\"numUsers\":0,\"permissions\":[\r{\r\"permissionId\":1\r},{\r\"permissionId\":2\r},{\r\"permissionId\":3\r},{\r\"permissionId\":4\r},{\r\"permissionId\":5\r},{\r\"permissionId\":6\r},{\r\"permissionId\":7\r},{\r\"permissionId\":8\r},{\r\"permissionId\":9\r},{\r\"permissionId\":10\r},{\r\"permissionId\":11\r},{\r\"permissionId\":12\r},{\r\"permissionId\":13\r},{\r\"permissionId\":15\r},{\r\"permissionId\":16\r},{\r\"permissionId\":18\r},{\r\"permissionId\":20\r},{\r\"permissionId\":22\r},{\r\"permissionId\":24\r},{\r\"permissionId\":25\r},{\r\"permissionId\":26\r},{\r\"permissionId\":27\r},{\r\"permissionId\":29\r},{\r\"permissionId\":31\r},{\r\"permissionId\":32\r},{\r\"permissionId\":33\r},{\r\"permissionId\":34\r},{\r\"permissionId\":35\r},{\r\"permissionId\":36\r},{\r\"permissionId\":38\r},{\r\"permissionId\":39\r},{\r\"permissionId\":40\r},{\r\"permissionId\":41\r},{\r\"permissionId\":42\r},{\r\"permissionId\":101\r},{\r\"permissionId\":102\r},{\r\"permissionId\":103\r},{\r\"permissionId\":107\r},{\r\"permissionId\":116\r},{\r\"permissionId\":117\r},{\r\"permissionId\":118\r},{\r\"permissionId\":134\r},{\r\"permissionId\":135\r},{\r\"permissionId\":136\r},{\r\"permissionId\":137\r},{\r\"permissionId\":139\r},{\r\"permissionId\":140\r},{\r\"permissionId\":142\r},{\r\"permissionId\":143\r},{\r\"permissionId\":145\r},{\r\"permissionId\":146\r},{\r\"permissionId\":147\r},{\r\"permissionId\":148\r},{\r\"permissionId\":149\r},{\r\"permissionId\":150\r},{\r\"permissionId\":157\r},{\r\"permissionId\":158\r},{\r\"permissionId\":159\r},{\r\"permissionId\":178\r},{\r\"permissionId\":215\r},{\r\"permissionId\":217\r},{\r\"permissionId\":178\r}\r],\"planOwner\":{\r\"_type_\":13,\"userName\":\"Administrator\",\"userId\":1\r},\"plan\":{\r\"_type_\":158,\"planName\":\"Updated Plan Name5\",\"planId\":17\r}\r},\"definesStorage\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"securityAssociations\":{\r\"associations\":[\r{\r\"userOrGroup\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r}\r],\"properties\":{\r\"isCreatorAssociation\":true,\"role\":{\r\"_type_\":120,\"roleId\":10,\"roleName\":\"Plan Creator Role\"\r}\r}\r}\r],\"ownerAssociations\":{\r\r}\r},\"featureInfo\":{\r\"edgedriveInfo\":{\r\r},\"definesEdgeDriveInfo\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"inheritance\":{\r\"isSealed\":true\r},\"storage\":{\r\"storagePolicy\":{\r\"storagePolicyName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59\",\"storagePolicyId\":39\r},\"copy\":[\r{\r\"copyType\":0,\"active\":1,\"isDefault\":1,\"copyPrecedence\":1,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":44,\"copyName\":\"Primary\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)7\",\"drivePoolId\":7\r},\"library\":{\r\"libraryName\":\"NewStoragePoolLibrary\",\"libraryId\":9\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool\",\"storagePolicyId\":18\r}\r},{\r\"copyType\":1,\"active\":1,\"isDefault\":0,\"copyPrecedence\":2,\"retentionRules\":{\r\"retainBackupDataForCycles\":1,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":30\r},\"StoragePolicyCopy\":{\r\"copyId\":45,\"copyName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59 synchronous copy\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)8\",\"drivePoolId\":8\r},\"library\":{\r\"libraryName\":\"NewStoragePool2Library\",\"libraryId\":10\r},\"useGlobalPolicy\":{\r\"storagePolicyName\":\"NewStoragePool2\",\"storagePolicyId\":20\r}\r}\r]\r},\"definesSchedule\":{\r\"definesEntity\":true,\"overrideEntity\":0\r},\"laptop\":{\r\"features\":{\r\"categoryPermission\":{\r\r}\r},\"accessPolicies\":{\r\"categoryPermission\":{\r\r}\r},\"definesAccessPolicies\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"content\":{\r\"definesSubclientWin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientMac\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesSubclientLin\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"users\":{\r\r},\"definesFeatures\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"alerts\":{\r\r},\"replicationTargets\":{\r\r},\"schedule\":{\r\"task\":{\r\"description\":\"\",\"ownerId\":1,\"runUserId\":1,\"taskType\":4,\"ownerName\":\"Administrator\",\"alertId\":0,\"GUID\":\"0a805de7-4312-4da1-b5b7-2da7cf6d0f83\",\"policyType\":0,\"associatedObjects\":0,\"taskName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59\",\"taskId\":503,\"securityAssociations\":{\r\"ownerAssociations\":{\r\r}\r},\"originalCC\":{\r\"commCellId\":2\r},\"taskSecurity\":{\r\"associatedUserGroups\":[\r{\r\"userGroupId\":1,\"_type_\":15,\"userGroupName\":\"master\"\r},{\r\"userGroupId\":3,\"_type_\":15,\"userGroupName\":\"View All\"\r}\r],\"ownerCapabilities\":{\r\r}\r},\"createAs\":{\r\"user\":{\r\"user\":{\r\"userName\":\"admin\",\"userId\":1\r}\r}\r},\"taskFlags\":{\r\"isEdgeDrive\":false,\"isEZOperation\":false,\"forDDB\":false,\"uninstalled\":false,\"isSystem\":false,\"disabled\":false\r},\"task\":{\r\"taskName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59\",\"taskId\":503\r}\r},\"appGroup\":{\r\r},\"subTasks\":[\r{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Daily Incremental\",\"subTaskType\":2,\"flags\":65536,\"operationType\":2,\"subTaskId\":518,\"subTask\":{\r\"subtaskId\":518,\"subtaskName\":\"Daily Incremental\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":14400,\"freq_type\":4,\"patternId\":95,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505692800,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily Incremental\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Last Saturday of the Month Regular Full\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":519,\"subTask\":{\r\"subtaskId\":519,\"subtaskName\":\"Last Saturday of the Month Regular Full\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":32,\"patternId\":96,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505692800,\"freq_interval\":7,\"freq_relative_interval\":5,\"name\":\"Last Saturday of the Month Regular Full\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":5,\"day\":7\r},\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":1,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":true\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"Weekly Synthetic Fulls\",\"subTaskType\":2,\"flags\":0,\"operationType\":2,\"subTaskId\":520,\"subTask\":{\r\"subtaskId\":520,\"subtaskName\":\"Weekly Synthetic Fulls\"\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":0,\"freq_type\":8,\"patternId\":97,\"flags\":0,\"description\":\"\",\"active_end_time\":0,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":72000,\"freq_restart_interval\":0,\"active_start_date\":1505692800,\"freq_interval\":32,\"freq_relative_interval\":0,\"name\":\"Weekly Synthetic Fulls\",\"freq_recurrence_factor\":1,\"daysToRun\":{\r\"week\":0,\"Friday\":true,\"day\":0\r},\"repeatPattern\":[\r{\r\"exception\":true,\"onDayNumber\":0,\"onDay\":64,\"description\":\"On Last - Saturday\",\"occurrence\":16,\"repeatOn\":0\r}\r],\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"truncateLogsOnSource\":false,\"sybaseSkipFullafterLogBkp\":false,\"bkpLatestVersion\":true,\"backupLevel\":4,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"vsaBackupOptions\":{\r\"backupFailedVMsOnly\":false\r},\"cdrOptions\":{\r\"incremental\":false,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"useCatalogServer\":true,\"followMountPoints\":true,\"enforceTransactionLogUsage\":false,\"skipConsistencyCheck\":false,\"createNewIndex\":true,\"daysBetweenSyntheticBackup\":0,\"autoCopy\":false\r},\"mediaOpt\":{\r\r}\r},\"commonOpts\":{\r\"perfJobOpts\":{\r\r}\r}\r}\r},{\r\"subTask\":{\r\"subTaskOrder\":0,\"subTaskName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59 aux copy\",\"subTaskType\":1,\"flags\":0,\"operationType\":4003,\"subTaskId\":521,\"subTask\":{\r\"subtaskId\":521,\"subtaskName\":\"b5e9871f-7d84-49bb-93df-c6524ad4bb59 aux copy\",\"taskId\":504\r}\r},\"pattern\":{\r\"active_end_occurence\":0,\"freq_subday_interval\":1800,\"freq_type\":4,\"patternId\":98,\"flags\":0,\"description\":\"\",\"active_end_time\":86340,\"active_end_date\":0,\"skipOccurence\":0,\"skipDayNumber\":0,\"active_start_time\":0,\"freq_restart_interval\":0,\"active_start_date\":1505692800,\"freq_interval\":1,\"freq_relative_interval\":0,\"name\":\"Daily aux copy\",\"freq_recurrence_factor\":1,\"calendar\":{\r\"calendarName\":\"Standard\",\"calendarId\":1\r},\"timeZone\":{\r\"TimeZoneID\":1000\r}\r},\"options\":{\r\"backupOpts\":{\r\"bkpLatestVersion\":true,\"backupLevel\":2,\"incLevel\":1,\"runIncrementalBackup\":true,\"doNotTruncateLog\":false,\"cdrOptions\":{\r\"incremental\":true,\"dataVerificationOnly\":false,\"full\":false\r},\"dataOpt\":{\r\"stopWinService\":true,\"stopDhcpService\":true,\"useCatalogServer\":true,\"optimizedBackup\":true,\"followMountPoints\":true,\"bkpFilesProctedByFS\":true,\"granularrecovery\":true,\"verifySynthFull\":true,\"daysBetweenSyntheticBackup\":0\r},\"nasOptions\":{\r\"snapShotType\":0,\"backupQuotas\":true\r},\"vaultTrackerOpt\":{\r\"mediaStatus\":{\r\"bad\":true,\"overwriteProtected\":true,\"full\":true\r}\r},\"mediaOpt\":{\r\"numberofDays\":30,\"retentionJobType\":2,\"waitForInlineBackupResources\":true,\"allowOtherSchedulesToUseMediaSet\":true\r}\r},\"commonOpts\":{\r\"jobRetryOpts\":{\r\"runningTime\":{\r\"totalRunningTime\":3600\r}\r}\r}\r}\r}\r]\r},\"database\":{\r\"slaInMinutes\":0,\"scheduleLog\":{\r\"task\":{\r\r}\r},\"storageLog\":{\r\"storagePolicy\":{\r\r}\r},\"definesScheduleLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesStorageLog\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definesAlerts\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"eDiscoveryInfo\":{\r\"definesContentAnalyzerCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesAnalyticsEngineCloud\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"options\":{\r\"forcedArchiving\":false,\"quota\":0\r},\"exchange\":{\r\"definesMBRetention\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBCleanup\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBArchiving\":{\r\"definesEntity\":false,\"overrideEntity\":0\r},\"definesMBJournal\":{\r\"definesEntity\":false,\"overrideEntity\":0\r}\r},\"definition\":{\r\"possible\":[\r1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,65537,65538,65539,65540,65541\r],\"required\":[\r1,4\r]\r}\r},\"errors\":[\r{\r\"entity\":{\r\r},\"status\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}\r]\r}"
             }
           ]
         },
