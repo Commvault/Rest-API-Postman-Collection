@@ -41345,6 +41345,75 @@
           ]
         },
         {
+          "_postman_id": "434af55f-daac-8e7b-b4dc-f126a87c1992",
+          "name": "Plan Access Policies",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "tests[\"Response Body contains categoryPermission\"] = responseBody.has(\"categoryPermission\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/AccessPolicies",
+            "description": "<h2>Description</h2>\nThis operation returns information on plan access policies."
+          },
+          "response": [
+            {
+              "id": "255f3bd9-c48e-599a-9378-cd0550b33c38",
+              "name": "Plan Access Policies",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/AccessPolicies"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [],
+              "cookie": [],
+              "responseTime": "0",
+              "body": "{\n  \"role\": {\n    \"roleId\": 1018,\n    \"roleName\": \" Plan A access policies \"\n  },\n  \"categoryPermission\": {\n    \"categoriesPermissionList\": [\n      {\n        \"permissionId\": 24,\n        \"permissionName\": \"EndUser Access\"\n      }\n    ]\n  }\n}"
+            }
+          ]
+        },
+        {
           "_postman_id": "9371e34a-4115-0d64-1f5b-589d508e4bfa",
           "name": "Plan",
           "event": [
@@ -43065,75 +43134,6 @@
               "cookie": [],
               "responseTime": "515",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"applicationId\":33,\"backupsetId\":7,\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":4,\"_type_\":0,\"consumeLicense\":true\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "434af55f-daac-8e7b-b4dc-f126a87c1992",
-          "name": "Plan Access Policies",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Response Body contains categoryPermission\"] = responseBody.has(\"categoryPermission\");",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/AccessPolicies",
-            "description": "<h2>Description</h2>\nThis operation returns information on plan access policies."
-          },
-          "response": [
-            {
-              "id": "255f3bd9-c48e-599a-9378-cd0550b33c38",
-              "name": "Plan Access Policies",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/AccessPolicies"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "",
-              "header": [],
-              "cookie": [],
-              "responseTime": "0",
-              "body": "{\n  \"role\": {\n    \"roleId\": 1018,\n    \"roleName\": \" Plan A access policies \"\n  },\n  \"categoryPermission\": {\n    \"categoriesPermissionList\": [\n      {\n        \"permissionId\": 24,\n        \"permissionName\": \"EndUser Access\"\n      }\n    ]\n  }\n}"
             }
           ]
         },
