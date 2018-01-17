@@ -51499,104 +51499,6 @@
           ]
         },
         {
-          "_postman_id": "6b8940f4-c9a0-0b92-49dc-4a6a16be2d18",
-          "name": "Subclient",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body contains processinginstructioninfo\"] = responseBody.has(\"processinginstructioninfo\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
-            "description": "This operation deletes a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_subclient.htm)"
-          },
-          "response": [
-            {
-              "id": "e6529d09-f9f0-9f2c-a6af-7578ab85fbc4",
-              "name": "Subclient",
-              "originalRequest": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
-                "description": "This operation deletes a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_subclient.htm)"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "118"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Thu, 01 Jun 2017 09:03:12 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "932",
-              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0\r}\r]\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "a4ca0962-ce3a-9b0d-197d-94a01769e6c3",
           "name": "Subclient Backup copy",
           "event": [
@@ -52099,6 +52001,104 @@
               "cookie": [],
               "responseTime": "0",
               "body": "{\n    \"taskId\": 125,\n    \"jobIds\": [\n        \"305\"\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "6b8940f4-c9a0-0b92-49dc-4a6a16be2d18",
+          "name": "Subclient",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body contains processinginstructioninfo\"] = responseBody.has(\"processinginstructioninfo\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+            "description": "This operation deletes a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_subclient.htm)"
+          },
+          "response": [
+            {
+              "id": "e6529d09-f9f0-9f2c-a6af-7578ab85fbc4",
+              "name": "Subclient",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/Subclient/{{subclientId}}",
+                "description": "This operation deletes a subclient.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_subclient.htm)"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "118"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Thu, 01 Jun 2017 09:03:12 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "932",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0\r}\r]\r}"
             }
           ]
         }
