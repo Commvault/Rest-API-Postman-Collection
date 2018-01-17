@@ -45451,6 +45451,113 @@
               "body": "{\r\"jobId\":431\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "17f239d2-56b1-c1fd-a1f4-c011fa89ba44",
+          "name": "Retrieve to Client (Restore) copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\csguid.PNG\",\r\n      \"\\\\C:\\\\DEMO_3.pptx\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
+            },
+            "url": "{{ServerUrl}}/retrieveToClient",
+            "description": "<h2>Description</h2>\nThis operation restores data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_retrievetoclient.htm)"
+          },
+          "response": [
+            {
+              "id": "3a594ea2-4bf7-5f90-2d04-ce9fbc4a3ed6",
+              "name": "Retrieve to Client (Restore)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\csguid.PNG\",\r\n      \"\\\\C:\\\\DEMO_3.pptx\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
+                },
+                "url": "{{ServerUrl}}/retrieveToClient",
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "15"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Mon, 12 Jun 2017 10:15:27 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "11592",
+              "body": "{\r\"jobId\":431\r}"
+            }
+          ]
         }
       ]
     },
