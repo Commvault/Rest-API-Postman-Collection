@@ -45244,113 +45244,6 @@
           ]
         },
         {
-          "_postman_id": "42c08572-3588-4621-bb1e-e4103013b73d",
-          "name": "Retrieve to Client (Restore)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\csguid.PNG\",\r\n      \"\\\\C:\\\\DEMO_3.pptx\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
-            },
-            "url": "{{ServerUrl}}/retrieveToClient",
-            "description": "<h2>Description</h2>\nThis operation restores data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_retrievetoclient.htm)"
-          },
-          "response": [
-            {
-              "id": "b672080f-cdf2-1ea4-3b6d-4f4d165d769a",
-              "name": "Retrieve to Client (Restore)",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\csguid.PNG\",\r\n      \"\\\\C:\\\\DEMO_3.pptx\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
-                },
-                "url": "{{ServerUrl}}/retrieveToClient",
-                "description": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "15"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Mon, 12 Jun 2017 10:15:27 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "11592",
-              "body": "{\r\"jobId\":431\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "f7f68293-cd40-b890-bcfe-655a6a44f236",
           "name": "Browse copy",
           "event": [
@@ -45486,6 +45379,113 @@
               "cookie": [],
               "responseTime": "0",
               "body": "{\n  \"databrowse_BrowseResponseList\": {\n    \"browseResponses\": [\n      {\n        \"session\": {\n          \"_sessionId\": \"1507887656-2\"\n        },\n        \"browseResult\": {\n          \"dataResultSet\": [\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_2faef8dce0b1c6c95718229371385292\"\n                  }\n                },\n                \"_imageMap\": \"92 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2914\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_1\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_1\",\n              \"_name\": \"|2914|#12!database_1\",\n              \"_displayPath\": \"/TblView/database_1\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_850d5e9a81ac5ec8bf9a7b82434f3ba5\"\n                  }\n                },\n                \"_imageMap\": \"92 OUT 102 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2933\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_10\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_10\",\n              \"_name\": \"|2933|#12!database_10\",\n              \"_displayPath\": \"/TblView/database_10\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_741a79e00e742700fbb1b2f0b215f43b\"\n                  }\n                },\n                \"_imageMap\": \"92 OUT 103 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2941\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_11\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_11\",\n              \"_name\": \"|2941|#12!database_11\",\n              \"_displayPath\": \"/TblView/database_11\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_89fc4752403a3aed59b75f17b4e66aea\"\n                  }\n                },\n                \"_imageMap\": \"92 OUT 103 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2939\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_12\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_12\",\n              \"_name\": \"|2939|#12!database_12\",\n              \"_displayPath\": \"/TblView/database_12\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_d0d70a24650e34d35e3b588e9d4770f0\"\n                  }\n                },\n                \"_imageMap\": \"92 OUT 103 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2943\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_13\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_13\",\n              \"_name\": \"|2943|#12!database_13\",\n              \"_displayPath\": \"/TblView/database_13\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_583abc9d2c08a88692211e36adf32432\"\n                  }\n                },\n                \"_imageMap\": \"92 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2916\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_2\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_2\",\n              \"_name\": \"|2916|#12!database_2\",\n              \"_displayPath\": \"/TblView/database_2\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_861b1953a9c0ec29ae3d62ff56fea5a2\"\n                  }\n                },\n                \"_imageMap\": \"92 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2918\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_3\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_3\",\n              \"_name\": \"|2918|#12!database_3\",\n              \"_displayPath\": \"/TblView/database_3\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_a8c5baa73b5495f0278f4f972985bb32\"\n                  }\n                },\n                \"_imageMap\": \"92 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2920\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_4\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_4\",\n              \"_name\": \"|2920|#12!database_4\",\n              \"_displayPath\": \"/TblView/database_4\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_f2a53c7ba828559ba0cf6d135912342b\"\n                  }\n                },\n                \"_imageMap\": \"92 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2922\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_5\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_5\",\n              \"_name\": \"|2922|#12!database_5\",\n              \"_displayPath\": \"/TblView/database_5\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_2eaf7ba57fe64c45ed9ac110f27b1114\"\n                  }\n                },\n                \"_imageMap\": \"92 OUT 102 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2929\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_6\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_6\",\n              \"_name\": \"|2929|#12!database_6\",\n              \"_displayPath\": \"/TblView/database_6\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_b2a16011af40cddea682bba6e8035b2a\"\n                  }\n                },\n                \"_imageMap\": \"92 OUT 102 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2935\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_7\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_7\",\n              \"_name\": \"|2935|#12!database_7\",\n              \"_displayPath\": \"/TblView/database_7\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_c3593a80a72e13baf2a1b4581d30ffdc\"\n                  }\n                },\n                \"_imageMap\": \"92 OUT 102 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2931\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_8\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_8\",\n              \"_name\": \"|2931|#12!database_8\",\n              \"_displayPath\": \"/TblView/database_8\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_27ac00e6928b51a865dda2d486cc5ccb\"\n                  }\n                },\n                \"_imageMap\": \"92 OUT 102 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2937\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/database_9\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"database_9\",\n              \"_name\": \"|2937|#12!database_9\",\n              \"_displayPath\": \"/TblView/database_9\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_cfebc584e2bfab5662f1252d03599c3a\"\n                  }\n                },\n                \"_imageMap\": \"92 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2912\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/postgres\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"postgres\",\n              \"_name\": \"|2912|#12!postgres\",\n              \"_displayPath\": \"/TblView/postgres\"\n            },\n            {\n              \"flags\": {\n                \"_isPseudo\": \"0\",\n                \"_directory\": \"1\",\n                \"_isFake\": \"0\",\n                \"_snap\": \"0\"\n              },\n              \"advancedData\": {\n                \"subclient\": {\n                  \"_type\": \"0\",\n                  \"__type_\": \"7\",\n                  \"_applicationId\": \"34\"\n                },\n                \"sourceCommServer\": {\n                  \"__type_\": \"1\",\n                  \"_commCellId\": \"2\",\n                  \"_type\": \"0\"\n                },\n                \"advConfig\": {\n                  \"browseAdvancedConfigResp\": {\n                    \"_commcellNumber\": \"106475384\"\n                  }\n                },\n                \"browseMetaData\": {\n                  \"dmStubData\": {\n                    \"_guid\": \"cvlt_94778cafe249a4f2545208a476c964aa\"\n                  }\n                },\n                \"_imageMap\": \"92 IN \",\n                \"_backupJobId\": \"103\",\n                \"_referenceTime\": \"1499950116\",\n                \"_cipId\": \"0\",\n                \"_offset\": \"2910\",\n                \"_archiveGroupId\": \"0\",\n                \"_backupTime\": \"1499950116\",\n                \"_archiveFileId\": \"0\"\n              },\n              \"_path\": \"/TblView/template0\",\n              \"_size\": \"0\",\n              \"_modificationTime\": \"0\",\n              \"_displayName\": \"template0\",\n              \"_name\": \"|2910|#12!template0\",\n              \"_displayPath\": \"/TblView/template0\"\n            }\n          ],\n          \"_queryId\": \"0\"\n        },\n        \"_respType\": \"0\",\n        \"_workerId\": \"2\"\n      },\n      {\n        \"session\": {\n          \"_sessionId\": \"1507887656-2\"\n        },\n        \"browseResult\": {\n          \"aggrResultSet\": {\n            \"_result\": \"16\"\n          },\n          \"_queryId\": \"1\"\n        },\n        \"_respType\": \"0\",\n        \"_workerId\": \"2\"\n      },\n      {\n        \"session\": {\n          \"_sessionId\": \"1507887656-2\"\n        },\n        \"_respType\": \"5\",\n        \"_workerId\": \"2\"\n      }\n    ]\n  }\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "42c08572-3588-4621-bb1e-e4103013b73d",
+          "name": "Retrieve to Client (Restore)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\csguid.PNG\",\r\n      \"\\\\C:\\\\DEMO_3.pptx\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
+            },
+            "url": "{{ServerUrl}}/retrieveToClient",
+            "description": "<h2>Description</h2>\nThis operation restores data obtained through a backup.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_retrievetoclient.htm)"
+          },
+          "response": [
+            {
+              "id": "b672080f-cdf2-1ea4-3b6d-4f4d165d769a",
+              "name": "Retrieve to Client (Restore)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\csguid.PNG\",\r\n      \"\\\\C:\\\\DEMO_3.pptx\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
+                },
+                "url": "{{ServerUrl}}/retrieveToClient",
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "15"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Mon, 12 Jun 2017 10:15:27 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "11592",
+              "body": "{\r\"jobId\":431\r}"
             }
           ]
         }
