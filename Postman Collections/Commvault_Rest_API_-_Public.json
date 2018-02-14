@@ -53116,6 +53116,87 @@
               "cookie": [],
               "responseTime": "441",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"\",\"errorCode\":0,\"entity\":{\r\"userId\":8,\"userName\":\"jdoe\"\r}\r}\r]\r}"
+            },
+            {
+              "id": "0dad16a7-4e09-2311-b0ef-f665702ed324",
+              "name": "User",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/User/{{UserId}}?newUserId=1&newUserGroupId=0",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "User",
+                    "{{UserId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "newUserId",
+                      "value": "1",
+                      "equals": true
+                    },
+                    {
+                      "key": "newUserGroupId",
+                      "value": "0",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "185",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Feb 2018 06:34:36 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "873",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorString\":\"Success\",\"errorCode\":0,\"entity\":{\r\"userId\":18,\"userName\":\"jdoe\"\r}\r}\r]\r}"
             }
           ]
         }
@@ -53465,6 +53546,52 @@
               "body": "{\r\"jobId\":283,\"processId\":283\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "6ab09199-62d2-c7e1-0f55-a27f88d69c32",
+          "name": "Executing a Workflow as a Job with JSON",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"Workflow_StartWorkflow\":\r\n{   \r\n  \"outputFormat\":\"1\",\r\n    \"options\":{\r\n      \"inputs\":{\r\n        \"Input1\":\"TestMachine\",\r\n        \"Input2\":8,\r\n        \"Input3\":\"testapi\"\r\n        \r\n      }\r\n    },\r\n    \"client\":{\r\n      \"clientName\":\"testapi\"\r\n    }\r\n}\r\n}"
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/Workflow/TestApi/Action/Execute?outputOnly=false",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Workflow",
+                "TestApi",
+                "Action",
+                "Execute"
+              ],
+              "query": [
+                {
+                  "key": "outputOnly",
+                  "value": "false",
+                  "equals": true
+                }
+              ]
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
