@@ -52673,7 +52673,7 @@
                 }
               ]
             },
-            "description": "<h2> Description </h2>\nThis operation returns the properties associated with a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_user_properties.htm)"
+            "description": "<h2> Description </h2>\nThis operation returns the properties associated with a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_user_properties.htm)\n\n<h3>Information returned with different levels:</h3>\n\n1: ListOnly\n\n10: Basic Properties\n\n30: All Properties\n\n40: Returns associatedUserGroups, associatedExternalUserGroups, SecurityAssociations + all other properties \n\n50: Returns associatedUserGroups, associatedExternalUserGroups, SecurityAssociations, UserSecurity + all other properties "
           },
           "response": [
             {
@@ -52801,6 +52801,318 @@
               "cookie": [],
               "responseTime": "482",
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"users\":[\r{\r\"description\":\"backup admin user\",\"enforceFSQuota\":false,\"idleTime\":0,\"agePasswordDays\":10,\"inheritGroupEdgeDriveQuotaSettings\":true,\"email\":\"jdoe@company.com\",\"edgeDriveQuotaLimitInGB\":100,\"lastLogIntime\":0,\"enforceEdgeDriveQuota\":false,\"fullName\":\"Jane Doe\",\"quotaLimitInGB\":100,\"loggedInMode\":0,\"inheritGroupQuotaSettings\":true,\"enableUser\":true,\"securityAssociations\":{\r\r},\"associatedUserGroups\":[\r{\r\"userGroupId\":3,\"userGroupName\":\"View All\"\r}\r],\"userEntity\":{\r\"userGUID\":\"A08662B0-4F76-4939-BCAB-0D8B223A585C\",\"userName\":\"jdoe\",\"userId\":19\r},\"userSecurity\":{\r\"ownerAssociations\":{\r\r}\r},\"LinkedCommvaultUser\":{\r\r}\r}\r]\r}"
+            },
+            {
+              "id": "6df38e44-99c4-64a6-8db3-1d195a892ff0",
+              "name": "User Properties with level 40",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/User/{{UserId}}?level=40",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "User",
+                    "{{UserId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "level",
+                      "value": "40",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "676",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Feb 2018 06:48:21 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "116",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"users\":[\r{\r\"description\":\"backup admin user\",\"enforceFSQuota\":false,\"idleTime\":0,\"agePasswordDays\":10,\"inheritGroupEdgeDriveQuotaSettings\":true,\"email\":\"jdoe@company.com\",\"edgeDriveQuotaLimitInGB\":100,\"lastLogIntime\":0,\"enforceEdgeDriveQuota\":false,\"fullName\":\"Jane Doe\",\"quotaLimitInGB\":100,\"loggedInMode\":0,\"inheritGroupQuotaSettings\":true,\"enableUser\":true,\"securityAssociations\":{\r\r},\"associatedUserGroups\":[\r{\r\"userGroupId\":3,\"userGroupName\":\"View All\"\r}\r],\"userEntity\":{\r\"userGUID\":\"A08662B0-4F76-4939-BCAB-0D8B223A585C\",\"userName\":\"jdoe\",\"userId\":19\r},\"LinkedCommvaultUser\":{\r\r}\r}\r]\r}"
+            },
+            {
+              "id": "3b3e7c27-e6b8-0540-7a1d-5fd1419b6cb8",
+              "name": "User Properties with level 30",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/User/{{UserId}}?level=30",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "User",
+                    "{{UserId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "level",
+                      "value": "30",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "574",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Feb 2018 06:48:50 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "52",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"users\":[\r{\r\"description\":\"backup admin user\",\"enforceFSQuota\":false,\"idleTime\":0,\"agePasswordDays\":10,\"inheritGroupEdgeDriveQuotaSettings\":true,\"email\":\"jdoe@company.com\",\"edgeDriveQuotaLimitInGB\":100,\"lastLogIntime\":0,\"enforceEdgeDriveQuota\":false,\"fullName\":\"Jane Doe\",\"quotaLimitInGB\":100,\"loggedInMode\":0,\"inheritGroupQuotaSettings\":true,\"enableUser\":true,\"userEntity\":{\r\"userGUID\":\"A08662B0-4F76-4939-BCAB-0D8B223A585C\",\"userName\":\"jdoe\",\"userId\":19\r},\"LinkedCommvaultUser\":{\r\r}\r}\r]\r}"
+            },
+            {
+              "id": "908846ad-c45b-a1b9-4ae1-078252d4586a",
+              "name": "User Properties with level 10",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/User/{{UserId}}?level=10",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "User",
+                    "{{UserId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "level",
+                      "value": "10",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "347",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Feb 2018 06:49:07 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "48",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"users\":[\r{\r\"description\":\"backup admin user\",\"idleTime\":0,\"email\":\"jdoe@company.com\",\"lastLogIntime\":0,\"fullName\":\"Jane Doe\",\"loggedInMode\":0,\"enableUser\":true,\"userEntity\":{\r\"userGUID\":\"A08662B0-4F76-4939-BCAB-0D8B223A585C\",\"userName\":\"jdoe\",\"userId\":19\r}\r}\r]\r}"
+            },
+            {
+              "id": "675331d5-0fde-815e-632a-e60bb2383eb9",
+              "name": "User Properties with level 1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/User/{{UserId}}?level=1",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "User",
+                    "{{UserId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "level",
+                      "value": "1",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "228",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Feb 2018 06:49:24 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "43",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"users\":[\r{\r\"idleTime\":0,\"loggedInMode\":0,\"userEntity\":{\r\"userGUID\":\"A08662B0-4F76-4939-BCAB-0D8B223A585C\",\"userName\":\"jdoe\",\"userId\":19\r}\r}\r]\r}"
             }
           ]
         },
