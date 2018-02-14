@@ -52657,7 +52657,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "{{ServerUrl}}/User/{{UserId}}?level=40",
+              "raw": "{{ServerUrl}}/User/{{UserId}}?level=1",
               "host": [
                 "{{ServerUrl}}"
               ],
@@ -52668,7 +52668,7 @@
               "query": [
                 {
                   "key": "level",
-                  "value": "40",
+                  "value": "1",
                   "equals": true
                 }
               ]
