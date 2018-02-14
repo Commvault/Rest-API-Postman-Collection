@@ -53589,9 +53589,95 @@
                 }
               ]
             },
-            "description": null
+            "description": "<h2> Description </h2>\nThis operation executes a workflow as a job.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute.htm)"
           },
-          "response": []
+          "response": [
+            {
+              "id": "1e347af7-3387-1d00-4497-ad6785bdbd9a",
+              "name": "Executing a Workflow as a Job with JSON",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\"Workflow_StartWorkflow\":\r\n{   \r\n  \"outputFormat\":\"1\",\r\n    \"options\":{\r\n      \"inputs\":{\r\n        \"Input1\":\"TestMachine\",\r\n        \"Input2\":8,\r\n        \"Input3\":\"testapi\"\r\n        \r\n      }\r\n    },\r\n    \"client\":{\r\n      \"clientName\":\"testapi\"\r\n    }\r\n}\r\n}"
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Workflow/TestApi/Action/Execute?outputOnly=false",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Workflow",
+                    "TestApi",
+                    "Action",
+                    "Execute"
+                  ],
+                  "query": [
+                    {
+                      "key": "outputOnly",
+                      "value": "false",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1226",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Feb 2018 06:42:54 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "764",
+              "body": "{\r\"outputs\":\"{\\\"testoutput\\\":\\\"NAME                                    OS           ACTIVE    \\\\r\\\\n----                                    --           ------    \\\\r\\\\napitest                                 Windows      Yes       \\\\r\\\\nauto                                    Windows      Yes       \\\\r\\\\nCSSP_IndexServer                        Any          Yes       \\\\r\\\\nfirewalltestma                          Windows      Yes       \\\\r\\\\nfwclient4_2                             Windows      Yes       \\\\r\\\\nshezavm11                               Windows      Yes       \\\\r\\\\nshezavm11_3                             Windows      Yes       \\\\r\\\\nshezavm7                                Linux        Yes       \\\\r\\\\ntest                                    Windows95    Yes       \\\\r\\\\ntestauto_2                              Windows      Yes       \\\\r\\\\ntestpool_SystemCreatedSP_IndexServer    Any          Yes       \\\\r\\\\nv10cl                                   Windows      Yes       \\\\r\\\\nv10client                               Windows      Yes\\\"}\",\"jobId\":294,\"errorMessage\":\"\",\"errorCode\":0,\"startTime\":1518590573,\"endTime\":1518590574,\"version\":4,\"status\":4,\"workflow\":{\r\"workflowName\":\"TestAPI\",\"workflowId\":88\r}\r}"
+            }
+          ]
         }
       ]
     },
