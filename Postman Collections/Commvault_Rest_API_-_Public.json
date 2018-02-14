@@ -39946,7 +39946,83 @@
             "url": "{{ServerUrl}}/Organization",
             "description": "<h2>Description</h2>\nThis operation creates an Organization."
           },
-          "response": []
+          "response": [
+            {
+              "id": "607f4c0c-4a3f-628d-826c-6bfb3514d262",
+              "name": "Organization",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"organizationInfo\": {\n    \"planDetails\": [\n      {\n        \"description\": \"Laptop plan\",\n        \"restrictions\": 0,\n        \"type\": 2,\n        \"planStatusFlag\": 0,\n        \"numDevices\": 0,\n        \"subtype\": 33554439,\n        \"numUsers\": 0,\n        \"permissions\": [\n          {\n            \"permissionId\": 31\n          },\n          {\n            \"permissionId\": 159\n          },\n          {\n            \"permissionId\": 158\n          },\n          {\n            \"permissionId\": 157\n          }\n        ],\n        \"planOwner\": {\n          \"userName\": \"Administrator\",\n          \"userId\": 1\n        },\n        \"plan\": {\n          \"planName\": \"Laptop plan\",\n          \"planId\": 1\n        }\n      }\n    ],\n    \"organization\": {\n      \"connectName\": \"test Company3\",\n      \"emailDomainNames\": [\n        \"mail.com\"\n      ],\n      \"shortName\": {\n        \"domainName\": \"testalias3\"\n      }\n    },\n    \"organizationProperties\": {\n      \"primaryDomain\": \"\",\n      \"primaryContacts\": [\n        {\n          \"fullName\": \"testadmin\",\n          \"email\": \"testmail3@mail.com\"\n        }\n      ]\n    }\n  }\n}"
+                },
+                "url": "{{ServerUrl}}/Organization",
+                "description": "<h2>Description</h2>\nThis operation creates an Organization."
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "326",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 26 Jan 2018 21:18:03 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "greenvalley.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "930C162901E43496C2ED776C7233E414",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "4292",
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"srmReportType\":0,\"clientSidePackage\":true,\"GUID\":\"3146C5E7-F898-410D-8952-6D8B84BABBE5\",\"_type_\":61,\"providerId\":18,\"providerDomainName\":\"testalias4\",\"consumeLicense\":true\r}\r}\r}"
+            }
+          ]
         },
         {
           "_postman_id": "f35cf426-69e2-d147-eea7-2a0b52fdd584",
@@ -52966,7 +53042,28 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{ServerUrl}}/User/{{UserId}}",
+            "url": {
+              "raw": "{{ServerUrl}}/User/{{UserId}}?newUserId=1&newUserGroupId=0",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "User",
+                "{{UserId}}"
+              ],
+              "query": [
+                {
+                  "key": "newUserId",
+                  "value": "1",
+                  "equals": true
+                },
+                {
+                  "key": "newUserGroupId",
+                  "value": "0",
+                  "equals": true
+                }
+              ]
+            },
             "description": "<h2> Description </h2>\nThis operation deletes a user.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_user.htm)"
           },
           "response": [
