@@ -48172,6 +48172,690 @@
       "description": "",
       "item": [
         {
+          "_postman_id": "96e3c4ab-214e-8135-f85c-dfbb148dd256",
+          "name": "Storage Pool Operations",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "a78d29e8-1923-4b70-dcb7-14f1b58a90bd",
+              "name": "Storage Pool",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"storagePolicyName\": \"New Disk SP\",\n  \"type\": 1,\n  \"copyName\": \"New Disk SP_Primary\",\n  \"numberOfCopies\": 1,\n  \"clientGroup\": {\n    \"_type_\": 28,\n    \"clientGroupId\": 0,\n    \"clientGroupName\": \"\"\n  },\n  \"storage\": [\n    {\n      \"path\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\lib\",\n      \"mediaAgent\": {\n        \"mediaAgentId\": 2,\n        \"_type_\": 11,\n        \"mediaAgentName\": \"greenvalley\"\n      },\n      \"credentials\": {}\n    }\n  ],\n  \"storagePolicyCopyInfo\": {\n    \"copyType\": 1,\n    \"isFromGui\": true,\n    \"active\": 1,\n    \"isDefault\": 1,\n    \"numberOfStreamsToCombine\": 1,\n    \"dedupeFlags\": {\n      \"enableDASHFull\": 1,\n      \"hostGlobalDedupStore\": 1,\n      \"enableDeduplication\": 1\n    },\n    \"storagePolicyFlags\": {\n      \"blockLevelDedup\": 1,\n      \"enableGlobalDeduplication\": 1\n    },\n    \"DDBPartitionInfo\": {\n      \"maInfoList\": [\n        {\n          \"mediaAgent\": {\n            \"mediaAgentId\": 2,\n            \"_type_\": 11,\n            \"mediaAgentName\": \"greenvalley\"\n          },\n          \"subStoreList\": [\n            {\n              \"diskFreeWarningThreshholdMB\": 10240,\n              \"diskFreeThresholdMB\": 5120,\n              \"accessPath\": {\n                \"path\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\ddb3\"\n              }\n            }\n          ]\n        }\n      ]\n    },\n    \"library\": {\n      \"libraryName\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\lib\",\n      \"_type_\": 9,\n      \"libraryId\": 0\n    },\n    \"mediaAgent\": {\n      \"mediaAgentId\": 2,\n      \"_type_\": 11,\n      \"mediaAgentName\": \"greenvalley\"\n    }\n  }\n}"
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/StoragePool?Action=create",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "StoragePool"
+                  ],
+                  "query": [
+                    {
+                      "key": "Action",
+                      "value": "create",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "<h2>Description</h2>\nThis operation creates a Storage Pool."
+              },
+              "response": [
+                {
+                  "id": "e9cb4386-b027-6c27-93ce-bac6c46830af",
+                  "name": "Create Disk Storage Pool",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"storagePolicyName\": \"New Disk SP\",\n\t\"type\": 1,\n\t\"copyName\": \"New Disk SP_Primary\",\n\t\"numberOfCopies\": 1,\n\t\"clientGroup\": {\n\t\t\"_type_\": 28,\n\t\t\"clientGroupId\": 0,\n\t\t\"clientGroupName\": \"\"\n\t},\n\t\"storage\": [\n\t\t{\n\t\t\t\"path\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\lib\",\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"mediaAgentId\": 2,\n\t\t\t\t\"_type_\": 11,\n\t\t\t\t\"mediaAgentName\": \"greenvalley\"\n\t\t\t},\n\t\t\t\"credentials\": {}\n\t\t}\n\t],\n\t\"storagePolicyCopyInfo\": {\n\t\t\"copyType\": 1,\n\t\t\"isFromGui\": true,\n\t\t\"active\": 1,\n\t\t\"isDefault\": 1,\n\t\t\"numberOfStreamsToCombine\": 1,\n\t\t\"dedupeFlags\": {\n\t\t\t\"enableDASHFull\": 1,\n\t\t\t\"hostGlobalDedupStore\": 1,\n\t\t\t\"enableDeduplication\": 1\n\t\t},\n\t\t\"storagePolicyFlags\": {\n\t\t\t\"blockLevelDedup\": 1,\n\t\t\t\"enableGlobalDeduplication\": 1\n\t\t},\n\t\t\"DDBPartitionInfo\": {\n\t\t\t\"maInfoList\": [\n\t\t\t\t{\n\t\t\t\t\t\"mediaAgent\": {\n\t\t\t\t\t\t\"mediaAgentId\": 2,\n\t\t\t\t\t\t\"_type_\": 11,\n\t\t\t\t\t\t\"mediaAgentName\": \"greenvalley\"\n\t\t\t\t\t},\n\t\t\t\t\t\"subStoreList\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"diskFreeWarningThreshholdMB\": 10240,\n\t\t\t\t\t\t\t\"diskFreeThresholdMB\": 5120,\n\t\t\t\t\t\t\t\"accessPath\": {\n\t\t\t\t\t\t\t\t\"path\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\ddb2\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"library\": {\n\t\t\t\"libraryName\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\lib\",\n\t\t\t\"_type_\": 9,\n\t\t\t\"libraryId\": 0\n\t\t},\n\t\t\"mediaAgent\": {\n\t\t\t\"mediaAgentId\": 2,\n\t\t\t\"_type_\": 11,\n\t\t\t\"mediaAgentName\": \"greenvalley\"\n\t\t}\n\t}\n}"
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/StoragePool?Action=create",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "StoragePool"
+                      ],
+                      "query": [
+                        {
+                          "key": "Action",
+                          "value": "create",
+                          "equals": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "420",
+                      "name": "Content-Length",
+                      "description": ""
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 15 Sep 2017 20:46:08 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": ""
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "9263",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><App_CreateStoragePolicyResp responseType=\"0\"><archiveGroupCopy _type_=\"18\" copyId=\"39\" copyName=\"New Disk SP_Primary\" storagePolicyId=\"34\" storagePolicyName=\"New Disk SP\"/><error errorCode=\"0\"/><dependentArchiveGroupCopy _type_=\"18\" copyId=\"40\" copyName=\"Primary\" storagePolicyId=\"35\" storagePolicyName=\"New Disk SP_SystemCreatedSP\"/></App_CreateStoragePolicyResp>"
+                }
+              ]
+            },
+            {
+              "_postman_id": "0226f95b-f07c-f5fc-0b80-716563d4e632",
+              "name": "Storage Pool",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "var jsonObject = xml2Json(responseBody);",
+                      "",
+                      "pm.environment.set(\"StoragePoolId\", jsonObject.Api_GetStoragePoolListResp.storagePoolList[0].storagePoolEntity.$.storagePoolId);"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/StoragePool",
+                "description": "<h2>Description</h2>\nThis operation returns all Storage Pools."
+              },
+              "response": [
+                {
+                  "id": "7b72ff40-acc7-661c-2597-64efc867034c",
+                  "name": "Storage Pool",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/xml"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePool"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "1787",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 10 Oct 2017 20:25:06 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "44",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"6\" clientGroupName=\"ForAdminConsole\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"6\" storagePoolName=\"ForAdminConsole\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"428755847741\" totalFreeSpace=\"64950642933\"><storagePool _type_=\"28\" clientGroupId=\"37\" clientGroupName=\"New Disk SP\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"37\" storagePoolName=\"New Disk SP\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"22\" clientGroupName=\"newsp3\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"22\" storagePoolName=\"newsp3\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"18\" clientGroupName=\"NewStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"18\" storagePoolName=\"NewStoragePool\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"20\" clientGroupName=\"NewStoragePool2\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"20\" storagePoolName=\"NewStoragePool2\"/></storagePoolList></Api_GetStoragePoolListResp>"
+                }
+              ]
+            },
+            {
+              "_postman_id": "9feebfef-e59e-6142-c52d-8b1cb067d037",
+              "name": "Storage Pool Details",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}",
+                "description": "<h2>Description</h2>\nThis operation returns details of a Storage Pool."
+              },
+              "response": [
+                {
+                  "id": "1a71bb01-8a7e-68cb-3e99-8b8356747975",
+                  "name": "Storage Pool",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/xml"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePool"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "1787",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 10 Oct 2017 20:25:06 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "44",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"6\" clientGroupName=\"ForAdminConsole\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"6\" storagePoolName=\"ForAdminConsole\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"428755847741\" totalFreeSpace=\"64950642933\"><storagePool _type_=\"28\" clientGroupId=\"37\" clientGroupName=\"New Disk SP\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"37\" storagePoolName=\"New Disk SP\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"22\" clientGroupName=\"newsp3\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"22\" storagePoolName=\"newsp3\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"18\" clientGroupName=\"NewStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"18\" storagePoolName=\"NewStoragePool\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"20\" clientGroupName=\"NewStoragePool2\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"20\" storagePoolName=\"NewStoragePool2\"/></storagePoolList></Api_GetStoragePoolListResp>"
+                },
+                {
+                  "id": "ccc13060-5840-61f3-16f9-2266586da0a9",
+                  "name": "Storage Pool Details",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/xml"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "3543",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 10 Oct 2017 23:15:08 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "655",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetStoragePoolDetailsResp><storagePoolDetails applicationSize=\"0\" devicePath=\"\" disperseFactor=\"0\" lastDayThroughput=\"0.00 GB/Hr\" nodesPerBlock=\"0\" numOfCleaningMedia=\"0\" numOfMedia=\"0\" numOfSpareMedia=\"0\" redundancyFactor=\"0\" reserved1=\"1\" reserved2=\"0\" reserved3=\"\" reserved4=\"\" retention=\"\" sizeOnDisk=\"0\" status=\"Online\" statusCode=\"0\" totalCapacity=\"214378217472\" totalFreeSpace=\"32469155840\"><dedupDBDetails avgQITimeOfStore=\"0\" baselineApplicationSize=\"0\" baselineSize=\"0\" commcellId=\"2\" creationtime=\"1489168062\" ddbVersion=\"-1\" deDupSavingPercent=\"\" deDupSavingSize=\"0\" dedupeFlags=\"377749504\" fragmentedSpaceSize=\"0\" freeSpaceOnLibrary=\"30965\" maxAllowedConnections=\"200\" maxAvgQITime=\"2000\" noOfPartitions=\"1\" numberOfJobs=\"0\" primaryRecordsPercentage=\"0\" prunePending=\"0\" reserveField1=\"0\" reserveField2=\"0\" reserveField3=\"\" reserveField4=\"0\" reserveField5=\"0\" reserveField6=\"1\" reserveField7=\"1 of 1  partitions online\" reserveField8=\"\" retentionCyclesForCopy=\"0\" retentionDaysForCopy=\"0\" sealedTime=\"0\" sizeOnMedia=\"0\" status=\"0\" storeFlags=\"546308114\" storeId=\"1\" storeName=\"SIDB_ForAdminConsole_ForAdminConsole_Primary(Mar 10 2017 12:47PM)\" storeNameAlias=\"SIDB_ForAdminConsole_ForAdminConsole_Primary\" totalAppSize=\"0\" totalDataSize=\"0\" uniqueBlocksOfStore=\"0\"><enablePruningTime EnableTime=\"0\" EnableTimeZone=\"0\"/></dedupDBDetails><libraryList description=\"\" extendedAttributes=\"0\" libraryType=\"3\" libraryVendorId=\"1\" manufacturer=\"Disk\" model=\"Disk\" status=\"Ready\" storagePoolType=\"0\"><magLibSummary associatedMediaAgents=\"\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" mountPathUsage=\"\" numOfMountPath=\"0\" onlineMountPaths=\"\" totalAvailableSpace=\"\" totalCapacity=\"\" totalFreeSpace=\"\" totalNumberOfWriteReservations=\"0\"/><tapeLibSummary associatedMediaAgents=\"\" attribute=\"0\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" barcodeReader=\"\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" controller=\"\" firmwareRevision=\"\" isEnabled=\"0\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" model=\"\" numOfActiveMedia=\"0\" numOfAgedMedia=\"0\" numOfAppendableMedia=\"0\" numOfAssignedMedia=\"0\" numOfCleaningMedia=\"0\" numOfDrives=\"0\" numOfDrivesOffline=\"0\" numOfFullMedia=\"0\" numOfIESlotOccupied=\"0\" numOfIESlots=\"0\" numOfMedia=\"0\" numOfMediaExporting=\"0\" numOfRegSlotOccupied=\"0\" numOfRegSlots=\"0\" numOfSlots=\"0\" numOfSpareMedia=\"0\" offlineReason=\"\" serialNumber=\"\" status=\"0\" totalNumberOfWriteReservations=\"0\" vendor=\"\"/><MountPathList dataServerType=\"0\" jobIds=\"\" libraryVendorId=\"0\" mediaAgents=\"\" mountPathId=\"5\" mountPathName=\"[greenvalley] C:\\CommvaultStuff\\AdminConsoleSP\\Path\" status=\"Ready\"><deviceInfo id=\"5\" name=\"Device_5\"/><mountPathSummary attribute=\"0\" avgCapacityFreedMB=\"0\" avgDataWrittenPerDayMB=\"0\" avgMediaConsumedPerDay=\"0\" avgMediaFreedPerDay=\"0\" estimatedSpaceRunoutDays=\"0\" lastNumDays=\"0\" libraryId=\"5\" libraryName=\"ForAdminConsoleLibrary\" lowWaterMark=\"0\" numberOfWriters=\"0\" totalAppSize=\"0\" totalDataWritten=\"0\" totalDeduplicationAppSize=\"0\" totalDeduplicationDataWritten=\"0\" totalFreeSpace=\"0\" totalReserveSpaceMB=\"0\" totalSpace=\"0\" totalValidData=\"0\" warningWaterMark=\"0\"/></MountPathList><library _type_=\"9\" libraryId=\"5\" libraryName=\"ForAdminConsoleLibrary\"/></libraryList></storagePoolDetails></EVGui_GetStoragePoolDetailsResp>"
+                }
+              ]
+            },
+            {
+              "_postman_id": "8fb9a440-bc6a-55fa-a537-ccdaced1c7c1",
+              "name": "Storage Pool",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}",
+                "description": "<h2>Description</h2>\nThis operation deletes a Storage Pool."
+              },
+              "response": [
+                {
+                  "id": "0c9aae9e-eb14-6a2e-8ee3-bffa95d5f1c6",
+                  "name": "Storage Pool Details",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/xml"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "3543",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 10 Oct 2017 23:15:08 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "655",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetStoragePoolDetailsResp><storagePoolDetails applicationSize=\"0\" devicePath=\"\" disperseFactor=\"0\" lastDayThroughput=\"0.00 GB/Hr\" nodesPerBlock=\"0\" numOfCleaningMedia=\"0\" numOfMedia=\"0\" numOfSpareMedia=\"0\" redundancyFactor=\"0\" reserved1=\"1\" reserved2=\"0\" reserved3=\"\" reserved4=\"\" retention=\"\" sizeOnDisk=\"0\" status=\"Online\" statusCode=\"0\" totalCapacity=\"214378217472\" totalFreeSpace=\"32469155840\"><dedupDBDetails avgQITimeOfStore=\"0\" baselineApplicationSize=\"0\" baselineSize=\"0\" commcellId=\"2\" creationtime=\"1489168062\" ddbVersion=\"-1\" deDupSavingPercent=\"\" deDupSavingSize=\"0\" dedupeFlags=\"377749504\" fragmentedSpaceSize=\"0\" freeSpaceOnLibrary=\"30965\" maxAllowedConnections=\"200\" maxAvgQITime=\"2000\" noOfPartitions=\"1\" numberOfJobs=\"0\" primaryRecordsPercentage=\"0\" prunePending=\"0\" reserveField1=\"0\" reserveField2=\"0\" reserveField3=\"\" reserveField4=\"0\" reserveField5=\"0\" reserveField6=\"1\" reserveField7=\"1 of 1  partitions online\" reserveField8=\"\" retentionCyclesForCopy=\"0\" retentionDaysForCopy=\"0\" sealedTime=\"0\" sizeOnMedia=\"0\" status=\"0\" storeFlags=\"546308114\" storeId=\"1\" storeName=\"SIDB_ForAdminConsole_ForAdminConsole_Primary(Mar 10 2017 12:47PM)\" storeNameAlias=\"SIDB_ForAdminConsole_ForAdminConsole_Primary\" totalAppSize=\"0\" totalDataSize=\"0\" uniqueBlocksOfStore=\"0\"><enablePruningTime EnableTime=\"0\" EnableTimeZone=\"0\"/></dedupDBDetails><libraryList description=\"\" extendedAttributes=\"0\" libraryType=\"3\" libraryVendorId=\"1\" manufacturer=\"Disk\" model=\"Disk\" status=\"Ready\" storagePoolType=\"0\"><magLibSummary associatedMediaAgents=\"\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" mountPathUsage=\"\" numOfMountPath=\"0\" onlineMountPaths=\"\" totalAvailableSpace=\"\" totalCapacity=\"\" totalFreeSpace=\"\" totalNumberOfWriteReservations=\"0\"/><tapeLibSummary associatedMediaAgents=\"\" attribute=\"0\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" barcodeReader=\"\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" controller=\"\" firmwareRevision=\"\" isEnabled=\"0\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" model=\"\" numOfActiveMedia=\"0\" numOfAgedMedia=\"0\" numOfAppendableMedia=\"0\" numOfAssignedMedia=\"0\" numOfCleaningMedia=\"0\" numOfDrives=\"0\" numOfDrivesOffline=\"0\" numOfFullMedia=\"0\" numOfIESlotOccupied=\"0\" numOfIESlots=\"0\" numOfMedia=\"0\" numOfMediaExporting=\"0\" numOfRegSlotOccupied=\"0\" numOfRegSlots=\"0\" numOfSlots=\"0\" numOfSpareMedia=\"0\" offlineReason=\"\" serialNumber=\"\" status=\"0\" totalNumberOfWriteReservations=\"0\" vendor=\"\"/><MountPathList dataServerType=\"0\" jobIds=\"\" libraryVendorId=\"0\" mediaAgents=\"\" mountPathId=\"5\" mountPathName=\"[greenvalley] C:\\CommvaultStuff\\AdminConsoleSP\\Path\" status=\"Ready\"><deviceInfo id=\"5\" name=\"Device_5\"/><mountPathSummary attribute=\"0\" avgCapacityFreedMB=\"0\" avgDataWrittenPerDayMB=\"0\" avgMediaConsumedPerDay=\"0\" avgMediaFreedPerDay=\"0\" estimatedSpaceRunoutDays=\"0\" lastNumDays=\"0\" libraryId=\"5\" libraryName=\"ForAdminConsoleLibrary\" lowWaterMark=\"0\" numberOfWriters=\"0\" totalAppSize=\"0\" totalDataWritten=\"0\" totalDeduplicationAppSize=\"0\" totalDeduplicationDataWritten=\"0\" totalFreeSpace=\"0\" totalReserveSpaceMB=\"0\" totalSpace=\"0\" totalValidData=\"0\" warningWaterMark=\"0\"/></MountPathList><library _type_=\"9\" libraryId=\"5\" libraryName=\"ForAdminConsoleLibrary\"/></libraryList></storagePoolDetails></EVGui_GetStoragePoolDetailsResp>"
+                },
+                {
+                  "id": "9c8833a0-2743-5583-b9bc-5fc6166996f9",
+                  "name": "Storage Pool",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/xml"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePool"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "1787",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 10 Oct 2017 20:25:06 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "44",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"6\" clientGroupName=\"ForAdminConsole\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"6\" storagePoolName=\"ForAdminConsole\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"428755847741\" totalFreeSpace=\"64950642933\"><storagePool _type_=\"28\" clientGroupId=\"37\" clientGroupName=\"New Disk SP\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"37\" storagePoolName=\"New Disk SP\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"22\" clientGroupName=\"newsp3\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"22\" storagePoolName=\"newsp3\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"18\" clientGroupName=\"NewStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"18\" storagePoolName=\"NewStoragePool\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"20\" clientGroupName=\"NewStoragePool2\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"20\" storagePoolName=\"NewStoragePool2\"/></storagePoolList></Api_GetStoragePoolListResp>"
+                },
+                {
+                  "id": "a47b62a8-6828-700d-112c-25263f8b9fcc",
+                  "name": "Storage Pool",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/xml"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "297",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 10 Oct 2017 23:16:59 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [
+                    {
+                      "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                      "httpOnly": true,
+                      "domain": "greenvalley.testlab.commvault.com",
+                      "path": "/webconsole",
+                      "secure": false,
+                      "value": "930C162901E43496C2ED776C7233E414",
+                      "key": "JSESSIONID"
+                    }
+                  ],
+                  "responseTime": "177",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><App_GenericArchiveGroupResp responseType=\"2\"><error errorCode=\"1\" errorMessage=\"Unable to delete this Global DeDuplication storage policy since there are dependent storage policy copies that are still in use.\"/></App_GenericArchiveGroupResp>"
+                }
+              ]
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "_postman_id": "b285ab27-fec6-b15b-6bd9-6e711f4871b9",
           "name": "MediaAgent",
           "event": [
@@ -54112,689 +54796,6 @@
               "cookie": [],
               "responseTime": "1752",
               "body": "{\r\"instanceProperties\":[\r{\r\"instance\":{\r\"clientId\":1186,\"clientName\":\"IDC-autovc\",\"instanceName\":\"VMware\",\"appName\":\"Virtual Server\",\"instanceId\":50,\"applicationId\":106\r},\"instanceActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r]\r},\"virtualServerInstance\":{\r\"vsInstanceType\":101,\"associatedClients\":{\r\"memberServers\":[\r{\r\"client\":{\r\"clientName\":\"sivasp8cs\",\"clientId\":2,\"_type_\":3\r}\r}\r]\r},\"vmwareVendor\":{\r\"virtualCenter\":{\r\"domainName\":\"idc-autovc.idcprodcert.loc\",\"userName\":\"idcprodcert\\\\admin\"\r}\r},\"xenServer\":{\r\r}\r}\r}\r]\r}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_postman_id": "96e3c4ab-214e-8135-f85c-dfbb148dd256",
-      "name": "Storage Pool Operations",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "a78d29e8-1923-4b70-dcb7-14f1b58a90bd",
-          "name": "Storage Pool",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"storagePolicyName\": \"New Disk SP\",\n  \"type\": 1,\n  \"copyName\": \"New Disk SP_Primary\",\n  \"numberOfCopies\": 1,\n  \"clientGroup\": {\n    \"_type_\": 28,\n    \"clientGroupId\": 0,\n    \"clientGroupName\": \"\"\n  },\n  \"storage\": [\n    {\n      \"path\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\lib\",\n      \"mediaAgent\": {\n        \"mediaAgentId\": 2,\n        \"_type_\": 11,\n        \"mediaAgentName\": \"greenvalley\"\n      },\n      \"credentials\": {}\n    }\n  ],\n  \"storagePolicyCopyInfo\": {\n    \"copyType\": 1,\n    \"isFromGui\": true,\n    \"active\": 1,\n    \"isDefault\": 1,\n    \"numberOfStreamsToCombine\": 1,\n    \"dedupeFlags\": {\n      \"enableDASHFull\": 1,\n      \"hostGlobalDedupStore\": 1,\n      \"enableDeduplication\": 1\n    },\n    \"storagePolicyFlags\": {\n      \"blockLevelDedup\": 1,\n      \"enableGlobalDeduplication\": 1\n    },\n    \"DDBPartitionInfo\": {\n      \"maInfoList\": [\n        {\n          \"mediaAgent\": {\n            \"mediaAgentId\": 2,\n            \"_type_\": 11,\n            \"mediaAgentName\": \"greenvalley\"\n          },\n          \"subStoreList\": [\n            {\n              \"diskFreeWarningThreshholdMB\": 10240,\n              \"diskFreeThresholdMB\": 5120,\n              \"accessPath\": {\n                \"path\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\ddb3\"\n              }\n            }\n          ]\n        }\n      ]\n    },\n    \"library\": {\n      \"libraryName\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\lib\",\n      \"_type_\": 9,\n      \"libraryId\": 0\n    },\n    \"mediaAgent\": {\n      \"mediaAgentId\": 2,\n      \"_type_\": 11,\n      \"mediaAgentName\": \"greenvalley\"\n    }\n  }\n}"
-            },
-            "url": {
-              "raw": "{{ServerUrl}}/StoragePool?Action=create",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "StoragePool"
-              ],
-              "query": [
-                {
-                  "key": "Action",
-                  "value": "create",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "<h2>Description</h2>\nThis operation creates a Storage Pool."
-          },
-          "response": [
-            {
-              "id": "e9cb4386-b027-6c27-93ce-bac6c46830af",
-              "name": "Create Disk Storage Pool",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"storagePolicyName\": \"New Disk SP\",\n\t\"type\": 1,\n\t\"copyName\": \"New Disk SP_Primary\",\n\t\"numberOfCopies\": 1,\n\t\"clientGroup\": {\n\t\t\"_type_\": 28,\n\t\t\"clientGroupId\": 0,\n\t\t\"clientGroupName\": \"\"\n\t},\n\t\"storage\": [\n\t\t{\n\t\t\t\"path\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\lib\",\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"mediaAgentId\": 2,\n\t\t\t\t\"_type_\": 11,\n\t\t\t\t\"mediaAgentName\": \"greenvalley\"\n\t\t\t},\n\t\t\t\"credentials\": {}\n\t\t}\n\t],\n\t\"storagePolicyCopyInfo\": {\n\t\t\"copyType\": 1,\n\t\t\"isFromGui\": true,\n\t\t\"active\": 1,\n\t\t\"isDefault\": 1,\n\t\t\"numberOfStreamsToCombine\": 1,\n\t\t\"dedupeFlags\": {\n\t\t\t\"enableDASHFull\": 1,\n\t\t\t\"hostGlobalDedupStore\": 1,\n\t\t\t\"enableDeduplication\": 1\n\t\t},\n\t\t\"storagePolicyFlags\": {\n\t\t\t\"blockLevelDedup\": 1,\n\t\t\t\"enableGlobalDeduplication\": 1\n\t\t},\n\t\t\"DDBPartitionInfo\": {\n\t\t\t\"maInfoList\": [\n\t\t\t\t{\n\t\t\t\t\t\"mediaAgent\": {\n\t\t\t\t\t\t\"mediaAgentId\": 2,\n\t\t\t\t\t\t\"_type_\": 11,\n\t\t\t\t\t\t\"mediaAgentName\": \"greenvalley\"\n\t\t\t\t\t},\n\t\t\t\t\t\"subStoreList\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"diskFreeWarningThreshholdMB\": 10240,\n\t\t\t\t\t\t\t\"diskFreeThresholdMB\": 5120,\n\t\t\t\t\t\t\t\"accessPath\": {\n\t\t\t\t\t\t\t\t\"path\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\ddb2\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"library\": {\n\t\t\t\"libraryName\": \"C:\\\\CommvaultStuff\\\\newsp4\\\\lib\",\n\t\t\t\"_type_\": 9,\n\t\t\t\"libraryId\": 0\n\t\t},\n\t\t\"mediaAgent\": {\n\t\t\t\"mediaAgentId\": 2,\n\t\t\t\"_type_\": 11,\n\t\t\t\"mediaAgentName\": \"greenvalley\"\n\t\t}\n\t}\n}"
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/StoragePool?Action=create",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "StoragePool"
-                  ],
-                  "query": [
-                    {
-                      "key": "Action",
-                      "value": "create",
-                      "equals": true
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "420",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Fri, 15 Sep 2017 20:46:08 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "9263",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><App_CreateStoragePolicyResp responseType=\"0\"><archiveGroupCopy _type_=\"18\" copyId=\"39\" copyName=\"New Disk SP_Primary\" storagePolicyId=\"34\" storagePolicyName=\"New Disk SP\"/><error errorCode=\"0\"/><dependentArchiveGroupCopy _type_=\"18\" copyId=\"40\" copyName=\"Primary\" storagePolicyId=\"35\" storagePolicyName=\"New Disk SP_SystemCreatedSP\"/></App_CreateStoragePolicyResp>"
-            }
-          ]
-        },
-        {
-          "_postman_id": "0226f95b-f07c-f5fc-0b80-716563d4e632",
-          "name": "Storage Pool",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var jsonObject = xml2Json(responseBody);",
-                  "",
-                  "pm.environment.set(\"StoragePoolId\", jsonObject.Api_GetStoragePoolListResp.storagePoolList[0].storagePoolEntity.$.storagePoolId);"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/xml"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/StoragePool",
-            "description": "<h2>Description</h2>\nThis operation returns all Storage Pools."
-          },
-          "response": [
-            {
-              "id": "7b72ff40-acc7-661c-2597-64efc867034c",
-              "name": "Storage Pool",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/StoragePool"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1787",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 10 Oct 2017 20:25:06 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "44",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"6\" clientGroupName=\"ForAdminConsole\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"6\" storagePoolName=\"ForAdminConsole\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"428755847741\" totalFreeSpace=\"64950642933\"><storagePool _type_=\"28\" clientGroupId=\"37\" clientGroupName=\"New Disk SP\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"37\" storagePoolName=\"New Disk SP\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"22\" clientGroupName=\"newsp3\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"22\" storagePoolName=\"newsp3\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"18\" clientGroupName=\"NewStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"18\" storagePoolName=\"NewStoragePool\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"20\" clientGroupName=\"NewStoragePool2\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"20\" storagePoolName=\"NewStoragePool2\"/></storagePoolList></Api_GetStoragePoolListResp>"
-            }
-          ]
-        },
-        {
-          "_postman_id": "9feebfef-e59e-6142-c52d-8b1cb067d037",
-          "name": "Storage Pool Details",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/xml"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}",
-            "description": "<h2>Description</h2>\nThis operation returns details of a Storage Pool."
-          },
-          "response": [
-            {
-              "id": "1a71bb01-8a7e-68cb-3e99-8b8356747975",
-              "name": "Storage Pool",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/StoragePool"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1787",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 10 Oct 2017 20:25:06 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "44",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"6\" clientGroupName=\"ForAdminConsole\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"6\" storagePoolName=\"ForAdminConsole\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"428755847741\" totalFreeSpace=\"64950642933\"><storagePool _type_=\"28\" clientGroupId=\"37\" clientGroupName=\"New Disk SP\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"37\" storagePoolName=\"New Disk SP\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"22\" clientGroupName=\"newsp3\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"22\" storagePoolName=\"newsp3\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"18\" clientGroupName=\"NewStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"18\" storagePoolName=\"NewStoragePool\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"20\" clientGroupName=\"NewStoragePool2\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"20\" storagePoolName=\"NewStoragePool2\"/></storagePoolList></Api_GetStoragePoolListResp>"
-            },
-            {
-              "id": "ccc13060-5840-61f3-16f9-2266586da0a9",
-              "name": "Storage Pool Details",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "3543",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 10 Oct 2017 23:15:08 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "655",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetStoragePoolDetailsResp><storagePoolDetails applicationSize=\"0\" devicePath=\"\" disperseFactor=\"0\" lastDayThroughput=\"0.00 GB/Hr\" nodesPerBlock=\"0\" numOfCleaningMedia=\"0\" numOfMedia=\"0\" numOfSpareMedia=\"0\" redundancyFactor=\"0\" reserved1=\"1\" reserved2=\"0\" reserved3=\"\" reserved4=\"\" retention=\"\" sizeOnDisk=\"0\" status=\"Online\" statusCode=\"0\" totalCapacity=\"214378217472\" totalFreeSpace=\"32469155840\"><dedupDBDetails avgQITimeOfStore=\"0\" baselineApplicationSize=\"0\" baselineSize=\"0\" commcellId=\"2\" creationtime=\"1489168062\" ddbVersion=\"-1\" deDupSavingPercent=\"\" deDupSavingSize=\"0\" dedupeFlags=\"377749504\" fragmentedSpaceSize=\"0\" freeSpaceOnLibrary=\"30965\" maxAllowedConnections=\"200\" maxAvgQITime=\"2000\" noOfPartitions=\"1\" numberOfJobs=\"0\" primaryRecordsPercentage=\"0\" prunePending=\"0\" reserveField1=\"0\" reserveField2=\"0\" reserveField3=\"\" reserveField4=\"0\" reserveField5=\"0\" reserveField6=\"1\" reserveField7=\"1 of 1  partitions online\" reserveField8=\"\" retentionCyclesForCopy=\"0\" retentionDaysForCopy=\"0\" sealedTime=\"0\" sizeOnMedia=\"0\" status=\"0\" storeFlags=\"546308114\" storeId=\"1\" storeName=\"SIDB_ForAdminConsole_ForAdminConsole_Primary(Mar 10 2017 12:47PM)\" storeNameAlias=\"SIDB_ForAdminConsole_ForAdminConsole_Primary\" totalAppSize=\"0\" totalDataSize=\"0\" uniqueBlocksOfStore=\"0\"><enablePruningTime EnableTime=\"0\" EnableTimeZone=\"0\"/></dedupDBDetails><libraryList description=\"\" extendedAttributes=\"0\" libraryType=\"3\" libraryVendorId=\"1\" manufacturer=\"Disk\" model=\"Disk\" status=\"Ready\" storagePoolType=\"0\"><magLibSummary associatedMediaAgents=\"\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" mountPathUsage=\"\" numOfMountPath=\"0\" onlineMountPaths=\"\" totalAvailableSpace=\"\" totalCapacity=\"\" totalFreeSpace=\"\" totalNumberOfWriteReservations=\"0\"/><tapeLibSummary associatedMediaAgents=\"\" attribute=\"0\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" barcodeReader=\"\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" controller=\"\" firmwareRevision=\"\" isEnabled=\"0\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" model=\"\" numOfActiveMedia=\"0\" numOfAgedMedia=\"0\" numOfAppendableMedia=\"0\" numOfAssignedMedia=\"0\" numOfCleaningMedia=\"0\" numOfDrives=\"0\" numOfDrivesOffline=\"0\" numOfFullMedia=\"0\" numOfIESlotOccupied=\"0\" numOfIESlots=\"0\" numOfMedia=\"0\" numOfMediaExporting=\"0\" numOfRegSlotOccupied=\"0\" numOfRegSlots=\"0\" numOfSlots=\"0\" numOfSpareMedia=\"0\" offlineReason=\"\" serialNumber=\"\" status=\"0\" totalNumberOfWriteReservations=\"0\" vendor=\"\"/><MountPathList dataServerType=\"0\" jobIds=\"\" libraryVendorId=\"0\" mediaAgents=\"\" mountPathId=\"5\" mountPathName=\"[greenvalley] C:\\CommvaultStuff\\AdminConsoleSP\\Path\" status=\"Ready\"><deviceInfo id=\"5\" name=\"Device_5\"/><mountPathSummary attribute=\"0\" avgCapacityFreedMB=\"0\" avgDataWrittenPerDayMB=\"0\" avgMediaConsumedPerDay=\"0\" avgMediaFreedPerDay=\"0\" estimatedSpaceRunoutDays=\"0\" lastNumDays=\"0\" libraryId=\"5\" libraryName=\"ForAdminConsoleLibrary\" lowWaterMark=\"0\" numberOfWriters=\"0\" totalAppSize=\"0\" totalDataWritten=\"0\" totalDeduplicationAppSize=\"0\" totalDeduplicationDataWritten=\"0\" totalFreeSpace=\"0\" totalReserveSpaceMB=\"0\" totalSpace=\"0\" totalValidData=\"0\" warningWaterMark=\"0\"/></MountPathList><library _type_=\"9\" libraryId=\"5\" libraryName=\"ForAdminConsoleLibrary\"/></libraryList></storagePoolDetails></EVGui_GetStoragePoolDetailsResp>"
-            }
-          ]
-        },
-        {
-          "_postman_id": "8fb9a440-bc6a-55fa-a537-ccdaced1c7c1",
-          "name": "Storage Pool",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/xml"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}",
-            "description": "<h2>Description</h2>\nThis operation deletes a Storage Pool."
-          },
-          "response": [
-            {
-              "id": "0c9aae9e-eb14-6a2e-8ee3-bffa95d5f1c6",
-              "name": "Storage Pool Details",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "3543",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 10 Oct 2017 23:15:08 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "655",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetStoragePoolDetailsResp><storagePoolDetails applicationSize=\"0\" devicePath=\"\" disperseFactor=\"0\" lastDayThroughput=\"0.00 GB/Hr\" nodesPerBlock=\"0\" numOfCleaningMedia=\"0\" numOfMedia=\"0\" numOfSpareMedia=\"0\" redundancyFactor=\"0\" reserved1=\"1\" reserved2=\"0\" reserved3=\"\" reserved4=\"\" retention=\"\" sizeOnDisk=\"0\" status=\"Online\" statusCode=\"0\" totalCapacity=\"214378217472\" totalFreeSpace=\"32469155840\"><dedupDBDetails avgQITimeOfStore=\"0\" baselineApplicationSize=\"0\" baselineSize=\"0\" commcellId=\"2\" creationtime=\"1489168062\" ddbVersion=\"-1\" deDupSavingPercent=\"\" deDupSavingSize=\"0\" dedupeFlags=\"377749504\" fragmentedSpaceSize=\"0\" freeSpaceOnLibrary=\"30965\" maxAllowedConnections=\"200\" maxAvgQITime=\"2000\" noOfPartitions=\"1\" numberOfJobs=\"0\" primaryRecordsPercentage=\"0\" prunePending=\"0\" reserveField1=\"0\" reserveField2=\"0\" reserveField3=\"\" reserveField4=\"0\" reserveField5=\"0\" reserveField6=\"1\" reserveField7=\"1 of 1  partitions online\" reserveField8=\"\" retentionCyclesForCopy=\"0\" retentionDaysForCopy=\"0\" sealedTime=\"0\" sizeOnMedia=\"0\" status=\"0\" storeFlags=\"546308114\" storeId=\"1\" storeName=\"SIDB_ForAdminConsole_ForAdminConsole_Primary(Mar 10 2017 12:47PM)\" storeNameAlias=\"SIDB_ForAdminConsole_ForAdminConsole_Primary\" totalAppSize=\"0\" totalDataSize=\"0\" uniqueBlocksOfStore=\"0\"><enablePruningTime EnableTime=\"0\" EnableTimeZone=\"0\"/></dedupDBDetails><libraryList description=\"\" extendedAttributes=\"0\" libraryType=\"3\" libraryVendorId=\"1\" manufacturer=\"Disk\" model=\"Disk\" status=\"Ready\" storagePoolType=\"0\"><magLibSummary associatedMediaAgents=\"\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" mountPathUsage=\"\" numOfMountPath=\"0\" onlineMountPaths=\"\" totalAvailableSpace=\"\" totalCapacity=\"\" totalFreeSpace=\"\" totalNumberOfWriteReservations=\"0\"/><tapeLibSummary associatedMediaAgents=\"\" attribute=\"0\" auxiliaryCopyWriteReservations=\"0\" backupReservations=\"0\" barcodeReader=\"\" bytesBackedupInLast1H=\"\" bytesBackedupInLast24H=\"\" controller=\"\" firmwareRevision=\"\" isEnabled=\"0\" isOnline=\"\" lastBackupTime=\"\" lastDayThroughput=\"\" lastHourThroughput=\"\" lastRestoreTime=\"\" model=\"\" numOfActiveMedia=\"0\" numOfAgedMedia=\"0\" numOfAppendableMedia=\"0\" numOfAssignedMedia=\"0\" numOfCleaningMedia=\"0\" numOfDrives=\"0\" numOfDrivesOffline=\"0\" numOfFullMedia=\"0\" numOfIESlotOccupied=\"0\" numOfIESlots=\"0\" numOfMedia=\"0\" numOfMediaExporting=\"0\" numOfRegSlotOccupied=\"0\" numOfRegSlots=\"0\" numOfSlots=\"0\" numOfSpareMedia=\"0\" offlineReason=\"\" serialNumber=\"\" status=\"0\" totalNumberOfWriteReservations=\"0\" vendor=\"\"/><MountPathList dataServerType=\"0\" jobIds=\"\" libraryVendorId=\"0\" mediaAgents=\"\" mountPathId=\"5\" mountPathName=\"[greenvalley] C:\\CommvaultStuff\\AdminConsoleSP\\Path\" status=\"Ready\"><deviceInfo id=\"5\" name=\"Device_5\"/><mountPathSummary attribute=\"0\" avgCapacityFreedMB=\"0\" avgDataWrittenPerDayMB=\"0\" avgMediaConsumedPerDay=\"0\" avgMediaFreedPerDay=\"0\" estimatedSpaceRunoutDays=\"0\" lastNumDays=\"0\" libraryId=\"5\" libraryName=\"ForAdminConsoleLibrary\" lowWaterMark=\"0\" numberOfWriters=\"0\" totalAppSize=\"0\" totalDataWritten=\"0\" totalDeduplicationAppSize=\"0\" totalDeduplicationDataWritten=\"0\" totalFreeSpace=\"0\" totalReserveSpaceMB=\"0\" totalSpace=\"0\" totalValidData=\"0\" warningWaterMark=\"0\"/></MountPathList><library _type_=\"9\" libraryId=\"5\" libraryName=\"ForAdminConsoleLibrary\"/></libraryList></storagePoolDetails></EVGui_GetStoragePoolDetailsResp>"
-            },
-            {
-              "id": "9c8833a0-2743-5583-b9bc-5fc6166996f9",
-              "name": "Storage Pool",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/StoragePool"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1787",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 10 Oct 2017 20:25:06 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "44",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"6\" clientGroupName=\"ForAdminConsole\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"6\" storagePoolName=\"ForAdminConsole\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"428755847741\" totalFreeSpace=\"64950642933\"><storagePool _type_=\"28\" clientGroupId=\"37\" clientGroupName=\"New Disk SP\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"37\" storagePoolName=\"New Disk SP\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"22\" clientGroupName=\"newsp3\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"22\" storagePoolName=\"newsp3\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"18\" clientGroupName=\"NewStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"18\" storagePoolName=\"NewStoragePool\"/></storagePoolList><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" statusCode=\"0\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"32480690176\"><storagePool _type_=\"28\" clientGroupId=\"20\" clientGroupName=\"NewStoragePool2\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"20\" storagePoolName=\"NewStoragePool2\"/></storagePoolList></Api_GetStoragePoolListResp>"
-            },
-            {
-              "id": "a47b62a8-6828-700d-112c-25263f8b9fcc",
-              "name": "Storage Pool",
-              "originalRequest": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/StoragePool/{{StoragePoolId}}"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "297",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 10 Oct 2017 23:16:59 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "greenvalley.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "930C162901E43496C2ED776C7233E414",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "177",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><App_GenericArchiveGroupResp responseType=\"2\"><error errorCode=\"1\" errorMessage=\"Unable to delete this Global DeDuplication storage policy since there are dependent storage policy copies that are still in use.\"/></App_GenericArchiveGroupResp>"
             }
           ]
         }
