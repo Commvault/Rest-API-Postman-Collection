@@ -54803,7 +54803,7 @@
     },
     {
       "_postman_id": "b4847ee3-0bae-2ef9-e271-02bf9eeddb03",
-      "name": "Laptop Devices - New",
+      "name": "Laptop Devices",
       "description": "",
       "item": [
         {
@@ -55024,8 +55024,8 @@
           },
           "response": [
             {
-              "id": "0301d80d-6df5-310c-aebf-3f0e77849541",
-              "name": "Device",
+              "id": "a4d6f13a-a0a8-c19a-d585-d0ef2685b9ac",
+              "name": "Device Properties",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -55042,7 +55042,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Device"
+                "url": "{{ServerUrl}}/Device/{{deviceId}}"
               },
               "status": "OK",
               "code": 200,
@@ -55050,115 +55050,38 @@
               "header": [
                 {
                   "key": "Content-Length",
-                  "value": "5167",
+                  "value": "1122",
                   "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
+                  "description": ""
                 },
                 {
                   "key": "Content-Type",
                   "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "description": "The mime type of this content"
+                  "description": ""
                 },
                 {
                   "key": "Date",
-                  "value": "Thu, 01 Mar 2018 20:20:49 GMT",
+                  "value": "Thu, 01 Mar 2018 20:25:09 GMT",
                   "name": "Date",
-                  "description": "The date and time that the message was sent"
+                  "description": ""
                 },
                 {
                   "key": "Server",
                   "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "description": "A name for the server"
+                  "description": ""
                 },
                 {
                   "key": "X-Powered-By",
                   "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                  "description": ""
                 }
               ],
               "cookie": [],
-              "responseTime": "609",
-              "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r},\"clientsFileSystem\":[\r{\r\"clientStatus\":4096,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":1519933763\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"macvm1\",\"clientName\":\"macvm1\",\"backupsetId\":39,\"_type_\":7,\"instanceId\":1,\"subclientId\":40,\"clientId\":19,\"applicationId\":63\r}\r},{\r\"clientStatus\":4096,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"FSTEST.testlab.commvault.com\",\"clientName\":\"fstest\",\"backupsetId\":59,\"_type_\":7,\"instanceId\":1,\"subclientId\":60,\"clientId\":28,\"applicationId\":33\r}\r},{\r\"clientStatus\":4098,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":1,\"subclientStatus\":10,\"specialClientFlags\":2,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"milano.testlab.commvault.com\",\"clientName\":\"milano\",\"backupsetId\":62,\"_type_\":7,\"instanceId\":1,\"subclientId\":63,\"clientId\":29,\"applicationId\":33\r}\r},{\r\"clientStatus\":4098,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":1,\"subclientStatus\":10,\"specialClientFlags\":2,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"Win2003.testlab.commvault.com\",\"clientName\":\"win2003\",\"backupsetId\":66,\"_type_\":7,\"instanceId\":1,\"subclientId\":70,\"clientId\":30,\"applicationId\":33\r}\r},{\r\"clientStatus\":4096,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":1519933742\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"amith110.testlab.commvault.com\",\"clientName\":\"amith110\",\"backupsetId\":69,\"_type_\":7,\"instanceId\":1,\"subclientId\":73,\"clientId\":31,\"applicationId\":33\r}\r},{\r\"clientStatus\":4096,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"milano.testlab.commvault.com\",\"clientName\":\"milano_2\",\"backupsetId\":71,\"_type_\":7,\"instanceId\":1,\"subclientId\":75,\"clientId\":32,\"applicationId\":33\r}\r},{\r\"clientStatus\":4096,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"Win2003.testlab.commvault.com\",\"clientName\":\"win2003_2\",\"backupsetId\":73,\"_type_\":7,\"instanceId\":1,\"subclientId\":77,\"clientId\":33,\"applicationId\":33\r}\r}\r]\r}"
-            },
-            {
-              "id": "a20f5383-c4b3-01b2-7562-3e2089c130fe",
-              "name": "Device with UserID Filter",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "disabled": false
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/Device?filterUserId=1",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Device"
-                  ],
-                  "query": [
-                    {
-                      "key": "filterUserId",
-                      "value": "1",
-                      "equals": true
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "3849",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 01 Mar 2018 20:21:24 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "146",
-              "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r},\"clientsFileSystem\":[\r{\r\"clientStatus\":4096,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":1519933763\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"macvm1\",\"clientName\":\"macvm1\",\"backupsetId\":39,\"_type_\":7,\"instanceId\":1,\"subclientId\":40,\"clientId\":19,\"applicationId\":63\r}\r},{\r\"clientStatus\":4096,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"FSTEST.testlab.commvault.com\",\"clientName\":\"fstest\",\"backupsetId\":59,\"_type_\":7,\"instanceId\":1,\"subclientId\":60,\"clientId\":28,\"applicationId\":33\r}\r},{\r\"clientStatus\":4098,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":1,\"subclientStatus\":10,\"specialClientFlags\":2,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"milano.testlab.commvault.com\",\"clientName\":\"milano\",\"backupsetId\":62,\"_type_\":7,\"instanceId\":1,\"subclientId\":63,\"clientId\":29,\"applicationId\":33\r}\r},{\r\"clientStatus\":4098,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":1,\"subclientStatus\":10,\"specialClientFlags\":2,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"Win2003.testlab.commvault.com\",\"clientName\":\"win2003\",\"backupsetId\":66,\"_type_\":7,\"instanceId\":1,\"subclientId\":70,\"clientId\":30,\"applicationId\":33\r}\r},{\r\"clientStatus\":4096,\"isOwner\":true,\"totalBackupSize\":0,\"backupSize\":0,\"bShowActivateOption\":true,\"isUserCentricClient\":false,\"capabilities\":0,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":1519933742\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"amith110.testlab.commvault.com\",\"clientName\":\"amith110\",\"backupsetId\":69,\"_type_\":7,\"instanceId\":1,\"subclientId\":73,\"clientId\":31,\"applicationId\":33\r}\r}\r]\r}"
+              "responseTime": "592",
+              "body": "{\r\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r},\"clientsFileSystem\":[\r{\r\"clientStatus\":4096,\"isOwner\":true,\"isLocked\":false,\"totalBackupSize\":0,\"backupSize\":0,\"dirDelim\":\"\\u002f\",\"bShowActivateOption\":true,\"isSyncAllowed\":true,\"isIndexingV2\":true,\"isUserCentricClient\":false,\"capabilities\":4328650366975,\"isClientDeconfigured\":0,\"subclientStatus\":8,\"specialClientFlags\":0,\"nextBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastDataProtectedTime\":{\r\"_type_\":55,\"time\":0\r},\"lastSuccessBackupTime\":{\r\"_type_\":55,\"time\":0\r},\"lastBackupTime\":{\r\"_type_\":55,\"time\":1519933763\r},\"lastOfflineTime\":{\r\"_type_\":55,\"time\":0\r},\"contents\":{\r\"content\":[\r{\r\"modifyTime\":0,\"createTime\":1519933759,\"valueType\":1,\"value\":\"\\u002f%Desktop%\"\r}\r]\r},\"clientOwners\":{\r\"owners\":[\r{\r\"userId\":1,\"_type_\":13,\"userName\":\"admin\"\r},{\r\"userId\":4,\"_type_\":13,\"userName\":\"TESTLAB\\\\admin\"\r},{\r\"userId\":5,\"_type_\":13,\"userName\":\"commvault-nj\\\\akollareddy\"\r}\r]\r},\"subClient\":{\r\"hostName\":\"macvm1\",\"clientName\":\"macvm1\",\"backupsetId\":39,\"_type_\":7,\"instanceId\":1,\"subclientId\":40,\"clientId\":19,\"applicationId\":63\r},\"lastOnlineTime\":{\r\"_type_\":55,\"time\":1519935885\r}\r}\r]\r}"
             }
           ]
         }
