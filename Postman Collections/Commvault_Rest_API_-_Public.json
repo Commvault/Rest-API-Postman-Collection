@@ -49106,65 +49106,66 @@
           },
           "response": [
             {
-              "id": "b8dd1ebb-c5d5-1fe5-44d8-6b8428d470ed",
-              "name": "Storage Policy",
+              "id": "8ed6920b-c341-73d7-236d-51207f613904",
+              "name": "Storage Policy Details",
               "originalRequest": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "{{Accept}}",
+                    "disabled": false
                   },
                   {
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}"
+                    "value": "{{TOKEN}}",
+                    "disabled": false
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/StoragePolicy",
-                "description": "This operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
+                "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyId}}"
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
               "header": [
                 {
-                  "description": "",
                   "key": "Content-Length",
+                  "value": "453",
                   "name": "Content-Length",
-                  "value": "236"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
                   "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Date",
+                  "value": "Thu, 01 Mar 2018 21:26:49 GMT",
                   "name": "Date",
-                  "value": "Tue, 06 Jun 2017 07:43:00 GMT"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
                   "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
+                  "description": ""
                 },
                 {
-                  "description": "",
                   "key": "X-Powered-By",
+                  "value": "ASP.NET",
                   "name": "X-Powered-By",
-                  "value": "ASP.NET"
+                  "description": ""
                 }
               ],
               "cookie": [],
-              "responseTime": "374",
-              "body": "{\r\"policies\":[\r{\r\"storagePolicyName\":\"CSSP\",\"storagePolicyId\":3\r},{\r\"storagePolicyName\":\"FirewallMASP\",\"storagePolicyId\":4\r},{\r\"storagePolicyName\":\"fwma_3\",\"storagePolicyId\":6\r},{\r\"storagePolicyName\":\"IDCMA2SP\",\"storagePolicyId\":5\r}\r]\r}"
+              "responseTime": "48",
+              "body": "{\r\"storagePolicy\":{\r\"storagePolicyName\":\"CSSP-4\",\"storagePolicyId\":48\r},\"copy\":[\r{\r\"copyType\":0,\"active\":1,\"isDefault\":1,\"copyPrecedence\":1,\"retentionRules\":{\r\"retainBackupDataForCycles\":0,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":120\r},\"StoragePolicyCopy\":{\r\"copyId\":58,\"copyName\":\"Primary\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)1\",\"drivePoolId\":1\r},\"library\":{\r\"libraryName\":\"NonDedupeLib\",\"libraryId\":1\r}\r}\r]\r}"
             }
           ]
         },
@@ -55737,6 +55738,12 @@
           ]
         }
       ]
+    },
+    {
+      "_postman_id": "b6c5bb76-f113-cdd5-5087-a2cd366c27ae",
+      "name": "Storage",
+      "description": "",
+      "item": []
     }
   ]
 }
