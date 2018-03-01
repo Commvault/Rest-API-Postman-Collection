@@ -48850,53 +48850,29 @@
       "_postman_id": "b6c5bb76-f113-cdd5-5087-a2cd366c27ae",
       "name": "Storage",
       "description": "",
-      "item": []
-    },
-    {
-      "_postman_id": "e5609328-0e4e-1b24-ea99-1e8b55f26fe1",
-      "name": "Storage Policy Operations",
-      "description": "",
       "item": [
         {
-          "_postman_id": "548c8cda-cc98-b805-2d2e-8ebd93581d1f",
-          "name": "Storage Policy",
-          "event": [
+          "_postman_id": "e5609328-0e4e-1b24-ea99-1e8b55f26fe1",
+          "name": "Storage Policy Operations",
+          "description": "",
+          "item": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains policies\"] = responseBody.has(\"policies\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/StoragePolicy",
-            "description": "<h2>Description</h2>\nThis operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
-          },
-          "response": [
-            {
-              "id": "30034ccf-98b5-d844-f732-4b99251d27c8",
+              "_postman_id": "548c8cda-cc98-b805-2d2e-8ebd93581d1f",
               "name": "Storage Policy",
-              "originalRequest": {
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "tests[\"Response Body contains policies\"] = responseBody.has(\"policies\");"
+                    ]
+                  }
+                }
+              ],
+              "request": {
                 "method": "GET",
                 "header": [
                   {
@@ -48913,99 +48889,95 @@
                   "raw": ""
                 },
                 "url": "{{ServerUrl}}/StoragePolicy",
-                "description": "This operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
+                "description": "<h2>Description</h2>\nThis operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
               },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
+              "response": [
                 {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "236"
-                },
+                  "id": "30034ccf-98b5-d844-f732-4b99251d27c8",
+                  "name": "Storage Policy",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePolicy",
+                    "description": "This operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "description": "",
+                      "key": "Content-Length",
+                      "name": "Content-Length",
+                      "value": "236"
+                    },
+                    {
+                      "description": "",
+                      "key": "Content-Type",
+                      "name": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "description": "",
+                      "key": "Date",
+                      "name": "Date",
+                      "value": "Tue, 06 Jun 2017 07:43:00 GMT"
+                    },
+                    {
+                      "description": "",
+                      "key": "Server",
+                      "name": "Server",
+                      "value": "Microsoft-IIS/8.5"
+                    },
+                    {
+                      "description": "",
+                      "key": "X-Powered-By",
+                      "name": "X-Powered-By",
+                      "value": "ASP.NET"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "374",
+                  "body": "{\r\"policies\":[\r{\r\"storagePolicyName\":\"CSSP\",\"storagePolicyId\":3\r},{\r\"storagePolicyName\":\"FirewallMASP\",\"storagePolicyId\":4\r},{\r\"storagePolicyName\":\"fwma_3\",\"storagePolicyId\":6\r},{\r\"storagePolicyName\":\"IDCMA2SP\",\"storagePolicyId\":5\r}\r]\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "8f5edc89-8994-a18a-5548-fbc74c72b1d8",
+              "name": "Storage Policy",
+              "event": [
                 {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 06 Jun 2017 07:43:00 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "",
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "tests[\"Response Body contains archiveGroupCopy\"] = responseBody.has(\"archiveGroupCopy\");",
+                      "tests[\"Response Body contains storagePolicyName\"] = responseBody.has(\"storagePolicyName\");",
+                      "tests[\"Response Body contains storagePolicyId\"] = responseBody.has(\"storagePolicyId\");",
+                      "postman.setEnvironmentVariable(\"storagePolicyId\", jsonData.archiveGroupCopy.storagePolicyId);",
+                      "postman.setEnvironmentVariable(\"storagePolicyName\", jsonData.archiveGroupCopy.storagePolicyName);"
+                    ]
+                  }
                 }
               ],
-              "cookie": [],
-              "responseTime": "374",
-              "body": "{\r\"policies\":[\r{\r\"storagePolicyName\":\"CSSP\",\"storagePolicyId\":3\r},{\r\"storagePolicyName\":\"FirewallMASP\",\"storagePolicyId\":4\r},{\r\"storagePolicyName\":\"fwma_3\",\"storagePolicyId\":6\r},{\r\"storagePolicyName\":\"IDCMA2SP\",\"storagePolicyId\":5\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "8f5edc89-8994-a18a-5548-fbc74c72b1d8",
-          "name": "Storage Policy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains archiveGroupCopy\"] = responseBody.has(\"archiveGroupCopy\");",
-                  "tests[\"Response Body contains storagePolicyName\"] = responseBody.has(\"storagePolicyName\");",
-                  "tests[\"Response Body contains storagePolicyId\"] = responseBody.has(\"storagePolicyId\");",
-                  "postman.setEnvironmentVariable(\"storagePolicyId\", jsonData.archiveGroupCopy.storagePolicyId);",
-                  "postman.setEnvironmentVariable(\"storagePolicyName\", jsonData.archiveGroupCopy.storagePolicyName);"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"storagePolicyName\": \"CSSP-4\",\r\n  \"storagePolicyCopyInfo\": {\r\n    \"retentionRules\": {\r\n      \"retainBackupDataForDays\": 120\r\n    },\r\n    \"library\": {\r\n      \"libraryId\": 1\r\n    },\r\n    \"mediaAgent\": {\r\n      \"mediaAgentId\": 2\r\n    }\r\n  }\r\n}"
-            },
-            "url": "{{ServerUrl}}/StoragePolicy",
-            "description": "<h2>Description</h2>\n<p>This operation creates a storage policy. To create a storage policy using request parameters, see <a href = \"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_storage_policy.htm\"> REST API - PUT Storage Policy. </a> </p>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm)"
-          },
-          "response": [
-            {
-              "id": "25616664-f3a0-b3dd-a8a4-7f57d71932c0",
-              "name": "Storage Policy - This operation creates a storage policy using JSON",
-              "originalRequest": {
+              "request": {
                 "method": "POST",
                 "header": [
                   {
@@ -49023,221 +48995,200 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
+                  "raw": "{\r\n  \"storagePolicyName\": \"CSSP-4\",\r\n  \"storagePolicyCopyInfo\": {\r\n    \"retentionRules\": {\r\n      \"retainBackupDataForDays\": 120\r\n    },\r\n    \"library\": {\r\n      \"libraryId\": 1\r\n    },\r\n    \"mediaAgent\": {\r\n      \"mediaAgentId\": 2\r\n    }\r\n  }\r\n}"
                 },
-                "url": "{{ServerUrl}}/StoragePolicy"
+                "url": "{{ServerUrl}}/StoragePolicy",
+                "description": "<h2>Description</h2>\n<p>This operation creates a storage policy. To create a storage policy using request parameters, see <a href = \"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_storage_policy.htm\"> REST API - PUT Storage Policy. </a> </p>\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm)"
               },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
+              "response": [
                 {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "162"
-                },
+                  "id": "25616664-f3a0-b3dd-a8a4-7f57d71932c0",
+                  "name": "Storage Policy - This operation creates a storage policy using JSON",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePolicy"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "description": "",
+                      "key": "Content-Length",
+                      "name": "Content-Length",
+                      "value": "162"
+                    },
+                    {
+                      "description": "",
+                      "key": "Content-Type",
+                      "name": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "description": "",
+                      "key": "Date",
+                      "name": "Date",
+                      "value": "Tue, 06 Jun 2017 08:13:39 GMT"
+                    },
+                    {
+                      "description": "",
+                      "key": "Server",
+                      "name": "Server",
+                      "value": "Microsoft-IIS/8.5"
+                    },
+                    {
+                      "description": "",
+                      "key": "X-Powered-By",
+                      "name": "X-Powered-By",
+                      "value": "ASP.NET"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "3160",
+                  "body": "{\r\"responseType\":0,\"archiveGroupCopy\":{\r\"copyId\":8,\"_type_\":18,\"copyName\":\"Primary\",\"storagePolicyName\":\"CSSP-4\",\"storagePolicyId\":9\r},\"error\":{\r\"errorCode\":0\r}\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "fdfff84e-9c6d-3368-0a3b-fbb0e7ec16ac",
+              "name": "Storage Policy Details",
+              "event": [
                 {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 06 Jun 2017 08:13:39 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "tests[\"Response Body contains storagePolicy\"] = responseBody.has(\"storagePolicy\");",
+                      "tests[\"Response Body contains storagePolicyName\"] = responseBody.has(\"storagePolicyName\");",
+                      "tests[\"Response Body contains storagePolicyId\"] = responseBody.has(\"storagePolicyId\");",
+                      "tests[\"Response Body contains copy\"] = responseBody.has(\"copy\");",
+                      "tests[\"Response Body contains library\"] = responseBody.has(\"library\");",
+                      "",
+                      "var jsonData = JSON.parse(responseBody);",
+                      "tests[\"storagePolicyId response value validate\"] = jsonData.storagePolicy.storagePolicyId === parseInt(postman.getEnvironmentVariable(\"storagePolicyId\"));"
+                    ]
+                  }
                 }
               ],
-              "cookie": [],
-              "responseTime": "3160",
-              "body": "{\r\"responseType\":0,\"archiveGroupCopy\":{\r\"copyId\":8,\"_type_\":18,\"copyName\":\"Primary\",\"storagePolicyName\":\"CSSP-4\",\"storagePolicyId\":9\r},\"error\":{\r\"errorCode\":0\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "fdfff84e-9c6d-3368-0a3b-fbb0e7ec16ac",
-          "name": "Storage Policy Details",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains storagePolicy\"] = responseBody.has(\"storagePolicy\");",
-                  "tests[\"Response Body contains storagePolicyName\"] = responseBody.has(\"storagePolicyName\");",
-                  "tests[\"Response Body contains storagePolicyId\"] = responseBody.has(\"storagePolicyId\");",
-                  "tests[\"Response Body contains copy\"] = responseBody.has(\"copy\");",
-                  "tests[\"Response Body contains library\"] = responseBody.has(\"library\");",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"storagePolicyId response value validate\"] = jsonData.storagePolicy.storagePolicyId === parseInt(postman.getEnvironmentVariable(\"storagePolicyId\"));"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyId}}",
-            "description": "<h2>Description</h2>\nThis operation returns the properties associated with a storage policy."
-          },
-          "response": [
-            {
-              "id": "8ed6920b-c341-73d7-236d-51207f613904",
-              "name": "Storage Policy Details",
-              "originalRequest": {
+              "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "{{Accept}}",
-                    "disabled": false
+                    "value": "{{Accept}}"
                   },
                   {
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "disabled": false
+                    "value": "{{TOKEN}}"
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyId}}"
+                "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyId}}",
+                "description": "<h2>Description</h2>\nThis operation returns the properties associated with a storage policy."
               },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
+              "response": [
                 {
-                  "key": "Content-Length",
-                  "value": "453",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 01 Mar 2018 21:26:49 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "48",
-              "body": "{\r\"storagePolicy\":{\r\"storagePolicyName\":\"CSSP-4\",\"storagePolicyId\":48\r},\"copy\":[\r{\r\"copyType\":0,\"active\":1,\"isDefault\":1,\"copyPrecedence\":1,\"retentionRules\":{\r\"retainBackupDataForCycles\":0,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":120\r},\"StoragePolicyCopy\":{\r\"copyId\":58,\"copyName\":\"Primary\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)1\",\"drivePoolId\":1\r},\"library\":{\r\"libraryName\":\"NonDedupeLib\",\"libraryId\":1\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "21966a9a-05a6-9f7d-7428-bab7d621fc0d",
-          "name": "Storage Policy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "{{ServerUrl}}/StoragePolicy?storagepolicy=CSSP2&mediaagent=firewalltestcs&library=CSLib",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "StoragePolicy"
-              ],
-              "query": [
-                {
-                  "equals": true,
-                  "key": "storagepolicy",
-                  "value": "CSSP2"
-                },
-                {
-                  "equals": true,
-                  "key": "mediaagent",
-                  "value": "firewalltestcs"
-                },
-                {
-                  "equals": true,
-                  "key": "library",
-                  "value": "CSLib"
+                  "id": "8ed6920b-c341-73d7-236d-51207f613904",
+                  "name": "Storage Policy Details",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}",
+                        "disabled": false
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}",
+                        "disabled": false
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyId}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "453",
+                      "name": "Content-Length",
+                      "description": ""
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 01 Mar 2018 21:26:49 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": ""
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "48",
+                  "body": "{\r\"storagePolicy\":{\r\"storagePolicyName\":\"CSSP-4\",\"storagePolicyId\":48\r},\"copy\":[\r{\r\"copyType\":0,\"active\":1,\"isDefault\":1,\"copyPrecedence\":1,\"retentionRules\":{\r\"retainBackupDataForCycles\":0,\"jobs\":0,\"retainArchiverDataForDays\":0,\"retainBackupDataForDays\":120\r},\"StoragePolicyCopy\":{\r\"copyId\":58,\"copyName\":\"Primary\"\r},\"drivePool\":{\r\"drivePoolName\":\"DrivePool(greenvalley)1\",\"drivePoolId\":1\r},\"library\":{\r\"libraryName\":\"NonDedupeLib\",\"libraryId\":1\r}\r}\r]\r}"
                 }
               ]
             },
-            "description": "<h2>Description</h2>\nThis operation creates a storage policy. To create a storage policy using an XML file, see <a href = \"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm\"> REST API - POST Storage Policy</a>.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_storage_policy.htm)"
-          },
-          "response": [
             {
-              "id": "023a9b86-e8fe-aef7-9f79-c402d97ed72a",
-              "name": "Storage Policy - This operation creates a storage policy using request parameters.",
-              "originalRequest": {
+              "_postman_id": "21966a9a-05a6-9f7d-7428-bab7d621fc0d",
+              "name": "Storage Policy",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
                 "method": "PUT",
                 "header": [
                   {
@@ -49263,117 +49214,127 @@
                   ],
                   "query": [
                     {
+                      "equals": true,
                       "key": "storagepolicy",
-                      "value": "CSSP2",
-                      "equals": true
+                      "value": "CSSP2"
                     },
                     {
+                      "equals": true,
                       "key": "mediaagent",
-                      "value": "firewalltestcs",
-                      "equals": true
+                      "value": "firewalltestcs"
                     },
                     {
+                      "equals": true,
                       "key": "library",
-                      "value": "CSLib",
-                      "equals": true
+                      "value": "CSLib"
                     }
                   ]
-                }
+                },
+                "description": "<h2>Description</h2>\nThis operation creates a storage policy. To create a storage policy using an XML file, see <a href = \"http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_storage_policy.htm\"> REST API - POST Storage Policy</a>.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_storage_policy.htm)"
               },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
+              "response": [
                 {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "37"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 06 Jun 2017 08:07:38 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "2239",
-              "body": "Created storage policy successfully.\n"
-            }
-          ]
-        },
-        {
-          "_postman_id": "de1d58bc-af77-0cac-326b-bfc7b249f6e8",
-          "name": "Storage Policy List for a MediaAgent",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/xml"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "{{ServerUrl}}/StoragePolicyListAssociatedToMediaAgent?MediaAgent=2",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "StoragePolicyListAssociatedToMediaAgent"
-              ],
-              "query": [
-                {
-                  "equals": true,
-                  "key": "MediaAgent",
-                  "value": "2"
+                  "id": "023a9b86-e8fe-aef7-9f79-c402d97ed72a",
+                  "name": "Storage Policy - This operation creates a storage policy using request parameters.",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/StoragePolicy?storagepolicy=CSSP2&mediaagent=firewalltestcs&library=CSLib",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "StoragePolicy"
+                      ],
+                      "query": [
+                        {
+                          "key": "storagepolicy",
+                          "value": "CSSP2",
+                          "equals": true
+                        },
+                        {
+                          "key": "mediaagent",
+                          "value": "firewalltestcs",
+                          "equals": true
+                        },
+                        {
+                          "key": "library",
+                          "value": "CSLib",
+                          "equals": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "description": "",
+                      "key": "Content-Length",
+                      "name": "Content-Length",
+                      "value": "37"
+                    },
+                    {
+                      "description": "",
+                      "key": "Content-Type",
+                      "name": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "description": "",
+                      "key": "Date",
+                      "name": "Date",
+                      "value": "Tue, 06 Jun 2017 08:07:38 GMT"
+                    },
+                    {
+                      "description": "",
+                      "key": "Server",
+                      "name": "Server",
+                      "value": "Microsoft-IIS/8.5"
+                    },
+                    {
+                      "description": "",
+                      "key": "X-Powered-By",
+                      "name": "X-Powered-By",
+                      "value": "ASP.NET"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "2239",
+                  "body": "Created storage policy successfully.\n"
                 }
               ]
             },
-            "description": "<h2>Description</h2>\nThis operation returns a list of storage policies associated with a MediaAgent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy_mediaagent.htm)"
-          },
-          "response": [
             {
-              "id": "492d3606-0cc3-88ad-d3cf-096f35867973",
+              "_postman_id": "de1d58bc-af77-0cac-326b-bfc7b249f6e8",
               "name": "Storage Policy List for a MediaAgent",
-              "originalRequest": {
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
                 "method": "GET",
                 "header": [
                   {
@@ -49405,146 +49366,187 @@
                     }
                   ]
                 },
-                "description": "This opeartion returns a list of storage policies associated with a MediaAgent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy_mediaagent.htm)\n\n"
+                "description": "<h2>Description</h2>\nThis operation returns a list of storage policies associated with a MediaAgent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy_mediaagent.htm)"
               },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
+              "response": [
                 {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "777"
-                },
+                  "id": "492d3606-0cc3-88ad-d3cf-096f35867973",
+                  "name": "Storage Policy List for a MediaAgent",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/xml"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/StoragePolicyListAssociatedToMediaAgent?MediaAgent=2",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "StoragePolicyListAssociatedToMediaAgent"
+                      ],
+                      "query": [
+                        {
+                          "equals": true,
+                          "key": "MediaAgent",
+                          "value": "2"
+                        }
+                      ]
+                    },
+                    "description": "This opeartion returns a list of storage policies associated with a MediaAgent.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy_mediaagent.htm)\n\n"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "description": "",
+                      "key": "Content-Length",
+                      "name": "Content-Length",
+                      "value": "777"
+                    },
+                    {
+                      "description": "",
+                      "key": "Content-Type",
+                      "name": "Content-Type",
+                      "value": "application/xml; charset=utf-8"
+                    },
+                    {
+                      "description": "",
+                      "key": "Date",
+                      "name": "Date",
+                      "value": "Tue, 06 Jun 2017 07:56:39 GMT"
+                    },
+                    {
+                      "description": "",
+                      "key": "Server",
+                      "name": "Server",
+                      "value": "Microsoft-IIS/8.5"
+                    },
+                    {
+                      "description": "",
+                      "key": "X-Powered-By",
+                      "name": "X-Powered-By",
+                      "value": "ASP.NET"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "69",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><App_GetStoragePoliciesForMediaAgentResp><error errorCode=\"0\"/><storagePolicyInformationAssociatedToMA isMADDBHost=\"0\" isMADefaultDataPathInCopy=\"1\" isPrimaryCopy=\"1\" isProxyMAInCopy=\"0\"><mediaAgent mediaAgentId=\"2\"/><storagePolicyAndCopy _type_=\"18\" copyId=\"1\" copyName=\"Primary\" storagePolicyId=\"2\" storagePolicyName=\"CommServeDR\"/></storagePolicyInformationAssociatedToMA><storagePolicyInformationAssociatedToMA isMADDBHost=\"0\" isMADefaultDataPathInCopy=\"1\" isPrimaryCopy=\"1\" isProxyMAInCopy=\"0\"><mediaAgent mediaAgentId=\"2\"/><storagePolicyAndCopy _type_=\"18\" copyId=\"2\" copyName=\"Primary\" storagePolicyId=\"3\" storagePolicyName=\"CSSP\"/></storagePolicyInformationAssociatedToMA></App_GetStoragePoliciesForMediaAgentResp>"
+                }
+              ]
+            },
+            {
+              "_postman_id": "5df49ff3-9ae1-65e8-d16f-c484ba5727af",
+              "name": "Storage Policy",
+              "event": [
                 {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/xml; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 06 Jun 2017 07:56:39 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
                 }
               ],
-              "cookie": [],
-              "responseTime": "69",
-              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><App_GetStoragePoliciesForMediaAgentResp><error errorCode=\"0\"/><storagePolicyInformationAssociatedToMA isMADDBHost=\"0\" isMADefaultDataPathInCopy=\"1\" isPrimaryCopy=\"1\" isProxyMAInCopy=\"0\"><mediaAgent mediaAgentId=\"2\"/><storagePolicyAndCopy _type_=\"18\" copyId=\"1\" copyName=\"Primary\" storagePolicyId=\"2\" storagePolicyName=\"CommServeDR\"/></storagePolicyInformationAssociatedToMA><storagePolicyInformationAssociatedToMA isMADDBHost=\"0\" isMADefaultDataPathInCopy=\"1\" isPrimaryCopy=\"1\" isProxyMAInCopy=\"0\"><mediaAgent mediaAgentId=\"2\"/><storagePolicyAndCopy _type_=\"18\" copyId=\"2\" copyName=\"Primary\" storagePolicyId=\"3\" storagePolicyName=\"CSSP\"/></storagePolicyInformationAssociatedToMA></App_GetStoragePoliciesForMediaAgentResp>"
-            }
-          ]
-        },
-        {
-          "_postman_id": "5df49ff3-9ae1-65e8-d16f-c484ba5727af",
-          "name": "Storage Policy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/xml"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyName}}",
-            "description": "<h2>Description</h2>\nThis operation deletes a storage policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm)"
-          },
-          "response": [
-            {
-              "id": "53ea1ef9-08b0-be12-f774-c049a44d50f2",
-              "name": "Storage Policy",
-              "originalRequest": {
+              "request": {
                 "method": "DELETE",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "application/xml",
-                    "disabled": false
+                    "value": "application/xml"
                   },
                   {
                     "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "disabled": false
+                    "value": "{{TOKEN}}"
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyName}}"
+                "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyName}}",
+                "description": "<h2>Description</h2>\nThis operation deletes a storage policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm)"
               },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "xml",
-              "header": [
+              "response": [
                 {
-                  "key": "Content-Length",
-                  "value": "37",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/xml; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 01 Mar 2018 21:21:58 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
+                  "id": "53ea1ef9-08b0-be12-f774-c049a44d50f2",
+                  "name": "Storage Policy",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/xml",
+                        "disabled": false
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}",
+                        "disabled": false
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyName}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "37",
+                      "name": "Content-Length",
+                      "description": ""
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 01 Mar 2018 21:21:58 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": ""
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "418",
+                  "body": "Deleted storage policy successfully.\n"
                 }
-              ],
-              "cookie": [],
-              "responseTime": "418",
-              "body": "Deleted storage policy successfully.\n"
+              ]
             }
-          ]
+          ],
+          "_postman_isSubFolder": true
         }
       ]
     },
