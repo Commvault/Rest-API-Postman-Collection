@@ -49432,6 +49432,105 @@
               "body": "Deleted storage policy successfully.\n"
             }
           ]
+        },
+        {
+          "_postman_id": "fdfff84e-9c6d-3368-0a3b-fbb0e7ec16ac",
+          "name": "Storage Policy copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains policies\"] = responseBody.has(\"policies\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/StoragePolicy",
+            "description": "<h2>Description</h2>\nThis operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
+          },
+          "response": [
+            {
+              "id": "b8dd1ebb-c5d5-1fe5-44d8-6b8428d470ed",
+              "name": "Storage Policy",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/StoragePolicy",
+                "description": "This operation returns a list of storage policies.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storage_policy.htm)"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "236"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Tue, 06 Jun 2017 07:43:00 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "374",
+              "body": "{\r\"policies\":[\r{\r\"storagePolicyName\":\"CSSP\",\"storagePolicyId\":3\r},{\r\"storagePolicyName\":\"FirewallMASP\",\"storagePolicyId\":4\r},{\r\"storagePolicyName\":\"fwma_3\",\"storagePolicyId\":6\r},{\r\"storagePolicyName\":\"IDCMA2SP\",\"storagePolicyId\":5\r}\r]\r}"
+            }
+          ]
         }
       ]
     },
