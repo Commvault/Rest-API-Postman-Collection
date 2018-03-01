@@ -26601,7 +26601,8 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body contains jobs\"] = responseBody.has(\"jobs\");"
+                  "tests[\"Response Body contains jobs\"] = responseBody.has(\"jobs\");",
+                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");"
                 ]
               }
             }
