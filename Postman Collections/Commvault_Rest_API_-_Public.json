@@ -26616,28 +26616,17 @@
               {
                 "key": "Authtoken",
                 "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
+              "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
             },
-            "url": {
-              "raw": "{{ServerUrl}}/Job?completedJobLookupTime=300",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Job"
-              ],
-              "query": [
-                {
-                  "key": "completedJobLookupTime",
-                  "value": "300",
-                  "equals": true
-                }
-              ]
-            },
+            "url": "{{ServerUrl}}/Jobs",
             "description": "<h2>Description</h2>\nThis operation returns a list of jobs for a client."
           },
           "response": []
