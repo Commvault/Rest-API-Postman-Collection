@@ -54986,7 +54986,7 @@
         },
         {
           "_postman_id": "7cb9ecfe-fe8d-a945-8935-065b3f03ed25",
-          "name": "Device copy",
+          "name": "Device Properties",
           "event": [
             {
               "listen": "test",
