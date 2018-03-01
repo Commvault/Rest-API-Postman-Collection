@@ -49073,7 +49073,13 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body contains policies\"] = responseBody.has(\"policies\");"
+                  "tests[\"Response Body contains storagePolicy\"] = responseBody.has(\"storagePolicy\");",
+                  "tests[\"Response Body contains storagePolicyName\"] = responseBody.has(\"storagePolicyName\");",
+                  "tests[\"Response Body contains storagePolicyId\"] = responseBody.has(\"storagePolicyId\");",
+                  "tests[\"Response Body contains copy\"] = responseBody.has(\"copy\");",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"deviceId response value validate\"] = jsonData.clientsFileSystem[0].subClient.clientId === parseInt(postman.getEnvironmentVariable(\"deviceId\"));"
                 ]
               }
             }
@@ -49094,7 +49100,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{ServerUrl}}/StoragePolicy",
+            "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyId}}",
             "description": "<h2>Description</h2>\nThis operation returns the properties associated with a storage policy."
           },
           "response": [
