@@ -54998,7 +54998,7 @@
                   "tests[\"Response Body contains clientsFileSystem\"] = responseBody.has(\"clientsFileSystem\");",
                   "",
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"deviceId\", jsonData.clientsFileSystem[0].subClient.clientId);"
+                  "tests[\"deviceId response value validate\"] = jsonData.clientsFileSystem[0].subClient.clientId === parseInt(postman.getEnvironmentVariable(\"deviceId\"));"
                 ]
               }
             }
@@ -55019,7 +55019,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{ServerUrl}}/Device",
+            "url": "{{ServerUrl}}/Device/{{deviceId}}",
             "description": "<h2>Description</h2>\nThis operation returns the properties associated with a laptop device."
           },
           "response": [
