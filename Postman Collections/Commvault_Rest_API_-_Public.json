@@ -49080,7 +49080,7 @@
                   "tests[\"Response Body contains library\"] = responseBody.has(\"library\");",
                   "",
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"deviceId response value validate\"] = jsonData.clientsFileSystem[0].subClient.clientId === parseInt(postman.getEnvironmentVariable(\"deviceId\"));"
+                  "tests[\"storagePolicyId response value validate\"] = jsonData.storagePolicy.storagePolicyId === parseInt(postman.getEnvironmentVariable(\"storagePolicyId\"));"
                 ]
               }
             }
