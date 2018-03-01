@@ -49361,72 +49361,10 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{ServerUrl}}/StoragePolicy/CSSP-4",
+            "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyName}}",
             "description": "<h2>Description</h2>\nThis operation deletes a storage policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm)"
           },
-          "response": [
-            {
-              "id": "38203698-3bf8-2979-b8cc-7cb59af5c3a9",
-              "name": "Storage Policy",
-              "originalRequest": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/StoragePolicy/CSSP-4",
-                "description": "This operation deletes a storage policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm)"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "37"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 06 Jun 2017 08:15:27 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "3535",
-              "body": "Deleted storage policy successfully.\n"
-            }
-          ]
+          "response": []
         }
       ]
     },
