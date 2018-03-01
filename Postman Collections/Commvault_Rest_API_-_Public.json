@@ -54808,7 +54808,7 @@
       "item": [
         {
           "_postman_id": "f651ac09-8457-e365-05fb-4b79cb064741",
-          "name": "Backup Set copy",
+          "name": "Device",
           "event": [
             {
               "listen": "test",
