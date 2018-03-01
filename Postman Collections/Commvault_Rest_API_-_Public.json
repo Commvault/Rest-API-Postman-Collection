@@ -3351,7 +3351,7 @@
               "raw": ""
             },
             "url": "{{ServerUrl}}/Client",
-            "description": "<h2>Description</h2>\nThis operation returns a list of clients.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm)"
+            "description": "<h2>Description</h2>\nThis operation returns the properties associated with a client.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_properties.htm)"
           },
           "response": [
             {
