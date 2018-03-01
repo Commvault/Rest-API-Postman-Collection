@@ -49350,7 +49350,7 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "{{Accept}}"
+                "value": "application/xml"
               },
               {
                 "key": "Authtoken",
