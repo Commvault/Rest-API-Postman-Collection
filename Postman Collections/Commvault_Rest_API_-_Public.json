@@ -26593,7 +26593,7 @@
         },
         {
           "_postman_id": "17736755-e86f-9a27-75c5-6c5e999bec80",
-          "name": "Job copy",
+          "name": "Jobs",
           "event": [
             {
               "listen": "test",
