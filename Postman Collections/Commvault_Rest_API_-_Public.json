@@ -49077,6 +49077,7 @@
                   "tests[\"Response Body contains storagePolicyName\"] = responseBody.has(\"storagePolicyName\");",
                   "tests[\"Response Body contains storagePolicyId\"] = responseBody.has(\"storagePolicyId\");",
                   "tests[\"Response Body contains copy\"] = responseBody.has(\"copy\");",
+                  "tests[\"Response Body contains library\"] = responseBody.has(\"library\");",
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "tests[\"deviceId response value validate\"] = jsonData.clientsFileSystem[0].subClient.clientId === parseInt(postman.getEnvironmentVariable(\"deviceId\"));"
