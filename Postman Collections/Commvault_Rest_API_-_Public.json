@@ -26625,12 +26625,77 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
+              "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t\"FULL\"\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
             },
             "url": "{{ServerUrl}}/Jobs",
             "description": "<h2>Description</h2>\nThis operation returns a list of jobs for a client."
           },
-          "response": []
+          "response": [
+            {
+              "id": "949ccd9d-fe31-8ab8-8661-3ecadd988d17",
+              "name": "Jobs - Last Completed Job",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
+                },
+                "url": "{{ServerUrl}}/Jobs"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1301",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 01 Mar 2018 20:58:02 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "129",
+              "body": "{\r\"totalRecordsWithoutPaging\":71,\"jobs\":[\r{\r\"jobSummary\":{\r\"sizeOfApplication\":0,\"backupSetName\":\"defaultBackupSet\",\"opType\":4,\"totalFailedFolders\":0,\"totalFailedFiles\":0,\"isVisible\":true,\"localizedStatus\":\"Completed\",\"isAged\":false,\"totalNumOfFiles\":0,\"jobId\":31776,\"jobSubmitErrorCode\":0,\"sizeOfMediaOnDisk\":0,\"status\":\"Completed\",\"lastUpdateTime\":1519937794,\"percentSavings\":0,\"localizedOperationName\":\"Backup\",\"statusColor\":\"black\",\"pendingReason\":\"\",\"backupLevel\":2,\"jobElapsedTime\":7,\"jobStartTime\":1519937786,\"currentPhaseName\":\"\",\"jobType\":\"Backup\",\"isPreemptable\":0,\"backupLevelName\":\"Incremental\",\"pendingReasonErrorCode\":\"\",\"appTypeName\":\"Windows File System\",\"percentComplete\":100,\"localizedBackupLevelName\":\"Incremental\",\"subclientName\":\"test\",\"destClientName\":\"greenvalley\",\"jobEndTime\":1519937794,\"subclient\":{\r\"clientName\":\"greenvalley\",\"instanceName\":\"DefaultInstanceName\",\"backupsetId\":3,\"instanceId\":1,\"subclientId\":148,\"clientId\":2,\"appName\":\"Windows File System\",\"backupsetName\":\"defaultBackupSet\",\"applicationId\":33,\"subclientName\":\"test\"\r},\"destinationClient\":{\r\"clientId\":2,\"clientName\":\"greenvalley\"\r},\"userName\":{\r\"userName\":\"admin\",\"userId\":1\r},\"clientGroups\":[\r{\r\"clientGroupId\":4,\"clientGroupName\":\"Media Agents\"\r},{\r\"clientGroupId\":11,\"clientGroupName\":\"test\"\r}\r]\r}\r}\r]\r}"
+            }
+          ]
         },
         {
           "_postman_id": "309eb2f6-99e1-ed73-f5cc-6e5a2863b475",
