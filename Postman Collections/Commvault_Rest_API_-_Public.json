@@ -49547,14 +49547,7 @@
             }
           ],
           "_postman_isSubFolder": true
-        }
-      ]
-    },
-    {
-      "_postman_id": "4e3070f7-581d-f714-7702-eaba367fadcd",
-      "name": "Storage Resource Operations",
-      "description": "",
-      "item": [
+        },
         {
           "_postman_id": "96e3c4ab-214e-8135-f85c-dfbb148dd256",
           "name": "Storage Pool Operations",
@@ -50238,7 +50231,14 @@
             }
           ],
           "_postman_isSubFolder": true
-        },
+        }
+      ]
+    },
+    {
+      "_postman_id": "4e3070f7-581d-f714-7702-eaba367fadcd",
+      "name": "Storage Resource Operations",
+      "description": "",
+      "item": [
         {
           "_postman_id": "b285ab27-fec6-b15b-6bd9-6e711f4871b9",
           "name": "MediaAgent",
