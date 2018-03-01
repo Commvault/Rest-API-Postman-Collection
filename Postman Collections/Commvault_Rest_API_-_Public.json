@@ -3316,7 +3316,7 @@
         },
         {
           "_postman_id": "bdeffba6-a436-04ff-b018-0b64864d48c9",
-          "name": "Client copy",
+          "name": "Client Properties",
           "event": [
             {
               "listen": "test",
