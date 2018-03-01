@@ -48963,7 +48963,11 @@
                   "",
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "tests[\"Response Body contains archiveGroupCopy\"] = responseBody.has(\"archiveGroupCopy\");"
+                  "tests[\"Response Body contains archiveGroupCopy\"] = responseBody.has(\"archiveGroupCopy\");",
+                  "tests[\"Response Body contains storagePolicyName\"] = responseBody.has(\"storagePolicyName\");",
+                  "tests[\"Response Body contains storagePolicyId\"] = responseBody.has(\"storagePolicyId\");",
+                  "postman.setEnvironmentVariable(\"storagePolicyId\", jsonData.archiveGroupCopy.storagePolicyId);",
+                  "postman.setEnvironmentVariable(\"storagePolicyName\", jsonData.archiveGroupCopy.storagePolicyName);"
                 ]
               }
             }
@@ -49364,7 +49368,70 @@
             "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyName}}",
             "description": "<h2>Description</h2>\nThis operation deletes a storage policy.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_storage_policy.htm)"
           },
-          "response": []
+          "response": [
+            {
+              "id": "53ea1ef9-08b0-be12-f774-c049a44d50f2",
+              "name": "Storage Policy",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/StoragePolicy/{{storagePolicyName}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "37",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 01 Mar 2018 21:21:58 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "418",
+              "body": "Deleted storage policy successfully.\n"
+            }
+          ]
         }
       ]
     },
