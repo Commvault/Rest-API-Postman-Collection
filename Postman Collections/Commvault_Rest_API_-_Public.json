@@ -4120,6 +4120,109 @@
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r},\"response\":[\r{\r\"errorCode\":0,\"entity\":{\r\"srmReportSet\":0,\"type\":0,\"clientName\":\"dummyclient\",\"srmReportType\":0,\"clientSidePackage\":true,\"clientId\":93,\"_type_\":3,\"consumeLicense\":true\r}\r}\r]\r}"
             }
           ]
+        },
+        {
+          "_postman_id": "bdeffba6-a436-04ff-b018-0b64864d48c9",
+          "name": "Client copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "postman.setEnvironmentVariable(\"clientId\", jsonData.clientProperties[0].client.clientEntity.clientId);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains clientProperties\"] = responseBody.has(\"clientProperties\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/Client",
+            "description": "<h2>Description</h2>\nThis operation returns a list of clients.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm)"
+          },
+          "response": [
+            {
+              "id": "83bb1ff9-5494-a393-8fa8-dedfbc2865d4",
+              "name": "Client",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/Client",
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "5863"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Mon, 12 Jun 2017 11:38:30 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "44735",
+              "body": "{\r\"clientProperties\":[\r{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":2,\"clientName\":\"firewalltestcs\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8415,\"clientEntity\":{\r\"clientId\":3,\"clientName\":\"IDCMA\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8415,\"clientEntity\":{\r\"clientId\":4,\"clientName\":\"IDCMA2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8420,\"clientEntity\":{\r\"clientId\":5,\"clientName\":\"IDCClient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":6,\"clientName\":\"ObjectStoreClient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":0,\"cvdPort\":0,\"clientEntity\":{\r\"clientId\":8,\"clientName\":\"edgeclient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":9,\"clientName\":\"firewalltestma\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8410,\"clientEntity\":{\r\"clientId\":10,\"clientName\":\"IDCunixclient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":11,\"clientName\":\"shezavm5\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":12,\"clientName\":\"V11\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":false\r},\"client\":{\r\"evmgrcPort\":8407,\"cvdPort\":8405,\"clientEntity\":{\r\"clientId\":13,\"clientName\":\"firewalltestma_2v10\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8410,\"clientEntity\":{\r\"clientId\":14,\"clientName\":\"LaptopClient\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8425,\"clientEntity\":{\r\"clientId\":15,\"clientName\":\"Laptopclient-2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8440,\"clientEntity\":{\r\"clientId\":16,\"clientName\":\"shezavm9_8\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":false\r},\"client\":{\r\"evmgrcPort\":8412,\"cvdPort\":8410,\"clientEntity\":{\r\"clientId\":17,\"clientName\":\"firewalltestma_3\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8417,\"cvdPort\":8415,\"clientEntity\":{\r\"clientId\":18,\"clientName\":\"firewalltestma_4\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":19,\"clientName\":\"proxy1\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":20,\"clientName\":\"proxy2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":21,\"clientName\":\"proxy3\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":22,\"clientName\":\"proxy4\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":23,\"clientName\":\"proxy5\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":24,\"clientName\":\"proxy6\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":25,\"clientName\":\"trinity\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":26,\"clientName\":\"neo-ws\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":27,\"clientName\":\"test1\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":28,\"clientName\":\"test2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":29,\"clientName\":\"test3\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":30,\"clientName\":\"test4\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":31,\"clientName\":\"dummy1\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"IsDeletedClient\":true,\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8402,\"cvdPort\":8400,\"clientEntity\":{\r\"clientId\":32,\"clientName\":\"dummy2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8407,\"cvdPort\":8405,\"clientEntity\":{\r\"clientId\":33,\"clientName\":\"trinity_2\",\"type\":0,\"_type_\":3\r}\r}\r},{\r\"clientProps\":{\r\"enableAccessControl\":true\r},\"client\":{\r\"evmgrcPort\":8407,\"cvdPort\":8405,\"clientEntity\":{\r\"clientId\":34,\"clientName\":\"neo-ws_3\",\"type\":0,\"_type_\":3\r}\r}\r}\r]\r}"
+            }
+          ]
         }
       ]
     },
