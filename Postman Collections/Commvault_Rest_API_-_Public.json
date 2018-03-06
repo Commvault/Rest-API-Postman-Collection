@@ -46692,7 +46692,7 @@
         },
         {
           "_postman_id": "7fcec94e-6f0e-1a2a-80cd-1ceae31a86ca",
-          "name": "Create Task (Restore) copy",
+          "name": "Create Task (Restore)",
           "event": [
             {
               "listen": "test",
