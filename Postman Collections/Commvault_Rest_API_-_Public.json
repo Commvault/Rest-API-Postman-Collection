@@ -1,7 +1,7 @@
 {
   "info": {
-    "name": "Commvault Rest API - Public",
     "_postman_id": "43ab5b21-c72f-6b18-345a-08cb9e202b1f",
+    "name": "Commvault Rest API - Public",
     "description": "Welcome\n--------------\nWelcome to Commvault's Rest APIs.  You can explore our APIs in [Postman](https://getpostman.com) using the predefined requests we created.\n\nSetup\n--------------\nTo get started, [create an environment in Postman](https://www.getpostman.com/docs/environments), select that environment, and set your environment variables by entering your platform API keys in the `0 - Setup/Environment Setup` pre-request script ([documentation on pre-request scripts](http://www.getpostman.com/docs/pre_request_scripts)).  Also, Some of our calls have dependencies. `GET`/`UPDATE`/`DELETE` may only work after an item is created with a `POST`.\n\nNotes:\n- Data created or modified in an environment will not affect other environments.\n- Data cannot be transfered from one environment to another environment.\n\nQuestions/Comments/Suggestions\n--------------\nIf you have any questions or comments, please let us know at [dev-api@commvault.com](mailto:dev-api@commvault.com).",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
@@ -142,8 +142,7 @@
                   "mode": "raw",
                   "raw": "{\r\"smtpInfo\":{\r\"enableSSL\":false,\"smtpServer\":\"mail.commvault.com\",\"smtpPort\":25,\"useAuthentication\":false,\"maxMailServerSize\":10240,\"userInfo\":{\r\"password\":\"\",\"userName\":\"\"\r},\"senderInfo\":{\r\"senderName\":\"Software\",\"senderAddress\":\"ypolishetty@commvault.com\"\r}\r}\r}"
                 },
-                "url": "{{ServerUrl}}/EmailServer",
-                "description": ""
+                "url": "{{ServerUrl}}/EmailServer"
               },
               "status": "OK",
               "code": 200,
@@ -246,8 +245,7 @@
                   "mode": "raw",
                   "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                 },
-                "url": "{{ServerUrl}}/EmailServer",
-                "description": ""
+                "url": "{{ServerUrl}}/EmailServer"
               },
               "status": "OK",
               "code": 200,
@@ -388,8 +386,7 @@
                       "value": "2"
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -613,8 +610,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/AlertRule",
-                "description": ""
+                "url": "{{ServerUrl}}/AlertRule"
               },
               "status": "OK",
               "code": 200,
@@ -715,8 +711,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/AlertRule/{{alertId}}",
-                "description": ""
+                "url": "{{ServerUrl}}/AlertRule/{{alertId}}"
               },
               "status": "OK",
               "code": 200,
@@ -854,8 +849,7 @@
                       "value": "200"
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -1174,8 +1168,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/AlertRule/{{alertId2}}/Action/Disable",
-                "description": ""
+                "url": "{{ServerUrl}}/AlertRule/{{alertId2}}/Action/Disable"
               },
               "status": "OK",
               "code": 200,
@@ -1276,8 +1269,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/AlertRule/{{alertId2}}/Action/Enable",
-                "description": ""
+                "url": "{{ServerUrl}}/AlertRule/{{alertId2}}/Action/Enable"
               },
               "status": "OK",
               "code": 200,
@@ -1577,8 +1569,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/AlertRule/{{alertId2}}",
-                "description": ""
+                "url": "{{ServerUrl}}/AlertRule/{{alertId2}}"
               },
               "status": "OK",
               "code": 200,
@@ -1689,8 +1680,7 @@
                   "mode": "raw",
                   "raw": "{\n  \"mode\": 4,\n  \"password\": \"{{password}}\",\n  \"username\": \"{{userName}}\"\n}"
                 },
-                "url": "{{ServerUrl}}/Login",
-                "description": ""
+                "url": "{{ServerUrl}}/Login"
               },
               "status": "OK",
               "code": 200,
@@ -1786,8 +1776,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Logout",
-                "description": ""
+                "url": "{{ServerUrl}}/Logout"
               },
               "status": "OK",
               "code": 200,
@@ -1926,8 +1915,7 @@
                       "value": "2"
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -2029,8 +2017,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Backupset/{{backupsetId}}",
-                "description": ""
+                "url": "{{ServerUrl}}/Backupset/{{backupsetId}}"
               },
               "status": "OK",
               "code": 200,
@@ -2237,8 +2224,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Backupset/{{backupsetId}}/action/backup",
-                "description": ""
+                "url": "{{ServerUrl}}/Backupset/{{backupsetId}}/action/backup"
               },
               "status": "OK",
               "code": 200,
@@ -2354,8 +2340,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"association\": {\n\t\t\"entity\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"{{clientName}}\",\n\t\t\t\t\"subclientName\": \"default\",\n\t\t\t\t\"backupsetName\": \"ff5bd3eb-923c-4341-a9b6-cf96291985e6\",\n\t\t\t\t\"instanceName\": \"DefaultInstanceName\",\n\t\t\t\t\"appName\": \"File System\"\n\t\t\t}\n\t\t]\n\t}\n}"
                 },
-                "url": "{{ServerUrl}}/Backupset",
-                "description": ""
+                "url": "{{ServerUrl}}/Backupset"
               },
               "status": "OK",
               "code": 200,
@@ -2634,8 +2619,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Backupset/{{backupsetId2}}",
-                "description": ""
+                "url": "{{ServerUrl}}/Backupset/{{backupsetId2}}"
               },
               "status": "OK",
               "code": 200,
@@ -2740,8 +2724,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/ClientGroup",
-                "description": ""
+                "url": "{{ServerUrl}}/ClientGroup"
               },
               "status": "OK",
               "code": 200,
@@ -2853,8 +2836,7 @@
                   "mode": "raw",
                   "raw": "{\r\n  \"clientGroupOperationType\": 1,\r\n  \"clientGroupDetail\": {\r\n    \"description\": \"client computer group description\",\r\n    \"clientGroup\": {\r\n      \"clientGroupName\": \"{{$guid}}\"\r\n    }\r\n  }\r\n}"
                 },
-                "url": "{{ServerUrl}}/ClientGroup",
-                "description": ""
+                "url": "{{ServerUrl}}/ClientGroup"
               },
               "status": "OK",
               "code": 200,
@@ -3160,8 +3142,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/ClientGroup/{{clientGroupId}}",
-                "description": ""
+                "url": "{{ServerUrl}}/ClientGroup/{{clientGroupId}}"
               },
               "status": "OK",
               "code": 200,
@@ -3270,8 +3251,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Client",
-                "description": ""
+                "url": "{{ServerUrl}}/Client"
               },
               "status": "OK",
               "code": 200,
@@ -3499,8 +3479,7 @@
                       "equals": true
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -3575,8 +3554,7 @@
                       "equals": true
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -3672,8 +3650,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Client/{{clientId}}/AdditionalSettings",
-                "description": ""
+                "url": "{{ServerUrl}}/Client/{{clientId}}/AdditionalSettings"
               },
               "status": "OK",
               "code": 200,
@@ -5835,8 +5812,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"entityGUID\": \"{{FILE1_GUID}}\",\n\t\"comments\": [\n\t\t{\n\t\t\t\"content\": \"New discussion\"\n\t\t}\n\t]\n}"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion"
                       },
                       "status": "OK",
                       "code": 200,
@@ -5945,8 +5921,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"content\": \"New comment\"\n}"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment"
                       },
                       "status": "OK",
                       "code": 200,
@@ -6060,8 +6035,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"content\": \"This is a reply to comment: {{commentId}}\",\n\t\"parentComment\": {\n\t\t\"commentId\": {{commentId}}\n\t}\n}"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment"
                       },
                       "status": "OK",
                       "code": 200,
@@ -6239,8 +6213,7 @@
                               "equals": true
                             }
                           ]
-                        },
-                        "description": ""
+                        }
                       },
                       "status": "OK",
                       "code": 200,
@@ -6383,8 +6356,7 @@
                           "mode": "raw",
                           "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -6564,8 +6536,7 @@
                               "equals": true
                             }
                           ]
-                        },
-                        "description": ""
+                        }
                       },
                       "status": "OK",
                       "code": 200,
@@ -6720,8 +6691,7 @@
                               "equals": true
                             }
                           ]
-                        },
-                        "description": ""
+                        }
                       },
                       "status": "OK",
                       "code": 200,
@@ -6835,8 +6805,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"comments\": [\n\t\t{\n\t\t\t\"content\": \"Edited comment\"\n\t\t}\n\t]\n}"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -6943,8 +6912,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -7051,8 +7019,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion/{{discussionId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -7168,8 +7135,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"entityGUID\": \"{{FILE1_GUID}}\",\n\t\"comments\": [\n\t\t{\n\t\t\t\"content\": \"New discussion\"\n\t\t}\n\t]\n}"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/Discussion"
                       },
                       "status": "OK",
                       "code": 200,
@@ -7278,8 +7244,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"content\": \"New comment\"\n}"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment"
                       },
                       "status": "OK",
                       "code": 200,
@@ -7392,8 +7357,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"content\": \"This is a reply to comment: {{commentId}}\",\n\t\"parentComment\": {\n\t\t\"commentId\": {{commentId}}\n\t}\n}"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment"
                       },
                       "status": "OK",
                       "code": 200,
@@ -7573,8 +7537,7 @@
                               "equals": true
                             }
                           ]
-                        },
-                        "description": ""
+                        }
                       },
                       "status": "OK",
                       "code": 200,
@@ -7759,8 +7722,7 @@
                               "equals": true
                             }
                           ]
-                        },
-                        "description": ""
+                        }
                       },
                       "status": "OK",
                       "code": 200,
@@ -7903,8 +7865,7 @@
                           "mode": "raw",
                           "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -8064,8 +8025,7 @@
                               "equals": true
                             }
                           ]
-                        },
-                        "description": ""
+                        }
                       },
                       "status": "OK",
                       "code": 200,
@@ -8286,8 +8246,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -8394,8 +8353,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}",
-                        "description": ""
+                        "url": "{{ServerUrl}}/ShareFolder/{{shareId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -8516,8 +8474,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"entityGUID\": \"{{FILE1_GUID}}\",\n\t\"comments\": [\n\t\t{\n\t\t\t\"content\": \"New discussion\"\n\t\t}\n\t]\n}"
                     },
-                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion"
                   },
                   "status": "OK",
                   "code": 200,
@@ -8625,8 +8582,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"content\": \"New comment\"\n}"
                     },
-                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment"
                   },
                   "status": "OK",
                   "code": 200,
@@ -8808,8 +8764,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -8995,8 +8950,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -9138,8 +9092,7 @@
                       "mode": "raw",
                       "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
                     },
-                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -9252,8 +9205,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"content\": \"This is a reply to comment: {{commentId}}\",\n\t\"parentComment\": {\n\t\t\"commentId\": {{commentId}}\n\t}\n}"
                     },
-                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment"
                   },
                   "status": "OK",
                   "code": 200,
@@ -9413,8 +9365,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -9528,8 +9479,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"content\": \"Edited Comment\"\n}"
                     },
-                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -9636,8 +9586,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Subclient/{{subclientId}}/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -9820,8 +9769,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -9900,8 +9848,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -10031,8 +9978,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive"
                   },
                   "status": "OK",
                   "code": 200,
@@ -10115,8 +10061,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive"
                   },
                   "status": "OK",
                   "code": 200,
@@ -10247,8 +10192,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{RootGuid}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{RootGuid}}"
                   },
                   "status": "Created",
                   "code": 201,
@@ -10378,8 +10322,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"{{FolderName}}\" parentPath=\"\\\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/action/createfolder",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/action/createfolder"
                   },
                   "status": "Created",
                   "code": 201,
@@ -10499,8 +10442,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -10655,8 +10597,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -10854,8 +10795,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -11063,8 +11003,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -11240,8 +11179,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -11356,8 +11294,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -11512,8 +11449,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -11634,8 +11570,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/action/preview",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/action/preview"
                   },
                   "status": "OK",
                   "code": 200,
@@ -11782,8 +11717,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1.doc\" name=\"DemoFile1Renamed.doc\" />"
                     },
-                    "url": "{{ServerUrl}}/drive/action/rename",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/action/rename"
                   },
                   "status": "OK",
                   "code": 200,
@@ -11906,8 +11840,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"DemoFile1Renamed.doc\" />"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/action/rename",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/action/rename"
                   },
                   "status": "OK",
                   "code": 200,
@@ -12030,8 +11963,7 @@
                       "mode": "raw",
                       "raw": "<App_CustomProperties>\r\n<customProps>\r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps>\r\n</App_CustomProperties>"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -12195,8 +12127,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -12319,8 +12250,7 @@
                       "mode": "raw",
                       "raw": "<Api_CustomPropertiesReq>\r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/>\r\n<customProps> \r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps> \r\n</Api_CustomPropertiesReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -12443,8 +12373,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"gold,silver\"> \r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -12569,8 +12498,7 @@
                       "mode": "raw",
                       "raw": "<App_CustomProperties>\r\n<customProps>\r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps>\r\n</App_CustomProperties>"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -12693,8 +12621,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"gold,silver\"> \r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -12817,8 +12744,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/versions",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/versions"
                   },
                   "status": "OK",
                   "code": 200,
@@ -12974,8 +12900,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -13090,8 +13015,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/version/{{versionId}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/version/{{versionId}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -13220,8 +13144,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile2.doc\" parentPath=\"\\\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -13344,8 +13267,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo parentGuid=\"{{RootGuid}}\" />"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE2_GUID}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE2_GUID}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -13475,8 +13397,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/folder/{{RootGuid}}/action/search",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/folder/{{RootGuid}}/action/search"
                   },
                   "status": "OK",
                   "code": 200,
@@ -13623,8 +13544,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -13746,8 +13666,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/folder/{{RootGuid}}/action/list",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/folder/{{RootGuid}}/action/list"
                   },
                   "status": "OK",
                   "code": 200,
@@ -13903,8 +13822,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -14032,8 +13950,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"entityGUID\": \"{{FILE1_GUID}}\",\n\t\"comments\": [\n\t\t{\n\t\t\t\"content\": \"New discussion\"\n\t\t}\n\t]\n}"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion"
                   },
                   "status": "OK",
                   "code": 200,
@@ -14141,8 +14058,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"content\": \"New comment\"\n}"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment"
                   },
                   "status": "OK",
                   "code": 200,
@@ -14323,8 +14239,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -14423,8 +14338,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -14606,8 +14520,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -14706,8 +14619,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -14848,8 +14760,7 @@
                       "mode": "raw",
                       "raw": "<Api_Discussion><comments content=\"testcomment\"/></Api_Discussion>"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                   },
                   "status": "Not Found",
                   "code": 404,
@@ -14961,8 +14872,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"content\": \"This is a reply to comment: {{commentId}}\",\n\t\"parentComment\": {\n\t\t\"commentId\": {{commentId}}\n\t}\n}"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment"
                   },
                   "status": "OK",
                   "code": 200,
@@ -15153,8 +15063,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -15266,8 +15175,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"content\": \"Edited Comment\"\n}"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -15363,8 +15271,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}/Comment/{{commentId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -15460,8 +15367,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}/Discussion/{{discussionId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -15558,8 +15464,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE1_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -15682,8 +15587,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1Renamed.doc\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/action/delete",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/action/delete"
                   },
                   "status": "OK",
                   "code": 200,
@@ -15799,8 +15703,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -15915,8 +15818,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FILE2_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FILE2_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -16035,8 +15937,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Logout",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Logout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -16166,8 +16067,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -16297,8 +16197,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "",
-                    "description": ""
+                    "url": ""
                   },
                   "status": "OK",
                   "code": 200,
@@ -16431,8 +16330,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive"
                   },
                   "status": "OK",
                   "code": 200,
@@ -16565,8 +16463,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{RootGuid}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{RootGuid}}"
                   },
                   "status": "Created",
                   "code": 201,
@@ -16698,8 +16595,7 @@
                       "mode": "raw",
                       "raw": "<App_ShareInfo sharedToOperationType=\"2\" status=\"0\">\r\n    <browseInfo>\r\n    \t<paths path=\"\\DemoShareFolder\"></paths>\r\n        <emailInfo dontSendEmail=\"1\" emailMessage=\"\"/> \r\n    </browseInfo>\r\n    <shareFolder syncWebFolderName=\"DemoShareFolder\"/>\r\n    <sharedTo permission=\"1\" userType=\"1\"> \r\n        <user userName=\"admin\"/> \r\n    </sharedTo>  \r\n</App_ShareInfo>"
                     },
-                    "url": "{{ServerUrl}}/drive/action/share",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/action/share"
                   },
                   "status": "OK",
                   "code": 200,
@@ -16799,8 +16695,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/drive/share",
-                "description": ""
+                "url": "{{ServerUrl}}/drive/share"
               },
               "response": [
                 {
@@ -16822,8 +16717,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share"
                   },
                   "status": "OK",
                   "code": 200,
@@ -16977,8 +16871,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -17110,8 +17003,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"DemoShareFolder2\" parentPath=\"\\\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/createfolder",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/createfolder"
                   },
                   "status": "Created",
                   "code": 201,
@@ -17243,8 +17135,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFOLDER_GUID}}"
                   },
                   "status": "Created",
                   "code": 201,
@@ -17440,8 +17331,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -17653,8 +17543,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -17837,8 +17726,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -17970,8 +17858,7 @@
                       "mode": "raw",
                       "raw": "<App_ShareInfo sharedToOperationType=\"2\" status=\"0\">\r\n    <browseInfo> \r\n        <emailInfo dontSendEmail=\"1\" emailMessage=\"\"/> \r\n    </browseInfo>\r\n    <shareFolder syncWebFolderName=\"DemoShareFolder\"/>\r\n    <sharedTo permission=\"1\" userType=\"1\"> \r\n        <user userName=\"admin\"/> \r\n    </sharedTo>  \r\n</App_ShareInfo>"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{SHAREFILE_GUID}}/action/share",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{SHAREFILE_GUID}}/action/share"
                   },
                   "status": "OK",
                   "code": 200,
@@ -18103,8 +17990,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/list",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/list"
                   },
                   "status": "OK",
                   "code": 200,
@@ -18187,8 +18073,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/list",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/list"
                   },
                   "status": "OK",
                   "code": 200,
@@ -18359,8 +18244,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -18492,8 +18376,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/search",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/search"
                   },
                   "status": "OK",
                   "code": 200,
@@ -18664,8 +18547,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -18788,8 +18670,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -19001,8 +18882,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -19162,8 +19042,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -19278,8 +19157,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -19438,8 +19316,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -19560,8 +19437,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/version/{{SHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/version/{{SHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -19685,8 +19561,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -19824,8 +19699,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -19972,8 +19846,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -20090,8 +19963,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -20215,8 +20087,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -20378,8 +20249,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"DemoShareFile1Renamed.doc\" />"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/rename",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/rename"
                   },
                   "status": "OK",
                   "code": 200,
@@ -20502,8 +20372,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoShareFile1Renamed.doc\" parentPath=\"\\DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -20626,8 +20495,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo parentGuid=\"{{SHAREFOLDER_GUID}}\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -20750,8 +20618,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoShareFile1Renamed.doc\" parentPath=\"\\DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -20870,8 +20737,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFILE_GUID}}/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -20980,8 +20846,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "",
-                    "description": ""
+                    "url": ""
                   },
                   "status": "OK",
                   "code": 200,
@@ -21135,8 +21000,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFOLDER2_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/file/{{SHAREFOLDER2_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -21259,8 +21123,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/delete",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/delete"
                   },
                   "status": "OK",
                   "code": 200,
@@ -21375,8 +21238,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -21491,8 +21353,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -21615,8 +21476,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Logout",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Logout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -21746,8 +21606,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -21887,8 +21746,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -21967,8 +21825,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -22102,8 +21959,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive"
                   },
                   "status": "OK",
                   "code": 200,
@@ -22186,8 +22042,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive"
                   },
                   "status": "OK",
                   "code": 200,
@@ -22318,8 +22173,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{RootGuid}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{RootGuid}}"
                   },
                   "status": "Created",
                   "code": 201,
@@ -22453,8 +22307,7 @@
                       "mode": "raw",
                       "raw": "<App_ShareInfo sharedToOperationType=\"2\" status=\"0\">\r\n    <browseInfo>\r\n    \t<paths path=\"\\DemoShareFolder\"></paths>\r\n        <emailInfo dontSendEmail=\"1\" emailMessage=\"\"/> \r\n    </browseInfo>\r\n    <shareFolder syncWebFolderName=\"DemoShareFolder\"/>\r\n    <sharedTo permission=\"1\" userType=\"1\"> \r\n        <user userName=\"admin\"/> \r\n    </sharedTo>  \r\n</App_ShareInfo>"
                     },
-                    "url": "{{ServerUrl}}/drive/action/share",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/action/share"
                   },
                   "status": "OK",
                   "code": 200,
@@ -22650,8 +22503,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -22812,8 +22664,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -22928,8 +22779,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/preview",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/preview"
                   },
                   "status": "OK",
                   "code": 200,
@@ -23088,8 +22938,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/preview",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/preview"
                   },
                   "status": "OK",
                   "code": 200,
@@ -23247,8 +23096,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -23388,8 +23236,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -23510,8 +23357,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview"
                   },
                   "status": "OK",
                   "code": 200,
@@ -23650,8 +23496,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -23780,8 +23625,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoShareFile1Renamed.doc\" parentPath=\"\\DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -23904,8 +23748,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -24028,8 +23871,7 @@
                       "mode": "raw",
                       "raw": "<Api_CustomPropertiesReq>\r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/>\r\n<customProps> \r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps> \r\n</Api_CustomPropertiesReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -24152,8 +23994,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -24274,8 +24115,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -24399,8 +24239,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -24515,8 +24354,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -24631,8 +24469,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/drive/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/drive/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -24755,8 +24592,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Logout",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Logout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -25719,8 +25555,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -25801,8 +25636,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": [
             {
@@ -25959,8 +25793,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": null
+            }
           },
           "response": [
             {
@@ -26055,8 +25888,7 @@
               }
             ],
             "body": {},
-            "url": "{{ServerUrl}}/instance/byName(clientName='{{clientName}}',appName='{{appName}}'),instanceName='{{instanceName}}')",
-            "description": null
+            "url": "{{ServerUrl}}/instance/byName(clientName='{{clientName}}',appName='{{appName}}'),instanceName='{{instanceName}}')"
           },
           "response": [
             {
@@ -26136,8 +25968,7 @@
               }
             ],
             "body": {},
-            "url": "{{ServerUrl}}/instance/{{instanceId}}",
-            "description": null
+            "url": "{{ServerUrl}}/instance/{{instanceId}}"
           },
           "response": [
             {
@@ -26292,8 +26123,7 @@
                       "equals": true
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -26625,10 +26455,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
+              "raw": "{\n  \"scope\": 1,\n  \"pagingConfig\": {\n    \"sortDirection\": 1,\n    \"offset\": 0,\n    \"sortField\": \"jobStartTime\",\n    \"limit\": 1\n  },\n  \"jobFilter\": {\n    \"completedJobLookupTime\": 31536000,\n    \"statusList\": [\n      \"Completed\",\n      \"Completed w/ one or more errors\",\n      \"Completed w/ one or more warnings\"\n    ],\n    \"jobTypeList\": [\n      4\n    ],\n    \"entity\": {\n      \"clientId\": {{clientId}}\n    }\n  }\n}"
             },
             "url": "{{ServerUrl}}/Jobs",
-            "description": "<h2>Description</h2>\nThis operation returns a list of jobs for a client."
+            "description": "<h2>Description</h2>\r\n<p>This operation returns a list of jobs for an entity.</p>\r\n<h2>Request Parameters</h2>\r\n<table class=\"tableintopic\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">\r\n<tbody>\r\n<tr align=\"left\" valign=\"top\">\r\n<td>\r\n<p class=\"tabletext\">Name</p>\r\n</td>\r\n<td>\r\n<p class=\"tabletext\">Description</p>\r\n</td>\r\n</tr>\r\n<tr align=\"left\" valign=\"top\">\r\n<td>\r\n<p class=\"tabletext\">category</p>\r\n</td>\r\n<td>\r\n<p class=\"tabletext\">Category for which the list of jobs are to be retrieved.</p>\r\n<p class=\"tabletext\">Valid values are:</p>\r\n<ul class=\"listbullet\">\r\n<li class=\"listbullet\">0, ALL</li>\r\n<li class=\"listbullet\">1, ACTIVE</li>\r\n<li>2, FINISHED</li>\r\n</ul>\r\n</td>\r\n</tr>\r\n<tr align=\"left\" valign=\"top\">\r\n<td>\r\n<p class=\"tabletext\">limit</p>\r\n</td>\r\n<td>\r\n<p class=\"tabletext\">Total number of jobs list that are to be returned.</p>\r\n</td>\r\n</tr>\r\n<tr align=\"left\" valign=\"top\">\r\n<td>\r\n<p class=\"tabletext\">completedJobLookupTime</p>\r\n</td>\r\n<td>\r\n<p class=\"tabletext\">List of jobs to be retrieved which are specified<br /> seconds older.</p>\r\n</td>\r\n</tr>\r\n<tr align=\"left\" valign=\"top\">\r\n<td>\r\n<p class=\"tabletext\">jobTypeList</p>\r\n</td>\r\n<td>\r\n<p class=\"tabletext\">List of job operation types.</p>\r\n<p class=\"tabletext\">Valid values are:</p>\r\n<ul class=\"listbullet\">\r\n<li class=\"listbullet\">4, Backup Jobs</li>\r\n<li class=\"listbullet\">14, Synth Full Jobs</li>\r\n</ul>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>"
           },
           "response": [
             {
@@ -27083,8 +26913,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Job/432",
-                "description": ""
+                "url": "{{ServerUrl}}/Job/432"
               },
               "status": "OK",
               "code": 200,
@@ -27189,8 +27018,7 @@
                   "mode": "raw",
                   "raw": "{\r\n  \"jobId\": 432\r\n}"
                 },
-                "url": "{{ServerUrl}}/JobDetails",
-                "description": ""
+                "url": "{{ServerUrl}}/JobDetails"
               },
               "status": "OK",
               "code": 200,
@@ -27286,8 +27114,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Job/433/action/kill",
-                "description": ""
+                "url": "{{ServerUrl}}/Job/433/action/kill"
               },
               "status": "OK",
               "code": 200,
@@ -27383,8 +27210,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Job/436/action/resume",
-                "description": ""
+                "url": "{{ServerUrl}}/Job/436/action/resume"
               },
               "status": "OK",
               "code": 200,
@@ -27480,8 +27306,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Job/436/action/pause",
-                "description": ""
+                "url": "{{ServerUrl}}/Job/436/action/pause"
               },
               "status": "OK",
               "code": 200,
@@ -28271,8 +28096,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{RootGuid}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{RootGuid}}"
                   },
                   "status": "Created",
                   "code": 201,
@@ -28403,8 +28227,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"{{FolderName}}\" parentPath=\"\\\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/action/createfolder",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/action/createfolder"
                   },
                   "status": "Created",
                   "code": 201,
@@ -28525,8 +28348,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -28682,8 +28504,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -28881,8 +28702,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -29090,8 +28910,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -29267,8 +29086,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -29383,8 +29201,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -29512,8 +29329,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "",
-                    "description": ""
+                    "url": ""
                   },
                   "status": "OK",
                   "code": 200,
@@ -29634,8 +29450,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/action/preview",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/action/preview"
                   },
                   "status": "OK",
                   "code": 200,
@@ -29782,8 +29597,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1.doc\" name=\"DemoFile1Renamed.doc\" />"
                     },
-                    "url": "{{ServerUrl}}/contentstore/action/rename",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/action/rename"
                   },
                   "status": "OK",
                   "code": 200,
@@ -29906,8 +29720,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"DemoFile1Renamed.doc\" />"
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/action/rename",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/action/rename"
                   },
                   "status": "OK",
                   "code": 200,
@@ -30030,8 +29843,7 @@
                       "mode": "raw",
                       "raw": "<App_CustomProperties>\r\n<customProps>\r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps>\r\n</App_CustomProperties>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -30197,8 +30009,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -30321,8 +30132,7 @@
                       "mode": "raw",
                       "raw": "<Api_CustomPropertiesReq>\r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/>\r\n<customProps> \r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps> \r\n</Api_CustomPropertiesReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -30445,8 +30255,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"gold,silver\"> \r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -30572,8 +30381,7 @@
                       "mode": "raw",
                       "raw": "<App_CustomProperties>\r\n<customProps>\r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps>\r\n</App_CustomProperties>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -30696,8 +30504,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"gold,silver\"> \r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -30821,8 +30628,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/versions",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}/versions"
                   },
                   "status": "OK",
                   "code": 200,
@@ -30979,8 +30785,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -31095,8 +30900,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/version/{{versionId}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/version/{{versionId}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -31217,8 +31021,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE1_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -31341,8 +31144,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile2.doc\" parentPath=\"\\\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -31465,8 +31267,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo parentGuid=\"{{RootGuid}}\" />"
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE2_GUID}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE2_GUID}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -31596,8 +31397,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/folder/{{RootGuid}}/action/search",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/folder/{{RootGuid}}/action/search"
                   },
                   "status": "OK",
                   "code": 200,
@@ -31744,8 +31544,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -31867,8 +31666,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/folder/{{RootGuid}}/action/list",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/folder/{{RootGuid}}/action/list"
                   },
                   "status": "OK",
                   "code": 200,
@@ -32024,8 +31822,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -32148,8 +31945,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoFolder\\DemoFile1Renamed.doc\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/action/delete",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/action/delete"
                   },
                   "status": "OK",
                   "code": 200,
@@ -32264,8 +32060,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -32380,8 +32175,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -32496,8 +32290,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FILE2_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FILE2_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -32619,8 +32412,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -32739,8 +32531,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Logout",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Logout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -32910,8 +32701,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -33029,8 +32819,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "",
-                    "description": ""
+                    "url": ""
                   },
                   "status": "Created",
                   "code": 201,
@@ -33160,8 +32949,7 @@
                       "mode": "raw",
                       "raw": "<App_ShareInfo sharedToOperationType=\"2\" status=\"0\">\r\n    <browseInfo>\r\n    \t<paths path=\"\\DemoShareFolder\"></paths>\r\n        <emailInfo dontSendEmail=\"1\" emailMessage=\"\"/> \r\n    </browseInfo>\r\n    <shareFolder syncWebFolderName=\"DemoShareFolder\"/>\r\n    <sharedTo permission=\"1\" userType=\"1\"> \r\n        <user userName=\"admin\"/> \r\n    </sharedTo>  \r\n</App_ShareInfo>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/action/share",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/action/share"
                   },
                   "status": "OK",
                   "code": 200,
@@ -33260,8 +33048,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/contentstore/share",
-                "description": ""
+                "url": "{{ServerUrl}}/contentstore/share"
               },
               "response": [
                 {
@@ -33283,8 +33070,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share"
                   },
                   "status": "OK",
                   "code": 200,
@@ -33438,8 +33224,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -33567,8 +33352,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"DemoShareFolder2\" parentPath=\"\\\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/createfolder",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/createfolder"
                   },
                   "status": "Created",
                   "code": 201,
@@ -33701,8 +33485,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFOLDER_GUID}}"
                   },
                   "status": "Created",
                   "code": 201,
@@ -33899,8 +33682,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -34112,8 +33894,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -34297,8 +34078,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -34429,8 +34209,7 @@
                       "mode": "raw",
                       "raw": "<App_ShareInfo sharedToOperationType=\"2\" status=\"0\">\r\n    <browseInfo> \r\n        <emailInfo dontSendEmail=\"1\" emailMessage=\"\"/> \r\n    </browseInfo>\r\n    <shareFolder syncWebFolderName=\"DemoShareFolder\"/>\r\n    <sharedTo permission=\"1\" userType=\"1\"> \r\n        <user userName=\"admin\"/> \r\n    </sharedTo>  \r\n</App_ShareInfo>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{SHAREFILE_GUID}}/action/share",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{SHAREFILE_GUID}}/action/share"
                   },
                   "status": "OK",
                   "code": 200,
@@ -34562,8 +34341,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/list",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/list"
                   },
                   "status": "OK",
                   "code": 200,
@@ -34646,8 +34424,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/list",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/list"
                   },
                   "status": "OK",
                   "code": 200,
@@ -34816,8 +34593,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -34949,8 +34725,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/search",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/folder/{{SHAREFOLDER_GUID}}/action/search"
                   },
                   "status": "OK",
                   "code": 200,
@@ -35119,8 +34894,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -35219,8 +34993,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{FOLDERSHARE_GUID}}",
-                "description": ""
+                "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{FOLDERSHARE_GUID}}"
               },
               "response": [
                 {
@@ -35242,8 +35015,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -35337,8 +35109,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/preview",
-                "description": ""
+                "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/preview"
               },
               "response": []
             },
@@ -35402,8 +35173,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -35563,8 +35333,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -35681,8 +35450,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -35843,8 +35611,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -35967,8 +35734,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/version/{{SHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/version/{{SHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -36094,8 +35860,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -36233,8 +35998,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -36382,8 +36146,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -36499,8 +36262,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -36625,8 +36387,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -36788,8 +36549,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"DemoShareFile1Renamed.doc\" />"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/rename",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/rename"
                   },
                   "status": "OK",
                   "code": 200,
@@ -36912,8 +36672,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoShareFile1Renamed.doc\" parentPath=\"\\DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -37036,8 +36795,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo parentGuid=\"{{SHAREFOLDER_GUID}}\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -37160,8 +36918,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoShareFile1Renamed.doc\" parentPath=\"\\DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -37280,8 +37037,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFILE_GUID}}/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -37404,8 +37160,7 @@
                       "mode": "raw",
                       "raw": "<Api_CustomPropertiesReq>\r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/>\r\n<customProps> \r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps> \r\n</Api_CustomPropertiesReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -37559,8 +37314,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFOLDER2_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/file/{{SHAREFOLDER2_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -37683,8 +37437,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/delete",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/delete"
                   },
                   "status": "OK",
                   "code": 200,
@@ -37799,8 +37552,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -37915,8 +37667,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -38039,8 +37790,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Logout",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Logout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -38162,8 +37912,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -38302,8 +38051,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo name=\"{{FolderName}}\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{RootGuid}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{RootGuid}}"
                   },
                   "status": "Created",
                   "code": 201,
@@ -38436,8 +38184,7 @@
                       "mode": "raw",
                       "raw": "<App_ShareInfo sharedToOperationType=\"2\" status=\"0\">\r\n    <browseInfo>\r\n    \t<paths path=\"\\DemoShareFolder\"></paths>\r\n        <emailInfo dontSendEmail=\"1\" emailMessage=\"\"/> \r\n    </browseInfo>\r\n    <shareFolder syncWebFolderName=\"DemoShareFolder\"/>\r\n    <sharedTo permission=\"1\" userType=\"1\"> \r\n        <user userName=\"admin\"/> \r\n    </sharedTo>  \r\n</App_ShareInfo>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/action/share",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/action/share"
                   },
                   "status": "OK",
                   "code": 200,
@@ -38633,8 +38380,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -38795,8 +38541,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -38912,8 +38657,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -39053,8 +38797,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -39175,8 +38918,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/download"
                   },
                   "status": "OK",
                   "code": 200,
@@ -39299,8 +39041,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/preview",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/preview"
                   },
                   "status": "OK",
                   "code": 200,
@@ -39459,8 +39200,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/preview",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/action/preview"
                   },
                   "status": "OK",
                   "code": 200,
@@ -39600,8 +39340,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/version/{{versionId}}/action/preview"
                   },
                   "status": "OK",
                   "code": 200,
@@ -39749,8 +39488,7 @@
                       "mode": "raw",
                       "raw": "<App_FileResourceInfo path=\"\\DemoShareFile1Renamed.doc\" parentPath=\"\\DemoShareFolder2\"/>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/move",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/action/move"
                   },
                   "status": "OK",
                   "code": 200,
@@ -39872,8 +39610,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/publicshare/{{shareId}}/file/{{PUBLICSHAREFILE_GUID}}/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -39996,8 +39733,7 @@
                       "mode": "raw",
                       "raw": "<Api_CustomPropertiesReq>\r\n<fileFolderInfo fileGUID=\"{{FILE1_GUID}}\"/>\r\n<customProps> \r\n  <nameValues name=\"testproperty1\" value=\"testvalue1\"/>\r\n  <nameValues name=\"testproperty2\" value=\"testvalue2\"/>\r\n</customProps> \r\n</Api_CustomPropertiesReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/properties",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/properties"
                   },
                   "status": "OK",
                   "code": 200,
@@ -40120,8 +39856,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -40243,8 +39978,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -40370,8 +40104,7 @@
                       "mode": "raw",
                       "raw": "<Api_TagsReq values=\"test_tag\"> \r\n<fileFolderInfo fileGUID=\"{{SHAREFILE_GUID}}\"/> \r\n</Api_TagsReq>"
                     },
-                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/share/{{shareId}}/tags"
                   },
                   "status": "OK",
                   "code": 200,
@@ -40486,8 +40219,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/ShareFolder/{{shareId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -40603,8 +40335,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}",
-                    "description": ""
+                    "url": "{{ServerUrl}}/contentstore/file/{{FOLDER_GUID}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -40766,8 +40497,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -40846,8 +40576,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -40970,8 +40699,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Logout",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Logout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -41093,8 +40821,7 @@
                       "mode": "raw",
                       "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
                     },
-                    "url": "{{ServerUrl}}/Login",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Login"
                   },
                   "status": "OK",
                   "code": 200,
@@ -46210,8 +45937,7 @@
                       "equals": true
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "status": "OK",
               "code": 200,
@@ -46506,8 +46232,7 @@
                   "mode": "raw",
                   "raw": "{\r\n  \"opType\": 0,\r\n  \"queries\": [\r\n    {\r\n      \"type\": 1,\r\n      \"queryId\": \"countQuery\",\r\n      \"aggrParam\": {\r\n        \"field\": 0,\r\n        \"aggrType\": 4\r\n      }\r\n    },\r\n    {\r\n      \"type\": 0,\r\n      \"queryId\": \"dataQuery\",\r\n      \"dataParam\": {\r\n        \"sortParam\": {\r\n          \"ascending\": true,\r\n          \"sortBy\": [\r\n            38,\r\n            0\r\n          ]\r\n        },\r\n        \"paging\": {\r\n          \"firstNode\": 0,\r\n          \"pageSize\": 15,\r\n          \"skipNode\": 0\r\n        }\r\n      }\r\n    }\r\n  ],\r\n  \"mode\": {\r\n    \"mode\": 2\r\n  },\r\n  \"paths\": [\r\n    {\r\n      \"path\": \"C:\\\\\"\r\n    }\r\n  ],\r\n  \"options\": {\r\n    \"showDeletedFiles\": true,\r\n    \"restoreIndex\": true\r\n  },\r\n  \"entity\": {\r\n    \"subclientId\": 49,\r\n    \"applicationId\": 33,\r\n    \"clientName\": \"firewalltestcs\",\r\n    \"backupsetId\": 3,\r\n    \"instanceId\": 1,\r\n    \"clientId\": 2\r\n  }\r\n}"
                 },
-                "url": "{{ServerUrl}}/DoBrowse",
-                "description": ""
+                "url": "{{ServerUrl}}/DoBrowse"
               },
               "status": "OK",
               "code": 200,
@@ -46646,8 +46371,7 @@
                   "mode": "raw",
                   "raw": "{\r\n  \"mode\": 2,\r\n  \"serviceType\": 1,\r\n  \"userInfo\": {\r\n    \"userGuid\": \"EBEA9754-607C-4CA4-B047-C9F656A1ABB0\"\r\n  },\r\n  \"advanced\": {\r\n    \"restoreDataAndACL\": true,\r\n    \"restoreDeletedFiles\": true\r\n  },\r\n  \"header\": {\r\n    \"destination\": {\r\n      \"clientId\": 2,\r\n      \"clientName\": \"firewalltestcs\",\r\n      \"inPlace\": true\r\n    },\r\n    \"filePaths\": [\r\n      \"\\\\C:\\\\csguid.PNG\",\r\n      \"\\\\C:\\\\DEMO_3.pptx\"\r\n    ],\r\n    \"srcContent\": {\r\n      \"subclientId\": 49,\r\n      \"clientId\": 2,\r\n      \"instanceId\": 1,\r\n      \"backupSetId\": 3,\r\n      \"appTypeId\": 33\r\n    }\r\n  }\r\n}"
                 },
-                "url": "{{ServerUrl}}/retrieveToClient",
-                "description": ""
+                "url": "{{ServerUrl}}/retrieveToClient"
               },
               "status": "OK",
               "code": 200,
@@ -47095,8 +46819,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Role/{{roleId}}",
-                "description": ""
+                "url": "{{ServerUrl}}/Role/{{roleId}}"
               },
               "status": "OK",
               "code": 200,
@@ -47220,8 +46943,7 @@
                   "mode": "raw",
                   "raw": "<Security_CreateRoleRequest>\r\n   <roles>\r\n      <role>\r\n         <roleName>TestRole</roleName>\r\n         <flags>\r\n            <disabled>false</disabled>\r\n         </flags>\r\n      </role>\r\n      <description></description>\r\n      <categoryPermission>\r\n         <categoriesPermissionList>\r\n           <categoryName>Alert</categoryName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionList>\r\n            <permissionName>Agent Management</permissionName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionList>\r\n            <permissionName>Agent Scheduling</permissionName>\r\n         </categoriesPermissionList>\r\n         <categoriesPermissionOperationType>ADD</categoriesPermissionOperationType>\r\n      </categoryPermission>\r\n   </roles>\r\n</Security_CreateRoleRequest>"
                 },
-                "url": "{{ServerUrl}}/Role",
-                "description": ""
+                "url": "{{ServerUrl}}/Role"
               },
               "status": "OK",
               "code": 200,
@@ -47331,8 +47053,7 @@
                   "mode": "raw",
                   "raw": "{\r\n  \"roles\": [\r\n    {\r\n      \"description\": \"testing\",\r\n      \"role\": {\r\n        \"roleName\": \"TestRole\",\r\n        \"flags\": {\r\n          \"disabled\": false\r\n        }\r\n      },\r\n      \"categoryPermission\": {\r\n        \"categoriesPermissionOperationType\": 2,\r\n        \"categoriesPermissionList\": [\r\n          {\r\n            \"categoryName\": \"Alert\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Management\"\r\n          },\r\n          {\r\n            \"permissionName\": \"Agent Scheduling\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
                 },
-                "url": "{{ServerUrl}}/Role/{{roleId}}",
-                "description": ""
+                "url": "{{ServerUrl}}/Role/{{roleId}}"
               },
               "status": "OK",
               "code": 200,
@@ -47434,8 +47155,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Role/{{roleId}}",
-                "description": ""
+                "url": "{{ServerUrl}}/Role/{{roleId}}"
               },
               "status": "OK",
               "code": 200,
@@ -47760,8 +47480,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Schedules/8",
-                "description": ""
+                "url": "{{ServerUrl}}/Schedules/8"
               },
               "status": "OK",
               "code": 200,
@@ -47860,8 +47579,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/SchedulePolicy",
-                "description": ""
+                "url": "{{ServerUrl}}/SchedulePolicy"
               },
               "status": "OK",
               "code": 200,
@@ -48026,8 +47744,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/SchedulePolicy/151",
-                "description": ""
+                "url": "{{ServerUrl}}/SchedulePolicy/151"
               },
               "status": "OK",
               "code": 200,
@@ -48125,8 +47842,7 @@
                   "mode": "raw",
                   "raw": "freq_type = \"1\"\r\nactive_start_date = \"1467158400\"\r\nactive_start_time = \"28880\"\r\nactive_end_date = \"1467158400\"\r\nactive_end_time = \"43200\""
                 },
-                "url": "{{ServerUrl}}/Task/151/SubTask/152",
-                "description": ""
+                "url": "{{ServerUrl}}/Task/151/SubTask/152"
               },
               "status": "OK",
               "code": 200,
@@ -48225,8 +47941,7 @@
                   "mode": "raw",
                   "raw": "ClientId=2"
                 },
-                "url": "{{ServerUrl}}/Task/151/Entity/add",
-                "description": ""
+                "url": "{{ServerUrl}}/Task/151/Entity/add"
               },
               "status": "OK",
               "code": 200,
@@ -48324,8 +48039,7 @@
                   "mode": "raw",
                   "raw": "ClientId=2,3"
                 },
-                "url": "{{ServerUrl}}/Task/151/Entity/exclude",
-                "description": ""
+                "url": "{{ServerUrl}}/Task/151/Entity/exclude"
               },
               "status": "OK",
               "code": 200,
@@ -48424,8 +48138,7 @@
                   "mode": "raw",
                   "raw": "AgentGroupId=115"
                 },
-                "url": "{{ServerUrl}}/Task/151/Agent/add",
-                "description": ""
+                "url": "{{ServerUrl}}/Task/151/Agent/add"
               },
               "status": "OK",
               "code": 200,
@@ -50364,8 +50077,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/MediaAgent",
-                    "description": ""
+                    "url": "{{ServerUrl}}/MediaAgent"
                   },
                   "status": "OK",
                   "code": 200,
@@ -50557,8 +50269,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/Library/2",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Library/2"
                   },
                   "status": "OK",
                   "code": 200,
@@ -50747,8 +50458,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{ServerUrl}}/Library",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Library"
                   },
                   "status": "OK",
                   "code": 200,
@@ -50970,8 +50680,7 @@
                       "mode": "raw",
                       "raw": "{\r\n  \"isConfigRequired\": 1,\r\n  \"library\": {\r\n    \"libraryName\": \"library001\",\r\n    \"opType\": 1,\r\n    \"mediaAgentId\": 2,\r\n    \"password\": \"\",\r\n    \"loginName\": \"\",\r\n    \"mountPath\": \"c:\\\\library001\"\r\n  }\r\n}"
                     },
-                    "url": "{{ServerUrl}}/Library",
-                    "description": ""
+                    "url": "{{ServerUrl}}/Library"
                   },
                   "status": "OK",
                   "code": 200,
@@ -51136,8 +50845,7 @@
                           "equals": true
                         }
                       ]
-                    },
-                    "description": ""
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -52345,8 +52053,7 @@
                       "equals": true
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "status": "Internal Server Error",
               "code": 500,
@@ -52890,8 +52597,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -52979,8 +52685,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -53082,8 +52787,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -53191,8 +52895,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -53476,8 +53179,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -53688,8 +53390,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -53739,8 +53440,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -55031,8 +54731,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -55549,8 +55248,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
@@ -55644,8 +55342,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
-                "description": ""
+                "url": ""
               },
               "status": "OK",
               "code": 200,
