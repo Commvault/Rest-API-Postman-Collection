@@ -44784,7 +44784,7 @@
               "raw": "{\n  \"userOperationType\": 2,\n  \"users\": [\n    {\n      \"sendInvite\": true,\n      \"user\": {\n        \"userName\": \"hkuser\",\n        \"userId\": 21\n      }\n    }\n  ]\n}"
             },
             "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/Users",
-            "description": "<h2>Description</h2>\nThis operation updates associations for users and user groups to a plan."
+            "description": "<h2>Description</h2>\nThis operation updates associations for users and user groups to a plan.\n\n<h2>Request Parameters</h2>\n<table class=\"tableintopic\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">\n<tbody>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tableheading\">Name</p>\n</td>\n<td>\n<p class=\"tableheading\">Description</p>\n</td>\n</tr>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">userOperationType</p>\n</td>\n<td>\n<p class=\"tabletext\">The operation to perform on the association of Users or User Groups.</p>\n<p class=\"tabletext\">Valid values are:</p>\n<ul class=\"tablelistbullet\">\n<li class=\"tablelistbullet\">1, OVERWRITE</li>\n<li class=\"tablelistbullet\">2, ADD</li>\n<li class=\"tablelistbullet\">3, DELETE</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>"
           },
           "response": [
             {
