@@ -26482,7 +26482,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Jobs"
               },
@@ -26546,7 +26546,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t\"FULL\"\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t\"FULL\"\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Jobs"
               },
@@ -26610,7 +26610,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t2\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t2\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Jobs"
               },
@@ -26674,7 +26674,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t14\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t14\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"clientId\": {{clientId}}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Jobs"
               },
@@ -26738,7 +26738,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t\"FULL\"\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"subclientId\": {{subclientId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t\"FULL\"\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"subclientId\": {{subclientId}}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Jobs"
               },
@@ -26802,7 +26802,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t2\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"subclientId\": {{subclientId}}\n\t\t}\n\t}\n}"
+                  "raw": "{\n\t\"scope\": 1,\n\t\"pagingConfig\": {\n\t\t\"sortDirection\": 1,\n\t\t\"offset\": 0,\n\t\t\"sortField\": \"jobStartTime\",\n\t\t\"limit\": 1\n\t},\n\t\"jobFilter\": {\n\t\t\"completedJobLookupTime\": 31536000,\n\t\t\"backupLevel\": [\n\t\t\t2\n\t\t],\n\t\t\"statusList\": [\n\t\t\t\"Completed\",\n\t\t\t\"Completed w/ one or more errors\",\n\t\t\t\"Completed w/ one or more warnings\"\n\t\t],\n\t\t\"jobTypeList\": [\n\t\t\t4\n\t\t],\n\t\t\"entity\": {\n\t\t\t\"subclientId\": {{subclientId}}\n\t\t}\n\t}\n}"
                 },
                 "url": "{{ServerUrl}}/Jobs"
               },
@@ -44781,7 +44781,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userOperationType\": 1,\n  \"users\": [\n    {\n      \"sendInvite\": true,\n      \"user\": {\n        \"userName\": \"hkuser\",\n        \"userId\": 21\n      }\n    }\n  ]\n}"
+              "raw": "{\n  \"userOperationType\": 2,\n  \"users\": [\n    {\n      \"sendInvite\": true,\n      \"user\": {\n        \"userName\": \"hkuser\",\n        \"userId\": 21\n      }\n    }\n  ]\n}"
             },
             "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/Users",
             "description": "<h2>Description</h2>\nThis operation updates associations for users and user groups to a plan."
@@ -44789,7 +44789,7 @@
           "response": [
             {
               "id": "bbf6fcf8-182d-1997-350e-cb5eab633655",
-              "name": "Associate User to a Plan",
+              "name": "Add User Association to a Plan",
               "originalRequest": {
                 "method": "PUT",
                 "header": [
@@ -44811,7 +44811,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"userOperationType\": 1,\n\t\"users\": [\n\t\t{\n\t\t\t\"sendInvite\": true,\n\t\t\t\"user\": {\n\t\t\t\t\"userName\": \"hkuser\",\n\t\t\t\t\"userId\": 21\n\t\t\t}\n\t\t}\n\t]\n}"
+                  "raw": "{\n\t\"userOperationType\": 2,\n\t\"users\": [\n\t\t{\n\t\t\t\"sendInvite\": true,\n\t\t\t\"user\": {\n\t\t\t\t\"userName\": \"hkuser\",\n\t\t\t\t\"userId\": 21\n\t\t\t}\n\t\t}\n\t]\n}"
                 },
                 "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/Users"
               },
@@ -44885,7 +44885,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\"userOperationType\":1\r}"
+                  "raw": "{\n\t\"userOperationType\": 3,\n\t\"users\": [\n\t\t{\n\t\t\t\"sendInvite\": true,\n\t\t\t\"user\": {\n\t\t\t\t\"userName\": \"hkuser\",\n\t\t\t\t\"userId\": 21\n\t\t\t}\n\t\t}\n\t]\n}"
                 },
                 "url": "{{ServerUrl}}/v2/Plan/{{PlanId}}/Users"
               },
