@@ -51351,10 +51351,10 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"mountpathId\": {{mountPathId}},\n\t\"infoList\": [\n\t\t{\n\t\t\t\"numWriters\": -1,\n\t\t\t\"opType\": 2,\n\t\t\t\"protocolType\": 104,\n\t\t\t\"userName\": \"{{SERVICE_HOST}}//{{ACCESS_KEY}}\",\n\t\t\t\"deviceId\": {{deviceId}},\n\t\t\t\"enabled\": 1,\n\t\t\t\"accessType\": 6,\n\t\t\t\"path\": \"{{BUCKET}}\",\n\t\t\t\"password\": \"{{SECRET_ACCESS_KEY}}\",\n\t\t\t\"deviceControllerId\": {{deviceControllerId}},\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"name\": \"{{MEDIA_AGENT_NAME}}\",\n\t\t\t\t\"id\": {{MEDIA_AGENT_ID}}\n\t\t\t}\n\t\t}\n\t]\n}"
+                  "raw": "{\r\n\t\"mountpathId\": 390,\r\n\t\"infoList\": [\r\n\t\t{\r\n\t\t\t\"numWriters\": -1,\r\n\t\t\t\"opType\": 1,\r\n\t\t\t\"protocolType\": 104,\r\n\t\t\t\"deviceId\": 104,\r\n\t\t\t\"enabled\": 1,\r\n\t\t\t\"accessType\": 6,\r\n\t\t\t\"path\": \"\",\r\n\t\t\t\"deviceControllerId\": 0,\r\n\t\t\t\"mediaAgent\": {\r\n\t\t\t\t\"name\": \"sogo8_2\",\r\n\t\t\t\t\"id\": 1816\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": {
-                  "raw": "{{ServerUrl}}/DriveController?Action=editController",
+                  "raw": "{{ServerUrl}}/DriveController?Action=addController",
                   "host": [
                     "{{ServerUrl}}"
                   ],
@@ -51364,7 +51364,7 @@
                   "query": [
                     {
                       "key": "Action",
-                      "value": "editController",
+                      "value": "addController",
                       "equals": true
                     }
                   ]
