@@ -50939,6 +50939,41 @@
                   "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetMediaAgentListWCResp><mediaAgentList description=\"\" libraryType=\"0\" mediaAgentId=\"9\" mediaAgentName=\"firewalltestma\" osVersion=\"Windows Server 2012 R2 Datacenter\" platform=\"WinX64\" status=\"Ready\"/></EVGui_GetMediaAgentListWCResp>"
                 }
               ]
+            },
+            {
+              "_postman_id": "08d5ed9f-38ff-8c41-650d-8268892f2ef2",
+              "name": "Storage Pool",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/StoragePool",
+                "description": "<h2> Description </h2>\nThis operation returns a list of storage pools.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storagepool.htm)"
+              },
+              "response": []
             }
           ],
           "_postman_isSubFolder": true
