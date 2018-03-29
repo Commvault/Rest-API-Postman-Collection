@@ -51516,7 +51516,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"mountpathId\": 390,\n\t\"infoList\": [\n\t\t{\n\t\t\t\"numWriters\": -1,\n\t\t\t\"opType\": 3,\n\t\t\t\"protocolType\": 104,\n\t\t\t\"deviceId\": 104,\n\t\t\t\"enabled\": 1,\n\t\t\t\"accessType\": 6,\n\t\t\t\"path\": \"Manoj\",\n\t\t\t\"deviceControllerId\": 999,\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"name\": \"sogo8_2\",\n\t\t\t\t\"id\": 1816\n\t\t\t}\n\t\t}\n\t]\n}"
+                  "raw": "{\n\t\"mountpathId\": 390,\n\t\"infoList\": [\n\t\t{\n\t\t\t\"numWriters\": -1,\n\t\t\t\"opType\": 3,\n\t\t\t\"protocolType\": 104,\n\t\t\t\"deviceId\": 104,\n\t\t\t\"enabled\": 1,\n\t\t\t\"accessType\": 6,\n\t\t\t\"path\": \"Manoj\",\n\t\t\t\"deviceControllerId\": 999,\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"name\": \"{{MediaAgentName}}\",\n\t\t\t\t\"id\": {{MediaAgentId}}\n\t\t\t}\n\t\t}\n\t]\n}"
                 },
                 "url": {
                   "raw": "{{ServerUrl}}/DriveController?Action=deleteController",
