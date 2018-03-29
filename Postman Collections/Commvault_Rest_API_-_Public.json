@@ -51162,7 +51162,57 @@
                 },
                 "description": "<h2> Description </h2>\nThis operation edit a controller for a mount path."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "306646bc-d0a3-ccfe-1357-9b14950b8737",
+                  "name": "Edit DeviceController",
+                  "originalRequest": {
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "46",
+                      "name": "Content-Length",
+                      "description": ""
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 29 Mar 2018 20:02:30 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": ""
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "354",
+                  "body": "{\r\"error\":{\r\"errorString\":\"\",\"errorCode\":0\r}\r}"
+                }
+              ]
             },
             {
               "_postman_id": "c72776ac-ed71-b6bf-fcbb-33fcc6ed6151",
@@ -51321,7 +51371,57 @@
                 },
                 "description": "<h2> Description </h2>\nThis operation Adds a controller for a mount path."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "a571846d-1976-75fc-5e41-cbcaaaa239b6",
+                  "name": "Edit DeviceController",
+                  "originalRequest": {
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "46",
+                      "name": "Content-Length",
+                      "description": ""
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 29 Mar 2018 20:02:30 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": ""
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "354",
+                  "body": "{\r\"error\":{\r\"errorString\":\"\",\"errorCode\":0\r}\r}"
+                }
+              ]
             }
           ],
           "_postman_isSubFolder": true
