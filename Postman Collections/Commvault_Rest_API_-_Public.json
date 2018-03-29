@@ -50973,6 +50973,91 @@
                 "url": "{{ServerUrl}}/StoragePool",
                 "description": "<h2> Description </h2>\nThis operation returns a list of storage pools.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storagepool.htm)"
               },
+              "response": [
+                {
+                  "id": "b48034e4-2067-3141-24a0-e6948bd64f34",
+                  "name": "Storage Pool",
+                  "originalRequest": {
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "description": "",
+                      "key": "Content-Length",
+                      "name": "Content-Length",
+                      "value": "439"
+                    },
+                    {
+                      "description": "",
+                      "key": "Content-Type",
+                      "name": "Content-Type",
+                      "value": "application/xml; charset=utf-8"
+                    },
+                    {
+                      "description": "",
+                      "key": "Date",
+                      "name": "Date",
+                      "value": "Wed, 14 Jun 2017 07:59:57 GMT"
+                    },
+                    {
+                      "description": "",
+                      "key": "Server",
+                      "name": "Server",
+                      "value": "Microsoft-IIS/8.5"
+                    },
+                    {
+                      "description": "",
+                      "key": "X-Powered-By",
+                      "name": "X-Powered-By",
+                      "value": "ASP.NET"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "283",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"112571092828\"><storagePool _type_=\"28\" clientGroupId=\"13\" clientGroupName=\"TestStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"13\" storagePoolName=\"TestStoragePool\"/></storagePoolList></Api_GetStoragePoolListResp>"
+                }
+              ]
+            },
+            {
+              "_postman_id": "b05d7e8a-6561-b457-1da6-32c67f86603a",
+              "name": "Storage Pool Details",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/StoragePool/13",
+                "description": "<h2> Description </h2>\nThis operation returns the details for the given storage pool.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storagepool_details.htm)"
+              },
               "response": []
             }
           ],
