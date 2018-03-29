@@ -51217,6 +51217,110 @@
                 },
                 "description": "<h2> Description </h2>\nThis operation returns the list of all controllers for a mount path."
               },
+              "response": [
+                {
+                  "id": "26e690b1-a5c1-b1f8-e23a-c94a52e73a84",
+                  "name": "MediaAgent for Library",
+                  "originalRequest": {
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "description": "",
+                      "key": "Content-Length",
+                      "name": "Content-Length",
+                      "value": "294"
+                    },
+                    {
+                      "description": "",
+                      "key": "Content-Type",
+                      "name": "Content-Type",
+                      "value": "application/xml; charset=utf-8"
+                    },
+                    {
+                      "description": "",
+                      "key": "Date",
+                      "name": "Date",
+                      "value": "Wed, 14 Jun 2017 07:47:31 GMT"
+                    },
+                    {
+                      "description": "",
+                      "key": "Server",
+                      "name": "Server",
+                      "value": "Microsoft-IIS/8.5"
+                    },
+                    {
+                      "description": "",
+                      "key": "X-Powered-By",
+                      "name": "X-Powered-By",
+                      "value": "ASP.NET"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "89",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetMediaAgentListWCResp><mediaAgentList description=\"\" libraryType=\"0\" mediaAgentId=\"9\" mediaAgentName=\"firewalltestma\" osVersion=\"Windows Server 2012 R2 Datacenter\" platform=\"WinX64\" status=\"Ready\"/></EVGui_GetMediaAgentListWCResp>"
+                }
+              ]
+            },
+            {
+              "_postman_id": "bd0828f7-b089-4ad8-228a-3132b1c526c1",
+              "name": "Add DeviceController",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"mountpathId\": {{mountPathId}},\n\t\"infoList\": [\n\t\t{\n\t\t\t\"numWriters\": -1,\n\t\t\t\"opType\": 2,\n\t\t\t\"protocolType\": 104,\n\t\t\t\"userName\": \"{{SERVICE_HOST}}//{{ACCESS_KEY}}\",\n\t\t\t\"deviceId\": {{deviceId}},\n\t\t\t\"enabled\": 1,\n\t\t\t\"accessType\": 6,\n\t\t\t\"path\": \"{{BUCKET}}\",\n\t\t\t\"password\": \"{{SECRET_ACCESS_KEY}}\",\n\t\t\t\"deviceControllerId\": {{deviceControllerId}},\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"name\": \"{{MEDIA_AGENT_NAME}}\",\n\t\t\t\t\"id\": {{MEDIA_AGENT_ID}}\n\t\t\t}\n\t\t}\n\t]\n}"
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/DriveController?Action=editController",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "DriveController"
+                  ],
+                  "query": [
+                    {
+                      "key": "Action",
+                      "value": "editController",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "<h2> Description </h2>\nThis operation Adds a controller for a mount path."
+              },
               "response": []
             }
           ],
