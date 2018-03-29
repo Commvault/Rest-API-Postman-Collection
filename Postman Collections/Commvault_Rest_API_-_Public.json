@@ -51369,7 +51369,7 @@
                     }
                   ]
                 },
-                "description": "<h2> Description </h2>\nThis operation Adds a controller for a mount path."
+                "description": "<h2> Description </h2>\nThis operation Adds a controller for a mount path.\n\n<h2>Request Parameters</h2>\n<table class=\"tableintopic\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">\n<tbody>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">Name</p>\n</td>\n<td>\n<p class=\"tabletext\">Description</p>\n</td>\n</tr>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">accessType</p>\n</td>\n<td>\n<p class=\"tabletext\">Device Controller Access Type.</p>\n<p class=\"tabletext\">Valid values are:</p>\n<ul class=\"listbullet\">\n<li class=\"listbullet\">6, Read/Write</li>\n<li class=\"listbullet\">14, Read</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>"
               },
               "response": [
                 {
