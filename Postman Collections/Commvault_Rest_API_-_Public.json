@@ -51351,7 +51351,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n\t\"mountpathId\": 390,\r\n\t\"infoList\": [\r\n\t\t{\r\n\t\t\t\"numWriters\": -1,\r\n\t\t\t\"opType\": 1,\r\n\t\t\t\"protocolType\": 104,\r\n\t\t\t\"deviceId\": 104,\r\n\t\t\t\"enabled\": 1,\r\n\t\t\t\"accessType\": 6,\r\n\t\t\t\"path\": \"\",\r\n\t\t\t\"deviceControllerId\": 0,\r\n\t\t\t\"mediaAgent\": {\r\n\t\t\t\t\"name\": \"sogo8_2\",\r\n\t\t\t\t\"id\": 1816\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+                  "raw": "{\r\n\t\"mountpathId\": 390,\r\n\t\"infoList\": [\r\n\t\t{\r\n\t\t\t\"numWriters\": -1,\r\n\t\t\t\"opType\": 1,\r\n\t\t\t\"protocolType\": 104,\r\n\t\t\t\"deviceId\": 104,\r\n\t\t\t\"enabled\": 1,\r\n\t\t\t\"accessType\": 6,\r\n\t\t\t\"path\": \"\",\r\n\t\t\t\"deviceControllerId\": 0,\r\n\t\t\t\"mediaAgent\": {\r\n\t\t\t\t\"name\": \"{{MediaAgentName}}\",\r\n\t\t\t\t\"id\": {{MediaAgentId}}\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": {
                   "raw": "{{ServerUrl}}/DriveController?Action=addController",
@@ -51373,13 +51373,46 @@
               },
               "response": [
                 {
-                  "id": "a571846d-1976-75fc-5e41-cbcaaaa239b6",
-                  "name": "Edit DeviceController",
+                  "id": "4d239885-95b0-d6be-cc37-eb50afa79592",
+                  "name": "Add DeviceController",
                   "originalRequest": {
-                    "header": [],
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}",
+                        "disabled": false
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}",
+                        "disabled": false
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "disabled": false
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
-                      "raw": ""
+                      "raw": "{\r\n\t\"mountpathId\": 390,\r\n\t\"infoList\": [\r\n\t\t{\r\n\t\t\t\"numWriters\": -1,\r\n\t\t\t\"opType\": 1,\r\n\t\t\t\"protocolType\": 104,\r\n\t\t\t\"deviceId\": 104,\r\n\t\t\t\"enabled\": 1,\r\n\t\t\t\"accessType\": 6,\r\n\t\t\t\"path\": \"\",\r\n\t\t\t\"deviceControllerId\": 0,\r\n\t\t\t\"mediaAgent\": {\r\n\t\t\t\t\"name\": \"sogo8_2\",\r\n\t\t\t\t\"id\": 1816\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/DriveController?Action=addController",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "DriveController"
+                      ],
+                      "query": [
+                        {
+                          "key": "Action",
+                          "value": "addController",
+                          "equals": true
+                        }
+                      ]
                     }
                   },
                   "status": "OK",
@@ -51400,7 +51433,7 @@
                     },
                     {
                       "key": "Date",
-                      "value": "Thu, 29 Mar 2018 20:02:30 GMT",
+                      "value": "Thu, 29 Mar 2018 20:36:52 GMT",
                       "name": "Date",
                       "description": ""
                     },
@@ -51418,7 +51451,7 @@
                     }
                   ],
                   "cookie": [],
-                  "responseTime": "354",
+                  "responseTime": "257",
                   "body": "{\r\"error\":{\r\"errorString\":\"\",\"errorCode\":0\r}\r}"
                 }
               ]
