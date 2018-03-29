@@ -51163,6 +51163,61 @@
                 "description": "<h2> Description </h2>\nThis operation edit a controller for a mount path."
               },
               "response": []
+            },
+            {
+              "_postman_id": "c72776ac-ed71-b6bf-fcbb-33fcc6ed6151",
+              "name": "DeviceController",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "tests[\"Response Body contains mountPathInfo\"] = responseBody.has(\"mountPathInfo\");",
+                      "",
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"deviceControllerId\", jsonData.mountPathInfo.deviceList[0].deviceControllerId);"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/DriveController?mountPathId={{mountPathId}}",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "DriveController"
+                  ],
+                  "query": [
+                    {
+                      "key": "mountPathId",
+                      "value": "{{mountPathId}}",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "<h2> Description </h2>\nThis operation returns the list of all controllers for a mount path."
+              },
+              "response": []
             }
           ],
           "_postman_isSubFolder": true
