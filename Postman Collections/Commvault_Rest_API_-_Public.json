@@ -50593,6 +50593,91 @@
               "response": []
             },
             {
+              "_postman_id": "08d5ed9f-38ff-8c41-650d-8268892f2ef2",
+              "name": "Storage Pool",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/StoragePool",
+                "description": "<h2> Description </h2>\nThis operation returns a list of storage pools.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storagepool.htm)"
+              },
+              "response": [
+                {
+                  "id": "b48034e4-2067-3141-24a0-e6948bd64f34",
+                  "name": "Storage Pool",
+                  "originalRequest": {
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "description": "",
+                      "key": "Content-Length",
+                      "name": "Content-Length",
+                      "value": "439"
+                    },
+                    {
+                      "description": "",
+                      "key": "Content-Type",
+                      "name": "Content-Type",
+                      "value": "application/xml; charset=utf-8"
+                    },
+                    {
+                      "description": "",
+                      "key": "Date",
+                      "name": "Date",
+                      "value": "Wed, 14 Jun 2017 07:59:57 GMT"
+                    },
+                    {
+                      "description": "",
+                      "key": "Server",
+                      "name": "Server",
+                      "value": "Microsoft-IIS/8.5"
+                    },
+                    {
+                      "description": "",
+                      "key": "X-Powered-By",
+                      "name": "X-Powered-By",
+                      "value": "ASP.NET"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "283",
+                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"112571092828\"><storagePool _type_=\"28\" clientGroupId=\"13\" clientGroupName=\"TestStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"13\" storagePoolName=\"TestStoragePool\"/></storagePoolList></Api_GetStoragePoolListResp>"
+                }
+              ]
+            },
+            {
               "_postman_id": "e35c66a2-3dff-7a24-87c4-60ca8ac10b84",
               "name": "Reset Tape Library",
               "event": [
@@ -50941,91 +51026,6 @@
               ]
             },
             {
-              "_postman_id": "08d5ed9f-38ff-8c41-650d-8268892f2ef2",
-              "name": "Storage Pool",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/xml"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/StoragePool",
-                "description": "<h2> Description </h2>\nThis operation returns a list of storage pools.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_storagepool.htm)"
-              },
-              "response": [
-                {
-                  "id": "b48034e4-2067-3141-24a0-e6948bd64f34",
-                  "name": "Storage Pool",
-                  "originalRequest": {
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "description": "",
-                      "key": "Content-Length",
-                      "name": "Content-Length",
-                      "value": "439"
-                    },
-                    {
-                      "description": "",
-                      "key": "Content-Type",
-                      "name": "Content-Type",
-                      "value": "application/xml; charset=utf-8"
-                    },
-                    {
-                      "description": "",
-                      "key": "Date",
-                      "name": "Date",
-                      "value": "Wed, 14 Jun 2017 07:59:57 GMT"
-                    },
-                    {
-                      "description": "",
-                      "key": "Server",
-                      "name": "Server",
-                      "value": "Microsoft-IIS/8.5"
-                    },
-                    {
-                      "description": "",
-                      "key": "X-Powered-By",
-                      "name": "X-Powered-By",
-                      "value": "ASP.NET"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": "283",
-                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><Api_GetStoragePoolListResp><storagePoolList numberOfNodes=\"1\" reserved1=\"1\" status=\"Online\" storagePoolType=\"1\" totalCapacity=\"214383292579\" totalFreeSpace=\"112571092828\"><storagePool _type_=\"28\" clientGroupId=\"13\" clientGroupName=\"TestStoragePool\"/><storagePoolEntity _type_=\"160\" storagePoolId=\"13\" storagePoolName=\"TestStoragePool\"/></storagePoolList></Api_GetStoragePoolListResp>"
-                }
-              ]
-            },
-            {
               "_postman_id": "b05d7e8a-6561-b457-1da6-32c67f86603a",
               "name": "Storage Pool Details",
               "event": [
@@ -51111,110 +51111,6 @@
               ]
             },
             {
-              "_postman_id": "4926fcc3-29c1-fd58-513e-b1820aa81f9b",
-              "name": "Edit DeviceController",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"mountpathId\": {{mountPathId}},\n\t\"infoList\": [\n\t\t{\n\t\t\t\"numWriters\": -1,\n\t\t\t\"opType\": 2,\n\t\t\t\"protocolType\": 104,\n\t\t\t\"userName\": \"{{SERVICE_HOST}}//{{ACCESS_KEY}}\",\n\t\t\t\"deviceId\": {{deviceId}},\n\t\t\t\"enabled\": 1,\n\t\t\t\"accessType\": 6,\n\t\t\t\"path\": \"{{BUCKET}}\",\n\t\t\t\"password\": \"{{SECRET_ACCESS_KEY}}\",\n\t\t\t\"deviceControllerId\": {{deviceControllerId}},\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"name\": \"{{MEDIA_AGENT_NAME}}\",\n\t\t\t\t\"id\": {{MEDIA_AGENT_ID}}\n\t\t\t}\n\t\t}\n\t]\n}"
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/DriveController?Action=editController",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "DriveController"
-                  ],
-                  "query": [
-                    {
-                      "key": "Action",
-                      "value": "editController",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "<h2> Description </h2>\nThis operation edit a controller for a mount path.\n\n<h2>Request Parameters</h2>\n<table class=\"tableintopic\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">\n<tbody>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">Name</p>\n</td>\n<td>\n<p class=\"tabletext\">Description</p>\n</td>\n</tr>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">accessType</p>\n</td>\n<td>\n<p class=\"tabletext\">Device Controller Access Type.</p>\n<p class=\"tabletext\">Valid values are:</p>\n<ul class=\"listbullet\">\n<li class=\"listbullet\">6, Read/Write</li>\n<li class=\"listbullet\">14, Read</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>"
-              },
-              "response": [
-                {
-                  "id": "306646bc-d0a3-ccfe-1357-9b14950b8737",
-                  "name": "Edit DeviceController",
-                  "originalRequest": {
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "46",
-                      "name": "Content-Length",
-                      "description": ""
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": ""
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Thu, 29 Mar 2018 20:02:30 GMT",
-                      "name": "Date",
-                      "description": ""
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": ""
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": ""
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": "354",
-                  "body": "{\r\"error\":{\r\"errorString\":\"\",\"errorCode\":0\r}\r}"
-                }
-              ]
-            },
-            {
               "_postman_id": "c72776ac-ed71-b6bf-fcbb-33fcc6ed6151",
               "name": "DeviceController",
               "event": [
@@ -51269,53 +51165,81 @@
               },
               "response": [
                 {
-                  "id": "26e690b1-a5c1-b1f8-e23a-c94a52e73a84",
-                  "name": "MediaAgent for Library",
+                  "id": "b9fc4624-9a30-d17f-bbd0-bbb37b22f2ab",
+                  "name": "DeviceController",
                   "originalRequest": {
-                    "header": [],
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}",
+                        "disabled": false
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}",
+                        "disabled": false
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/DriveController?mountPathId={{mountPathId}}",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "DriveController"
+                      ],
+                      "query": [
+                        {
+                          "key": "mountPathId",
+                          "value": "{{mountPathId}}",
+                          "equals": true
+                        }
+                      ]
                     }
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": "xml",
+                  "_postman_previewlanguage": "json",
                   "header": [
                     {
-                      "description": "",
                       "key": "Content-Length",
+                      "value": "1021",
                       "name": "Content-Length",
-                      "value": "294"
+                      "description": ""
                     },
                     {
-                      "description": "",
                       "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
                       "name": "Content-Type",
-                      "value": "application/xml; charset=utf-8"
+                      "description": ""
                     },
                     {
-                      "description": "",
                       "key": "Date",
+                      "value": "Thu, 29 Mar 2018 20:48:25 GMT",
                       "name": "Date",
-                      "value": "Wed, 14 Jun 2017 07:47:31 GMT"
+                      "description": ""
                     },
                     {
-                      "description": "",
                       "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
                       "name": "Server",
-                      "value": "Microsoft-IIS/8.5"
+                      "description": ""
                     },
                     {
-                      "description": "",
                       "key": "X-Powered-By",
+                      "value": "ASP.NET",
                       "name": "X-Powered-By",
-                      "value": "ASP.NET"
+                      "description": ""
                     }
                   ],
                   "cookie": [],
-                  "responseTime": "89",
-                  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?><EVGui_GetMediaAgentListWCResp><mediaAgentList description=\"\" libraryType=\"0\" mediaAgentId=\"9\" mediaAgentName=\"firewalltestma\" osVersion=\"Windows Server 2012 R2 Datacenter\" platform=\"WinX64\" status=\"Ready\"/></EVGui_GetMediaAgentListWCResp>"
+                  "responseTime": "98",
+                  "body": "{\n    \"mountPathInfo\": {\n        \"jobIds\": \"\",\n        \"mediaAgents\": \"\",\n        \"libraryVendorId\": 2,\n        \"mountPathId\": 390,\n        \"mountPathName\": \"NGXV29_03.29.2018_19.17\",\n        \"dataServerType\": 0,\n        \"status\": \"\",\n        \"mountPathSummary\": {\n            \"libraryName\": \"[mmtest1] Manoj\",\n            \"avgMediaConsumedPerDay\": 0,\n            \"totalDeduplicationAppSize\": 0,\n            \"avgDataWrittenPerDayMB\": 0,\n            \"totalReserveSpaceMB\": 2048,\n            \"lastNumDays\": 1,\n            \"libraryId\": 629,\n            \"totalSpace\": -1,\n            \"totalValidData\": 0,\n            \"estimatedSpaceRunoutDays\": -1,\n            \"warningWaterMark\": 30,\n            \"totalFreeSpace\": -1,\n            \"avgMediaFreedPerDay\": 0,\n            \"totalDataWritten\": 0,\n            \"avgCapacityFreedMB\": 0,\n            \"lowWaterMark\": 15,\n            \"numberOfWriters\": 1000,\n            \"attribute\": 1192,\n            \"totalAppSize\": 0,\n            \"totalDeduplicationDataWritten\": 0,\n            \"associatedMA\": [\n                \"mmtest1\"\n            ]\n        },\n        \"deviceList\": [\n            {\n                \"numWriters\": -1,\n                \"autoPickTransportType\": false,\n                \"opType\": 0,\n                \"proxyPassword\": \"\",\n                \"protocolType\": 0,\n                \"userName\": \"s3.amazonaws.com//Access_Key_Id\",\n                \"deviceId\": 104,\n                \"enabled\": 1,\n                \"accessType\": 6,\n                \"path\": \"Bucket\",\n                \"password\": \"\",\n                \"deviceControllerId\": 250,\n                \"mediaAgent\": {\n                    \"name\": \"mmtest1\",\n                    \"id\": 2\n                }\n            }\n        ],\n        \"deviceInfo\": {\n            \"name\": \"\",\n            \"id\": 0\n        }\n    }\n}"
                 }
               ]
             },
@@ -51452,6 +51376,247 @@
                   ],
                   "cookie": [],
                   "responseTime": "257",
+                  "body": "{\r\"error\":{\r\"errorString\":\"\",\"errorCode\":0\r}\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "4926fcc3-29c1-fd58-513e-b1820aa81f9b",
+              "name": "Edit DeviceController",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"mountpathId\": {{mountPathId}},\n\t\"infoList\": [\n\t\t{\n\t\t\t\"numWriters\": -1,\n\t\t\t\"opType\": 2,\n\t\t\t\"protocolType\": 104,\n\t\t\t\"userName\": \"{{SERVICE_HOST}}//{{ACCESS_KEY}}\",\n\t\t\t\"deviceId\": {{deviceId}},\n\t\t\t\"enabled\": 1,\n\t\t\t\"accessType\": 6,\n\t\t\t\"path\": \"{{BUCKET}}\",\n\t\t\t\"password\": \"{{SECRET_ACCESS_KEY}}\",\n\t\t\t\"deviceControllerId\": {{deviceControllerId}},\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"name\": \"{{MEDIA_AGENT_NAME}}\",\n\t\t\t\t\"id\": {{MEDIA_AGENT_ID}}\n\t\t\t}\n\t\t}\n\t]\n}"
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/DriveController?Action=editController",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "DriveController"
+                  ],
+                  "query": [
+                    {
+                      "key": "Action",
+                      "value": "editController",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "<h2> Description </h2>\nThis operation edit a controller for a mount path.\n\n<h2>Request Parameters</h2>\n<table class=\"tableintopic\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">\n<tbody>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">Name</p>\n</td>\n<td>\n<p class=\"tabletext\">Description</p>\n</td>\n</tr>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">accessType</p>\n</td>\n<td>\n<p class=\"tabletext\">Device Controller Access Type.</p>\n<p class=\"tabletext\">Valid values are:</p>\n<ul class=\"listbullet\">\n<li class=\"listbullet\">6, Read/Write</li>\n<li class=\"listbullet\">14, Read</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>"
+              },
+              "response": [
+                {
+                  "id": "306646bc-d0a3-ccfe-1357-9b14950b8737",
+                  "name": "Edit DeviceController",
+                  "originalRequest": {
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "46",
+                      "name": "Content-Length",
+                      "description": ""
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 29 Mar 2018 20:02:30 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": ""
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "354",
+                  "body": "{\r\"error\":{\r\"errorString\":\"\",\"errorCode\":0\r}\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "e97a0260-c727-31ac-f9c2-a1e979913ca7",
+              "name": "Edit DeviceController copy",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"mountpathId\": {{mountPathId}},\n\t\"infoList\": [\n\t\t{\n\t\t\t\"numWriters\": -1,\n\t\t\t\"opType\": 2,\n\t\t\t\"protocolType\": 104,\n\t\t\t\"userName\": \"{{SERVICE_HOST}}//{{ACCESS_KEY}}\",\n\t\t\t\"deviceId\": {{deviceId}},\n\t\t\t\"enabled\": 1,\n\t\t\t\"accessType\": 6,\n\t\t\t\"path\": \"{{BUCKET}}\",\n\t\t\t\"password\": \"{{SECRET_ACCESS_KEY}}\",\n\t\t\t\"deviceControllerId\": {{deviceControllerId}},\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"name\": \"{{MEDIA_AGENT_NAME}}\",\n\t\t\t\t\"id\": {{MEDIA_AGENT_ID}}\n\t\t\t}\n\t\t}\n\t]\n}"
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/DriveController?Action=editController",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "DriveController"
+                  ],
+                  "query": [
+                    {
+                      "key": "Action",
+                      "value": "editController",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "<h2> Description </h2>\nThis operation edit a controller for a mount path.\n\n<h2>Request Parameters</h2>\n<table class=\"tableintopic\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">\n<tbody>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">Name</p>\n</td>\n<td>\n<p class=\"tabletext\">Description</p>\n</td>\n</tr>\n<tr align=\"left\" valign=\"top\">\n<td>\n<p class=\"tabletext\">accessType</p>\n</td>\n<td>\n<p class=\"tabletext\">Device Controller Access Type.</p>\n<p class=\"tabletext\">Valid values are:</p>\n<ul class=\"listbullet\">\n<li class=\"listbullet\">6, Read/Write</li>\n<li class=\"listbullet\">14, Read</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>"
+              },
+              "response": [
+                {
+                  "id": "a8d27139-6d14-e163-9ba1-123721f2fbfe",
+                  "name": "Edit DeviceController",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}",
+                        "disabled": false
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}",
+                        "disabled": false
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "disabled": false
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"mountpathId\": {{mountPathId}},\n\t\"infoList\": [\n\t\t{\n\t\t\t\"numWriters\": -1,\n\t\t\t\"opType\": 2,\n\t\t\t\"protocolType\": 104,\n\t\t\t\"userName\": \"{{SERVICE_HOST}}//{{ACCESS_KEY}}\",\n\t\t\t\"deviceId\": {{deviceId}},\n\t\t\t\"enabled\": 1,\n\t\t\t\"accessType\": 6,\n\t\t\t\"path\": \"{{BUCKET}}\",\n\t\t\t\"password\": \"{{SECRET_ACCESS_KEY}}\",\n\t\t\t\"deviceControllerId\": {{deviceControllerId}},\n\t\t\t\"mediaAgent\": {\n\t\t\t\t\"name\": \"{{MEDIA_AGENT_NAME}}\",\n\t\t\t\t\"id\": {{MEDIA_AGENT_ID}}\n\t\t\t}\n\t\t}\n\t]\n}"
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/DriveController?Action=editController",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "DriveController"
+                      ],
+                      "query": [
+                        {
+                          "key": "Action",
+                          "value": "editController",
+                          "equals": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "46",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 29 Mar 2018 20:02:30 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "354",
                   "body": "{\r\"error\":{\r\"errorString\":\"\",\"errorCode\":0\r}\r}"
                 }
               ]
