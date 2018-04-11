@@ -58513,483 +58513,6 @@
       ]
     },
     {
-      "_postman_id": "b566940b-3b66-859e-c194-3b2308729ae9",
-      "name": "Workflow Operations",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "1eafcf00-da43-f07d-bbea-a9b2ac5be0f7",
-          "name": "Workflow",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains container\"] = responseBody.has(\"container\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/Workflow",
-            "description": "<h2> Description </h2>\nThis operation returns a list of workflows.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_workflow.htm)"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "46dda03a-6b29-c884-1030-3b51c2e89c12",
-          "name": "Executing a Workflow as a Job",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains sessionId\"] = responseBody.has(\"sessionId\");",
-                  "",
-                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");",
-                  "",
-                  "tests[\"Response Body contains workflow\"] = responseBody.has(\"workflow\");",
-                  "",
-                  "tests[\"Response Body contains commCell\"] = responseBody.has(\"commCell\");",
-                  "",
-                  "tests[\"Response Body contains client\"] = responseBody.has(\"client\");",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/xml"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<Workflow_StartWorkflow>\r\n  <options>\r\n    <outputFormat>1</outputFormat>\r\n    <inputs>\r\n      <name>DemoTestMachine</name>\r\n      <Memory>8</Memory>\r\n      <Disk>500</Disk>\r\n      <software></software>\r\n    </inputs>\r\n  </options>\r\n  <client>\r\n    <clientName>firewalltestcs</clientName>\r\n  </client>\r\n</Workflow_StartWorkflow>"
-            },
-            "url": "{{ServerUrl}}/Workflow/Demo - New Machine Request/Action/Execute",
-            "description": "<h2> Description </h2>\nThis operation executes a workflow as a job.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute.htm)"
-          },
-          "response": [
-            {
-              "id": "c37b2462-16a0-cb4d-4fe8-6428d81ee47e",
-              "name": "Executing a Workflow as a Job - This request executes a workflow named \"Demo - New Machine Request\" The workflow uses four workflow level inputs.",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<Workflow_StartWorkflow>\r\n  <options>\r\n    <outputFormat>1</outputFormat>\r\n    <inputs>\r\n      <name>DemoTestMachine</name>\r\n      <Memory>8</Memory>\r\n      <Disk>500</Disk>\r\n      <software></software>\r\n    </inputs>\r\n  </options>\r\n  <client>\r\n    <clientName>firewalltestcs</clientName>\r\n  </client>\r\n</Workflow_StartWorkflow>"
-                },
-                "url": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "649"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 30 May 2017 03:58:59 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "2380",
-              "body": "{\r\"sessionId\":\"c72a4d37-0b96-4947-8e2b-f7a093bd4dca\",\"message\":\"<html>Your new machine request has been submitted for approval<br><\\u002fhtml>\",\"processStepId\":1333,\"dialogType\":0,\"jobId\":287,\"iconType\":0,\"html\":false,\"workflow\":{\r\"workflowName\":\"Demo - New Machine Request\",\"workflowId\":14\r},\"commCell\":{\r\"_type_\":1,\"commCellName\":\"firewalltestcs\",\"newName\":\"\",\"GUID\":\"\",\"commCellId\":2,\"csGUID\":\"\",\"flags\":{\r\r}\r},\"client\":{\r\"hostName\":\"FirewallTestCS.testlab.commvault.com\",\"clientId\":2,\"clientName\":\"firewalltestcs\",\"_type_\":3,\"commCellName\":\"firewalltestcs\",\"commCellId\":2,\"clientGUID\":\"3D2BECB0-B5AB-4911-BF0E-E956174D752A\"\r},\"properties\":{\r\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "5905ec91-33ce-7bb2-d1d9-7d81efbb31a6",
-          "name": "Executing a Workflow as an API",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");",
-                  "",
-                  "tests[\"Response Body contains processId\"] = responseBody.has(\"processId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"options\":{\r\n      \"inputs\":{\r\n        \"F_NAME\":\"J\",\r\n        \"L_NAME\":\"Doe\",\r\n        \"COMPANY\":\"My Company\",\r\n        \"EMAIL_ADDR\":\"jdoe@mycompany.com\"\r\n      }\r\n    },\r\n    \"client\":{\r\n      \"clientName\":\"client0001\"\r\n    }\r\n}"
-            },
-            "url": {
-              "raw": "{{ServerUrl}}/wapi/Demo_CheckReadiness?ClientGroupName=Media Agents",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "wapi",
-                "Demo_CheckReadiness"
-              ],
-              "query": [
-                {
-                  "equals": true,
-                  "key": "ClientGroupName",
-                  "value": "Media Agents"
-                }
-              ]
-            },
-            "description": "<h2> Description </h2>\nThis operation executes a workflow that looks like an API to the caller.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_workflow_execute_api.htm)"
-          },
-          "response": [
-            {
-              "id": "06a6d2bd-49a2-d787-a7aa-85d3354e7db6",
-              "name": "Executing a Workflow as an API",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "31"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 30 May 2017 03:52:17 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "593",
-              "body": "{\r\"jobId\":284,\"processId\":284\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "eeb7df3e-b1aa-6ce6-dc3c-4f4acf3982c3",
-          "name": "Executing a Workflow as an API",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");",
-                  "",
-                  "tests[\"Response Body contains processId\"] = responseBody.has(\"processId\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"inputs\": {\n    \"ClientGroupName\": \"Media Agents\"\n  }\n}"
-            },
-            "url": "{{ServerUrl}}/wapi/Demo_CheckReadiness",
-            "description": "<h2> Description </h2>\nThis operation executes a workflow that looks like an API to the caller.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute_api.htm)"
-          },
-          "response": [
-            {
-              "id": "009b86c9-ad49-70d3-752b-0b1e2bbb4c51",
-              "name": "Executing a Workflow as an API",
-              "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": ""
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "31"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Tue, 30 May 2017 03:50:54 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "2697",
-              "body": "{\r\"jobId\":283,\"processId\":283\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "6ab09199-62d2-c7e1-0f55-a27f88d69c32",
-          "name": "Executing a Workflow as a Job with JSON",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\"Workflow_StartWorkflow\":\r\n{   \r\n  \"outputFormat\":\"1\",\r\n    \"options\":{\r\n      \"inputs\":{\r\n        \"Input1\":\"TestMachine\",\r\n        \"Input2\":8,\r\n        \"Input3\":\"testapi\"\r\n        \r\n      }\r\n    },\r\n    \"client\":{\r\n      \"clientName\":\"testapi\"\r\n    }\r\n}\r\n}"
-            },
-            "url": {
-              "raw": "{{ServerUrl}}/Workflow/TestApi/Action/Execute?outputOnly=false",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Workflow",
-                "TestApi",
-                "Action",
-                "Execute"
-              ],
-              "query": [
-                {
-                  "key": "outputOnly",
-                  "value": "false",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "<h2> Description </h2>\nThis operation executes a workflow as a job.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute.htm)"
-          },
-          "response": [
-            {
-              "id": "1e347af7-3387-1d00-4497-ad6785bdbd9a",
-              "name": "Executing a Workflow as a Job with JSON",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}",
-                    "disabled": false
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "disabled": false
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n\"Workflow_StartWorkflow\":\r\n{   \r\n  \"outputFormat\":\"1\",\r\n    \"options\":{\r\n      \"inputs\":{\r\n        \"Input1\":\"TestMachine\",\r\n        \"Input2\":8,\r\n        \"Input3\":\"testapi\"\r\n        \r\n      }\r\n    },\r\n    \"client\":{\r\n      \"clientName\":\"testapi\"\r\n    }\r\n}\r\n}"
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/Workflow/TestApi/Action/Execute?outputOnly=false",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Workflow",
-                    "TestApi",
-                    "Action",
-                    "Execute"
-                  ],
-                  "query": [
-                    {
-                      "key": "outputOnly",
-                      "value": "false",
-                      "equals": true
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1226",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Wed, 14 Feb 2018 06:42:54 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [],
-              "responseTime": "764",
-              "body": "{\r\"outputs\":\"{\\\"testoutput\\\":\\\"NAME                                    OS           ACTIVE    \\\\r\\\\n----                                    --           ------    \\\\r\\\\napitest                                 Windows      Yes       \\\\r\\\\nauto                                    Windows      Yes       \\\\r\\\\nCSSP_IndexServer                        Any          Yes       \\\\r\\\\nfirewalltestma                          Windows      Yes       \\\\r\\\\nfwclient4_2                             Windows      Yes       \\\\r\\\\nshezavm11                               Windows      Yes       \\\\r\\\\nshezavm11_3                             Windows      Yes       \\\\r\\\\nshezavm7                                Linux        Yes       \\\\r\\\\ntest                                    Windows95    Yes       \\\\r\\\\ntestauto_2                              Windows      Yes       \\\\r\\\\ntestpool_SystemCreatedSP_IndexServer    Any          Yes       \\\\r\\\\nv10cl                                   Windows      Yes       \\\\r\\\\nv10client                               Windows      Yes\\\"}\",\"jobId\":294,\"errorMessage\":\"\",\"errorCode\":0,\"startTime\":1518590573,\"endTime\":1518590574,\"version\":4,\"status\":4,\"workflow\":{\r\"workflowName\":\"TestAPI\",\"workflowId\":88\r}\r}"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "_postman_id": "041db542-142d-54ac-b005-4f3b60b21378",
       "name": "DR Group Operations",
       "description": null,
@@ -59864,6 +59387,483 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\r\"resp\":{\r\"errorMessage\":\"\",\"errorCode\":0\r},\"entity\":{\r\"vAppId\":8,\"vAppName\":\"\"\r}\r}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_postman_id": "b566940b-3b66-859e-c194-3b2308729ae9",
+      "name": "Workflow Operations",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1eafcf00-da43-f07d-bbea-a9b2ac5be0f7",
+          "name": "Workflow",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains container\"] = responseBody.has(\"container\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/Workflow",
+            "description": "<h2> Description </h2>\nThis operation returns a list of workflows.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_workflow.htm)"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "46dda03a-6b29-c884-1030-3b51c2e89c12",
+          "name": "Executing a Workflow as a Job",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains sessionId\"] = responseBody.has(\"sessionId\");",
+                  "",
+                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");",
+                  "",
+                  "tests[\"Response Body contains workflow\"] = responseBody.has(\"workflow\");",
+                  "",
+                  "tests[\"Response Body contains commCell\"] = responseBody.has(\"commCell\");",
+                  "",
+                  "tests[\"Response Body contains client\"] = responseBody.has(\"client\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<Workflow_StartWorkflow>\r\n  <options>\r\n    <outputFormat>1</outputFormat>\r\n    <inputs>\r\n      <name>DemoTestMachine</name>\r\n      <Memory>8</Memory>\r\n      <Disk>500</Disk>\r\n      <software></software>\r\n    </inputs>\r\n  </options>\r\n  <client>\r\n    <clientName>firewalltestcs</clientName>\r\n  </client>\r\n</Workflow_StartWorkflow>"
+            },
+            "url": "{{ServerUrl}}/Workflow/Demo - New Machine Request/Action/Execute",
+            "description": "<h2> Description </h2>\nThis operation executes a workflow as a job.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute.htm)"
+          },
+          "response": [
+            {
+              "id": "c37b2462-16a0-cb4d-4fe8-6428d81ee47e",
+              "name": "Executing a Workflow as a Job - This request executes a workflow named \"Demo - New Machine Request\" The workflow uses four workflow level inputs.",
+              "originalRequest": {
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<Workflow_StartWorkflow>\r\n  <options>\r\n    <outputFormat>1</outputFormat>\r\n    <inputs>\r\n      <name>DemoTestMachine</name>\r\n      <Memory>8</Memory>\r\n      <Disk>500</Disk>\r\n      <software></software>\r\n    </inputs>\r\n  </options>\r\n  <client>\r\n    <clientName>firewalltestcs</clientName>\r\n  </client>\r\n</Workflow_StartWorkflow>"
+                },
+                "url": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "649"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Tue, 30 May 2017 03:58:59 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2380",
+              "body": "{\r\"sessionId\":\"c72a4d37-0b96-4947-8e2b-f7a093bd4dca\",\"message\":\"<html>Your new machine request has been submitted for approval<br><\\u002fhtml>\",\"processStepId\":1333,\"dialogType\":0,\"jobId\":287,\"iconType\":0,\"html\":false,\"workflow\":{\r\"workflowName\":\"Demo - New Machine Request\",\"workflowId\":14\r},\"commCell\":{\r\"_type_\":1,\"commCellName\":\"firewalltestcs\",\"newName\":\"\",\"GUID\":\"\",\"commCellId\":2,\"csGUID\":\"\",\"flags\":{\r\r}\r},\"client\":{\r\"hostName\":\"FirewallTestCS.testlab.commvault.com\",\"clientId\":2,\"clientName\":\"firewalltestcs\",\"_type_\":3,\"commCellName\":\"firewalltestcs\",\"commCellId\":2,\"clientGUID\":\"3D2BECB0-B5AB-4911-BF0E-E956174D752A\"\r},\"properties\":{\r\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "5905ec91-33ce-7bb2-d1d9-7d81efbb31a6",
+          "name": "Executing a Workflow as an API",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");",
+                  "",
+                  "tests[\"Response Body contains processId\"] = responseBody.has(\"processId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"options\":{\r\n      \"inputs\":{\r\n        \"F_NAME\":\"J\",\r\n        \"L_NAME\":\"Doe\",\r\n        \"COMPANY\":\"My Company\",\r\n        \"EMAIL_ADDR\":\"jdoe@mycompany.com\"\r\n      }\r\n    },\r\n    \"client\":{\r\n      \"clientName\":\"client0001\"\r\n    }\r\n}"
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/wapi/Demo_CheckReadiness?ClientGroupName=Media Agents",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "wapi",
+                "Demo_CheckReadiness"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "ClientGroupName",
+                  "value": "Media Agents"
+                }
+              ]
+            },
+            "description": "<h2> Description </h2>\nThis operation executes a workflow that looks like an API to the caller.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_workflow_execute_api.htm)"
+          },
+          "response": [
+            {
+              "id": "06a6d2bd-49a2-d787-a7aa-85d3354e7db6",
+              "name": "Executing a Workflow as an API",
+              "originalRequest": {
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "31"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Tue, 30 May 2017 03:52:17 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "593",
+              "body": "{\r\"jobId\":284,\"processId\":284\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "eeb7df3e-b1aa-6ce6-dc3c-4f4acf3982c3",
+          "name": "Executing a Workflow as an API",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains jobId\"] = responseBody.has(\"jobId\");",
+                  "",
+                  "tests[\"Response Body contains processId\"] = responseBody.has(\"processId\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"inputs\": {\n    \"ClientGroupName\": \"Media Agents\"\n  }\n}"
+            },
+            "url": "{{ServerUrl}}/wapi/Demo_CheckReadiness",
+            "description": "<h2> Description </h2>\nThis operation executes a workflow that looks like an API to the caller.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute_api.htm)"
+          },
+          "response": [
+            {
+              "id": "009b86c9-ad49-70d3-752b-0b1e2bbb4c51",
+              "name": "Executing a Workflow as an API",
+              "originalRequest": {
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "31"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Tue, 30 May 2017 03:50:54 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2697",
+              "body": "{\r\"jobId\":283,\"processId\":283\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "6ab09199-62d2-c7e1-0f55-a27f88d69c32",
+          "name": "Executing a Workflow as a Job with JSON",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"Workflow_StartWorkflow\":\r\n{   \r\n  \"outputFormat\":\"1\",\r\n    \"options\":{\r\n      \"inputs\":{\r\n        \"Input1\":\"TestMachine\",\r\n        \"Input2\":8,\r\n        \"Input3\":\"testapi\"\r\n        \r\n      }\r\n    },\r\n    \"client\":{\r\n      \"clientName\":\"testapi\"\r\n    }\r\n}\r\n}"
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/Workflow/TestApi/Action/Execute?outputOnly=false",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Workflow",
+                "TestApi",
+                "Action",
+                "Execute"
+              ],
+              "query": [
+                {
+                  "key": "outputOnly",
+                  "value": "false",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "<h2> Description </h2>\nThis operation executes a workflow as a job.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_workflow_execute.htm)"
+          },
+          "response": [
+            {
+              "id": "1e347af7-3387-1d00-4497-ad6785bdbd9a",
+              "name": "Executing a Workflow as a Job with JSON",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\"Workflow_StartWorkflow\":\r\n{   \r\n  \"outputFormat\":\"1\",\r\n    \"options\":{\r\n      \"inputs\":{\r\n        \"Input1\":\"TestMachine\",\r\n        \"Input2\":8,\r\n        \"Input3\":\"testapi\"\r\n        \r\n      }\r\n    },\r\n    \"client\":{\r\n      \"clientName\":\"testapi\"\r\n    }\r\n}\r\n}"
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Workflow/TestApi/Action/Execute?outputOnly=false",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Workflow",
+                    "TestApi",
+                    "Action",
+                    "Execute"
+                  ],
+                  "query": [
+                    {
+                      "key": "outputOnly",
+                      "value": "false",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1226",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Feb 2018 06:42:54 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [],
+              "responseTime": "764",
+              "body": "{\r\"outputs\":\"{\\\"testoutput\\\":\\\"NAME                                    OS           ACTIVE    \\\\r\\\\n----                                    --           ------    \\\\r\\\\napitest                                 Windows      Yes       \\\\r\\\\nauto                                    Windows      Yes       \\\\r\\\\nCSSP_IndexServer                        Any          Yes       \\\\r\\\\nfirewalltestma                          Windows      Yes       \\\\r\\\\nfwclient4_2                             Windows      Yes       \\\\r\\\\nshezavm11                               Windows      Yes       \\\\r\\\\nshezavm11_3                             Windows      Yes       \\\\r\\\\nshezavm7                                Linux        Yes       \\\\r\\\\ntest                                    Windows95    Yes       \\\\r\\\\ntestauto_2                              Windows      Yes       \\\\r\\\\ntestpool_SystemCreatedSP_IndexServer    Any          Yes       \\\\r\\\\nv10cl                                   Windows      Yes       \\\\r\\\\nv10client                               Windows      Yes\\\"}\",\"jobId\":294,\"errorMessage\":\"\",\"errorCode\":0,\"startTime\":1518590573,\"endTime\":1518590574,\"version\":4,\"status\":4,\"workflow\":{\r\"workflowName\":\"TestAPI\",\"workflowId\":88\r}\r}"
             }
           ]
         }
