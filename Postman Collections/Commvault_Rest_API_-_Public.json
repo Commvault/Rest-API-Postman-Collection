@@ -58988,6 +58988,886 @@
           ]
         }
       ]
+    },
+    {
+      "_postman_id": "041db542-142d-54ac-b005-4f3b60b21378",
+      "name": "DR Group Operations",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "c5ce913d-01e4-df55-4087-d225a4e8d7e2",
+          "name": "DR Group",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body contains DR GroupProperties\"] = responseBody.has(\"vApp\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/DRGroups",
+            "description": "<h2>Description</h2>\r\nThis operation returns a list of Disaster Recovery (DR) groups.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_dr_groups.htm)"
+          },
+          "response": [
+            {
+              "id": "afcb10ca-7233-866f-aff4-40339cdb420b",
+              "name": "DR Group",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/DRGroups"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "632",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Mar 2018 15:39:20 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"vApp\":[\r{\r\"description\":\"\",\"isVirtualLab\":false,\"operationType\":16,\"vAppEntity\":{\r\"vAppId\":8,\"vAppName\":\"\"\r},\"clientList\":[\r{\r\"clientName\":\"ACVM4\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"5039ab83-15cd-0131-8769-030f6799e84b\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":30\r},{\r\"clientName\":\"ACVM2\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"503989df-8365-717e-41a5-f1a2201085ee\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":27\r},{\r\"clientName\":\"ACVM3\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"503992d2-c1c3-593e-ee2c-8032184c664c\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":29\r}\r]\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "1a7434f2-5268-b38e-f28a-c0a37fa6230f",
+          "name": "DR Group Properties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body contains Disaster Recovery(DR)group Properties\"] = responseBody.has(\"vApp\");",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"replicationId\",jsonData.vApp[0].config.vmGroups[0].vmSequence[0].replicationId);",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/DRGroups/{{DRGroupId}}",
+            "description": "<h2>Description</h2>\r\nThis operation returns the properties associated with a Disaster Recovery (DR) group.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_dr_groups_properties.htm)"
+          },
+          "response": [
+            {
+              "id": "2d659635-0325-2891-c778-8302d3829b33",
+              "name": "DR Group Properties",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/DRGroups/{{DRGroupId}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1326",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Mar 2018 15:40:10 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"vApp\":[\r{\r\"source\":1,\"isClientGroup\":true,\"version\":2,\"operationType\":16,\"selectedEntities\":[\r{\r\"clientId\":7,\"entityName\":\"vsa-vc56.testlab.company.com\",\"_type_\":28,\"entityId\":7\r}\r],\"workflow\":[\r{\r\"type\":7,\"entity\":{\r\"workflowId\":51\r}\r},{\r\"type\":1,\"entity\":{\r\"workflowId\":52\r}\r}\r],\"clientList\":[\r{\r\"clientName\":\"ACVM4\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"5039ab83-15cd-0131-8769-030f6799e84b\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":30\r},{\r\"clientName\":\"ACVM2\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"503989df-8365-717e-41a5-f1a2201085ee\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":27\r},{\r\"clientName\":\"ACVM3\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"503992d2-c1c3-593e-ee2c-8032184c664c\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":29\r}\r],\"config\":{\r\"vmGroups\":[\r{\r\"delay\":2,\"groupId\":1,\"continueOnFailure\":true,\"vmSequence\":[\r{\r\"copyPrecedence\":0,\"replicationId\":30,\"delay\":1,\"vmInfo\":{\r\"vmName\":\"ACVM4\",\"_type_\":88,\"vmGUID\":\"5039ab83-15cd-0131-8769-030f6799e84b\"\r}\r},{\r\"copyPrecedence\":0,\"replicationId\":27,\"delay\":1,\"vmInfo\":{\r\"vmName\":\"ACVM2\",\"_type_\":88,\"vmGUID\":\"503989df-8365-717e-41a5-f1a2201085ee\"\r}\r},{\r\"copyPrecedence\":0,\"replicationId\":29,\"delay\":1,\"vmInfo\":{\r\"vmName\":\"ACVM3\",\"_type_\":88,\"vmGUID\":\"503992d2-c1c3-593e-ee2c-8032184c664c\"\r}\r}\r]\r}\r]\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "1a79640b-80fe-2be3-2a34-5117ad39bc71",
+          "name": "DR Group Job Statistics",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/DRGroups/JobStats?jobId=2416&drGroupId={{DRGroupId}}&replicationId={{replicationId}}&clientId={{clientId}}",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "DRGroups",
+                "JobStats"
+              ],
+              "query": [
+                {
+                  "key": "jobId",
+                  "value": "2416"
+                },
+                {
+                  "key": "drGroupId",
+                  "value": "{{DRGroupId}}"
+                },
+                {
+                  "key": "replicationId",
+                  "value": "{{replicationId}}"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{clientId}}"
+                }
+              ]
+            },
+            "description": "<h2>Description</h2>\r\nThis operation returns the Disaster Recovery (DR) group job statistics.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drgroups_jobstats.htm)"
+          },
+          "response": [
+            {
+              "id": "10ffc1ea-83a2-b4e2-ec0d-fa0ec361b626",
+              "name": "DR Group Job Statistics",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/DRGroups/JobStats?jobId=2416&drGroupId={{DRGroupId}}&replicationId={{replicationId}}&clientId={{clientId}}",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "DRGroups",
+                    "JobStats"
+                  ],
+                  "query": [
+                    {
+                      "key": "jobId",
+                      "value": "2416"
+                    },
+                    {
+                      "key": "drGroupId",
+                      "value": "{{DRGroupId}}"
+                    },
+                    {
+                      "key": "replicationId",
+                      "value": "{{replicationId}}"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "{{clientId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n\t\"job\": [\n\t\t{\n\t\t\t\"jobId\": 2416,\n\t\t\t\"replicationId\": 22,\n\t\t\t\"phase\": [\n\t\t\t\t{\n\t\t\t\t\t\"phase\": 15,\n\t\t\t\t\t\"status\": 0,\n\t\t\t\t\t\"startTime\": {\n\t\t\t\t\t\t\"_type_\": 55,\n\t\t\t\t\t\t\"time\": 1502403488\n\t\t\t\t\t},\n\t\t\t\t\t\"endTime\": {\n\t\t\t\t\t\t\"_type_\": 55,\n\t\t\t\t\t\t\"time\": 1502403488\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"phase\": 24,\n\t\t\t\t\t\"status\": 0,\n\t\t\t\t\t\"startTime\": {\n\t\t\t\t\t\t\"_type_\": 55,\n\t\t\t\t\t\t\"time\": 1502403489\n\t\t\t\t\t},\n\t\t\t\t\t\"endTime\": {\n\t\t\t\t\t\t\"_type_\": 55,\n\t\t\t\t\t\t\"time\": 1502403509\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"phase\": 8,\n\t\t\t\t\t\"status\": 0,\n\t\t\t\t\t\"startTime\": {\n\t\t\t\t\t\t\"_type_\": 55,\n\t\t\t\t\t\t\"time\": 1502403513\n\t\t\t\t\t},\n\t\t\t\t\t\"endTime\": {\n\t\t\t\t\t\t\"_type_\": 55,\n\t\t\t\t\t\t\"time\": 1502404130\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"phase\": 7,\n\t\t\t\t\t\"status\": 1,\n\t\t\t\t\t\"startTime\": {\n\t\t\t\t\t\t\"_type_\": 55,\n\t\t\t\t\t\t\"time\": 1502405399\n\t\t\t\t\t},\n\t\t\t\t\t\"endTime\": {\n\t\t\t\t\t\t\"_type_\": 55,\n\t\t\t\t\t\t\"time\": 1502405709\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"client\": {\n\t\t\t\t\"clientId\": 0,\n\t\t\t\t\"clientName\": \"johndoeVm9\"\n\t\t\t},\n\t\t\t\"vapp\": {\n\t\t\t\t\"vAppId\": 1\n\t\t\t}\n\t\t}\n\t]\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "88671567-181f-0e21-f079-286aa9cf7136",
+          "name": "DR Group Clientlist",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/DRGroups/ClientList?source=1&entityType=3&entityId=385",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "DRGroups",
+                "ClientList"
+              ],
+              "query": [
+                {
+                  "key": "source",
+                  "value": "1"
+                },
+                {
+                  "key": "entityType",
+                  "value": "3"
+                },
+                {
+                  "key": "entityId",
+                  "value": "385"
+                }
+              ]
+            },
+            "description": "<h2>Description</h2>\r\nThis operation returns the properties associated with the entities in the Disaster Recovery (DR) group.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drgroups_clientlist.htm)"
+          },
+          "response": [
+            {
+              "id": "f068c2c8-30b2-46b7-05b4-8f0c80960f75",
+              "name": "DR Group Clientlist",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/DRGroups/ClientList?source=1&entityType=3&entityId=385",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "DRGroups",
+                    "ClientList"
+                  ],
+                  "query": [
+                    {
+                      "key": "source",
+                      "value": "1"
+                    },
+                    {
+                      "key": "entityType",
+                      "value": "3"
+                    },
+                    {
+                      "key": "entityId",
+                      "value": "385"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n\t\"source\": 1,\n\t\"client\": [\n\t\t{\n\t\t\t\"scheduleName\": \"TestingDataDirects\",\n\t\t\t\"copyPrecedence\": 0,\n\t\t\t\"destVendor\": 1,\n\t\t\t\"failoverStatus\": 1,\n\t\t\t\"supportedOperation\": 1,\n\t\t\t\"replicationId\": 8,\n\t\t\t\"isVM\": true,\n\t\t\t\"vendor\": 1,\n\t\t\t\"syncStatus\": 6,\n\t\t\t\"lastbackuptime\": {\n\t\t\t\t\"_type_\": 55,\n\t\t\t\t\"time\": 1501359259\n\t\t\t},\n\t\t\t\"lastSyncTime\": {\n\t\t\t\t\"_type_\": 55,\n\t\t\t\t\"time\": 1501358851\n\t\t\t},\n\t\t\t\"backupSet\": {\n\t\t\t\t\"backupsetId\": 39,\n\t\t\t\t\"backupsetName\": \"TestDataReDirects\",\n\t\t\t\t\"applicationId\": 0\n\t\t\t},\n\t\t\t\"destinationClient\": {\n\t\t\t\t\"clientName\": \"test.company.com\",\n\t\t\t\t\"clientId\": 7,\n\t\t\t\t\"_type_\": 3\n\t\t\t},\n\t\t\t\"destClient\": {\n\t\t\t\t\"clientName\": \"vlab12_Dest\",\n\t\t\t\t\"GUID\": \"5039edf8-ed64-5b9e-4f88-378d9a76ab67\",\n\t\t\t\t\"_type_\": 3\n\t\t\t},\n\t\t\t\"client\": {\n\t\t\t\t\"subclientId\": 66,\n\t\t\t\t\"clientName\": \"vlab12\",\n\t\t\t\t\"instanceId\": 4,\n\t\t\t\t\"clientId\": 14,\n\t\t\t\t\"GUID\": \"50397438-4cd0-885d-971b-7c9af35173d0\",\n\t\t\t\t\"_type_\": 3\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"scheduleName\": \"TestingDataDirects\",\n\t\t\t\"copyPrecedence\": 0,\n\t\t\t\"destVendor\": 1,\n\t\t\t\"failoverStatus\": 8,\n\t\t\t\"supportedOperation\": 1,\n\t\t\t\"replicationId\": 7,\n\t\t\t\"isVM\": true,\n\t\t\t\"vendor\": 1,\n\t\t\t\"syncStatus\": 4,\n\t\t\t\"lastbackuptime\": {\n\t\t\t\t\"_type_\": 55,\n\t\t\t\t\"time\": 1502155050\n\t\t\t},\n\t\t\t\"lastSyncTime\": {\n\t\t\t\t\"_type_\": 55,\n\t\t\t\t\"time\": 1501358196\n\t\t\t},\n\t\t\t\"backupSet\": {\n\t\t\t\t\"backupsetId\": 39,\n\t\t\t\t\"backupsetName\": \"TestDataReDirects\",\n\t\t\t\t\"applicationId\": 0\n\t\t\t},\n\t\t\t\"destinationClient\": {\n\t\t\t\t\"clientName\": \"test.company.com\",\n\t\t\t\t\"clientId\": 7,\n\t\t\t\t\"_type_\": 3\n\t\t\t},\n\t\t\t\"destClient\": {\n\t\t\t\t\"clientName\": \"vlab14_Dest\",\n\t\t\t\t\"GUID\": \"5039aa3c-79f4-a698-6f65-5d0766217adb\",\n\t\t\t\t\"_type_\": 3\n\t\t\t},\n\t\t\t\"client\": {\n\t\t\t\t\"subclientId\": 66,\n\t\t\t\t\"clientName\": \"vlab14\",\n\t\t\t\t\"instanceId\": 4,\n\t\t\t\t\"clientId\": 15,\n\t\t\t\t\"GUID\": \"5039740b-78ca-fee2-151e-1917e1aabc39\",\n\t\t\t\t\"_type_\": 3\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"scheduleName\": \"TestingDataDirects\",\n\t\t\t\"copyPrecedence\": 0,\n\t\t\t\"destVendor\": 1,\n\t\t\t\"failoverStatus\": 0,\n\t\t\t\"replicationId\": 9,\n\t\t\t\"isVM\": true,\n\t\t\t\"vendor\": 1,\n\t\t\t\"syncStatus\": 1,\n\t\t\t\"lastbackuptime\": {\n\t\t\t\t\"_type_\": 55,\n\t\t\t\t\"time\": 1501359259\n\t\t\t},\n\t\t\t\"lastSyncTime\": {\n\t\t\t\t\"_type_\": 55,\n\t\t\t\t\"time\": 1501358748\n\t\t\t},\n\t\t\t\"backupSet\": {\n\t\t\t\t\"backupsetId\": 39,\n\t\t\t\t\"backupsetName\": \"TestDataReDirects\",\n\t\t\t\t\"applicationId\": 0\n\t\t\t},\n\t\t\t\"destinationClient\": {\n\t\t\t\t\"clientName\": \"test.company.com\",\n\t\t\t\t\"clientId\": 7,\n\t\t\t\t\"_type_\": 3\n\t\t\t},\n\t\t\t\"destClient\": {\n\t\t\t\t\"clientName\": \"vlab15_Dest\",\n\t\t\t\t\"GUID\": \"50396177-9660-2a29-90cc-448056909414\",\n\t\t\t\t\"_type_\": 3\n\t\t\t},\n\t\t\t\"client\": {\n\t\t\t\t\"subclientId\": 66,\n\t\t\t\t\"clientName\": \"vlab15\",\n\t\t\t\t\"instanceId\": 4,\n\t\t\t\t\"clientId\": 18,\n\t\t\t\t\"GUID\": \"5039de93-3a9a-0a5a-eafa-069647339feb\",\n\t\t\t\t\"_type_\": 3\n\t\t\t}\n\t\t}\n\t]\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "6fba9803-7b15-0354-8c41-15650cab1cc8",
+          "name": "DR Group Advanced",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body contains additional details associated with a Disaster Recovery (DR) group job\"] = responseBody.has(\"vApp\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/DRGroups?advanced=True&operationType=16",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "DRGroups"
+              ],
+              "query": [
+                {
+                  "key": "advanced",
+                  "value": "True"
+                },
+                {
+                  "key": "operationType",
+                  "value": "16"
+                }
+              ]
+            },
+            "description": "<h2>Description</h2>\r\nThis operation returns additional details associated with a Disaster Recovery (DR) group job.\r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_drgroups_advanced.htm)"
+          },
+          "response": [
+            {
+              "id": "8fc78f8f-7643-6b42-8906-b912fd86304a",
+              "name": "DR Group Advanced",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/DRGroups?advanced=True&operationType=16",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "DRGroups"
+                  ],
+                  "query": [
+                    {
+                      "key": "advanced",
+                      "value": "True"
+                    },
+                    {
+                      "key": "operationType",
+                      "value": "16"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1326",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 22:22:03 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"vApp\":[\r{\r\"source\":1,\"isClientGroup\":true,\"version\":2,\"operationType\":16,\"selectedEntities\":[\r{\r\"clientId\":7,\"entityName\":\"vsa-vc56.testlab.company.com\",\"_type_\":28,\"entityId\":7\r}\r],\"workflow\":[\r{\r\"type\":7,\"entity\":{\r\"workflowId\":45\r}\r},{\r\"type\":1,\"entity\":{\r\"workflowId\":46\r}\r}\r],\"clientList\":[\r{\r\"clientName\":\"ACVM4\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"5039ab83-15cd-0131-8769-030f6799e84b\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":30\r},{\r\"clientName\":\"ACVM2\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"503989df-8365-717e-41a5-f1a2201085ee\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":27\r},{\r\"clientName\":\"ACVM3\",\"backupsetId\":67,\"clientId\":-32000,\"GUID\":\"503992d2-c1c3-593e-ee2c-8032184c664c\",\"backupsetName\":\"TestACRegression\",\"_type_\":3,\"entityId\":29\r}\r],\"config\":{\r\"vmGroups\":[\r{\r\"delay\":2,\"groupId\":1,\"continueOnFailure\":true,\"vmSequence\":[\r{\r\"copyPrecedence\":0,\"replicationId\":30,\"delay\":1,\"vmInfo\":{\r\"vmName\":\"ACVM4\",\"_type_\":88,\"vmGUID\":\"5039ab83-15cd-0131-8769-030f6799e84b\"\r}\r},{\r\"copyPrecedence\":0,\"replicationId\":27,\"delay\":1,\"vmInfo\":{\r\"vmName\":\"ACVM2\",\"_type_\":88,\"vmGUID\":\"503989df-8365-717e-41a5-f1a2201085ee\"\r}\r},{\r\"copyPrecedence\":0,\"replicationId\":29,\"delay\":1,\"vmInfo\":{\r\"vmName\":\"ACVM3\",\"_type_\":88,\"vmGUID\":\"503992d2-c1c3-593e-ee2c-8032184c664c\"\r}\r}\r]\r}\r]\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "b1d3bbaa-899f-1d64-9532-dffd296e43bb",
+          "name": "DR Group",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"DRGroupId\",jsonData.entity.vAppId);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"processinginstructioninfo\": {\n\t\t\"locale\": {\n\t\t\t\"_type_\": 66,\n\t\t\t\"localeId\": 0\n\t\t},\n\t\t\"formatFlags\": {\n\t\t\t\"skipIdToNameConversion\": true\n\t\t},\n\t\t\"user\": {\n\t\t\t\"_type_\": 13,\n\t\t\t\"userName\": \"\",\n\t\t\t\"userId\": 1\n\t\t}\n\t},\n\t\"action\": 0,\n\t\"vApp\": {\n\t\t\"source\": 1,\n\t\t\"isClientGroup\": true,\n\t\t\"version\": 2,\n\t\t\"operationType\": 16,\n\t\t\"selectedEntities\": [\n\t\t\t{\n\t\t\t\t\"clientId\": 7,\n\t\t\t\t\"entityName\": \"vsa-vc56.testlab.company.com\",\n\t\t\t\t\"_type_\": 28,\n\t\t\t\t\"entityId\": 7\n\t\t\t}\n\t\t],\n\t\t\"clientList\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"ACVM4\",\n\t\t\t\t\"backupsetId\": 67,\n\t\t\t\t\"clientId\": 410,\n\t\t\t\t\"GUID\": \"5039ab83-15cd-0131-8769-030f6799e84b\",\n\t\t\t\t\"backupsetName\": \"TestACRegression\",\n\t\t\t\t\"_type_\": 28,\n\t\t\t\t\"entityId\": 30\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"clientName\": \"ACVM2\",\n\t\t\t\t\"backupsetId\": 67,\n\t\t\t\t\"clientId\": 413,\n\t\t\t\t\"GUID\": \"503989df-8365-717e-41a5-f1a2201085ee\",\n\t\t\t\t\"backupsetName\": \"TestACRegression\",\n\t\t\t\t\"_type_\": 28,\n\t\t\t\t\"entityId\": 27\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"clientName\": \"ACVM3\",\n\t\t\t\t\"backupsetId\": 67,\n\t\t\t\t\"clientId\": 414,\n\t\t\t\t\"GUID\": \"503992d2-c1c3-593e-ee2c-8032184c664c\",\n\t\t\t\t\"backupsetName\": \"TestACRegression\",\n\t\t\t\t\"_type_\": 28,\n\t\t\t\t\"entityId\": 29\n\t\t\t}\n\t\t],\n\t\t\"config\": {\n\t\t\t\"vmGroups\": [\n\t\t\t\t{\n\t\t\t\t\t\"delay\": 2,\n\t\t\t\t\t\"groupId\": 1,\n\t\t\t\t\t\"continueOnFailure\": true,\n\t\t\t\t\t\"vmSequence\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 30,\n\t\t\t\t\t\t\t\"delay\": 1,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"ACVM4\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"5039ab83-15cd-0131-8769-030f6799e84b\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 27,\n\t\t\t\t\t\t\t\"delay\": 1,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"ACVM2\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"503989df-8365-717e-41a5-f1a2201085ee\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 29,\n\t\t\t\t\t\t\t\"delay\": 1,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"ACVM3\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"503992d2-c1c3-593e-ee2c-8032184c664c\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+            },
+            "url": "{{ServerUrl}}/DRGroups",
+            "description": "<h2>Description</h2>\r\nThis operation creates a Disaster Recovery (DR) group of virtual machines. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_dr_groups.htm)"
+          },
+          "response": [
+            {
+              "id": "bdbeed00-85bd-8079-cbd6-11d31340aced",
+              "name": "DR Group",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"processinginstructioninfo\": {\n\t\t\"locale\": {\n\t\t\t\"_type_\": 66,\n\t\t\t\"localeId\": 0\n\t\t},\n\t\t\"formatFlags\": {\n\t\t\t\"skipIdToNameConversion\": true\n\t\t},\n\t\t\"user\": {\n\t\t\t\"_type_\": 13,\n\t\t\t\"userName\": \"\",\n\t\t\t\"userId\": 1\n\t\t}\n\t},\n\t\"action\": 0,\n\t\"vApp\": {\n\t\t\"source\": 1,\n\t\t\"isClientGroup\": true,\n\t\t\"version\": 2,\n\t\t\"operationType\": 16,\n\t\t\"selectedEntities\": [\n\t\t\t{\n\t\t\t\t\"clientId\": 7,\n\t\t\t\t\"entityName\": \"vsa-vc56.testlab.company.com\",\n\t\t\t\t\"_type_\": 28,\n\t\t\t\t\"entityId\": 7\n\t\t\t}\n\t\t],\n\t\t\"clientList\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"ACVM4\",\n\t\t\t\t\"backupsetId\": 67,\n\t\t\t\t\"clientId\": 410,\n\t\t\t\t\"GUID\": \"5039ab83-15cd-0131-8769-030f6799e84b\",\n\t\t\t\t\"backupsetName\": \"TestACRegression\",\n\t\t\t\t\"_type_\": 28,\n\t\t\t\t\"entityId\": 30\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"clientName\": \"ACVM2\",\n\t\t\t\t\"backupsetId\": 67,\n\t\t\t\t\"clientId\": 413,\n\t\t\t\t\"GUID\": \"503989df-8365-717e-41a5-f1a2201085ee\",\n\t\t\t\t\"backupsetName\": \"TestACRegression\",\n\t\t\t\t\"_type_\": 28,\n\t\t\t\t\"entityId\": 27\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"clientName\": \"ACVM3\",\n\t\t\t\t\"backupsetId\": 67,\n\t\t\t\t\"clientId\": 414,\n\t\t\t\t\"GUID\": \"503992d2-c1c3-593e-ee2c-8032184c664c\",\n\t\t\t\t\"backupsetName\": \"TestACRegression\",\n\t\t\t\t\"_type_\": 28,\n\t\t\t\t\"entityId\": 29\n\t\t\t}\n\t\t],\n\t\t\"config\": {\n\t\t\t\"vmGroups\": [\n\t\t\t\t{\n\t\t\t\t\t\"delay\": 2,\n\t\t\t\t\t\"groupId\": 1,\n\t\t\t\t\t\"continueOnFailure\": true,\n\t\t\t\t\t\"vmSequence\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 30,\n\t\t\t\t\t\t\t\"delay\": 1,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"ACVM4\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"5039ab83-15cd-0131-8769-030f6799e84b\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 27,\n\t\t\t\t\t\t\t\"delay\": 1,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"ACVM2\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"503989df-8365-717e-41a5-f1a2201085ee\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 29,\n\t\t\t\t\t\t\t\"delay\": 1,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"ACVM3\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"503992d2-c1c3-593e-ee2c-8032184c664c\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+                },
+                "url": "{{ServerUrl}}/DRGroups"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "84",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Mar 2018 18:03:28 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"resp\":{\r\"errorMessage\":\"\",\"errorCode\":0\r},\"entity\":{\r\"vAppId\":7,\"vAppName\":\"\"\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "a05c76f4-b9c0-3dad-76ac-0d54aca360c6",
+          "name": " DR Group Properties",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Validating error code\"] = jsonData.resp.errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"action\": 1,\n\t\"vApp\": {\n\t\t\"description\": \"\",\n\t\t\"source\": 1,\n\t\t\"isClientGroup\": false,\n\t\t\"operationType\": 16,\n\t\t\"selectedEntities\": [\n\t\t\t{\n\t\t\t\t\"instanceId\": 4,\n\t\t\t\t\"clientId\": 7,\n\t\t\t\t\"entityName\": \"test.company.com\",\n\t\t\t\t\"entityId\": 7\n\t\t\t}\n\t\t],\n\t\t\"workflow\": [\n\t\t\t{\n\t\t\t\t\"type\": 7,\n\t\t\t\t\"entity\": {\n\t\t\t\t\t\"workflowId\": 49\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": 1,\n\t\t\t\t\"entity\": {\n\t\t\t\t\t\"workflowId\": 50\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"autofailover\": {\n\t\t\t\"timeThresholdBeforeFailover\": 2,\n\t\t\t\"status\": 7\n\t\t},\n\t\t\"vAppEntity\": {\n\t\t\t\"vAppId\": 14,\n\t\t\t\"vAppName\": \"TestNotAfterBackup\"\n\t\t},\n\t\t\"clientList\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"FGVM2\",\n\t\t\t\t\"backupsetId\": 59,\n\t\t\t\t\"clientId\": 262,\n\t\t\t\t\"GUID\": \"50390ba9-721b-00ab-563d-93c28017c3gh\",\n\t\t\t\t\"backupsetName\": \"TestFailoverSarath\",\n\t\t\t\t\"entityId\": 19\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"clientName\": \"FGVM1\",\n\t\t\t\t\"backupsetId\": 59,\n\t\t\t\t\"clientId\": 330,\n\t\t\t\t\"GUID\": \"50394cfc-00b5-c98b-96a9-8cda9543af59\",\n\t\t\t\t\"backupsetName\": \"TestFailover\",\n\t\t\t\t\"entityId\": 20\n\t\t\t}\n\t\t],\n\t\t\"config\": {\n\t\t\t\"vmGroups\": [\n\t\t\t\t{\n\t\t\t\t\t\"delay\": 10,\n\t\t\t\t\t\"groupId\": 1,\n\t\t\t\t\t\"continueOnFailure\": true,\n\t\t\t\t\t\"vmSequence\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 19,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"FGVM2\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"50390ba9-721b-00ab-563d-93c28017c3ij\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"delay\": 1,\n\t\t\t\t\t\"groupId\": 2,\n\t\t\t\t\t\"continueOnFailure\": true,\n\t\t\t\t\t\"vmSequence\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 20,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"FGVM1\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"50394cfc-00b5-c98b-96a9-8cda9543af69\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+            },
+            "url": "{{ServerUrl}}/DRGroups/{{DRGroupId}}",
+            "description": "<h2>Description</h2>\r\nThis operation updates the properties associated with a Disaster Recovery (DR) group. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_dr_groups.htm)"
+          },
+          "response": [
+            {
+              "id": "0d274a1f-7197-359e-c285-28484dabc6ee",
+              "name": " DR Group Properties",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"action\": 1,\n\t\"vApp\": {\n\t\t\"description\": \"\",\n\t\t\"source\": 1,\n\t\t\"isClientGroup\": false,\n\t\t\"operationType\": 16,\n\t\t\"selectedEntities\": [\n\t\t\t{\n\t\t\t\t\"instanceId\": 4,\n\t\t\t\t\"clientId\": 7,\n\t\t\t\t\"entityName\": \"test.company.com\",\n\t\t\t\t\"entityId\": 7\n\t\t\t}\n\t\t],\n\t\t\"workflow\": [\n\t\t\t{\n\t\t\t\t\"type\": 7,\n\t\t\t\t\"entity\": {\n\t\t\t\t\t\"workflowId\": 49\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": 1,\n\t\t\t\t\"entity\": {\n\t\t\t\t\t\"workflowId\": 50\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"autofailover\": {\n\t\t\t\"timeThresholdBeforeFailover\": 2,\n\t\t\t\"status\": 7\n\t\t},\n\t\t\"vAppEntity\": {\n\t\t\t\"vAppId\": 14,\n\t\t\t\"vAppName\": \"TestNotAfterBackup\"\n\t\t},\n\t\t\"clientList\": [\n\t\t\t{\n\t\t\t\t\"clientName\": \"FGVM2\",\n\t\t\t\t\"backupsetId\": 59,\n\t\t\t\t\"clientId\": 262,\n\t\t\t\t\"GUID\": \"50390ba9-721b-00ab-563d-93c28017c3gh\",\n\t\t\t\t\"backupsetName\": \"TestFailoverSarath\",\n\t\t\t\t\"entityId\": 19\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"clientName\": \"FGVM1\",\n\t\t\t\t\"backupsetId\": 59,\n\t\t\t\t\"clientId\": 330,\n\t\t\t\t\"GUID\": \"50394cfc-00b5-c98b-96a9-8cda9543af59\",\n\t\t\t\t\"backupsetName\": \"TestFailover\",\n\t\t\t\t\"entityId\": 20\n\t\t\t}\n\t\t],\n\t\t\"config\": {\n\t\t\t\"vmGroups\": [\n\t\t\t\t{\n\t\t\t\t\t\"delay\": 10,\n\t\t\t\t\t\"groupId\": 1,\n\t\t\t\t\t\"continueOnFailure\": true,\n\t\t\t\t\t\"vmSequence\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 19,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"FGVM2\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"50390ba9-721b-00ab-563d-93c28017c3ij\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"delay\": 1,\n\t\t\t\t\t\"groupId\": 2,\n\t\t\t\t\t\"continueOnFailure\": true,\n\t\t\t\t\t\"vmSequence\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"copyPrecedence\": 0,\n\t\t\t\t\t\t\t\"replicationId\": 20,\n\t\t\t\t\t\t\t\"vmInfo\": {\n\t\t\t\t\t\t\t\t\"vmName\": \"FGVM1\",\n\t\t\t\t\t\t\t\t\"vmGUID\": \"50394cfc-00b5-c98b-96a9-8cda9543af69\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+                },
+                "url": "{{ServerUrl}}/DRGroups/{{DRGroupId}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "102",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 21:47:58 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"resp\":{\r\"errorMessage\":\"\",\"errorCode\":0\r},\"entity\":{\r\"vAppId\":8,\"vAppName\":\"TestNotAfterBackup\"\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "e1193cec-f02b-9da5-44d3-b3b79d0f2415",
+          "name": "DR Group",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Validating error code\"] = jsonData.resp.errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/DRGroups/{{DRGroupId}}",
+            "description": "<h2>Description</h2>\r\nThis operation deletes a Disaster Recovery (DR) group. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_dr_groups.htm)"
+          },
+          "response": [
+            {
+              "id": "87bf01f3-24e0-acf6-0ec3-976e675739ce",
+              "name": "DR Group",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/DRGroups/{{DRGroupId}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "84",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 21:50:57 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"resp\":{\r\"errorMessage\":\"\",\"errorCode\":0\r},\"entity\":{\r\"vAppId\":8,\"vAppName\":\"\"\r}\r}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "event": [
