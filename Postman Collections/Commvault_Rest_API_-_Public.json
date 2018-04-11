@@ -78,147 +78,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "8482eb34-72f7-ab9f-fc27-0075fbd9102a",
-          "name": "Email Server",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"errorCode is 0\"] = jsonData.errorCode === 0;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"smtpInfo\": {\r\n    \"enableSSL\": false,\r\n    \"smtpServer\": \"mail.commvault.com\",\r\n    \"smtpPort\": 25,\r\n    \"useAuthentication\": false,\r\n    \"maxMailServerSize\": 10240,\r\n    \"userInfo\": {\r\n      \"password\": \"\",\r\n      \"userName\": \"\"\r\n    },\r\n    \"senderInfo\": {\r\n      \"senderName\": \"GreenValley\",\r\n      \"senderAddress\": \"cteautoserver@commvault.com\"\r\n    }\r\n  }\r\n}"
-            },
-            "url": "{{ServerUrl}}/EmailServer",
-            "description": "<h2>Description</h2>\nThis operation updates the configuration for the email server.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_email_server.htm)"
-          },
-          "response": [
-            {
-              "id": "38af67e8-cd4f-770a-eca0-3d68a08451c9",
-              "name": "Email Server",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"smtpInfo\": {\r\n    \"enableSSL\": false,\r\n    \"smtpServer\": \"smtp.commvault.com\",\r\n    \"smtpPort\": 25,\r\n    \"useAuthentication\": false,\r\n    \"maxMailServerSize\": 0,\r\n    \"userInfo\": {\r\n      \"password\": \"\",\r\n      \"userName\": \"\"\r\n    },\r\n    \"senderInfo\": {\r\n      \"senderName\": \"cteautoserver\",\r\n      \"senderAddress\": \"cteautoserver@commvault.com\"\r\n    }\r\n  }\r\n}"
-                },
-                "url": "{{ServerUrl}}/EmailServer"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Credentials",
-                  "value": "true",
-                  "name": "Access-Control-Allow-Credentials",
-                  "description": ""
-                },
-                {
-                  "key": "Access-Control-Allow-Headers",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Headers",
-                  "description": ""
-                },
-                {
-                  "key": "Access-Control-Allow-Methods",
-                  "value": "OPTIONS, GET, POST, PUT, DELETE",
-                  "name": "Access-Control-Allow-Methods",
-                  "description": ""
-                },
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Length",
-                  "value": "34",
-                  "name": "Content-Length",
-                  "description": ""
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": ""
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 10 Apr 2018 19:50:35 GMT",
-                  "name": "Date",
-                  "description": ""
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": ""
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": ""
-                }
-              ],
-              "cookie": [
-                {
-                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
-                  "httpOnly": true,
-                  "domain": "cteautoserver.testlab.commvault.com",
-                  "path": "/webconsole",
-                  "secure": false,
-                  "value": "CC6147EF5AD582B1CCBAC75AE56AFA94",
-                  "key": "JSESSIONID"
-                }
-              ],
-              "responseTime": "4440",
-              "body": "{\r\"errorString\":\"\",\"errorCode\":0\r}"
-            }
-          ]
-        },
-        {
           "_postman_id": "15863c41-8d1f-d9c7-c18f-6fc4ab997748",
           "name": "Email Server",
           "event": [
@@ -6047,6 +5906,147 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\r\"errorMessage\":\"Success\",\"errorCode\":0\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "8482eb34-72f7-ab9f-fc27-0075fbd9102a",
+          "name": "Email Server",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"errorCode is 0\"] = jsonData.errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"smtpInfo\": {\r\n    \"enableSSL\": false,\r\n    \"smtpServer\": \"mail.commvault.com\",\r\n    \"smtpPort\": 25,\r\n    \"useAuthentication\": false,\r\n    \"maxMailServerSize\": 10240,\r\n    \"userInfo\": {\r\n      \"password\": \"\",\r\n      \"userName\": \"\"\r\n    },\r\n    \"senderInfo\": {\r\n      \"senderName\": \"GreenValley\",\r\n      \"senderAddress\": \"cteautoserver@commvault.com\"\r\n    }\r\n  }\r\n}"
+            },
+            "url": "{{ServerUrl}}/EmailServer",
+            "description": "<h2>Description</h2>\nThis operation updates the configuration for the email server.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_email_server.htm)"
+          },
+          "response": [
+            {
+              "id": "38af67e8-cd4f-770a-eca0-3d68a08451c9",
+              "name": "Email Server",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"smtpInfo\": {\r\n    \"enableSSL\": false,\r\n    \"smtpServer\": \"smtp.commvault.com\",\r\n    \"smtpPort\": 25,\r\n    \"useAuthentication\": false,\r\n    \"maxMailServerSize\": 0,\r\n    \"userInfo\": {\r\n      \"password\": \"\",\r\n      \"userName\": \"\"\r\n    },\r\n    \"senderInfo\": {\r\n      \"senderName\": \"cteautoserver\",\r\n      \"senderAddress\": \"cteautoserver@commvault.com\"\r\n    }\r\n  }\r\n}"
+                },
+                "url": "{{ServerUrl}}/EmailServer"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true",
+                  "name": "Access-Control-Allow-Credentials",
+                  "description": ""
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": ""
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "OPTIONS, GET, POST, PUT, DELETE",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": ""
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "34",
+                  "name": "Content-Length",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": ""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Apr 2018 19:50:35 GMT",
+                  "name": "Date",
+                  "description": ""
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": ""
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": ""
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (UTC)",
+                  "httpOnly": true,
+                  "domain": "cteautoserver.testlab.commvault.com",
+                  "path": "/webconsole",
+                  "secure": false,
+                  "value": "CC6147EF5AD582B1CCBAC75AE56AFA94",
+                  "key": "JSESSIONID"
+                }
+              ],
+              "responseTime": "4440",
+              "body": "{\r\"errorString\":\"\",\"errorCode\":0\r}"
             }
           ]
         }
