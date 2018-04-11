@@ -56455,7 +56455,7 @@
     {
       "_postman_id": "2350ec01-c055-b684-0a68-fa1634b69c0c",
       "name": "Cloud Apps Operations",
-      "description": "You can use REST APIs to control your cloud apps files and shares.\r\n\r\nTo return a list of all cloud apps pseudo clients, use the Get Client REST API, and then add the CloudApps parameter.\r\n\r\nTo return a list of all proxy clients for cloud apps pseudo clients, use the Get Proxy Client REST API, and then add the cAppType parameter.",
+      "description": "",
       "item": [
         {
           "_postman_id": "0bb4db0e-104a-84be-9366-d86e7210d49e",
