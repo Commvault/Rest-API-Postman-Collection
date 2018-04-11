@@ -4605,6 +4605,1454 @@
       ]
     },
     {
+      "_postman_id": "7fbae6c6-b3eb-8252-ef7f-b8f1b65ed064",
+      "name": "Control Panel Operations",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "b25fc0a6-c589-b0f8-6eea-df5c1df8826f",
+          "name": "Operation Window Operations",
+          "description": null,
+          "item": [
+            {
+              "_postman_id": "58369a6f-dc7c-42c3-439d-e0b0b3754333",
+              "name": "Operation Rules",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "",
+                      "var jsonData = JSON.parse(responseBody);",
+                      "",
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "tests[\"Response Body contains operationWindow Details\"] = responseBody.has(\"operationWindow\");",
+                      "postman.setEnvironmentVariable(\"ruleId\", jsonData.operationWindow[0].ruleId);",
+                      "",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/OperationWindow/OpWindowList?clientId={{clientId}}",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "OperationWindow",
+                    "OpWindowList"
+                  ],
+                  "query": [
+                    {
+                      "key": "clientId",
+                      "value": "{{clientId}}"
+                    },
+                    {
+                      "key": null,
+                      "value": null
+                    }
+                  ]
+                },
+                "description": "<h2>Description</h2>\r\nThis operation returns a list of operation rules. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_operation_rule.htm)"
+              },
+              "response": [
+                {
+                  "id": "045244a7-9524-043b-6832-93081c100b7e",
+                  "name": "Operation Rules -ClientLevel",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/OperationWindow/OpWindowList?clientId={{clientId}}",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "OperationWindow",
+                        "OpWindowList"
+                      ],
+                      "query": [
+                        {
+                          "key": "clientId",
+                          "value": "{{clientId}}"
+                        },
+                        {
+                          "key": null,
+                          "value": null
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "257",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 06 Mar 2018 20:59:18 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\"error\":{\r\"errorCode\":0\r},\"operationWindow\":[\r{\r\"ruleEnabled\":true,\"endDate\":1520312400,\"level\":2,\"name\":\"ClientLevelwindow\",\"ruleId\":1,\"startDate\":1520312400,\"operations\":[\r1,2\r],\"dayTime\":[\r{\r\"startTime\":28800,\"endTime\":64800,\"dayOfWeek\":[\r6\r]\r}\r]\r}\r]\r}"
+                },
+                {
+                  "id": "1d15412d-f0e5-77f6-7b1e-3d55dc858c3a",
+                  "name": "Operation Rules subclient",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{ServerUrl}}/OperationWindow/OpWindowList?clientId={{clientId}}&appTypeId=33&backupsetId={{backupsetId}}&subclientId={{subclientId}}",
+                      "host": [
+                        "{{ServerUrl}}"
+                      ],
+                      "path": [
+                        "OperationWindow",
+                        "OpWindowList"
+                      ],
+                      "query": [
+                        {
+                          "key": "clientId",
+                          "value": "{{clientId}}"
+                        },
+                        {
+                          "key": "appTypeId",
+                          "value": "33"
+                        },
+                        {
+                          "key": "backupsetId",
+                          "value": "{{backupsetId}}"
+                        },
+                        {
+                          "key": "subclientId",
+                          "value": "{{subclientId}}"
+                        },
+                        {
+                          "key": null,
+                          "value": null
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "257",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 06 Mar 2018 21:27:09 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\"error\":{\r\"errorCode\":0\r},\"operationWindow\":[\r{\r\"ruleEnabled\":true,\"endDate\":1520312400,\"level\":2,\"name\":\"ClientLevelwindow\",\"ruleId\":1,\"startDate\":1520312400,\"operations\":[\r1,2\r],\"dayTime\":[\r{\r\"startTime\":28800,\"endTime\":64800,\"dayOfWeek\":[\r6\r]\r}\r]\r}\r]\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "52421b51-2f83-e8c1-8324-0d27399bd222",
+              "name": "Operation Rules",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "tests[\"operationWindow created\"] = responseBody.has(\"operationWindow\");",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"operationWindow\": {\n        \"endDate\": 0,\n        \"name\": \"Test_1\",\n        \"startDate\": 0,\n        \"operations\": [\n            1,\n            2\n        ],\n        \"dayTime\": [\n            {\n                \"startTime\": 46800,\n                \"endTime\": 50400,\n                \"dayOfWeek\": [\n                    1,\n                    2\n                ]\n            }\n        ]\n    },\n    \"entity\": {\n        \"clientGroupId\": 0,\n        \"clientId\": 20\n    }\n}"
+                },
+                "url": "{{ServerUrl}}/OperationWindow",
+                "description": "<h2>Description</h2>\r\nThis operation creates an operation rule. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_operation_rule.htm)"
+              },
+              "response": [
+                {
+                  "id": "c8bf5e07-dad7-d212-ef32-3cbe882d7090",
+                  "name": "Operation Rules",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "name": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"operationWindow\": {\n        \"endDate\": 0,\n        \"name\": \"Test_1\",\n        \"startDate\": 0,\n        \"operations\": [\n            1,\n            2\n        ],\n        \"dayTime\": [\n            {\n                \"startTime\": 46800,\n                \"endTime\": 50400,\n                \"dayOfWeek\": [\n                    1,\n                    2\n                ]\n            }\n        ]\n    },\n    \"entity\": {\n        \"clientGroupId\": 0,\n        \"clientId\": 20\n    }\n}"
+                    },
+                    "url": "{{ServerUrl}}/OperationWindow"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "197",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 06 Mar 2018 23:25:00 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\"error\":{\r\"errorCode\":0\r},\"operationWindow\":{\r\"endDate\":0,\"name\":\"Test_1\",\"ruleId\":1,\"startDate\":0,\"operations\":[\r1,2\r],\"dayTime\":[\r{\r\"startTime\":46800,\"endTime\":50400,\"dayOfWeek\":[\r1,2\r]\r}\r]\r}\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "cd9b702b-a053-8b44-6909-74f8b05c2db0",
+              "name": "Operation Rules",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "",
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/xml"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/OperationWindow",
+                "description": "<h2>Description</h2>\r\nThis operation updates an operation rule. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_operation_rule.htm)"
+              },
+              "response": [
+                {
+                  "id": "4a347799-d1b1-dae9-4d61-e66ba86939b4",
+                  "name": "Operation Rules",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "{{Accept}}"
+                      },
+                      {
+                        "key": "Authtoken",
+                        "value": "{{TOKEN}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "name": "Content-Type",
+                        "value": "application/xml"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "<Api_UpdateOperationWindowReq>\n<operationWindow name=\"change_operationRule123\" ruleId=\"10\" startDate=\"1520571600\" endDate=\"1520658000\" ruleEnabled=\"1\">\n\t <operations val=\"1\"/>\n\t <operations val=\"2\"/>\n\t <dayTime startTime=\"32400\" endTime=\"36000\">\n            <dayOfWeek val=\"1\"/>\n            <dayOfWeek val=\"2\"/>\n            <dayOfWeek val=\"3\"/>\n      </dayTime>\n    </operationWindow>\n</Api_UpdateOperationWindowReq>\n"
+                    },
+                    "url": "{{ServerUrl}}/OperationWindow"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Length",
+                      "value": "254",
+                      "name": "Content-Length",
+                      "description": "The length of the response body in octets (8-bit bytes)"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8",
+                      "name": "Content-Type",
+                      "description": "The mime type of this content"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 08 Mar 2018 02:18:51 GMT",
+                      "name": "Date",
+                      "description": "The date and time that the message was sent"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "Microsoft-IIS/8.5",
+                      "name": "Server",
+                      "description": "A name for the server"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ASP.NET",
+                      "name": "X-Powered-By",
+                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\"error\":{\r\"errorCode\":0\r},\"operationWindow\":{\r\"ruleEnabled\":true,\"endDate\":1520658000,\"name\":\"change_operationRule123\",\"ruleId\":10,\"startDate\":1520571600,\"operations\":[\r1,2\r],\"dayTime\":[\r{\r\"startTime\":32400,\"endTime\":36000,\"dayOfWeek\":[\r1,2,3\r]\r}\r]\r}\r}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "a218f739-2c19-1e67-9fb5-b35f38a96f60",
+              "name": "Operation Rules",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/OperationWindow/{{ruleId}}",
+                "description": "<h2>Description</h2>\r\nThis operation deletes an operation rule. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_operation_rule.htm)"
+              },
+              "response": []
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "881aabba-a2de-dd20-80d9-9edc343fa585",
+          "name": "Audit Trail",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/CommServ/AuditTrail",
+            "description": "<h2>Description</h2>\r\nThis operation returns a list of the audit trail settings. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_audit_trail.htm)"
+          },
+          "response": [
+            {
+              "id": "81a0ef50-1fa8-8daa-f618-3428d6cfd99c",
+              "name": "Audit Trail",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/CommServ/AuditTrail"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "121",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 02:43:50 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"auditTrailInfo\":{\r\"retentionForCritical\":365,\"retentionForLow\":120,\"retentionForMedium\":240,\"retentionForHigh\":365\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "2ba5a3b5-adb6-f175-1cc4-5f8606ab9159",
+          "name": "Audit Trail",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"auditTrailInfo\": {\n        \"retentionForCritical\": 365,\n        \"retentionForLow\": 365,\n        \"retentionForMedium\": 240,\n        \"retentionForHigh\": 260\n    }\n}"
+            },
+            "url": "{{ServerUrl}}/CommServ/AuditTrail",
+            "description": "<h2>Description</h2>\r\nThis operation updates the audit trail retention settings. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_audit_trail.htm)"
+          },
+          "response": [
+            {
+              "id": "ba66bd99-b697-c623-5f74-694d9caac1cb",
+              "name": "Audit Trail",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"auditTrailInfo\": {\n        \"retentionForCritical\": 365,\n        \"retentionForLow\": 365,\n        \"retentionForMedium\": 240,\n        \"retentionForHigh\": 260\n    }\n}"
+                },
+                "url": "{{ServerUrl}}/CommServ/AuditTrail"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "85",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 16:16:42 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "93c36a48-47dd-074e-5267-70324734b934",
+          "name": "Cloud Metrics Reporting Configuration",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Response Body contains Cloud Metrics Reporting configuration\"] = responseBody.has(\"config\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/CommServ/MetricsReporting",
+            "description": "<h2>Description</h2>\r\nThis operation returns the configuration for Cloud Metrics Reporting. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_metrics_reporting.htm)"
+          },
+          "response": [
+            {
+              "id": "322ae849-034e-e487-2072-149cdd896582",
+              "name": "Cloud Metrics Reporting Configuration",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/CommServ/MetricsReporting"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1270",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 16:20:43 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"config\":{\r\"uploadFrequency\":7,\"lastCollectionTime\":1520374169,\"useProxyClient\":false,\"uploadNow\":0,\"dataCollectionTime\":25200,\"metricsReportPackageInstalled\":false,\"tieringActive\":false,\"randomization\":0,\"commcellDiagUsage\":true,\"nextUploadTime\":1520938800,\"scriptDownloadTime\":1520364049,\"lastUploadTime\":1520374169,\"clientGroupList\":[\r{\r\"_type_\":28,\"clientGroupId\":-1\r}\r],\"cloud\":{\r\"uploadURL\":\"\",\"downloadURL\":\"\",\"serviceList\":[\r{\r\"flags\":0,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Health Check\",\"id\":1\r}\r},{\r\"flags\":3,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Post Upgrade Check\",\"id\":2\r}\r},{\r\"flags\":0,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Activity\",\"id\":3\r}\r},{\r\"flags\":1,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Upgrade Readiness\",\"id\":4\r}\r},{\r\"flags\":0,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Audit\",\"id\":5\r}\r},{\r\"flags\":0,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Charge Back\",\"id\":6\r}\r},{\r\"flags\":1,\"description\":\"\",\"enabled\":true,\"service\":{\r\"name\":\"Proactive Support\",\"id\":7\r}\r},{\r\"flags\":1,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Cloud Assist\",\"id\":8\r}\r}\r],\"uploadUser\":{\r\r}\r},\"HttpServerInfo\":{\r\"RestrictQuery\":{\r\"QueryIds\":\"\"\r},\"ScrubCommCells\":{\r\"CCIDs\":\"\"\r}\r}\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "8961b003-6861-c6e3-2433-8987bc89b524",
+          "name": "Cloud Metrics Reporting Configuration",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"errorCode is 0\"] = jsonData.errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"config\": {\n        \"commcellDiagUsage\": true,\n        \"clientGroupList\": [\n            {\n                \"_type_\": 28,\n                \"clientGroupId\": -1\n            }\n        ],\n        \"cloud\": {\n            \"serviceList\": [\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 1\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": false,\n                    \"service\": {\n                        \"id\": 3\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 5\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 6\n                    }\n                }\n            ]\n        }\n    }\n}"
+            },
+            "url": "{{ServerUrl}}/CommServ/MetricsReporting",
+            "description": "<h2>Description</h2>\r\nThis operation updates the configuration for Cloud Metrics Reporting. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_metrics_reporting.htm)"
+          },
+          "response": [
+            {
+              "id": "ecf1dbf7-d4df-932c-993c-91856c4f4f64",
+              "name": "Cloud Metrics Reporting Configuration",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"config\": {\n        \"commcellDiagUsage\": true,\n        \"clientGroupList\": [\n            {\n                \"_type_\": 28,\n                \"clientGroupId\": -1\n            }\n        ],\n        \"cloud\": {\n            \"serviceList\": [\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 1\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": false,\n                    \"service\": {\n                        \"id\": 3\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 5\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 6\n                    }\n                }\n            ]\n        }\n    }\n}"
+                },
+                "url": "{{ServerUrl}}/CommServ/MetricsReporting"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "42",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 17:03:31 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"errorMessage\":\"Success\",\"errorCode\":0\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "f4dbe977-f7a7-fa31-dea0-f831521c59fc",
+          "name": "Custom Calendar",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Response Body contains customCalendar details\"] = responseBody.has(\"customCalendar\");",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/CommServ/CustomCalendar",
+            "description": "<h2>Description</h2>\r\nThis operation returns a list of custom calendars. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_custom_calendar.htm)"
+          },
+          "response": [
+            {
+              "id": "83abb062-4733-e87f-94bd-e10da9c2aa77",
+              "name": "Custom Calendar",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/CommServ/CustomCalendar"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1021",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 17:14:12 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"customCalendar\":[\r{\r\"defineCustomMonths\":false,\"isDefault\":true,\"calendarType\":1,\"numberOfYears\":0,\"beginYear\":0,\"beginMonth\":1,\"customCalendarEntity\":{\r\"_type_\":171,\"customCalendarId\":1,\"customCalendarName\":\"Standard\"\r}\r},{\r\"beginDate\":1496289600,\"defineCustomMonths\":true,\"isDefault\":false,\"calendarType\":3,\"numberOfYears\":1,\"beginYear\":2017,\"beginMonth\":6,\"customCalendarEntity\":{\r\"_type_\":171,\"customCalendarId\":2,\"customCalendarName\":\"NewCalendar\"\r},\"customCalendarMonths\":[\r{\r\"month\":6,\"year\":2017,\"numberOfDays\":30\r},{\r\"month\":7,\"year\":2017,\"numberOfDays\":31\r},{\r\"month\":8,\"year\":2017,\"numberOfDays\":31\r},{\r\"month\":9,\"year\":2017,\"numberOfDays\":30\r},{\r\"month\":10,\"year\":2017,\"numberOfDays\":31\r},{\r\"month\":11,\"year\":2017,\"numberOfDays\":30\r},{\r\"month\":12,\"year\":2017,\"numberOfDays\":31\r},{\r\"month\":1,\"year\":2018,\"numberOfDays\":31\r},{\r\"month\":2,\"year\":2018,\"numberOfDays\":28\r},{\r\"month\":3,\"year\":2018,\"numberOfDays\":31\r},{\r\"month\":4,\"year\":2018,\"numberOfDays\":30\r},{\r\"month\":5,\"year\":2018,\"numberOfDays\":31\r}\r]\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "d62705c1-6be7-40ed-74ef-64daf892b142",
+          "name": "Custom Calendar",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"customCalendarOperationType\": 1,\n\t\"customCalendar\": {\n\t\t\"beginDate\": 1483246800,\n\t\t\"defineCustomMonths\": true,\n\t\t\"isDefault\": false,\n\t\t\"numberOfYears\": 1,\n\t\t\"beginYear\": 2017,\n\t\t\"beginMonth\": 1,\n\t\t\"customCalendarEntity\": {\n\t\t\t\"customCalendarName\": \"New_fiscalYear\"\n\t\t},\n\t\t\"customCalendarMonths\": [\n\t\t\t{\n\t\t\t\t\"month\": 1,\n\t\t\t\t\"year\": 2017,\n\t\t\t\t\"numberOfDays\": 15\n\t\t\t}\n\t\t]\n\t}\n}"
+            },
+            "url": "{{ServerUrl}}/CommServ/CustomCalendar",
+            "description": "<h2>Description</h2>\r\nThis operation creates a custom calendar. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_custom_calendar.htm)"
+          },
+          "response": [
+            {
+              "id": "b2808f4c-e532-3e9f-41f9-9b57b3013499",
+              "name": "Custom Calendar",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"customCalendarOperationType\": 1,\n\t\"customCalendar\": {\n\t\t\"beginDate\": 1483246800,\n\t\t\"defineCustomMonths\": true,\n\t\t\"isDefault\": false,\n\t\t\"numberOfYears\": 1,\n\t\t\"beginYear\": 2017,\n\t\t\"beginMonth\": 1,\n\t\t\"customCalendarEntity\": {\n\t\t\t\"customCalendarName\": \"New_fiscalYear\"\n\t\t},\n\t\t\"customCalendarMonths\": [\n\t\t\t{\n\t\t\t\t\"month\": 1,\n\t\t\t\t\"year\": 2017,\n\t\t\t\t\"numberOfDays\": 15\n\t\t\t}\n\t\t]\n\t}\n}"
+                },
+                "url": "{{ServerUrl}}/CommServ/CustomCalendar"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "85",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 17:39:05 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "4978cce4-b23f-cb39-cb24-fb389d184c9c",
+          "name": "Host Interface List",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/CommServ/DataInterfacePairs/HostInterfaces?hostId=2",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "CommServ",
+                "DataInterfacePairs",
+                "HostInterfaces"
+              ],
+              "query": [
+                {
+                  "key": "hostId",
+                  "value": "2"
+                }
+              ]
+            },
+            "description": "<h2>Description</h2>\r\nThis operation returns the interface list for a host.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_interfacelist_host.htm)"
+          },
+          "response": [
+            {
+              "id": "0213ce19-3707-c8ff-cba6-d359d10978eb",
+              "name": "Host Interface List",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/CommServ/DataInterfacePairs/HostInterfaces?hostId=2",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "CommServ",
+                    "DataInterfacePairs",
+                    "HostInterfaces"
+                  ],
+                  "query": [
+                    {
+                      "key": "hostId",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "80",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 18:48:47 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"interfaces\":[\r\"172.24.23.238\"\r],\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "6ed9caa5-60a5-da6d-8372-9a02ad778660",
+          "name": "HTTP Proxy Server",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"Response Body contains HTTP proxy server details\"] = responseBody.has(\"config\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/Commcell/InternetOptions/Proxy",
+            "description": "<h2>Description</h2>\r\nThis operation returns the details associated with an HTTP proxy server.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_http_proxy_server.htm)"
+          },
+          "response": [
+            {
+              "id": "36dbb5fb-6700-d922-b942-78f923b871a3",
+              "name": "HTTP Proxy Server",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/Commcell/InternetOptions/Proxy"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "360",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 18:51:56 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"config\":{\r\"useInternetGatewayPublic\":false,\"useIgDownloadSoftware\":false,\"proxyPort\":1025,\"useProxyAuthentication\":false,\"useHttpProxy\":false,\"usePassiveFTPConnection\":false,\"softwareDownloadProtocolType\":1,\"proxyServer\":\"\",\"proxyType\":1,\"useInternetGatewayPrivate\":false,\"proxyCredentials\":{\r\r},\"proxyClient\":{\r\"clientId\":1,\"clientName\":\"\",\"_type_\":3\r}\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "ed3b3474-2178-caf0-00fc-1f60e7f40ad0",
+          "name": "HTTP Proxy Server",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "tests[\"errorCode is 0\"] = jsonData.errorCode === 0;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"config\": {\n\t\t\"proxyPort\": 1025,\n\t\t\"useProxyAuthentication\": true,\n\t\t\"useHttpProxy\": true,\n\t\t\"proxyServer\": \"Proxy001\",\n\t\t\"proxyType\": 1,\n\t\t\"proxyCredentials\": {\n\t\t\t\"password\": \"cGFzc3dvcmQxMjM=\",\n\t\t\t\"userName\": \"proxy_admin\"\n\t\t},\n\t\t\"proxyClient\": {\n\t\t\t\"clientId\": 1,\n\t\t\t\"clientName\": \"\",\n\t\t\t\"type\": 0,\n\t\t\t\"_type_\": 3\n\t\t}\n\t}\n}"
+            },
+            "url": "{{ServerUrl}}/Commcell/InternetOptions/Proxy",
+            "description": "<h2>Description</h2>\r\nThis operation creates an HTTP proxy server.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_http_proxy_server.htm)"
+          },
+          "response": [
+            {
+              "id": "baf6eb41-4839-6af1-74b2-c491098a83d9",
+              "name": "HTTP Proxy Server",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"config\": {\n\t\t\"proxyPort\": 1025,\n\t\t\"useProxyAuthentication\": true,\n\t\t\"useHttpProxy\": true,\n\t\t\"proxyServer\": \"Proxy001\",\n\t\t\"proxyType\": 1,\n\t\t\"proxyCredentials\": {\n\t\t\t\"password\": \"cGFzc3dvcmQxMjM=\",\n\t\t\t\"userName\": \"proxy_admin\"\n\t\t},\n\t\t\"proxyClient\": {\n\t\t\t\"clientId\": 1,\n\t\t\t\"clientName\": \"\",\n\t\t\t\"type\": 0,\n\t\t\t\"_type_\": 3\n\t\t}\n\t}\n}"
+                },
+                "url": "{{ServerUrl}}/Commcell/InternetOptions/Proxy"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "42",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 08 Mar 2018 19:04:43 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"errorMessage\":\"Success\",\"errorCode\":0\r}"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "_postman_id": "cae30bc5-a32d-142d-f44d-107a933c3d63",
       "name": "Data Cube Operations",
       "description": "<h2>Description</h2>\nREST APIs for Data Cube.",
@@ -56781,1454 +58229,6 @@
               "cookie": [],
               "responseTime": "764",
               "body": "{\r\"outputs\":\"{\\\"testoutput\\\":\\\"NAME                                    OS           ACTIVE    \\\\r\\\\n----                                    --           ------    \\\\r\\\\napitest                                 Windows      Yes       \\\\r\\\\nauto                                    Windows      Yes       \\\\r\\\\nCSSP_IndexServer                        Any          Yes       \\\\r\\\\nfirewalltestma                          Windows      Yes       \\\\r\\\\nfwclient4_2                             Windows      Yes       \\\\r\\\\nshezavm11                               Windows      Yes       \\\\r\\\\nshezavm11_3                             Windows      Yes       \\\\r\\\\nshezavm7                                Linux        Yes       \\\\r\\\\ntest                                    Windows95    Yes       \\\\r\\\\ntestauto_2                              Windows      Yes       \\\\r\\\\ntestpool_SystemCreatedSP_IndexServer    Any          Yes       \\\\r\\\\nv10cl                                   Windows      Yes       \\\\r\\\\nv10client                               Windows      Yes\\\"}\",\"jobId\":294,\"errorMessage\":\"\",\"errorCode\":0,\"startTime\":1518590573,\"endTime\":1518590574,\"version\":4,\"status\":4,\"workflow\":{\r\"workflowName\":\"TestAPI\",\"workflowId\":88\r}\r}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_postman_id": "7fbae6c6-b3eb-8252-ef7f-b8f1b65ed064",
-      "name": "Control Panel Operations",
-      "description": null,
-      "item": [
-        {
-          "_postman_id": "b25fc0a6-c589-b0f8-6eea-df5c1df8826f",
-          "name": "Operation Window Operations",
-          "description": null,
-          "item": [
-            {
-              "_postman_id": "58369a6f-dc7c-42c3-439d-e0b0b3754333",
-              "name": "Operation Rules",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "",
-                      "var jsonData = JSON.parse(responseBody);",
-                      "",
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "tests[\"Response Body contains operationWindow Details\"] = responseBody.has(\"operationWindow\");",
-                      "postman.setEnvironmentVariable(\"ruleId\", jsonData.operationWindow[0].ruleId);",
-                      "",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/OperationWindow/OpWindowList?clientId={{clientId}}",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "OperationWindow",
-                    "OpWindowList"
-                  ],
-                  "query": [
-                    {
-                      "key": "clientId",
-                      "value": "{{clientId}}"
-                    },
-                    {
-                      "key": null,
-                      "value": null
-                    }
-                  ]
-                },
-                "description": "<h2>Description</h2>\r\nThis operation returns a list of operation rules. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_operation_rule.htm)"
-              },
-              "response": [
-                {
-                  "id": "045244a7-9524-043b-6832-93081c100b7e",
-                  "name": "Operation Rules -ClientLevel",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": {
-                      "raw": "{{ServerUrl}}/OperationWindow/OpWindowList?clientId={{clientId}}",
-                      "host": [
-                        "{{ServerUrl}}"
-                      ],
-                      "path": [
-                        "OperationWindow",
-                        "OpWindowList"
-                      ],
-                      "query": [
-                        {
-                          "key": "clientId",
-                          "value": "{{clientId}}"
-                        },
-                        {
-                          "key": null,
-                          "value": null
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "257",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Tue, 06 Mar 2018 20:59:18 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\"error\":{\r\"errorCode\":0\r},\"operationWindow\":[\r{\r\"ruleEnabled\":true,\"endDate\":1520312400,\"level\":2,\"name\":\"ClientLevelwindow\",\"ruleId\":1,\"startDate\":1520312400,\"operations\":[\r1,2\r],\"dayTime\":[\r{\r\"startTime\":28800,\"endTime\":64800,\"dayOfWeek\":[\r6\r]\r}\r]\r}\r]\r}"
-                },
-                {
-                  "id": "1d15412d-f0e5-77f6-7b1e-3d55dc858c3a",
-                  "name": "Operation Rules subclient",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": {
-                      "raw": "{{ServerUrl}}/OperationWindow/OpWindowList?clientId={{clientId}}&appTypeId=33&backupsetId={{backupsetId}}&subclientId={{subclientId}}",
-                      "host": [
-                        "{{ServerUrl}}"
-                      ],
-                      "path": [
-                        "OperationWindow",
-                        "OpWindowList"
-                      ],
-                      "query": [
-                        {
-                          "key": "clientId",
-                          "value": "{{clientId}}"
-                        },
-                        {
-                          "key": "appTypeId",
-                          "value": "33"
-                        },
-                        {
-                          "key": "backupsetId",
-                          "value": "{{backupsetId}}"
-                        },
-                        {
-                          "key": "subclientId",
-                          "value": "{{subclientId}}"
-                        },
-                        {
-                          "key": null,
-                          "value": null
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "257",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Tue, 06 Mar 2018 21:27:09 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\"error\":{\r\"errorCode\":0\r},\"operationWindow\":[\r{\r\"ruleEnabled\":true,\"endDate\":1520312400,\"level\":2,\"name\":\"ClientLevelwindow\",\"ruleId\":1,\"startDate\":1520312400,\"operations\":[\r1,2\r],\"dayTime\":[\r{\r\"startTime\":28800,\"endTime\":64800,\"dayOfWeek\":[\r6\r]\r}\r]\r}\r]\r}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "52421b51-2f83-e8c1-8324-0d27399bd222",
-              "name": "Operation Rules",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "var jsonData = JSON.parse(responseBody);",
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      "tests[\"operationWindow created\"] = responseBody.has(\"operationWindow\");",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"operationWindow\": {\n        \"endDate\": 0,\n        \"name\": \"Test_1\",\n        \"startDate\": 0,\n        \"operations\": [\n            1,\n            2\n        ],\n        \"dayTime\": [\n            {\n                \"startTime\": 46800,\n                \"endTime\": 50400,\n                \"dayOfWeek\": [\n                    1,\n                    2\n                ]\n            }\n        ]\n    },\n    \"entity\": {\n        \"clientGroupId\": 0,\n        \"clientId\": 20\n    }\n}"
-                },
-                "url": "{{ServerUrl}}/OperationWindow",
-                "description": "<h2>Description</h2>\r\nThis operation creates an operation rule. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_operation_rule.htm)"
-              },
-              "response": [
-                {
-                  "id": "c8bf5e07-dad7-d212-ef32-3cbe882d7090",
-                  "name": "Operation Rules",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "type": "text",
-                        "name": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"operationWindow\": {\n        \"endDate\": 0,\n        \"name\": \"Test_1\",\n        \"startDate\": 0,\n        \"operations\": [\n            1,\n            2\n        ],\n        \"dayTime\": [\n            {\n                \"startTime\": 46800,\n                \"endTime\": 50400,\n                \"dayOfWeek\": [\n                    1,\n                    2\n                ]\n            }\n        ]\n    },\n    \"entity\": {\n        \"clientGroupId\": 0,\n        \"clientId\": 20\n    }\n}"
-                    },
-                    "url": "{{ServerUrl}}/OperationWindow"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "197",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Tue, 06 Mar 2018 23:25:00 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\"error\":{\r\"errorCode\":0\r},\"operationWindow\":{\r\"endDate\":0,\"name\":\"Test_1\",\"ruleId\":1,\"startDate\":0,\"operations\":[\r1,2\r],\"dayTime\":[\r{\r\"startTime\":46800,\"endTime\":50400,\"dayOfWeek\":[\r1,2\r]\r}\r]\r}\r}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "cd9b702b-a053-8b44-6909-74f8b05c2db0",
-              "name": "Operation Rules",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "",
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/xml"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/OperationWindow",
-                "description": "<h2>Description</h2>\r\nThis operation updates an operation rule. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/put_operation_rule.htm)"
-              },
-              "response": [
-                {
-                  "id": "4a347799-d1b1-dae9-4d61-e66ba86939b4",
-                  "name": "Operation Rules",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "{{Accept}}"
-                      },
-                      {
-                        "key": "Authtoken",
-                        "value": "{{TOKEN}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "type": "text",
-                        "name": "Content-Type",
-                        "value": "application/xml"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "<Api_UpdateOperationWindowReq>\n<operationWindow name=\"change_operationRule123\" ruleId=\"10\" startDate=\"1520571600\" endDate=\"1520658000\" ruleEnabled=\"1\">\n\t <operations val=\"1\"/>\n\t <operations val=\"2\"/>\n\t <dayTime startTime=\"32400\" endTime=\"36000\">\n            <dayOfWeek val=\"1\"/>\n            <dayOfWeek val=\"2\"/>\n            <dayOfWeek val=\"3\"/>\n      </dayTime>\n    </operationWindow>\n</Api_UpdateOperationWindowReq>\n"
-                    },
-                    "url": "{{ServerUrl}}/OperationWindow"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Length",
-                      "value": "254",
-                      "name": "Content-Length",
-                      "description": "The length of the response body in octets (8-bit bytes)"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json; charset=utf-8",
-                      "name": "Content-Type",
-                      "description": "The mime type of this content"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Thu, 08 Mar 2018 02:18:51 GMT",
-                      "name": "Date",
-                      "description": "The date and time that the message was sent"
-                    },
-                    {
-                      "key": "Server",
-                      "value": "Microsoft-IIS/8.5",
-                      "name": "Server",
-                      "description": "A name for the server"
-                    },
-                    {
-                      "key": "X-Powered-By",
-                      "value": "ASP.NET",
-                      "name": "X-Powered-By",
-                      "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\"error\":{\r\"errorCode\":0\r},\"operationWindow\":{\r\"ruleEnabled\":true,\"endDate\":1520658000,\"name\":\"change_operationRule123\",\"ruleId\":10,\"startDate\":1520571600,\"operations\":[\r1,2\r],\"dayTime\":[\r{\r\"startTime\":32400,\"endTime\":36000,\"dayOfWeek\":[\r1,2,3\r]\r}\r]\r}\r}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "a218f739-2c19-1e67-9fb5-b35f38a96f60",
-              "name": "Operation Rules",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/OperationWindow/{{ruleId}}",
-                "description": "<h2>Description</h2>\r\nThis operation deletes an operation rule. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/delete_operation_rule.htm)"
-              },
-              "response": []
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "_postman_id": "881aabba-a2de-dd20-80d9-9edc343fa585",
-          "name": "Audit Trail",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/CommServ/AuditTrail",
-            "description": "<h2>Description</h2>\r\nThis operation returns a list of the audit trail settings. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_audit_trail.htm)"
-          },
-          "response": [
-            {
-              "id": "81a0ef50-1fa8-8daa-f618-3428d6cfd99c",
-              "name": "Audit Trail",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/CommServ/AuditTrail"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "121",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 02:43:50 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"auditTrailInfo\":{\r\"retentionForCritical\":365,\"retentionForLow\":120,\"retentionForMedium\":240,\"retentionForHigh\":365\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "2ba5a3b5-adb6-f175-1cc4-5f8606ab9159",
-          "name": "Audit Trail",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"auditTrailInfo\": {\n        \"retentionForCritical\": 365,\n        \"retentionForLow\": 365,\n        \"retentionForMedium\": 240,\n        \"retentionForHigh\": 260\n    }\n}"
-            },
-            "url": "{{ServerUrl}}/CommServ/AuditTrail",
-            "description": "<h2>Description</h2>\r\nThis operation updates the audit trail retention settings. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_audit_trail.htm)"
-          },
-          "response": [
-            {
-              "id": "ba66bd99-b697-c623-5f74-694d9caac1cb",
-              "name": "Audit Trail",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"auditTrailInfo\": {\n        \"retentionForCritical\": 365,\n        \"retentionForLow\": 365,\n        \"retentionForMedium\": 240,\n        \"retentionForHigh\": 260\n    }\n}"
-                },
-                "url": "{{ServerUrl}}/CommServ/AuditTrail"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "85",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 16:16:42 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "93c36a48-47dd-074e-5267-70324734b934",
-          "name": "Cloud Metrics Reporting Configuration",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"Response Body contains Cloud Metrics Reporting configuration\"] = responseBody.has(\"config\");",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/CommServ/MetricsReporting",
-            "description": "<h2>Description</h2>\r\nThis operation returns the configuration for Cloud Metrics Reporting. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_metrics_reporting.htm)"
-          },
-          "response": [
-            {
-              "id": "322ae849-034e-e487-2072-149cdd896582",
-              "name": "Cloud Metrics Reporting Configuration",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/CommServ/MetricsReporting"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1270",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 16:20:43 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"config\":{\r\"uploadFrequency\":7,\"lastCollectionTime\":1520374169,\"useProxyClient\":false,\"uploadNow\":0,\"dataCollectionTime\":25200,\"metricsReportPackageInstalled\":false,\"tieringActive\":false,\"randomization\":0,\"commcellDiagUsage\":true,\"nextUploadTime\":1520938800,\"scriptDownloadTime\":1520364049,\"lastUploadTime\":1520374169,\"clientGroupList\":[\r{\r\"_type_\":28,\"clientGroupId\":-1\r}\r],\"cloud\":{\r\"uploadURL\":\"\",\"downloadURL\":\"\",\"serviceList\":[\r{\r\"flags\":0,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Health Check\",\"id\":1\r}\r},{\r\"flags\":3,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Post Upgrade Check\",\"id\":2\r}\r},{\r\"flags\":0,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Activity\",\"id\":3\r}\r},{\r\"flags\":1,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Upgrade Readiness\",\"id\":4\r}\r},{\r\"flags\":0,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Audit\",\"id\":5\r}\r},{\r\"flags\":0,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Charge Back\",\"id\":6\r}\r},{\r\"flags\":1,\"description\":\"\",\"enabled\":true,\"service\":{\r\"name\":\"Proactive Support\",\"id\":7\r}\r},{\r\"flags\":1,\"description\":\"\",\"enabled\":false,\"service\":{\r\"name\":\"Cloud Assist\",\"id\":8\r}\r}\r],\"uploadUser\":{\r\r}\r},\"HttpServerInfo\":{\r\"RestrictQuery\":{\r\"QueryIds\":\"\"\r},\"ScrubCommCells\":{\r\"CCIDs\":\"\"\r}\r}\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "8961b003-6861-c6e3-2433-8987bc89b524",
-          "name": "Cloud Metrics Reporting Configuration",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"errorCode is 0\"] = jsonData.errorCode === 0;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"config\": {\n        \"commcellDiagUsage\": true,\n        \"clientGroupList\": [\n            {\n                \"_type_\": 28,\n                \"clientGroupId\": -1\n            }\n        ],\n        \"cloud\": {\n            \"serviceList\": [\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 1\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": false,\n                    \"service\": {\n                        \"id\": 3\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 5\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 6\n                    }\n                }\n            ]\n        }\n    }\n}"
-            },
-            "url": "{{ServerUrl}}/CommServ/MetricsReporting",
-            "description": "<h2>Description</h2>\r\nThis operation updates the configuration for Cloud Metrics Reporting. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_metrics_reporting.htm)"
-          },
-          "response": [
-            {
-              "id": "ecf1dbf7-d4df-932c-993c-91856c4f4f64",
-              "name": "Cloud Metrics Reporting Configuration",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "name": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"config\": {\n        \"commcellDiagUsage\": true,\n        \"clientGroupList\": [\n            {\n                \"_type_\": 28,\n                \"clientGroupId\": -1\n            }\n        ],\n        \"cloud\": {\n            \"serviceList\": [\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 1\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": false,\n                    \"service\": {\n                        \"id\": 3\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 5\n                    }\n                },\n                {\n                    \"flags\": 0,\n                    \"description\": \"\",\n                    \"enabled\": true,\n                    \"service\": {\n                        \"id\": 6\n                    }\n                }\n            ]\n        }\n    }\n}"
-                },
-                "url": "{{ServerUrl}}/CommServ/MetricsReporting"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "42",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 17:03:31 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"errorMessage\":\"Success\",\"errorCode\":0\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "f4dbe977-f7a7-fa31-dea0-f831521c59fc",
-          "name": "Custom Calendar",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"Response Body contains customCalendar details\"] = responseBody.has(\"customCalendar\");",
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/CommServ/CustomCalendar",
-            "description": "<h2>Description</h2>\r\nThis operation returns a list of custom calendars. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_custom_calendar.htm)"
-          },
-          "response": [
-            {
-              "id": "83abb062-4733-e87f-94bd-e10da9c2aa77",
-              "name": "Custom Calendar",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/CommServ/CustomCalendar"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1021",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 17:14:12 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"customCalendar\":[\r{\r\"defineCustomMonths\":false,\"isDefault\":true,\"calendarType\":1,\"numberOfYears\":0,\"beginYear\":0,\"beginMonth\":1,\"customCalendarEntity\":{\r\"_type_\":171,\"customCalendarId\":1,\"customCalendarName\":\"Standard\"\r}\r},{\r\"beginDate\":1496289600,\"defineCustomMonths\":true,\"isDefault\":false,\"calendarType\":3,\"numberOfYears\":1,\"beginYear\":2017,\"beginMonth\":6,\"customCalendarEntity\":{\r\"_type_\":171,\"customCalendarId\":2,\"customCalendarName\":\"NewCalendar\"\r},\"customCalendarMonths\":[\r{\r\"month\":6,\"year\":2017,\"numberOfDays\":30\r},{\r\"month\":7,\"year\":2017,\"numberOfDays\":31\r},{\r\"month\":8,\"year\":2017,\"numberOfDays\":31\r},{\r\"month\":9,\"year\":2017,\"numberOfDays\":30\r},{\r\"month\":10,\"year\":2017,\"numberOfDays\":31\r},{\r\"month\":11,\"year\":2017,\"numberOfDays\":30\r},{\r\"month\":12,\"year\":2017,\"numberOfDays\":31\r},{\r\"month\":1,\"year\":2018,\"numberOfDays\":31\r},{\r\"month\":2,\"year\":2018,\"numberOfDays\":28\r},{\r\"month\":3,\"year\":2018,\"numberOfDays\":31\r},{\r\"month\":4,\"year\":2018,\"numberOfDays\":30\r},{\r\"month\":5,\"year\":2018,\"numberOfDays\":31\r}\r]\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "d62705c1-6be7-40ed-74ef-64daf892b142",
-          "name": "Custom Calendar",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"customCalendarOperationType\": 1,\n\t\"customCalendar\": {\n\t\t\"beginDate\": 1483246800,\n\t\t\"defineCustomMonths\": true,\n\t\t\"isDefault\": false,\n\t\t\"numberOfYears\": 1,\n\t\t\"beginYear\": 2017,\n\t\t\"beginMonth\": 1,\n\t\t\"customCalendarEntity\": {\n\t\t\t\"customCalendarName\": \"New_fiscalYear\"\n\t\t},\n\t\t\"customCalendarMonths\": [\n\t\t\t{\n\t\t\t\t\"month\": 1,\n\t\t\t\t\"year\": 2017,\n\t\t\t\t\"numberOfDays\": 15\n\t\t\t}\n\t\t]\n\t}\n}"
-            },
-            "url": "{{ServerUrl}}/CommServ/CustomCalendar",
-            "description": "<h2>Description</h2>\r\nThis operation creates a custom calendar. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_custom_calendar.htm)"
-          },
-          "response": [
-            {
-              "id": "b2808f4c-e532-3e9f-41f9-9b57b3013499",
-              "name": "Custom Calendar",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "name": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"customCalendarOperationType\": 1,\n\t\"customCalendar\": {\n\t\t\"beginDate\": 1483246800,\n\t\t\"defineCustomMonths\": true,\n\t\t\"isDefault\": false,\n\t\t\"numberOfYears\": 1,\n\t\t\"beginYear\": 2017,\n\t\t\"beginMonth\": 1,\n\t\t\"customCalendarEntity\": {\n\t\t\t\"customCalendarName\": \"New_fiscalYear\"\n\t\t},\n\t\t\"customCalendarMonths\": [\n\t\t\t{\n\t\t\t\t\"month\": 1,\n\t\t\t\t\"year\": 2017,\n\t\t\t\t\"numberOfDays\": 15\n\t\t\t}\n\t\t]\n\t}\n}"
-                },
-                "url": "{{ServerUrl}}/CommServ/CustomCalendar"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "85",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 17:39:05 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "4978cce4-b23f-cb39-cb24-fb389d184c9c",
-          "name": "Host Interface List",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "{{ServerUrl}}/CommServ/DataInterfacePairs/HostInterfaces?hostId=2",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "CommServ",
-                "DataInterfacePairs",
-                "HostInterfaces"
-              ],
-              "query": [
-                {
-                  "key": "hostId",
-                  "value": "2"
-                }
-              ]
-            },
-            "description": "<h2>Description</h2>\r\nThis operation returns the interface list for a host.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_interfacelist_host.htm)"
-          },
-          "response": [
-            {
-              "id": "0213ce19-3707-c8ff-cba6-d359d10978eb",
-              "name": "Host Interface List",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/CommServ/DataInterfacePairs/HostInterfaces?hostId=2",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "CommServ",
-                    "DataInterfacePairs",
-                    "HostInterfaces"
-                  ],
-                  "query": [
-                    {
-                      "key": "hostId",
-                      "value": "2"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "80",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 18:48:47 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"interfaces\":[\r\"172.24.23.238\"\r],\"error\":{\r\"errorMessage\":\"\",\"errorCode\":0\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "6ed9caa5-60a5-da6d-8372-9a02ad778660",
-          "name": "HTTP Proxy Server",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"Response Body contains HTTP proxy server details\"] = responseBody.has(\"config\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{ServerUrl}}/Commcell/InternetOptions/Proxy",
-            "description": "<h2>Description</h2>\r\nThis operation returns the details associated with an HTTP proxy server.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_http_proxy_server.htm)"
-          },
-          "response": [
-            {
-              "id": "36dbb5fb-6700-d922-b942-78f923b871a3",
-              "name": "HTTP Proxy Server",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{ServerUrl}}/Commcell/InternetOptions/Proxy"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "360",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 18:51:56 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"config\":{\r\"useInternetGatewayPublic\":false,\"useIgDownloadSoftware\":false,\"proxyPort\":1025,\"useProxyAuthentication\":false,\"useHttpProxy\":false,\"usePassiveFTPConnection\":false,\"softwareDownloadProtocolType\":1,\"proxyServer\":\"\",\"proxyType\":1,\"useInternetGatewayPrivate\":false,\"proxyCredentials\":{\r\r},\"proxyClient\":{\r\"clientId\":1,\"clientName\":\"\",\"_type_\":3\r}\r}\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "ed3b3474-2178-caf0-00fc-1f60e7f40ad0",
-          "name": "HTTP Proxy Server",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "tests[\"errorCode is 0\"] = jsonData.errorCode === 0;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"config\": {\n\t\t\"proxyPort\": 1025,\n\t\t\"useProxyAuthentication\": true,\n\t\t\"useHttpProxy\": true,\n\t\t\"proxyServer\": \"Proxy001\",\n\t\t\"proxyType\": 1,\n\t\t\"proxyCredentials\": {\n\t\t\t\"password\": \"cGFzc3dvcmQxMjM=\",\n\t\t\t\"userName\": \"proxy_admin\"\n\t\t},\n\t\t\"proxyClient\": {\n\t\t\t\"clientId\": 1,\n\t\t\t\"clientName\": \"\",\n\t\t\t\"type\": 0,\n\t\t\t\"_type_\": 3\n\t\t}\n\t}\n}"
-            },
-            "url": "{{ServerUrl}}/Commcell/InternetOptions/Proxy",
-            "description": "<h2>Description</h2>\r\nThis operation creates an HTTP proxy server.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_http_proxy_server.htm)"
-          },
-          "response": [
-            {
-              "id": "baf6eb41-4839-6af1-74b2-c491098a83d9",
-              "name": "HTTP Proxy Server",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "name": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"config\": {\n\t\t\"proxyPort\": 1025,\n\t\t\"useProxyAuthentication\": true,\n\t\t\"useHttpProxy\": true,\n\t\t\"proxyServer\": \"Proxy001\",\n\t\t\"proxyType\": 1,\n\t\t\"proxyCredentials\": {\n\t\t\t\"password\": \"cGFzc3dvcmQxMjM=\",\n\t\t\t\"userName\": \"proxy_admin\"\n\t\t},\n\t\t\"proxyClient\": {\n\t\t\t\"clientId\": 1,\n\t\t\t\"clientName\": \"\",\n\t\t\t\"type\": 0,\n\t\t\t\"_type_\": 3\n\t\t}\n\t}\n}"
-                },
-                "url": "{{ServerUrl}}/Commcell/InternetOptions/Proxy"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "42",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 08 Mar 2018 19:04:43 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/8.5",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"errorMessage\":\"Success\",\"errorCode\":0\r}"
             }
           ]
         }
