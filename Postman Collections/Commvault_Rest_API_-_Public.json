@@ -50396,11 +50396,7 @@
                     "exec": [
                       "tests[\"Status code is 200\"] = responseCode.code === 200;",
                       "",
-                      "tests[\"Response Body contains libraryInfo\"] = responseBody.has(\"libraryInfo\");",
-                      "",
-                      "var jsonData = JSON.parse(responseBody);",
-                      "postman.setEnvironmentVariable(\"mountPathId\", jsonData.libraryInfo.MountPathList[0].mountPathId);",
-                      "postman.setEnvironmentVariable(\"deviceId\", jsonData.libraryInfo.MountPathList[0].deviceInfo.id);"
+                      "tests[\"Response Body contains response\"] = responseBody.has(\"response\");"
                     ]
                   }
                 }
@@ -50410,7 +50406,7 @@
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "{{Accept}}"
+                    "value": "application/xml"
                   },
                   {
                     "key": "Authtoken",
@@ -50421,7 +50417,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{ServerUrl}}/Library/629",
+                "url": "{{ServerUrl}}/Library/2",
                 "description": "<h2> Description </h2>\nThis operation returns details associated with a library.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_library_details.htm)"
               },
               "response": [
