@@ -76,111 +76,7 @@
       "_postman_id": "576da640-d94b-cd46-c877-57eb2b7d593b",
       "name": "Administrative Operations",
       "description": "",
-      "item": [
-        {
-          "_postman_id": "15863c41-8d1f-d9c7-c18f-6fc4ab997748",
-          "name": "Email Server",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Response Body contains smtpServer\"] = responseBody.has(\"smtpServer\");",
-                  "tests[\"Response Body contains smtpPort\"] = responseBody.has(\"smtpPort\");",
-                  "tests[\"Response Body contains userInfo\"] = responseBody.has(\"userInfo\");",
-                  "tests[\"Response Body contains senderInfo\"] = responseBody.has(\"senderInfo\");",
-                  "tests[\"Response Body contains senderAddress\"] = responseBody.has(\"senderAddress\");",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
-            },
-            "url": "{{ServerUrl}}/EmailServer",
-            "description": "<h2>Description</h2>\nThis operation returns the configuration for the email server.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_email_server.htm)"
-          },
-          "response": [
-            {
-              "id": "a42e631c-8ac4-ba5d-acb5-8ff552cc7aea",
-              "name": "GET EmailServer",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
-                },
-                "url": "{{ServerUrl}}/EmailServer"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "description": "",
-                  "key": "Content-Length",
-                  "name": "Content-Length",
-                  "value": "245"
-                },
-                {
-                  "description": "",
-                  "key": "Content-Type",
-                  "name": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "description": "",
-                  "key": "Date",
-                  "name": "Date",
-                  "value": "Sun, 21 May 2017 00:56:44 GMT"
-                },
-                {
-                  "description": "",
-                  "key": "Server",
-                  "name": "Server",
-                  "value": "Microsoft-IIS/8.5"
-                },
-                {
-                  "description": "",
-                  "key": "X-Powered-By",
-                  "name": "X-Powered-By",
-                  "value": "ASP.NET"
-                }
-              ],
-              "cookie": [],
-              "responseTime": "228",
-              "body": "{\r\"enableSSL\":false,\"smtpServer\":\"smtp.commvault.com\",\"smtpPort\":25,\"useAuthentication\":false,\"maxMailServerSize\":0,\"userInfo\":{\r\"userName\":\"\"\r},\"senderInfo\":{\r\"senderName\":\"Yash\",\"senderAddress\":\"Commvault@GreenValley.testlab.commvault.com\"\r}\r}"
-            }
-          ]
-        }
-      ]
+      "item": []
     },
     {
       "_postman_id": "117734a5-9a89-3371-db6c-793eca48e650",
@@ -5571,6 +5467,109 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\r\"processinginstructioninfo\":{\r\"attributes\":[\r{\r\"name\":\"exitval\",\"value\":\"0\"\r}\r]\r}\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "15863c41-8d1f-d9c7-c18f-6fc4ab997748",
+          "name": "Email Server",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains smtpServer\"] = responseBody.has(\"smtpServer\");",
+                  "tests[\"Response Body contains smtpPort\"] = responseBody.has(\"smtpPort\");",
+                  "tests[\"Response Body contains userInfo\"] = responseBody.has(\"userInfo\");",
+                  "tests[\"Response Body contains senderInfo\"] = responseBody.has(\"senderInfo\");",
+                  "tests[\"Response Body contains senderAddress\"] = responseBody.has(\"senderAddress\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
+            },
+            "url": "{{ServerUrl}}/EmailServer",
+            "description": "<h2>Description</h2>\nThis operation returns the configuration for the email server.\n\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_email_server.htm)"
+          },
+          "response": [
+            {
+              "id": "a42e631c-8ac4-ba5d-acb5-8ff552cc7aea",
+              "name": "GET EmailServer",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<DM2ContentIndexing_CheckCredentialReq mode=\"{{Mode}}\" username=\"{{userName}}\" password=\"{{password}}\" />"
+                },
+                "url": "{{ServerUrl}}/EmailServer"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "description": "",
+                  "key": "Content-Length",
+                  "name": "Content-Length",
+                  "value": "245"
+                },
+                {
+                  "description": "",
+                  "key": "Content-Type",
+                  "name": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "description": "",
+                  "key": "Date",
+                  "name": "Date",
+                  "value": "Sun, 21 May 2017 00:56:44 GMT"
+                },
+                {
+                  "description": "",
+                  "key": "Server",
+                  "name": "Server",
+                  "value": "Microsoft-IIS/8.5"
+                },
+                {
+                  "description": "",
+                  "key": "X-Powered-By",
+                  "name": "X-Powered-By",
+                  "value": "ASP.NET"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "228",
+              "body": "{\r\"enableSSL\":false,\"smtpServer\":\"smtp.commvault.com\",\"smtpPort\":25,\"useAuthentication\":false,\"maxMailServerSize\":0,\"userInfo\":{\r\"userName\":\"\"\r},\"senderInfo\":{\r\"senderName\":\"Yash\",\"senderAddress\":\"Commvault@GreenValley.testlab.commvault.com\"\r}\r}"
             }
           ]
         },
