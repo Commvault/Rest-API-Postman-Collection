@@ -4271,6 +4271,340 @@
       ]
     },
     {
+      "_postman_id": "2350ec01-c055-b684-0a68-fa1634b69c0c",
+      "name": "Cloud Apps Operations",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "0bb4db0e-104a-84be-9366-d86e7210d49e",
+          "name": "Cloud Apps Pseudo Clients",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Client"
+              ],
+              "query": [
+                {
+                  "key": "PseudoClientType",
+                  "value": "VSPseudo"
+                }
+              ]
+            },
+            "description": "<h2>Description</h2>\r\nThis operation returns a list of clients.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm)"
+          },
+          "response": [
+            {
+              "id": "3029950b-b809-3125-11d6-69eaafcfe8a7",
+              "name": "Cloud Apps Pseudo Clients-VSPseudo",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Client"
+                  ],
+                  "query": [
+                    {
+                      "key": "PseudoClientType",
+                      "value": "VSPseudo"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "2052",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Mar 2018 03:28:44 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/10.0",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"VSPseudoClientsList\":[\r{\r\"VSInstanceType\":2,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"AD\",\"clientId\":54,\"clientName\":\"AD\",\"displayName\":\"AD\",\"clientGUID\":\"25CD3B0A-C01D-434B-B16C-0F7E2831A8E3\"\r}\r},{\r\"VSInstanceType\":4,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"AmazonVirtest\",\"clientId\":1105,\"clientName\":\"AmazonVirtest\",\"displayName\":\"AmazonVirtest\",\"clientGUID\":\"B84E47EC-BA01-4A90-B183-500E3F1EC025\"\r}\r},{\r\"VSInstanceType\":7,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"AzureVirtest\",\"clientId\":1108,\"clientName\":\"AzureVirtest\",\"displayName\":\"AzureVirtest\",\"clientGUID\":\"0385E37F-E8D5-4B4E-8D1B-38EB06FFA5DD\"\r}\r},{\r\"VSInstanceType\":1,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"IB-AppAware-ESX\",\"clientId\":1306,\"clientName\":\"IB-AppAware-ESX\",\"displayName\":\"IB-AppAware-ESX\",\"clientGUID\":\"0BD04935-C6FD-4B61-9E3F-0B8912250EEA\"\r}\r},{\r\"VSInstanceType\":2,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"abc\",\"clientId\":1378,\"clientName\":\"abc\",\"displayName\":\"abc\",\"clientGUID\":\"20197462-5AED-4209-992B-79605E356DF2\"\r}\r}\r]\r}"
+            },
+            {
+              "id": "7b74d8f9-4a1a-2bca-d418-3bff14208ef3",
+              "name": "Cloud Apps Pseudo Clients -CloudAPPS",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Client?PseudoClientType=CloudApps",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Client"
+                  ],
+                  "query": [
+                    {
+                      "key": "PseudoClientType",
+                      "value": "CloudApps"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1216",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Mar 2018 03:24:42 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/10.0",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"CloudAppsClientsList\":[\r{\r\"cloudAppsInstanceType\":7,\"client\":{\r\"hostName\":\"qlu_onedrive_in_workgroup\",\"clientId\":1092,\"clientName\":\"qlu_onedrive_in_workgroup\",\"displayName\":\"qlu_onedrive_in_workgroup\",\"clientGUID\":\"5DD2D37E-0248-43E2-AD36-70B04B24B569\"\r}\r},{\r\"cloudAppsInstanceType\":2,\"client\":{\r\"hostName\":\"Sid-Gdrive\",\"clientId\":41,\"clientName\":\"Sid-Gdrive\",\"displayName\":\"Sid-Gdrive\",\"clientGUID\":\"DC928F66-80BD-4382-BDCA-9D7F6A8D0C54\"\r}\r},{\r\"cloudAppsInstanceType\":1,\"client\":{\r\"hostName\":\"Sid-Gmail\",\"clientId\":40,\"clientName\":\"Sid-Gmail\",\"displayName\":\"Sid-Gmail\",\"clientGUID\":\"999671B8-8774-4B04-9519-629B77194860\"\r}\r},{\r\"cloudAppsInstanceType\":7,\"client\":{\r\"hostName\":\"Sid-OneDrive\",\"clientId\":33,\"clientName\":\"Sid-OneDrive\",\"displayName\":\"Sid-OneDrive\",\"clientGUID\":\"6C371525-3061-4E68-A002-F7B1172C02B1\"\r}\r},{\r\"cloudAppsInstanceType\":7,\"client\":{\r\"hostName\":\"Sid-OneDrive1\",\"clientId\":44,\"clientName\":\"Sid-OneDrive1\",\"displayName\":\"Sid-OneDrive1\",\"clientGUID\":\"FD96AA2E-03FC-43EB-BF4B-1C91551F6914\"\r}\r},{\r\"cloudAppsInstanceType\":7,\"client\":{\r\"hostName\":\"sid-onedrive2\",\"clientId\":1226,\"clientName\":\"sid-onedrive2\",\"displayName\":\"sid-onedrive2\",\"clientGUID\":\"4DCE177B-5F82-450C-849A-319BA9869C08\"\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "83875fac-dc73-806b-7861-6d0b30163a52",
+          "name": "Proxy Clients",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{ServerUrl}}/Client/proxy/CloudApps?cAppType=1",
+              "host": [
+                "{{ServerUrl}}"
+              ],
+              "path": [
+                "Client",
+                "proxy",
+                "CloudApps"
+              ],
+              "query": [
+                {
+                  "key": "cAppType",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "<h2>Description</h2>\r\nThis operation returns the list of all proxy clients for cloud apps virtual clients.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_cloudapp_proxy_clients.htm)"
+          },
+          "response": [
+            {
+              "id": "e17c52cd-992a-8b86-c1f7-b41426ed25a5",
+              "name": "Proxy Clients",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{ServerUrl}}/Client/proxy/CloudApps?cAppType=1",
+                  "host": [
+                    "{{ServerUrl}}"
+                  ],
+                  "path": [
+                    "Client",
+                    "proxy",
+                    "CloudApps"
+                  ],
+                  "query": [
+                    {
+                      "key": "cAppType",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "897",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 09 Mar 2018 03:30:51 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/10.0",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"vendor\":0,\"clients\":[\r{\r\"hostName\":\"cloudproxy.testlab.commvault.com\",\"clientId\":23,\"clientName\":\"cloudproxy\",\"_type_\":3,\"csGUID\":\"5E84F806-4C30-4788-9F80-FC8C83AC6F44\"\r},{\r\"hostName\":\"Exproxy-lyon.perfex.commvault.com\",\"clientId\":22,\"clientName\":\"exproxy-lyon\",\"_type_\":3,\"csGUID\":\"02C675FA-3131-412F-B860-193C1DDF379A\"\r},{\r\"hostName\":\"jinzhou.devemc.commvault.com\",\"clientId\":1077,\"clientName\":\"jinzhou\",\"_type_\":3,\"csGUID\":\"8D099E25-9D07-4E3B-91BB-56257BBC6804\"\r},{\r\"hostName\":\"noshaq\",\"clientId\":1091,\"clientName\":\"noshaq\",\"_type_\":3,\"csGUID\":\"27FB7A32-4F16-42F4-893A-68FA551B54BE\"\r},{\r\"hostName\":\"SidAutomation.testlab.commvault.com\",\"clientId\":1209,\"clientName\":\"sidautomation\",\"_type_\":3,\"csGUID\":\"896B8934-0DEA-4DD8-B241-036EA79B03CB\"\r},{\r\"hostName\":\"stampede.devemc.commvault.com\",\"clientId\":1165,\"clientName\":\"stampede\",\"_type_\":3,\"csGUID\":\"9404E8AE-0D06-46D6-A88B-22DCEA5FE16F\"\r}\r]\r}"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "_postman_id": "cae30bc5-a32d-142d-f44d-107a933c3d63",
       "name": "Data Cube Operations",
       "description": "<h2>Description</h2>\nREST APIs for Data Cube.",
@@ -56447,340 +56781,6 @@
               "cookie": [],
               "responseTime": "764",
               "body": "{\r\"outputs\":\"{\\\"testoutput\\\":\\\"NAME                                    OS           ACTIVE    \\\\r\\\\n----                                    --           ------    \\\\r\\\\napitest                                 Windows      Yes       \\\\r\\\\nauto                                    Windows      Yes       \\\\r\\\\nCSSP_IndexServer                        Any          Yes       \\\\r\\\\nfirewalltestma                          Windows      Yes       \\\\r\\\\nfwclient4_2                             Windows      Yes       \\\\r\\\\nshezavm11                               Windows      Yes       \\\\r\\\\nshezavm11_3                             Windows      Yes       \\\\r\\\\nshezavm7                                Linux        Yes       \\\\r\\\\ntest                                    Windows95    Yes       \\\\r\\\\ntestauto_2                              Windows      Yes       \\\\r\\\\ntestpool_SystemCreatedSP_IndexServer    Any          Yes       \\\\r\\\\nv10cl                                   Windows      Yes       \\\\r\\\\nv10client                               Windows      Yes\\\"}\",\"jobId\":294,\"errorMessage\":\"\",\"errorCode\":0,\"startTime\":1518590573,\"endTime\":1518590574,\"version\":4,\"status\":4,\"workflow\":{\r\"workflowName\":\"TestAPI\",\"workflowId\":88\r}\r}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_postman_id": "2350ec01-c055-b684-0a68-fa1634b69c0c",
-      "name": "Cloud Apps Operations",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "0bb4db0e-104a-84be-9366-d86e7210d49e",
-          "name": "Cloud Apps Pseudo Clients",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Client"
-              ],
-              "query": [
-                {
-                  "key": "PseudoClientType",
-                  "value": "VSPseudo"
-                }
-              ]
-            },
-            "description": "<h2>Description</h2>\r\nThis operation returns a list of clients.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client.htm)"
-          },
-          "response": [
-            {
-              "id": "3029950b-b809-3125-11d6-69eaafcfe8a7",
-              "name": "Cloud Apps Pseudo Clients-VSPseudo",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/Client?PseudoClientType=VSPseudo",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Client"
-                  ],
-                  "query": [
-                    {
-                      "key": "PseudoClientType",
-                      "value": "VSPseudo"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "2052",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Fri, 09 Mar 2018 03:28:44 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/10.0",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"VSPseudoClientsList\":[\r{\r\"VSInstanceType\":2,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"AD\",\"clientId\":54,\"clientName\":\"AD\",\"displayName\":\"AD\",\"clientGUID\":\"25CD3B0A-C01D-434B-B16C-0F7E2831A8E3\"\r}\r},{\r\"VSInstanceType\":4,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"AmazonVirtest\",\"clientId\":1105,\"clientName\":\"AmazonVirtest\",\"displayName\":\"AmazonVirtest\",\"clientGUID\":\"B84E47EC-BA01-4A90-B183-500E3F1EC025\"\r}\r},{\r\"VSInstanceType\":7,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"AzureVirtest\",\"clientId\":1108,\"clientName\":\"AzureVirtest\",\"displayName\":\"AzureVirtest\",\"clientGUID\":\"0385E37F-E8D5-4B4E-8D1B-38EB06FFA5DD\"\r}\r},{\r\"VSInstanceType\":1,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"IB-AppAware-ESX\",\"clientId\":1306,\"clientName\":\"IB-AppAware-ESX\",\"displayName\":\"IB-AppAware-ESX\",\"clientGUID\":\"0BD04935-C6FD-4B61-9E3F-0B8912250EEA\"\r}\r},{\r\"VSInstanceType\":2,\"clientActivityControl\":{\r\"activityControlOptions\":[\r{\r\"activityType\":1,\"enableAfterADelay\":false,\"enableActivityType\":true\r},{\r\"activityType\":2,\"enableAfterADelay\":false,\"enableActivityType\":true\r}\r],\"entity\":{\r\"_type_\":3\r}\r},\"client\":{\r\"hostName\":\"abc\",\"clientId\":1378,\"clientName\":\"abc\",\"displayName\":\"abc\",\"clientGUID\":\"20197462-5AED-4209-992B-79605E356DF2\"\r}\r}\r]\r}"
-            },
-            {
-              "id": "7b74d8f9-4a1a-2bca-d418-3bff14208ef3",
-              "name": "Cloud Apps Pseudo Clients -CloudAPPS",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/Client?PseudoClientType=CloudApps",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Client"
-                  ],
-                  "query": [
-                    {
-                      "key": "PseudoClientType",
-                      "value": "CloudApps"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1216",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Fri, 09 Mar 2018 03:24:42 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/10.0",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"CloudAppsClientsList\":[\r{\r\"cloudAppsInstanceType\":7,\"client\":{\r\"hostName\":\"qlu_onedrive_in_workgroup\",\"clientId\":1092,\"clientName\":\"qlu_onedrive_in_workgroup\",\"displayName\":\"qlu_onedrive_in_workgroup\",\"clientGUID\":\"5DD2D37E-0248-43E2-AD36-70B04B24B569\"\r}\r},{\r\"cloudAppsInstanceType\":2,\"client\":{\r\"hostName\":\"Sid-Gdrive\",\"clientId\":41,\"clientName\":\"Sid-Gdrive\",\"displayName\":\"Sid-Gdrive\",\"clientGUID\":\"DC928F66-80BD-4382-BDCA-9D7F6A8D0C54\"\r}\r},{\r\"cloudAppsInstanceType\":1,\"client\":{\r\"hostName\":\"Sid-Gmail\",\"clientId\":40,\"clientName\":\"Sid-Gmail\",\"displayName\":\"Sid-Gmail\",\"clientGUID\":\"999671B8-8774-4B04-9519-629B77194860\"\r}\r},{\r\"cloudAppsInstanceType\":7,\"client\":{\r\"hostName\":\"Sid-OneDrive\",\"clientId\":33,\"clientName\":\"Sid-OneDrive\",\"displayName\":\"Sid-OneDrive\",\"clientGUID\":\"6C371525-3061-4E68-A002-F7B1172C02B1\"\r}\r},{\r\"cloudAppsInstanceType\":7,\"client\":{\r\"hostName\":\"Sid-OneDrive1\",\"clientId\":44,\"clientName\":\"Sid-OneDrive1\",\"displayName\":\"Sid-OneDrive1\",\"clientGUID\":\"FD96AA2E-03FC-43EB-BF4B-1C91551F6914\"\r}\r},{\r\"cloudAppsInstanceType\":7,\"client\":{\r\"hostName\":\"sid-onedrive2\",\"clientId\":1226,\"clientName\":\"sid-onedrive2\",\"displayName\":\"sid-onedrive2\",\"clientGUID\":\"4DCE177B-5F82-450C-849A-319BA9869C08\"\r}\r}\r]\r}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "83875fac-dc73-806b-7861-6d0b30163a52",
-          "name": "Proxy Clients",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "{{Accept}}"
-              },
-              {
-                "key": "Authtoken",
-                "value": "{{TOKEN}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "{{ServerUrl}}/Client/proxy/CloudApps?cAppType=1",
-              "host": [
-                "{{ServerUrl}}"
-              ],
-              "path": [
-                "Client",
-                "proxy",
-                "CloudApps"
-              ],
-              "query": [
-                {
-                  "key": "cAppType",
-                  "value": "1"
-                }
-              ]
-            },
-            "description": "<h2>Description</h2>\r\nThis operation returns the list of all proxy clients for cloud apps virtual clients.\r\n [_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_cloudapp_proxy_clients.htm)"
-          },
-          "response": [
-            {
-              "id": "e17c52cd-992a-8b86-c1f7-b41426ed25a5",
-              "name": "Proxy Clients",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "{{Accept}}"
-                  },
-                  {
-                    "key": "Authtoken",
-                    "value": "{{TOKEN}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "{{ServerUrl}}/Client/proxy/CloudApps?cAppType=1",
-                  "host": [
-                    "{{ServerUrl}}"
-                  ],
-                  "path": [
-                    "Client",
-                    "proxy",
-                    "CloudApps"
-                  ],
-                  "query": [
-                    {
-                      "key": "cAppType",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "897",
-                  "name": "Content-Length",
-                  "description": "The length of the response body in octets (8-bit bytes)"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Fri, 09 Mar 2018 03:30:51 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "Microsoft-IIS/10.0",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "ASP.NET",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\"vendor\":0,\"clients\":[\r{\r\"hostName\":\"cloudproxy.testlab.commvault.com\",\"clientId\":23,\"clientName\":\"cloudproxy\",\"_type_\":3,\"csGUID\":\"5E84F806-4C30-4788-9F80-FC8C83AC6F44\"\r},{\r\"hostName\":\"Exproxy-lyon.perfex.commvault.com\",\"clientId\":22,\"clientName\":\"exproxy-lyon\",\"_type_\":3,\"csGUID\":\"02C675FA-3131-412F-B860-193C1DDF379A\"\r},{\r\"hostName\":\"jinzhou.devemc.commvault.com\",\"clientId\":1077,\"clientName\":\"jinzhou\",\"_type_\":3,\"csGUID\":\"8D099E25-9D07-4E3B-91BB-56257BBC6804\"\r},{\r\"hostName\":\"noshaq\",\"clientId\":1091,\"clientName\":\"noshaq\",\"_type_\":3,\"csGUID\":\"27FB7A32-4F16-42F4-893A-68FA551B54BE\"\r},{\r\"hostName\":\"SidAutomation.testlab.commvault.com\",\"clientId\":1209,\"clientName\":\"sidautomation\",\"_type_\":3,\"csGUID\":\"896B8934-0DEA-4DD8-B241-036EA79B03CB\"\r},{\r\"hostName\":\"stampede.devemc.commvault.com\",\"clientId\":1165,\"clientName\":\"stampede\",\"_type_\":3,\"csGUID\":\"9404E8AE-0D06-46D6-A88B-22DCEA5FE16F\"\r}\r]\r}"
             }
           ]
         }
