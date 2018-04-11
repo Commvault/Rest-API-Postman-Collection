@@ -58544,6 +58544,450 @@
           ]
         }
       ]
+    },
+    {
+      "_postman_id": "6f01a494-09c9-ce04-6cdd-41cdb6dda60d",
+      "name": "License Operations",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "861c9823-f491-97da-be7d-89134a36ffac",
+          "name": "Client Licenses",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Response Body contains licensesInfo\"] = responseBody.has(\"licensesInfo\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{ServerUrl}}/Client/{{clientId}}/License",
+            "description": "<h2>Description</h2>\r\nThis operation returns the licenses that are applied to a client. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/get_client_license.htm)"
+          },
+          "response": [
+            {
+              "id": "80113410-7183-9197-5b02-dd36a2954399",
+              "name": "Client Licenses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{ServerUrl}}/Client/20/License"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "392",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Mar 2018 03:21:10 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"licensesInfo\":[\r{\r\"platformType\":1,\"license\":{\r\"licenseType\":1,\"appType\":33,\"licenseName\":\"Server File System - Windows File System\"\r}\r},{\r\"platformType\":2,\"license\":{\r\"licenseType\":11,\"appType\":1002,\"licenseName\":\"MediaAgent - MediaAgent Management\"\r}\r},{\r\"platformType\":2,\"license\":{\r\"licenseType\":84,\"appType\":1020,\"licenseName\":\"Disk Library Connector (DDO) - Magnetic Library\"\r}\r}\r]\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "dcd9c11f-6dfe-87aa-e041-f15a3a22c107",
+          "name": "Release License",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"errorCode is 0\"] = jsonData.errorCode === 0;",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"licensesInfo\": [\n        {\n            \"platformType\": 2,\n            \"license\": {\n                \"licenseType\": 11,\n                \"appType\": 1002,\n                \"licenseName\": \"MediaAgent - MediaAgent Management\"\n            }\n        }\n    ],\n    \"clientEntity\": {\n        \"clientId\": 20\n    }\n}"
+            },
+            "url": "{{ServerUrl}}/Client/License/Release",
+            "description": "<h2>Description</h2>\r\nThis operation releases a license from a client or an agent. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_release_license.htm)"
+          },
+          "response": [
+            {
+              "id": "5495eaa6-d507-8b79-fb7e-98b5d82e5000",
+              "name": "Release License -FileSystem",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"licensesInfo\": [\n        {\n            \"platformType\": 1,\n            \"license\": {\n                \"licenseType\": 1,\n                \"appType\": 33,\n                \"licenseName\": \"Server File System - Windows File System\"\n            }\n        }\n    ],\n    \"clientEntity\": {\n        \"clientId\": 26\n    }\n}"
+                },
+                "url": "{{ServerUrl}}/Client/License/Release"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "35",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 07 Mar 2018 03:10:41 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+            },
+            {
+              "id": "a887f410-aa81-5c76-4c91-6490a707c46a",
+              "name": "Release License-MediaAgent",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"licensesInfo\": [\n        {\n            \"platformType\": 2,\n            \"license\": {\n                \"licenseType\": 11,\n                \"appType\": 1002,\n                \"licenseName\": \"MediaAgent - MediaAgent Management\"\n            }\n        }\n    ],\n    \"clientEntity\": {\n        \"clientId\": 20\n    }\n}"
+                },
+                "url": "{{ServerUrl}}/Client/License/Release"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "35",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 07 Mar 2018 03:19:57 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "131f8518-4809-7983-fc58-ee10f5b68b13",
+          "name": "Reconfigure Components",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "{{Accept}}"
+              },
+              {
+                "key": "Authtoken",
+                "value": "{{TOKEN}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"clientInfo\": {\n\t\t\"clientId\": 20\n\t},\n\t\"platformTypes\": [\n\t\t2\n\t]\n}"
+            },
+            "url": "{{ServerUrl}}/Client/License/Reconfigure",
+            "description": "<h2>Description</h2>\r\nThis operation reapplies a license to a CommCell entity. This operation consumes a license for the selected entity. \r\n[_More Details_](http://documentation.commvault.com/commvault/v11/article?p=features/rest_api/operations/post_client_reconfigure_license.htm)"
+          },
+          "response": [
+            {
+              "id": "025347b6-af1b-2b51-53d2-373313d833a6",
+              "name": "Reconfigure Components -Client",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"clientInfo\": {\n\t\t\"clientId\": 20\n\t},\n\t\"platformTypes\": [\n\t\t1\n\t]\n}"
+                },
+                "url": "{{ServerUrl}}/Client/License/Reconfigure"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "35",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Mar 2018 04:27:40 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+            },
+            {
+              "id": "ef2d67e2-6077-617c-0034-6077b3b2dd73",
+              "name": "Reconfigure Components-MediaAgent",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "{{Accept}}"
+                  },
+                  {
+                    "key": "Authtoken",
+                    "value": "{{TOKEN}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"clientInfo\": {\n\t\t\"clientId\": 20\n\t},\n\t\"platformTypes\": [\n\t\t2\n\t]\n}"
+                },
+                "url": "{{ServerUrl}}/Client/License/Reconfigure"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "35",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 06 Mar 2018 04:31:37 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "Server",
+                  "value": "Microsoft-IIS/8.5",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "ASP.NET",
+                  "name": "X-Powered-By",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\"errorMessage\":\"\",\"errorCode\":0\r}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "event": [
